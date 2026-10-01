@@ -1,6 +1,6 @@
 # Daily Standup - Sprint 1 Week 5
 
-**Datum**: 01/10/2026
+**Datum**: 01/10/2026  
 **Deelnemers**:
 - Benito
 - Isabella
