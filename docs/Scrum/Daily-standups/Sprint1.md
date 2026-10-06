@@ -61,7 +61,7 @@
 
 ### Isabella
 - **Wat heb je gedaan**: De sprint reviews, sprint planningen en retrospectives ingepland. Verder heb ik een begin gemaakt aan mijn profiel leerdoel uitwerken en uitgezocht hoe ik dat op de beste manier kan documenteren.
-- **Wat ga je doen**: Vincent gebeld om te vragen of we een vragelijst mogen sturen naar de gebruikers ipv interviews ivm tijd, verder heb ik de eerste conceptversie voor het mijninkomen platform af, ook heb ik de powerpoint voor de sprint review van morgen af en na opmerking van de docenten heb ik het gitlab bord vandaag volledig ingevuld 
+- **Wat ga je doen**: Vincent gebeld om te vragen of we een vragelijst mogen sturen naar de gebruikers ipv interviews ivm tijd, verder heb ik de eerste conceptversie voor het mijninkomen platform af, ook heb ik de powerpoint voor de sprint review van morgen af en na opmerking van de docenten heb ik het gitlab bord vandaag volledig ingevuld.
 - **Impediments**: Geen.
 
 ### Amin
@@ -77,6 +77,48 @@
 ### Fares
 - **Wat heb je gedaan**: Ik heb de interviews ingepland.
 - **Wat ga je doen**: Ik heb surveys gestuurd naar de gebruikers, ik heb ook de laatste uitnodigingen verstuurd voor de interviews.
+- **Impediments**: Geen.
+
+---
+
+
+# Daily Standup - Sprint 1 Week 6
+
+**Datum**: 06/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Onderzoek doen naar mogelijke open source software voor samenwerkingsplatform
+- **Wat ga je doen**: Interview met Rutger en Dimitri; Notities maken en tijdens sprint planning en werken ana leerdoel.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Vincent gebeld om te vragen of we een vragelijst mogen sturen naar de gebruikers ipv interviews ivm tijd, verder heb ik de eerste conceptversie voor het mijninkomen platform af, ook heb ik de powerpoint voor de sprint review van morgen af en na opmerking van de docenten heb ik het gitlab bord vandaag volledig ingevuld.
+- **Wat ga je doen**: Vandaag ga ik me voorbereiden op de sprint review, issues in de backlog toegevoegd en notities gemaakt van de sprint review en deze uitgewerkt en naar mijn team verzonden
+- **Impediments**: Geen.
+
+### Amin
+- **Wat heb je gedaan**: Gisteren heb vragen opgesteld voor het interview van vandaag.
+- **Wat ga je doen**: Vandaag ga ik het interview houden en ik ga me voorbereiden op het sprintreview.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Gisteren heb ik een matrix gemaakt die alle stakeholders bevat.
+- **Wat ga je doen**: Vandaag ga ik notuleren tijdens een meeting met Rutger en Dimitri, verder ga ik me nog voorbereiden voor de sprintreview.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Ik heb surveys gestuurd naar de gebruikers, ik heb ook de laatste uitnodigingen verstuurd voor de interviews.
+- **Wat ga je doen**: Ik ga de interviews inplannen.
 - **Impediments**: Geen.
 
 ---
