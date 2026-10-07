@@ -122,3 +122,45 @@
 - **Impediments**: Geen.
 
 ---
+
+
+# Daily Standup - Sprint 1 Week 6
+
+**Datum**: 07/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Interviews, sprint planning en interview yolijn voorbereiden.
+- **Wat ga je doen**: Interview met Yolijn; volgende sprint backlog verder uitwerken; werken aan huidige issues; leerdoel.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Gisteren heb ik me voorbereid op de sprint review, issues in de backlog toegevoegd en notities gemaakt van de sprint review en deze uitgewerkt en naar mijn team verzonden.
+- **Wat ga je doen**: Vandaag ga ik Vincent emailen met informatie die we hem hadden belooft en ga ik hem ook reminden met wat wij nog van hem nodig hebben, verder ga ik aan mijn persoonlijke leerdoel werken en nadenken hoe ik deze het beste kan uitvoeren en aantonen.
+- **Impediments**: We wouden vandaag graag alvast de taken van sprint 2 assignen, gezien we niet allemaal aanwezig zijn is dit verplaatst naar aankomende maandag.
+
+### Amin
+- **Wat heb je gedaan**: Gisteren heb ik de interview gehouden met de stakeholders (Rutger en Dimitri). Daarnaast heb ik de sprint-review gehouden en heb ik als scrum master de leiding genomen tijdens de retrospective. 
+- **Wat ga je doen**: Vandaag ga ik de issues checken en verbeteren en ook met mijn team de issues assignen. Verder ga ik kijken of er een mogelijkheid is om de repo te mirroren (Github en Gitlab).
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Gisteren heb ik de sprint review en retro gehad. Bij de retro hebben we actie punten opgeschreven, maar na de retro heb ik ook nog persoonlijke actiepunten genoteerd en op portflow gezet.
+- **Wat ga je doen**: Vandaag ga ik kijken welke issues ik nog op closed kan zetten voor sprint 1. Voor sprint 2 moeten we nog wat issues fine tunen en onder elkaar verdelen. Ook moet ik nog vragen voorbereiden voor het interview met Gert.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Surveys gemaakt en verstuurd, en ik heb de aantekeningen van de sprint review doorgenomen. En ik heb Selmar ingepland met Jose samen voor een gesprek.
+- **Wat ga je doen**: Ik ga vandaag dingen aan mezelf asignen in de sprint backlog, en de notities van het gesprek in de ochtend doornemen.
+- **Impediments**: Geen.
+
+---
