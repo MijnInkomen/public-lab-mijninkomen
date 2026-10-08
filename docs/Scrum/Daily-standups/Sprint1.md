@@ -164,3 +164,46 @@
 - **Impediments**: Geen.
 
 ---
+
+
+
+# Daily Standup - Sprint 1 Week 6
+
+**Datum**: 08/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Verder gewerkt aan leerdoel.
+- **Wat ga je doen**: Notities maken tijdens interview met José en Selmar en later Gert, en verder werken aan leerdoel.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Gisteren heb ik Vincent een mail met informatie die we hem hadden belooft gestuurd en heb ik hem ook reminden met wat wij nog van hem nodig hebben, verder heb ik ook aan mijn persoonlijke leerdoel gewerkt en nagedacht hoe ik deze het beste kan uitvoeren en aantonen.
+- **Wat ga je doen**: Vandaag ga ik me voorbereiden op het interview die we hebben met Selmar en Jose, hun zijn samen met Vincent de belangrijkste stakeholders, dus ik moet echt duidelijke en gerichte vragen stellen gezien ik in dit interview de lead heb. Na het interview ga ik verder met de opzet waar alle input uit de interviews van iedereen in een document samenkomt, zodat we dit begin sprint 2 met Vincent kunnen bespreken. Dit document stuur ik vervolgens op naar mijn team zodat ze kunnen kijken of er nog informatie mist en misschien wel verkeerd staat. Uit het interview gaan hoogst waarschijnlijk ook wat actiepunten komen, dus die ga ik ook opvolgen.
+- **Impediments**: Geen
+
+### Amin
+- **Wat heb je gedaan**: Gisteren heb ik vooral gekeken naar hoe ik de connectie kan maken met gitlab en github.
+- **Wat ga je doen**: Vandaag ga ik bij het interview van Jose en Selmar zijn en ga ik verder met mijn leerdoelen en ook bewijs toevoegen aan mijn portflow.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Gisteren heb ik alle vragen voor Gert voorbereid.
+- **Wat ga je doen**: Vandaag woon ik de meeting met José en Selmar bij. Ook ga ik de lead nemen tijdens de meeting met Gert en daarna de gerelateerde issues daar aan naar done verschuiven. Daarna ga ik nog even kijken welk bewijs materiaal ik nog moet toevoegen aan portflow.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Gewerkt aan mijn portflow opstellen, Gesprek met Martin gehad.
+- **Wat ga je doen**: Verder werken aan leerdoel en voorbereiden op interview.
+- **Impediments**: Geen.
+
+---
