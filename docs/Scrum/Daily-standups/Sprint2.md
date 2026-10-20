@@ -38,3 +38,46 @@
 - **Impediments**: Geen.
 
 ---
+
+
+# Daily Standup - Sprint 1 Week 5
+
+**Datum**: 20/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Verder gewerkt aan mijn leerdoel.
+- **Wat ga je doen**: Scope verduidelijken en werken aan leerdoelen.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Ik heb het team en persoonlijke actiepunt gemaakt, het document afgemaakt waaruit alle opgehaalde informatie van de opdrachtgever en stakeholders staat, peerfeedback gegeven aan Fares voor zijn leerdoel, gewerkt aan me persoonlijke website project.
+- **Wat ga je doen**: Vandaag ga ik me voorbereiden op het gesprek die we na de les met Vincent hebben, de scope is na de interviews een beetje onduidelijk geworden, dus doormiddel van een powerpoint wil ik ervoor zorgen dat we op een duidelijke en effectieve manier de botsingen en aanvullingen van de andere stakeholders kunnen bespreken. Als ik tijd heb ga ik ook verder met wat er op de MijnInkomen website moet komen.
+- **Impediments**: Geen.
+
+### Amin
+- **Wat heb je gedaan**: Gisteren heb ik gewerkt aan mijn leerdoelen.
+- **Wat ga je doen**: Vandaag ga ik mijn opdrachtgever bespreken of we de repo mogen mirroring mogen gebruiken na goedkeuringen ga ik de repo aanmaken in Github en ook gelijk fixen(mirroring) met Gitlab.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Tentamen.
+- **Wat ga je doen**: Tentamen.
+- **Impediments**: Tentamen.
+ 
+### Fares
+- **Wat heb je gedaan**: Ziek.
+- **Wat ga je doen**: Ziek.
+- **Impediments**: Ziek.
+
+---
+
