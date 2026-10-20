@@ -70,8 +70,8 @@
 - **Impediments**: Geen.
 
 ### Tess
-- **Wat heb je gedaan**: Tentamen.
-- **Wat ga je doen**: Tentamen.
+- **Wat heb je gedaan**: Verder gewerkt aan mijn leerdoel. Nog een paar aanpassingen gemaakt na aanleiding van mijn retro feedback.
+- **Wat ga je doen**: Final exam op de Vu. Daarna doornemen wat jullie hebben besproken tijdens de meeting met Vincent en José.
 - **Impediments**: Tentamen.
  
 ### Fares
