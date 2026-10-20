@@ -40,7 +40,7 @@
 ---
 
 
-# Daily Standup - Sprint 1 Week 5
+# Daily Standup - Sprint 2 Week 1
 
 **Datum**: 20/10/2026  
 **Deelnemers**:
