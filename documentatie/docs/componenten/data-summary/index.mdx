@@ -1,0 +1,68 @@
+---
+title: Data Summary
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Data Summary
+pagination_label: Data Summary
+description: Lijst met eigenschappen en bijbehorende data over een onderwerp.
+issue_number: 357
+slug: /data-summary
+keywords:
+  - check
+  - controle
+  - data
+  - data overzicht
+  - data list
+  - datalijst
+  - data samenvatting
+  - data summary
+  - definitie lijst
+  - definition list
+  - eigenschappen
+  - eigenschappenlijst
+  - key
+  - lijst
+  - list
+  - list group
+  - overzicht
+  - summary
+  - samenvatting
+  - summary data
+  - terugkoppeling
+  - value
+  - waarde
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Data Summary";
+export const description = "Lijst met eigenschappen en bijbehorende data over een onderwerp.";
+export const issueNumber = 357;
+export const relayStep = "help wanted";
+export const componentName = "data-summary";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

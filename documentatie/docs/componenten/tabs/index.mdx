@@ -1,0 +1,62 @@
+---
+title: Tabs
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Tabs
+pagination_label: Tabs
+description: Paneel om onderwerpen te groeperen, waarbij er maar één per keer zichtbaar is, met buttons om te kiezen welk onderwerp wordt weergegeven.
+issue_number: 51
+slug: /tabs
+keywords:
+  - content tabs
+  - navigation
+  - navigation tabs
+  - nav tabs
+  - panel
+  - pivot
+  - scoped tabs
+  - switch
+  - tab
+  - tabs
+  - tab bar
+  - tab control
+  - tab group
+  - tab menu
+  - tab nav
+  - tab panel
+  - tabbed interface
+  - tabbed view
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Tabs";
+export const description = "Paneel om onderwerpen te groeperen, waarbij er maar één per keer zichtbaar is, met buttons om te kiezen welk onderwerp wordt weergegeven.";
+export const issueNumber = 51;
+export const componentName = "tabs";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

@@ -1,0 +1,44 @@
+---
+title: Video
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Video
+pagination_label: Video
+description: Video met bedieningselementen voor afspelen, pauzeren, tekstalternatieven, en meer.
+issue_number: 69
+slug: /video
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Video";
+export const description = "Video met bedieningselementen voor afspelen, pauzeren, tekstalternatieven, en meer.";
+export const issueNumber = 69;
+export const relayStep = "help wanted";
+export const componentName = "video";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

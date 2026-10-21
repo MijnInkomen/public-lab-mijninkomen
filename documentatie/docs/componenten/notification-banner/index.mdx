@@ -1,0 +1,66 @@
+---
+title: Notification Banner
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Notification Banner
+pagination_label: Notification Banner
+description: Toont een informerend bericht dat niet direct is gerelateerd aan de inhoud van een pagina.
+issue_number: 169
+slug: /notification-banner
+keywords:
+  - alert
+  - banner
+  - banner alert
+  - call alert
+  - callout
+  - feedback
+  - highlighter
+  - inline alert
+  - inline message
+  - message
+  - message bar
+  - note
+  - notificatie
+  - notificatiebanner
+  - notification
+  - notification banner
+  - page alert
+  - panel
+  - top of page alert
+  - waarschuwing
+  - warning
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Notification Banner";
+export const description = "Toont een informerend bericht dat niet direct is gerelateerd aan de inhoud van een pagina.";
+export const issueNumber = 169;
+export const relayStep = "help wanted";
+export const componentName = "notification-banner";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

@@ -1,0 +1,10 @@
+{
+  "label": "Meerdere stappen",
+  "link": {
+    "type": "doc",
+    "id": "richtlijnen/formulieren/multistep/index"
+  },
+  "customProps": {
+    "showLinkedDoc": true
+  }
+}

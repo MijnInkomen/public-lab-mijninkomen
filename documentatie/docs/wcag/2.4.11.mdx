@@ -1,0 +1,104 @@
+---
+title: WCAG-succescriterium 2.4.11 Focus niet bedekt (minimum)
+title_sm: 2.4.11 Focus niet bedekt (minimum)
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: 2.4.11 Focus niet bedekt (minimum)
+pagination_label: WCAG-succescriterium 2.4.11 Focus niet bedekt (minimum)
+description: Een onderdeel dat toetsenbordfocus heeft mag niet volledig bedekt zijn.
+slug: 2.4.11
+conformance_level: Niveau AA
+keywords:
+  - WCAG
+  - AA
+  - bedienbaar
+  - navigeerbaar
+  - operable
+  - navigable
+  - focus not obscured (minimum)
+  - focus
+---
+
+{/* @license CC0-1.0 */}
+
+import { Markdown } from "@site/src/components/Markdown";
+import { WcagHeadingGroup } from "@site/src/components/WcagHeadingGroup";
+import { SpotlightSection } from "@components/spotlight-section/spotlight-section";
+import CTAGebruikersonderzoek from "./_cta_gebruikersonderzoek.md";
+import Disclaimer from "./_wcag-disclaimer.md";
+import WCAGFooterInfo from "./_wcag_footer_info.md";
+import Summary from "./summaries/_2.4.11-summary.md";
+
+<WcagHeadingGroup level={1} conformanceLevel="Niveau AA">
+  {"WCAG-succescriterium 2.4.11 Focus niet bedekt (minimum)"}
+</WcagHeadingGroup>
+
+## In het kort
+
+<dl>
+  <div class="dl__item">
+    <dt class="dl__term">Doel</dt>
+    <dd class="dl__definition">Houd een gefocussed onderdeel zichtbaar.</dd>
+  </div>
+  <div class="dl__item">
+    <dt class="dl__term">Wat te doen</dt>
+    <dd class="dl__definition">Zorg ervoor dat een onderdeel met toetsenbordfocus minstens deels zichtbaar is.</dd>
+  </div>
+  <div class="dl__item">
+    <dt class="dl__term">Waarom het belangrijk is</dt>
+    <dd class="dl__definition">
+      Wat toetsenbordfocus heeft moet zichtbaar zijn voor mensen die een toetsenbord gebruiken.
+    </dd>
+  </div>
+</dl>
+
+## Uitleg
+
+<Summary />
+
+Dit criterium kan makkelijk fout gaan als een pagina in een onverwachte vorm is. Een ontwerp houdt niet altijd rekening met alle interacties die plaats kunnen vinden:
+
+- Een interactieve footer kan achter een cookie consent modal zitten.
+- Een uitklapmenu kan een link bedekken.
+- Een verandering in resolutie of zoom kan er voor zorgen dat onderdelen die sticky zijn ineens overlappen.
+- Een verplaatstbaar onderdeel kan ergens over of onder geplaatst worden.
+
+## Hoe te testen
+
+- Ga door een pagina met het toetsenbord.
+- Kijk welke onderdelen de focus krijgen.
+- Controleer of de focus (deels) zichtbaar is.
+- Doe dit ook voor andere vormen van de pagina zoals:
+  - Met een open cookie consent modal.
+  - Met opengeklapte menus.
+  - Op verschillende resoluties.
+  - Met geopende modals of andere overlappende content.
+  - Met foutmeldingen.
+
+## Tips
+
+- In plaats van deels zichtbaar kun je beter onderdelen helemaal zichtbaar laten zijn. Je voldoet dan aan [WCAG-succescriterium 2.4.12 Focus niet bedekt (uitgebreid)](/wcag/2.4.12)
+- Zodra je dit criterium test, kun je meteen [WCAG-succescriterium 2.1.1 Toetsenbord](/wcag/2.1.1) en [WCAG-Succescriterium 2.4.7 Focus zichtbaar](/wcag/2.4.7) testen.
+
+## Gebruikersonderzoek
+
+<CTAGebruikersonderzoek />
+
+## W3C referenties
+
+- Engelse tekst van het WCAG-succescriterium: [<span lang="en">2.4.11 Focus Not Obscured (Minimum)</span>](https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum).
+- Nederlandse vertaling van het WCAG-succescriterium: [2.4.11 Focus niet bedekt (minimum)](https://www.w3.org/Translations/WCAG22-nl/#focus-not-obscured-minimum).
+- Engelstalige informatie op <span lang="en">How to Meet WCAG</span>: [<span lang="en">Quick Reference 2.4.11 Focus Not Obscured (Minimum)</span>](https://www.w3.org/WAI/WCAG22/quickref/#focus-not-obscured-minimum).
+- Engelstalige toelichting: [<span lang="en">Understanding SC 2.4.11 Focus Not Obscured (Minimum)</span>](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
+
+<SpotlightSection>
+  <Markdown omitH1 headinglevel={3}>
+    <Disclaimer />
+  </Markdown>
+</SpotlightSection>
+
+## Help richtlijn verbeteren
+
+<Markdown omitH1 headinglevel={3}>
+  <WCAGFooterInfo />
+</Markdown>

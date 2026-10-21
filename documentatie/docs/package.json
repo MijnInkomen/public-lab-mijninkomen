@@ -1,0 +1,23 @@
+{
+  "name": "@nl-design-system-unstable/documentation",
+  "version": "1.12.0",
+  "author": "Community for NL Design System",
+  "description": "Documentation for NL Design System",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": false,
+  "license": "CC0-1.0",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/documentatie.git",
+    "directory": "docs"
+  },
+  "files": [
+    "**/*.md"
+  ]
+}

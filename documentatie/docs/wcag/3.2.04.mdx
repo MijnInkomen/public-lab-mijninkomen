@@ -1,0 +1,104 @@
+---
+title: WCAG-succescriterium 3.2.4 Consistente identificatie
+title_sm: 3.2.4 Consistente identificatie
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: 3.2.4 Consistente identificatie
+pagination_label: WCAG-succescriterium 3.2.4 Consistente identificatie
+description: Onderdelen die hetzelfde doen moeten ook hetzelfde te herkennen zijn.
+slug: 3.2.4
+conformance_level: Niveau AA
+keywords:
+  - WCAG
+  - AA
+  - begrijpelijk
+  - voorspelbaar
+  - understandable
+  - predictable
+  - consistent identification
+---
+
+{/* @license CC0-1.0 */}
+
+import { Markdown } from "@site/src/components/Markdown";
+import { WcagHeadingGroup } from "@site/src/components/WcagHeadingGroup";
+import { SpotlightSection } from "@components/spotlight-section/spotlight-section";
+import CTAGebruikersonderzoek from "./_cta_gebruikersonderzoek.md";
+import Disclaimer from "./_wcag-disclaimer.md";
+import WCAGFooterInfo from "./_wcag_footer_info.md";
+import Summary from "./summaries/_3.2.4-summary.md";
+
+<WcagHeadingGroup level={1} conformanceLevel="Niveau AA">
+  {"WCAG-succescriterium 3.2.4 Consistente identificatie"}
+</WcagHeadingGroup>
+
+## In het kort
+
+<dl>
+  <div class="dl__item">
+    <dt class="dl__term">Doel</dt>
+    <dd class="dl__definition">Acties zijn meer voorspelbaar.</dd>
+  </div>
+  <div class="dl__item">
+    <dt class="dl__term">Wat te doen</dt>
+    <dd class="dl__definition">Zorg dat functies die herhalen hetzelfde te herkennen zijn.</dd>
+  </div>
+  <div class="dl__item">
+    <dt class="dl__term">Waarom het belangrijk is</dt>
+    <dd class="dl__definition">Herhaalde herkenning is extra belangrijk voor mensen met een beperking.</dd>
+  </div>
+</dl>
+
+## Uitleg
+
+<Summary />
+
+Er zijn verschillende manieren om functies te herkennen. Dit kan door middel van de tekst die je ziet, de naam van het element (die je mogelijk niet ziet), maar ook door kenmerken die geen tekst zijn zoals iconen, kleur of vormgeving.
+
+Voorbeelden van onderdelen met functies zijn links, buttons, accordions en iconen maar ook labels en buttons in formulieren.
+
+Praktisch betekent dit:
+
+- Gebruik dezelfde tekst voor een verzendbutton bij de formulieren in een website. Niet in het ene formulier 'Verzenden' en in een ander formulier 'Versturen'.
+- Gebruik hetzelfde icoon voor een button om invoer te verwijderen. Niet eerst een prullenbak icoon, terwijl een andere button een kruis als icoon heeft.
+- Noem de link naar de voorpagina altijd hetzelfde binnen de website. Niet eerst 'Home', dan 'Voorpagina' en dan 'Start'.
+
+## Gerelateerde NL Design System-richtlijnen
+
+- Formulieren: [Geef duidelijk aan wanneer het formulier verzonden gaat worden](/richtlijnen/formulieren/meerdere-stappen/verzenden-aangeven/)
+- Formulieren: [Duidelijke buttontekst die beschrijft wat de button doet](/richtlijnen/formulieren/buttons/duidelijk-buttontekst/)
+- Content: [Toegankelijke linkteksten](/richtlijnen/content/tekstopmaak/linkteksten/)
+
+## Hoe te testen
+
+- Ga door een website en identificeer herhalende onderdelen.
+- Controleer of onderdelen die hetzelfde doen, ook hetzelfde herkenbaar zijn. Controleer daarbij zowel de tekst die je ziet, wat in de code staat en visuele kenmerken zoals iconen, kleur en vormgeving.
+
+## Tips
+
+- Deze richtlijn kan ook omgedraaid worden. Zorg ervoor dat onderdelen die hetzelfde te herkennen zijn ook zo veel mogelijk dezelfde functie hebben!
+- Namen hoeven niet letterlijk gekopieerd te worden. Soms is het belangrijk dat het patroon herhaald wordt. Pagina 1 heeft misschien een link genaamd "Lees pagina 2". Pagina 2 hoeft niet letterlijk diezelfde link te hebben, maar een link terug naar pagina 1 moet dan wel hetzelfde patroon volgen: "Lees pagina 1". Zo wil je bijvoorbeeld ook overal kiezen voor het werkwoord printen of afdrukken. Dit is beter dan deze werkwoorden door elkaar heen gebruiken.
+- Laat de naam die je ziet overeenkomen met de naam in de code. Dat maakt controleren niet alleen makkelijker, maar is ook praktisch voor [2.5.3 Label in Naam](/wcag/2.5.3/)
+
+## Gebruikersonderzoek
+
+<CTAGebruikersonderzoek />
+
+## W3C referenties
+
+- Engelse tekst van het WCAG-succescriterium: [<span lang="en">3.2.4 Consistent Identification</span>](https://www.w3.org/TR/WCAG22/#consistent-identification).
+- Nederlandse vertaling van het WCAG-succescriterium: [3.2.4 Consistente identificatie](https://www.w3.org/Translations/WCAG22-nl/#consistent-identification).
+- Engelstalige informatie op <span lang="en">How to Meet WCAG</span>: [<span lang="en">Quick Reference 3.2.4 Consistent Identification</span>](https://www.w3.org/WAI/WCAG22/quickref/#consistent-identification).
+- Engelstalige toelichting: [<span lang="en">Understanding SC 3.2.4 Consistent Identification</span>](https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html).
+
+<SpotlightSection>
+  <Markdown omitH1 headinglevel={3}>
+    <Disclaimer />
+  </Markdown>
+</SpotlightSection>
+
+## Help richtlijn verbeteren
+
+<Markdown omitH1 headinglevel={3}>
+  <WCAGFooterInfo />
+</Markdown>
