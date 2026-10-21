@@ -1,0 +1,83 @@
+---
+title: Checkbox
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Checkbox
+pagination_label: Checkbox
+description: 'Invoerveld voor het kiezen van een optie uit een groep van opties, of om te kiezen tussen "wel" of "niet".'
+issue_number: 64
+slug: /checkbox
+keywords:
+  - aankruisvakje
+  - aankruisen
+  - aanvinken
+  - afvinken
+  - aria-disabled
+  - aria-checked
+  - aria-invalid
+  - aria-required
+  - check
+  - checked
+  - check box
+  - checkbox
+  - checkboxes
+  - checkbox button
+  - form control
+  - form
+  - formulier
+  - indeterminate
+  - invoerveld
+  - kruis
+  - kruisje
+  - meerkeuze
+  - niet
+  - optie
+  - option
+  - optional
+  - optioneel
+  - option box
+  - required
+  - select
+  - selecteren
+  - selectievakje
+  - selection box
+  - uncheck
+  - unchecked
+  - verplicht
+  - vink
+  - vinkje
+  - wel
+  - X mark
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Checkbox";
+export const description = 'Invoerveld voor het kiezen van een optie uit een groep van opties, of om te kiezen tussen "wel" of "niet".';
+export const issueNumber = 64;
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

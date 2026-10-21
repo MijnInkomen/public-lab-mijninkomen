@@ -1,0 +1,61 @@
+---
+title: Rich Text Content
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Rich Text Content
+pagination_label: Rich Text Content
+description: Tekst met uitgebreide opmaakopties zoals links, koppen, lijsten en tabellen.
+issue_number: 127
+slug: /rich-text-content
+keywords:
+  - bold
+  - editorial content
+  - editor
+  - formatted text
+  - formatting
+  - heading
+  - list
+  - ordered list
+  - rich content
+  - rich text
+  - rich text editor
+  - strong
+  - table
+  - text formatting
+  - unordered list
+  - wysiwyg
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Rich Text Content";
+export const description = "Tekst met uitgebreide opmaakopties zoals links, koppen, lijsten en tabellen.";
+export const issueNumber = 127;
+export const relayStep = "help wanted";
+export const componentName = "rich-text-content";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

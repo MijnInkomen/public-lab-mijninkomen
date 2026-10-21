@@ -1,0 +1,67 @@
+---
+title: Language Navigation
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Language Navigation
+pagination_label: Language Navigation
+description: Eén of meerdere links om de website te openen in een andere taal.
+issue_number: 243
+slug: /language-navigation
+keywords:
+  - language
+  - language choices
+  - language menu
+  - language navigation
+  - language options
+  - language selection
+  - language switcher
+  - language switcher menu
+  - multilingual
+  - switcher
+  - taal
+  - taalkeuze
+  - taalmenu
+  - taalnavigatie
+  - taalopties
+  - taalselectie
+  - translate
+  - translate navigation
+  - translator
+  - vertaling
+  - vlag
+  - vlaggen
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Language Navigation";
+export const description = "Eén of meerdere links om de website te openen in een andere taal.";
+export const issueNumber = 243;
+export const relayStep = "help wanted";
+export const componentName = "language-navigation";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />
