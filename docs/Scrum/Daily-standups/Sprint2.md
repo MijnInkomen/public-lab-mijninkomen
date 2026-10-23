@@ -112,13 +112,97 @@
 - **Impediments**: Geen.
 
 ### Tess
-- **Wat heb je gedaan**: Tentamen gehad, voor de rest niet heel veel tijd meer gehad..
+- **Wat heb je gedaan**: Tentamen gehad, voor de rest niet heel veel tijd meer gehad.
 - **Wat ga je doen**: Bekijken wat jullie gisteren hebben besproken. Ook ben ik begonnen aan het stukje doel en vragen van het pva verbeteren.
 - **Impediments**: Geen.
  
 ### Fares
 - **Wat heb je gedaan**: Ziek.
 - **Wat ga je doen**: Gekeken naar wat Martin in de les had gezegd en daarna heb ik verbeteringen toegepast aan ons plan van aanpak en in heb mijn portflow aangevuld.
+- **Impediments**: Geen.
+
+---
+
+
+# Daily Standup - Sprint 2 Week 1
+
+**Datum**: 22/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Leerdoel, PvA onderzoeksmethode beter onderbouwen.
+- **Wat ga je doen**: Leerdoel en leren voor toets.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Een samenvatting gemaakt met behulp van de transcriptie en video van het gesprek van dinsdag die we met Vincent, Selmar en Jose hadden, dit gesprek ging over het verfijnen van de scope. Op basis van de informatie die ik al had, en mijn huidige beetje zielige prototype, heb ik in grote lijnen het prototype nu gemaakt voor niveau 1, het is nu een beetje een kleurplaat zonder kleur. Ook heb ik het protoype in het gitlab project gezet.
+- **Wat ga je doen**: Vandaag verder werken aan het prototype en aan mijn persoonlijke leerdoel.
+- **Impediments**: Geen.
+
+### Amin
+- **Wat heb je gedaan**: Ik heb de repo nu in de main branch geforked moet alleen nog afwachten op de goedkeuring van Vincent voor de mirroring.
+- **Wat ga je doen**: Leren voor de kennis toets en aan mijn eigen project gewerkt.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Samenvatting van bespreking doorgenomen. Begonnen aan verbeteringen pva.
+- **Wat ga je doen**: Verder werken aan pva, en aan het bewijs van mijn persoonlijke leerdoel.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Gekeken naar wat Martin in de les had gezegd en daarna heb ik verbeteringen toegepast aan ons plan van aanpak en in heb mijn portflow aangevuld.
+- **Wat ga je doen**: Leren voor de kennis toets.
+- **Impediments**: Geen.
+
+---
+
+
+# Daily Standup - Sprint 2 Week 1
+
+**Datum**: 23/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Verder werken aan mijn leerdoel en het leren voor de kennistoets.
+- **Wat ga je doen**: Verder werken aan mijn leerdoel; leren voor de kennistoets en de requirements in het PvA aanpassen aan de nieuwe scope.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Team coaching gehad, de onderwijs evaluatie ingevuld gezien ik gisteren afwezig was bij de fysieke les, een eerste versie van het prototype voor niveau 1 gemaakt, geleerd voor mijn tentamen.
+- **Wat ga je doen**: Verder aan het prototype op niveau 1 en deze zoveel mogelijk naar wens maken van de opdrachtgever, verder met leren voor het tentamen.
+- **Impediments**: Het engelse boek is toch nog wat ingewikkelder dan ik had ingeschat, als plan had ik om eerst een podcast te luisteren, maar de stof is te diepgaand, ook in het nederlands. Nu heb ik per studietaak ook een video laten genereren met NotebookLM en ga even kijken of dit beter gaat.
+
+### Amin
+- **Wat heb je gedaan**: Ik heb geleerd voor de kennis toets en heb een beetje gewerkt aan mijn eigen project.
+- **Wat ga je doen**: Vandaag niks aan school gezeten vanwege werk.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Gisteren heb ik verder gewerkt aan het pva.
+- **Wat ga je doen**: Vandaag heb ik de hele dag gewerkt en niet aan school gezeten.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Gisteren heb ik geleerd voor de kennis toets.
+- **Wat ga je doen**: Verder werken aan mjjn leerdoel en git doorgenomen mijn userstories.
 - **Impediments**: Geen.
 
 ---
