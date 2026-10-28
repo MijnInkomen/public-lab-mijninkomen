@@ -1,0 +1,15 @@
+.mijninkomen-logo {
+  display: block;
+  height: 2.75rem; /* hoogte in de kop; de breedte past zich vanzelf aan */
+  width: auto;
+}
+
+.mijninkomen-logo--icoon {
+  height: 2rem;
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-logo {
+    height: 2.25rem;
+  }
+}

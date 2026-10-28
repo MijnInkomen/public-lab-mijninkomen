@@ -1,0 +1,86 @@
+/* Opmaak die alleen voor de pagina "Over MijnInkomen" geldt */
+
+/* 1. HERO */
+.mijninkomen-over-hero {
+  padding-block: var(--mijninkomen-space-xl) 0;
+}
+
+.mijninkomen-over-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mijninkomen-space-xl);
+  align-items: center;
+}
+
+/* 2. HOOFDSTUKKEN */
+.mijninkomen-over-sectie {
+  padding-block: var(--mijninkomen-space-xl);
+}
+
+.mijninkomen-over-sectie--licht {
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+}
+
+.mijninkomen-over-sectie__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--mijninkomen-space-xl);
+  align-items: center;
+}
+
+/* Om en om: bij de omgekeerde variant staat de illustratie rechts */
+.mijninkomen-over-sectie__inner--omgekeerd {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.mijninkomen-over-sectie__inner--omgekeerd .mijninkomen-over-sectie__beeld {
+  order: 2;
+}
+
+.mijninkomen-over-sectie__beeld {
+  max-width: 26rem;
+  justify-self: center;
+  width: 100%;
+}
+
+/* Het nummer (01, 02, 03) in een lichtgroen rondje, met het kopje ernaast */
+.mijninkomen-over-sectie__label {
+  display: flex;
+  align-items: center;
+  gap: var(--mijninkomen-space-m);
+  margin: 0 0 var(--mijninkomen-space-s);
+}
+
+.mijninkomen-over-sectie__label .mijninkomen-bovenkop {
+  margin: 0;
+}
+
+.mijninkomen-over-sectie__nummer {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--mijninkomen-color-groen-licht);
+  color: var(--mijninkomen-color-groen-donker);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.mijninkomen-over-hero__inner > *,
+.mijninkomen-over-sectie__inner > * {
+  min-width: 0;
+}
+
+/* Smal scherm: alles onder elkaar, tekst eerst */
+@media (max-width: 48rem) {
+  .mijninkomen-over-hero__inner,
+  .mijninkomen-over-sectie__inner,
+  .mijninkomen-over-sectie__inner--omgekeerd {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-over-sectie__beeld {
+    order: 2;
+    max-width: 18rem;
+  }
+}

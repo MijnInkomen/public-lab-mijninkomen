@@ -1,0 +1,131 @@
+/* Opmaak die alleen voor de pagina "Contact" geldt */
+
+.mijninkomen-contact-hero {
+  padding-block: var(--mijninkomen-space-l);
+}
+
+/* Tekst links, illustratie rechts */
+.mijninkomen-contact-twee {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--mijninkomen-space-xl);
+  align-items: center;
+}
+
+.mijninkomen-contact-twee > *,
+.mijninkomen-contact-raster > *,
+.mijninkomen-contact-zijkant > *,
+.mijninkomen-contact-faq > * {
+  min-width: 0;
+}
+
+.mijninkomen-contact-hero__beeld {
+  max-width: 24rem;
+  justify-self: end;
+  width: 100%;
+}
+
+/* Formulier links, gegevens rechts */
+.mijninkomen-contact-raster {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--mijninkomen-space-l);
+  align-items: start;
+  padding-block: var(--mijninkomen-space-m);
+}
+
+.mijninkomen-contact-zijkant {
+  display: grid;
+  gap: var(--mijninkomen-space-l);
+}
+
+/* Een kaart: wit met een rand, of lichtgroen */
+.mijninkomen-contact-kaart {
+  padding: var(--mijninkomen-space-xl);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-radius: calc(var(--mijninkomen-border-radius) * 2);
+  background-color: var(--mijninkomen-color-wit);
+}
+
+.mijninkomen-contact-kaart--licht {
+  border-color: transparent;
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+}
+
+.mijninkomen-contact-kaart .nl-paragraph {
+  font-size: 1rem;
+}
+
+/* Contactgegevens: icoon met daarnaast naam en waarde */
+.mijninkomen-contact-gegevens {
+  margin: var(--mijninkomen-space-l) 0 0;
+}
+
+.mijninkomen-contact-gegevens__regel {
+  display: flex;
+  gap: var(--mijninkomen-space-m);
+  align-items: flex-start;
+  margin-bottom: var(--mijninkomen-space-m);
+}
+
+.mijninkomen-contact-gegevens .mijninkomen-icon {
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: 0;
+}
+
+.mijninkomen-contact-gegevens dt {
+  color: var(--mijninkomen-heading-color);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.mijninkomen-contact-gegevens dd {
+  margin: 0;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+/* Veelgestelde vragen: tekst met ballonnen ernaast */
+.mijninkomen-contact-faq {
+  display: grid;
+  grid-template-columns: 1fr 8rem;
+  gap: var(--mijninkomen-space-m);
+  align-items: end;
+}
+
+.mijninkomen-contact-faq__binnenkort {
+  margin: 0;
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.mijninkomen-contact-direct__beeld {
+  max-width: 20rem;
+  justify-self: end;
+  width: 100%;
+}
+
+/* Smal scherm: alles onder elkaar */
+@media (max-width: 48rem) {
+  .mijninkomen-contact-twee,
+  .mijninkomen-contact-raster {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-contact-hero__beeld,
+  .mijninkomen-contact-direct__beeld {
+    justify-self: center;
+    max-width: 16rem;
+  }
+  .mijninkomen-contact-kaart {
+    padding: var(--mijninkomen-space-l);
+  }
+  .mijninkomen-contact-faq {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-contact-faq__beeld {
+    max-width: 8rem;
+  }
+}

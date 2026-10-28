@@ -1,0 +1,96 @@
+/* Opmaak die alleen voor de pagina "Samenwerken" geldt */
+
+.mijninkomen-sw-hero {
+  padding-block: var(--mijninkomen-space-xl) 0;
+}
+
+/* Tekst links, illustratie rechts */
+.mijninkomen-sw-twee-kolommen {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--mijninkomen-space-xl);
+  align-items: center;
+}
+
+.mijninkomen-sw-twee-kolommen > * {
+  min-width: 0;
+}
+
+/* Drie redenen naast elkaar, gecentreerd, met een dunne lijn ertussen */
+.mijninkomen-sw-redenen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: var(--mijninkomen-space-l) 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.mijninkomen-sw-redenen li {
+  padding-inline: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-sw-redenen li + li {
+  border-left: 1px solid var(--mijninkomen-border-color);
+}
+
+.mijninkomen-sw-redenen .nl-paragraph {
+  margin-inline: auto;
+  font-size: 1rem;
+}
+
+/* Lichtgroen blok met afgeronde hoeken */
+.mijninkomen-sw-blok {
+  padding: var(--mijninkomen-space-xl);
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+  border-radius: calc(var(--mijninkomen-border-radius) * 2);
+}
+
+.mijninkomen-sw-blok .nl-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.mijninkomen-sw-blok__beeld {
+  max-width: 22rem;
+  justify-self: end;
+  width: 100%;
+}
+
+/* Oproep onderaan, met een zachte lichtgroene heuvel als achtergrond (decoratie) */
+.mijninkomen-sw-aansluiten {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-bottom: var(--mijninkomen-space-2xl);
+}
+
+.mijninkomen-sw-aansluiten::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset-inline: -10% -10%;
+  bottom: -60%;
+  height: 100%;
+  border-radius: 50% 50% 0 0;
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+}
+
+/* Smal scherm: alles onder elkaar */
+@media (max-width: 48rem) {
+  .mijninkomen-sw-twee-kolommen,
+  .mijninkomen-sw-redenen {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-sw-redenen li + li {
+    border-left: 0;
+    border-top: 1px solid var(--mijninkomen-border-color);
+    padding-top: var(--mijninkomen-space-l);
+  }
+  .mijninkomen-sw-blok {
+    padding: var(--mijninkomen-space-l);
+  }
+  .mijninkomen-sw-blok__beeld {
+    justify-self: center;
+    max-width: 16rem;
+  }
+}

@@ -1,0 +1,96 @@
+.mijninkomen-formulier__veld {
+  margin-bottom: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-formulier__label {
+  display: block;
+  margin-bottom: var(--mijninkomen-space-xs);
+  color: var(--mijninkomen-heading-color);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.mijninkomen-formulier__uitleg {
+  margin: 0 0 var(--mijninkomen-space-l);
+  font-size: 1rem;
+}
+
+/* Samenvatting van de fouten: rode rand + icoon + tekst (niet alleen kleur) */
+.mijninkomen-formulier__samenvatting {
+  margin-bottom: var(--mijninkomen-space-l);
+  padding: var(--mijninkomen-space-m) var(--mijninkomen-space-l);
+  border: 2px solid var(--mijninkomen-form-error-color);
+  border-left-width: 6px;
+  border-radius: var(--mijninkomen-border-radius);
+  background-color: var(--mijninkomen-color-wit);
+  font-size: 1rem;
+}
+
+.mijninkomen-formulier__samenvatting-titel {
+  margin: 0 0 var(--mijninkomen-space-xs);
+  color: var(--mijninkomen-form-error-color);
+  font-size: 1.1rem;
+}
+
+.mijninkomen-formulier__samenvatting p {
+  margin: 0 0 var(--mijninkomen-space-xs);
+}
+
+.mijninkomen-formulier__samenvatting ul {
+  margin: 0;
+  padding-left: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-formulier__samenvatting a {
+  color: var(--mijninkomen-form-error-color);
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
+
+.mijninkomen-formulier__invoer {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: var(--mijninkomen-space-s) var(--mijninkomen-space-m);
+  border: 1px solid var(--mijninkomen-form-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+  background-color: var(--mijninkomen-color-wit);
+  color: var(--mijninkomen-document-color);
+  font: inherit;
+  font-size: 1rem;
+}
+
+textarea.mijninkomen-formulier__invoer {
+  resize: vertical;
+}
+
+.mijninkomen-formulier__invoer::placeholder {
+  color: var(--mijninkomen-form-placeholder-color);
+  opacity: 1;
+}
+
+.mijninkomen-formulier__invoer:hover {
+  border-color: var(--mijninkomen-color-groen);
+}
+
+/* Fout: dikkere rode rand én een tekst met icoon erboven */
+.mijninkomen-formulier__invoer--fout,
+.mijninkomen-formulier__invoer--fout:hover {
+  border: 2px solid var(--mijninkomen-form-error-color);
+}
+
+.mijninkomen-formulier__fout {
+  margin: 0 0 var(--mijninkomen-space-xs);
+  color: var(--mijninkomen-form-error-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mijninkomen-formulier__bevestiging {
+  margin: 0 0 var(--mijninkomen-space-l);
+  padding: var(--mijninkomen-space-m);
+  border-left: 6px solid var(--mijninkomen-color-groen);
+  border-radius: var(--mijninkomen-border-radius);
+  background-color: var(--mijninkomen-color-groen-licht);
+  font-size: 1rem;
+}

@@ -1,0 +1,99 @@
+/*
+ * BASIS-STIJLEN voor de hele pagina.
+ * Gebruikt alleen tokens uit tokens.css.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--mijninkomen-document-background-color);
+  color: var(--mijninkomen-document-color);
+  font-family: var(--mijninkomen-document-font-family);
+  font-size: var(--mijninkomen-document-font-size);
+  line-height: var(--mijninkomen-document-line-height);
+}
+
+/* Toegankelijkheid (WCAG 2.4.7 en 2.4.11): een duidelijk zichtbare focus
+   voor mensen die met het toetsenbord navigeren. Geel vlak + donkere rand. */
+:focus-visible {
+  outline: 3px solid var(--mijninkomen-focus-outline-color);
+  outline-offset: 2px;
+}
+
+/* Breedte van de inhoud: niet te breed, zodat regels prettig leesbaar blijven. */
+.mijninkomen-container {
+  width: 100%;
+  max-width: var(--mijninkomen-page-max-width);
+  margin-inline: auto;
+  padding-inline: var(--mijninkomen-space-m);
+}
+
+/* Klein kopje in hoofdletters boven een titel */
+.mijninkomen-bovenkop {
+  margin: 0 0 var(--mijninkomen-space-s);
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Groene variant van het kleine kopje (groen op wit: contrast 6,4) */
+.mijninkomen-bovenkop--groen {
+  color: var(--mijninkomen-color-groen);
+}
+
+/* Een sectie */
+.mijninkomen-section {
+  padding-block: var(--mijninkomen-space-xl);
+}
+
+/* Bezoekers die liever geen beweging zien, krijgen ook geen animaties. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tekst die alleen schermlezers voorlezen */
+.mijninkomen-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Het hoofdgedeelte krijgt focus via de skiplink; daar is geen rand nodig. */
+main:focus {
+  outline: none;
+}
+
+/* NLDS-koppen: lange Nederlandse woorden netjes afbreken op een smal scherm */
+.nl-heading {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Lopende tekst niet te breed, zodat regels prettig leesbaar blijven */
+.nl-paragraph {
+  max-width: 65ch;
+}
+
+/* Meerdere knoppen naast elkaar (NLDS: "Button Group") */
+.mijninkomen-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-m);
+}
