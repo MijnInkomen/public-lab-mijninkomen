@@ -19,6 +19,7 @@
   --mijninkomen-color-groen-zeer-licht: #f2f7f4; /* heel lichte achtergrond */
   --mijninkomen-color-rood: #a52a35;         /* alleen accent, niet voor knoppen */
   --mijninkomen-color-geel: #e8b547;         /* alleen decoratie, nooit tekst */
+  --mijninkomen-color-blauw: #003976;        /* uit het logo van 's-Hertogenbosch – alleen in het streepje */
   --mijninkomen-color-geel-licht: #fbf1d9;   /* achtergrond voor info, met donkere tekst */
   --mijninkomen-color-wit: #ffffff;         /* pagina-achtergrond en tekst op groen */
   --mijninkomen-color-grijs-donker: #1f2a26; /* lopende tekst */
@@ -144,4 +145,5 @@
   --mijninkomen-stripe-color-1: var(--mijninkomen-color-groen);
   --mijninkomen-stripe-color-2: var(--mijninkomen-color-rood);
   --mijninkomen-stripe-color-3: var(--mijninkomen-color-geel);
+  --mijninkomen-stripe-color-4: var(--mijninkomen-color-blauw);
 }

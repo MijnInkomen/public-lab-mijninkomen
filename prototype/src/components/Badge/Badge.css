@@ -1,0 +1,22 @@
+.mijninkomen-badge {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Voorbeeld: gestippelde rand, zodat het opvalt als "nog niet echt" */
+.mijninkomen-badge--voorbeeld {
+  border: 1px dashed var(--mijninkomen-text-subtle-color);
+  color: var(--mijninkomen-text-subtle-color);
+  background-color: var(--mijninkomen-color-wit);
+}
+
+.mijninkomen-badge--status {
+  background-color: var(--mijninkomen-color-groen-licht);
+  color: var(--mijninkomen-color-groen-donker);
+}

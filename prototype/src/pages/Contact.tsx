@@ -1,98 +1,114 @@
 /**
- * PAGINA "CONTACT" (niveau 1 – informatief), volgens de opzet van Isabella
+ * PAGINA "CONTACT" (niveau 1, versie 2)
  *
- * Opbouw:
- *   1. Hero                 – titel, uitleg en een envelop
- *   2. Twee kolommen:
- *      links  – contactformulier (prototype: er wordt niets verstuurd)
- *      rechts – contactgegevens (voorbeeldgegevens!) en veelgestelde vragen
- *   3. Liever direct samenwerken? – verwijzing naar de pagina Samenwerken
- *
- * De inhoud wordt nog afgestemd met de opdrachtgever. De teksten staan in content/contact.ts.
+ * Kort en praktisch: waarvoor je contact opneemt, één algemeen e-mailadres
+ * (geen persoonlijke namen), de reactietijd en een link naar LinkedIn.
+ * Wil je aansluiten? Dan stuurt deze pagina je door naar Aansluiten.
+ * Teksten: content/contact.ts
  */
+import { Button } from '@nl-design-system-candidate/button-react/css';
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
+import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
-import { ButtonLink } from '../components/ButtonLink/ButtonLink';
-import { ContactFormulier } from '../components/ContactFormulier/ContactFormulier';
+import { useState } from 'react';
+import { Badge } from '../components/Badge/Badge';
 import { Icon } from '../components/Icon/Icon';
-import { BallonnenIllustratie, EnvelopIllustratie } from '../components/Illustration/ContactIllustraties';
-import { GemeentehuisIllustratie } from '../components/Illustration/SamenwerkenIllustraties';
-import { contactgegevens, contactHero, directSamenwerken, formulier, veelgesteldeVragen } from '../content/contact';
+import { EnvelopIllustratie } from '../components/Illustration/ContactIllustraties';
+import { contactIntro, gegevens, volgOns, waarvoor } from '../content/contact';
 import './Contact.css';
 
+/** Zet tekst op het klembord. Werkt dat niet (oude browser), dan gebeurt er niets ergs. */
+async function kopieer(tekst: string): Promise<boolean> {
+  try {
+    await navigator.clipboard.writeText(tekst);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export function Contact() {
+  const [gekopieerd, setGekopieerd] = useState(false);
+
   return (
     <>
-      {/* 1. HERO */}
-      <section className="mijninkomen-contact-hero" aria-labelledby="contact-titel">
-        <div className="mijninkomen-container mijninkomen-contact-twee">
+      <section className="mijninkomen-pagina-intro" aria-labelledby="contact-titel">
+        <div className="mijninkomen-container mijninkomen-pagina-intro__inner">
           <div>
-            <p className="mijninkomen-bovenkop mijninkomen-bovenkop--groen">{contactHero.bovenkop}</p>
-            <Heading level={1} id="contact-titel">{contactHero.titel}</Heading>
-            <Paragraph purpose="lead">{contactHero.intro}</Paragraph>
+            <p className="mijninkomen-bovenkop mijninkomen-bovenkop--groen">{contactIntro.bovenkop}</p>
+            <Heading level={1} id="contact-titel">{contactIntro.titel}</Heading>
+            <Paragraph purpose="lead">{contactIntro.tekst}</Paragraph>
           </div>
-          <div className="mijninkomen-contact-hero__beeld">
+          <div className="mijninkomen-pagina-intro__beeld">
             <EnvelopIllustratie />
           </div>
         </div>
       </section>
 
-      {/* 2. FORMULIER + GEGEVENS */}
-      <div className="mijninkomen-container mijninkomen-contact-raster">
-        <section id="formulier" className="mijninkomen-contact-kaart" aria-labelledby="formulier-titel">
-          <Heading level={2} id="formulier-titel">{formulier.titel}</Heading>
-          <Paragraph>{formulier.intro}</Paragraph>
-          <ContactFormulier />
-        </section>
-
-        <div className="mijninkomen-contact-zijkant">
-          <section className="mijninkomen-contact-kaart mijninkomen-contact-kaart--licht" aria-labelledby="gegevens-titel">
-            <Heading level={2} id="gegevens-titel">{contactgegevens.titel}</Heading>
-            {contactgegevens.intro.map((t) => (
-              <Paragraph key={t}>{t}</Paragraph>
-            ))}
-            {/* Een lijst met naam + waarde: <dl> zodat schermlezers de koppeling voorlezen */}
-            <dl className="mijninkomen-contact-gegevens">
-              {contactgegevens.lijst.map((g) => (
-                <div key={g.label} className="mijninkomen-contact-gegevens__regel">
-                  <Icon naam={g.icoon} />
-                  <div>
-                    <dt>{g.label}</dt>
-                    {g.waarde.map((w) => (
-                      <dd key={w}>{w}</dd>
-                    ))}
-                  </div>
-                </div>
+      <section className="mijninkomen-section" aria-label="Contact">
+        <div className="mijninkomen-container mijninkomen-contact">
+          {/* WAARVOOR */}
+          <div className="mijninkomen-kaart">
+            <Heading level={2} appearance="level-3">{waarvoor.titel}</Heading>
+            <ul className="mijninkomen-lijst">
+              {waarvoor.lijst.map((p) => (
+                <li key={p}>{p}</li>
               ))}
-            </dl>
-          </section>
-
-          <section className="mijninkomen-contact-kaart mijninkomen-contact-kaart--licht mijninkomen-contact-faq" aria-labelledby="faq-titel">
-            <div>
-              <Heading level={2} id="faq-titel">{veelgesteldeVragen.titel}</Heading>
-              <Paragraph>{veelgesteldeVragen.tekst}</Paragraph>
-              {/* De pagina met vragen bestaat nog niet: daarom (nog) geen knop */}
-              <p className="mijninkomen-contact-faq__binnenkort">{veelgesteldeVragen.binnenkort}</p>
-            </div>
-            <div className="mijninkomen-contact-faq__beeld">
-              <BallonnenIllustratie />
-            </div>
-          </section>
-        </div>
-      </div>
-
-      {/* 3. LIEVER DIRECT SAMENWERKEN */}
-      <section className="mijninkomen-container mijninkomen-section--smal" aria-labelledby="direct-titel">
-        <div className="mijninkomen-contact-kaart mijninkomen-contact-kaart--licht mijninkomen-contact-twee">
-          <div>
-            <Heading level={2} id="direct-titel">{directSamenwerken.titel}</Heading>
-            <Paragraph>{directSamenwerken.tekst}</Paragraph>
-            <ButtonLink href="/samenwerken" purpose="secondary">
-              {directSamenwerken.knop} <span aria-hidden="true">→</span>
-            </ButtonLink>
+            </ul>
+            <p className="mijninkomen-contact__aansluiten">
+              {waarvoor.aansluiten}{' '}
+              <Link href="/aansluiten">
+                {waarvoor.aansluitenLink} <span aria-hidden="true">→</span>
+              </Link>
+            </p>
           </div>
-          <div className="mijninkomen-contact-direct__beeld">
-            <GemeentehuisIllustratie />
+
+          {/* CONTACTGEGEVENS */}
+          <div className="mijninkomen-kaart">
+            <Heading level={2} appearance="level-3">
+              {gegevens.titel} <Badge />
+            </Heading>
+            <dl className="mijninkomen-contact__gegevens">
+              <div>
+                <dt>
+                  <Icon naam="mail" />
+                  {gegevens.email.label}
+                </dt>
+                <dd>
+                  <Link href={`mailto:${gegevens.email.waarde}`}>{gegevens.email.waarde}</Link>
+                  <div className="mijninkomen-contact__kopieer">
+                    <Button
+                      purpose="secondary"
+                      onClick={async () => setGekopieerd(await kopieer(gegevens.email.waarde))}
+                    >
+                      {gegevens.kopieer}
+                    </Button>
+                    {/* role="status": schermlezers lezen de melding voor zodra die verschijnt */}
+                    <span role="status" className="mijninkomen-contact__melding">
+                      {gekopieerd ? `✓ ${gegevens.gekopieerd}` : ''}
+                    </span>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <Icon naam="klok" />
+                  {gegevens.reactie.label}
+                </dt>
+                <dd>{gegevens.reactie.waarde}</dd>
+              </div>
+            </dl>
+          </div>
+
+          {/* VOLG ONS */}
+          <div className="mijninkomen-kaart">
+            <Heading level={2} appearance="level-3">{volgOns.titel}</Heading>
+            <Paragraph>{volgOns.tekst}</Paragraph>
+            <p>
+              <Link href={volgOns.link.href}>
+                {volgOns.link.label} <span className="mijninkomen-visually-hidden">(opent LinkedIn)</span>
+              </Link>
+            </p>
           </div>
         </div>
       </section>

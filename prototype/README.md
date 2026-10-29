@@ -7,7 +7,8 @@ Het is bedoeld als voorbeeld voor de echte bouw: de structuur, componenten en hu
 - **Code**: gebouwd met hulp van AI (Claude), zie `AI-verantwoording.md`
 - **Onderbouwing van de ontwerpkeuzes**: zie `onderbouwing.md`
 
-Op dit moment staat **niveau 1** (informatief) erin: de homepage en de pagina's Over MijnInkomen, Samenwerken en Contact.
+Op dit moment staat **niveau 1** (informatief) erin, **versie 2**: Home, Ontwikkelingen, Aansluiten en Contact, plus een inlogpagina voor communityleden en een voorbeeld-privacyverklaring.
+De indeling volgt het document "Paginastructuur website MijnInkomen – niveau 1" van Isabella.
 **Niveau 2** (ingelogde communityleden) komt later.
 
 ---
@@ -44,11 +45,12 @@ prototype/
 │   │
 │   ├── styles/
 │   │   ├── tokens.css         ← LAAG 1: de huisstijl (design tokens)
-│   │   └── base.css           ← basisstijlen voor de hele pagina
+│   │   ├── base.css           ← basisstijlen voor de hele pagina
+│   │   └── paginas.css        ← opmaak die meerdere pagina's delen (intro, kaarten, lijstjes)
 │   │
 │   ├── components/            ← LAAG 2: eigen bouwstenen (de officiële NLDS-componenten komen uit node_modules)
-│   │   ├── ButtonLink/
-│   │   ├── ContactFormulier/
+│   │   ├── Badge/             ← labeltje "Voorbeeld" of een status
+│   │   ├── Formulier/         ← één formuliercomponent voor alle formulieren
 │   │   ├── Icon/
 │   │   ├── Illustration/
 │   │   ├── Logo/
@@ -57,14 +59,18 @@ prototype/
 │   │
 │   ├── pages/                 ← LAAG 3: pagina's, gebouwd uit componenten
 │   │   ├── Home.tsx           ← adres: /
-│   │   ├── OverMijnInkomen.tsx ← adres: /over-mijninkomen
-│   │   ├── Samenwerken.tsx    ← adres: /samenwerken
-│   │   └── Contact.tsx        ← adres: /contact
+│   │   ├── Ontwikkelingen.tsx ← adres: /ontwikkelingen
+│   │   ├── Aansluiten.tsx     ← adres: /aansluiten (webinar + aanmeldformulier)
+│   │   ├── Contact.tsx        ← adres: /contact
+│   │   ├── Inloggen.tsx       ← adres: /inloggen (alleen voor communityleden)
+│   │   └── Privacy.tsx        ← adres: /privacy (voorbeeldtekst)
 │   │
 │   └── content/
 │       ├── home.ts            ← teksten van de homepage
-│       ├── over.ts            ← teksten van Over MijnInkomen
-│       ├── samenwerken.ts     ← teksten van Samenwerken
+│       ├── inloggen.ts        ← teksten van de inlogpagina
+│       ├── ontwikkelingen.ts  ← regelingen, lopende onderwerpen, plannen en updates
+│       ├── aansluiten.ts      ← teksten van Aansluiten
+│       ├── webinars.ts        ← data van de webinars (komende en geweeste worden automatisch gesplitst)
 │       └── contact.ts         ← teksten van Contact (let op: voorbeeldgegevens)
 ```
 
@@ -88,10 +94,10 @@ Waar NL Design System een officiële component heeft, gebruiken we die. Dit zijn
 
 | Component | Pakket | Waar gebruikt |
 |---|---|---|
-| Button | `@nl-design-system-candidate/button-react` | Knop Inloggen; ook de opmaak van `ButtonLink` |
+| Button | `@nl-design-system-candidate/button-react` | Formulierknoppen, webinarknop, e-mailadres kopiëren. De link Inloggen in de kop gebruikt de NLDS-klassen van Button, omdat een link een `<a>` moet zijn |
 | Heading | `@nl-design-system-candidate/heading-react` | Alle koppen |
 | Paragraph | `@nl-design-system-candidate/paragraph-react` | Alle lopende tekst (`purpose="lead"` voor intro's) |
-| Link | `@nl-design-system-candidate/link-react` | Menu en footer |
+| Link | `@nl-design-system-candidate/link-react` | Menu, footer en alle links in de tekst |
 | Skip Link | `@nl-design-system-candidate/skip-link-react` | "Direct naar de inhoud" |
 
 We importeren ze via `.../css`, bijvoorbeeld
@@ -109,13 +115,13 @@ component gemaakt. Die gebruiken dezelfde tokens.
 
 | Component | Wat het doet | Opmerking |
 |---|---|---|
-| `ButtonLink` | Link die eruitziet als NLDS-knop | De NLDS Button is altijd een `<button>`; voor navigeren hoort een `<a>`. Gebruikt de officiële NLDS-klassen. |
-| `ContactFormulier` | Contactformulier met foutmeldingen | NLDS heeft hier (nog) geen Candidate-componenten voor; gewone HTML-velden volgens de NLDS-richtlijnen voor formulieren |
+| `Formulier` | Formulier met controle, foutensamenvatting en bevestiging. Je geeft een lijst velden mee (tekst, e-mail, wachtwoord, tekstvak, keuzelijst, aanvinken), eventueel met een korte uitleg (`omschrijving`). Geen placeholders, volgens NLDS | NLDS heeft hier (nog) geen Candidate-componenten voor; gewone HTML-velden volgens de NLDS-richtlijnen voor formulieren |
+| `Badge` | Labeltje "Voorbeeld" (stippellijn) of een status zoals "In test" | Markeert voorbeeldinhoud, zodat niemand denkt dat het echte informatie is |
 | `PageHeader` | Logo, menu, Inloggen en het gemeentestreepje | Volgt het community-patroon "Page Header" |
 | `PageFooter` | Voettekst met contact en menu | Volgt het community-patroon "Page Footer" |
 | `Logo` | Logo van MijnInkomen (afbeelding), volledig of alleen de M | |
 | `Icon` | Lijn-icoon in een lichtgroen rondje | |
-| `SignpostIllustration`, `OverIllustraties`, `SamenwerkenIllustraties`, `ContactIllustraties` | Decoratieve illustraties (SVG) | |
+| `OverIllustraties`, `SamenwerkenIllustraties`, `ContactIllustraties` | Decoratieve illustraties (SVG) | De namen komen nog uit versie 1, de illustraties worden op de nieuwe pagina's gebruikt |
 
 Check op [nldesignsystem.nl](https://nldesignsystem.nl) of er inmiddels nieuwe officiële componenten zijn, want NLDS verandert regelmatig.
 
@@ -143,13 +149,15 @@ Bij de echte bouw: test opnieuw, bijvoorbeeld met een schermlezer (NVDA) en met 
 
 | Onderdeel | In het prototype | Bij de echte bouw |
 |---|---|---|
-| Inloggen | Knop toont een melding | Echte, veilige login (niveau 2) |
+| Inloggen | Pagina met formulier; controleert alleen of de velden zijn ingevuld | Echte, veilige login (niveau 2), met "wachtwoord vergeten" |
 | Navigatie | Zelfgemaakt in `navigatie.ts` | Een echte router (React Router of de routing van Docusaurus). Let op: de server moet bij elk adres `index.html` teruggeven |
-| Contactformulier | Controleert de velden en toont een bevestiging, maar verstuurt niets | Veilig versturen (bijv. naar een mailbox of zaaksysteem), met een privacyverklaring (AVG) |
-| Contactgegevens | Voorbeeldgegevens | Echte gegevens, af te stemmen met de opdrachtgever |
-| Veelgestelde vragen | Alleen een tekst, nog geen pagina | Pagina met vragen en antwoorden |
+| Formulieren (webinar, aanmelden) | Controleren de velden en tonen een bevestiging, maar versturen niets | Veilig versturen (bijv. naar een mailbox of zaaksysteem) |
+| Webinardata | Vaste lijst in `content/webinars.ts`; welke al geweest zijn, rekent de code uit met de datum van vandaag | Uit een agenda of beheersysteem |
+| Privacyverklaring | Korte voorbeeldtekst | De echte verklaring van de opdrachtgever (AVG) |
+| Contactgegevens en LinkedIn | Voorbeeldgegevens | Echte gegevens, af te stemmen met de opdrachtgever |
+| Ontwikkelingen, spelregels, termijnen | Voorbeeldteksten, gemarkeerd met "Voorbeeld" | Alleen informatie die de opdrachtgever heeft goedgekeurd |
 | Gemeenten | Officiële logo's (van de huisstijlsites van de gemeenten) | Alleen gebruiken met toestemming van de gemeenten |
-| Footerlinks | Alleen het menu | Ook Privacy en Toegankelijkheid (staan in het ontwerp) |
-| Teksten | Uit het ontwerp, in `content/home.ts` | Afstemmen met de opdrachtgever |
+| Footerlinks | Menu, privacyverklaring en LinkedIn | Ook een toegankelijkheidsverklaring |
+| Teksten | In de map `content/` | Afstemmen met de opdrachtgever |
 | Logo | Conceptlogo als PNG (`public/logo-mijninkomen.png`) | Definitief logo als SVG, na akkoord van de opdrachtgever |
 | Gegevens | Geen, alles staat vast in de code | Echte gegevens, met aandacht voor privacy (AVG) |

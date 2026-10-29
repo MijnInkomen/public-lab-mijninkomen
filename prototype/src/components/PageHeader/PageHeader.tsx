@@ -4,28 +4,27 @@
  *
  * Bovenaan elke pagina: logo, hoofdmenu en de knop Inloggen.
  * Het logo is ook een link naar de homepage.
- * Daaronder het streepje in drie kleuren: één kleur per deelnemende gemeente.
+ * Daaronder het streepje in vier kleuren (groen, rood, geel en blauw), voor de
+ * samenwerking tussen de gemeenten. Blauw komt uit het logo van 's-Hertogenbosch.
  *
- * Inloggen hoort bij niveau 2 (communityleden) en werkt nog niet.
- * In dit prototype laat de knop daarom een korte melding zien.
+ * Inloggen gaat naar de pagina /inloggen (voor communityleden, niveau 2).
  */
-import { useState } from 'react';
-import { Button } from '@nl-design-system-candidate/button-react/css';
+// Alleen de opmaak van de NLDS Button laden (voor de link Inloggen)
+import '@nl-design-system-candidate/button-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Logo } from '../Logo/Logo';
 import './PageHeader.css';
 
-// Het hoofdmenu (volgens het ontwerp van Isabella)
+// Het hoofdmenu (versie 2). De volgorde volgt de vragen van een bezoeker:
+// wat is het? → waar werken ze aan? → hoe doe ik mee? → wie kan ik bellen?
 const menu = [
   { label: 'Home', href: '/' },
-  { label: 'Over MijnInkomen', href: '/over-mijninkomen' },
-  { label: 'Samenwerken', href: '/samenwerken' },
+  { label: 'Ontwikkelingen', href: '/ontwikkelingen' },
+  { label: 'Aansluiten', href: '/aansluiten' },
   { label: 'Contact', href: '/contact' },
 ];
 
 export function PageHeader({ huidigPad }: { huidigPad: string }) {
-  const [toonMelding, setToonMelding] = useState(false);
-
   return (
     <header className="mijninkomen-page-header">
       <div className="mijninkomen-container mijninkomen-page-header__inner">
@@ -46,28 +45,15 @@ export function PageHeader({ huidigPad }: { huidigPad: string }) {
           </ul>
         </nav>
 
-        {/* Officiële NLDS Button met een slot-icoon ervoor */}
-        <Button
-          purpose="primary"
-          onClick={() => setToonMelding(true)}
-          iconStart={
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="4" y="11" width="16" height="10" rx="2" />
-              <path d="M8 11V7a4 4 0 0 1 8 0v4" />
-            </svg>
-          }
+        {/* Inloggen is een link naar een andere pagina, dus een <a> en geen <button>.
+            Hij krijgt wel de opmaak van de officiële NLDS Button (klassen nl-button). */}
+        <a
+          href="/inloggen"
+          className="nl-button nl-button--primary mijninkomen-page-header__inloggen"
+          aria-current={huidigPad === '/inloggen' ? 'page' : undefined}
         >
-          Inloggen
-        </Button>
-      </div>
-
-      {/* aria-live: schermlezers lezen de melding voor zodra hij verschijnt */}
-      <div className="mijninkomen-container" aria-live="polite">
-        {toonMelding && (
-          <p className="mijninkomen-page-header__melding">
-            Inloggen voor communityleden komt in de volgende versie (niveau 2).
-          </p>
-        )}
+          <span className="nl-button__label">Inloggen</span>
+        </a>
       </div>
 
       {/* Decoratie, dus verborgen voor schermlezers */}
@@ -76,6 +62,7 @@ export function PageHeader({ huidigPad }: { huidigPad: string }) {
           <span className="mijninkomen-stripe__deel mijninkomen-stripe__deel--1" />
           <span className="mijninkomen-stripe__deel mijninkomen-stripe__deel--2" />
           <span className="mijninkomen-stripe__deel mijninkomen-stripe__deel--3" />
+          <span className="mijninkomen-stripe__deel mijninkomen-stripe__deel--4" />
         </div>
       </div>
     </header>

@@ -1,0 +1,126 @@
+/*
+ * GEDEELDE OPMAAK VOOR DE PAGINA'S
+ * Onderdelen die op meerdere pagina's terugkomen. Gebruikt alleen tokens.
+ */
+
+/* Intro bovenaan een pagina: tekst links, illustratie rechts */
+.mijninkomen-pagina-intro {
+  padding-block: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-pagina-intro__inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--mijninkomen-space-xl);
+  align-items: center;
+}
+
+.mijninkomen-pagina-intro__inner > * {
+  min-width: 0;
+}
+
+.mijninkomen-pagina-intro__beeld {
+  justify-self: end;
+  width: 100%;
+  max-width: 22rem;
+}
+
+/* Lichtgroene sectie voor afwisseling */
+.mijninkomen-section--licht {
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+}
+
+.mijninkomen-section--smal {
+  padding-block: var(--mijninkomen-space-m);
+}
+
+/* Kaarten in een raster */
+.mijninkomen-kaarten {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: var(--mijninkomen-space-l);
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-kaart {
+  padding: var(--mijninkomen-space-l);
+  background-color: var(--mijninkomen-color-wit);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-kaart .nl-paragraph {
+  font-size: 1rem;
+}
+
+.mijninkomen-kaart__extra {
+  margin: 0;
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.95rem;
+}
+
+.mijninkomen-kaart__status {
+  margin: 0 0 var(--mijninkomen-space-s);
+}
+
+/* Gewone opsomming */
+.mijninkomen-lijst {
+  margin: 0 0 var(--mijninkomen-space-m);
+  padding-left: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-lijst li {
+  margin-bottom: var(--mijninkomen-space-xs);
+}
+
+/* Updates: datum + één regel (ook gebruikt op de homepage) */
+.mijninkomen-updates {
+  display: grid;
+  gap: var(--mijninkomen-space-s);
+  margin: var(--mijninkomen-space-m) 0 var(--mijninkomen-space-l);
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-updates li {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--mijninkomen-space-m);
+  padding-block: var(--mijninkomen-space-s);
+  border-bottom: 1px solid var(--mijninkomen-border-color);
+}
+
+.mijninkomen-updates li > * {
+  min-width: 0;
+}
+
+.mijninkomen-updates time {
+  color: var(--mijninkomen-text-subtle-color);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Eén regel onderaan die naar de volgende pagina verwijst */
+.mijninkomen-doorverwijzing {
+  padding-block: var(--mijninkomen-space-l);
+  border-top: 1px solid var(--mijninkomen-border-color);
+}
+
+.mijninkomen-doorverwijzing p {
+  margin: 0;
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-pagina-intro__inner {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-pagina-intro__beeld {
+    justify-self: center;
+    max-width: 16rem;
+  }
+  .mijninkomen-updates li {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

@@ -1,0 +1,46 @@
+/* Opmaak die alleen voor de pagina "Inloggen" geldt */
+
+.mijninkomen-inloggen {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--mijninkomen-space-l);
+  align-items: start;
+  margin-top: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-inloggen > * {
+  min-width: 0;
+}
+
+.mijninkomen-inloggen__formulier {
+  padding: var(--mijninkomen-space-xl);
+}
+
+/* Blok "Nog geen communitylid?": lichtgroen met een groene lijn links */
+.mijninkomen-inloggen__geen-lid {
+  padding: var(--mijninkomen-space-xl);
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+  border-left: 6px solid var(--mijninkomen-color-groen);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-inloggen__geen-lid .nl-heading {
+  margin-top: var(--mijninkomen-space-m);
+}
+
+.mijninkomen-inloggen__vraag {
+  margin: var(--mijninkomen-space-l) 0 0;
+  padding-top: var(--mijninkomen-space-m);
+  border-top: 1px solid var(--mijninkomen-border-color);
+  font-size: 1rem;
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-inloggen {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-inloggen__formulier,
+  .mijninkomen-inloggen__geen-lid {
+    padding: var(--mijninkomen-space-l);
+  }
+}

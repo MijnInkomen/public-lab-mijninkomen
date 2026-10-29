@@ -13,112 +13,97 @@
   align-items: center;
 }
 
-/* De illustratie (doorzichtige achtergrond) */
 .mijninkomen-hero__beeld img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* 2. WAAROM – vier voordelen naast elkaar */
+/* 2. WAAROM – drie punten naast elkaar */
 .mijninkomen-voordelen {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: var(--mijninkomen-space-l);
   margin: var(--mijninkomen-space-l) 0 0;
   padding: 0;
   list-style: none;
 }
 
-.mijninkomen-voordelen .mijninkomen-paragraph {
+.mijninkomen-voordelen .nl-paragraph {
   font-size: 1rem;
 }
 
-/* Sectie met minder ruimte boven en onder */
-.mijninkomen-section--smal {
-  padding-block: var(--mijninkomen-space-m);
-}
-
-/* Lichtgrijs blok met afgeronde hoeken (gemeenten) */
+/* Lichtgrijs blok met afgeronde hoeken */
 .mijninkomen-blok {
   padding: var(--mijninkomen-space-xl);
   background-color: var(--mijninkomen-color-grijs-vlak);
   border-radius: calc(var(--mijninkomen-border-radius) * 2);
 }
 
-/* 3. GEMEENTEN – tekst links, namen rechts */
-.mijninkomen-gemeenten {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: var(--mijninkomen-space-l);
-  align-items: center;
-}
-
-.mijninkomen-gemeenten .mijninkomen-paragraph:last-child {
+.mijninkomen-blok > .nl-paragraph:last-child {
   margin-bottom: 0;
 }
 
-.mijninkomen-gemeenten__lijst {
-  display: flex;
-  flex-wrap: wrap;
+/* 3. WIE DOEN MEE – logo met daaronder de rol */
+.mijninkomen-deelnemers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: var(--mijninkomen-space-m);
-  margin: 0;
+  margin: var(--mijninkomen-space-m) 0 var(--mijninkomen-space-l);
   padding: 0;
   list-style: none;
 }
 
-/* Logo per gemeente, op een wit vlak (de logo's hebben een witte achtergrond) */
-.mijninkomen-gemeente {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--mijninkomen-space-xs);
-  min-width: 8rem;
+.mijninkomen-deelnemer__logo {
+  display: grid;
+  place-items: center;
+  height: 6rem;
   padding: var(--mijninkomen-space-m);
   background-color: var(--mijninkomen-color-wit);
   border-radius: var(--mijninkomen-border-radius);
 }
 
-.mijninkomen-gemeente img {
-  display: block;
-  height: 4rem;
+.mijninkomen-deelnemer__logo img {
+  max-height: 4rem;
   width: auto;
   max-width: 100%;
 }
 
-
-/* 4. VOOR WIE – tekst links, wegwijzer rechts */
-.mijninkomen-voorwie {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: var(--mijninkomen-space-xl);
-  align-items: center;
+.mijninkomen-deelnemer__naam {
+  color: var(--mijninkomen-heading-color);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
 }
 
-.mijninkomen-voorwie__beeld {
-  max-width: 20rem;
-  justify-self: end;
+.mijninkomen-deelnemer__rol {
+  margin: var(--mijninkomen-space-xs) 0 0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* 4. LAATSTE ONTWIKKELINGEN – zie .mijninkomen-updates in styles/paginas.css */
+
+/* 5. AANSLUITEN – rustige verwijzing */
+.mijninkomen-verwijzing {
+  padding: var(--mijninkomen-space-xl);
+  border-left: 6px solid var(--mijninkomen-color-groen);
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+  border-radius: var(--mijninkomen-border-radius);
 }
 
 /* Grid-kolommen mogen smaller worden dan hun inhoud */
-.mijninkomen-hero__inner > *,
-.mijninkomen-gemeenten > *,
-.mijninkomen-voorwie > * {
+.mijninkomen-hero__inner > * {
   min-width: 0;
 }
 
 /* Smal scherm: alles onder elkaar */
 @media (max-width: 48rem) {
-  .mijninkomen-hero__inner,
-  .mijninkomen-gemeenten,
-  .mijninkomen-voorwie {
+  .mijninkomen-hero__inner {
     grid-template-columns: 1fr;
   }
-  .mijninkomen-voorwie__beeld {
-    justify-self: center;
-  }
-  .mijninkomen-blok {
+  .mijninkomen-blok,
+  .mijninkomen-verwijzing {
     padding: var(--mijninkomen-space-l);
   }
 }

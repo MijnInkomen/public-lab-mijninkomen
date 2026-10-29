@@ -58,15 +58,12 @@
   font-weight: 600;
 }
 
-.mijninkomen-page-header__melding {
-  margin: var(--mijninkomen-space-m) 0 0;
-  padding: var(--mijninkomen-space-s) var(--mijninkomen-space-m);
-  background-color: var(--mijninkomen-color-geel-licht);
-  border-radius: var(--mijninkomen-border-radius);
-  font-size: 1rem;
+/* De link Inloggen ziet eruit als een NLDS-knop, dus zonder onderstreping */
+.mijninkomen-page-header__inloggen {
+  text-decoration: none;
 }
 
-/* Het streepje: verhouding 5 : 1 : 1, zoals in het ontwerp */
+/* Het streepje: verhouding 5 : 1 : 1 : 1 (groen, rood, geel, blauw) */
 .mijninkomen-stripe {
   display: flex;
   gap: 6px;
@@ -81,6 +78,7 @@
 .mijninkomen-stripe__deel--1 { flex: 5; background-color: var(--mijninkomen-stripe-color-1); }
 .mijninkomen-stripe__deel--2 { flex: 1; background-color: var(--mijninkomen-stripe-color-2); }
 .mijninkomen-stripe__deel--3 { flex: 1; background-color: var(--mijninkomen-stripe-color-3); }
+.mijninkomen-stripe__deel--4 { flex: 1; background-color: var(--mijninkomen-stripe-color-4); }
 
 /* Op een smal scherm (telefoon) komt het menu onder het logo */
 @media (max-width: 48rem) {

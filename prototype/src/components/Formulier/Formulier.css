@@ -27,6 +27,7 @@
 }
 
 .mijninkomen-formulier__samenvatting-titel {
+  font-weight: 700;
   margin: 0 0 var(--mijninkomen-space-xs);
   color: var(--mijninkomen-form-error-color);
   font-size: 1.1rem;
@@ -92,5 +93,42 @@ textarea.mijninkomen-formulier__invoer {
   border-left: 6px solid var(--mijninkomen-color-groen);
   border-radius: var(--mijninkomen-border-radius);
   background-color: var(--mijninkomen-color-groen-licht);
+  font-size: 1rem;
+}
+
+/* Groep met vakjes (fieldset) */
+.mijninkomen-formulier__groep {
+  margin-inline: 0;
+  padding: 0;
+  border: 0;
+}
+
+.mijninkomen-formulier__groep legend {
+  padding: 0;
+}
+
+.mijninkomen-formulier__vakje {
+  display: flex;
+  gap: var(--mijninkomen-space-s);
+  align-items: center;
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+.mijninkomen-formulier__vakje input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  accent-color: var(--mijninkomen-color-groen);
+}
+
+select.mijninkomen-formulier__invoer {
+  appearance: auto;
+}
+
+/* Uitleg tussen label en veld (NLDS: description) */
+.mijninkomen-formulier__omschrijving {
+  margin: 0 0 var(--mijninkomen-space-s);
+  color: var(--mijninkomen-text-subtle-color);
   font-size: 1rem;
 }

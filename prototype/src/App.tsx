@@ -10,17 +10,21 @@ import { useEffect, useRef, type ComponentType } from 'react';
 import { PageFooter } from './components/PageFooter/PageFooter';
 import { PageHeader } from './components/PageHeader/PageHeader';
 import { useHuidigPad } from './navigatie';
+import { Aansluiten } from './pages/Aansluiten';
 import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
-import { OverMijnInkomen } from './pages/OverMijnInkomen';
-import { Samenwerken } from './pages/Samenwerken';
+import { Inloggen } from './pages/Inloggen';
+import { Ontwikkelingen } from './pages/Ontwikkelingen';
+import { Privacy } from './pages/Privacy';
 
 /** Alle pagina's van het prototype: adres → titel en inhoud */
 const paginas: Record<string, { titel: string; inhoud: ComponentType }> = {
   '/': { titel: 'MijnInkomen – Samen werken aan inkomensondersteuning', inhoud: Home },
-  '/over-mijninkomen': { titel: 'Over MijnInkomen – MijnInkomen', inhoud: OverMijnInkomen },
-  '/samenwerken': { titel: 'Samenwerken – MijnInkomen', inhoud: Samenwerken },
+  '/ontwikkelingen': { titel: 'Ontwikkelingen – MijnInkomen', inhoud: Ontwikkelingen },
+  '/aansluiten': { titel: 'Aansluiten – MijnInkomen', inhoud: Aansluiten },
   '/contact': { titel: 'Contact – MijnInkomen', inhoud: Contact },
+  '/privacy': { titel: 'Privacyverklaring – MijnInkomen', inhoud: Privacy },
+  '/inloggen': { titel: 'Inloggen – MijnInkomen', inhoud: Inloggen },
 };
 
 export function App() {
@@ -41,8 +45,11 @@ export function App() {
     } else if (!eersteKeer.current) {
       // Nieuwe pagina: naar boven, en de focus naar de inhoud zodat
       // schermlezers en toetsenbordgebruikers op de nieuwe pagina beginnen
-      window.scrollTo(0, 0);
-      mainRef.current?.focus();
+      // preventScroll: de focus gaat naar de inhoud, maar de pagina blijft
+      // bovenaan staan (anders schuift de browser een stukje naar beneden)
+      // 'instant': meteen bovenaan, zonder het zachte scrollen uit base.css
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      mainRef.current?.focus({ preventScroll: true });
     }
     eersteKeer.current = false;
   }, [pad, pagina.titel]);

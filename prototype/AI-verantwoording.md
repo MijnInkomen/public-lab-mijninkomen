@@ -78,6 +78,40 @@ Isabella controleert de uitkomst en beslist wat er blijft.
 
 **Controle op NL Design System:** Isabella vroeg of het prototype volledig voldoet aan NL Design System. Claude legde het naast de officiële NLDS-richtlijnen en vond twee afwijkingen in het formulier, waarvan één een eigen fout van Claude was: Claude had "(verplicht)" bij elk veld gezet, terwijl NLDS adviseert om alleen de uitzonderingen te markeren met "(niet verplicht)" en vooraf te vermelden dat alle velden verplicht zijn. Daarnaast ontbrak de samenvatting van fouten bovenaan het formulier. Beide zijn aangepast en getest.
 
+## Versie 2 van niveau 1
+
+**Gevraagd:** na feedback van de opdrachtgever maakte Isabella een nieuwe opzet voor de website: het document "Paginastructuur website MijnInkomen – niveau 1". Daarin beschrijft ze per pagina welke blokken erop komen, wat erin staat en waarom, onderbouwd met interviews en documenten van de opdrachtgever. Het menu werd Home, Ontwikkelingen, Aansluiten en Contact, met als uitgangspunt: informeren, niet werven. Ze gaf deze opzet aan Claude om de pagina's te bouwen. Claude stelde eerst een paar vragen; Isabella koos ervoor om de huidige stijl te houden, ontbrekende inhoud aan te vullen met duidelijk gemarkeerde voorbeeldtekst, en een klein aanmeldformulier voor het webinar te maken.
+
+**Wat Claude deed:** de pagina's gebouwd volgens de blokken in Isabella's document. Op de homepage is de knop in de introductie weggehaald, omdat de site niet wil werven. Nieuw zijn de pagina's Ontwikkelingen (regelingen, waar nu aan gewerkt wordt met een status, plannen en updates) en Aansluiten (wat het oplevert en vraagt, spelregels, drie genummerde stappen, het webinar en het aanmeldformulier). Het aanmeldformulier kan alleen verstuurd worden met de datum van een webinar dat al geweest is, zodat de volgorde webinar → formulier echt vastligt. Er kwam één algemeen formuliercomponent voor alle formulieren, een labeltje "Voorbeeld" voor voorbeeldinhoud, en een korte voorbeeld-privacyverklaring omdat de formulieren om persoonsgegevens vragen. Claude testte het contrast, de koppen, het toetsenbord, smalle schermen (320 px) en de formulieren (leeg versturen en goed versturen).
+
+**Wat Isabella deed:** de nieuwe paginastructuur bedacht en onderbouwd met de interviews, de keuzes gemaakt over stijl, voorbeeldtekst en het webinarformulier, en het logo van 's-Hertogenbosch aangeleverd, dat Claude heeft bijgesneden en op de homepage gezet. Bij het testen merkte ze dat de pagina na het klikken in het menu een stukje naar beneden schoof, wat ze storend vond. Claude heeft dat opgelost: de pagina begint nu bovenaan, en schermlezers beginnen nog steeds bij de inhoud. *(nog aanvullen: wat je hebt gecontroleerd of aangepast)*
+
+---
+
+## Inlogpagina
+
+**Gevraagd:** een inlogpagina waarop duidelijk is dat inloggen alleen voor communityleden is, en die je doorstuurt naar Aansluiten als je nog geen lid bent.
+
+**Wat Claude deed:** de pagina gebouwd met bovenaan "Alleen voor communityleden" en een uitleg wie dat zijn. Naast het inlogformulier staat een blok "Nog geen communitylid?" met een link naar Aansluiten, en een link naar Contact voor andere vragen. De knop Inloggen in de kop is nu een link naar deze pagina, met de opmaak van de NLDS-knop. Inloggen werkt nog niet: na het invullen staat er dat dit een prototype is. Claude testte contrast, koppen, smalle schermen, het formulier en de link naar Aansluiten.
+
+**Wat Isabella deed:** bedacht wat de pagina moet doen. Daarna besloot ze dat het slotje op de knop Inloggen weg mocht, en dat er een blauw stukje in het streepje komt, omdat 's-Hertogenbosch geel en blauw als kleuren heeft. Claude haalde de blauwe kleur uit het logo van 's-Hertogenbosch. Daarna wilde Isabella een tweede kleur naast het groen voor kleine details. Claude raadde het blauw uit het streepje aan en voegde geel en blauw als accentjes toe in de tekeningen en bij de iconen en stappen. Isabella vond dat niet mooi en koos ervoor om alles weer groen te maken, zoals het was. *(nog aanvullen: wat je hebt gecontroleerd of aangepast)*
+
+## Onderbouwing navigatie
+
+**Gevraagd:** Isabella wilde in de onderbouwing uitleggen waarom ze voor niveau 1 een horizontale navigatiebalk koos, en waarom ze voor niveau 2 waarschijnlijk een verticale navigatie wil.
+
+**Wat Claude deed:** een betrouwbare bron gezocht (een artikel van de Nielsen Norman Group over verticale navigatie) en op basis van Isabella's keuzes een kort stuk in haar stijl geschreven, met de bron in APA.
+
+**Wat Isabella deed:** de keuze gemaakt voor horizontaal op niveau 1 en verticaal op niveau 2. *(nog aanvullen: wat je hebt gecontroleerd of aangepast)*
+
+## Controle op WCAG en NL Design System (versie 2)
+
+**Gevraagd:** Isabella vroeg of versie 2 voldoet aan de WCAG en NL Design System.
+
+**Wat Claude deed:** alle zes pagina's getest op een breed scherm en op een telefoonscherm van 320 px: contrast, tekstalternatieven, koppen, landmarks, toetsenbord, focus, dubbele id's en of er iets buiten het scherm valt. Daarbij werden geen fouten gevonden. Daarna legde Claude de formulieren naast de NLDS-richtlijnen en vond één verbeterpunt: de voorbeelden in de e-mailvelden stonden als grijze tekst in het veld (placeholder). NLDS raadt aan om zo'n voorbeeld als uitleg tussen het label en het veld te zetten, gekoppeld aan het veld, zodat schermlezers het voorlezen. Dat is aangepast. Claude gaf ook aan dat een automatische test niet alles vindt, en dat het team bij de echte bouw nog moet testen met een schermlezer.
+
+**Wat Isabella deed:** gevraagd om de controle. *(nog aanvullen: wat je zelf hebt gecontroleerd)*
+
 ---
 
 ## Bronvermelding
