@@ -1,4 +1,4 @@
-# Daily Standup - Sprint 2 Week 1
+# Daily Standup - Sprint 2 Week 8
 
 **Datum**: 19/10/2026  
 **Deelnemers**:
@@ -40,7 +40,7 @@
 ---
 
 
-# Daily Standup - Sprint 2 Week 1
+# Daily Standup - Sprint 2 Week 8
 
 **Datum**: 20/10/2026  
 **Deelnemers**:
@@ -82,7 +82,7 @@
 ---
 
 
-# Daily Standup - Sprint 2 Week 1
+# Daily Standup - Sprint 2 Week 8
 
 **Datum**: 21/10/2026  
 **Deelnemers**:
@@ -124,7 +124,7 @@
 ---
 
 
-# Daily Standup - Sprint 2 Week 1
+# Daily Standup - Sprint 2 Week 8
 
 **Datum**: 22/10/2026  
 **Deelnemers**:
@@ -166,7 +166,7 @@
 ---
 
 
-# Daily Standup - Sprint 2 Week 1
+# Daily Standup - Sprint 2 Week 8
 
 **Datum**: 23/10/2026  
 **Deelnemers**:
@@ -206,3 +206,130 @@
 - **Impediments**: Geen.
 
 ---
+
+# Daily Standup - Sprint 2 Week 9
+
+**Datum**: 26/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Leren voor de kennistoets.
+- **Wat ga je doen**: Werken aan mijn leerdoel.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Gisteren geleerd voor de kennistoets.
+- **Wat ga je doen**: Vandaag verder met het prototype en leren voor de kennistoets, hopelijk mag ik die thuis maken vandaag of anders morgen in de les.
+- **Impediments**: Als ik de toets niet vandaag of morgen mag maken. Vandaag word hem waarschijnlijk niet, dus hopelijk morgen🤞.
+
+### Amin
+- **Wat heb je gedaan**: Ik heb geleerd voor de kennis toets.
+- **Wat ga je doen**: Vandaag ga ik de kennistoets maken.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Gisteren heb ik een paar kleine dingetjes toegevoegd aan het pva. Verder heb ik nog geleerd voor de kennis toets.
+- **Wat ga je doen**: Vandaag heb ik de kennis toets. Daarna wil ik graag werken aan mijn user story en eigenlijk ook nog aan het bewijs voor mijn leerdoel.
+- **Impediments**: Ik heb voor mijn userstory nog bepaalde informatie nodig.
+ 
+### Fares
+- **Wat heb je gedaan**: Gisteren heb ik geleerd voor de kennis toets.
+- **Wat ga je doen**: Vandaag ga ik de kennistoets maken.
+- **Impediments**: Geen.
+
+---
+
+
+
+# Daily Standup - Sprint 2 Week 9
+
+**Datum**: 27/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Ik heb de kennis toets gemaakt.
+- **Wat ga je doen**: Vandaag was ik ziek.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Gisteren aan het prototype gewerkt en geleerd voor de kennistoets, de kennistoets mag ik woensdag maken.
+- **Wat ga je doen**: Vandaag afstudeerlichting volgen, leren voor de kennistoets, Fares zijn werk checken (hij vroeg zelf om feedback), prototype naar vincent sturen, me 3 stagebedrijven benaderen, een overzichtelijke presnetatie template maken voor de presnetatie die we als groepje moeten houden voor de klas.
+- **Impediments**: Geen.
+
+### Amin
+- **Wat heb je gedaan**: Ik heb de kennis toets gemaakt.
+- **Wat ga je doen**: Vandaag was ik ziek.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Gisteren had ik de kennis toets en heb ik een reflectie over de kennis toets gemaakt. Ik heb ook nog aan een SWOT en DESTEP analyse gewerkt voor mijn leerdoel.
+- **Wat ga je doen**: Vandaag ga ik eerst verder aan de SWOT en daarna aan de DESTEP. Ook ga ik het pva naar Vincent sturen zodat hij dit kan valideren.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Gisteren heb ik de kennis toets gemaakt.
+- **Wat ga je doen**: Vandaag ben ik begonnenmet mijn userstories in git
+- **Impediments**: Geen.
+
+---
+
+
+# Daily Standup - Sprint 2 Week 9
+
+**Datum**: 28/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Ziek geweest.
+- **Wat ga je doen**: Verder werken aan leerdoel en beginnen met de technische randvoorwaarden.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Afstudeerlichting gevolgd, Fares zijn werk feedback gegeven, het prototype (niveau 1) naar de opdrachtgever en het team gestuurd, een feedback sessie ingepland met de opdrachtgever voor het plan van aanpak en prototype, een template gemaakt voor ons team voor de projectverkenningsopdracht, geleerd voor de kennistoets.
+- **Wat ga je doen**: Meeting met Vincent voor het prototype en plan van aanpak, kennistoets en voor de rest is dat afhankelijk van hoe de les loopt.
+- **Impediments**: Geen.
+
+### Amin
+- **Wat heb je gedaan**: Ik ben ziek geweest.
+- **Wat ga je doen**: Vandaag ga ik de readme maken en de mirroring afmaken.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: SWOT analyse afgemaakt en verder gewerkt aan de DESTEP.
+- **Wat ga je doen**: Feedback op het pva bekeken en begonnen met implementeren.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Gisteren heb ik gewerkt aan de onboardingsvoorwaarden en de Checklist voorbereidend deelnamegesprek voor MijnInkomen opgesteld en uitgewerkt. Daarna heb ik mijn teamgenoten om feedback gevraagd.
+- **Wat ga je doen**: Vanochtend hebben we een gesprek met Vincent gehad. Ik heb hem de voorlopige bestanden gemaild en heb zijn feedback ontvangen, die ik nu ga verwerken.
+- **Impediments**: Geen.
+
+---
+
