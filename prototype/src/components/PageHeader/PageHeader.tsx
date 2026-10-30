@@ -9,20 +9,27 @@
  *
  * Inloggen gaat naar de pagina /inloggen (voor communityleden, niveau 2).
  */
-// Alleen de opmaak van de NLDS Button laden (voor de link Inloggen)
-import '@nl-design-system-candidate/button-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
+import { KnopLink } from '../KnopLink/KnopLink';
 import { Logo } from '../Logo/Logo';
 import './PageHeader.css';
 
-// Het hoofdmenu (versie 2). De volgorde volgt de vragen van een bezoeker:
-// wat is het? → waar werken ze aan? → hoe doe ik mee? → wie kan ik bellen?
+// Het hoofdmenu (versie 2.1, na feedback van de opdrachtgever).
+// "Initiatief melden" staat apart, want het is een actie en geen informatie.
 const menu = [
   { label: 'Home', href: '/' },
   { label: 'Ontwikkelingen', href: '/ontwikkelingen' },
-  { label: 'Aansluiten', href: '/aansluiten' },
+  { label: 'Meer weten', href: '/meer-weten' },
+  { label: 'Initiatief melden', href: '/initiatief-melden' },
   { label: 'Contact', href: '/contact' },
 ];
+
+/** Is dit menu-item de huidige pagina ('page'), of hoort de pagina eronder ('true')? */
+function huidig(href: string, pad: string) {
+  if (href === pad) return 'page' as const;
+  if (href !== '/' && pad.startsWith(href + '/')) return 'true' as const;
+  return undefined;
+}
 
 export function PageHeader({ huidigPad }: { huidigPad: string }) {
   return (
@@ -36,8 +43,9 @@ export function PageHeader({ huidigPad }: { huidigPad: string }) {
           <ul>
             {menu.map((item) => (
               <li key={item.href}>
-                {/* NLDS Link; current="page" laat schermlezers "huidige pagina" zeggen */}
-                <Link href={item.href} current={item.href === huidigPad ? 'page' : undefined}>
+                {/* NLDS Link; current="page" laat schermlezers "huidige pagina" zeggen.
+                    Op een pagina eronder (bijv. /meer-weten/webinar) is het "true". */}
+                <Link href={item.href} current={huidig(item.href, huidigPad)}>
                   {item.label}
                 </Link>
               </li>
@@ -45,15 +53,15 @@ export function PageHeader({ huidigPad }: { huidigPad: string }) {
           </ul>
         </nav>
 
-        {/* Inloggen is een link naar een andere pagina, dus een <a> en geen <button>.
-            Hij krijgt wel de opmaak van de officiële NLDS Button (klassen nl-button). */}
-        <a
+        {/* Inloggen gaat naar een andere pagina, dus een link (KnopLink) met de
+            opmaak van de officiële NLDS Button */}
+        <KnopLink
           href="/inloggen"
-          className="nl-button nl-button--primary mijninkomen-page-header__inloggen"
+          className="mijninkomen-page-header__inloggen"
           aria-current={huidigPad === '/inloggen' ? 'page' : undefined}
         >
-          <span className="nl-button__label">Inloggen</span>
-        </a>
+          Inloggen
+        </KnopLink>
       </div>
 
       {/* Decoratie, dus verborgen voor schermlezers */}

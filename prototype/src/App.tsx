@@ -6,30 +6,64 @@
  * wisselt, afhankelijk van het adres (zie navigatie.ts).
  */
 import { SkipLink } from '@nl-design-system-candidate/skip-link-react/css';
-import { useEffect, useRef, type ComponentType } from 'react';
+import { useEffect, useMemo, useRef, type ComponentType } from 'react';
 import { PageFooter } from './components/PageFooter/PageFooter';
 import { PageHeader } from './components/PageHeader/PageHeader';
+import { projecten } from './content/ontwikkelingen';
 import { useHuidigPad } from './navigatie';
-import { Aansluiten } from './pages/Aansluiten';
 import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
+import { InitiatiefMelden } from './pages/InitiatiefMelden';
 import { Inloggen } from './pages/Inloggen';
-import { Ontwikkelingen } from './pages/Ontwikkelingen';
+import { Communitylid } from './pages/meer-weten/Communitylid';
+import { Kennismaking } from './pages/meer-weten/Kennismaking';
+import { Samenwerken } from './pages/meer-weten/Samenwerken';
+import { Webinar } from './pages/meer-weten/Webinar';
+import { AlKan } from './pages/ontwikkelingen/AlKan';
+import { NuBezig } from './pages/ontwikkelingen/NuBezig';
+import { ProjectDetail } from './pages/ontwikkelingen/ProjectDetail';
 import { Privacy } from './pages/Privacy';
+import { ToegangAanvragen } from './pages/ToegangAanvragen';
 
-/** Alle pagina's van het prototype: adres → titel en inhoud */
-const paginas: Record<string, { titel: string; inhoud: ComponentType }> = {
-  '/': { titel: 'MijnInkomen – Samen werken aan inkomensondersteuning', inhoud: Home },
-  '/ontwikkelingen': { titel: 'Ontwikkelingen – MijnInkomen', inhoud: Ontwikkelingen },
-  '/aansluiten': { titel: 'Aansluiten – MijnInkomen', inhoud: Aansluiten },
+type Pagina = { titel: string; inhoud: ComponentType };
+
+/**
+ * Alle pagina's van het prototype: adres → titel en inhoud.
+ * De opbouw (sitemap) staat ook in sitemap.md.
+ */
+const paginas: Record<string, Pagina> = {
+  '/': { titel: 'MijnInkomen – Gemeenten werken samen', inhoud: Home },
+  // Ontwikkelingen (met zijmenu)
+  '/ontwikkelingen': { titel: 'Wat MijnInkomen al kan – Ontwikkelingen – MijnInkomen', inhoud: AlKan },
+  '/ontwikkelingen/nu': { titel: 'Waar we nu aan werken – Ontwikkelingen – MijnInkomen', inhoud: NuBezig },
+  // Meer weten (met zijmenu)
+  '/meer-weten': { titel: 'Hoe werken we samen? – Meer weten – MijnInkomen', inhoud: Samenwerken },
+  '/meer-weten/webinar': { titel: 'Webinar – Meer weten – MijnInkomen', inhoud: Webinar },
+  '/meer-weten/kennismaking': { titel: 'Kennismakingsgesprek – Meer weten – MijnInkomen', inhoud: Kennismaking },
+  '/meer-weten/communitylid': { titel: 'Communitylid worden – Meer weten – MijnInkomen', inhoud: Communitylid },
+  // Losse pagina's
+  '/initiatief-melden': { titel: 'Initiatief melden – MijnInkomen', inhoud: InitiatiefMelden },
   '/contact': { titel: 'Contact – MijnInkomen', inhoud: Contact },
-  '/privacy': { titel: 'Privacyverklaring – MijnInkomen', inhoud: Privacy },
   '/inloggen': { titel: 'Inloggen – MijnInkomen', inhoud: Inloggen },
+  '/toegang-aanvragen': { titel: 'Toegang aanvragen – MijnInkomen', inhoud: ToegangAanvragen },
+  '/privacy': { titel: 'Privacyverklaring – MijnInkomen', inhoud: Privacy },
 };
+
+/** Zoek de pagina bij een adres. Projectpagina's hebben een adres met een "slug". */
+function zoekPagina(pad: string): Pagina {
+  if (paginas[pad]) return paginas[pad];
+  const project = pad.match(/^\/ontwikkelingen\/project\/([a-z0-9-]+)$/);
+  if (project) {
+    const slug = project[1];
+    const naam = projecten.find((p) => p.slug === slug)?.naam ?? 'Project';
+    return { titel: `${naam} – Ontwikkelingen – MijnInkomen`, inhoud: () => <ProjectDetail slug={slug} /> };
+  }
+  return paginas['/'];
+}
 
 export function App() {
   const pad = useHuidigPad();
-  const pagina = paginas[pad] ?? paginas['/'];
+  const pagina = useMemo(() => zoekPagina(pad), [pad]);
   const Inhoud = pagina.inhoud;
   const mainRef = useRef<HTMLElement>(null);
   const eersteKeer = useRef(true);

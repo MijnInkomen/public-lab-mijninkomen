@@ -1,0 +1,4 @@
+/* Een link die eruitziet als een NLDS-knop: zonder onderstreping */
+.mijninkomen-knoplink {
+  text-decoration: none;
+}

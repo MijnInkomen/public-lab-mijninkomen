@@ -1,0 +1,40 @@
+/* Opmaak voor de pagina's onder "Ontwikkelingen" */
+
+/* Terug-link boven de titel van een detailpagina */
+.mijninkomen-terug {
+  margin: 0 0 var(--mijninkomen-space-m);
+  font-size: 1rem;
+}
+
+/* Kerngegevens van een project: drie vakjes naast elkaar */
+.mijninkomen-project-gegevens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--mijninkomen-space-m);
+  margin: 0 0 var(--mijninkomen-space-xl);
+  padding: var(--mijninkomen-space-m) var(--mijninkomen-space-l);
+  background-color: var(--mijninkomen-color-grijs-vlak);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-project-gegevens dt {
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.95rem;
+}
+
+.mijninkomen-project-gegevens dd {
+  margin: var(--mijninkomen-space-xs) 0 0;
+  font-weight: 600;
+}
+
+.mijninkomen-project-blok {
+  margin-bottom: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-project-leeg {
+  margin: 0;
+  padding: var(--mijninkomen-space-l);
+  border: 1px dashed var(--mijninkomen-form-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+  color: var(--mijninkomen-text-subtle-color);
+}

@@ -50,6 +50,28 @@ Voor niveau 1 heb ik gekozen voor een horizontale navigatiebalk bovenaan de pagi
 
 Voor niveau 2 denk ik aan een verticale navigatie aan de zijkant. Communityleden krijgen meer onderdelen, zoals de volledige roadmap, en dat worden er waarschijnlijk steeds meer. Een verticaal menu past goed bij een site die veel onderdelen heeft of nog groeit: je kunt er makkelijk iets aan toevoegen en de lijst is makkelijk te scannen (Laubheimer, 2021). Het nadeel is dat een menu aan de zijkant meer ruimte kost (Laubheimer, 2021). Voor communityleden die vaker terugkomen en snel naar het juiste onderdeel willen, vind ik dat het waard. Dit is nog een plan: de keuze maak ik definitief als we aan niveau 2 beginnen.
 
+## 6. Feedback opdrachtgever (versie 2.1)
+
+Op 29 oktober 2026 kreeg ik feedback van de opdrachtgever (Vincent) op versie 2. Hij was positief over de vormgeving en de structuur, maar vond dat de site nog te veel aanstuurde op aansluiten. Zijn belangrijkste punt: de site moet vooral **informeren en nieuwsgierig maken**, en bij elk onderdeel moet duidelijk zijn waarom het er staat, waar de informatie vandaan komt en hoe het werkt. Hieronder staat per feedbackpunt wat ik heb veranderd.
+
+**Homepage.** Vincent wil dat de homepage een overzicht is dat nieuwsgierig maakt en doorstuurt naar meer informatie. Ik heb de homepage ingekort en er twee knoppen in gezet: "Bekijk de ontwikkelingen" en "Meer weten". Onder de logo's van de gemeenten staat nu een korte tekst met een link naar meer uitleg. De rollen van de gemeenten staan niet meer op de homepage, maar op een eigen pagina.
+
+**Van "Aansluiten" naar "Meer weten".** De site moet voorlopig meer informeren dan werven. Daarom heet het menu-item nu "Meer weten", en zijn de teksten minder gericht op actie. Onder Meer weten staan: hoe we samenwerken, het webinar, het kennismakingsgesprek en hoe je communitylid wordt.
+
+**Zijmenu.** Vincent gaf aan dat een verticaal menu aan de linkerkant overzichtelijker is bij pagina's met veel informatie, en dat het op alle pagina's van een onderdeel hetzelfde moet zijn. Ontwikkelingen en Meer weten hebben nu zo'n zijmenu. Dat past bij wat ik eerder al voor niveau 2 had bedacht: een verticaal menu is makkelijk uit te breiden en makkelijk te scannen (Laubheimer, 2021). Op een telefoon staat het menu boven de inhoud. Het hoofdmenu bovenaan blijft horizontaal.
+
+**Lees meer bij projecten.** Bezoekers moeten bij een projecttegel meer informatie kunnen bekijken. Elke tegel heeft nu een "Lees meer"-link naar een detailpagina. Alle detailpagina's gebruiken hetzelfde sjabloon. De Stadspas en het basisproces bijzondere bijstand heb ik als voorbeeld helemaal uitgewerkt. Vincent zei dat niet elke pagina al gevuld hoeft te zijn, dus bij de andere staat dat de pagina later wordt aangevuld.
+
+**Geen dubbele informatie: Updates en Wat eraan komt weg.** Vincent zag dat "Updates", "Laatste ontwikkelingen" en "Waar werken we aan" te veel overlapten. Daarom heeft Ontwikkelingen nu nog maar twee pagina's: wat al af is en wat nu loopt. Ook de pagina "Wat eraan komt" heb ik weggehaald. Daar stonden plannen zonder datum, en die kunnen nog veranderen. Ik wil bezoekers feiten geven, geen verwachtingen die misschien niet uitkomen. De volledige planning hoort bij niveau 2, achter de inlog. De pagina Updates heb ik helemaal weggehaald. Updates zijn losse nieuwsberichtjes die iemand steeds moet schrijven. Gebeurt dat een tijd niet, dan staat er een oude datum bovenaan en lijkt het alsof er niks gebeurt. Dat is lastig te onderhouden en werkt juist tegen de nieuwsgierigheid. In plaats daarvan staat op de homepage "Recent bijgewerkt": de drie projecten die het laatst zijn veranderd, met hun status en een link. Dat komt vanzelf uit de projecten, dus niemand hoeft apart nieuws te schrijven, en je ziet toch dat er iets gebeurt.
+
+**Initiatief melden.** Volgens Vincent is een initiatief melden iets anders dan een kennismakingsgesprek, en het is ook voor organisaties die nog geen communitylid zijn. Ik heb het een eigen pagina in het hoofdmenu gegeven, en niet onder Meer weten gezet. Meer weten is voor informatie, maar een initiatief melden is echt een actie. Op de pagina staat ook uitgelegd wat het verschil is met een kennismakingsgesprek.
+
+**Organisatie en community.** Bezoekers moeten snappen hoe MijnInkomen georganiseerd is. Daarvoor is er nu de pagina "Hoe werken we samen?", met de logo's en rollen van de gemeenten, de stuurgroep, het programmateam, de werkgroepen en de community. De rol "Sluit aan" vond ik vaag. Die heet nu "Communitylid", want dat zijn ze gewoon. Er staat ook bij dat alle gemeenten communitylid zijn, en dat Den Haag en Utrecht daarnaast meebouwen en meebetalen. Uitgebreide of vertrouwelijke afspraken horen achter de inlog, dus daar staat alleen een verwijzing naar.
+
+**Communitylid worden en inloggen.** Je wordt niet direct communitylid via de website: eerst volgt er een kennismaking. Op de pagina "Communitylid worden" staat de volgorde in vier stappen: webinar, kennismakingsgesprek, toegang aanvragen en inloggen. Op de inlogpagina staat nu duidelijk dat die alleen voor communityleden is, dat je inlogt met tweestapsverificatie, en er is een knop "Toegang aanvragen" voor wie al een kennismakingsgesprek heeft gehad.
+
+**Overdracht aan development.** Vincent vindt een ontwerp niet genoeg als de werking niet beschreven is. Daarom zijn er nu twee documenten bij de code. In `sitemap.md` staat welk doel elke pagina heeft. In `componenten.md` staat per onderdeel wat het doet, waar de informatie vandaan komt (CMS, GitHub of de website) en hoe het zich gedraagt. Waar de informatie vandaan komt, is nog een voorstel dat we met development moeten afstemmen.
+
 ---
 
 ## Bronnen

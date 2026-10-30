@@ -1,6 +1,6 @@
 /**
  * TEKSTEN VAN DE PAGINA "CONTACT" (versie 2)
- * Kort en praktisch. Aanmelden gaat via de pagina Aansluiten, niet via contact.
+ * Kort en praktisch. Kennismaken en initiatieven gaan via hun eigen pagina, niet via contact.
  * LET OP: e-mailadres en LinkedIn-link zijn VOORBEELDEN.
  */
 
@@ -13,8 +13,10 @@ export const contactIntro = {
 export const waarvoor = {
   titel: 'Waarvoor kun je contact opnemen?',
   lijst: ['Algemene vragen over MijnInkomen', 'Vragen van de pers', 'Vragen over de samenwerking'],
-  aansluiten: 'Wil je aansluiten?',
-  aansluitenLink: 'Ga naar de pagina Aansluiten',
+  anders: [
+    { tekst: 'Wil je weten of jouw gemeente kan meedoen?', link: 'Over het kennismakingsgesprek', href: '/meer-weten/kennismaking' },
+    { tekst: 'Wil je een idee of project delen?', link: 'Initiatief melden', href: '/initiatief-melden' },
+  ],
 };
 
 export const gegevens = {

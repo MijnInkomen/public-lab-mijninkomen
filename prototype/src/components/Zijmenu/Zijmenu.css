@@ -1,0 +1,73 @@
+/* Pagina met zijmenu: menu links, inhoud rechts */
+.mijninkomen-zijmenu-pagina {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: var(--mijninkomen-space-xl);
+  align-items: start;
+  padding-block: var(--mijninkomen-space-l) var(--mijninkomen-space-xl);
+}
+
+.mijninkomen-zijmenu-pagina > * {
+  min-width: 0;
+}
+
+/* Het menu blijft in beeld als je scrolt */
+.mijninkomen-zijmenu {
+  position: sticky;
+  top: var(--mijninkomen-space-m);
+  padding: var(--mijninkomen-space-m);
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+  border-radius: var(--mijninkomen-border-radius);
+
+  /* Alleen NLDS-tokens aanpassen: donkere links zonder onderstreping */
+  --nl-link-color: var(--mijninkomen-document-color);
+  --nl-link-hover-color: var(--mijninkomen-link-color);
+  --nl-link-text-decoration-line: none;
+  --nl-link-hover-text-decoration-line: underline;
+}
+
+.mijninkomen-zijmenu__titel {
+  margin: 0 0 var(--mijninkomen-space-s);
+  padding-inline: var(--mijninkomen-space-s);
+  color: var(--mijninkomen-heading-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mijninkomen-zijmenu ul {
+  display: grid;
+  gap: var(--mijninkomen-space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-zijmenu a {
+  display: block;
+  padding: var(--mijninkomen-space-s);
+  border-left: 4px solid transparent;
+  border-radius: 0 var(--mijninkomen-border-radius) var(--mijninkomen-border-radius) 0;
+  font-size: 1rem;
+}
+
+/* Huidige pagina (of het bovenliggende item): groene lijn + vet + witte achtergrond.
+   Niet alleen kleur, ook een lijn en vet (WCAG 1.4.1). */
+.mijninkomen-zijmenu .nl-link--current {
+  --nl-link-color: var(--mijninkomen-link-color);
+  background-color: var(--mijninkomen-color-wit);
+  border-left-color: var(--mijninkomen-color-groen);
+  font-weight: 700;
+}
+
+/* Smal scherm: menu boven de inhoud, niet meer vast */
+@media (max-width: 48rem) {
+  .mijninkomen-zijmenu-pagina {
+    grid-template-columns: 1fr;
+    gap: var(--mijninkomen-space-l);
+  }
+  .mijninkomen-zijmenu {
+    position: static;
+  }
+}

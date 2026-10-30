@@ -16,7 +16,7 @@ export function PageFooter() {
           <div className="mijninkomen-page-footer__logo">
             <Logo />
           </div>
-          <p>Gemeenten werken samen aan betere inkomensondersteuning.</p>
+          <p>Gemeenten werken samen om inwoners met een laag inkomen beter te helpen.</p>
         </div>
 
         <div>
@@ -35,7 +35,8 @@ export function PageFooter() {
           <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/ontwikkelingen">Ontwikkelingen</Link></li>
-            <li><Link href="/aansluiten">Aansluiten</Link></li>
+            <li><Link href="/meer-weten">Meer weten</Link></li>
+            <li><Link href="/initiatief-melden">Initiatief melden</Link></li>
             <li><Link href="/contact">Contact</Link></li>
             <li><Link href="/privacy">Privacyverklaring</Link></li>
           </ul>

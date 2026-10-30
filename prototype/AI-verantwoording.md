@@ -104,6 +104,22 @@ Isabella controleert de uitkomst en beslist wat er blijft.
 
 **Wat Isabella deed:** de keuze gemaakt voor horizontaal op niveau 1 en verticaal op niveau 2. *(nog aanvullen: wat je hebt gecontroleerd of aangepast)*
 
+## Versie 2.1: feedback van de opdrachtgever
+
+**Gevraagd:** Isabella verzamelde feedback van de opdrachtgever (Vincent) op versie 2 en gaf die aan Claude. Claude zette de punten op een rij en maakte een voorstel voor een nieuwe sitemap. Isabella koos ervoor om "Initiatief melden" als aparte pagina in het hoofdmenu te zetten, omdat het een actie is en geen informatie. Voor de andere punten nam ze het voorstel over.
+
+**Wat Claude deed:** "Aansluiten" vervangen door "Meer weten" met vier pagina's (Hoe werken we samen?, Webinar, Kennismakingsgesprek, Communitylid worden). Ontwikkelingen opgesplitst in vier pagina's met elk één functie, zodat er geen informatie dubbel staat. Een zijmenu gemaakt voor deze twee onderdelen, "Lees meer" bij de projecttegels, en één sjabloon voor detailpagina's (Stadspas en Basisproces bijzondere bijstand als voorbeeld uitgewerkt). Nieuwe pagina's Initiatief melden en Toegang aanvragen gemaakt, de homepage ingekort tot een overzicht met knoppen, en op de inlogpagina tweestapsverificatie en een knop "Toegang aanvragen" toegevoegd. Daarnaast twee documenten voor het team: `sitemap.md` (doel per pagina) en `componenten.md` (doel, bron van de informatie en gedrag per onderdeel; de bron is een voorstel dat nog met development moet worden afgestemd). Claude testte alle 16 pagina's op contrast, koppen, telefoonscherm en de formulieren. Daarna vroeg Isabella het verschil tussen "Wat MijnInkomen al kan" en "Updates", en of Updates weg kon. Claude legde het verschil uit en gaf als advies om Updates weg te halen (lastig te onderhouden en dubbel), maar wel te laten zien dat er iets gebeurt. Isabella besloot Updates weg te halen; Claude verving het op de homepage door "Recent bijgewerkt", dat vanzelf uit de projecten komt. Later vond Isabella ook "Wat eraan komt" overbodig, omdat de site feiten moet geven en geen plannen die nog kunnen veranderen. Claude had voorgesteld om het samen te voegen met "Waar we nu aan werken", maar Isabella koos ervoor om het helemaal weg te halen. Ook vond Isabella de rol "Sluit aan" bij de gemeenten vaag en wilde ze "Communitylid". Claude wees erop dat alle gemeenten communitylid zijn, en zette daarom in de uitleg dat Den Haag en Utrecht daarnaast ook meebouwen en meebetalen ("Bouwt en betaalt mee"). Op verzoek van Isabella beschreef Claude in de onderbouwing per feedbackpunt van de opdrachtgever wat er is veranderd, in haar stijl.
+
+**Wat Isabella deed:** de feedback verzameld, de keuze gemaakt over Initiatief melden, het voorstel beoordeeld en besloten om Updates en Wat eraan komt weg te halen. *(nog aanvullen: wat je hebt gecontroleerd of aangepast)*
+
+## Controle op WCAG en taalniveau B1 (versie 2.1)
+
+**Gevraagd:** Isabella vroeg of versie 2.1 nog toegankelijk is volgens de WCAG en of de teksten op B1-niveau zijn.
+
+**Wat Claude deed:** alle pagina's opnieuw getest op contrast, koppen, telefoonscherm en bediening met het toetsenbord (ook het zijmenu); daar kwamen geen fouten uit. Daarna alle teksten nagelezen op lange zinnen en moeilijke woorden, en die eenvoudiger gemaakt. Bijvoorbeeld "vertegenwoordigers" werd "mensen van de deelnemende gemeenten", "noodzakelijke kosten" werd "kosten die je echt moet maken", "persoonsgegevens" werd "gegevens over jou, zoals je naam en e-mailadres", lange zinnen zijn in tweeën gesplitst en afkortingen zoals IOAW zijn uitgelegd. Woorden die de opdrachtgever zelf gebruikt (community, webinar, stuurgroep) zijn gebleven, maar worden op de site uitgelegd. Claude gaf aan dat B1 geen WCAG-AA-eis is, maar wel de richtlijn voor overheidsteksten, en dat een echte check met de doelgroep beter is dan alleen een controle door AI.
+
+**Wat Isabella deed:** gevraagd om de controle. *(nog aanvullen: wat je zelf hebt gecontroleerd)*
+
 ## Controle op WCAG en NL Design System (versie 2)
 
 **Gevraagd:** Isabella vroeg of versie 2 voldoet aan de WCAG en NL Design System.

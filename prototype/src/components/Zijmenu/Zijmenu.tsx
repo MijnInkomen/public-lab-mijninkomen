@@ -1,0 +1,57 @@
+/**
+ * ZijmenuPagina – pagina met een verticaal menu aan de linkerkant
+ *
+ * Voor de onderdelen met meer informatie (Ontwikkelingen en Meer weten).
+ * Feedback van de opdrachtgever: een verticaal menu is overzichtelijker bij
+ * veel informatie, en moet op alle pagina's van een onderdeel hetzelfde zijn.
+ *
+ * - Het menu is een <nav> met een eigen naam, zodat schermlezers het vinden.
+ * - De huidige pagina krijgt aria-current="page" (via de NLDS Link, prop current).
+ * - Op een detailpagina (bijv. /ontwikkelingen/project/stadspas) wordt het
+ *   bovenliggende menu-item gemarkeerd met aria-current="true".
+ * - Op een smal scherm staat het menu boven de inhoud.
+ *
+ * NLDS heeft (nog) geen officiële component voor een zijmenu; dit gebruikt de
+ * officiële NLDS Link.
+ */
+import { Link } from '@nl-design-system-candidate/link-react/css';
+import type { ReactNode } from 'react';
+import { useHuidigPad } from '../../navigatie';
+import './Zijmenu.css';
+
+export type ZijmenuItem = { label: string; href: string };
+
+type ZijmenuPaginaProps = {
+  titel: string;
+  items: ZijmenuItem[];
+  /** Bij een detailpagina: welk menu-item hoort erbij? */
+  actiefItem?: string;
+  children: ReactNode;
+};
+
+export function ZijmenuPagina({ titel, items, actiefItem, children }: ZijmenuPaginaProps) {
+  const pad = useHuidigPad();
+
+  return (
+    <div className="mijninkomen-container mijninkomen-zijmenu-pagina">
+      <nav className="mijninkomen-zijmenu" aria-label={titel}>
+        <p className="mijninkomen-zijmenu__titel" aria-hidden="true">
+          {titel}
+        </p>
+        <ul>
+          {items.map((item) => {
+            const huidig = item.href === pad ? 'page' : item.href === actiefItem ? 'true' : undefined;
+            return (
+              <li key={item.href}>
+                <Link href={item.href} current={huidig}>
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+      <div className="mijninkomen-zijmenu-pagina__inhoud">{children}</div>
+    </div>
+  );
+}

@@ -2,15 +2,18 @@
  * PAGINA "INLOGGEN"
  *
  * Inloggen is alleen voor communityleden (niveau 2). Dat staat bovenaan de
- * pagina. Wie nog geen lid is, vindt ernaast een duidelijke link naar Aansluiten.
+ * pagina. Wie nog geen lid is, vindt ernaast hoe je communitylid wordt, en wie
+ * al een kennismakingsgesprek had, kan via een knop toegang aanvragen.
  * PROTOTYPE: inloggen werkt nog niet; het formulier controleert alleen de velden.
  * Teksten: content/inloggen.ts
  */
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
+import { Badge } from '../components/Badge/Badge';
 import { Formulier, type Veld } from '../components/Formulier/Formulier';
 import { Icon } from '../components/Icon/Icon';
+import { KnopLink } from '../components/KnopLink/KnopLink';
 import { geenLid, inlogFormulier, inloggenIntro } from '../content/inloggen';
 import './Inloggen.css';
 
@@ -32,21 +35,30 @@ export function Inloggen() {
           <div className="mijninkomen-kaart mijninkomen-inloggen__formulier">
             <Heading level={2} appearance="level-3">{inlogFormulier.titel}</Heading>
             <Formulier velden={velden} knop={inlogFormulier.knop} bevestiging={inlogFormulier.bevestiging} uitleg={inlogFormulier.uitleg} />
+            {/* Tweestapsverificatie: werkt nog niet in het prototype */}
+            <p className="mijninkomen-kaart__extra mijninkomen-inloggen__tweestaps">
+              {inlogFormulier.tweestaps} <Badge />
+            </p>
           </div>
 
-          {/* Voor wie nog geen lid is: door naar Aansluiten */}
+          {/* Voor wie nog geen lid is: hoe word je communitylid, en toegang aanvragen */}
           <aside className="mijninkomen-inloggen__geen-lid" aria-labelledby="geen-lid-titel">
             <Icon naam="mensen" />
             <Heading level={2} appearance="level-3" id="geen-lid-titel">{geenLid.titel}</Heading>
             <Paragraph>{geenLid.tekst}</Paragraph>
             <p>
-              <Link href="/aansluiten">
+              <Link href="/meer-weten/communitylid">
                 {geenLid.link} <span aria-hidden="true">→</span>
               </Link>
             </p>
-            <p className="mijninkomen-inloggen__vraag">
-              {geenLid.vraag} <Link href="/contact">{geenLid.contact}</Link>
-            </p>
+            {/* Knop om toegang aan te vragen, voor wie al een kennismakingsgesprek had */}
+            <div className="mijninkomen-inloggen__toegang">
+              <Heading level={2} appearance="level-3">{geenLid.toegangTitel}</Heading>
+              <Paragraph>{geenLid.toegangTekst}</Paragraph>
+              <KnopLink href="/toegang-aanvragen" purpose="secondary">
+                {geenLid.toegangKnop}
+              </KnopLink>
+            </div>
           </aside>
         </div>
       </div>

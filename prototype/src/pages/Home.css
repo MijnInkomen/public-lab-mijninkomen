@@ -44,47 +44,9 @@
   margin-bottom: 0;
 }
 
-/* 3. WIE DOEN MEE – logo met daaronder de rol */
-.mijninkomen-deelnemers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: var(--mijninkomen-space-m);
-  margin: var(--mijninkomen-space-m) 0 var(--mijninkomen-space-l);
-  padding: 0;
-  list-style: none;
-}
+/* 3. WIE DOEN MEE – zie .mijninkomen-deelnemers in styles/paginas.css */
 
-.mijninkomen-deelnemer__logo {
-  display: grid;
-  place-items: center;
-  height: 6rem;
-  padding: var(--mijninkomen-space-m);
-  background-color: var(--mijninkomen-color-wit);
-  border-radius: var(--mijninkomen-border-radius);
-}
-
-.mijninkomen-deelnemer__logo img {
-  max-height: 4rem;
-  width: auto;
-  max-width: 100%;
-}
-
-.mijninkomen-deelnemer__naam {
-  color: var(--mijninkomen-heading-color);
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.3;
-}
-
-.mijninkomen-deelnemer__rol {
-  margin: var(--mijninkomen-space-xs) 0 0;
-  font-size: 0.95rem;
-  text-align: center;
-}
-
-/* 4. LAATSTE ONTWIKKELINGEN – zie .mijninkomen-updates in styles/paginas.css */
-
-/* 5. AANSLUITEN – rustige verwijzing */
+/* 5. WIL JE MEER WETEN – rustige verwijzing */
 .mijninkomen-verwijzing {
   padding: var(--mijninkomen-space-xl);
   border-left: 6px solid var(--mijninkomen-color-groen);
@@ -105,5 +67,43 @@
   .mijninkomen-blok,
   .mijninkomen-verwijzing {
     padding: var(--mijninkomen-space-l);
+  }
+}
+
+/* 4. RECENT BIJGEWERKT – datum, projectnaam (link) en status op één regel */
+.mijninkomen-recent {
+  display: grid;
+  margin: var(--mijninkomen-space-m) 0 var(--mijninkomen-space-l);
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-recent li {
+  display: grid;
+  grid-template-columns: 11rem 1fr auto;
+  gap: var(--mijninkomen-space-m);
+  align-items: center;
+  padding-block: var(--mijninkomen-space-s);
+  border-bottom: 1px solid var(--mijninkomen-border-color);
+}
+
+.mijninkomen-recent li > * {
+  min-width: 0;
+}
+
+.mijninkomen-recent time {
+  color: var(--mijninkomen-text-subtle-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.mijninkomen-recent__naam {
+  font-weight: 600;
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-recent li {
+    grid-template-columns: 1fr;
+    gap: var(--mijninkomen-space-xs);
+    justify-items: start;
   }
 }

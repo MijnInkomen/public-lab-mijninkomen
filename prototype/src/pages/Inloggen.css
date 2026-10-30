@@ -28,11 +28,18 @@
   margin-top: var(--mijninkomen-space-m);
 }
 
-.mijninkomen-inloggen__vraag {
-  margin: var(--mijninkomen-space-l) 0 0;
+.mijninkomen-inloggen__tweestaps {
+  margin-top: var(--mijninkomen-space-m);
+}
+
+.mijninkomen-inloggen__toegang {
+  margin-top: var(--mijninkomen-space-l);
   padding-top: var(--mijninkomen-space-m);
   border-top: 1px solid var(--mijninkomen-border-color);
-  font-size: 1rem;
+}
+
+.mijninkomen-inloggen__toegang .nl-heading {
+  margin-top: 0;
 }
 
 @media (max-width: 48rem) {

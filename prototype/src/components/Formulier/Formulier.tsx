@@ -17,6 +17,7 @@
  * PROTOTYPE: er wordt niets verstuurd of opgeslagen.
  */
 import { Button } from '@nl-design-system-candidate/button-react/css';
+import { Link } from '@nl-design-system-candidate/link-react/css';
 import { useId, useRef, useState, type FormEvent } from 'react';
 import './Formulier.css';
 
@@ -28,6 +29,8 @@ export type Veld = {
   opties?: { waarde: string; label: string }[];
   verplicht?: boolean; // standaard: verplicht
   autoComplete?: string;
+  /** Bij een keuzelijst: de eerste, lege keuze (standaard "Maak een keuze") */
+  kies?: string;
   /** Korte uitleg tussen label en veld, bijv. "Bijvoorbeeld: naam@gemeente.nl" */
   omschrijving?: string;
   /** Foutmelding als het veld leeg is */
@@ -177,7 +180,7 @@ export function Formulier({
             {v.soort === 'tekstvak' && <textarea id={id} rows={4} {...gedeeld} />}
             {v.soort === 'keuzelijst' && (
               <select id={id} {...gedeeld} defaultValue="">
-                <option value="">Kies een datum</option>
+                <option value="">{v.kies ?? 'Maak een keuze'}</option>
                 {v.opties?.map((o) => (
                   <option key={o.waarde} value={o.waarde}>
                     {o.label}
@@ -201,5 +204,15 @@ export function Formulier({
         {knop}
       </Button>
     </form>
+  );
+}
+
+/** Regel boven een formulier dat om persoonsgegevens vraagt, met link naar de privacyverklaring */
+export function PrivacyRegel() {
+  return (
+    <p className="mijninkomen-formulier__privacy">
+      Dit formulier vraagt om gegevens over jou, zoals je naam en e-mailadres. Lees wat we daarmee doen in de{' '}
+      <Link href="/privacy">privacyverklaring</Link>.
+    </p>
   );
 }

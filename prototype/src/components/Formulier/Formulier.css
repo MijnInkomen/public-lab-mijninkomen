@@ -132,3 +132,8 @@ select.mijninkomen-formulier__invoer {
   color: var(--mijninkomen-text-subtle-color);
   font-size: 1rem;
 }
+
+.mijninkomen-formulier__privacy {
+  margin: 0 0 var(--mijninkomen-space-m);
+  font-size: 0.95rem;
+}

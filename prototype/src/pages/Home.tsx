@@ -1,14 +1,16 @@
 /**
- * HOMEPAGE (niveau 1, versie 2)
+ * HOMEPAGE (niveau 1, versie 2.1)
  *
- * Het visitekaartje: kort en rustig. Blokken van boven naar beneden:
- *   1. Wat is MijnInkomen?      – met illustratie van verbonden gemeenten
- *   2. Waarom samen?            – drie korte punten
- *   3. Wie doen mee?            – gemeenten met hun rol + hoe het georganiseerd is
- *   4. Laatste ontwikkelingen   – de nieuwste updates, met link naar Ontwikkelingen
- *   5. Aansluiten               – rustige verwijzing met het volgende webinar
+ * Een overzicht dat nieuwsgierig maakt en doorstuurt naar meer informatie
+ * (feedback opdrachtgever). Blokken van boven naar beneden:
+ *   1. Wat is MijnInkomen?  – korte uitleg + knoppen naar Ontwikkelingen en Meer weten
+ *   2. Waarom samen?        – drie korte punten
+ *   3. Wie doen mee?        – logo's + korte tekst + link naar "Hoe werken we samen?"
+ *   4. Recent bijgewerkt    – de 3 laatst bijgewerkte projecten, met status en "Lees meer"
+ *   5. Wil je meer weten?   – het volgende webinar, link naar de webinarpagina
  *
- * Bewust niet op de homepage: spelregels, het formulier en de lijst met regelingen.
+ * Bewust NIET op de homepage: de rollen van de gemeenten, de regelingen, de
+ * formulieren. Die staan op hun eigen pagina; zo staat niets dubbel.
  * Teksten: content/home.ts.
  */
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
@@ -17,14 +19,15 @@ import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import heroAfbeelding from '../assets/home-netwerk.png';
 import { Badge } from '../components/Badge/Badge';
 import { Icon } from '../components/Icon/Icon';
-import { aansluitenVerwijzing, deelnemers, laatsteOntwikkelingen, waarom, wat } from '../content/home';
-import { updates } from '../content/ontwikkelingen';
+import { KnopLink } from '../components/KnopLink/KnopLink';
+import { deelnemers, doorklikken, recentBijgewerkt, waarom, wat, webinarVerwijzing } from '../content/home';
+import { projectDetail, recentBijgewerkt as zoekRecent } from '../content/ontwikkelingen';
 import { datumKort, datumVoluit, komendeWebinars } from '../content/webinars';
 import './Home.css';
 
 export function Home() {
   const volgendWebinar = komendeWebinars()[0];
-  const nieuwste = updates.lijst.slice(0, laatsteOntwikkelingen.aantal);
+  const recent = zoekRecent(recentBijgewerkt.aantal);
 
   return (
     <>
@@ -36,6 +39,12 @@ export function Home() {
             <Heading level={1} id="hero-titel">{wat.titel}</Heading>
             <Paragraph purpose="lead">{wat.tekst[0]}</Paragraph>
             <Paragraph>{wat.tekst[1]}</Paragraph>
+            <div className="mijninkomen-button-group">
+              <KnopLink href="/ontwikkelingen">{doorklikken.ontwikkelingen}</KnopLink>
+              <KnopLink href="/meer-weten" purpose="secondary">
+                {doorklikken.meerWeten}
+              </KnopLink>
+            </div>
           </div>
           <div className="mijninkomen-hero__beeld">
             {/* Illustratie van verbonden gemeenten (gemaakt met ChatGPT, zie
@@ -71,52 +80,55 @@ export function Home() {
             {deelnemers.gemeenten.map((g) => (
               <li key={g.naam} className="mijninkomen-deelnemer">
                 <div className="mijninkomen-deelnemer__logo">
-                  {g.logo ? (
-                    <img src={g.logo} alt={g.naam} />
-                  ) : (
-                    // Logo volgt nog: tot die tijd de naam als tekst
-                    <span className="mijninkomen-deelnemer__naam">{g.naam}</span>
-                  )}
+                  <img src={g.logo} alt={g.naam} />
                 </div>
-                <p className="mijninkomen-deelnemer__rol">{g.rol}</p>
               </li>
             ))}
           </ul>
-          <Paragraph>{deelnemers.organisatie}</Paragraph>
-        </div>
-      </section>
-
-      {/* 4. LAATSTE ONTWIKKELINGEN */}
-      <section className="mijninkomen-section" aria-labelledby="ontwikkelingen-titel">
-        <div className="mijninkomen-container">
-          <p className="mijninkomen-bovenkop">{laatsteOntwikkelingen.bovenkop}</p>
-          <Heading level={2} id="ontwikkelingen-titel">
-            {laatsteOntwikkelingen.titel} <Badge />
-          </Heading>
-          <ul className="mijninkomen-updates">
-            {nieuwste.map((u) => (
-              <li key={u.datum + u.tekst}>
-                <time dateTime={u.datum}>{datumKort(u.datum)}</time>
-                <span>{u.tekst}</span>
-              </li>
-            ))}
-          </ul>
-          <Link href="/ontwikkelingen">
-            {laatsteOntwikkelingen.link} <span aria-hidden="true">→</span>
+          <Paragraph>{deelnemers.tekst}</Paragraph>
+          <Link href="/meer-weten">
+            {deelnemers.link} <span aria-hidden="true">→</span>
           </Link>
         </div>
       </section>
 
-      {/* 5. AANSLUITEN – rustige verwijzing */}
-      <section className="mijninkomen-container mijninkomen-section--smal" aria-labelledby="aansluiten-titel">
+      {/* 4. RECENT BIJGEWERKT – de laatst bijgewerkte projecten */}
+      <section className="mijninkomen-section" aria-labelledby="recent-titel">
+        <div className="mijninkomen-container">
+          <p className="mijninkomen-bovenkop">{recentBijgewerkt.bovenkop}</p>
+          <Heading level={2} id="recent-titel">
+            {recentBijgewerkt.titel} <Badge />
+          </Heading>
+          <ul className="mijninkomen-recent">
+            {recent.map((p) => (
+              <li key={p.slug}>
+                <time dateTime={p.bijgewerkt}>{datumKort(p.bijgewerkt)}</time>
+                <span className="mijninkomen-recent__naam">
+                  <Link href={`/ontwikkelingen/project/${p.slug}`}>{p.naam}</Link>
+                </span>
+                <span>
+                  <span className="mijninkomen-visually-hidden">{projectDetail.status}: </span>
+                  <Badge soort="status">{p.status}</Badge>
+                </span>
+              </li>
+            ))}
+          </ul>
+          <Link href="/ontwikkelingen">
+            {recentBijgewerkt.link} <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* 5. WIL JE MEER WETEN – rustige verwijzing naar het webinar */}
+      <section className="mijninkomen-container mijninkomen-section--smal" aria-labelledby="meer-titel">
         <div className="mijninkomen-verwijzing">
-          <Heading level={2} id="aansluiten-titel">{aansluitenVerwijzing.titel}</Heading>
+          <Heading level={2} id="meer-titel">{webinarVerwijzing.titel}</Heading>
           <Paragraph>
-            {aansluitenVerwijzing.tekst}
+            {webinarVerwijzing.tekst}
             {volgendWebinar && (
               <>
                 {' '}
-                {aansluitenVerwijzing.volgende}{' '}
+                {webinarVerwijzing.volgende}{' '}
                 <strong>
                   <time dateTime={volgendWebinar}>{datumVoluit(volgendWebinar)}</time>
                 </strong>
@@ -124,8 +136,8 @@ export function Home() {
               </>
             )}
           </Paragraph>
-          <Link href="/aansluiten">
-            {aansluitenVerwijzing.link} <span aria-hidden="true">→</span>
+          <Link href="/meer-weten/webinar">
+            {webinarVerwijzing.link} <span aria-hidden="true">→</span>
           </Link>
         </div>
       </section>

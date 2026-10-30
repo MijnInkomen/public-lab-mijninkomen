@@ -3,7 +3,7 @@
  *
  * Kort en praktisch: waarvoor je contact opneemt, één algemeen e-mailadres
  * (geen persoonlijke namen), de reactietijd en een link naar LinkedIn.
- * Wil je aansluiten? Dan stuurt deze pagina je door naar Aansluiten.
+ * Wil je kennismaken of een initiatief melden? Dan stuurt deze pagina je door.
  * Teksten: content/contact.ts
  */
 import { Button } from '@nl-design-system-candidate/button-react/css';
@@ -55,12 +55,17 @@ export function Contact() {
                 <li key={p}>{p}</li>
               ))}
             </ul>
-            <p className="mijninkomen-contact__aansluiten">
-              {waarvoor.aansluiten}{' '}
-              <Link href="/aansluiten">
-                {waarvoor.aansluitenLink} <span aria-hidden="true">→</span>
-              </Link>
-            </p>
+            {/* Kennismaken en initiatieven hebben een eigen pagina */}
+            <div className="mijninkomen-contact__anders">
+              {waarvoor.anders.map((a) => (
+                <p key={a.href}>
+                  {a.tekst}{' '}
+                  <Link href={a.href}>
+                    {a.link} <span aria-hidden="true">→</span>
+                  </Link>
+                </p>
+              ))}
+            </div>
           </div>
 
           {/* CONTACTGEGEVENS */}

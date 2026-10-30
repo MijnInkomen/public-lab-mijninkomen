@@ -6,10 +6,7 @@
  * De definitieve teksten keurt de opdrachtgever goed.
  */
 import type { IconNaam } from '../components/Icon/Icon';
-import logoAmsterdam from '../assets/gemeenten/logo-amsterdam.png';
-import logoDenHaag from '../assets/gemeenten/logo-den-haag.png';
-import logoSHertogenbosch from '../assets/gemeenten/logo-s-hertogenbosch.png';
-import logoUtrecht from '../assets/gemeenten/logo-utrecht.png';
+import { gemeenten } from './gemeenten';
 
 export const wat = {
   bovenkop: 'Gemeenten werken samen',
@@ -33,27 +30,34 @@ export const waarom = {
 export const deelnemers = {
   bovenkop: 'Wie doen mee?',
   titel: 'Deelnemende gemeenten',
-  // Logo's van de gemeenten: voor een openbare site is toestemming nodig.
-  gemeenten: [
-    { naam: 'Gemeente Den Haag', logo: logoDenHaag, rol: 'Bouwt en financiert mee' },
-    { naam: 'Gemeente Utrecht', logo: logoUtrecht, rol: 'Bouwt en financiert mee' },
-    { naam: 'Gemeente Amsterdam', logo: logoAmsterdam, rol: 'Sluit aan' },
-    { naam: "Gemeente 's-Hertogenbosch", logo: logoSHertogenbosch, rol: 'Sluit aan' },
-  ],
-  organisatie:
-    'Een stuurgroep neemt de besluiten, een programmateam voert ze uit en een community van gemeenten denkt mee.',
+  // De lijst staat in content/gemeenten.ts. Op de homepage alleen de logo's;
+  // de rollen staan op de pagina "Hoe werken we samen?".
+  gemeenten,
+  tekst: 'Deze gemeenten werken samen aan MijnInkomen. Elke gemeente heeft een eigen rol in de samenwerking.',
+  link: 'Lees hoe we samenwerken',
 };
 
-export const laatsteOntwikkelingen = {
-  bovenkop: 'Laatste ontwikkelingen',
+/**
+ * Op de homepage: de 3 projecten die het laatst zijn bijgewerkt.
+ * Komt vanzelf uit de projecten (datum "bijgewerkt"), dus niemand hoeft apart
+ * nieuws te schrijven.
+ */
+export const recentBijgewerkt = {
+  bovenkop: 'Recent bijgewerkt',
   titel: 'Wat er gebeurt',
   aantal: 3,
   link: 'Alle ontwikkelingen',
 };
 
-export const aansluitenVerwijzing = {
-  titel: 'Wil je weten hoe je kunt aansluiten?',
+/** Knoppen in de introductie: door naar meer informatie */
+export const doorklikken = {
+  ontwikkelingen: 'Bekijk de ontwikkelingen',
+  meerWeten: 'Meer weten',
+};
+
+export const webinarVerwijzing = {
+  titel: 'Wil je meer weten?',
   tekst: 'In een webinar vertellen we wat MijnInkomen is en hoe de samenwerking werkt.',
   volgende: 'Het volgende webinar is op',
-  link: 'Lees hoe aansluiten werkt',
+  link: 'Lees meer over het webinar',
 };

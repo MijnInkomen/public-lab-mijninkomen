@@ -11,7 +11,11 @@
   min-width: 0;
 }
 
-.mijninkomen-contact__aansluiten {
+.mijninkomen-contact__anders p {
+  margin: 0 0 var(--mijninkomen-space-s);
+}
+
+.mijninkomen-contact__anders {
   margin: var(--mijninkomen-space-m) 0 0;
   padding-top: var(--mijninkomen-space-m);
   border-top: 1px solid var(--mijninkomen-border-color);

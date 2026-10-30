@@ -44,6 +44,11 @@
   list-style: none;
 }
 
+/* Ruimte boven een blok dat onder kaarten staat */
+.mijninkomen-sw-rollen {
+  margin-top: var(--mijninkomen-space-l);
+}
+
 .mijninkomen-kaart {
   padding: var(--mijninkomen-space-l);
   background-color: var(--mijninkomen-color-wit);
@@ -75,32 +80,6 @@
   margin-bottom: var(--mijninkomen-space-xs);
 }
 
-/* Updates: datum + één regel (ook gebruikt op de homepage) */
-.mijninkomen-updates {
-  display: grid;
-  gap: var(--mijninkomen-space-s);
-  margin: var(--mijninkomen-space-m) 0 var(--mijninkomen-space-l);
-  padding: 0;
-  list-style: none;
-}
-
-.mijninkomen-updates li {
-  display: grid;
-  grid-template-columns: 11rem 1fr;
-  gap: var(--mijninkomen-space-m);
-  padding-block: var(--mijninkomen-space-s);
-  border-bottom: 1px solid var(--mijninkomen-border-color);
-}
-
-.mijninkomen-updates li > * {
-  min-width: 0;
-}
-
-.mijninkomen-updates time {
-  color: var(--mijninkomen-text-subtle-color);
-  font-variant-numeric: tabular-nums;
-}
-
 /* Eén regel onderaan die naar de volgende pagina verwijst */
 .mijninkomen-doorverwijzing {
   padding-block: var(--mijninkomen-space-l);
@@ -119,8 +98,191 @@
     justify-self: center;
     max-width: 16rem;
   }
-  .mijninkomen-updates li {
+}
+
+/* ── Gedeeld door Meer weten, Initiatief melden en Toegang aanvragen ── */
+
+/* Twee kolommen naast elkaar (bijv. "oplevert" en "vraagt") */
+.mijninkomen-twee-kolommen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mijninkomen-space-l);
+  margin-top: var(--mijninkomen-space-m);
+}
+
+.mijninkomen-twee-kolommen > * {
+  min-width: 0;
+}
+
+.mijninkomen-twee-kolommen .mijninkomen-lijst {
+  margin-bottom: 0;
+}
+
+/* Een blok op de pagina, met ruimte eronder */
+.mijninkomen-blok-ruimte {
+  margin-bottom: var(--mijninkomen-space-xl);
+}
+
+/* Genummerde stappen met een groen cijfer ervoor */
+.mijninkomen-stappen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--mijninkomen-space-l);
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: stap;
+}
+
+/* Bij vier stappen: twee naast elkaar, zodat lange woorden passen */
+.mijninkomen-stappen--twee {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mijninkomen-stappen__stap {
+  counter-increment: stap;
+  min-width: 0;
+}
+
+.mijninkomen-stappen__stap::before {
+  content: counter(stap);
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: var(--mijninkomen-space-m);
+  border-radius: 50%;
+  background-color: var(--mijninkomen-color-groen);
+  color: var(--mijninkomen-color-wit);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.mijninkomen-stappen .nl-paragraph {
+  font-size: 1rem;
+}
+
+/* "Let op"-blok: lichtgeel met icoon (niet alleen kleur) */
+.mijninkomen-let-op {
+  display: flex;
+  gap: var(--mijninkomen-space-m);
+  align-items: flex-start;
+  margin-bottom: var(--mijninkomen-space-l);
+  padding: var(--mijninkomen-space-m) var(--mijninkomen-space-l);
+  background-color: var(--mijninkomen-color-geel-licht);
+  border-left: 6px solid var(--mijninkomen-color-geel);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-let-op p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.mijninkomen-let-op__icoon {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--mijninkomen-color-grijs-donker);
+  color: var(--mijninkomen-color-wit);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Gegevens als lijst: vet kopje, waarde eronder */
+.mijninkomen-gegevens {
+  margin: 0 0 var(--mijninkomen-space-l);
+}
+
+.mijninkomen-gegevens dt {
+  color: var(--mijninkomen-heading-color);
+  font-weight: 700;
+}
+
+.mijninkomen-gegevens dd {
+  margin: 0 0 var(--mijninkomen-space-s);
+}
+
+.mijninkomen-gegevens .mijninkomen-lijst {
+  margin-bottom: 0;
+}
+
+/* Kaart met een formulier */
+.mijninkomen-formulierkaart {
+  max-width: 44rem;
+  padding: var(--mijninkomen-space-xl);
+}
+
+/* Kaart met een "Lees meer"-link onderaan */
+.mijninkomen-kaart--link {
+  display: flex;
+  flex-direction: column;
+}
+
+.mijninkomen-kaart--link .mijninkomen-kaart__meer {
+  margin: auto 0 0;
+  padding-top: var(--mijninkomen-space-m);
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-twee-kolommen,
+  .mijninkomen-stappen--twee {
     grid-template-columns: 1fr;
-    gap: 0;
   }
+  .mijninkomen-formulierkaart {
+    padding: var(--mijninkomen-space-l);
+  }
+}
+
+.mijninkomen-webinar-formulier {
+  margin-top: var(--mijninkomen-space-l);
+}
+
+/* Inhoud van een pagina zonder zijmenu, niet te breed */
+.mijninkomen-smalle-inhoud {
+  max-width: 48rem;
+}
+
+/* Initiatief melden: de kaart van "deze pagina" is groen omlijnd */
+.mijninkomen-init-hier {
+  border: 2px solid var(--mijninkomen-color-groen);
+}
+
+/* Logo's van de gemeenten (homepage en "Hoe werken we samen?") */
+.mijninkomen-deelnemers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-m) 0 var(--mijninkomen-space-l);
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-deelnemer__logo {
+  display: grid;
+  place-items: center;
+  height: 6rem;
+  padding: var(--mijninkomen-space-m);
+  background-color: var(--mijninkomen-color-wit);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-deelnemer__logo img {
+  max-height: 4rem;
+  width: auto;
+  max-width: 100%;
+}
+
+.mijninkomen-deelnemer__rol {
+  margin: var(--mijninkomen-space-xs) 0 0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Op een witte pagina: een lijntje om het logo */
+.mijninkomen-deelnemers--rand .mijninkomen-deelnemer__logo {
+  border: 1px solid var(--mijninkomen-border-color);
 }
