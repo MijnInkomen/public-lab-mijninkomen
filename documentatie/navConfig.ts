@@ -24,6 +24,13 @@ const navbar: Navbar = {
     },
     {
       type: 'doc',
+      docId: 'ontwikkelingen/index',
+      position: 'left',
+      label: 'Ontwikkelingen',
+      className: 'utrecht-link utrecht-link--html-a ma-navigation-bar-item',
+    },
+    {
+      type: 'doc',
       docId: 'componenten/index',
       position: 'left',
       label: 'Componenten',

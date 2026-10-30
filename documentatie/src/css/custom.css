@@ -885,3 +885,10 @@ ams-page-footer {
   outline-width: var(--utrecht-focus-outline-width, revert);
 }
 /* stylelint-enable selector-class-pattern */
+
+.mijninkomen-cardgroup {
+    block-size: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
