@@ -11,7 +11,7 @@ export default {
     'color-no-invalid-hex': [true],
     'comment-no-empty': [true],
     'custom-property-pattern':
-      '^_?(ams|rhc|denhaag|docusaurus|example|ifm|nl|nlds|utrecht|ma|basis|pra|DocSearch|docsearch)-[a-z0-9-]+$',
+      '^_?(ams|rhc|denhaag|docusaurus|example|ifm|mijninkomen|nl|nlds|utrecht|ma|basis|pra|DocSearch|docsearch)-[a-z0-9-]+$',
     'declaration-block-no-duplicate-properties': [true, { ignore: ['consecutive-duplicates-with-different-values'] }],
     'declaration-block-no-redundant-longhand-properties': null,
     'declaration-block-no-shorthand-property-overrides': [true],
@@ -67,7 +67,7 @@ export default {
       '^(ams|rhc|denhaag|docusaurus|example|ifm|nl|nlds|utrecht|ma|basis|pra|docsearch)-[a-z0-9-]+|DocSearch-.+$',
     'selector-attribute-quotes': ['always'],
     'selector-class-pattern':
-      '^(ams|rhc|denhaag|docusaurus|example|ifm|nl|nlds|utrecht|ma|basis|pra|docsearch|sr)-[a-z0-9_-]+|DocSearch-.+$',
+      '^(ams|rhc|denhaag|docusaurus|example|ifm|mijninkomen|nl|nlds|utrecht|ma|basis|pra|docsearch|sr)-[a-z0-9_-]+|DocSearch-.+$',
     'selector-max-id': [0],
     'selector-pseudo-class-no-unknown': [true],
     'selector-pseudo-element-no-unknown': [true],
