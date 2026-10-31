@@ -1,0 +1,62 @@
+---
+title: Subscript
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Subscript
+pagination_label: Subscript
+description: Toont tekst met een kleiner lettertype met een verlaagde letterlijn.
+issue_number: 335
+slug: /subscript
+keywords:
+  - aantekening
+  - chemische verbinding
+  - index
+  - kleine lage tekst
+  - kleine tekst
+  - laaghangende tekst
+  - laag tweetje
+  - onder nummer
+  - onderschrift
+  - ondertekst
+  - structuurformule
+  - scheikunde taal
+  - superscript
+  - sub
+  - subscript
+  - tiny
+  - voetnoot
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Subscript";
+export const description = "Toont tekst met een kleiner lettertype met een verlaagde letterlijn.";
+export const issueNumber = 335;
+export const relayStep = "help wanted";
+export const componentName = "subscript";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

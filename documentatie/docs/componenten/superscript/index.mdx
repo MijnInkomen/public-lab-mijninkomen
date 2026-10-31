@@ -1,0 +1,61 @@
+---
+title: Superscript
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Superscript
+pagination_label: Superscript
+description: Toont tekst met een kleiner lettertype met een verhoogde letterlijn.
+issue_number: 337
+slug: /superscript
+keywords:
+  - exponent
+  - footnote
+  - hoge tekst
+  - kleine hoge tekst
+  - kubieke
+  - kwadraat
+  - math
+  - power
+  - subscript
+  - sup
+  - supscript
+  - superscript
+  - tot de macht
+  - tweetje
+  - vierkante
+  - voetnoot
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Superscript";
+export const description = "Toont tekst met een kleiner lettertype met een verhoogde letterlijn.";
+export const issueNumber = 337;
+export const relayStep = "help wanted";
+export const componentName = "superscript";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

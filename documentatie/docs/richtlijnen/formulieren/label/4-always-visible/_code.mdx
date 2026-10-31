@@ -1,0 +1,39 @@
+{/* @license CC0-1.0 */}
+
+import { Canvas } from "@site/src/components/Canvas/Canvas";
+import { Guideline } from "@site/src/components/Guideline";
+
+## Voorbeelden
+
+<Guideline appearance="do" title="Het label blijft zichtbaar, ook als de gebruiker gaat invullen.">
+  <Canvas language="html">
+    {() => (
+      <>
+        <p>
+          <label htmlFor="dier1">Wat is je lievelingsdier?</label>
+        </p>
+        <p>
+          <input type="text" id="dier1" name="lievelingsdier" placeholder="Bijvoorbeeld cavia" />
+        </p>
+      </>
+    )}
+  </Canvas>
+</Guideline>
+
+<Guideline appearance="dont" title="Alleen een placeholder gebruiken als zichtbaar label.">
+  <Canvas language="html">
+    {() => (
+      <>
+        <p>
+          <input
+            type="text"
+            id="dier2"
+            name="lievelingsdier"
+            placeholder="Wat is je lievelingsdier?"
+            aria-label="Wat is je lievelingsdier?"
+          />
+        </p>
+      </>
+    )}
+  </Canvas>
+</Guideline>

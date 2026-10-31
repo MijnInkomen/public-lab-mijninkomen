@@ -1,0 +1,63 @@
+---
+title: Page Number Navigation
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Page Number Navigation
+pagination_label: Page Number Navigation
+description: Navigatie naar andere pagina's wanneer een grote hoeveelheid informatie is verdeeld over genummerde pagina's.
+issue_number: 106
+slug: /page-number-navigation
+keywords:
+  - content pagination
+  - navigation
+  - navigation links
+  - numbered pagination
+  - number navigation
+  - pages
+  - page control
+  - page selector
+  - page indicator
+  - page links
+  - page number
+  - page numbers
+  - paginering
+  - paginatie
+  - pagination
+  - page navigation
+  - pagina
+  - paging
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Page Number Navigation";
+export const description = "Navigatie naar andere pagina's wanneer een grote hoeveelheid informatie is verdeeld over genummerde pagina's.";
+export const issueNumber = 106;
+export const relayStep = "help wanted";
+export const componentName = "page-number-navigation";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

@@ -1,0 +1,156 @@
+---
+title: Skip Link
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Skip Link
+pagination_label: Skip Link
+description: Verborgen mogelijkheid om snel naar een ander deel van de pagina te navigeren zonder gebruik te maken van een muis of touchscreen.
+issue_number: 74
+slug: /skip-link
+keywords:
+  - anchor link
+  - accessibility link
+  - blokken omzijlen
+  - direct naar link
+  - direct naar x
+  - content
+  - go to content
+  - hidden link
+  - inhoud
+  - inhoud overslaan
+  - jump link
+  - jump to
+  - jump to main content
+  - keyboard
+  - link
+  - naar content
+  - naar de inhoud
+  - navigeer snel naar
+  - overslaan
+  - quick link
+  - screen reader link
+  - section
+  - skip link
+  - skip links
+  - skiplinks
+  - skipnav
+  - skip to content
+  - skip to main
+  - skip navigation
+  - skip to section
+  - skip nav
+  - snel naar inhoud
+  - spring naar inhoud
+  - springlink
+  - springplank link
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import AcComponent from "@nl-design-system-unstable/documentation/componenten/ac/_ac_component.md";
+import AcImplementatie from "@nl-design-system-unstable/documentation/componenten/ac/_ac_implementatie.md";
+import IntroGebruik from "@nl-design-system-unstable/documentation/componenten/ac/_component_gebruiken_intro.md";
+import SkipLinkIllustration from "@nl-design-system-candidate/skip-link-docs/docs/anatomy/anatomy.svg";
+import * as Acceptatiecriteria from "./_acceptatiecriteria.tsx";
+import { Card, CardContent, CardIllustration } from "@site/src/components/CardGroup";
+import { LinkList, LinkListLink } from "@components/link-list/link-list";
+import { Heading } from "@components/heading/heading";
+import { BrandIcon } from "@site/src/components/BrandIcon";
+import { ComponentAliases } from "@site/src/components/ComponentAliases";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+import { Checklist, ChecklistItem } from "@site/src/components/Checklist";
+import { DesignTokens } from "@site/src/components/DesignTokens";
+import { Markdown } from "@site/src/components/Markdown";
+import Usage from "./_usage.md";
+import tokens from "@nl-design-system-candidate/skip-link-tokens";
+
+{/* Add name and description for the component */}
+export const title = "Skip Link";
+export const description = "Verborgen mogelijkheid om snel naar een ander deel van de pagina te navigeren zonder gebruik te maken van een muis of touchscreen.";
+export const issueNumber = 74;
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+Gebruik de Skip Link zodat gebruikers met een toetsenbord of hulpsoftware makkelijk contentblokken kunnen overslaan. Bijvoorbeeld navigatie die op meerdere pagina's herhaald wordt.
+
+<ComponentAliases component={component} />
+
+<Card className="ma-implementation-card">
+  <CardContent>
+    <Heading level={2} appearance="level-4">Figma</Heading>
+    <LinkList>
+      <LinkListLink href="https://www.figma.com/design/FqAr99wvrlHxTJYAHkFRQN/NL-Design-System---Bibliotheek?node-id=3462-12790"><BrandIcon brand='figma' />Figma - Start bibliotheek</LinkListLink>
+      <LinkListLink href="https://www.figma.com/design/0J3EiRpZH3LJ0cx396XLNC/NL-Design-System---Bibliotheek---Voorbeeld?node-id=3462-12790"><BrandIcon brand='figma' />Figma - Voorbeeld bibliotheek</LinkListLink>
+    </LinkList>
+
+    <Heading level={2} appearance="level-4">Storybook</Heading>
+    <LinkList>
+      <LinkListLink href="https://nl-design-system.github.io/candidate/?path=/docs/css-skip-link--documentatie"><BrandIcon brand='storybook' />Storybook - CSS</LinkListLink>
+      <LinkListLink href="https://nl-design-system.github.io/candidate/?path=/docs/skip-link--documentatie"><BrandIcon brand='storybook' />Storybook - React</LinkListLink>
+    </LinkList>
+    <Heading level={2} appearance="level-4">npm</Heading>
+    <LinkList>
+      <LinkListLink href="https://www.npmjs.com/package/@nl-design-system-candidate/skip-link-css"><BrandIcon brand='npm' /> @nl-design-system-candidate/skip-link-css</LinkListLink>
+      <LinkListLink href="https://www.npmjs.com/package/@nl-design-system-candidate/skip-link-react"><BrandIcon brand='npm' /> @nl-design-system-candidate/skip-link-react</LinkListLink>
+      <LinkListLink href="https://www.npmjs.com/package/@nl-design-system-candidate/skip-link-tokens"><BrandIcon brand='npm' /> @nl-design-system-candidate/skip-link-tokens</LinkListLink>
+    </LinkList>
+
+  </CardContent>
+</Card>
+
+## Checklist voor toegankelijkheid
+
+<IntroGebruik />
+
+### Acceptatiecriteria bij gebruik
+
+<AcImplementatie />
+
+<Checklist headingLevel="4">
+  {Acceptatiecriteria.usage.map(({ component: Wcag, ...item }) => (
+    <ChecklistItem {...item}>
+      <Wcag />
+    </ChecklistItem>
+  ))}
+</Checklist>
+
+### Acceptatiecriteria van de component
+
+<AcComponent />
+
+<Checklist headingLevel="4">
+  {Acceptatiecriteria.component.map(({ component: Wcag, ...item }) => (
+    <ChecklistItem {...item}>
+      <Wcag />
+    </ChecklistItem>
+  ))}
+</Checklist>
+
+<Markdown omitH1 headingLevel={2}>
+  <Usage />
+</Markdown>
+
+## Design tokens
+
+<DesignTokens tokens={tokens} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+<HelpImproveComponent component={component} headingLevel={2} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
