@@ -205,8 +205,11 @@ docker compose up -d
 |---|---|---|
 | `TEST_ADMIN_EMAIL` | `admin` | Stel je bij de eerste keer in met een code-app |
 | `TEST_LID_EMAIL` | `communitylid` | Staat al klaar voor de automatische test |
+| `TEST_E2E_ADMIN_EMAIL` | `admin` | Staat al klaar voor de automatische test |
 
 Heb je iets in `.env` of de realm aangepast? Wis dan de database, zodat de accounts opnieuw worden aangemaakt: `docker compose down -v` en daarna `docker compose up -d`.
+
+**Aanvragen behandelen:** log in met een account met de rol `admin` en kies **Beheer** in het menu (`/community/beheer/`). Toelaten maakt een account met de rol `communitylid`. De uitnodiging staat daarna in Mailpit.
 
 **Toegangsaanvragen bekijken:** aanvragen van `/toegang-aanvragen` staan in een eigen database. Bekijk ze met:
 
@@ -225,6 +228,7 @@ Heb je `toegang-api/` aangepast? Bouw die opnieuw met `docker compose up -d --bu
 ```bash
 pnpm exec playwright test test/e2e/inloggen.spec.ts --project=chromium --reporter=list
 pnpm exec playwright test test/e2e/toegang-aanvragen.spec.ts --project=chromium --reporter=list
+pnpm exec playwright test test/e2e/beheer.spec.ts --project=chromium --reporter=list --workers=1
 ```
 
 > Deze instellingen zijn alleen voor lokaal gebruik. Voor een echte server zijn onder meer HTTPS, `start` in plaats van `start-dev`, eigen domeinnamen, geen testaccounts en een afgeschermd adres voor het Keycloak-beheer nodig.
