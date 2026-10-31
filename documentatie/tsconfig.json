@@ -1,10 +1,13 @@
 {
-  "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
+    "allowJs": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": ["DOM", "ESNext"],
-    "baseUrl": null,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "target": "ES2022",
     "skipLibCheck": true,
     "verbatimModuleSyntax": true,
     "resolveJsonModule": true,
