@@ -2,42 +2,30 @@ import type { Footer } from '@docusaurus/theme-common';
 
 const footer: Footer = {
   style: 'light',
+  logo: {
+    alt: 'MijnInkomen',
+    src: '/img/logo-mijninkomen.png',
+    height: 44,
+  },
   links: [
     {
-      label: 'Blog',
-      href: '/blog',
+      title: 'Contact',
+      items: [
+        { html: 'Vragen over MijnInkomen?' },
+        { label: 'Neem contact op', to: '/contact/' },
+        { label: 'Volg ons op LinkedIn', href: 'https://www.linkedin.com/' },
+      ],
     },
     {
-      label: 'Contact',
-      to: '/project/kernteam',
-    },
-    {
-      label: 'Toegankelijkheid',
-      to: '/toegankelijkheidsverklaring',
-    },
-    {
-      label: 'Privacyverklaring',
-      to: '/privacyverklaring/',
-    },
-    {
-      label: 'Colofon',
-      to: '/colofon',
-    },
-    {
-      label: 'GitHub',
-      href: '/github/',
-    },
-    {
-      label: 'Slack',
-      href: '/slack/',
-    },
-    {
-      label: 'Figma',
-      href: '/figma/',
-    },
-    {
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/company/nl-design-system/',
+      title: 'Menu',
+      items: [
+        { label: 'Home', to: '/' },
+        { label: 'Ontwikkelingen', to: '/ontwikkelingen/' },
+        { label: 'Meer weten', to: '/meer-weten/' },
+        { label: 'Initiatief melden', to: '/initiatief-melden/' },
+        { label: 'Contact', to: '/contact/' },
+        { label: 'Privacyverklaring', to: '/privacy/' },
+      ],
     },
   ],
 };
