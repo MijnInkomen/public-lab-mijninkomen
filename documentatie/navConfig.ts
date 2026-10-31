@@ -30,13 +30,19 @@ const navbar: Navbar = {
       position: 'left',
     },
     {
+      type: 'custom-roadmap',
+      to: '/roadmap/',
+      label: 'Roadmap',
+      position: 'left',
+    },
+    {
       to: '/contact/',
       label: 'Contact',
       position: 'left',
     },
     {
-      to: '/inloggen/',
-      label: 'Inloggen',
+      type: 'custom-inloggen',
+      target: '_self',
       position: 'right',
       className: 'mijninkomen-inloggen',
     },
