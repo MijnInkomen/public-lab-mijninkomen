@@ -31,6 +31,8 @@ services:
       KC_PROXY_HEADERS: xforwarded
       OAUTH2_PROXY_CLIENT_SECRET: ${OAUTH2_PROXY_CLIENT_SECRET}
       SITE_PORT: ${SITE_PORT}
+      TOEGANG_API_CLIENT_SECRET: ${TOEGANG_API_CLIENT_SECRET}
+      TEST_E2E_ADMIN_EMAIL: ${TEST_E2E_ADMIN_EMAIL}
       TEST_ADMIN_EMAIL: ${TEST_ADMIN_EMAIL}
       TEST_ADMIN_PASSWORD: ${TEST_ADMIN_PASSWORD}
       TEST_LID_EMAIL: ${TEST_LID_EMAIL}
@@ -51,16 +53,19 @@ services:
       OAUTH2_PROXY_CLIENT_SECRET: ${OAUTH2_PROXY_CLIENT_SECRET}
       OAUTH2_PROXY_CODE_CHALLENGE_METHOD: S256
       OAUTH2_PROXY_COOKIE_SECRET: ${OAUTH2_PROXY_COOKIE_SECRET}
+      OAUTH2_PROXY_COOKIE_SAMESITE: lax
       OAUTH2_PROXY_COOKIE_SECURE: "false"
       OAUTH2_PROXY_EMAIL_DOMAINS: "*"
       OAUTH2_PROXY_HTTP_ADDRESS: 0.0.0.0:4180
       OAUTH2_PROXY_LOGIN_URL: http://localhost:${SITE_PORT}/auth/realms/mijninkomen/protocol/openid-connect/auth
+      OAUTH2_PROXY_OIDC_GROUPS_CLAIM: groups
       OAUTH2_PROXY_OIDC_ISSUER_URL: http://localhost:${SITE_PORT}/auth/realms/mijninkomen
       OAUTH2_PROXY_OIDC_JWKS_URL: http://keycloak:8080/auth/realms/mijninkomen/protocol/openid-connect/certs
       OAUTH2_PROXY_PROVIDER: oidc
       OAUTH2_PROXY_REDEEM_URL: http://keycloak:8080/auth/realms/mijninkomen/protocol/openid-connect/token
       OAUTH2_PROXY_REDIRECT_URL: http://localhost:${SITE_PORT}/oauth2/callback
       OAUTH2_PROXY_REVERSE_PROXY: "true"
+      OAUTH2_PROXY_SET_XAUTHREQUEST: "true"
       OAUTH2_PROXY_SKIP_OIDC_DISCOVERY: "true"
       OAUTH2_PROXY_SKIP_PROVIDER_BUTTON: "true"
       OAUTH2_PROXY_UPSTREAMS: static://202
@@ -86,7 +91,12 @@ services:
     build: ./toegang-api
     environment:
       DATABASE_URL: postgres://toegang:${TOEGANG_DB_PASSWORD}@toegang-db/toegang
+      KEYCLOAK_CLIENT_SECRET: ${TOEGANG_API_CLIENT_SECRET}
+      KEYCLOAK_URL: http://keycloak:8080/auth
+      SITE_URL: http://localhost:${SITE_PORT}
     depends_on:
+      keycloak:
+        condition: service_started
       toegang-db:
         condition: service_healthy
 

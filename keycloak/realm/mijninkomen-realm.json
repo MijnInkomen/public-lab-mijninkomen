@@ -3,8 +3,11 @@
   "enabled": true,
   "displayName": "MijnInkomen",
   "loginTheme": "mijninkomen",
+  "emailTheme": "mijninkomen",
   "internationalizationEnabled": true,
-  "supportedLocales": ["nl"],
+  "supportedLocales": [
+    "nl"
+  ],
   "defaultLocale": "nl",
   "registrationAllowed": false,
   "registrationEmailAsUsername": true,
@@ -22,8 +25,14 @@
   },
   "roles": {
     "realm": [
-      { "name": "admin", "description": "Beheert toegang tot de communityomgeving" },
-      { "name": "communitylid", "description": "Heeft toegang tot de communityomgeving" }
+      {
+        "name": "admin",
+        "description": "Beheert toegang tot de communityomgeving"
+      },
+      {
+        "name": "communitylid",
+        "description": "Heeft toegang tot de communityomgeving"
+      }
     ]
   },
   "requiredActions": [
@@ -42,7 +51,7 @@
       "providerId": "UPDATE_PASSWORD",
       "enabled": true,
       "defaultAction": false,
-      "priority": 20,
+      "priority": 5,
       "config": {}
     }
   ],
@@ -56,12 +65,43 @@
       "secret": "${OAUTH2_PROXY_CLIENT_SECRET}",
       "standardFlowEnabled": true,
       "directAccessGrantsEnabled": false,
-      "redirectUris": ["http://localhost:${SITE_PORT}/oauth2/callback"],
-      "webOrigins": ["http://localhost:${SITE_PORT}"],
+      "redirectUris": [
+        "http://localhost:${SITE_PORT}/oauth2/callback",
+        "http://localhost:${SITE_PORT}/"
+      ],
+      "webOrigins": [
+        "http://localhost:${SITE_PORT}"
+      ],
       "attributes": {
         "pkce.code.challenge.method": "S256",
         "post.logout.redirect.uris": "http://localhost:${SITE_PORT}/*"
-      }
+      },
+      "protocolMappers": [
+        {
+          "name": "rollen in groups",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "config": {
+            "claim.name": "groups",
+            "multivalued": "true",
+            "jsonType.label": "String",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        }
+      ]
+    },
+    {
+      "clientId": "toegang-api",
+      "name": "Toegang API",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "${TOEGANG_API_CLIENT_SECRET}",
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": true
     }
   ],
   "users": [
@@ -72,9 +112,19 @@
       "enabled": true,
       "firstName": "Test",
       "lastName": "Admin",
-      "realmRoles": ["admin"],
-      "requiredActions": ["CONFIGURE_TOTP"],
-      "credentials": [{ "type": "password", "value": "${TEST_ADMIN_PASSWORD}", "temporary": false }]
+      "realmRoles": [
+        "admin"
+      ],
+      "requiredActions": [
+        "CONFIGURE_TOTP"
+      ],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "${TEST_ADMIN_PASSWORD}",
+          "temporary": false
+        }
+      ]
     },
     {
       "username": "${TEST_LID_EMAIL}",
@@ -83,9 +133,51 @@
       "enabled": true,
       "firstName": "Test",
       "lastName": "Lid",
-      "realmRoles": ["communitylid"],
+      "realmRoles": [
+        "communitylid"
+      ],
       "credentials": [
-        { "type": "password", "value": "${TEST_LID_PASSWORD}", "temporary": false },
+        {
+          "type": "password",
+          "value": "${TEST_LID_PASSWORD}",
+          "temporary": false
+        },
+        {
+          "type": "otp",
+          "userLabel": "Testcode",
+          "secretData": "{\"value\":\"${TEST_LID_OTP_SECRET}\"}",
+          "credentialData": "{\"subType\":\"totp\",\"digits\":6,\"counter\":0,\"period\":30,\"algorithm\":\"HmacSHA1\"}"
+        }
+      ]
+    },
+    {
+      "username": "service-account-toegang-api",
+      "enabled": true,
+      "serviceAccountClientId": "toegang-api",
+      "clientRoles": {
+        "realm-management": [
+          "manage-users",
+          "view-users",
+          "view-realm"
+        ]
+      }
+    },
+    {
+      "username": "${TEST_E2E_ADMIN_EMAIL}",
+      "email": "${TEST_E2E_ADMIN_EMAIL}",
+      "emailVerified": true,
+      "enabled": true,
+      "firstName": "E2e",
+      "lastName": "Admin",
+      "realmRoles": [
+        "admin"
+      ],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "${TEST_LID_PASSWORD}",
+          "temporary": false
+        },
         {
           "type": "otp",
           "userLabel": "Testcode",
