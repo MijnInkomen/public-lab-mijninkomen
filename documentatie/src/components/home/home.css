@@ -2,6 +2,25 @@
 .mijninkomen-home {
   --ifm-container-width: var(--mijninkomen-page-max-width);
   --ifm-container-width-xl: var(--mijninkomen-page-max-width);
+  --utrecht-heading-1-font-size: clamp(2rem, 4vw, 2.75rem);
+  --utrecht-heading-1-line-height: 1.2;
+  --utrecht-heading-1-margin-block-end: 1rem;
+  --utrecht-heading-1-margin-block-start: 0;
+  --utrecht-heading-2-font-size: clamp(1.5rem, 3vw, 2rem);
+  --utrecht-heading-2-line-height: 1.25;
+  --utrecht-heading-2-margin-block-end: 1rem;
+  --utrecht-heading-2-margin-block-start: 0;
+  --utrecht-paragraph-lead-line-height: 1.6;
+  --utrecht-paragraph-line-height: 1.6;
+  --utrecht-pre-heading-color: var(--basis-color-accent-1-color-subtle);
+  --utrecht-pre-heading-font-size: 0.875rem;
+}
+
+.mijninkomen-hero-vlak {
+  --utrecht-button-group-margin-block-start: 1.5rem;
+  --utrecht-pre-heading-color: var(--basis-color-accent-1-color-default);
+  --utrecht-spotlight-section-padding-block-end: 2.5rem;
+  --utrecht-spotlight-section-padding-block-start: 2.5rem;
 }
 
 .mijninkomen-hero {
@@ -27,8 +46,82 @@
   text-transform: uppercase;
 }
 
+.mijninkomen-sectie {
+  padding-block: 2.5rem 1rem;
+}
+
+.mijninkomen-sectie:last-child {
+  padding-block-end: 2.5rem;
+}
+
+.mijninkomen-home .mijninkomen-voordelen {
+  --utrecht-card-background-color: transparent;
+  --utrecht-card-body-padding-inline-end: 0;
+  --utrecht-card-body-padding-inline-start: 0;
+  --utrecht-card-box-shadow: none;
+  --utrecht-card-content-padding-block-end: 0;
+  --utrecht-card-content-padding-block-start: 0;
+  --utrecht-card-heading-padding-inline-end: 0;
+  --utrecht-card-heading-padding-inline-start: 0;
+
+  font-size: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  list-style: none;
+  margin-block: 1.5rem 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.mijninkomen-voordelen li {
+  margin-block: 0;
+}
+
+.mijninkomen-home .mijninkomen-voordelen .utrecht-card {
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.mijninkomen-voordelen h3 {
+  font-size: 1.25rem;
+}
+
+.mijninkomen-icoon {
+  background-color: var(--basis-color-accent-1-bg-subtle);
+  block-size: 3.5rem;
+  border-radius: 50%;
+  color: var(--basis-heading-color);
+  display: inline-grid;
+  inline-size: 3.5rem;
+  place-items: center;
+}
+
+.mijninkomen-blok {
+  --ma-cardgroup-card-background-color: #fff;
+  --ma-cardgroup-card-border-width: 0;
+  --ma-cardgroup-grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  --ma-cardgroup-margin-block: 1rem 1.5rem;
+  --ma-cardgroup-small-gap: 1rem;
+  --utrecht-spotlight-section-background-color: #f4f4f1;
+  --utrecht-spotlight-section-border-radius: 1rem;
+  --utrecht-spotlight-section-padding-block-end: 2.5rem;
+  --utrecht-spotlight-section-padding-block-start: 2.5rem;
+  --utrecht-spotlight-section-padding-inline-end: 2.5rem;
+  --utrecht-spotlight-section-padding-inline-start: 2.5rem;
+}
+
+.mijninkomen-blok .ma-cardgroup--small {
+  padding-block: 0;
+}
+
 @media (width <= 48rem) {
   .mijninkomen-hero {
     grid-template-columns: 1fr;
+  }
+
+  .mijninkomen-blok {
+    --utrecht-spotlight-section-padding-block-end: 1.5rem;
+    --utrecht-spotlight-section-padding-block-start: 1.5rem;
+    --utrecht-spotlight-section-padding-inline-end: 1.5rem;
+    --utrecht-spotlight-section-padding-inline-start: 1.5rem;
   }
 }
