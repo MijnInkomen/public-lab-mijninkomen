@@ -12,6 +12,7 @@ services:
     depends_on:
       - keycloak
       - oauth2-proxy
+      - toegang-api
 
   keycloak:
     image: quay.io/keycloak/keycloak:26.4
@@ -81,6 +82,28 @@ services:
       timeout: 3s
       retries: 10
 
+  toegang-api:
+    build: ./toegang-api
+    environment:
+      DATABASE_URL: postgres://toegang:${TOEGANG_DB_PASSWORD}@toegang-db/toegang
+    depends_on:
+      toegang-db:
+        condition: service_healthy
+
+  toegang-db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: toegang
+      POSTGRES_USER: toegang
+      POSTGRES_PASSWORD: ${TOEGANG_DB_PASSWORD}
+    volumes:
+      - toegang-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U toegang"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
   mailpit:
     image: axllent/mailpit:v1.27
     ports:
@@ -88,3 +111,4 @@ services:
 
 volumes:
   postgres-data:
+  toegang-data:
