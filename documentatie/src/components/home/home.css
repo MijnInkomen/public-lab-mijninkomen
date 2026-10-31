@@ -1,0 +1,34 @@
+/* Aanvullingen op de NLDS-blokken uit src/pages/index.css */
+.mijninkomen-home {
+  --ifm-container-width: var(--mijninkomen-page-max-width);
+  --ifm-container-width-xl: var(--mijninkomen-page-max-width);
+}
+
+.mijninkomen-hero {
+  align-items: center;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.mijninkomen-hero > * {
+  min-inline-size: 0;
+}
+
+.mijninkomen-hero__beeld {
+  block-size: auto;
+  display: block;
+  inline-size: 100%;
+}
+
+.mijninkomen-home .utrecht-pre-heading {
+  letter-spacing: 0.08em;
+  margin-block-end: 0.5rem;
+  text-transform: uppercase;
+}
+
+@media (width <= 48rem) {
+  .mijninkomen-hero {
+    grid-template-columns: 1fr;
+  }
+}
