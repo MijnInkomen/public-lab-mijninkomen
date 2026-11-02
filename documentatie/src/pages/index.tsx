@@ -1,6 +1,8 @@
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
+import { HomeDeelnemers } from '../components/home/HomeDeelnemers';
 import { HomeIntroductie } from '../components/home/HomeIntroductie';
+import { HomeWaaromSamen } from '../components/home/HomeWaaromSamen';
 import './index.css';
 
 export default function Home() {
@@ -13,6 +15,8 @@ export default function Home() {
       <Layout>
         <main className="mijninkomen-home">
           <HomeIntroductie />
+          <HomeWaaromSamen />
+          <HomeDeelnemers />
         </main>
       </Layout>
     </>

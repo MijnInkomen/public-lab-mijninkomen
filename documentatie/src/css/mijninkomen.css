@@ -76,7 +76,7 @@
 
 .ma-theme {
   /* Navigatiebalk */
-  --ifm-navbar-height: 5.5rem;
+  --ifm-navbar-height: 7rem;
   --ifm-navbar-shadow: none;
   --ifm-navbar-link-hover-color: var(--basis-color-accent-1-color-default);
   --ifm-navbar-link-active-color: var(--basis-color-accent-1-color-default);
@@ -98,7 +98,8 @@
 
 .ma-theme .navbar {
   block-size: var(--ifm-navbar-height);
-  position: sticky;
+  padding-block-end: 1.5rem;
+  position: relative;
 }
 
 .navbar__inner {
@@ -166,7 +167,7 @@
   block-size: 5px;
   content: "";
   inline-size: min(100% - 2rem, var(--mijninkomen-page-max-width) - 2rem);
-  inset-block-end: 0;
+  inset-block-end: 1.5rem;
   inset-inline-start: 50%;
   position: absolute;
   transform: translateX(-50%);

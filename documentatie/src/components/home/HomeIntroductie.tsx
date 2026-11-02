@@ -4,7 +4,7 @@ import { wat } from './content';
 import './home.css';
 
 export const HomeIntroductie = () => (
-  <SpotlightSection className="ma-homepage-spotlight-section">
+  <SpotlightSection className="ma-homepage-spotlight-section mijninkomen-hero-vlak">
     <div className="container mijninkomen-hero">
       <div>
         <PreHeading>{wat.bovenkop}</PreHeading>
