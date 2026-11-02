@@ -18,15 +18,11 @@
 }
 
 .mijninkomen-contact__beeld {
-  inline-size: 100%;
-  justify-self: end;
-  max-inline-size: 22rem;
-}
-
-.mijninkomen-contact__illustratie {
   block-size: auto;
   display: block;
   inline-size: 100%;
+  justify-self: end;
+  max-inline-size: 22rem;
 }
 
 .mijninkomen-contact__kaart {
@@ -84,7 +80,6 @@
 
 .mijninkomen-contact__gegevens dd {
   margin-inline-start: 0;
-
   overflow-wrap: anywhere;
 }
 
