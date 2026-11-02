@@ -208,12 +208,23 @@ docker compose up -d
 
 Heb je iets in `.env` of de realm aangepast? Wis dan de database, zodat de accounts opnieuw worden aangemaakt: `docker compose down -v` en daarna `docker compose up -d`.
 
+**Toegangsaanvragen bekijken:** aanvragen van `/toegang-aanvragen` staan in een eigen database. Bekijk ze met:
+
+```bash
+docker compose exec toegang-db psql -U toegang -c "SELECT naam, organisatie, email, gesprek_datum, status FROM toegangsaanvragen;"
+```
+
+Heb je `toegang-api/` aangepast? Bouw die opnieuw met `docker compose up -d --build toegang-api`.
+
+**Testen van de API:** `cd toegang-api && npm install && npm run typecheck && npm test`.
+
 **Stoppen:** `docker compose down`. Met `docker compose down -v` wis je ook alle accounts; bij de volgende start worden de testaccounts opnieuw aangemaakt.
 
 **Testen:** start de omgeving en draai in de map `documentatie`:
 
 ```bash
 pnpm exec playwright test test/e2e/inloggen.spec.ts --project=chromium --reporter=list
+pnpm exec playwright test test/e2e/toegang-aanvragen.spec.ts --project=chromium --reporter=list
 ```
 
 > Deze instellingen zijn alleen voor lokaal gebruik. Voor een echte server zijn onder meer HTTPS, `start` in plaats van `start-dev`, eigen domeinnamen, geen testaccounts en een afgeschermd adres voor het Keycloak-beheer nodig.

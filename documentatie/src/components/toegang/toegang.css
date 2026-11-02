@@ -1,0 +1,71 @@
+.mijninkomen-smal {
+  --utrecht-alert-border-radius: 8px;
+  --utrecht-alert-border-width: 0;
+  --utrecht-alert-icon-warning-color: #1f2a26;
+  --utrecht-alert-warning-background-color: #fbf1d9;
+  --utrecht-alert-warning-border-color: #e8b547;
+  --utrecht-pre-heading-color: var(--basis-color-accent-1-color-default);
+  --utrecht-textbox-background-color: #fff;
+  --utrecht-textbox-border-color: #8a948f;
+  --utrecht-textbox-border-radius: 8px;
+  --utrecht-textbox-border-width: 1px;
+
+  max-inline-size: 46rem;
+}
+
+.mijninkomen-smal .utrecht-alert {
+  border-inline-start: 6px solid var(--utrecht-alert-warning-border-color);
+  margin-block: 1.5rem;
+}
+
+.mijninkomen-smal .utrecht-alert--error {
+  background-color: #fff;
+  border: 2px solid #a52a35;
+  border-inline-start-width: 6px;
+}
+
+.mijninkomen-smal .utrecht-alert--error a {
+  color: #a52a35;
+  font-weight: 600;
+}
+
+.mijninkomen-smal .utrecht-alert--ok {
+  border-inline-start-color: var(--basis-color-accent-1-color-default);
+}
+
+.mijninkomen-formulierkaart {
+  border: 1px solid #d9dcd7;
+  border-radius: 8px;
+  margin-block-end: 2.5rem;
+  padding-block: 1.75rem;
+  padding-inline: 1.75rem;
+}
+
+.mijninkomen-formulierkaart .utrecht-paragraph {
+  font-size: 1rem;
+}
+
+.mijninkomen-formulierkaart .utrecht-form-field {
+  margin-block: 1.5rem;
+}
+
+.mijninkomen-formulierkaart .utrecht-form-label {
+  color: var(--basis-heading-color);
+  font-weight: 700;
+}
+
+.mijninkomen-formulierkaart .utrecht-textbox {
+  inline-size: 100%;
+  max-inline-size: none;
+}
+
+.mijninkomen-formulierkaart ul {
+  margin-block: 0;
+}
+
+@media (width <= 48rem) {
+  .mijninkomen-formulierkaart {
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+  }
+}
