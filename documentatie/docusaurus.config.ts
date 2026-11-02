@@ -25,13 +25,13 @@ const config: Config = {
       }),
     }),
   ],
-  title: 'NL Design System',
+  title: 'MijnInkomen',
   titleDelimiter: '·',
-  tagline: 'Eén design system voor alle huisstijlen',
+  tagline: 'Gemeenten werken samen',
   url: siteUrl,
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'favicon.svg',
+  favicon: 'img/favicon-mijninkomen.png',
   trailingSlash: true,
   organizationName: 'nl-design-system', // Usually your GitHub org/user name.
   projectName: 'documentatie', // Usually your repo name.
@@ -79,6 +79,7 @@ const config: Config = {
           customCss: [
             require.resolve('@nl-design-system-unstable/nlds-design-tokens/dist/root.css'),
             require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/mijninkomen.css'),
           ],
         },
       },
@@ -102,27 +103,6 @@ const config: Config = {
     },
     colorMode: {
       disableSwitch: true,
-    },
-    algolia: {
-      // The application ID provided by Algolia
-      appId: 'HS7BGF6EOX',
-      // Public API key: it is safe to commit it
-      apiKey: 'ce625c137581b1c1f4bdd3912398834b',
-      indexName: 'nldesignsystem',
-      // Optional: see doc section below
-      contextualSearch: true,
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      // externalUrlRegex: 'external\\.com|domain\\.com',
-      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      // replaceSearchResultPathname: {
-      //   from: '/docs/', // or as RegExp: /\/docs\//
-      //   to: '/',
-      // },
-      // Optional: Algolia search parameters
-      searchParameters: {},
-      // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: 'search',
-      //... other Algolia params
     },
     // announcementBar: {
     //   id: 'xxx',

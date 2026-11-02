@@ -1,0 +1,147 @@
+/*
+ * DESIGN TOKENS – de huisstijl van MijnInkomen
+ * ---------------------------------------------
+ * Net als in NL Design System staat de huisstijl los van de componenten.
+ * Wil je een kleur, lettertype of afstand aanpassen? Dan doe je dat alleen hier.
+ *
+ * Drie lagen (van algemeen naar specifiek):
+ *   1. Merk-tokens       → de ruwe kleuren en waarden van de huisstijl
+ *   2. Algemene tokens   → betekenis: "tekstkleur", "achtergrond", "focus"
+ *   3. Component-tokens  → per component, met de vaste NLDS-namen (--nl-...)
+ * Componenten gebruiken alleen laag 2 en 3, nooit direct een hex-code.
+ */
+
+:root {
+  /* 1. MERK-TOKENS (kleurkeuze: zie onderbouwing.md) */
+  --mijninkomen-color-groen: #216b50;        /* primaire kleur – contrast 6,4 op wit */
+  --mijninkomen-color-groen-donker: #174c39; /* hover en koppen */
+  --mijninkomen-color-groen-licht: #e6f0ec;  /* lichte vlakken */
+  --mijninkomen-color-groen-zeer-licht: #f2f7f4; /* heel lichte achtergrond */
+  --mijninkomen-color-rood: #a52a35;         /* alleen accent, niet voor knoppen */
+  --mijninkomen-color-geel: #e8b547;         /* alleen decoratie, nooit tekst */
+  --mijninkomen-color-geel-licht: #fbf1d9;   /* achtergrond voor info, met donkere tekst */
+  --mijninkomen-color-wit: #ffffff;         /* pagina-achtergrond en tekst op groen */
+  --mijninkomen-color-grijs-donker: #1f2a26; /* lopende tekst */
+  --mijninkomen-color-grijs: #4a5651;        /* minder belangrijke tekst */
+  --mijninkomen-color-grijs-lijn: #d9dcd7;   /* randen van kaarten */
+  --mijninkomen-color-grijs-vlak: #f4f4f1;   /* lichtgrijze blokken */
+
+  /* 2. ALGEMENE TOKENS */
+  --mijninkomen-document-background-color: var(--mijninkomen-color-wit);
+  --mijninkomen-document-color: var(--mijninkomen-color-grijs-donker);
+  --mijninkomen-document-font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --mijninkomen-document-font-size: 1.125rem; /* 18px: goed leesbaar */
+  --mijninkomen-document-line-height: 1.6;
+  --mijninkomen-heading-color: var(--mijninkomen-color-groen-donker);
+  --mijninkomen-text-subtle-color: var(--mijninkomen-color-grijs);
+  --mijninkomen-surface-background-color: var(--mijninkomen-color-wit);
+  --mijninkomen-border-color: var(--mijninkomen-color-grijs-lijn);
+  --mijninkomen-focus-outline-color: var(--mijninkomen-color-grijs-donker);
+  --mijninkomen-focus-background-color: var(--mijninkomen-color-geel);
+  --mijninkomen-link-color: var(--mijninkomen-color-groen);
+  --mijninkomen-link-hover-color: var(--mijninkomen-color-groen-donker);
+  /* Formuliervelden */
+  --mijninkomen-form-border-color: #8a948f;      /* rand van een veld – contrast 3,1 (WCAG 1.4.11) */
+  --mijninkomen-form-placeholder-color: #646e69; /* voorbeeldtekst in een veld – contrast 5,3 */
+  --mijninkomen-form-error-color: var(--mijninkomen-color-rood); /* foutmelding – contrast 7,0 */
+  --mijninkomen-border-radius: 8px;
+  --mijninkomen-page-max-width: 72rem;
+
+  /* Afstanden (een vaste reeks, zodat alles in hetzelfde ritme staat) */
+  --mijninkomen-space-xs: 0.25rem;
+  --mijninkomen-space-s: 0.5rem;
+  --mijninkomen-space-m: 1rem;
+  --mijninkomen-space-l: 1.5rem;
+  --mijninkomen-space-xl: 2.5rem;
+  --mijninkomen-space-2xl: 4rem;
+
+  /* 3. COMPONENT-TOKENS VOOR NL DESIGN SYSTEM
+   * De officiële NLDS-componenten (Button, Heading, Paragraph, Link, Skip Link)
+   * lezen hun opmaak uit vaste token-namen die beginnen met --nl-.
+   * Hier vullen we die in met onze eigen huisstijl: zo krijgen de
+   * NLDS-componenten de kleuren en maten van MijnInkomen ("thema").
+   * Alle namen staan in de documentatie van elk component op nldesignsystem.nl. */
+
+  /* Heading (koppen) */
+  --nl-heading-level-1-color: var(--mijninkomen-heading-color);
+  --nl-heading-level-1-font-size: clamp(2rem, 4vw, 2.75rem);
+  --nl-heading-level-1-font-weight: 700;
+  --nl-heading-level-1-line-height: 1.2;
+  --nl-heading-level-1-margin-block-start: 0;
+  --nl-heading-level-1-margin-block-end: var(--mijninkomen-space-m);
+  --nl-heading-level-2-color: var(--mijninkomen-heading-color);
+  --nl-heading-level-2-font-size: clamp(1.5rem, 3vw, 2rem);
+  --nl-heading-level-2-font-weight: 700;
+  --nl-heading-level-2-line-height: 1.25;
+  --nl-heading-level-2-margin-block-start: 0;
+  --nl-heading-level-2-margin-block-end: var(--mijninkomen-space-m);
+  --nl-heading-level-3-color: var(--mijninkomen-heading-color);
+  --nl-heading-level-3-font-size: 1.25rem;
+  --nl-heading-level-3-font-weight: 700;
+  --nl-heading-level-3-line-height: 1.3;
+  --nl-heading-level-3-margin-block-start: 0;
+  --nl-heading-level-3-margin-block-end: var(--mijninkomen-space-s);
+
+  /* Paragraph (lopende tekst) */
+  --nl-paragraph-margin-block-start: 0;
+  --nl-paragraph-margin-block-end: var(--mijninkomen-space-m);
+  --nl-paragraph-lead-font-size: 1.25rem;
+  --nl-paragraph-lead-font-weight: 400;
+
+  /* Link (tekstlinks) – altijd onderstreept */
+  --nl-link-color: var(--mijninkomen-link-color);
+  --nl-link-hover-color: var(--mijninkomen-link-hover-color);
+  --nl-link-active-color: var(--mijninkomen-link-hover-color);
+  --nl-link-text-decoration-thickness: 1px;
+  --nl-link-hover-text-decoration-thickness: 2px;
+  --nl-link-text-underline-offset: 0.2em;
+
+  /* Button (knoppen) */
+  --nl-button-font-family: inherit;
+  --nl-button-border-radius: var(--mijninkomen-border-radius);
+  --nl-button-column-gap: var(--mijninkomen-space-s);
+  --nl-button-min-block-size: 44px; /* WCAG 2.5.8: groot genoeg om op te tikken */
+  --nl-button-padding-block-start: var(--mijninkomen-space-s);
+  --nl-button-padding-block-end: var(--mijninkomen-space-s);
+  --nl-button-padding-inline-start: var(--mijninkomen-space-l);
+  --nl-button-padding-inline-end: var(--mijninkomen-space-l);
+  --nl-button-icon-size: 1rem;
+  --nl-button-primary-background-color: var(--mijninkomen-color-groen);
+  --nl-button-primary-border-color: var(--mijninkomen-color-groen);
+  --nl-button-primary-border-width: 2px;
+  --nl-button-primary-color: var(--mijninkomen-color-wit);
+  --nl-button-primary-font-size: inherit;
+  --nl-button-primary-font-weight: 600;
+  --nl-button-primary-line-height: 1.4;
+  --nl-button-primary-hover-background-color: var(--mijninkomen-color-groen-donker);
+  --nl-button-primary-hover-border-color: var(--mijninkomen-color-groen-donker);
+  --nl-button-primary-hover-color: var(--mijninkomen-color-wit);
+  --nl-button-primary-active-background-color: var(--mijninkomen-color-groen-donker);
+  --nl-button-primary-active-border-color: var(--mijninkomen-color-groen-donker);
+  --nl-button-primary-active-color: var(--mijninkomen-color-wit);
+  --nl-button-secondary-background-color: var(--mijninkomen-color-wit);
+  --nl-button-secondary-border-color: var(--mijninkomen-color-groen);
+  --nl-button-secondary-border-width: 2px;
+  --nl-button-secondary-color: var(--mijninkomen-color-groen);
+  --nl-button-secondary-font-size: inherit;
+  --nl-button-secondary-font-weight: 600;
+  --nl-button-secondary-line-height: 1.4;
+  --nl-button-secondary-hover-background-color: var(--mijninkomen-color-groen-licht);
+  --nl-button-secondary-hover-border-color: var(--mijninkomen-color-groen-donker);
+  --nl-button-secondary-hover-color: var(--mijninkomen-color-groen-donker);
+  --nl-button-secondary-active-background-color: var(--mijninkomen-color-groen-licht);
+  --nl-button-secondary-active-border-color: var(--mijninkomen-color-groen-donker);
+  --nl-button-secondary-active-color: var(--mijninkomen-color-groen-donker);
+
+  /* Skip Link ("Direct naar de inhoud") */
+  --nl-skip-link-background-color: var(--mijninkomen-focus-background-color);
+  --nl-skip-link-color: var(--mijninkomen-color-grijs-donker);
+  --nl-skip-link-padding-block: var(--mijninkomen-space-s);
+  --nl-skip-link-padding-inline: var(--mijninkomen-space-m);
+
+  /* Het streepje onder de kop: één kleur per deelnemende gemeente.
+     Komt er een gemeente bij? Voeg hier een kleur toe én in PageHeader.tsx. */
+  --mijninkomen-stripe-color-1: var(--mijninkomen-color-groen);
+  --mijninkomen-stripe-color-2: var(--mijninkomen-color-rood);
+  --mijninkomen-stripe-color-3: var(--mijninkomen-color-geel);
+}

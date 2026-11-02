@@ -1,0 +1,124 @@
+/* Opmaak die alleen voor de homepage geldt */
+
+/* 1. HERO – lichtgroen vlak met tekst links en illustratie rechts */
+.mijninkomen-hero {
+  padding-block: var(--mijninkomen-space-xl);
+  background-color: var(--mijninkomen-color-groen-licht);
+}
+
+.mijninkomen-hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--mijninkomen-space-xl);
+  align-items: center;
+}
+
+/* De illustratie (doorzichtige achtergrond) */
+.mijninkomen-hero__beeld img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 2. WAAROM – vier voordelen naast elkaar */
+.mijninkomen-voordelen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--mijninkomen-space-l);
+  margin: var(--mijninkomen-space-l) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-voordelen .mijninkomen-paragraph {
+  font-size: 1rem;
+}
+
+/* Sectie met minder ruimte boven en onder */
+.mijninkomen-section--smal {
+  padding-block: var(--mijninkomen-space-m);
+}
+
+/* Lichtgrijs blok met afgeronde hoeken (gemeenten) */
+.mijninkomen-blok {
+  padding: var(--mijninkomen-space-xl);
+  background-color: var(--mijninkomen-color-grijs-vlak);
+  border-radius: calc(var(--mijninkomen-border-radius) * 2);
+}
+
+/* 3. GEMEENTEN – tekst links, namen rechts */
+.mijninkomen-gemeenten {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--mijninkomen-space-l);
+  align-items: center;
+}
+
+.mijninkomen-gemeenten .mijninkomen-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.mijninkomen-gemeenten__lijst {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Logo per gemeente, op een wit vlak (de logo's hebben een witte achtergrond) */
+.mijninkomen-gemeente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mijninkomen-space-xs);
+  min-width: 8rem;
+  padding: var(--mijninkomen-space-m);
+  background-color: var(--mijninkomen-color-wit);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-gemeente img {
+  display: block;
+  height: 4rem;
+  width: auto;
+  max-width: 100%;
+}
+
+
+/* 4. VOOR WIE – tekst links, wegwijzer rechts */
+.mijninkomen-voorwie {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--mijninkomen-space-xl);
+  align-items: center;
+}
+
+.mijninkomen-voorwie__beeld {
+  max-width: 20rem;
+  justify-self: end;
+}
+
+/* Grid-kolommen mogen smaller worden dan hun inhoud */
+.mijninkomen-hero__inner > *,
+.mijninkomen-gemeenten > *,
+.mijninkomen-voorwie > * {
+  min-width: 0;
+}
+
+/* Smal scherm: alles onder elkaar */
+@media (max-width: 48rem) {
+  .mijninkomen-hero__inner,
+  .mijninkomen-gemeenten,
+  .mijninkomen-voorwie {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-voorwie__beeld {
+    justify-self: center;
+  }
+  .mijninkomen-blok {
+    padding: var(--mijninkomen-space-l);
+  }
+}

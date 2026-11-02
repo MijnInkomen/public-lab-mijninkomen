@@ -13,8 +13,9 @@ Deze README legt stap voor stap uit hoe je het project op je laptop aan de praat
 1. [Wat heb je nodig?](#1-wat-heb-je-nodig)
 2. [Het project ophalen](#2-het-project-ophalen)
 3. [Het project starten](#3-het-project-starten)
-4. [Wijzigingen delen met het team (Git)](#5-wijzigingen-delen-met-het-team-git)
-5. [Problemen oplossen](#6-problemen-oplossen)
+4. [Wijzigingen delen met het team (Git)](#4-wijzigingen-delen-met-het-team-git)
+5. [Problemen oplossen](#5-problemen-oplossen)
+6. [Inloggen lokaal starten](#6-inloggen-lokaal-starten)
 
 ---
 
@@ -164,3 +165,70 @@ Maak daarna in GitLab een **Merge Request** aan en vraag iemand uit het team om 
 | `Port 5173 is already in use` | Er draait al iets op die poort. Sluit de terminal waar het project al draait, of stop het andere proces. |
 
 Vastgelopen? Verwijder `node_modules`, draai `npm install` opnieuw, en vraag anders hulp in het team.
+
+---
+
+## 6. Inloggen lokaal starten
+
+Inloggen werkt alleen via Nginx op **http://localhost:3000**. Stop daarom eerst `pnpm start`: die gebruikt dezelfde poort. Wil je tegelijk snel iets aanpassen zonder inloggen, start die dan met `pnpm start --port 3001`. Je hebt hiervoor [Docker Desktop](https://www.docker.com/products/docker-desktop/) nodig.
+
+**1. Eenmalig: maak je instellingen.** Doe dit in de hoofdmap van de repo. Vul daarna alle lege regels in `.env` in.
+
+```bash
+cp .env.example .env
+```
+
+**2. Bouw de site** (ook opnieuw na een wijziging in `documentatie/`):
+
+```bash
+cd documentatie
+pnpm install
+pnpm run build:docusaurus
+cd ..
+```
+
+**3. Start alles:**
+
+```bash
+docker compose up -d
+```
+
+| Adres | Waarvoor |
+|---|---|
+| http://localhost:3000 | De site met inloggen |
+| http://localhost:3000/auth/admin | Beheer van Keycloak (`KEYCLOAK_ADMIN_USERNAME` en `KEYCLOAK_ADMIN_PASSWORD` uit `.env`) |
+| http://localhost:8025 | Mailpit: hier komen de testmails binnen |
+
+**Testaccounts** (e-mailadressen en wachtwoorden staan in `.env`):
+
+| Account | Rol | Tweestapsverificatie |
+|---|---|---|
+| `TEST_ADMIN_EMAIL` | `admin` | Stel je bij de eerste keer in met een code-app |
+| `TEST_LID_EMAIL` | `communitylid` | Staat al klaar voor de automatische test |
+| `TEST_E2E_ADMIN_EMAIL` | `admin` | Staat al klaar voor de automatische test |
+
+Heb je iets in `.env` of de realm aangepast? Wis dan de database, zodat de accounts opnieuw worden aangemaakt: `docker compose down -v` en daarna `docker compose up -d`.
+
+**Aanvragen behandelen:** log in met een account met de rol `admin` en kies **Beheer** in het menu (`/community/beheer/`). Toelaten maakt een account met de rol `communitylid`. De uitnodiging staat daarna in Mailpit.
+
+**Toegangsaanvragen bekijken:** aanvragen van `/toegang-aanvragen` staan in een eigen database. Bekijk ze met:
+
+```bash
+docker compose exec toegang-db psql -U toegang -c "SELECT naam, organisatie, email, gesprek_datum, status FROM toegangsaanvragen;"
+```
+
+Heb je `toegang-api/` aangepast? Bouw die opnieuw met `docker compose up -d --build toegang-api`.
+
+**Testen van de API:** `cd toegang-api && npm install && npm run typecheck && npm test`.
+
+**Stoppen:** `docker compose down`. Met `docker compose down -v` wis je ook alle accounts; bij de volgende start worden de testaccounts opnieuw aangemaakt.
+
+**Testen:** start de omgeving en draai in de map `documentatie`:
+
+```bash
+pnpm exec playwright test test/e2e/inloggen.spec.ts --project=chromium --reporter=list
+pnpm exec playwright test test/e2e/toegang-aanvragen.spec.ts --project=chromium --reporter=list
+pnpm exec playwright test test/e2e/beheer.spec.ts --project=chromium --reporter=list --workers=1
+```
+
+> Deze instellingen zijn alleen voor lokaal gebruik. Voor een echte server zijn onder meer HTTPS, `start` in plaats van `start-dev`, eigen domeinnamen, geen testaccounts en een afgeschermd adres voor het Keycloak-beheer nodig.

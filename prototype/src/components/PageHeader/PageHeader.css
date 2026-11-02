@@ -1,0 +1,97 @@
+.mijninkomen-page-header {
+  padding-top: var(--mijninkomen-space-m);
+  /* Witruimte onder het streepje, zodat de inhoud er niet tegenaan plakt */
+  padding-bottom: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-page-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--mijninkomen-space-m) var(--mijninkomen-space-xl);
+}
+
+/* Het logo (zie components/Logo) */
+.mijninkomen-page-header__logo {
+  display: inline-block;
+  padding-block: var(--mijninkomen-space-xs);
+}
+
+.mijninkomen-page-header__nav {
+  flex: 1;
+}
+
+.mijninkomen-page-header__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-xs) var(--mijninkomen-space-l);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-page-header__nav a {
+  display: inline-block;
+  padding-block: var(--mijninkomen-space-s);
+  font-size: 1rem;
+}
+
+/* In het menu zijn de NLDS-links donker en niet onderstreept (een menu herken je
+   aan de plek). We passen daarvoor alleen de NLDS-tokens aan, binnen het menu. */
+.mijninkomen-page-header__nav {
+  --nl-link-color: var(--mijninkomen-document-color);
+  --nl-link-hover-color: var(--mijninkomen-link-color);
+  --nl-link-text-decoration-line: none;
+  --nl-link-hover-text-decoration-line: underline;
+}
+
+/* De huidige pagina (NLDS-klasse nl-link--current): groen en dik onderstreept.
+   Niet alleen kleur, ook een lijn (WCAG 1.4.1). Ook hier alleen via NLDS-tokens. */
+.mijninkomen-page-header__nav .nl-link--current {
+  --nl-link-color: var(--mijninkomen-link-color);
+  --nl-link-hover-color: var(--mijninkomen-link-color);
+  --nl-link-text-decoration-line: underline;
+  --nl-link-hover-text-decoration-line: underline;
+  --nl-link-text-decoration-thickness: 3px;
+  --nl-link-hover-text-decoration-thickness: 3px;
+  --nl-link-text-underline-offset: 0.5em;
+  font-weight: 600;
+}
+
+.mijninkomen-page-header__melding {
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: var(--mijninkomen-space-s) var(--mijninkomen-space-m);
+  background-color: var(--mijninkomen-color-geel-licht);
+  border-radius: var(--mijninkomen-border-radius);
+  font-size: 1rem;
+}
+
+/* Het streepje: verhouding 5 : 1 : 1, zoals in het ontwerp */
+.mijninkomen-stripe {
+  display: flex;
+  gap: 6px;
+  margin-top: var(--mijninkomen-space-m);
+}
+
+.mijninkomen-stripe__deel {
+  height: 5px;
+  border-radius: 2px;
+}
+
+.mijninkomen-stripe__deel--1 { flex: 5; background-color: var(--mijninkomen-stripe-color-1); }
+.mijninkomen-stripe__deel--2 { flex: 1; background-color: var(--mijninkomen-stripe-color-2); }
+.mijninkomen-stripe__deel--3 { flex: 1; background-color: var(--mijninkomen-stripe-color-3); }
+
+/* Op een smal scherm (telefoon) komt het menu onder het logo */
+@media (max-width: 48rem) {
+  .mijninkomen-page-header__inner {
+    column-gap: var(--mijninkomen-space-m);
+  }
+  .mijninkomen-page-header__nav {
+    order: 3;
+    flex-basis: 100%;
+  }
+  .mijninkomen-page-header__inner .nl-button {
+    margin-left: auto;
+  }
+}

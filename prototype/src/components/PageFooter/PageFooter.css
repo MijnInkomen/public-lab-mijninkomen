@@ -1,0 +1,51 @@
+.mijninkomen-page-footer {
+  margin-top: var(--mijninkomen-space-xl);
+  padding-block: var(--mijninkomen-space-xl) var(--mijninkomen-space-l);
+  border-top: 1px solid var(--mijninkomen-border-color);
+  font-size: 1rem;
+}
+
+.mijninkomen-page-footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-page-footer p {
+  margin: 0 0 var(--mijninkomen-space-s);
+}
+
+.mijninkomen-page-footer__logo {
+  margin-bottom: var(--mijninkomen-space-s);
+}
+
+.mijninkomen-page-footer__kop {
+  margin: 0 0 var(--mijninkomen-space-s);
+  color: var(--mijninkomen-heading-color);
+  font-size: 1rem;
+}
+
+.mijninkomen-page-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-page-footer a {
+  display: inline-block;
+  padding-block: var(--mijninkomen-space-xs);
+}
+
+.mijninkomen-page-footer__prototype {
+  margin-top: var(--mijninkomen-space-l) !important;
+  padding-top: var(--mijninkomen-space-m);
+  border-top: 1px solid var(--mijninkomen-border-color);
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-page-footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
