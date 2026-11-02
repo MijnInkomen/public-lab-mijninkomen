@@ -20,7 +20,7 @@ const footer: Footer = {
       title: 'Menu',
       items: [
         { label: 'Home', to: '/' },
-        { label: 'Ontwikkelingen', to: '/ontwikkelingen/' },
+        { label: 'Ontwikkelingen', to: '/wat-kan-het/' },
         { label: 'Meer weten', to: '/meer-weten/' },
         { label: 'Initiatief melden', to: '/initiatief-melden/' },
         { label: 'Contact', to: '/contact/' },

@@ -22,7 +22,7 @@ export const HomeRecent = () => (
         </li>
       ))}
     </ul>
-    <Link href="/ontwikkelingen">
+    <Link href="/wat-kan-het">
       {recent.link} <span aria-hidden="true">→</span>
     </Link>
   </div>

@@ -12,7 +12,7 @@ export const HomeIntroductie = () => (
         <Paragraph appearance="lead">{wat.tekst[0]}</Paragraph>
         <Paragraph>{wat.tekst[1]}</Paragraph>
         <ActionGroup>
-          <ButtonLink href="/ontwikkelingen/" appearance="primary-action-button">
+          <ButtonLink href="/wat-kan-het/" appearance="primary-action-button">
             {wat.ontwikkelingen}
           </ButtonLink>
           <ButtonLink href="/meer-weten/" appearance="secondary-action-button">
