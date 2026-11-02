@@ -1,11 +1,20 @@
+import { maakKeycloak } from './keycloak.ts';
 import { maakOpslag } from './opslag.ts';
 import { maakServer } from './server.ts';
 
-const databaseUrl = process.env.DATABASE_URL;
-if (!databaseUrl) throw new Error('DATABASE_URL ontbreekt');
+const leesInstelling = (naam: string) => {
+  const waarde = process.env[naam];
+  if (!waarde) throw new Error(`${naam} ontbreekt`);
+  return waarde;
+};
 
-const opslag = await maakOpslag(databaseUrl);
+const opslag = await maakOpslag(leesInstelling('DATABASE_URL'));
+const keycloak = maakKeycloak({
+  url: leesInstelling('KEYCLOAK_URL'),
+  clientSecret: leesInstelling('KEYCLOAK_CLIENT_SECRET'),
+  siteUrl: leesInstelling('SITE_URL'),
+});
 
-maakServer(opslag).listen(4000, () => {
+maakServer(opslag, keycloak).listen(4000, () => {
   console.log('Toegang-API luistert op poort 4000');
 });

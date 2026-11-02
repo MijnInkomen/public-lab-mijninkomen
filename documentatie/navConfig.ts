@@ -41,6 +41,13 @@ const navbar: Navbar = {
       position: 'left',
     },
     {
+      type: 'custom-beheer',
+      to: 'pathname:///community/beheer/',
+      target: '_self',
+      label: 'Beheer',
+      position: 'right',
+    },
+    {
       type: 'custom-inloggen',
       target: '_self',
       position: 'right',
