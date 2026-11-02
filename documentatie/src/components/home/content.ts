@@ -45,3 +45,66 @@ export const deelnemers = {
   tekst: 'Deze gemeenten werken samen aan MijnInkomen. Elke gemeente heeft een eigen rol in de samenwerking.',
   link: 'Lees hoe we samenwerken',
 };
+
+export const recent = {
+  bovenkop: 'Recent bijgewerkt',
+  titel: 'Wat er gebeurt',
+  aantal: 3,
+  link: 'Alle ontwikkelingen',
+};
+
+// Alle projecten, statussen en datums zijn voorbeelden.
+const projecten = [
+  { slug: 'stadspas', naam: 'Stadspas', status: 'Beschikbaar', bijgewerkt: '2026-09-15' },
+  { slug: 'algemene-bijstand', naam: 'Algemene bijstand (ALO)', status: 'Beschikbaar', bijgewerkt: '2026-06-01' },
+  { slug: 'ioaw', naam: 'IOAW (uitkering voor oudere werklozen)', status: 'Beschikbaar', bijgewerkt: '2026-05-12' },
+  { slug: 'bbz', naam: 'Bbz (bijstand voor zelfstandigen)', status: 'Beschikbaar', bijgewerkt: '2026-04-20' },
+  { slug: 'bijzondere-bijstand', naam: 'Bijzondere bijstand', status: 'Beschikbaar', bijgewerkt: '2026-03-30' },
+  {
+    slug: 'basisproces-bijzondere-bijstand',
+    naam: 'Basisproces bijzondere bijstand',
+    status: 'In ontwikkeling',
+    bijgewerkt: '2026-10-10',
+  },
+  { slug: 'aansluiting-amsterdam', naam: 'Aansluiting van Amsterdam', status: 'In test', bijgewerkt: '2026-08-28' },
+  {
+    slug: 'aansluiting-s-hertogenbosch',
+    naam: "Aansluiting van 's-Hertogenbosch",
+    status: 'In voorbereiding',
+    bijgewerkt: '2026-10-01',
+  },
+  {
+    slug: 'status-voor-inwoners',
+    naam: 'Duidelijker status voor inwoners',
+    status: 'In ontwikkeling',
+    bijgewerkt: '2026-09-30',
+  },
+];
+
+export const laatstBijgewerkt = (aantal: number) =>
+  [...projecten].sort((a, b) => b.bijgewerkt.localeCompare(a.bijgewerkt)).slice(0, aantal);
+
+export const webinar = {
+  titel: 'Wil je meer weten?',
+  tekst: 'In een webinar vertellen we wat MijnInkomen is en hoe de samenwerking werkt.',
+  volgende: 'Het volgende webinar is op',
+  link: 'Lees meer over het webinar',
+};
+
+const webinarDatums = ['2026-07-08', '2026-09-09', '2026-10-14', '2026-11-11', '2026-12-09', '2027-01-13'];
+
+// Datum in Nederland als JJJJ-MM-DD. Een webinar van vandaag telt nog als komend.
+const vandaag = () => new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Amsterdam' });
+
+export const volgendWebinar = (datums = webinarDatums, datum = vandaag()) => datums.find((d) => d >= datum);
+
+export const datumVoluit = (iso: string) =>
+  new Date(`${iso}T12:00:00`).toLocaleDateString('nl-NL', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+
+export const datumKort = (iso: string) =>
+  new Date(`${iso}T12:00:00`).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });

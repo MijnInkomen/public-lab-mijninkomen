@@ -178,6 +178,42 @@
 }
 
 .ma-theme .footer .container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 2fr 1fr 1fr;
   margin-inline: auto;
   max-inline-size: var(--mijninkomen-page-max-width);
+  padding-inline: 1rem;
+}
+
+.ma-theme .footer__links {
+  display: contents;
+}
+
+.ma-theme .footer__col {
+  margin-block-end: 0;
+  margin-inline: 0;
+  max-inline-size: none;
+  padding-inline: 0;
+}
+
+.ma-theme .footer__bottom {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: start;
+}
+
+.ma-theme .footer__logo-link,
+.ma-theme .footer__bottom a {
+  display: inline-block;
+}
+
+.ma-theme .footer__logo {
+  margin-block-end: 0.5rem;
+}
+
+@media (width <= 48rem) {
+  .ma-theme .footer .container {
+    grid-template-columns: 1fr;
+  }
 }

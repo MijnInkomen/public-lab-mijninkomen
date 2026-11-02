@@ -85,10 +85,5 @@ export default defineConfig({
       port: 3000,
       reuseExistingServer: !process.env.CI,
     },
-    {
-      command: 'pnpm run serve:astro',
-      port: 4321,
-      reuseExistingServer: !process.env.CI,
-    },
   ],
 });

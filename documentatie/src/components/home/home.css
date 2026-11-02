@@ -113,12 +113,88 @@
   padding-block: 0;
 }
 
+.mijninkomen-badge {
+  --nl-data-badge-border-radius: 999px;
+  --nl-data-badge-font-size: 0.8rem;
+  --nl-data-badge-font-weight: 600;
+  --nl-data-badge-padding-inline: 0.6rem;
+
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.mijninkomen-badge--voorbeeld {
+  --nl-data-badge-background-color: #fff;
+  --nl-data-badge-border-color: var(--basis-color-accent-1-color-subtle);
+  --nl-data-badge-border-width: 1px;
+  --nl-data-badge-color: var(--basis-color-accent-1-color-subtle);
+}
+
+.mijninkomen-home .mijninkomen-badge--voorbeeld {
+  border-style: dashed;
+}
+
+.mijninkomen-badge--status {
+  --nl-data-badge-background-color: var(--basis-color-accent-1-bg-subtle);
+  --nl-data-badge-color: var(--basis-heading-color);
+}
+
+.mijninkomen-recent {
+  list-style: none;
+  margin-block: 1rem 1.5rem;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.mijninkomen-recent li {
+  align-items: center;
+  border-block-end: 1px solid #d9dcd7;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 11rem 1fr auto;
+  margin-block: 0;
+  padding-block: 0.5rem;
+}
+
+.mijninkomen-recent li > * {
+  min-inline-size: 0;
+}
+
+.mijninkomen-recent time {
+  color: var(--basis-color-accent-1-color-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+.mijninkomen-recent .utrecht-link {
+  font-weight: 600;
+}
+
+.mijninkomen-verwijzing {
+  --utrecht-spotlight-section-background-color: var(--basis-color-accent-1-bg-document);
+  --utrecht-spotlight-section-border-radius: 8px;
+  --utrecht-spotlight-section-padding-block-end: 2.5rem;
+  --utrecht-spotlight-section-padding-block-start: 2.5rem;
+  --utrecht-spotlight-section-padding-inline-end: 2.5rem;
+  --utrecht-spotlight-section-padding-inline-start: 2.5rem;
+}
+
+.mijninkomen-home .mijninkomen-verwijzing {
+  border-inline-start: 6px solid var(--basis-color-accent-1-color-default);
+}
+
 @media (width <= 48rem) {
   .mijninkomen-hero {
     grid-template-columns: 1fr;
   }
 
-  .mijninkomen-blok {
+  .mijninkomen-recent li {
+    gap: 0.25rem;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .mijninkomen-blok,
+  .mijninkomen-verwijzing {
     --utrecht-spotlight-section-padding-block-end: 1.5rem;
     --utrecht-spotlight-section-padding-block-start: 1.5rem;
     --utrecht-spotlight-section-padding-inline-end: 1.5rem;

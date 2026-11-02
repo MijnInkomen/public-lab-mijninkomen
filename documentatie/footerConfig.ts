@@ -28,6 +28,7 @@ const footer: Footer = {
       ],
     },
   ],
+  copyright: 'Gemeenten werken samen om inwoners met een laag inkomen beter te helpen.',
 };
 
 export default footer;
