@@ -19,13 +19,14 @@ keywords:
 import { UnorderedList } from '@utrecht/component-library-react';
 import { Card } from '@components/card/card';
 import { Badge } from "@mijninkomen/components/Badge";
+import { CardGroup } from '@mijninkomen/components/CardGroup';
 
 # Waar we nu aan werken
 
 Deze onderwerpen lopen nu. Bij elk onderwerp zie je hoe ver het is.
 
 {/* TODO: Deze cards eronder dynamisch maken */}
-<section className="mijninkomen-cardgroup">
+<CardGroup>
     <Card
         description="Eén vaste manier om bijzondere bijstand aan te vragen en af te handelen, voor alle gemeenten."
         heading="Basisproces bijzondere bijstand"
@@ -62,4 +63,4 @@ Deze onderwerpen lopen nu. Bij elk onderwerp zie je hoe ver het is.
         title="IOAW"
         linkLabel="Lees meer"
     />
-</section>
+</CardGroup>

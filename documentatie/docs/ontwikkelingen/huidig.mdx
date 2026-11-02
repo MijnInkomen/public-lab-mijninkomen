@@ -19,13 +19,14 @@ keywords:
 
 import { UnorderedList } from '@utrecht/component-library-react';
 import { Card } from '@components/card/card';
+import { CardGroup } from "@mijninkomen/components/CardGroup";
 
 # Waar we nu aan werken
 
 Deze regelingen zijn af en worden al gebruikt in MijnInkomen.
 
 {/* TODO: Deze cards eronder dynamisch maken */}
-<section className="mijninkomen-cardgroup">
+<CardGroup>
     <Card
         description="Korting op sport, cultuur en activiteiten voor inwoners met een laag inkomen."
         heading="Stadspas"
@@ -66,4 +67,4 @@ Deze regelingen zijn af en worden al gebruikt in MijnInkomen.
         title="Bijzondere bijstand"
         linkLabel="Lees meer"
     />
-</section>
+</CardGroup>
