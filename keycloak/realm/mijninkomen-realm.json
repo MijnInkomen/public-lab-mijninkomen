@@ -1,0 +1,98 @@
+{
+  "realm": "mijninkomen",
+  "enabled": true,
+  "displayName": "MijnInkomen",
+  "loginTheme": "mijninkomen",
+  "internationalizationEnabled": true,
+  "supportedLocales": ["nl"],
+  "defaultLocale": "nl",
+  "registrationAllowed": false,
+  "registrationEmailAsUsername": true,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": false,
+  "rememberMe": false,
+  "bruteForceProtected": true,
+  "sslRequired": "none",
+  "smtpServer": {
+    "host": "mailpit",
+    "port": "1025",
+    "from": "noreply@mijninkomen.test",
+    "fromDisplayName": "MijnInkomen"
+  },
+  "roles": {
+    "realm": [
+      { "name": "admin", "description": "Beheert toegang tot de communityomgeving" },
+      { "name": "communitylid", "description": "Heeft toegang tot de communityomgeving" }
+    ]
+  },
+  "requiredActions": [
+    {
+      "alias": "CONFIGURE_TOTP",
+      "name": "Configure OTP",
+      "providerId": "CONFIGURE_TOTP",
+      "enabled": true,
+      "defaultAction": true,
+      "priority": 10,
+      "config": {}
+    },
+    {
+      "alias": "UPDATE_PASSWORD",
+      "name": "Update Password",
+      "providerId": "UPDATE_PASSWORD",
+      "enabled": true,
+      "defaultAction": false,
+      "priority": 20,
+      "config": {}
+    }
+  ],
+  "clients": [
+    {
+      "clientId": "oauth2-proxy",
+      "name": "MijnInkomen community",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "${OAUTH2_PROXY_CLIENT_SECRET}",
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": ["http://localhost:${SITE_PORT}/oauth2/callback"],
+      "webOrigins": ["http://localhost:${SITE_PORT}"],
+      "attributes": {
+        "pkce.code.challenge.method": "S256",
+        "post.logout.redirect.uris": "http://localhost:${SITE_PORT}/*"
+      }
+    }
+  ],
+  "users": [
+    {
+      "username": "${TEST_ADMIN_EMAIL}",
+      "email": "${TEST_ADMIN_EMAIL}",
+      "emailVerified": true,
+      "enabled": true,
+      "firstName": "Test",
+      "lastName": "Admin",
+      "realmRoles": ["admin"],
+      "requiredActions": ["CONFIGURE_TOTP"],
+      "credentials": [{ "type": "password", "value": "${TEST_ADMIN_PASSWORD}", "temporary": false }]
+    },
+    {
+      "username": "${TEST_LID_EMAIL}",
+      "email": "${TEST_LID_EMAIL}",
+      "emailVerified": true,
+      "enabled": true,
+      "firstName": "Test",
+      "lastName": "Lid",
+      "realmRoles": ["communitylid"],
+      "credentials": [
+        { "type": "password", "value": "${TEST_LID_PASSWORD}", "temporary": false },
+        {
+          "type": "otp",
+          "userLabel": "Testcode",
+          "secretData": "{\"value\":\"${TEST_LID_OTP_SECRET}\"}",
+          "credentialData": "{\"subType\":\"totp\",\"digits\":6,\"counter\":0,\"period\":30,\"algorithm\":\"HmacSHA1\"}"
+        }
+      ]
+    }
+  ]
+}
