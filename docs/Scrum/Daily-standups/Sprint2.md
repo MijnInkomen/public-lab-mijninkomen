@@ -333,3 +333,87 @@
 
 ---
 
+
+# Daily Standup - Sprint 2 Week 9
+
+**Datum**: 29/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Verder werken aan leerdoel en gekeken naar wat technische randvoorwaarden
+- **Wat ga je doen**: leerdoel, contextpresentatie voorbreiden, Prototype verwerken
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Meeting met vincent gehad, les gekregen over consensus (deze vond ik erg leuk), kennistoets gemaakt en voldoende punten gehaald , samen met Amin het huidige prototype laten pushen en mergen naar het team project zodat Amin ook alvast kan beginnen met bouwen. Verder heb ik een opzet gemaakt met de verwerkte feedback die ik vandaag van Vincent heb ontvangen voor het prototype. 
+- **Wat ga je doen**: De verwerkte opzet voor het prototype ook daadwerkelijk in het prototype verwerken, zodat Vincent hiernaar kan kijken, mijn deel van de presentatie voor maandag maken.
+- **Impediments**: Geen.
+
+### Amin
+- **Wat heb je gedaan**: Ik had gisteren de readme afgemaakt.
+- **Wat ga je doen**: Vandaag ga ik de meeting met Vincent volgen en daarna goed de repo doornemen.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Feedback verwerkt van het PvA en verder gewerkt aan de DESTEP.
+- **Wat ga je doen**: Meeting met Vincent houden over het prototype. De DESTEP afronden. Kijken welke taken er nog voor de sprint uitgevoerd moeten worden. Taken verdelen voor de meeting op maandag.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Gisteren heb ik de bestanden gemaild en feedback ontvangen en verwerkt.
+- **Wat ga je doen**: Gewerkt aan de presentatie, en aan portflow aanvullen en de pva nog een keer doorgenmomen.
+- **Impediments**: Geen.
+
+---
+
+
+
+# Daily Standup - Sprint 2 Week 9
+
+**Datum**: 30/10/2026  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Verder gegaan aan mijn leerdoel en begon gemaakt aan het prototype verwerken in de docusaurus format.
+- **Wat ga je doen**: Verder met het prototype verwerken, de presentatie voorbereiden en mogelijk nog werken aan mijn leerdoel.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Het verbeterde prototype gemaakt op basis van de nieuwe feedback van Vincent, een taakverdeling bestand gemaakt voor de presentatie voor de klas die we maandag hebben, de samenvatting van de meeting van gister in de teams notes gezet, de scopeverfijning samenvatting in de teams notes gezet, de compliance opdracht afgemaakt en gedeeld met het team.
+- **Wat ga je doen**: Verder gewerkt aan het prototype, verder gewerkt aan me persoonlijke en profiel gerichte leerdoel.
+- **Impediments**: Door persoonlijke omstandigheden was ik niet bij de meeting met mijn team en opdrachtgever, ik heb dit ook niet tijdig kunnen communiceren.
+
+### Amin
+- **Wat heb je gedaan**: Ik heb de readme afgemaakt.
+- **Wat ga je doen**: Vandaag niks gedaan vanwege werk.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Meeting met Vincent houden over het prototype. De DESTEP afronden. Kijken welke taken er nog voor de sprint uitgevoerd moeten worden. Taken verdelen voor de meeting op maandag. Ook heb ik er voor gezorgd dat we alle issues van de roadmap kunnen importeren in Gitlab. Dit moet wel alleen nog in onze eigen repo gezet worden.
+- **Wat ga je doen**: Ik ben vandaag de hele dag aan het werk en heb het daarna ook druk dus doe vandaag niks aan het project.
+- **Impediments**: Geen.
+ 
+### Fares
+- **Wat heb je gedaan**: Gisteren heb ik gewerkt aan de presentatie, en aan portflow aanvullen en de pva nog een keer doorgenmomen.
+- **Wat ga je doen**: Was ik begonnen aan de bpmn diagram en mijn presentatie deel.
+- **Impediments**: Geen.
+
+---
