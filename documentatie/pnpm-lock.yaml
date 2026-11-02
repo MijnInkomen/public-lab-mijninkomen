@@ -13,6 +13,7 @@ overrides:
   shell-quote@>=1.1.0 <=1.8.3: ^1.8.4
   tinypool@<2.1.2: ^2.1.2
   tinypool@<=2.1.0: ^2.1.1
+  '@mijninkomen/components': link:packages/mijninkomen/components
 
 patchedDependencies:
   '@gemeente-denhaag/iconbutton@3.1.0': da0c7ecd733b2ae3ddf6302d79a2a23ac35ac3678ce602d97406281ba2b6bb8d
@@ -43,6 +44,9 @@ importers:
       '@iframe-resizer/react':
         specifier: 5.5.8
         version: 5.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mijninkomen/components':
+        specifier: link:packages/mijninkomen/components
+        version: link:packages/mijninkomen/components
       '@nl-design-system-candidate/code-block-docs':
         specifier: 1.2.1
         version: 1.2.1

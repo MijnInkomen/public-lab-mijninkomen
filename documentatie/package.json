@@ -84,6 +84,7 @@
     "@docusaurus/theme-common": "3.9.2",
     "@docusaurus/theme-search-algolia": "3.9.2",
     "@iframe-resizer/react": "5.5.8",
+    "@mijninkomen/components": "link:packages/mijninkomen/components",
     "@nl-design-system-candidate/code-block-docs": "1.2.1",
     "@nl-design-system-candidate/code-block-tokens": "2.0.3",
     "@nl-design-system-candidate/code-docs": "1.1.2",

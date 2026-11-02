@@ -15,7 +15,8 @@ const navbar: Navbar = {
       activeBaseRegex: '^/$',
     },
     {
-      to: '/ontwikkelingen/',
+      type: 'doc',
+      docId: 'ontwikkelingen/huidig',
       label: 'Ontwikkelingen',
       position: 'left',
     },
