@@ -18,6 +18,7 @@ keywords:
 
 import { UnorderedList } from '@utrecht/component-library-react';
 import { Card } from '@components/card/card';
+import { Badge } from "@mijninkomen/components/Badge";
 
 # Waar we nu aan werken
 
@@ -28,7 +29,7 @@ Deze onderwerpen lopen nu. Bij elk onderwerp zie je hoe ver het is.
     <Card
         description="Eén vaste manier om bijzondere bijstand aan te vragen en af te handelen, voor alle gemeenten."
         heading="Basisproces bijzondere bijstand"
-        subheading="In ontikkeling"
+        subheading={<Badge soort="status">In ontwikkeling</Badge>}
         href="#"
         metadata="Gebruikt door: Den Haag, Utrecht"
         title="Stadspas"
@@ -37,7 +38,7 @@ Deze onderwerpen lopen nu. Bij elk onderwerp zie je hoe ver het is.
     <Card
         description="Amsterdam gaat MijnInkomen gebruiken. We testen samen of alles goed werkt."
         heading="Aansluiting van Amsterdam"
-        subheading="In test"
+        subheading={<Badge soort="status">In test</Badge>}
         href="#"
         metadata="Gebruikt door: Amsterdam"
         title="Algemene bijstand"
@@ -46,7 +47,7 @@ Deze onderwerpen lopen nu. Bij elk onderwerp zie je hoe ver het is.
     <Card
         description="'s-Hertogenbosch bereidt de overstap naar MijnInkomen voor."
         heading="Aansluiting van 's-Hertogenbosch"
-        subheading="In voorbereiding"
+        subheading={<Badge soort="status">In voorbereiding</Badge>}
         href="#"
         metadata="Gebruikt door: 's-Hertogenbosch"
         title="Bbz"
@@ -55,7 +56,7 @@ Deze onderwerpen lopen nu. Bij elk onderwerp zie je hoe ver het is.
     <Card
         description="Inwoners zien beter waar hun aanvraag is en wat de volgende stap is."
         heading="IOAW"
-        subheading="In ontikkeling"
+        subheading={<Badge soort="status">In ontwikkeling</Badge>}
         href="#"
         metadata="Gebruikt door: Alle gemeenten"
         title="IOAW"

@@ -892,13 +892,3 @@ ams-page-footer {
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
 }
-
-.mijninkomen-cardgroup .rhc-card__subheading {
-    width: fit-content;
-    font-size: var(--basis-text-font-size-sm);
-    border-radius: var(--basis-border-radius-md);
-    padding-inline: 1rem;
-    /* TODO: Verander kleuren naar correcte kleuren */
-    background-color: lightgreen;
-    color: green;
-}

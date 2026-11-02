@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "description": "Components created for MijnInkomen website",
+  "license": "UNLICENSED",
+  "name": "@mijninkomen/components",
+  "private": true
+}
