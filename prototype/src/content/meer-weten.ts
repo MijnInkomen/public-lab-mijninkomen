@@ -84,10 +84,7 @@ export const communitylid = {
   tekst: 'De community bestaat uit de gemeenten en organisaties die meedoen met MijnInkomen. Je wordt niet direct lid via de website: eerst maak je kennis.',
   watTitel: 'Wat is de community?',
   wat: 'Communityleden werken samen aan MijnInkomen. Ze kunnen inloggen op een besloten omgeving met bijvoorbeeld de volledige planning, afspraken en documenten.',
-  oplevert: {
-    titel: 'Wat het je gemeente oplevert',
-    lijst: ['Een werkende oplossing om inwoners met een laag inkomen te helpen', 'Gedeelde kennis met andere gemeenten', 'Lagere kosten dan alles zelf bouwen'],
-  },
+  // Wat het oplevert staat op de homepage (Waarom samen?), dus hier alleen wat het vraagt
   vraagt: {
     titel: 'Wat het van je gemeente vraagt',
     lijst: ['Tijd om mee te denken en te testen', 'Mensen die helpen als jullie met MijnInkomen gaan werken', 'Geld: een bijdrage in de kosten'],

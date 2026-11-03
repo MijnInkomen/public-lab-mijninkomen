@@ -112,6 +112,14 @@ Isabella controleert de uitkomst en beslist wat er blijft.
 
 **Wat Isabella deed:** de feedback verzameld, de keuze gemaakt over Initiatief melden, het voorstel beoordeeld en besloten om Updates en Wat eraan komt weg te halen. *(nog aanvullen: wat je hebt gecontroleerd of aangepast)*
 
+## Kritische controle op dubbele informatie
+
+**Gevraagd:** Isabella vroeg Claude om kritisch te kijken of er dingen dubbel staan, of beter en toegankelijker kunnen.
+
+**Wat Claude deed:** alle pagina's tekst voor tekst nagelezen en elf punten voorgelegd: dubbele informatie, dingen die duidelijker kunnen en toegankelijkheid. Daarna de punten aangepast die Isabella koos.
+
+**Wat Isabella deed:** per punt beslist. Ze koos ervoor om de naam van het onderdeel juist boven de paginatitel te houden en uit het zijmenu te halen, zodat elke pagina dezelfde vaste opbouw heeft voor mensen met een schermlezer (Claude had het andersom voorgesteld). "Wat het oplevert" haalde ze weg bij Communitylid worden, omdat het al op de homepage staat. De extra kop in het inlogformulier ging weg, en bij Toegang aanvragen werd Functie een keuzelijst met "Niet van toepassing". Een paar voorstellen wees ze af: de uitleg over de community, het gele blok op Toegang aanvragen en de kaarten op Initiatief melden bleven zoals ze waren.
+
 ## Controle op WCAG en taalniveau B1 (versie 2.1)
 
 **Gevraagd:** Isabella vroeg of versie 2.1 nog toegankelijk is volgens de WCAG en of de teksten op B1-niveau zijn.

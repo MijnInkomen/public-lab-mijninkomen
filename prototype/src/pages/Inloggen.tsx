@@ -33,8 +33,7 @@ export function Inloggen() {
         <div className="mijninkomen-inloggen">
           {/* Het inlogformulier */}
           <div className="mijninkomen-kaart mijninkomen-inloggen__formulier">
-            <Heading level={2} appearance="level-3">{inlogFormulier.titel}</Heading>
-            <Formulier velden={velden} knop={inlogFormulier.knop} bevestiging={inlogFormulier.bevestiging} uitleg={inlogFormulier.uitleg} />
+            <Formulier velden={velden} knop={inlogFormulier.knop} bevestiging={inlogFormulier.bevestiging} uitleg="" />
             {/* Tweestapsverificatie: werkt nog niet in het prototype */}
             <p className="mijninkomen-kaart__extra mijninkomen-inloggen__tweestaps">
               {inlogFormulier.tweestaps} <Badge />

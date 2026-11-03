@@ -10,6 +10,9 @@
  * - Op een detailpagina (bijv. /ontwikkelingen/project/stadspas) wordt het
  *   bovenliggende menu-item gemarkeerd met aria-current="true".
  * - Op een smal scherm staat het menu boven de inhoud.
+ * - De naam van het onderdeel staat niet in het menu zelf, maar als vast kopje
+ *   boven de titel van de pagina (keuze Isabella: overal dezelfde opbouw).
+ *   Schermlezers horen de naam via aria-label op de <nav>.
  *
  * NLDS heeft (nog) geen officiële component voor een zijmenu; dit gebruikt de
  * officiële NLDS Link.
@@ -35,9 +38,6 @@ export function ZijmenuPagina({ titel, items, actiefItem, children }: ZijmenuPag
   return (
     <div className="mijninkomen-container mijninkomen-zijmenu-pagina">
       <nav className="mijninkomen-zijmenu" aria-label={titel}>
-        <p className="mijninkomen-zijmenu__titel" aria-hidden="true">
-          {titel}
-        </p>
         <ul>
           {items.map((item) => {
             const huidig = item.href === pad ? 'page' : item.href === actiefItem ? 'true' : undefined;

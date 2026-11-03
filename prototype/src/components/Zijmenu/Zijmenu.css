@@ -26,15 +26,6 @@
   --nl-link-hover-text-decoration-line: underline;
 }
 
-.mijninkomen-zijmenu__titel {
-  margin: 0 0 var(--mijninkomen-space-s);
-  padding-inline: var(--mijninkomen-space-s);
-  color: var(--mijninkomen-heading-color);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
 
 .mijninkomen-zijmenu ul {
   display: grid;

@@ -12,8 +12,6 @@ export const inloggenIntro = {
 };
 
 export const inlogFormulier = {
-  titel: 'Inloggen als communitylid',
-  uitleg: 'Vul je e-mailadres en wachtwoord in.',
   tweestaps: 'Daarna vul je ook een code in uit een app op je telefoon. Dat heet tweestapsverificatie. Zo blijft de communityomgeving veilig.',
   knop: 'Inloggen',
   bevestiging:

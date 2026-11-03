@@ -96,7 +96,8 @@ export function Formulier({
 
   return (
     <form ref={formRef} className="mijninkomen-formulier" onSubmit={versturen} noValidate>
-      <p className="mijninkomen-formulier__uitleg">{uitleg}</p>
+      {/* Lege uitleg (uitleg="") = geen uitlegregel, bijv. bij een kort inlogformulier */}
+      {uitleg && <p className="mijninkomen-formulier__uitleg">{uitleg}</p>}
 
       <div role="status">
         {verzonden && <p className="mijninkomen-formulier__bevestiging">{bevestiging}</p>}

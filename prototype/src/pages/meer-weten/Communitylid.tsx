@@ -18,17 +18,14 @@ export function Communitylid() {
           {communitylid.watTitel}
         </Heading>
         <Paragraph>{communitylid.wat}</Paragraph>
-        <div className="mijninkomen-twee-kolommen">
-          {[communitylid.oplevert, communitylid.vraagt].map((blok) => (
-            <div key={blok.titel} className="mijninkomen-kaart">
-              <Heading level={3}>{blok.titel}</Heading>
-              <ul className="mijninkomen-lijst">
-                {blok.lijst.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        {/* Wat het oplevert staat op de homepage (Waarom samen?); hier alleen wat het vraagt */}
+        <div className="mijninkomen-kaart mijninkomen-cl-vraagt">
+          <Heading level={3}>{communitylid.vraagt.titel}</Heading>
+          <ul className="mijninkomen-lijst">
+            {communitylid.vraagt.lijst.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
         </div>
       </section>
 

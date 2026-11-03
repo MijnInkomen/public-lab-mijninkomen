@@ -21,7 +21,7 @@ Feedback van de opdrachtgever: een ontwerp is pas over te dragen als ook beschre
 
 | Onderdeel | Code | Doel | Bron (voorstel) | Gedrag |
 |---|---|---|---|---|
-| Zijmenu | `components/Zijmenu` | Overzicht van de pagina's binnen Ontwikkelingen of Meer weten | Website | Op elke pagina van het onderdeel hetzelfde. Huidige pagina: groene lijn links en vet. Op een detailpagina is het bovenliggende item gemarkeerd. Op een telefoon staat het menu boven de inhoud. |
+| Zijmenu | `components/Zijmenu` | Overzicht van de pagina's binnen Ontwikkelingen of Meer weten | Website | Op elke pagina van het onderdeel hetzelfde. De naam van het onderdeel staat niet in het menu, maar als kopje boven de paginatitel (vaste opbouw); schermlezers horen de naam via de `aria-label` van het menu. Huidige pagina: groene lijn links en vet. Op een detailpagina is het bovenliggende item gemarkeerd. Op een telefoon staat het menu boven de inhoud. |
 | Knop als link | `components/KnopLink` | Een link naar een andere pagina die eruitziet als een NLDS-knop | Website | Gaat naar een andere pagina (het is een `<a>`, geen `<button>`). |
 | Knop | NLDS Button | Een actie op dezelfde pagina: formulier versturen, formulier openklappen, e-mailadres kopiëren | Website | Werkt met muis, Enter en spatie. |
 
@@ -52,7 +52,7 @@ Feedback van de opdrachtgever: een ontwerp is pas over te dragen als ook beschre
 | Onderdeel | Code | Doel | Bron (voorstel) | Gedrag |
 |---|---|---|---|---|
 | Inloggen | `pages/Inloggen.tsx` | Toegang tot de communityomgeving (niveau 2) | **Website-applicatie** (inlogsysteem) | Alleen voor communityleden. Na het wachtwoord volgt **tweestapsverificatie**. Werkt nog niet in het prototype. |
-| Toegang aanvragen | `pages/ToegangAanvragen.tsx` | Toegang aanvragen na een kennismakingsgesprek | Formulierverwerking → programmateam | Het programmateam controleert de aanvraag en stuurt een e-mail om een account te maken. |
+| Toegang aanvragen | `pages/ToegangAanvragen.tsx` | Toegang aanvragen na een kennismakingsgesprek | Formulierverwerking → programmateam | Functie is een keuzelijst, met "Niet van toepassing" als laatste keuze. Het programmateam controleert de aanvraag en stuurt een e-mail om een account te maken. |
 
 ## Overig
 

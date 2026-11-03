@@ -286,3 +286,12 @@
 .mijninkomen-deelnemers--rand .mijninkomen-deelnemer__logo {
   border: 1px solid var(--mijninkomen-border-color);
 }
+
+/* Communitylid worden: één kaart, niet over de hele breedte */
+.mijninkomen-cl-vraagt {
+  max-width: 32rem;
+}
+
+.mijninkomen-cl-vraagt .mijninkomen-lijst {
+  margin-bottom: 0;
+}
