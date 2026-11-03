@@ -1,0 +1,69 @@
+---
+title: Navigation Bar
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Navigation Bar
+pagination_label: Navigation Bar
+description: Toont een hiërarchische horizontale navigatie aan de bovenkant van een pagina en biedt de mogelijkheid om tussen pagina’s te navigeren.
+issue_number: 265
+slug: /navigation-bar
+keywords:
+  - bovenbalk
+  - bovenste navigatie
+  - header
+  - header menu
+  - hoofdmenu
+  - horizontale navigatie
+  - horizontal navigation
+  - horizontal menu
+  - main navigation
+  - menu
+  - menu balk
+  - menu bar
+  - menu navigatie
+  - navigation bar
+  - navigatie balk
+  - navigatie menu
+  - navigatiebalk
+  - page header
+  - pagina navigatie
+  - page navigation
+  - top bar
+  - top menu
+  - top navigation
+  - top navigation bar
+---
+
+{/* @license CC0-1.0 */}
+
+import componentProgress from "@nl-design-system/component-progress/dist/index.json";
+import {
+  DefinitionOfDone,
+  HelpImproveComponent,
+  Implementations,
+  Introduction,
+  Related,
+} from "@site/src/components/ComponentPage";
+
+{/* Add name and description for the component */}
+export const title = "Navigation Bar";
+export const description = "Toont een hiërarchische horizontale navigatie aan de bovenkant van een pagina en biedt de mogelijkheid om tussen pagina’s te navigeren.";
+export const issueNumber = 265;
+export const relayStep = "help wanted";
+export const componentName = "navigation-bar";
+
+export const component = componentProgress.find((item) => item.number === issueNumber);
+
+<Introduction component={component} headingLevel={1} description={description} />
+
+## Definition of Done
+
+<DefinitionOfDone component={component} headingLevel={3} />
+
+## Community implementaties
+
+<Implementations component={component} headingLevel={3} />
+
+<Related component={component} />
+
+<HelpImproveComponent component={component} headingLevel={2} />

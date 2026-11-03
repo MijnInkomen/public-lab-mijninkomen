@@ -1,0 +1,10 @@
+{
+  "label": "Fieldsets",
+  "link": {
+    "type": "doc",
+    "id": "richtlijnen/formulieren/fieldset/index"
+  },
+  "customProps": {
+    "showLinkedDoc": true
+  }
+}

@@ -1,0 +1,124 @@
+name: mijninkomen
+
+services:
+  nginx:
+    image: nginx:1.29-alpine
+    ports:
+      - "${SITE_PORT}:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./documentatie:/srv/documentatie:ro
+      - ./community:/srv/community:ro
+    depends_on:
+      - keycloak
+      - oauth2-proxy
+      - toegang-api
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.4
+    command: start-dev --import-realm
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KEYCLOAK_ADMIN_USERNAME}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: ${POSTGRES_PASSWORD}
+      KC_HOSTNAME: http://localhost:${SITE_PORT}/auth
+      KC_HOSTNAME_BACKCHANNEL_DYNAMIC: "true"
+      KC_HTTP_ENABLED: "true"
+      KC_HTTP_RELATIVE_PATH: /auth
+      KC_PROXY_HEADERS: xforwarded
+      OAUTH2_PROXY_CLIENT_SECRET: ${OAUTH2_PROXY_CLIENT_SECRET}
+      SITE_PORT: ${SITE_PORT}
+      TOEGANG_API_CLIENT_SECRET: ${TOEGANG_API_CLIENT_SECRET}
+      TEST_E2E_ADMIN_EMAIL: ${TEST_E2E_ADMIN_EMAIL}
+      TEST_ADMIN_EMAIL: ${TEST_ADMIN_EMAIL}
+      TEST_ADMIN_PASSWORD: ${TEST_ADMIN_PASSWORD}
+      TEST_LID_EMAIL: ${TEST_LID_EMAIL}
+      TEST_LID_PASSWORD: ${TEST_LID_PASSWORD}
+      TEST_LID_OTP_SECRET: ${TEST_LID_OTP_SECRET}
+    volumes:
+      - ./keycloak/realm:/opt/keycloak/data/import:ro
+      - ./keycloak/themes/mijninkomen:/opt/keycloak/themes/mijninkomen:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  oauth2-proxy:
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.12.0
+    environment:
+      OAUTH2_PROXY_BACKEND_LOGOUT_URL: http://keycloak:8080/auth/realms/mijninkomen/protocol/openid-connect/logout?id_token_hint={id_token}
+      OAUTH2_PROXY_CLIENT_ID: oauth2-proxy
+      OAUTH2_PROXY_CLIENT_SECRET: ${OAUTH2_PROXY_CLIENT_SECRET}
+      OAUTH2_PROXY_CODE_CHALLENGE_METHOD: S256
+      OAUTH2_PROXY_COOKIE_SECRET: ${OAUTH2_PROXY_COOKIE_SECRET}
+      OAUTH2_PROXY_COOKIE_SAMESITE: lax
+      OAUTH2_PROXY_COOKIE_SECURE: "false"
+      OAUTH2_PROXY_EMAIL_DOMAINS: "*"
+      OAUTH2_PROXY_HTTP_ADDRESS: 0.0.0.0:4180
+      OAUTH2_PROXY_LOGIN_URL: http://localhost:${SITE_PORT}/auth/realms/mijninkomen/protocol/openid-connect/auth
+      OAUTH2_PROXY_OIDC_GROUPS_CLAIM: groups
+      OAUTH2_PROXY_OIDC_ISSUER_URL: http://localhost:${SITE_PORT}/auth/realms/mijninkomen
+      OAUTH2_PROXY_OIDC_JWKS_URL: http://keycloak:8080/auth/realms/mijninkomen/protocol/openid-connect/certs
+      OAUTH2_PROXY_PROVIDER: oidc
+      OAUTH2_PROXY_REDEEM_URL: http://keycloak:8080/auth/realms/mijninkomen/protocol/openid-connect/token
+      OAUTH2_PROXY_REDIRECT_URL: http://localhost:${SITE_PORT}/oauth2/callback
+      OAUTH2_PROXY_REVERSE_PROXY: "true"
+      OAUTH2_PROXY_SET_XAUTHREQUEST: "true"
+      OAUTH2_PROXY_SKIP_OIDC_DISCOVERY: "true"
+      OAUTH2_PROXY_SKIP_PROVIDER_BUTTON: "true"
+      OAUTH2_PROXY_UPSTREAMS: static://202
+      OAUTH2_PROXY_WHITELIST_DOMAINS: localhost:${SITE_PORT}
+    depends_on:
+      - keycloak
+
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U keycloak"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  toegang-api:
+    build: ./toegang-api
+    environment:
+      DATABASE_URL: postgres://toegang:${TOEGANG_DB_PASSWORD}@toegang-db/toegang
+      KEYCLOAK_CLIENT_SECRET: ${TOEGANG_API_CLIENT_SECRET}
+      KEYCLOAK_URL: http://keycloak:8080/auth
+      SITE_URL: http://localhost:${SITE_PORT}
+    depends_on:
+      keycloak:
+        condition: service_started
+      toegang-db:
+        condition: service_healthy
+
+  toegang-db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: toegang
+      POSTGRES_USER: toegang
+      POSTGRES_PASSWORD: ${TOEGANG_DB_PASSWORD}
+    volumes:
+      - toegang-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U toegang"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  mailpit:
+    image: axllent/mailpit:v1.27
+    ports:
+      - "8025:8025"
+
+volumes:
+  postgres-data:
+  toegang-data:

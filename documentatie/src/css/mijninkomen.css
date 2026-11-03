@@ -1,0 +1,222 @@
+/* stylelint-disable selector-class-pattern */
+
+/*
+ * Huisstijl van MijnInkomen, ingevuld op de tokens van NL Design System.
+ * Dubbele :root, zodat dit wint van de thema's die in src/theme/Root.tsx laden.
+ */
+:root:root {
+  --mijninkomen-page-max-width: 72rem;
+  --mijninkomen-document-font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", arial, sans-serif;
+
+  /* Kleuren */
+  --basis-heading-color: #174c39;
+  --basis-color-default-color-document: #1f2a26;
+  --basis-color-accent-1-color-document: #123c2d;
+  --basis-color-accent-1-color-subtle: #4a5651;
+  --basis-color-accent-1-color-active: #123c2d;
+  --basis-color-accent-1-color-hover: #174c39;
+  --basis-color-accent-1-color-default: #216b50;
+  --basis-color-accent-1-border-active: #123c2d;
+  --basis-color-accent-1-border-hover: #174c39;
+  --basis-color-accent-1-border-default: #216b50;
+  --basis-color-accent-1-border-subtle: #b3cfc3;
+  --basis-color-accent-1-bg-active: #c0d8ce;
+  --basis-color-accent-1-bg-hover: #cde0d8;
+  --basis-color-accent-1-bg-default: #d9e8e2;
+  --basis-color-accent-1-bg-subtle: #e6f0ec;
+  --basis-color-accent-1-bg-document: #f2f7f4;
+  --basis-color-accent-1-inverse-color-document: #fff;
+  --basis-color-accent-1-inverse-color-subtle: #cde0d8;
+  --basis-color-accent-1-inverse-color-active: #fff;
+  --basis-color-accent-1-inverse-color-hover: #fff;
+  --basis-color-accent-1-inverse-color-default: #fff;
+  --basis-color-accent-1-inverse-border-active: #fff;
+  --basis-color-accent-1-inverse-border-hover: #fff;
+  --basis-color-accent-1-inverse-border-default: #fff;
+  --basis-color-accent-1-inverse-border-subtle: #174c39;
+  --basis-color-accent-1-inverse-bg-active: #123c2d;
+  --basis-color-accent-1-inverse-bg-hover: #174c39;
+  --basis-color-accent-1-inverse-bg-default: #216b50;
+  --basis-color-accent-1-inverse-bg-subtle: #0f3226;
+  --basis-color-accent-1-inverse-bg-document: #123c2d;
+  --basis-color-action-1-bg-document: var(--basis-color-accent-1-bg-document);
+  --basis-color-action-2-color-document: var(--basis-color-accent-1-color-document);
+  --basis-color-action-2-color-subtle: var(--basis-color-accent-1-color-subtle);
+  --basis-color-action-2-color-active: var(--basis-color-accent-1-color-active);
+  --basis-color-action-2-color-hover: var(--basis-color-accent-1-color-hover);
+  --basis-color-action-2-color-default: var(--basis-color-accent-1-color-default);
+  --basis-color-action-2-border-active: var(--basis-color-accent-1-border-active);
+  --basis-color-action-2-border-hover: var(--basis-color-accent-1-border-hover);
+  --basis-color-action-2-border-default: var(--basis-color-accent-1-border-default);
+  --basis-color-action-2-border-subtle: var(--basis-color-accent-1-border-subtle);
+  --basis-color-action-2-bg-active: var(--basis-color-accent-1-bg-active);
+  --basis-color-action-2-bg-hover: var(--basis-color-accent-1-bg-hover);
+  --basis-color-action-2-bg-default: var(--basis-color-accent-1-bg-default);
+  --basis-color-action-2-bg-subtle: var(--basis-color-accent-1-bg-subtle);
+  --basis-color-action-2-bg-document: var(--basis-color-accent-1-bg-document);
+  --basis-color-action-2-inverse-bg-active: var(--basis-color-accent-1-inverse-bg-active);
+  --basis-color-action-2-inverse-bg-hover: var(--basis-color-accent-1-inverse-bg-hover);
+  --basis-color-action-2-inverse-bg-default: var(--basis-color-accent-1-inverse-bg-default);
+  --basis-color-action-2-inverse-bg-subtle: var(--basis-color-accent-1-inverse-bg-subtle);
+  --basis-color-action-2-inverse-bg-document: var(--basis-color-accent-1-inverse-bg-document);
+  --basis-color-action-2-inverse-border-subtle: var(--basis-color-accent-1-inverse-border-subtle);
+  --basis-color-action-2-inverse-color-subtle: var(--basis-color-accent-1-inverse-color-subtle);
+
+  /* Lettertypen */
+  --basis-text-font-family-default: var(--mijninkomen-document-font-family);
+  --basis-heading-font-family: var(--mijninkomen-document-font-family);
+  --utrecht-document-font-family: var(--mijninkomen-document-font-family);
+  --utrecht-heading-font-family: var(--mijninkomen-document-font-family);
+  --ifm-font-family-base: var(--mijninkomen-document-font-family);
+  --ifm-heading-font-family: var(--mijninkomen-document-font-family);
+
+  /* Bovenkop in hoofdletters */
+  --utrecht-pre-heading-color: var(--basis-color-accent-1-color-default);
+}
+
+.ma-theme {
+  /* Navigatiebalk */
+  --ifm-navbar-height: 7rem;
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-link-hover-color: var(--basis-color-accent-1-color-default);
+  --ifm-navbar-link-active-color: var(--basis-color-accent-1-color-default);
+  --ma-navigation-bar-background-color: #fff;
+  --ma-navigation-bar-item-color: var(--basis-color-default-color-document);
+  --ma-navigation-bar-item-active-background-color: transparent;
+  --ma-navigation-bar-item-active-border-color: transparent;
+
+  /* Footer */
+  --ifm-footer-background-color: #fff;
+  --ifm-footer-color: var(--basis-color-default-color-document);
+  --ifm-footer-link-color: var(--basis-color-accent-1-color-default);
+  --ifm-footer-link-hover-color: var(--basis-color-accent-1-color-hover);
+  --ifm-footer-title-color: var(--basis-heading-color);
+  --ifm-footer-padding-vertical: 2.5rem;
+
+  font-size-adjust: none;
+}
+
+.ma-theme .navbar {
+  block-size: var(--ifm-navbar-height);
+  padding-block-end: 1.5rem;
+  position: relative;
+}
+
+.navbar__inner {
+  margin-inline: auto;
+  max-inline-size: var(--mijninkomen-page-max-width);
+}
+
+.ma-theme .navbar__logo {
+  block-size: 2.75rem;
+}
+
+.ma-theme .navbar__logo img {
+  block-size: 100%;
+  inline-size: auto;
+}
+
+.ma-theme .navbar__link {
+  padding-inline: 0.625rem;
+  text-decoration-line: none;
+  white-space: nowrap;
+}
+
+.ma-theme .navbar__link:hover {
+  text-decoration-line: underline;
+}
+
+.ma-theme .navbar__toggle {
+  flex-shrink: 0;
+  inline-size: auto;
+  white-space: nowrap;
+}
+
+.navbar__items--right .mijninkomen-inloggen {
+  background-color: var(--utrecht-button-primary-action-background-color);
+  border-radius: var(--utrecht-button-border-radius);
+  color: var(--utrecht-button-primary-action-color);
+  font-weight: 600;
+  margin-inline-start: 0.5rem;
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+}
+
+.ma-theme .navbar__items--right .mijninkomen-inloggen:hover {
+  background-color: var(--utrecht-button-primary-action-hover-background-color);
+  color: var(--utrecht-button-primary-action-hover-color);
+  text-decoration-line: none;
+}
+
+.ma-theme .navbar__item.navbar__link--active:not(.mijninkomen-inloggen) {
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.5em;
+}
+
+/* Het streepje onder de kop, in de verhouding 5 : 1 : 1 : 1 */
+.ma-theme .navbar::after {
+  background-image: linear-gradient(
+    to right,
+    #216b50 0 calc(62.5% - 3px),
+    transparent 0 calc(62.5% + 3px),
+    #a52a35 0 calc(75% - 3px),
+    transparent 0 calc(75% + 3px),
+    #e8b547 0 calc(87.5% - 3px),
+    transparent 0 calc(87.5% + 3px),
+    #003976 0
+  );
+  block-size: 5px;
+  content: "";
+  inline-size: min(100% - 2rem, var(--mijninkomen-page-max-width) - 2rem);
+  inset-block-end: 1.5rem;
+  inset-inline-start: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.ma-theme .footer {
+  border-block-start: 1px solid #d9dcd7;
+}
+
+.ma-theme .footer .container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin-inline: auto;
+  max-inline-size: var(--mijninkomen-page-max-width);
+  padding-inline: 1rem;
+}
+
+.ma-theme .footer__links {
+  display: contents;
+}
+
+.ma-theme .footer__col {
+  margin-block-end: 0;
+  margin-inline: 0;
+  max-inline-size: none;
+  padding-inline: 0;
+}
+
+.ma-theme .footer__bottom {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: start;
+}
+
+.ma-theme .footer__logo-link,
+.ma-theme .footer__bottom a {
+  display: inline-block;
+}
+
+.ma-theme .footer__logo {
+  margin-block-end: 0.5rem;
+}
+
+@media (width <= 48rem) {
+  .ma-theme .footer .container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,66 @@
+---
+title: MijnInkomen's toekomst
+hide_title: true
+hide_table_of_contents: true
+sidebar_label: Waar werkt MijnInkomen naar
+sidebar_position: 1
+navigation_order: 1
+pagination_label: Waar werkt MijnInkomen naar
+description: Toekomstige ontwikkelingen binnen MijnInkomen
+slug: /waar-werkt-het-naar-toe
+keywords:
+  - MijnInkomen
+  - ontwikkelingen
+  - toekomst
+---
+
+{/* <!-- @license CC0-1.0 --> */}
+
+import { UnorderedList } from '@utrecht/component-library-react';
+import { Card } from '@components/card/card';
+import { Badge } from "@mijninkomen/components/Badge";
+import { CardGroup } from '@mijninkomen/components/CardGroup';
+
+# Waar we nu aan werken
+
+Deze onderwerpen lopen nu. Bij elk onderwerp zie je hoe ver het is.
+
+{/* TODO: Deze cards eronder dynamisch maken */}
+<CardGroup>
+    <Card
+        description="Eén vaste manier om bijzondere bijstand aan te vragen en af te handelen, voor alle gemeenten."
+        heading="Basisproces bijzondere bijstand"
+        subheading={<Badge soort="status">In ontwikkeling</Badge>}
+        href="#"
+        metadata="Gebruikt door: Den Haag, Utrecht"
+        title="Stadspas"
+        linkLabel="Lees meer"
+    />
+    <Card
+        description="Amsterdam gaat MijnInkomen gebruiken. We testen samen of alles goed werkt."
+        heading="Aansluiting van Amsterdam"
+        subheading={<Badge soort="status">In test</Badge>}
+        href="#"
+        metadata="Gebruikt door: Amsterdam"
+        title="Algemene bijstand"
+        linkLabel="Lees meer"
+    />
+    <Card
+        description="'s-Hertogenbosch bereidt de overstap naar MijnInkomen voor."
+        heading="Aansluiting van 's-Hertogenbosch"
+        subheading={<Badge soort="status">In voorbereiding</Badge>}
+        href="#"
+        metadata="Gebruikt door: 's-Hertogenbosch"
+        title="Bbz"
+        linkLabel="Lees meer"
+    />
+    <Card
+        description="Inwoners zien beter waar hun aanvraag is en wat de volgende stap is."
+        heading="IOAW"
+        subheading={<Badge soort="status">In ontwikkeling</Badge>}
+        href="#"
+        metadata="Gebruikt door: Alle gemeenten"
+        title="IOAW"
+        linkLabel="Lees meer"
+    />
+</CardGroup>

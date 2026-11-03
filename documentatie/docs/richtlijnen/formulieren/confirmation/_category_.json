@@ -1,0 +1,10 @@
+{
+  "label": "Bevestigingspagina",
+  "link": {
+    "type": "doc",
+    "id": "richtlijnen/formulieren/confirmation/index"
+  },
+  "customProps": {
+    "showLinkedDoc": true
+  }
+}

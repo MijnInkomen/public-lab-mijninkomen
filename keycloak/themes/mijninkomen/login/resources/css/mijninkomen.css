@@ -1,0 +1,356 @@
+/* Huisstijl van MijnInkomen voor de inlogschermen. Waarden uit prototype/src/styles/tokens.css */
+:root {
+  --mi-groen: #216b50;
+  --mi-groen-donker: #174c39;
+  --mi-groen-licht: #f2f7f4;
+  --mi-rood: #a52a35;
+  --mi-tekst: #1f2a26;
+  --mi-tekst-rustig: #4a5651;
+  --mi-rand: #d9dcd7;
+  --mi-veldrand: #8a948f;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: var(--mi-tekst);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+a {
+  color: var(--mi-groen);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--mi-groen-donker);
+}
+
+:focus-visible {
+  outline: 3px solid var(--mi-tekst);
+  outline-offset: 2px;
+}
+
+h1,
+h2 {
+  color: var(--mi-groen-donker);
+  line-height: 1.25;
+  margin-block: 0 0.5rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-block: 0 1rem;
+}
+
+.mi-container {
+  margin-inline: auto;
+  max-inline-size: 72rem;
+  padding-inline: 1rem;
+}
+
+.mi-skiplink {
+  background-color: #e8b547;
+  color: var(--mi-tekst);
+  inset-block-start: -10rem;
+  inset-inline-start: 0;
+  padding: 0.5rem 1rem;
+  position: absolute;
+}
+
+.mi-skiplink:focus {
+  inset-block-start: 0;
+}
+
+.mi-kop {
+  padding-block: 1rem 1.5rem;
+}
+
+.mi-kop__inhoud {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+}
+
+.mi-kop__logo img {
+  block-size: 2.75rem;
+  display: block;
+}
+
+.mi-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mi-menu a {
+  color: var(--mi-tekst);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mi-menu a:hover {
+  color: var(--mi-groen);
+  text-decoration: underline;
+}
+
+.mi-streep {
+  background-image: linear-gradient(
+    to right,
+    #216b50 0 calc(62.5% - 3px),
+    transparent 0 calc(62.5% + 3px),
+    #a52a35 0 calc(75% - 3px),
+    transparent 0 calc(75% + 3px),
+    #e8b547 0 calc(87.5% - 3px),
+    transparent 0 calc(87.5% + 3px),
+    #003976 0
+  );
+  block-size: 5px;
+  margin-block-start: 1rem;
+}
+
+.mi-inhoud {
+  padding-block: 1rem 2.5rem;
+}
+
+.mi-bovenkop {
+  color: var(--mi-groen);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-block-end: 0.5rem;
+  text-transform: uppercase;
+}
+
+.mi-bovenkop:empty {
+  display: none;
+}
+
+.mi-intro {
+  font-size: 1.25rem;
+  max-inline-size: 65ch;
+}
+
+.mi-inloggen {
+  align-items: start;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 3fr 2fr;
+  margin-block-start: 1.5rem;
+}
+
+.mi-inloggen > * {
+  min-inline-size: 0;
+}
+
+.mi-kaart {
+  border: 1px solid var(--mi-rand);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.mi-geen-lid {
+  background-color: var(--mi-groen-licht);
+  border-inline-start: 6px solid var(--mi-groen);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.mi-geen-lid hr {
+  border: 0;
+  border-block-start: 1px solid var(--mi-rand);
+  margin-block: 1.5rem;
+}
+
+.mi-veld {
+  margin-block-end: 1.5rem;
+}
+
+.mi-label {
+  color: var(--mi-groen-donker);
+  display: block;
+  font-weight: 600;
+}
+
+.mi-omschrijving {
+  color: var(--mi-tekst-rustig);
+  font-size: 1rem;
+  margin-block-end: 0.25rem;
+}
+
+.mi-invoer {
+  background-color: #fff;
+  border: 1px solid var(--mi-veldrand);
+  border-radius: 8px;
+  color: inherit;
+  font: inherit;
+  inline-size: 100%;
+  margin-block-start: 0.25rem;
+  min-block-size: 44px;
+  padding: 0.5rem 0.75rem;
+}
+
+.mi-invoer[aria-invalid="true"] {
+  border-color: var(--mi-rood);
+  border-width: 2px;
+}
+
+.mi-fout {
+  color: var(--mi-rood);
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-block: 0.25rem 0;
+}
+
+.mi-klein {
+  color: var(--mi-tekst-rustig);
+  font-size: 1rem;
+  margin-block: 1rem 0;
+}
+
+.mi-knop {
+  border: 2px solid var(--mi-groen);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.4;
+  min-block-size: 44px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+}
+
+.mi-knop--primair {
+  background-color: var(--mi-groen);
+  color: #fff;
+}
+
+.mi-knop--primair:hover {
+  background-color: var(--mi-groen-donker);
+  border-color: var(--mi-groen-donker);
+  color: #fff;
+}
+
+.mi-knop--secundair {
+  background-color: #fff;
+  color: var(--mi-groen);
+}
+
+.mi-knop--secundair:hover {
+  background-color: #e6f0ec;
+  border-color: var(--mi-groen-donker);
+  color: var(--mi-groen-donker);
+}
+
+.mi-melding {
+  background-color: #fbf1d9;
+  border-inline-start: 6px solid #e8b547;
+  border-radius: 8px;
+  margin-block: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.mi-melding--error {
+  background-color: #fbecec;
+  border-inline-start-color: var(--mi-rood);
+}
+
+.mi-melding--success {
+  background-color: var(--mi-groen-licht);
+  border-inline-start-color: var(--mi-groen);
+}
+
+.mi-gebruiker a {
+  margin-inline-start: 0.5rem;
+}
+
+/* Schermen van Keycloak zelf: code invoeren, code-app en wachtwoord instellen */
+.mi-formulier,
+#kc-totp-settings,
+#kc-totp-settings-form,
+#kc-passwd-update-form {
+  max-inline-size: 36rem;
+}
+
+#kc-totp-settings {
+  padding-inline-start: 1.25rem;
+}
+
+#kc-totp-settings li {
+  margin-block-end: 1rem;
+}
+
+#kc-totp-secret-qr-code {
+  display: block;
+  margin-block-start: 0.5rem;
+}
+
+.mi-voet {
+  border-block-start: 1px solid var(--mi-rand);
+  font-size: 1rem;
+  padding-block: 2.5rem 1.5rem;
+}
+
+.mi-voet__inhoud {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.mi-voet__logo {
+  block-size: 2.75rem;
+  display: block;
+  margin-block-end: 0.5rem;
+}
+
+.mi-voet h2 {
+  font-size: 1rem;
+}
+
+.mi-voet p {
+  margin-block-end: 0.5rem;
+}
+
+.mi-voet ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mi-voet li {
+  padding-block: 0.25rem;
+}
+
+@media (width <= 48rem) {
+  .mi-inloggen,
+  .mi-voet__inhoud {
+    grid-template-columns: 1fr;
+  }
+
+  .mi-kaart,
+  .mi-geen-lid {
+    padding: 1.5rem;
+  }
+}
