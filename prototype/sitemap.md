@@ -71,3 +71,30 @@ Er is ook **geen aparte pagina met nieuwsberichten (Updates)**. Die overlapte me
 | Rollen en organisatie | Hoe werken we samen? | Alleen de logo's + link |
 
 **Nog laten beoordelen door José en Selmar** (feedback opdrachtgever).
+
+---
+
+# Niveau 2 – de communityomgeving
+
+Het besloten werkplatform voor communityleden, gebaseerd op het document "Website MijnInkomen – niveau 2".
+Je komt erin via **Inloggen**. In het prototype werkt de knop zonder dat je iets invult.
+
+- Eigen kop: logo, "Communityomgeving", wie er is ingelogd en **Uitloggen** (terug naar niveau 1).
+- **Verticaal zijmenu** met de vijf pagina's, op elke pagina hetzelfde.
+- Een gele balk zegt dat alle namen en gegevens voorbeelden zijn.
+
+```
+/community                     Home
+/community/vergaderingen       Vergaderingen (agenda's, besluitenlogboek, actielijst)
+/community/steden              Stand van zaken steden (rollen, regelingen, contactpersonen)
+/community/roadmap             Roadmap & backlog (tijdlijn per tertiaal, koppeling Jira/GitHub)
+/community/initiatieven        Initiatieven & innovaties (backlog, beoordeling, formulier)
+```
+
+| Pagina | Doel | Wat staat er NIET |
+|---|---|---|
+| **Home** | Binnen 30 seconden zien wat er speelt: nieuws, de eerstvolgende 2 overleggen, mijn acties en de laatste besluiten | Uitleg over wat MijnInkomen is (staat op niveau 1) |
+| **Vergaderingen** | Vaste agenda per overleg, doorzoekbaar besluitenlogboek, actielijst met eigenaar, streefdatum en status | Webinars voor nieuwe gemeenten (niveau 1) |
+| **Stand van zaken steden** | Wie doet mee met welke rol, welke regelingen per gemeente, wie is de contactpersoon | Algemene informatie voor nieuwe gemeenten (niveau 1) |
+| **Roadmap & backlog** | Alle epics per tertiaal met hun fase, en wanneer Jira en GitHub zijn bijgewerkt | Nieuwe ideeën die nog niet zijn beoordeeld |
+| **Initiatieven & innovaties** | Nieuwe ideeën los van de roadmap: wat is ingediend, hoe het wordt beoordeeld, en zelf iets indienen | De vaste roadmap |

@@ -1,0 +1,363 @@
+/* Opmaak voor de communityomgeving (niveau 2) */
+
+.mijninkomen-c-sectie {
+  margin-bottom: var(--mijninkomen-space-xl);
+}
+
+.mijninkomen-c-sectie > .nl-heading {
+  margin-bottom: var(--mijninkomen-space-s);
+}
+
+/* Tabellen: rustig, met lijntjes tussen de rijen */
+.mijninkomen-tabel-vak {
+  overflow-x: auto;
+  margin-top: var(--mijninkomen-space-m);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-tabel-vak:focus-visible {
+  outline: 3px solid var(--mijninkomen-focus-outline-color);
+  outline-offset: 2px;
+}
+
+.mijninkomen-tabel {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.mijninkomen-tabel caption {
+  padding: var(--mijninkomen-space-s) var(--mijninkomen-space-m);
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.mijninkomen-tabel th,
+.mijninkomen-tabel td {
+  padding: var(--mijninkomen-space-s) var(--mijninkomen-space-m);
+  border-bottom: 1px solid var(--mijninkomen-border-color);
+  text-align: left;
+  vertical-align: top;
+}
+
+.mijninkomen-tabel thead th {
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+  color: var(--mijninkomen-heading-color);
+  font-size: 0.95rem;
+}
+
+.mijninkomen-tabel tbody th {
+  color: var(--mijninkomen-heading-color);
+  font-weight: 600;
+}
+
+.mijninkomen-tabel tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.mijninkomen-tabel time,
+.mijninkomen-tabel .mijninkomen-tabel__klein {
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.95rem;
+}
+
+/* Een datum en een statuslabel breken niet af */
+.mijninkomen-tabel time,
+.mijninkomen-tabel .mijninkomen-badge {
+  white-space: nowrap;
+}
+
+.mijninkomen-tabel thead .mijninkomen-tabel__klein {
+  font-weight: 400;
+}
+
+/* Filters boven een tabel */
+.mijninkomen-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-m);
+  align-items: flex-end;
+  margin-top: var(--mijninkomen-space-m);
+}
+
+.mijninkomen-filters .mijninkomen-formulier__veld {
+  margin: 0;
+  min-width: 12rem;
+  max-width: 20rem;
+  flex: 1;
+}
+
+.mijninkomen-filters__vinkje {
+  display: flex;
+  gap: var(--mijninkomen-space-s);
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.mijninkomen-filters__vinkje input {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--mijninkomen-color-groen);
+}
+
+.mijninkomen-filters__aantal {
+  margin: var(--mijninkomen-space-m) 0 0;
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.95rem;
+}
+
+/* Home: highlights als kaartjes */
+.mijninkomen-c-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-c-highlights li {
+  padding: var(--mijninkomen-space-m) var(--mijninkomen-space-l);
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-c-highlights time {
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.9rem;
+}
+
+.mijninkomen-c-highlights strong {
+  display: block;
+  margin: var(--mijninkomen-space-xs) 0;
+  color: var(--mijninkomen-heading-color);
+  font-size: 1.1rem;
+}
+
+.mijninkomen-c-highlights p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Home: twee blokken naast elkaar */
+.mijninkomen-c-twee {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-c-twee > * {
+  min-width: 0;
+}
+
+/* Overleg-kaartjes */
+.mijninkomen-c-overleggen {
+  display: grid;
+  gap: var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-m) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-c-overleggen li {
+  padding: var(--mijninkomen-space-m);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-c-overleggen strong {
+  display: block;
+  color: var(--mijninkomen-heading-color);
+}
+
+.mijninkomen-c-overleggen p {
+  margin: var(--mijninkomen-space-xs) 0 0;
+  font-size: 1rem;
+}
+
+/* Agenda's: drie kaarten */
+.mijninkomen-c-agendas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-c-agendas > li {
+  padding: var(--mijninkomen-space-l);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+  scroll-margin-top: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-c-agendas dl {
+  margin: var(--mijninkomen-space-s) 0;
+  font-size: 1rem;
+}
+
+.mijninkomen-c-agendas dt {
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.9rem;
+}
+
+.mijninkomen-c-agendas dd {
+  margin: 0 0 var(--mijninkomen-space-xs);
+}
+
+.mijninkomen-c-agendas ol {
+  margin: var(--mijninkomen-space-xs) 0 0;
+  padding-left: var(--mijninkomen-space-l);
+  font-size: 1rem;
+}
+
+/* Roadmap: drie tertialen naast elkaar */
+.mijninkomen-c-roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--mijninkomen-space-m);
+  margin-top: var(--mijninkomen-space-m);
+}
+
+.mijninkomen-c-roadmap > section {
+  min-width: 0;
+  padding: var(--mijninkomen-space-m);
+  background-color: var(--mijninkomen-color-grijs-vlak);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-c-roadmap__nu {
+  outline: 2px solid var(--mijninkomen-color-groen);
+}
+
+.mijninkomen-c-roadmap__periode {
+  margin: 0 0 var(--mijninkomen-space-m);
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.95rem;
+}
+
+.mijninkomen-c-roadmap ul {
+  display: grid;
+  gap: var(--mijninkomen-space-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-c-roadmap li {
+  padding: var(--mijninkomen-space-m);
+  background-color: var(--mijninkomen-color-wit);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-c-roadmap li strong {
+  display: block;
+  margin: var(--mijninkomen-space-xs) 0;
+  color: var(--mijninkomen-heading-color);
+}
+
+.mijninkomen-c-roadmap li span.mijninkomen-tabel__klein {
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.9rem;
+}
+
+/* Uitleg van de fasen */
+.mijninkomen-c-fasen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--mijninkomen-space-s) var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-m) 0 0;
+}
+
+.mijninkomen-c-fasen div {
+  font-size: 1rem;
+}
+
+.mijninkomen-c-fasen dd {
+  margin: var(--mijninkomen-space-xs) 0 0;
+}
+
+/* Contactpersonen */
+.mijninkomen-c-contacten {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-c-contacten li {
+  padding: var(--mijninkomen-space-m);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.mijninkomen-c-contacten strong {
+  display: block;
+  color: var(--mijninkomen-heading-color);
+}
+
+.mijninkomen-c-contacten p {
+  margin: var(--mijninkomen-space-xs) 0 0;
+}
+
+@media (max-width: 60rem) {
+  .mijninkomen-c-roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-c-twee {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Regelingen-matrix: de status staat als tekst in de cel; de kleur is extra */
+.mijninkomen-tabel--matrix td {
+  white-space: nowrap;
+}
+
+.mijninkomen-tabel--matrix thead th {
+  min-width: 8rem;
+}
+
+.mijninkomen-regeling--live {
+  background-color: var(--mijninkomen-color-groen-licht);
+  color: var(--mijninkomen-color-groen-donker);
+  font-weight: 700;
+}
+
+.mijninkomen-regeling--in-test,
+.mijninkomen-regeling--gepland {
+  font-weight: 600;
+}
+
+.mijninkomen-regeling--nog-niet {
+  color: var(--mijninkomen-text-subtle-color);
+}
+
+/* Status van de koppeling: icoon + tekst + kleur */
+.mijninkomen-sync {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mijninkomen-sync--gelukt {
+  color: var(--mijninkomen-color-groen-donker);
+}
+
+.mijninkomen-sync--waarschuwing {
+  color: var(--mijninkomen-document-color);
+}
+
+.mijninkomen-sync--mislukt {
+  color: var(--mijninkomen-form-error-color);
+}

@@ -72,6 +72,14 @@ Op 29 oktober 2026 kreeg ik feedback van de opdrachtgever (Vincent) op versie 2.
 
 **Overdracht aan development.** Vincent vindt een ontwerp niet genoeg als de werking niet beschreven is. Daarom zijn er nu twee documenten bij de code. In `sitemap.md` staat welk doel elke pagina heeft. In `componenten.md` staat per onderdeel wat het doet, waar de informatie vandaan komt (CMS, GitHub of de website) en hoe het zich gedraagt. Waar de informatie vandaan komt, is nog een voorstel dat we met development moeten afstemmen.
 
+## 7. Niveau 2: de communityomgeving
+
+Niveau 2 is het besloten deel voor communityleden. Daar werken gemeenten echt samen: vergaderingen voorbereiden, besluiten en acties terugvinden, zien welke gemeente welke regeling gebruikt, de roadmap volgen en nieuwe ideeën indienen. De pagina's en blokken heb ik uitgewerkt in het document "Website MijnInkomen – niveau 2".
+
+Zoals ik bij de navigatie al had bedacht, heeft niveau 2 een **verticaal menu aan de zijkant**. Er zijn vijf onderdelen met veel informatie, en een verticaal menu is makkelijk uit te breiden en te scannen (Laubheimer, 2021). Eerst stond het zijmenu net als op niveau 1 in het midden van de pagina, maar dat nam te veel ruimte in en belemmerde het beeld. Daarom staat het nu helemaal tegen de linkerkant van het scherm, zoals in werkprogramma's als GitLab of Teams. De inhoud, zoals de tabellen en de roadmap, krijgt zo veel meer ruimte. Het menu gebruikt nog steeds de officiële NLDS-link. De opbouw van elke pagina is hetzelfde als op niveau 1: een klein kopje, de titel en een korte intro. Zo voelt iemand met een schermlezer zich meteen thuis.
+
+Voor de demo werkt de knop Inloggen zonder dat je iets invult, zodat de opdrachtgever en het team meteen kunnen rondkijken. Alle namen in niveau 2 zijn verzonnen. Er staan contactgegevens van medewerkers in, en ik wil geen echte personen in een prototype dat gedeeld wordt. Een gele balk bovenaan zegt dat alles voorbeeld is.
+
 ---
 
 ## Bronnen

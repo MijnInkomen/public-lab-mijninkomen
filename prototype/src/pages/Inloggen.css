@@ -51,3 +51,12 @@
     padding: var(--mijninkomen-space-l);
   }
 }
+
+/* Uitleg voor de demo: je hoeft niets in te vullen */
+.mijninkomen-inloggen__prototype {
+  margin: 0 0 var(--mijninkomen-space-l);
+  padding: var(--mijninkomen-space-s) var(--mijninkomen-space-m);
+  background-color: var(--mijninkomen-color-geel-licht);
+  border-radius: var(--mijninkomen-border-radius);
+  font-size: 0.95rem;
+}

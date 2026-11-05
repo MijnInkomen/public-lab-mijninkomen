@@ -6,12 +6,13 @@ Het is bedoeld als voorbeeld voor de echte bouw: de structuur, componenten en hu
 - **Ontwerp** (indeling, kleuren, logica): Isabella
 - **Code**: gebouwd met hulp van AI (Claude), zie `AI-verantwoording.md`
 - **Onderbouwing van de ontwerpkeuzes**: zie `onderbouwing.md`
+- **Fasering (hoe het prototype stap voor stap is ontstaan)**: zie `fasering.md`
 - **Sitemap** (welke pagina's er zijn en waarom): zie `sitemap.md`
 - **Werking per onderdeel** (doel, bron van de informatie, gedrag): zie `componenten.md`
 
 Op dit moment staat **niveau 1** (informatief) erin, **versie 2.1**: Home, Ontwikkelingen, Meer weten, Initiatief melden en Contact, plus Inloggen en Toegang aanvragen.
 Versie 2 volgt het document "Paginastructuur website MijnInkomen – niveau 1" van Isabella; versie 2.1 verwerkt de feedback van de opdrachtgever.
-**Niveau 2** (ingelogde communityleden) komt later.
+**Niveau 2** (de communityomgeving voor ingelogde communityleden) staat er ook in: klik op **Inloggen** en daarna op de knop Inloggen, je hoeft niets in te vullen. Zie het tweede deel van `sitemap.md`.
 
 ---
 
@@ -52,6 +53,7 @@ prototype/
 │   │
 │   ├── components/            ← LAAG 2: eigen bouwstenen (de officiële NLDS-componenten komen uit node_modules)
 │   │   ├── Badge/             ← labeltje "Voorbeeld" of een status
+│   │   ├── CommunityKop/      ← kop en voet van niveau 2 (wie is ingelogd, Uitloggen)
 │   │   ├── Formulier/         ← één formuliercomponent voor alle formulieren (+ PrivacyRegel)
 │   │   ├── Icon/
 │   │   ├── Illustration/
@@ -63,6 +65,7 @@ prototype/
 │   │
 │   ├── pages/                 ← LAAG 3: pagina's, gebouwd uit componenten (adressen: zie sitemap.md)
 │   │   ├── Home.tsx
+│   │   ├── community/         ← NIVEAU 2: CommunityHome, Vergaderingen, Steden, Roadmap, Initiatieven
 │   │   ├── ontwikkelingen/    ← AlKan, NuBezig, ProjectDetail (+ ProjectKaarten)
 │   │   ├── meer-weten/        ← Samenwerken, Webinar, Kennismaking, Communitylid
 │   │   ├── InitiatiefMelden.tsx
@@ -73,6 +76,7 @@ prototype/
 │   │
 │   └── content/               ← alle teksten, los van de code
 │       ├── home.ts
+│       ├── community.ts       ← NIVEAU 2: alle voorbeelddata (gebruiker, besluiten, acties, roadmap, …)
 │       ├── gemeenten.ts       ← de deelnemende gemeenten: logo, naam en rol (één lijst voor de hele site)
 │       ├── ontwikkelingen.ts  ← projecten (met detailinformatie en datum)
 │       ├── meer-weten.ts      ← organisatie, webinar, kennismaking, communitylid
@@ -160,7 +164,7 @@ Bij de echte bouw: test opnieuw, bijvoorbeeld met een schermlezer (NVDA) en met 
 
 | Onderdeel | In het prototype | Bij de echte bouw |
 |---|---|---|
-| Inloggen | Pagina met formulier; controleert alleen of de velden zijn ingevuld. Tweestapsverificatie staat er alleen als tekst | Echte, veilige login (niveau 2) met tweestapsverificatie en "wachtwoord vergeten" |
+| Inloggen | De knop werkt zonder gegevens en gaat meteen naar niveau 2. Tweestapsverificatie staat er alleen als tekst | Echte, veilige login (niveau 2) met tweestapsverificatie en "wachtwoord vergeten" |
 | Toegang aanvragen | Formulier, verstuurt niets | Aanvraag komt bij het programmateam binnen; daarna een e-mail om een account te maken |
 | Navigatie | Zelfgemaakt in `navigatie.ts` | Een echte router (React Router of de routing van Docusaurus). Let op: de server moet bij elk adres `index.html` teruggeven |
 | Formulieren (webinar, kennismaking, initiatief, toegang) | Controleren de velden en tonen een bevestiging, maar versturen niets | Veilig versturen (bijv. naar een mailbox of zaaksysteem) |
@@ -173,4 +177,5 @@ Bij de echte bouw: test opnieuw, bijvoorbeeld met een schermlezer (NVDA) en met 
 | Footerlinks | Menu, privacyverklaring en LinkedIn | Ook een toegankelijkheidsverklaring |
 | Teksten | In de map `content/` | Afstemmen met de opdrachtgever |
 | Logo | Conceptlogo als PNG (`public/logo-mijninkomen.png`) | Definitief logo als SVG, na akkoord van de opdrachtgever |
+| Niveau 2 | Alle namen, besluiten, acties en de roadmap zijn verzonnen voorbeelden in `content/community.ts`. Iedereen kan `/community` openen | Echte gegevens uit GitHub, CMS en de website-applicatie; alleen bereikbaar na inloggen |
 | Gegevens | Geen, alles staat vast in de code | Echte gegevens, met aandacht voor privacy (AVG) |

@@ -7,10 +7,16 @@
  */
 import { SkipLink } from '@nl-design-system-candidate/skip-link-react/css';
 import { useEffect, useMemo, useRef, type ComponentType } from 'react';
+import { CommunityKop, CommunityVoet } from './components/CommunityKop/CommunityKop';
 import { PageFooter } from './components/PageFooter/PageFooter';
 import { PageHeader } from './components/PageHeader/PageHeader';
 import { projecten } from './content/ontwikkelingen';
 import { useHuidigPad } from './navigatie';
+import { CommunityHome } from './pages/community/CommunityHome';
+import { Initiatieven } from './pages/community/Initiatieven';
+import { Roadmap } from './pages/community/Roadmap';
+import { Steden } from './pages/community/Steden';
+import { Vergaderingen } from './pages/community/Vergaderingen';
 import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
 import { InitiatiefMelden } from './pages/InitiatiefMelden';
@@ -47,6 +53,12 @@ const paginas: Record<string, Pagina> = {
   '/inloggen': { titel: 'Inloggen – MijnInkomen', inhoud: Inloggen },
   '/toegang-aanvragen': { titel: 'Toegang aanvragen – MijnInkomen', inhoud: ToegangAanvragen },
   '/privacy': { titel: 'Privacyverklaring – MijnInkomen', inhoud: Privacy },
+  // NIVEAU 2: de communityomgeving (na inloggen). Eigen kop, voet en zijmenu.
+  '/community': { titel: 'Home – Communityomgeving – MijnInkomen', inhoud: CommunityHome },
+  '/community/vergaderingen': { titel: 'Vergaderingen – Communityomgeving – MijnInkomen', inhoud: Vergaderingen },
+  '/community/steden': { titel: 'Stand van zaken steden – Communityomgeving – MijnInkomen', inhoud: Steden },
+  '/community/roadmap': { titel: 'Roadmap & backlog – Communityomgeving – MijnInkomen', inhoud: Roadmap },
+  '/community/initiatieven': { titel: 'Initiatieven & innovaties – Communityomgeving – MijnInkomen', inhoud: Initiatieven },
 };
 
 /** Zoek de pagina bij een adres. Projectpagina's hebben een adres met een "slug". */
@@ -65,6 +77,8 @@ export function App() {
   const pad = useHuidigPad();
   const pagina = useMemo(() => zoekPagina(pad), [pad]);
   const Inhoud = pagina.inhoud;
+  // Niveau 2 (de communityomgeving) heeft een eigen kop en voet
+  const isCommunity = pad === '/community' || pad.startsWith('/community/');
   const mainRef = useRef<HTMLElement>(null);
   const eersteKeer = useRef(true);
 
@@ -92,11 +106,11 @@ export function App() {
     <div id="top">
       {/* NLDS Skip Link: onzichtbaar tot je op Tab drukt (WCAG 2.4.1) */}
       <SkipLink href="#inhoud">Direct naar de inhoud</SkipLink>
-      <PageHeader huidigPad={pad} />
+      {isCommunity ? <CommunityKop /> : <PageHeader huidigPad={pad} />}
       <main id="inhoud" tabIndex={-1} ref={mainRef}>
         <Inhoud />
       </main>
-      <PageFooter />
+      {isCommunity ? <CommunityVoet /> : <PageFooter />}
     </div>
   );
 }

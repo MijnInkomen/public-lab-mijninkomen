@@ -62,3 +62,44 @@
     position: static;
   }
 }
+
+/* ── Variant 'app' (niveau 2): menu tegen de linkerkant van het scherm ── */
+.mijninkomen-zijmenu-app {
+  display: grid;
+  grid-template-columns: 16rem minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.mijninkomen-zijmenu-app__zijkant {
+  background-color: var(--mijninkomen-color-groen-zeer-licht);
+  border-right: 1px solid var(--mijninkomen-border-color);
+}
+
+/* Het menu zelf: geen eigen vlak meer, de zijkant is het vlak */
+.mijninkomen-zijmenu-app__zijkant .mijninkomen-zijmenu {
+  padding: var(--mijninkomen-space-l) var(--mijninkomen-space-m);
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.mijninkomen-zijmenu-app__inhoud {
+  min-width: 0;
+  max-width: 72rem;
+  padding: var(--mijninkomen-space-l) var(--mijninkomen-space-xl) var(--mijninkomen-space-xl);
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-zijmenu-app {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-zijmenu-app__zijkant {
+    border-right: 0;
+    border-bottom: 1px solid var(--mijninkomen-border-color);
+  }
+  .mijninkomen-zijmenu-app__zijkant .mijninkomen-zijmenu {
+    position: static;
+  }
+  .mijninkomen-zijmenu-app__inhoud {
+    padding-inline: var(--mijninkomen-space-m);
+  }
+}

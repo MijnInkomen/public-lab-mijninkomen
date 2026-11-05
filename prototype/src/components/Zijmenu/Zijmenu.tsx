@@ -29,15 +29,20 @@ type ZijmenuPaginaProps = {
   items: ZijmenuItem[];
   /** Bij een detailpagina: welk menu-item hoort erbij? */
   actiefItem?: string;
+  /**
+   * 'pagina' (standaard, niveau 1): menu en inhoud samen in het midden van de pagina.
+   * 'app' (niveau 2): menu helemaal tegen de linkerkant van het scherm, zoals in
+   * een werkprogramma; de inhoud krijgt de rest van de breedte (keuze Isabella).
+   */
+  variant?: 'pagina' | 'app';
   children: ReactNode;
 };
 
-export function ZijmenuPagina({ titel, items, actiefItem, children }: ZijmenuPaginaProps) {
+export function ZijmenuPagina({ titel, items, actiefItem, variant = 'pagina', children }: ZijmenuPaginaProps) {
   const pad = useHuidigPad();
 
-  return (
-    <div className="mijninkomen-container mijninkomen-zijmenu-pagina">
-      <nav className="mijninkomen-zijmenu" aria-label={titel}>
+  const menu = (
+    <nav className="mijninkomen-zijmenu" aria-label={titel}>
         <ul>
           {items.map((item) => {
             const huidig = item.href === pad ? 'page' : item.href === actiefItem ? 'true' : undefined;
@@ -50,7 +55,22 @@ export function ZijmenuPagina({ titel, items, actiefItem, children }: ZijmenuPag
             );
           })}
         </ul>
-      </nav>
+    </nav>
+  );
+
+  if (variant === 'app') {
+    return (
+      <div className="mijninkomen-zijmenu-app">
+        {/* De lichtgroene balk loopt over de hele hoogte; het menu zelf blijft in beeld */}
+        <div className="mijninkomen-zijmenu-app__zijkant">{menu}</div>
+        <div className="mijninkomen-zijmenu-app__inhoud">{children}</div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="mijninkomen-container mijninkomen-zijmenu-pagina">
+      {menu}
       <div className="mijninkomen-zijmenu-pagina__inhoud">{children}</div>
     </div>
   );

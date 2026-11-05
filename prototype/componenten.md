@@ -62,6 +62,27 @@ Feedback van de opdrachtgever: een ontwerp is pas over te dragen als ook beschre
 | Label "Voorbeeld" | `components/Badge` | Laat zien dat inhoud nog niet echt is | Alleen in het prototype | Moet weg zodra de echte inhoud er is. |
 | Contactgegevens | `content/contact.ts` | Algemeen e-mailadres en reactietijd | CMS | Knop om het e-mailadres te kopiëren. |
 
+## Niveau 2 – de communityomgeving
+
+Alle gegevens staan in het prototype in `content/community.ts` en zijn voorbeelden.
+
+| Onderdeel | Code | Doel | Bron (voorstel) | Gedrag |
+|---|---|---|---|---|
+| Inloggen | `pages/Inloggen.tsx` | Naar de communityomgeving | **Website-applicatie** (inlogsysteem met tweestapsverificatie) | Prototype: de knop werkt zonder gegevens en gaat naar `/community`. |
+| Kop en voet niveau 2 | `components/CommunityKop` | Laten zien dat je in de besloten omgeving bent, en wie er is ingelogd | Website-applicatie (gegevens van de gebruiker) | Uitloggen gaat terug naar de openbare website. Gele balk: alles is voorbeeld. |
+| Zijmenu niveau 2 | `components/Zijmenu` (variant `app`) + `pages/community/CommunityPagina.tsx` | De vijf pagina's van niveau 2 | Website | Zelfde gedrag als op niveau 1, maar het menu staat tegen de linkerkant van het scherm en de inhoud krijgt de rest van de breedte. Kop en voet gaan ook over de hele breedte. Op een telefoon staat het menu boven de inhoud. |
+| Nieuws (highlights) | `pages/community/CommunityHome.tsx` | Korte berichten uit de samenwerking | CMS | De 3 nieuwste. |
+| Mijn acties | `pages/community/CommunityHome.tsx` | Acties voor de gebruiker of diens gemeente | **GitHub** (issues) of website-applicatie | Alleen acties die nog niet zijn afgerond. |
+| Agenda's | `pages/community/Vergaderingen.tsx` | Vaste agenda per overleg | CMS | Elke agenda heeft een eigen anker (bijv. `#stuurgroep`), zodat Home ernaar kan linken. |
+| Besluitenlogboek | `pages/community/Vergaderingen.tsx` | Alle besluiten op één plek | **GitHub** (Markdown per besluit) of CMS | Zoeken op woord, filteren op status en gemeente. Het aantal resultaten wordt voorgelezen (`aria-live`). |
+| Actielijst | `pages/community/Vergaderingen.tsx` | Acties met eigenaar, streefdatum en status | **GitHub** (issues) | Filteren op status en op "alleen mijn gemeente". |
+| Rollen en regelingen | `pages/community/Steden.tsx` | Wie doet mee, met welke rol en welke regelingen | CMS | Tabellen met echte kolom- en rijkoppen; op een telefoon scrollt de tabel opzij. Status staat als tekst in de cel, kleur is extra. |
+| Contactpersonen | `pages/community/Steden.tsx` | Directe contactgegevens per gemeente | Website-applicatie (gebruikersprofielen) | Alleen zichtbaar na inloggen (privacy). In het prototype verzonnen namen. |
+| Roadmap-tijdlijn | `pages/community/Roadmap.tsx` | Epics per tertiaal en fase | **GitHub** (epics met labels voor tertiaal en fase) | Filteren op fase. Het huidige tertiaal heeft een rand en het label "Nu". |
+| Synclog Jira/GitHub | `pages/community/Roadmap.tsx` | Laten zien wanneer de gegevens zijn bijgewerkt | Website-applicatie (koppeling) | Status met icoon en tekst: Gelukt, Waarschuwing, Mislukt. |
+| Innovatie-backlog | `pages/community/Initiatieven.tsx` | Ingediende ideeën met hun beoordeling | **GitHub** (aparte repository of project) | Los van de kern-roadmap. |
+| Initiatief indienen | `pages/community/Initiatieven.tsx` | Een initiatief indienen als ingelogd lid | Formulierverwerking → GitHub-issue | Naam en gemeente komen van de ingelogde gebruiker. |
+
 ## Beheer
 
 Uiteindelijk komt er een **beheerhandleiding** waarin staat hoe redacteuren deze onderdelen aanpassen. Die kan worden gemaakt zodra duidelijk is wat in het CMS komt en wat uit GitHub.

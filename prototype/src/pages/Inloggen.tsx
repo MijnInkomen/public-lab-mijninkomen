@@ -4,25 +4,31 @@
  * Inloggen is alleen voor communityleden (niveau 2). Dat staat bovenaan de
  * pagina. Wie nog geen lid is, vindt ernaast hoe je communitylid wordt, en wie
  * al een kennismakingsgesprek had, kan via een knop toegang aanvragen.
- * PROTOTYPE: inloggen werkt nog niet; het formulier controleert alleen de velden.
+ * PROTOTYPE (keuze Isabella): de knop Inloggen werkt zonder dat je iets invult,
+ * en brengt je meteen naar de communityomgeving (niveau 2, /community).
+ * Bij de echte bouw komt hier een veilige login met tweestapsverificatie.
  * Teksten: content/inloggen.ts
  */
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { Badge } from '../components/Badge/Badge';
-import { Formulier, type Veld } from '../components/Formulier/Formulier';
+import { Button } from '@nl-design-system-candidate/button-react/css';
+import type { FormEvent } from 'react';
+import '../components/Formulier/Formulier.css';
 import { Icon } from '../components/Icon/Icon';
 import { KnopLink } from '../components/KnopLink/KnopLink';
 import { geenLid, inlogFormulier, inloggenIntro } from '../content/inloggen';
+import { navigeer } from '../navigatie';
 import './Inloggen.css';
 
-const velden: Veld[] = [
-  { naam: 'email', label: 'E-mailadres', soort: 'email', autoComplete: 'username', omschrijving: 'Bijvoorbeeld: naam@gemeente.nl', fout: 'Vul je e-mailadres in.' },
-  { naam: 'wachtwoord', label: 'Wachtwoord', soort: 'wachtwoord', autoComplete: 'current-password', fout: 'Vul je wachtwoord in.' },
-];
-
 export function Inloggen() {
+  // Prototype: niets controleren, meteen door naar de communityomgeving
+  function inloggen(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    navigeer('/community');
+  }
+
   return (
     <section className="mijninkomen-section" aria-labelledby="inloggen-titel">
       <div className="mijninkomen-container">
@@ -33,7 +39,27 @@ export function Inloggen() {
         <div className="mijninkomen-inloggen">
           {/* Het inlogformulier */}
           <div className="mijninkomen-kaart mijninkomen-inloggen__formulier">
-            <Formulier velden={velden} knop={inlogFormulier.knop} bevestiging={inlogFormulier.bevestiging} uitleg="" />
+            <p className="mijninkomen-inloggen__prototype">{inlogFormulier.prototype}</p>
+            <form className="mijninkomen-formulier" onSubmit={inloggen} noValidate>
+              <div className="mijninkomen-formulier__veld">
+                <label htmlFor="inlog-email" className="mijninkomen-formulier__label">
+                  E-mailadres
+                </label>
+                <p id="inlog-email-uitleg" className="mijninkomen-formulier__omschrijving">
+                  Bijvoorbeeld: naam@gemeente.nl
+                </p>
+                <input id="inlog-email" name="email" type="email" autoComplete="username" aria-describedby="inlog-email-uitleg" className="mijninkomen-formulier__invoer" />
+              </div>
+              <div className="mijninkomen-formulier__veld">
+                <label htmlFor="inlog-wachtwoord" className="mijninkomen-formulier__label">
+                  Wachtwoord
+                </label>
+                <input id="inlog-wachtwoord" name="wachtwoord" type="password" autoComplete="current-password" className="mijninkomen-formulier__invoer" />
+              </div>
+              <Button type="submit" purpose="primary" iconEnd={<span aria-hidden="true">→</span>}>
+                {inlogFormulier.knop}
+              </Button>
+            </form>
             {/* Tweestapsverificatie: werkt nog niet in het prototype */}
             <p className="mijninkomen-kaart__extra mijninkomen-inloggen__tweestaps">
               {inlogFormulier.tweestaps} <Badge />

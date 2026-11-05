@@ -1,0 +1,82 @@
+/* Kop van de communityomgeving (niveau 2) */
+
+.mijninkomen-community-kop__label {
+  flex: 1;
+  margin: 0;
+  color: var(--mijninkomen-text-subtle-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mijninkomen-community-kop__gebruiker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-m);
+  align-items: center;
+}
+
+.mijninkomen-community-kop__gebruiker p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.mijninkomen-community-kop__melding {
+  display: flex;
+  gap: var(--mijninkomen-space-s);
+  align-items: center;
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: var(--mijninkomen-space-s) var(--mijninkomen-space-m);
+  background-color: var(--mijninkomen-color-geel-licht);
+  border-radius: var(--mijninkomen-border-radius);
+  font-size: 0.95rem;
+}
+
+.mijninkomen-community-kop__icoon {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: var(--mijninkomen-color-grijs-donker);
+  color: var(--mijninkomen-color-wit);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.mijninkomen-community-voet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-m);
+  justify-content: space-between;
+}
+
+@media (max-width: 48rem) {
+  .mijninkomen-community-kop__label {
+    flex-basis: 100%;
+    order: 3;
+  }
+  .mijninkomen-community-kop__gebruiker p {
+    text-align: left;
+  }
+}
+
+/* Niveau 2: kop en voet over de hele breedte (zoals een werkprogramma) */
+.mijninkomen-container--breed {
+  max-width: none;
+  padding-inline: var(--mijninkomen-space-l);
+}
+
+/* De kop sluit met een lijn aan op het zijmenu; de voet sluit aan op de inhoud */
+.mijninkomen-page-header--community {
+  padding-bottom: var(--mijninkomen-space-m);
+  border-bottom: 1px solid var(--mijninkomen-border-color);
+}
+
+.mijninkomen-page-footer--community {
+  margin-top: 0;
+}

@@ -112,6 +112,14 @@ Isabella controleert de uitkomst en beslist wat er blijft.
 
 **Wat Isabella deed:** de feedback verzameld, de keuze gemaakt over Initiatief melden, het voorstel beoordeeld en besloten om Updates en Wat eraan komt weg te halen. *(nog aanvullen: wat je hebt gecontroleerd of aangepast)*
 
+## Niveau 2: de communityomgeving
+
+**Gevraagd:** Isabella gaf Claude haar document "Website MijnInkomen – niveau 2" met vijf pagina's (Home, Vergaderingen, Stand van zaken steden, Roadmap & backlog, Initiatieven & innovaties) en de blokken per pagina. Haar idee: de knop Inloggen werkt zonder gegevens en brengt je naar niveau 2.
+
+**Wat Claude deed:** eerst drie vragen gesteld, omdat het document twee verschillende menu's noemde. Daarna niveau 2 gebouwd: een eigen kop met wie er is ingelogd en Uitloggen, een verticaal zijmenu, en de vijf pagina's met de blokken uit het document. Het besluitenlogboek is doorzoekbaar en te filteren op status en gemeente. De actielijst en de roadmap zijn te filteren. Tabellen hebben echte koppen voor schermlezers en scrollen op een telefoon opzij. Alle gegevens zijn verzonnen voorbeelden in één bestand (`content/community.ts`). Claude testte alle pagina's op contrast, koppen, telefoonscherm, de filters en het in- en uitloggen, en legde in `sitemap.md` en `componenten.md` vast wat elk onderdeel doet en waar de informatie straks vandaan kan komen.
+
+**Wat Isabella deed:** het document voor niveau 2 gemaakt en drie keuzes gemaakt: het menu met de vijf pagina's, een verticaal zijmenu en verzonnen voorbeeldnamen in plaats van echte personen. Daarna vond ze dat het zijmenu het beeld te veel belemmerde. Claude gaf drie oplossingen (menu tegen de linkerkant, horizontaal menu, inklapbaar menu); Isabella koos voor het menu helemaal tegen de linkerkant, met behoud van NLDS. *(nog aanvullen: wat je hebt gecontroleerd of aangepast)*
+
 ## Kritische controle op dubbele informatie
 
 **Gevraagd:** Isabella vroeg Claude om kritisch te kijken of er dingen dubbel staan, of beter en toegankelijker kunnen.

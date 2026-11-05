@@ -14,8 +14,7 @@ export const inloggenIntro = {
 export const inlogFormulier = {
   tweestaps: 'Daarna vul je ook een code in uit een app op je telefoon. Dat heet tweestapsverificatie. Zo blijft de communityomgeving veilig.',
   knop: 'Inloggen',
-  bevestiging:
-    'Dit is een prototype: inloggen werkt nog niet. De omgeving voor communityleden (niveau 2) komt in een volgende versie.',
+  prototype: 'Prototype: je hoeft niets in te vullen. Klik op Inloggen om de communityomgeving te bekijken.',
 };
 
 export const geenLid = {
