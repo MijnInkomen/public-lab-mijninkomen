@@ -1,0 +1,371 @@
+title,body,labels,milestone
+[TIO-46] ALO: Reguliere wijzigingen en bugfixes,"**Jira ID:** TIO-46 (ID: 426973)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track
+
+**Story Points:** 5","DM26T2,In Behandeling",
+[TIO-267] BBZ: Reguliere wijzigingen en bugfixes,"**Jira ID:** TIO-267 (ID: 448675)
+
+**Status:** Trechter
+
+**Story Points:** 0","DM26T2,Trechter",
+[TIO-159] Stadspas: Reguliere wijzigingen en bugfixes,"**Jira ID:** TIO-159 (ID: 441522)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track - Alleen reactief noodzakelijke dingen.
+
+**Story Points:** 1","DM26T2,In Behandeling",
+[TIO-49] Geharmoniseerde autorisatiematrix GZAC,"**Jira ID:** TIO-49 (ID: 426983)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track
+
+**Story Points:** 3","DM26T2,GZAC,In Behandeling",Inari
+[TIO-48] Aansluiting HaalCentraal - bewoning ,"**Jira ID:** TIO-48 (ID: 426982)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track
+
+**Story Points:** 1","DM26T2,GZAC,In Behandeling,Ketenvoorziening",Inari
+"[TIO-126] Printstraat aansluiten op O-pas, ALO en BBZ","**Jira ID:** TIO-126 (ID: 441176)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track - OMCNotify aansluiting werkt technisch, eerste implementatie op O-pas.
+
+**Story Points:** 3","Architectuur,DM26T2,Document,GZAC,In Behandeling,Platform",Inari
+[TIO-53] ALO Koppelvlak: Impactanalyse volledige benutting,"**Jira ID:** TIO-53 (ID: 426988)
+
+**Status:** PI Ready
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟧 At risk with dependencies - Analyse in concept geleverd. Realiteitgehalte in keten nog te reviewen.
+
+**Story Points:** 1","DM26T2,Datawarehouse,GZAC,Kernsysteem,PI Ready,Werkdomein",
+[TIO-127] Informatieverzoek harmoniseren,"**Jira ID:** TIO-127 (ID: 441177)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track - Bevat diverse verbeteringen o.b.v. eerste gebruik Utrecht.
+
+**Story Points:** 5","DM26T2,Document,GZAC,In Behandeling,NLPortal",Junin
+[TIO-52] ALO Koppelvlak: Verbeteringen instap-versie,"**Jira ID:** TIO-52 (ID: 426987)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track
+
+**Story Points:** 1","DM26T2,GZAC,In Behandeling,Kernsysteem",Junin
+[TIO-9] Geharmoniseerd aanvraagformulier BB overige kosten,"**Jira ID:** TIO-9 (ID: 421700)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Digitaliseren aanvraag bijzondere bijstand (BB)
+
+**Progress:** 🟧 At risk with dependencies - Wordt opgeleverd door formulierenteam, voor implementatie afhankelijk van GZAC afhandelproces BB.
+
+**Story Points:** 5","DM26T2,Formulier,In Behandeling",
+[TIO-56] P-wet in balans: Verkorte aanvraagprocedure ALO,"**Jira ID:** TIO-56 (ID: 426991)
+
+**Status:** Refinement
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track - Deadline 1-1-2027. Impact bepaald en prioriteit verhoogd.
+
+**Story Points:** 1","DM26T2,DM26T3,Formulier,GZAC,Refinement",
+[TIO-57] P-wet in balans: Businessservice Vaststellen Inkomen aanpassing,"**Jira ID:** TIO-57 (ID: 426992)
+
+**Status:** PI Ready
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track - Deadline 1-1-2027. Prioriteit verhoogd, impact nog te bepalen.
+
+**Story Points:** 3","DM26T2,DM26T3,GZAC,PI Ready",
+[TIO-4] Afhandelproces BB (MVP),"**Jira ID:** TIO-4 (ID: 421695)
+
+**Status:** Refinement
+
+**Thema / Parent:** Digitaliseren aanvraag bijzondere bijstand (BB)
+
+**Progress:** 🟧 At risk with dependencies - MVP en implementatie(datum) nog te bepalen.
+
+**Story Points:** 8","DM26T2,DM26T3,GZAC,Refinement",
+[TIO-47] Upgrade GZAC naar Valtimo v13,"**Jira ID:** TIO-47 (ID: 426980)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟥 At risk - Huidige 13 versie is beheersmatig onvoldoende. Simulatie korte termijn risico’s loopt deze sprint en escalatie lange termijn oplossing naar architecten in gang gezet.
+
+**Story Points:** 8","Architectuur,DM26T2,DM26T3,GZAC,In Behandeling,Platform",Kivu
+[TIO-58] Herstructurering repositories MijnInkomen voor multi-gemeente inrichting,"**Jira ID:** TIO-58 (ID: 427029)
+
+**Status:** Refinement
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟧 At risk with dependencies - Mogelijk afhankelijkheid met V13. Tevens afhankelijk van aanpassing in product.
+
+**Story Points:** 5","DM26T2,DM26T3,GZAC,Refinement",
+[TIO-129] Aanpassingen t.b.v. BIO/ENSIA audit,"**Jira ID:** TIO-129 (ID: 441179)
+
+**Status:** Refinement
+
+**Progress:** 🟧 At risk with dependencies - Productaanpassing nodig.
+
+**Story Points:** 3","Architectuur,DM26T3,GZAC,Platform,Privacy,Refinement",
+[TIO-128] NLPortal security aanpassen volgens BDO rapport,"**Jira ID:** TIO-128 (ID: 441178)
+
+**Status:** Refinement
+
+**Progress:** 🟧 At risk with dependencies - Betreft productaanpassingen in NLPortal. Beleggen bij platformorganisatie.
+
+**Story Points:** 3","DM26T3,NLPortal,Refinement,Security",
+[TIO-16] Mutaties verwerken BB,"**Jira ID:** TIO-16 (ID: 423657)
+
+**Status:** Refinement
+
+**Thema / Parent:** Digitaliseren aanvraag bijzondere bijstand (BB)
+
+**Progress:** 🟧 At risk with dependencies - Geen voortgang op realisatie in T2.
+
+**Story Points:** 1","DM26T3,Formulier,Refinement",
+[TIO-60] ALO met gebruik van persoonsgegevens rechtstreeks bij HaalCentraal,"**Jira ID:** TIO-60 (ID: 427031)
+
+**Status:** Refinement
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Story Points:** 3","DM26T3,GZAC,Ketenvoorziening,Refinement",
+[TIO-268] ALO met collectieve wijzingen normen,"**Jira ID:** TIO-268 (ID: 448680)
+
+**Status:** Refinement
+
+**Story Points:** 1","DM26T3,Refinement",
+[TIO-214] Aansluiting ALO op scanstraat,"**Jira ID:** TIO-214 (ID: 445347)
+
+**Status:** Refinement
+
+**Story Points:** 5","DM26T3,GZAC,Platform,Refinement",
+[TIO-269] ALO met addtionele voorliggende voorzieningen en uitsluitingsgronden,"**Jira ID:** TIO-269 (ID: 448734)
+
+**Status:** Refinement
+
+**Story Points:** 5","DM26T3,GZAC,Refinement",
+[TIO-208] Stuurinformatie in dashboard ALO,"**Jira ID:** TIO-208 (ID: 444231)
+
+**Status:** Refinement
+
+**Story Points:** 3","DM26T3,GZAC,Refinement",
+[TIO-160] Digitale partnerlogin en identiteit vaststellen,"**Jira ID:** TIO-160 (ID: 441638)
+
+**Status:** Refinement
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Story Points:** 3","DM26T3,Formulier,GZAC,Refinement,Stretch",
+[TIO-209] Werkverdeling in teams,"**Jira ID:** TIO-209 (ID: 444233)
+
+**Status:** Refinement
+
+**Story Points:** 3","DM26T3,GZAC,Refinement",
+[TIO-10] Geharmoniseerd aanvraagformulier BB Bewindvoering voor professionals,"**Jira ID:** TIO-10 (ID: 421701)
+
+**Status:** Refinement
+
+**Thema / Parent:** Digitaliseren aanvraag bijzondere bijstand (BB)
+
+**Progress:** 🟨 At risk - On hold vanwege vakantie. Specs niet helemaal af. Nog te refinen en plannen met formulierenteam.
+
+**Story Points:** 5","DM26T2,DM26T3,Formulier,Refinement",
+[TIO-273] Den Bosch - Technische start van pilot Mijn Inkomen,"**Jira ID:** TIO-273 (ID: 448952)
+
+**Status:** In Behandeling
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track - Technische installatie loopt rechtstreeks Den Bosch naar Ritense.",In Behandeling,
+[TIO-51] Harmoniseren aanvraagformulier Levensonderhoud / IOAW,"**Jira ID:** TIO-51 (ID: 426986)
+
+**Status:** Refinement
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Story Points:** 5","DM26T3,Formulier,GZAC,Refinement,Stretch",
+[TIO-287] Buiten behandeling stelling,"**Jira ID:** TIO-287 (ID: 449781)
+
+**Status:** Refinement
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟧 At risk with dependencies - Ontbrekende processtap, planning nog onzeker.","Document,GZAC,Refinement",
+[TIO-62] Uitbreiding ALO-aanvraagformulier met routering naar Werk (inclusief partner),"**Jira ID:** TIO-62 (ID: 427033)
+
+**Status:** Trechter
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Story Points:** 3","Formulier,GZAC,Trechter,Werkdomein",
+[TIO-64] Naam-nummercontrole op IBAN in OpenFormulieren,"**Jira ID:** TIO-64 (ID: 427035)
+
+**Status:** Trechter
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Story Points:** 3","Formulier,GZAC,Trechter",
+[TIO-54] Volledige benutting ALO Koppelvlak,"**Jira ID:** TIO-54 (ID: 426989)
+
+**Status:** Trechter
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟧 At risk with dependencies - Volledige benutting betekent koppelvlak 1 keer aanroepen. Het ketenontwerp moet eerst af zijn voor implementatie.
+
+**Story Points:** 8","Architectuur,Datawarehouse,GZAC,Kernsysteem,Trechter",
+[TIO-61] Documentatie MijnInkomen-oplossing,"**Jira ID:** TIO-61 (ID: 427032)
+
+**Status:** Trechter
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track
+
+**Story Points:** 8","Kwaliteit,Trechter",
+[TIO-241] Domeinregister Inkomen versie 1 tbv BB draagkracht,"**Jira ID:** TIO-241 (ID: 447211)
+
+**Status:** Trechter
+
+**Story Points:** 5","GZAC,Trechter",
+[TIO-50] Geharmoniseerde draagkrachtberekening Bijzonder Bijstand,"**Jira ID:** TIO-50 (ID: 426984)
+
+**Status:** Trechter
+
+**Thema / Parent:** Digitaliseren aanvraag bijzondere bijstand (BB)
+
+**Story Points:** 5","GZAC,Trechter",
+[TIO-63] Batchoutput vanuit GZAC voor scriptverwerking in Socrates,"**Jira ID:** TIO-63 (ID: 427034)
+
+**Status:** Trechter
+
+**Thema / Parent:** Digitaliseren aanvraag bijzondere bijstand (BB)
+
+**Progress:** 🟧 At risk with dependencies - Actie Ritense om een oplossingsvoorstel te doen in afstemming met Wigo4it.","GZAC,Kernsysteem,Trechter",
+[TIO-65] Onderzoek harmonisatie documenten- en brievensysteem binnen MijnInkomen,"**Jira ID:** TIO-65 (ID: 427036)
+
+**Status:** Trechter
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Story Points:** 3","Architectuur,Platform,Trechter",
+[TIO-55] Basisafhandelproces BBZ,"**Jira ID:** TIO-55 (ID: 426990)
+
+**Status:** Trechter
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO",Trechter,
+[TIO-218] Aanvraag Studietoeslag,"**Jira ID:** TIO-218 (ID: 445825)
+
+**Status:** Trechter","Formulier,GZAC,Trechter",
+[TIO-242] Aanvraag Kinderopvangvergoeding,"**Jira ID:** TIO-242 (ID: 447741)
+
+**Status:** Trechter","Formulier,GZAC,Trechter",
+[TIO-243] DigiD Partner,"**Jira ID:** TIO-243 (ID: 447745)
+
+**Status:** Trechter","Formulier,Platform,Trechter",
+[TIO-244] DigiD Bewindvoerder,"**Jira ID:** TIO-244 (ID: 447746)
+
+**Status:** Trechter","Formulier,Platform,Trechter",
+[TIO-245] Vooringevuld aanvraagformulier LO met Suwinet,"**Jira ID:** TIO-245 (ID: 447753)
+
+**Status:** Trechter","Formulier,Ketenvoorziening,Platform,Privacy,Trechter",
+[TIO-246] Rechtservice met advies op besluit (rood/groen/oranje),"**Jira ID:** TIO-246 (ID: 447754)
+
+**Status:** Trechter","Architectuur,GZAC,Kernsysteem,Trechter",
+[TIO-247] Koppelvlak beslissen voor ALO,"**Jira ID:** TIO-247 (ID: 447758)
+
+**Status:** Trechter","Architectuur,GZAC,Kernsysteem,Trechter",
+[TIO-248] Geharmoniseerd wijzigingenformulier,"**Jira ID:** TIO-248 (ID: 447760)
+
+**Status:** Trechter","Architectuur,Formulier,GZAC,Kernsysteem,Trechter",
+[TIO-249] Automatisch besluit aanvraag BB bewindvoering en rechtshulp (BB pro),"**Jira ID:** TIO-249 (ID: 447764)
+
+**Status:** Trechter","Architectuur,Formulier,GZAC,Kernsysteem,Trechter",
+[TIO-250] Afhandelproces BB met vaststelservices,"**Jira ID:** TIO-250 (ID: 447766)
+
+**Status:** Trechter","GZAC,Trechter",
+[TIO-251] Afhandelproces aanvraag IIT NUG ,"**Jira ID:** TIO-251 (ID: 447767)
+
+**Status:** Trechter","Formulier,GZAC,Trechter",
+[TIO-252] Socrates vorderingen in IKO en portaal,"**Jira ID:** TIO-252 (ID: 447768)
+
+**Status:** Trechter","GZAC,Kernsysteem,Trechter",
+[TIO-253] Socates Diensten op IKO en portaal,"**Jira ID:** TIO-253 (ID: 447769)
+
+**Status:** Trechter","GZAC,Kernsysteem,Trechter",
+[TIO-254] CRM gegevens zoals telefoon en mail en voorkeuren in portaal,"**Jira ID:** TIO-254 (ID: 447771)
+
+**Status:** Trechter","NLPortal,Platform,Trechter",
+[TIO-255] Afhandelproces mutaties,"**Jira ID:** TIO-255 (ID: 447775)
+
+**Status:** Trechter","NLPortal,Platform,Trechter",
+[TIO-256] Koppelvlak wijzigingen Socrates,"**Jira ID:** TIO-256 (ID: 447776)
+
+**Status:** Trechter","Architectuur,GZAC,Kernsysteem,Trechter",
+[TIO-257] Documenten uit Socrates in IKO en portaal,"**Jira ID:** TIO-257 (ID: 447777)
+
+**Status:** Trechter","Architectuur,GZAC,Kernsysteem,NLPortal,Trechter",
+[TIO-258] Contactmomenten in MijnInkomen,"**Jira ID:** TIO-258 (ID: 447792)
+
+**Status:** Trechter","GZAC,Trechter",
+[TIO-262] Epic template,"**Jira ID:** TIO-262 (ID: 448320)
+
+**Status:** Trechter",Trechter,
+[TIO-263] nieuw,"**Jira ID:** TIO-263 (ID: 448322)
+
+**Status:** Trechter",Trechter,
+[TIO-290] UX-verbeteringen Release Junin,"**Jira ID:** TIO-290 (ID: 450246)
+
+**Status:** PI Ready",PI Ready,Junin
+[TIO-306] Stopflow formulieren,"**Jira ID:** TIO-306 (ID: 451722)
+
+**Status:** Trechter","Platform,Trechter",
+[TIO-308] Beleidsharmonisatie BB,"**Jira ID:** TIO-308 (ID: 452174)
+
+**Status:** Trechter",Trechter,
+[TIO-312] ALO aanvraag voor Dak en Thuislozen,"**Jira ID:** TIO-312 (ID: 453947)
+
+**Status:** Trechter",Trechter,
+[TIO-313] ALO aanvraag voor statushouders,"**Jira ID:** TIO-313 (ID: 453949)
+
+**Status:** Trechter",Trechter,
+[TIO-321] Businessservice Vaststellen Inkomen herontwerp,"**Jira ID:** TIO-321 (ID: 456517)
+
+**Status:** Trechter
+
+**Thema / Parent:** Doorontwikkeling Digitalisering IO - ALO
+
+**Progress:** 🟩 On track - Deadline 1-1-2027. Prioriteit verhoogd, impact nog te bepalen.
+
+**Story Points:** 3","DM26T3,GZAC,Trechter",

@@ -1,0 +1,23 @@
+name: Import Roadmap to GitHub Issues
+
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Import Issues
+        uses: dsanchezcr/issue-importer-action@v1.0.0
+        with:
+          file-path: "github_issues_mijninkomen.csv"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # Comment this line out if you want to import the issues
+          dry-run: true
