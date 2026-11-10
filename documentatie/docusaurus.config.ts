@@ -5,26 +5,13 @@ import type { Config } from '@docusaurus/types';
 import path from 'node:path';
 import footer from './footerConfig';
 import navbar from './navConfig';
-import nldsPrismTheme from './nldsPrism';
+// import nldsPrismTheme from './nldsPrism';
 import { addTrailingSlashPlugin } from './rehype-trailing-slash';
 import remarkCustomHeaderId from 'remark-custom-header-id';
 
 const siteUrl = 'https://nldesignsystem.nl';
 
 const config: Config = {
-  plugins: [
-    () => ({
-      name: 'alias-components',
-      configureWebpack: () => ({
-        resolve: {
-          alias: {
-            // These are the component in the Astro website.
-            '@components': path.resolve(__dirname, 'packages/website/src/components'),
-          },
-        },
-      }),
-    }),
-  ],
   title: 'MijnInkomen',
   titleDelimiter: '·',
   tagline: 'Gemeenten werken samen',
@@ -68,13 +55,6 @@ const config: Config = {
             return sidebarItems.map(addLinkedItemToSidebar);
           },
         },
-        blog: {
-          beforeDefaultRehypePlugins: [[addTrailingSlashPlugin, { siteUrl, stripOrigin: true }]],
-          postsPerPage: 'ALL',
-          blogSidebarCount: 0,
-          showReadingTime: false,
-          tags: 'tags.yml',
-        },
         theme: {
           customCss: [
             require.resolve('@nl-design-system-unstable/nlds-design-tokens/dist/root.css'),
@@ -88,10 +68,6 @@ const config: Config = {
   themeConfig: {
     navbar,
     footer,
-    prism: {
-      theme: nldsPrismTheme,
-      additionalLanguages: ['markup', 'jsx', 'tsx', 'json', 'js-extras', 'yaml', 'markdown', 'scss'],
-    },
     docs: {
       sidebar: {
         hideable: true,
@@ -104,13 +80,6 @@ const config: Config = {
     colorMode: {
       disableSwitch: true,
     },
-    // announcementBar: {
-    //   id: 'xxx',
-    //   content: '',
-    //   backgroundColor: 'var(--basis-color-accent-1-inverse-bg-subtle)',
-    //   textColor: 'var(--basis-color-accent-1-inverse-color-default)',
-    //   isCloseable: false,
-    // },
   },
   i18n: {
     defaultLocale: 'nl',

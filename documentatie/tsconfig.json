@@ -15,8 +15,7 @@
       "@docs/*": ["./docs/*"],
       "@site/*": ["./*"],
       "@theme/*": ["./src/theme/*"],
-      "@utils/*": ["./src/utils/*", "./packages/website/src/utils/*"],
-      "@components/*": ["./packages/website/src/components/*"]
+      "@utils/*": ["./src/utils/*"],
     }
   },
   "include": [
@@ -24,8 +23,6 @@
     "**/*.tsx",
     "**/*.mdx",
     "*.ts",
-    "docs/handboek/definition-of-done/candidate-stappenplan/selectiefase.md",
-    "docs/handboek/definition-of-done/candidate-stappenplan/voorbereidingsfase.md"
   ],
   "exclude": ["**/node_modules/*"]
 }
