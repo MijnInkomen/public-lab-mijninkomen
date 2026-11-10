@@ -1,0 +1,26 @@
+{
+  "id": "project/index",
+  "title": "Project",
+  "description": "Over het project NL Design System",
+  "source": "@site/docs/project/index.mdx",
+  "sourceDirName": "project",
+  "slug": "/project/",
+  "permalink": "/project/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Project",
+    "description": "Over het project NL Design System",
+    "page_layout": "overview",
+    "hide_title": true,
+    "hide_table_of_contents": true
+  },
+  "sidebar": "project",
+  "next": {
+    "title": "Over NL Design System",
+    "permalink": "/project/over-nl-design-system"
+  }
+}

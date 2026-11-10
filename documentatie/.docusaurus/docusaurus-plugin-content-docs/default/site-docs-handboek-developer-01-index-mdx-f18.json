@@ -1,0 +1,39 @@
+{
+  "id": "handboek/developer/index",
+  "title": "NL Design System introductie voor developers",
+  "description": "Introductie voor developers",
+  "source": "@site/docs/handboek/developer/01-index.mdx",
+  "sourceDirName": "handboek/developer",
+  "slug": "/handboek/developer/introductie",
+  "permalink": "/handboek/developer/introductie",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/01-index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "NL Design System introductie voor developers",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Introductie",
+    "pagination_label": "Introductie",
+    "description": "Introductie voor developers",
+    "slug": "/handboek/developer/introductie",
+    "keywords": [
+      "introductie",
+      "developer",
+      "aan de slag",
+      "getting started"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Figma-bestanden overzicht",
+    "permalink": "/figma"
+  },
+  "next": {
+    "title": "Introductie",
+    "permalink": "/handboek/developer/introductie"
+  }
+}

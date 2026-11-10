@@ -1,0 +1,39 @@
+{
+  "id": "componenten/pull-quote/index",
+  "title": "Pull Quote",
+  "description": "Illustratie met een citaat uit de hoofdtekst.",
+  "source": "@site/docs/componenten/pull-quote/index.mdx",
+  "sourceDirName": "componenten/pull-quote",
+  "slug": "/pull-quote",
+  "permalink": "/pull-quote",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/pull-quote/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Pull Quote",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Pull Quote",
+    "pagination_label": "Pull Quote",
+    "description": "Illustratie met een citaat uit de hoofdtekst.",
+    "issue_number": 443,
+    "slug": "/pull-quote",
+    "keywords": [
+      "pull quote",
+      "citaat",
+      "callout",
+      "streamer"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Progress List",
+    "permalink": "/progress-list"
+  },
+  "next": {
+    "title": "Radio Button",
+    "permalink": "/radio-button"
+  }
+}

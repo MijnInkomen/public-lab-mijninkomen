@@ -1,0 +1,33 @@
+{
+  "id": "componenten/video/index",
+  "title": "Video",
+  "description": "Video met bedieningselementen voor afspelen, pauzeren, tekstalternatieven, en meer.",
+  "source": "@site/docs/componenten/video/index.mdx",
+  "sourceDirName": "componenten/video",
+  "slug": "/video",
+  "permalink": "/video",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/video/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Video",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Video",
+    "pagination_label": "Video",
+    "description": "Video met bedieningselementen voor afspelen, pauzeren, tekstalternatieven, en meer.",
+    "issue_number": 69,
+    "slug": "/video"
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Unordered List",
+    "permalink": "/unordered-list"
+  },
+  "next": {
+    "title": "YouTube Video",
+    "permalink": "/youtube-video"
+  }
+}

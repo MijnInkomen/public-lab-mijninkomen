@@ -1,0 +1,31 @@
+{
+  "id": "community/events/design-systems-week/aanmelden",
+  "title": "Aanmelden voor Design Systems Week",
+  "description": "Tijdens Design Systems Week zijn er dagelijks meerdere korte sessies van diverse organisaties over het hoe en waarom van design systems.",
+  "source": "@site/docs/community/events/design-systems-week/aanmelden.mdx",
+  "sourceDirName": "community/events/design-systems-week",
+  "slug": "/events/design-systems-week/aanmelden",
+  "permalink": "/events/design-systems-week/aanmelden",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/design-systems-week/aanmelden.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Aanmelden voor Design Systems Week",
+    "title_sm": "Aanmelden",
+    "description": "Tijdens Design Systems Week zijn er dagelijks meerdere korte sessies van diverse organisaties over het hoe en waarom van design systems.",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Aanmelden",
+    "pagination_label": "Meld je aan voor Design Systems Week",
+    "slug": "/events/design-systems-week/aanmelden",
+    "translations": {
+      "en": "/events/design-systems-week/en/sign-up/"
+    },
+    "displayed_sidebar": "community",
+    "image": "https://raw.githubusercontent.com/nl-design-system/documentatie/assets/community-design-systems-week-2026.png",
+    "image_alt": "NL Design System Design Systems Week 2026 26-29 Oktober, online"
+  },
+  "sidebar": "community"
+}

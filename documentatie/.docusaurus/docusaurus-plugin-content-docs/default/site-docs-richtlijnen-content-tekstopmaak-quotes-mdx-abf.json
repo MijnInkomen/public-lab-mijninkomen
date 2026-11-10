@@ -1,0 +1,35 @@
+{
+  "id": "richtlijnen/content/tekstopmaak/quotes",
+  "title": "Citaten",
+  "description": "Met aanhalingstekens of de juiste markeringen zijn citaten herkenbaar voor de bezoeker met en zonder hulptechnologie.",
+  "source": "@site/docs/richtlijnen/content/tekstopmaak/quotes.mdx",
+  "sourceDirName": "richtlijnen/content/tekstopmaak",
+  "slug": "/richtlijnen/content/citaten",
+  "permalink": "/richtlijnen/content/citaten",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/tekstopmaak/quotes.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Citaten",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Citaten",
+    "pagination_label": "Citaten",
+    "description": "Met aanhalingstekens of de juiste markeringen zijn citaten herkenbaar voor de bezoeker met en zonder hulptechnologie.",
+    "slug": "/richtlijnen/content/citaten",
+    "keywords": [
+      "lettergrootte"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Toegankelijke linkteksten",
+    "permalink": "/richtlijnen/content/tekstopmaak/linkteksten"
+  },
+  "next": {
+    "title": "Opsommingen",
+    "permalink": "/richtlijnen/content/tekstopmaak/opsommingen"
+  }
+}

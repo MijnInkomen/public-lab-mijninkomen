@@ -1,0 +1,23 @@
+{
+  "id": "project/newsletter-success",
+  "title": "Bedankt voor je aanmelding voor onze nieuwsbrief",
+  "description": "Je bent nu aangemeld voor onze nieuwsbrief!",
+  "source": "@site/docs/project/newsletter-success.mdx",
+  "sourceDirName": "project",
+  "slug": "/project/blijf-op-de-hoogte/nieuwsbrief/bedankt",
+  "permalink": "/project/blijf-op-de-hoogte/nieuwsbrief/bedankt",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/newsletter-success.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Bedankt voor je aanmelding voor onze nieuwsbrief",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Aanmelden",
+    "pagination_label": "2 wekelijkse updates van het kernteam en community",
+    "slug": "/project/blijf-op-de-hoogte/nieuwsbrief/bedankt",
+    "unlisted": true
+  }
+}

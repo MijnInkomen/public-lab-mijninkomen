@@ -1,0 +1,27 @@
+{
+  "id": "community/sluit-je-aan-success",
+  "title": "Bedankt voor je aanmelding voor de NL Design System community",
+  "description": "Meld je aan bij de community van NL Design System.",
+  "source": "@site/docs/community/sluit-je-aan-success.mdx",
+  "sourceDirName": "community",
+  "slug": "/community/sluit-je-aan/bedankt",
+  "permalink": "/community/sluit-je-aan/bedankt",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/sluit-je-aan-success.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Bedankt voor je aanmelding voor de NL Design System community",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Sluit je aan",
+    "pagination_label": "Sluit je aan",
+    "description": "Meld je aan bij de community van NL Design System.",
+    "slug": "/community/sluit-je-aan/bedankt",
+    "unlisted": true,
+    "keywords": [
+      "nl design system"
+    ]
+  }
+}

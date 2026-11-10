@@ -1,0 +1,43 @@
+{
+  "id": "wcag/3.1.05",
+  "title": "WCAG-succescriterium 3.1.5 Leesniveau",
+  "description": "Zorg ervoor dat teksten begrijpelijk zijn voor een lezer uit de tweede klas van het middelbaar onderwijs. Als de tekst moeilijker is, bied dan ook een eenvoudig leesbare versie van de tekst aan als alternatief.",
+  "source": "@site/docs/wcag/3.1.05.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/3.1.5",
+  "permalink": "/wcag/3.1.5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/3.1.05.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 3.1.5 Leesniveau",
+    "title_sm": "3.1.5 Leesniveau",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "3.1.5 Leesniveau",
+    "pagination_label": "WCAG-succescriterium 3.1.5 Leesniveau",
+    "description": "Zorg ervoor dat teksten begrijpelijk zijn voor een lezer uit de tweede klas van het middelbaar onderwijs. Als de tekst moeilijker is, bied dan ook een eenvoudig leesbare versie van de tekst aan als alternatief.",
+    "slug": "3.1.5",
+    "conformance_level": "Niveau AAA",
+    "keywords": [
+      "WCAG",
+      "AAA",
+      "begrijpelijk",
+      "leesbaar",
+      "understandable",
+      "readable",
+      "reading level"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 3.1.4 Afkortingen",
+    "permalink": "/wcag/3.1.4"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 3.1.6 Uitspraak",
+    "permalink": "/wcag/3.1.6"
+  }
+}

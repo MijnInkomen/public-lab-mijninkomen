@@ -1,0 +1,37 @@
+{
+  "id": "richtlijnen/stijl/colour/perception/index",
+  "title": "Let op verschillen in waarneming van kleur",
+  "description": "Vergeet niet dat mensen kleur op verschillende manieren kunnen waarnemen en ervaren. Soms zelfs helemaal niet.",
+  "source": "@site/docs/richtlijnen/stijl/colour/5-perception/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/colour/5-perception",
+  "slug": "/richtlijnen/stijl/kleuren/waarneming",
+  "permalink": "/richtlijnen/stijl/kleuren/waarneming",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/colour/5-perception/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Let op verschillen in waarneming van kleur",
+    "title_sm": "Verschillen in waarneming van kleur",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Verschillen in waarneming van kleur",
+    "pagination_label": "Let op verschillen in waarneming van kleur",
+    "description": "Vergeet niet dat mensen kleur op verschillende manieren kunnen waarnemen en ervaren. Soms zelfs helemaal niet.",
+    "slug": "/richtlijnen/stijl/kleuren/waarneming",
+    "keywords": [
+      "kleurcontrast",
+      "tekst"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Vertrouw niet alleen op kleur",
+    "permalink": "/richtlijnen/stijl/kleuren/niet-kleur-alleen"
+  },
+  "next": {
+    "title": "Let op voorkeursinstellingen voor kleur",
+    "permalink": "/richtlijnen/stijl/kleuren/voorkeuren"
+  }
+}

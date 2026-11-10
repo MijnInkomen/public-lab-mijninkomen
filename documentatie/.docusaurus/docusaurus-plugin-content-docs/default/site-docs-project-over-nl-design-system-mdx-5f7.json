@@ -1,0 +1,36 @@
+{
+  "id": "project/over-nl-design-system",
+  "title": "Over NL Design System",
+  "description": "Wat is NL Design System en hoe werken we?",
+  "source": "@site/docs/project/over-nl-design-system.mdx",
+  "sourceDirName": "project",
+  "slug": "/project/over-nl-design-system",
+  "permalink": "/project/over-nl-design-system",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/over-nl-design-system.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Over NL Design System",
+    "title_sm": "Over NL Design System",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "navigation_order": 1,
+    "sidebar_label": "Over NL Design System",
+    "pagination_label": "Over NL Design System",
+    "description": "Wat is NL Design System en hoe werken we?",
+    "keywords": [
+      "NL Design System"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Project",
+    "permalink": "/project/"
+  },
+  "next": {
+    "title": "Veelgestelde vragen",
+    "permalink": "/project/faq"
+  }
+}

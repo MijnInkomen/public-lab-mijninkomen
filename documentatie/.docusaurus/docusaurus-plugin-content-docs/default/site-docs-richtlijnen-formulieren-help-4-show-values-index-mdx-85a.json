@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/help/show-values/index",
+  "title": "Geef geldige waardes aan voor een invoerveld",
+  "description": "Richtlijnen om geldige waardes aan een invoerveld te geven.",
+  "source": "@site/docs/richtlijnen/formulieren/help/4-show-values/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/help/4-show-values",
+  "slug": "/richtlijnen/formulieren/voorkom-fouten/geldige-waardes",
+  "permalink": "/richtlijnen/formulieren/voorkom-fouten/geldige-waardes",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/help/4-show-values/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geef geldige waardes aan voor een invoerveld",
+    "title_sm": "Geef geldige waardes aan",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Geef geldige waardes aan",
+    "pagination_label": "Geef geldige waardes aan een invoerveld",
+    "description": "Richtlijnen om geldige waardes aan een invoerveld te geven.",
+    "slug": "/richtlijnen/formulieren/voorkom-fouten/geldige-waardes",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Keur niet te snel af",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/keur-niet-te-snel-af"
+  },
+  "next": {
+    "title": "Autocomplete in een formulier",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/autocomplete"
+  }
+}

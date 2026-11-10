@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/error/timing/index",
+  "title": "Controleer op het juiste moment op fouten",
+  "description": "Richtlijnen voor controleren van fouten in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/error/1-timing/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/error/1-timing",
+  "slug": "/richtlijnen/formulieren/foutmeldingen/controleren",
+  "permalink": "/richtlijnen/formulieren/foutmeldingen/controleren",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/error/1-timing/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Controleer op het juiste moment op fouten",
+    "title_sm": "Fouten controleren",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Fouten controleren",
+    "pagination_label": "Fouten controleren",
+    "description": "Richtlijnen voor controleren van fouten in een formulier.",
+    "slug": "/richtlijnen/formulieren/foutmeldingen/controleren",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Foutmeldingen",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/"
+  },
+  "next": {
+    "title": "Fouten beschrijven",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/beschrijven"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "componenten/form-field-label/index",
+  "title": "Form Field Label",
+  "description": "Toont een tekstlabel dat informeert over de in te vullen informatie.",
+  "source": "@site/docs/componenten/form-field-label/index.mdx",
+  "sourceDirName": "componenten/form-field-label",
+  "slug": "/form-field-label",
+  "permalink": "/form-field-label",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/form-field-label/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Form Field Label",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Form Field Label",
+    "pagination_label": "Form Field Label",
+    "description": "Toont een tekstlabel dat informeert over de in te vullen informatie.",
+    "issue_number": 177,
+    "slug": "/form-field-label",
+    "keywords": [
+      "caption",
+      "form",
+      "field label",
+      "form field label",
+      "form input",
+      "form label",
+      "formlabel",
+      "formulier",
+      "formulierelement",
+      "input label",
+      "label",
+      "text label",
+      "textlabel"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Form Field Error Message",
+    "permalink": "/form-field-error-message"
+  },
+  "next": {
+    "title": "Form Field Label Suffix",
+    "permalink": "/form-field-label-suffix"
+  }
+}

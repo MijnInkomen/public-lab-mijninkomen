@@ -1,0 +1,56 @@
+{
+  "id": "componenten/input-group/index",
+  "title": "Input Group",
+  "description": "Formulierveld waarmee je een waarde kunt bewerken in een groep van meerdere invoervelden.",
+  "source": "@site/docs/componenten/input-group/index.mdx",
+  "sourceDirName": "componenten/input-group",
+  "slug": "/input-group",
+  "permalink": "/input-group",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/input-group/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Input Group",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Input Group",
+    "pagination_label": "Input Group",
+    "description": "Formulierveld waarmee je een waarde kunt bewerken in een groep van meerdere invoervelden.",
+    "issue_number": 178,
+    "slug": "/input-group",
+    "keywords": [
+      "combinatie",
+      "form",
+      "form controls",
+      "form field group",
+      "form group",
+      "formulier",
+      "formulierelement",
+      "formulierveld groep",
+      "groep invoervelden",
+      "groep textvelden",
+      "groep velden",
+      "group input",
+      "input fields",
+      "input group",
+      "invoerveld",
+      "invoervelden",
+      "text field group",
+      "text fields group",
+      "text input group",
+      "textboxes",
+      "velden"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Image",
+    "permalink": "/image"
+  },
+  "next": {
+    "title": "Language Navigation",
+    "permalink": "/language-navigation"
+  }
+}

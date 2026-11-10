@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.4.04",
+  "title": "WCAG-succescriterium 2.4.4 Linkdoel (in context)",
+  "description": "De linktekst vertelt aan de gebruiker waar de link naar toe gaat (het linkdoel).",
+  "source": "@site/docs/wcag/2.4.04.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.4.4",
+  "permalink": "/wcag/2.4.4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.4.04.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.4.4 Linkdoel (in context)",
+    "title_sm": "2.4.4 Linkdoel (in context)",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.4.4 Linkdoel (in context)",
+    "pagination_label": "WCAG-succescriterium 2.4.4 Linkdoel (in context)",
+    "description": "De linktekst vertelt aan de gebruiker waar de link naar toe gaat (het linkdoel).",
+    "slug": "2.4.4",
+    "conformance_level": "Niveau A",
+    "keywords": [
+      "WCAG",
+      "A",
+      "bedienbaar",
+      "navigeerbaar",
+      "operable",
+      "navigable",
+      "link purpose (in context)"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.4.3 Focus volgorde",
+    "permalink": "/wcag/2.4.3"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.4.5 Meerdere manieren",
+    "permalink": "/wcag/2.4.5"
+  }
+}

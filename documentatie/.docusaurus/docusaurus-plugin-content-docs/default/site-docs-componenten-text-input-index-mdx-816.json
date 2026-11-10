@@ -1,0 +1,58 @@
+{
+  "id": "componenten/text-input/index",
+  "title": "Text Input",
+  "description": "Biedt de mogelijkheid om één regel aan tekens in te vullen.",
+  "source": "@site/docs/componenten/text-input/index.mdx",
+  "sourceDirName": "componenten/text-input",
+  "slug": "/text-input",
+  "permalink": "/text-input",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/text-input/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Text Input",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Text Input",
+    "pagination_label": "Text Input",
+    "description": "Biedt de mogelijkheid om één regel aan tekens in te vullen.",
+    "issue_number": 200,
+    "slug": "/text-input",
+    "keywords": [
+      "editable textfield",
+      "form",
+      "form control",
+      "formulier",
+      "formulierelement",
+      "formfield",
+      "form field",
+      "form input",
+      "formulier-stap",
+      "input",
+      "input field",
+      "inputfield",
+      "invoerveld",
+      "invulveld",
+      "tekstveld",
+      "tekstinvoer",
+      "text box",
+      "textbox",
+      "text entry",
+      "text field",
+      "text input",
+      "textinput",
+      "veld"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Task Navigation",
+    "permalink": "/task-navigation"
+  },
+  "next": {
+    "title": "Text Area",
+    "permalink": "/text-area"
+  }
+}

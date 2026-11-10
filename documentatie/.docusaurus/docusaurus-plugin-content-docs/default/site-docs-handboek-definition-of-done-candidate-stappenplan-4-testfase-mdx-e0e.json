@@ -1,0 +1,42 @@
+{
+  "id": "handboek/definition-of-done/candidate-stappenplan/testfase",
+  "title": "4. Testfase",
+  "description": "Stappen voor de Testfase van de Definition of Done voor Candidate",
+  "source": "@site/docs/handboek/definition-of-done/candidate-stappenplan/4-testfase.mdx",
+  "sourceDirName": "handboek/definition-of-done/candidate-stappenplan",
+  "slug": "/handboek/estafettemodel/componenten/candidate/testfase",
+  "permalink": "/handboek/estafettemodel/componenten/candidate/testfase",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/candidate-stappenplan/4-testfase.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "4. Testfase",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "4. Testfase",
+    "sidebar_position": 4,
+    "navigation_order": 4,
+    "pagination_label": "4. Testfase",
+    "description": "Stappen voor de Testfase van de Definition of Done voor Candidate",
+    "slug": "/handboek/estafettemodel/componenten/candidate/testfase",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done",
+      "candidate"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "3. Ontwikkelfase",
+    "permalink": "/handboek/estafettemodel/componenten/candidate/ontwikkelfase"
+  },
+  "next": {
+    "title": "5. Publicatiefase",
+    "permalink": "/handboek/estafettemodel/componenten/candidate/publicatiefase"
+  }
+}

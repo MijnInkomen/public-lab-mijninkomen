@@ -1,0 +1,36 @@
+{
+  "id": "project/schrijfwijzer/doelgroepen",
+  "title": "Doelgroepen",
+  "description": "Doelgroepen voor NL Design System communicatie.",
+  "source": "@site/docs/project/schrijfwijzer/doelgroepen.mdx",
+  "sourceDirName": "project/schrijfwijzer",
+  "slug": "/project/schrijfwijzer/doelgroepen",
+  "permalink": "/project/schrijfwijzer/doelgroepen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/schrijfwijzer/doelgroepen.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Doelgroepen",
+    "hide_title": true,
+    "sidebar_label": "Doelgroepen",
+    "sidebar_position": 4,
+    "navigation_order": 4,
+    "pagination_label": "Doelgroepen",
+    "description": "Doelgroepen voor NL Design System communicatie.",
+    "keywords": [
+      "kernteam"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Doelen",
+    "permalink": "/project/schrijfwijzer/doelen"
+  },
+  "next": {
+    "title": "Nederlands",
+    "permalink": "/project/schrijfwijzer/nederlands"
+  }
+}

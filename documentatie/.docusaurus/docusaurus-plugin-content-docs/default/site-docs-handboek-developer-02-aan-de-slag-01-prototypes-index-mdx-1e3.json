@@ -1,0 +1,33 @@
+{
+  "id": "handboek/developer/aan-de-slag/prototypes/index",
+  "title": "Prototypes met NL Design System",
+  "description": "Als developer prototypes maken met NL Design System",
+  "source": "@site/docs/handboek/developer/02-aan-de-slag/01-prototypes/index.mdx",
+  "sourceDirName": "handboek/developer/02-aan-de-slag/01-prototypes",
+  "slug": "/handboek/developer/prototypes/",
+  "permalink": "/handboek/developer/prototypes/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/02-aan-de-slag/01-prototypes/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Prototypes met NL Design System",
+    "title_sm": "Prototypes",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Prototypes",
+    "pagination_label": "Prototypes",
+    "description": "Als developer prototypes maken met NL Design System",
+    "slug": "/handboek/developer/prototypes/"
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Aan de slag",
+    "permalink": "/handboek/developer/aan-de-slag/"
+  },
+  "next": {
+    "title": "Prototypes zonder front-end framework",
+    "permalink": "/handboek/developer/prototypes/zonder-front-end-framework/"
+  }
+}

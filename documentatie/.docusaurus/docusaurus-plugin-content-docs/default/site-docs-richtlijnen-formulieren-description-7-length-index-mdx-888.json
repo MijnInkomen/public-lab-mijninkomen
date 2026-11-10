@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/description/length/index",
+  "title": "Houd de description kort en to-the-point",
+  "description": "Richtlijnen voor lengte van beschrijvingen in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/description/7-length/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/description/7-length",
+  "slug": "/richtlijnen/formulieren/descriptions/lengte",
+  "permalink": "/richtlijnen/formulieren/descriptions/lengte",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/description/7-length/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Houd de description kort en to-the-point",
+    "title_sm": "Lengte description",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Lengte description",
+    "pagination_label": "Lengte description",
+    "description": "Richtlijnen voor lengte van beschrijvingen in een formulier.",
+    "slug": "/richtlijnen/formulieren/descriptions/lengte",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Grootte aanklikbaar gedeelte",
+    "permalink": "/richtlijnen/formulieren/descriptions/aanklikbaar-gedeelte"
+  },
+  "next": {
+    "title": "Foutmeldingen",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "wcag/3.3.08",
+  "title": "WCAG-succescriterium 3.3.8 Toegankelijke authenticatie (minimum)",
+  "description": "Zorg dat inloggen niet afhankelijk is van een cognitieve functietest, zoals het onthouden van een wachtwoord.",
+  "source": "@site/docs/wcag/3.3.08.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/3.3.8",
+  "permalink": "/wcag/3.3.8",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/3.3.08.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 3.3.8 Toegankelijke authenticatie (minimum)",
+    "title_sm": "3.3.8 Toegankelijke authenticatie (minimum)",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "3.3.8 Toegankelijke authenticatie (minimum)",
+    "pagination_label": "WCAG-succescriterium 3.3.8 Toegankelijke authenticatie (minimum)",
+    "description": "Zorg dat inloggen niet afhankelijk is van een cognitieve functietest, zoals het onthouden van een wachtwoord.",
+    "slug": "3.3.8",
+    "conformance_level": "Niveau AA",
+    "keywords": [
+      "WCAG",
+      "AA",
+      "begrijpelijk",
+      "assistentie bij invoer",
+      "understandable",
+      "input assistance",
+      "accessible authentication (minimum)"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 3.3.7 Overbodige invoer",
+    "permalink": "/wcag/3.3.7"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 3.3.9 Toegankelijke authenticatie (uitgebreid)",
+    "permalink": "/wcag/3.3.9"
+  }
+}

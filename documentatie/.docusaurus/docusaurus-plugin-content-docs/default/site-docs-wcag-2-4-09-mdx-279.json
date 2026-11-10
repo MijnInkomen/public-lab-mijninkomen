@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.4.09",
+  "title": "WCAG-succescriterium 2.4.9 Linkdoel (alleen link)",
+  "description": "Maak duidelijk waar een link naartoe gaat. Zorg dat de linktekst op zichzelf het doel duidelijk beschrijft.",
+  "source": "@site/docs/wcag/2.4.09.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.4.9",
+  "permalink": "/wcag/2.4.9",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.4.09.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.4.9 Linkdoel (alleen link)",
+    "title_sm": "2.4.9 Linkdoel (alleen link)",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.4.9 Linkdoel (alleen link)",
+    "pagination_label": "WCAG-succescriterium 2.4.9 Linkdoel (alleen link)",
+    "description": "Maak duidelijk waar een link naartoe gaat. Zorg dat de linktekst op zichzelf het doel duidelijk beschrijft.",
+    "slug": "2.4.9",
+    "conformance_level": "Niveau AAA",
+    "keywords": [
+      "WCAG",
+      "AAA",
+      "bedienbaar",
+      "navigeerbaar",
+      "operable",
+      "navigable",
+      "link purpose (link only)"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "2.4.8 Locatie",
+    "permalink": "/wcag/2.4.8"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.4.10 Paragraafkoppen",
+    "permalink": "/wcag/2.4.10"
+  }
+}

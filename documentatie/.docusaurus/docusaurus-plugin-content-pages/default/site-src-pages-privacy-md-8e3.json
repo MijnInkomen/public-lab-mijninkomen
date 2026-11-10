@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/privacy",
+  "source": "@site/src/pages/privacy.md",
+  "title": "Privacyverklaring",
+  "description": "Deze pagina komt later.",
+  "frontMatter": {
+    "title": "Privacyverklaring",
+    "hide_table_of_contents": true
+  },
+  "unlisted": false
+}

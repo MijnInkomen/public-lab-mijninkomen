@@ -1,0 +1,37 @@
+{
+  "id": "project/kwaliteitsaanpak/continuous-deployment",
+  "title": "Continuous Deployment",
+  "description": "Uitleg over de CI/CD pipelines van NL Design System",
+  "source": "@site/docs/project/kwaliteitsaanpak/continuous-deployment.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/continuous-deployment",
+  "permalink": "/project/kwaliteitsaanpak/continuous-deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/continuous-deployment.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 22,
+  "frontMatter": {
+    "title": "Continuous Deployment",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Continuous Deployment",
+    "sidebar_position": 22,
+    "pagination_label": "Continuous Deployment",
+    "description": "Uitleg over de CI/CD pipelines van NL Design System",
+    "keywords": [
+      "ci",
+      "cd"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Continuous Delivery",
+    "permalink": "/project/kwaliteitsaanpak/continuous-delivery"
+  },
+  "next": {
+    "title": "Release notes",
+    "permalink": "/project/kwaliteitsaanpak/release-notes"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "richtlijnen/formulieren/questions/index",
+  "title": "Uit te vragen informatie in een formulier",
+  "description": "Richtlijnen voor uit te vragen informatie in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/questions/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/questions",
+  "slug": "/richtlijnen/formulieren/vragen/",
+  "permalink": "/richtlijnen/formulieren/vragen/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/questions/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Uit te vragen informatie in een formulier",
+    "title_sm": "Uit te vragen informatie",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Introductie uit te vragen informatie",
+    "sidebar_position": 11,
+    "navigation_order": 11,
+    "pagination_label": "Uit te vragen informatie in een formulier",
+    "description": "Richtlijnen voor uit te vragen informatie in een formulier.",
+    "slug": "/richtlijnen/formulieren/vragen/",
+    "keywords": [
+      "informatie",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Geen positieve tabindex",
+    "permalink": "/richtlijnen/formulieren/toetsenbord/tabindex"
+  },
+  "next": {
+    "title": "Uit te vragen informatie in een formulier",
+    "permalink": "/richtlijnen/formulieren/vragen/"
+  }
+}

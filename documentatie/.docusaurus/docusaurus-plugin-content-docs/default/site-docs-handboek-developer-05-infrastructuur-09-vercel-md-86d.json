@@ -1,0 +1,37 @@
+{
+  "id": "handboek/developer/infrastructuur/vercel",
+  "title": "Vercel",
+  "description": "Waarom gebruikt NL Design System de tool Vercel?",
+  "source": "@site/docs/handboek/developer/05-infrastructuur/09-vercel.md",
+  "sourceDirName": "handboek/developer/05-infrastructuur",
+  "slug": "/vercel",
+  "permalink": "/vercel",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/05-infrastructuur/09-vercel.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Vercel",
+    "slug": "/vercel",
+    "hide_table_of_contents": false,
+    "sidebar_label": "Vercel",
+    "pagination_label": "Vercel",
+    "description": "Waarom gebruikt NL Design System de tool Vercel?",
+    "keywords": [
+      "GitHub Actions",
+      "Vercel",
+      "Deployment"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Publiceren van npm packages",
+    "permalink": "/handboek/developer/npm-publish/"
+  },
+  "next": {
+    "title": "Voor organisaties",
+    "permalink": "/handboek/organisatie/overzicht"
+  }
+}

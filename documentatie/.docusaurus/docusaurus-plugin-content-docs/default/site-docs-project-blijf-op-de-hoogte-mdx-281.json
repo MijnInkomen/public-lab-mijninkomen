@@ -1,0 +1,37 @@
+{
+  "id": "project/blijf-op-de-hoogte",
+  "title": "Op de hoogte blijven",
+  "description": "De verschillende manieren om op de hoogte te blijven van wat er in het kernteam of in de community gebeurt.",
+  "source": "@site/docs/project/blijf-op-de-hoogte.mdx",
+  "sourceDirName": "project",
+  "slug": "/project/blijf-op-de-hoogte",
+  "permalink": "/project/blijf-op-de-hoogte",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/blijf-op-de-hoogte.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Op de hoogte blijven",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "navigation_order": 5,
+    "sidebar_label": "Op de hoogte blijven",
+    "pagination_label": "Op de hoogte blijven",
+    "description": "De verschillende manieren om op de hoogte te blijven van wat er in het kernteam of in de community gebeurt.",
+    "keywords": [
+      "heartbeat",
+      "blog",
+      "slack"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Kernteam",
+    "permalink": "/project/kernteam"
+  },
+  "next": {
+    "title": "Klachten",
+    "permalink": "/project/klachten"
+  }
+}

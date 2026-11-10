@@ -1,0 +1,26 @@
+{
+  "id": "footer/privacy-policy",
+  "title": "Privacy policy",
+  "description": "For various activities of NL Design System you provide personal data. On this page you can find what we do with this data",
+  "source": "@site/docs/footer/privacy-policy.mdx",
+  "sourceDirName": "footer",
+  "slug": "/privacy-policy",
+  "permalink": "/privacy-policy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/footer/privacy-policy.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Privacy policy",
+    "description": "For various activities of NL Design System you provide personal data. On this page you can find what we do with this data",
+    "lang": "en",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "pagination_label": "Privacy policy",
+    "slug": "/privacy-policy",
+    "translations": {
+      "nl": "/privacyverklaring/"
+    }
+  }
+}

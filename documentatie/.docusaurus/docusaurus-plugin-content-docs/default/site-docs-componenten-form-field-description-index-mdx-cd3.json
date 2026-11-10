@@ -1,0 +1,50 @@
+{
+  "id": "componenten/form-field-description/index",
+  "title": "Form Field Description",
+  "description": "Extra tekst bij een invoerveld die helpt bij het invullen van een formulier door een beschrijving, instructies of suggesties.",
+  "source": "@site/docs/componenten/form-field-description/index.mdx",
+  "sourceDirName": "componenten/form-field-description",
+  "slug": "/form-field-description",
+  "permalink": "/form-field-description",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/form-field-description/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Form Field Description",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Form Field Description",
+    "pagination_label": "Form Field Description",
+    "description": "Extra tekst bij een invoerveld die helpt bij het invullen van een formulier door een beschrijving, instructies of suggesties.",
+    "issue_number": 174,
+    "slug": "/form-field-description",
+    "keywords": [
+      "beschrijving",
+      "description",
+      "form",
+      "form field",
+      "form field description",
+      "form field help text",
+      "form field hint",
+      "formulier",
+      "formulierelement",
+      "helper",
+      "help text",
+      "hint",
+      "hint label",
+      "hint tekst",
+      "hint text"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Form Field",
+    "permalink": "/form-field"
+  },
+  "next": {
+    "title": "Form Field Error Message",
+    "permalink": "/form-field-error-message"
+  }
+}

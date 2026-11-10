@@ -1,0 +1,43 @@
+{
+  "id": "handboek/designer/werken-met-nl-design-system/figma-stappenplan",
+  "title": "Figma stappenplan",
+  "description": "Een stappenplan om de NL Design System bibliotheken te gebruiken en eventueel een eigen thema door te voeren.",
+  "source": "@site/docs/handboek/designer/werken-met-nl-design-system/figma-stappenplan.mdx",
+  "sourceDirName": "handboek/designer/werken-met-nl-design-system",
+  "slug": "/handboek/designer/figma-stappenplan",
+  "permalink": "/handboek/designer/figma-stappenplan",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/designer/werken-met-nl-design-system/figma-stappenplan.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Figma stappenplan",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Figma stappenplan",
+    "sidebar_position": 3,
+    "navigation_order": 3,
+    "pagination_label": "Figma stappenplan",
+    "description": "Een stappenplan om de NL Design System bibliotheken te gebruiken en eventueel een eigen thema door te voeren.",
+    "slug": "/handboek/designer/figma-stappenplan",
+    "keywords": [
+      "index",
+      "designer",
+      "meedoen",
+      "stappenplan",
+      "figma",
+      "design tokens"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Figma structuur",
+    "permalink": "/handboek/designer/figma-structuur"
+  },
+  "next": {
+    "title": "Figma hygiëne",
+    "permalink": "/handboek/designer/figma-hygiene"
+  }
+}

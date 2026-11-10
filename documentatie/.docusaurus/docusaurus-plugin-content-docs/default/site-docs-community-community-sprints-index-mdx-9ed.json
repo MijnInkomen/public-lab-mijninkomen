@@ -1,0 +1,41 @@
+{
+  "id": "community/community-sprints/index",
+  "title": "Community Sprints",
+  "description": "Uitleg over de NL Design System Community Sprints",
+  "source": "@site/docs/community/community-sprints/index.mdx",
+  "sourceDirName": "community/community-sprints",
+  "slug": "/community/community-sprints/",
+  "permalink": "/community/community-sprints/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/community-sprints/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Community Sprints",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "navigation_order": 3,
+    "sidebar_label": "Community Sprints",
+    "pagination_label": "Community Sprints",
+    "description": "Uitleg over de NL Design System Community Sprints",
+    "slug": "/community/community-sprints/",
+    "keywords": [
+      "nl design system",
+      "community sprints",
+      "rijkshuisstijl community",
+      "mijn services community",
+      "mijnservices community",
+      "overheidsbrede portalen community"
+    ]
+  },
+  "sidebar": "community",
+  "previous": {
+    "title": "Community in cijfers",
+    "permalink": "/community/wie-doet-mee"
+  },
+  "next": {
+    "title": "Over MijnServices Community",
+    "permalink": "/community/community-sprints/mijn-services-community/"
+  }
+}

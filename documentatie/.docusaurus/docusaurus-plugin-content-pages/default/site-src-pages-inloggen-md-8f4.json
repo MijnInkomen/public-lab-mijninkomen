@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/inloggen",
+  "source": "@site/src/pages/inloggen.md",
+  "title": "Inloggen",
+  "description": "Deze pagina komt later.",
+  "frontMatter": {
+    "title": "Inloggen",
+    "hide_table_of_contents": true
+  },
+  "unlisted": false
+}

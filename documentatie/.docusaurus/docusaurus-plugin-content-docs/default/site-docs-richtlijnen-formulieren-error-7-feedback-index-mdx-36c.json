@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/error/feedback/index",
+  "title": "Geef feedback aan screenreadergebruikers",
+  "description": "Richtlijnen voor feedback aan screenreadergebruikers van foutmeldingen in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/error/7-feedback/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/error/7-feedback",
+  "slug": "/richtlijnen/formulieren/foutmeldingen/screenreaderfeedback",
+  "permalink": "/richtlijnen/formulieren/foutmeldingen/screenreaderfeedback",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/error/7-feedback/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geef feedback aan screenreadergebruikers",
+    "title_sm": "Screenreaderfeedback",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Screenreaderfeedback",
+    "pagination_label": "Screenreaderfeedback",
+    "description": "Richtlijnen voor feedback aan screenreadergebruikers van foutmeldingen in een formulier.",
+    "slug": "/richtlijnen/formulieren/foutmeldingen/screenreaderfeedback",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Samenvatting fouten",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/samenvatting"
+  },
+  "next": {
+    "title": "Fieldsets",
+    "permalink": "/richtlijnen/formulieren/fieldsets/"
+  }
+}

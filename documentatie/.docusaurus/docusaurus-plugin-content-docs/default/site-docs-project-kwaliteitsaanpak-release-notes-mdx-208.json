@@ -1,0 +1,37 @@
+{
+  "id": "project/kwaliteitsaanpak/release-notes",
+  "title": "Release notes",
+  "description": "Dit is hoe we release notes bijhouden voor NL Design System.",
+  "source": "@site/docs/project/kwaliteitsaanpak/release-notes.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/release-notes",
+  "permalink": "/project/kwaliteitsaanpak/release-notes",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/release-notes.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Release notes",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Release notes",
+    "sidebar_position": 30,
+    "pagination_label": "Release notes",
+    "description": "Dit is hoe we release notes bijhouden voor NL Design System.",
+    "keywords": [
+      "changelog",
+      "release notes"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Continuous Deployment",
+    "permalink": "/project/kwaliteitsaanpak/continuous-deployment"
+  },
+  "next": {
+    "title": "Productieomgeving",
+    "permalink": "/project/kwaliteitsaanpak/productieomgeving"
+  }
+}

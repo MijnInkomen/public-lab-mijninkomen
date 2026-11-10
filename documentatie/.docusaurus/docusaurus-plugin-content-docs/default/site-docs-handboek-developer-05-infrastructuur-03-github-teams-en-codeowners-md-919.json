@@ -1,0 +1,39 @@
+{
+  "id": "handboek/developer/infrastructuur/github-teams-en-codeowners",
+  "title": "GitHub teams en code owners",
+  "description": "Het werken met GitHub teams en code owners binnen NL Design System",
+  "source": "@site/docs/handboek/developer/05-infrastructuur/03-github-teams-en-codeowners.md",
+  "sourceDirName": "handboek/developer/05-infrastructuur",
+  "slug": "/handboek/developer/github-teams-en-code-owners/",
+  "permalink": "/handboek/developer/github-teams-en-code-owners/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/05-infrastructuur/03-github-teams-en-codeowners.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "GitHub teams en code owners",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "GitHub teams en code owners",
+    "pagination_label": "GitHub teams en code owners",
+    "description": "Het werken met GitHub teams en code owners binnen NL Design System",
+    "slug": "/handboek/developer/github-teams-en-code-owners/",
+    "keywords": [
+      "GitHub",
+      "Teams",
+      "Codeowners",
+      "Code owners"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "GitHub Actions",
+    "permalink": "/handboek/developer/github-actions/"
+  },
+  "next": {
+    "title": "Linting en code formatting",
+    "permalink": "/linting-en-code-formatting/"
+  }
+}

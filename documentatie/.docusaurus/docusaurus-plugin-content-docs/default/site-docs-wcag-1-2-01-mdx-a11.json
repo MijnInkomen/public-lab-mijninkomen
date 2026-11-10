@@ -1,0 +1,47 @@
+{
+  "id": "wcag/1.2.01",
+  "title": "WCAG-succescriterium 1.2.1 Louter-geluid en louter-videobeeld (vooraf opgenomen)",
+  "description": "Opnames van geluid en video hebben een alternatief.",
+  "source": "@site/docs/wcag/1.2.01.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/1.2.1",
+  "permalink": "/wcag/1.2.1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/1.2.01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 1.2.1 Louter-geluid en louter-videobeeld (vooraf opgenomen)",
+    "title_sm": "1.2.1 Louter-geluid en louter-videobeeld (vooraf opgenomen)",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "1.2.1 Louter-geluid en louter-videobeeld (vooraf opgenomen)",
+    "pagination_label": "WCAG-succescriterium 1.2.1 Louter-geluid en louter-videobeeld (vooraf opgenomen)",
+    "description": "Opnames van geluid en video hebben een alternatief.",
+    "slug": "1.2.1",
+    "conformance_level": "Niveau A",
+    "keywords": [
+      "WCAG",
+      "A",
+      "waarneembaar",
+      "op tijd gebaseerde media",
+      "perceivable",
+      "time-based media",
+      "audio-only and video-only (prerecorded)",
+      "audio only",
+      "video only",
+      "prerecorded",
+      "vooraf opgenomen"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 1.1.1 Niet-tekstuele content",
+    "permalink": "/wcag/1.1.1"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 1.2.2 Ondertitels voor doven en slechthorenden (vooraf opgenomen)",
+    "permalink": "/wcag/1.2.2"
+  }
+}

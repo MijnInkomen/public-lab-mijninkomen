@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/button/text/index",
+  "title": "Duidelijk buttontekst die beschrijft wat de button doet",
+  "description": "Richtlijnen voor duidelijk buttontekst die beschrijft wat de button doet.",
+  "source": "@site/docs/richtlijnen/formulieren/button/4-text/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/button/4-text",
+  "slug": "/richtlijnen/formulieren/buttons/duidelijk-buttontekst",
+  "permalink": "/richtlijnen/formulieren/buttons/duidelijk-buttontekst",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/button/4-text/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Duidelijk buttontekst die beschrijft wat de button doet",
+    "title_sm": "Duidelijke buttontekst",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Duidelijke buttontekst",
+    "pagination_label": "Duidelijke buttontekst",
+    "description": "Richtlijnen voor duidelijk buttontekst die beschrijft wat de button doet.",
+    "slug": "/richtlijnen/formulieren/buttons/duidelijk-buttontekst",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Plaatsing button",
+    "permalink": "/richtlijnen/formulieren/buttons/plaatsing"
+  },
+  "next": {
+    "title": "Toegankelijke naam button",
+    "permalink": "/richtlijnen/formulieren/buttons/toegankelijke-naam"
+  }
+}

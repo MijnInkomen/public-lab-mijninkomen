@@ -1,0 +1,41 @@
+{
+  "id": "baseline/Archief/2025-11",
+  "title": "Baseline november 2025",
+  "description": "De softwareversies waarmee we in november 2025 voor NL Design System testen voor Baseline support.",
+  "source": "@site/docs/baseline/Archief/2025-11.mdx",
+  "sourceDirName": "baseline/Archief",
+  "slug": "/baseline/2025-11",
+  "permalink": "/baseline/2025-11",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/baseline/Archief/2025-11.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": -202511,
+  "frontMatter": {
+    "title": "Baseline november 2025",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Baseline november 2025",
+    "sidebar_position": -202511,
+    "navigation_order": -202511,
+    "pagination_label": "Baseline november 2025",
+    "description": "De softwareversies waarmee we in november 2025 voor NL Design System testen voor Baseline support.",
+    "slug": "/baseline/2025-11",
+    "keywords": [
+      "Accessibility Support Baseline",
+      "Baseline",
+      "browser support",
+      "browserversie"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Baseline december 2025",
+    "permalink": "/baseline/2025-12"
+  },
+  "next": {
+    "title": "Baseline oktober 2025",
+    "permalink": "/baseline/2025-10"
+  }
+}

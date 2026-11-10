@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/multistep/last-check/index",
+  "title": "Bied als laatste stap een opsomming aan van alle ingevoerde gegevens",
+  "description": "Richtlijnen over opsomming als laatste stap.",
+  "source": "@site/docs/richtlijnen/formulieren/multistep/4-last-check/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/multistep/4-last-check",
+  "slug": "/richtlijnen/formulieren/meerdere-stappen/samenvatting",
+  "permalink": "/richtlijnen/formulieren/meerdere-stappen/samenvatting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/multistep/4-last-check/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Bied als laatste stap een opsomming aan van alle ingevoerde gegevens",
+    "title_sm": "Samenvatting in laatste stap",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Samenvatting in laatste stap",
+    "pagination_label": "Samenvatting in laatste stap",
+    "description": "Richtlijnen over opsomming als laatste stap.",
+    "slug": "/richtlijnen/formulieren/meerdere-stappen/samenvatting",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Consistente navigatie",
+    "permalink": "/richtlijnen/formulieren/meerdere-stappen/consistente-benaming"
+  },
+  "next": {
+    "title": "Duidelijk aangeven verzenden",
+    "permalink": "/richtlijnen/formulieren/meerdere-stappen/verzenden-aangeven"
+  }
+}

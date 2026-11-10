@@ -1,0 +1,35 @@
+{
+  "id": "richtlijnen/stijl/icons/svg/index",
+  "title": "Gebruik SVG voor iconen en geen font",
+  "description": "In tegenstelling tot SVG worden iconen van een font toegewezen aan Unicode-punten en geïnterpreteerd als tekst. Dit kan tot toegankelijkheidsproblemen leiden.",
+  "source": "@site/docs/richtlijnen/stijl/icons/8-svg/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/icons/8-svg",
+  "slug": "/richtlijnen/stijl/iconen/gebruik-svg",
+  "permalink": "/richtlijnen/stijl/iconen/gebruik-svg",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/icons/8-svg/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Gebruik SVG voor iconen en geen font",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Gebruik SVG voor iconen en geen font",
+    "pagination_label": "Gebruik SVG voor iconen en geen font",
+    "description": "In tegenstelling tot SVG worden iconen van een font toegewezen aan Unicode-punten en geïnterpreteerd als tekst. Dit kan tot toegankelijkheidsproblemen leiden.",
+    "slug": "/richtlijnen/stijl/iconen/gebruik-svg",
+    "keywords": [
+      "iconen"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Respecteer conventies",
+    "permalink": "/richtlijnen/stijl/iconen/respecteer-conventies"
+  },
+  "next": {
+    "title": "Content",
+    "permalink": "/richtlijnen/content"
+  }
+}

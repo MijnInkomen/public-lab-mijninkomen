@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/description/content/index",
+  "title": "Gebruik alleen tekst in descriptions",
+  "description": "Richtlijnen voor de inhoud van beschrijvingen in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/description/2-content/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/description/2-content",
+  "slug": "/richtlijnen/formulieren/descriptions/inhoud",
+  "permalink": "/richtlijnen/formulieren/descriptions/inhoud",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/description/2-content/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Gebruik alleen tekst in descriptions",
+    "title_sm": "Inhoud description",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Inhoud description",
+    "pagination_label": "Inhoud description",
+    "description": "Richtlijnen voor de inhoud van beschrijvingen in een formulier.",
+    "slug": "/richtlijnen/formulieren/descriptions/inhoud",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Koppel description",
+    "permalink": "/richtlijnen/formulieren/descriptions/koppelen"
+  },
+  "next": {
+    "title": "Plaatsing description",
+    "permalink": "/richtlijnen/formulieren/descriptions/plaatsing"
+  }
+}

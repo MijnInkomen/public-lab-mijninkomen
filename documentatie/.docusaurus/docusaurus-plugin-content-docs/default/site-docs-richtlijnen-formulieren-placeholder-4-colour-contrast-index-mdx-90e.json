@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/placeholder/colour-contrast/index",
+  "title": "Zorg voor een goed kleurcontrast van de placeholdertekst",
+  "description": "Richtlijnen voor voldoende kleurcontrast.",
+  "source": "@site/docs/richtlijnen/formulieren/placeholder/4-colour-contrast/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/placeholder/4-colour-contrast",
+  "slug": "/richtlijnen/formulieren/placeholders/kleurcontrast",
+  "permalink": "/richtlijnen/formulieren/placeholders/kleurcontrast",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/placeholder/4-colour-contrast/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Zorg voor een goed kleurcontrast van de placeholdertekst",
+    "title_sm": "Placeholder kleurcontrast",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Placeholder kleurcontrast",
+    "pagination_label": "Placeholder kleurcontrast",
+    "description": "Richtlijnen voor voldoende kleurcontrast.",
+    "slug": "/richtlijnen/formulieren/placeholders/kleurcontrast",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Placeholder kan verwarren",
+    "permalink": "/richtlijnen/formulieren/placeholders/verwarring-voorkomen"
+  },
+  "next": {
+    "title": "Toetsenbord",
+    "permalink": "/richtlijnen/formulieren/toetsenbord/"
+  }
+}

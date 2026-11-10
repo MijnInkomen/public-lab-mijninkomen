@@ -1,0 +1,36 @@
+{
+  "id": "richtlijnen/stijl/colour/purpose/index",
+  "title": "Gebruik kleur met een doel",
+  "description": "Als je kleuren gebruikt doe je dat met een bepaald doel, hierdoor hebben ze een betekenis. Het is belangrijk dat die kleur consistent hoort bij die betekenis.",
+  "source": "@site/docs/richtlijnen/stijl/colour/3-purpose/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/colour/3-purpose",
+  "slug": "/richtlijnen/stijl/kleuren/doel",
+  "permalink": "/richtlijnen/stijl/kleuren/doel",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/colour/3-purpose/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Gebruik kleur met een doel",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Gebruik kleur met een doel",
+    "pagination_label": "Gebruik kleur met een doel",
+    "description": "Als je kleuren gebruikt doe je dat met een bepaald doel, hierdoor hebben ze een betekenis. Het is belangrijk dat die kleur consistent hoort bij die betekenis.",
+    "slug": "/richtlijnen/stijl/kleuren/doel",
+    "keywords": [
+      "kleurbetekenis",
+      "kleur"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Voldoende kleurcontrast voor niet-tekstuele content",
+    "permalink": "/richtlijnen/stijl/kleuren/contrast-niet-tekstuele-content"
+  },
+  "next": {
+    "title": "Vertrouw niet alleen op kleur",
+    "permalink": "/richtlijnen/stijl/kleuren/niet-kleur-alleen"
+  }
+}

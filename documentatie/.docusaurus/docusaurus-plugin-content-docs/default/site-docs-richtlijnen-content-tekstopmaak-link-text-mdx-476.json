@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/content/tekstopmaak/link-text",
+  "title": "Toegankelijke linkteksten",
+  "description": "Schrijf duidelijke linkteksten. Dit helpt je bezoekers om het doel van de link te begrijpen.",
+  "source": "@site/docs/richtlijnen/content/tekstopmaak/link-text.mdx",
+  "sourceDirName": "richtlijnen/content/tekstopmaak",
+  "slug": "/richtlijnen/content/tekstopmaak/linkteksten",
+  "permalink": "/richtlijnen/content/tekstopmaak/linkteksten",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/tekstopmaak/link-text.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Toegankelijke linkteksten",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Toegankelijke linkteksten",
+    "pagination_label": "Toegankelijke linkteksten",
+    "description": "Schrijf duidelijke linkteksten. Dit helpt je bezoekers om het doel van de link te begrijpen.",
+    "slug": "/richtlijnen/content/tekstopmaak/linkteksten",
+    "keywords": [
+      "semantiek",
+      "tekstopmaak",
+      "structuur",
+      "tekststructuur",
+      "links"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "De juiste taal instellen",
+    "permalink": "/richtlijnen/content/tekstopmaak/taal"
+  },
+  "next": {
+    "title": "Citaten",
+    "permalink": "/richtlijnen/content/citaten"
+  }
+}

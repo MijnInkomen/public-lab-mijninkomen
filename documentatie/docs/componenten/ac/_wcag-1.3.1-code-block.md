@@ -1,4 +1,4 @@
-<!-- @license CC0-1.0 -->
+<!-- @license CC0-1.0 --><pre
 
 Gebruik voor tekst gemarkeerd als opgemaakte code semantische HTML. In het geval van de component Code Block is dat het HTML-element `code`
 in combinatie met `pre`.

@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/error/clarity/index",
+  "title": "Schrijf een duidelijke foutmelding",
+  "description": "Richtlijnen voor duidelijke foutmeldingen in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/error/3-clarity/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/error/3-clarity",
+  "slug": "/richtlijnen/formulieren/foutmeldingen/duidelijk",
+  "permalink": "/richtlijnen/formulieren/foutmeldingen/duidelijk",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/error/3-clarity/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Schrijf een duidelijke foutmelding",
+    "title_sm": "Duidelijke foutmeldingen",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Duidelijke foutmeldingen",
+    "pagination_label": "Duidelijke foutmeldingen",
+    "description": "Richtlijnen voor duidelijke foutmeldingen in een formulier.",
+    "slug": "/richtlijnen/formulieren/foutmeldingen/duidelijk",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Fouten beschrijven",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/beschrijven"
+  },
+  "next": {
+    "title": "Plaatsing foutmelding",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/plaatsing"
+  }
+}

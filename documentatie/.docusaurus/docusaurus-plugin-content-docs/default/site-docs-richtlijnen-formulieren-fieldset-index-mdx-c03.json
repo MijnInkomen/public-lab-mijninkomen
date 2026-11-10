@@ -1,0 +1,42 @@
+{
+  "id": "richtlijnen/formulieren/fieldset/index",
+  "title": "Fieldsets in een formulier",
+  "description": "Groepeer formuliervelden die bij elkaar horen in een fieldset met een beschrijvende legend.",
+  "source": "@site/docs/richtlijnen/formulieren/fieldset/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/fieldset",
+  "slug": "/richtlijnen/formulieren/fieldsets/",
+  "permalink": "/richtlijnen/formulieren/fieldsets/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/fieldset/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Fieldsets in een formulier",
+    "title_sm": "Fieldsets",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Introductie fieldsets",
+    "sidebar_position": 5,
+    "navigation_order": 5,
+    "pagination_label": "Fieldsets",
+    "description": "Groepeer formuliervelden die bij elkaar horen in een fieldset met een beschrijvende legend.",
+    "slug": "/richtlijnen/formulieren/fieldsets/",
+    "keywords": [
+      "informatie",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Screenreaderfeedback",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/screenreaderfeedback"
+  },
+  "next": {
+    "title": "Fieldsets",
+    "permalink": "/richtlijnen/formulieren/fieldsets/"
+  }
+}

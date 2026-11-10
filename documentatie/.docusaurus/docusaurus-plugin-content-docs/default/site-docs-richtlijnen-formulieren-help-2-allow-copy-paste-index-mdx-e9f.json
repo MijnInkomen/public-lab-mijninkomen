@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/help/allow-copy-paste/index",
+  "title": "Sta knippen en plakken van een wachtwoord toe",
+  "description": "Richtlijnen om knippen en plakken van een wachtwoord toe te staan.",
+  "source": "@site/docs/richtlijnen/formulieren/help/2-allow-copy-paste/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/help/2-allow-copy-paste",
+  "slug": "/richtlijnen/formulieren/voorkom-fouten/wachtwoord-plakken/",
+  "permalink": "/richtlijnen/formulieren/voorkom-fouten/wachtwoord-plakken/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/help/2-allow-copy-paste/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Sta knippen en plakken van een wachtwoord toe",
+    "title_sm": "Wachtwoord plakken",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Wachtwoord plakken",
+    "pagination_label": "Wachtwoord plakken",
+    "description": "Richtlijnen om knippen en plakken van een wachtwoord toe te staan.",
+    "slug": "/richtlijnen/formulieren/voorkom-fouten/wachtwoord-plakken/",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Optioneel of verplicht",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/verplichte-velden/"
+  },
+  "next": {
+    "title": "Keur niet te snel af",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/keur-niet-te-snel-af"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "componenten/notification-banner/index",
+  "title": "Notification Banner",
+  "description": "Toont een informerend bericht dat niet direct is gerelateerd aan de inhoud van een pagina.",
+  "source": "@site/docs/componenten/notification-banner/index.mdx",
+  "sourceDirName": "componenten/notification-banner",
+  "slug": "/notification-banner",
+  "permalink": "/notification-banner",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/notification-banner/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Notification Banner",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Notification Banner",
+    "pagination_label": "Notification Banner",
+    "description": "Toont een informerend bericht dat niet direct is gerelateerd aan de inhoud van een pagina.",
+    "issue_number": 169,
+    "slug": "/notification-banner",
+    "keywords": [
+      "alert",
+      "banner",
+      "banner alert",
+      "call alert",
+      "callout",
+      "feedback",
+      "highlighter",
+      "inline alert",
+      "inline message",
+      "message",
+      "message bar",
+      "note",
+      "notificatie",
+      "notificatiebanner",
+      "notification",
+      "notification banner",
+      "page alert",
+      "panel",
+      "top of page alert",
+      "waarschuwing",
+      "warning"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Note",
+    "permalink": "/note"
+  },
+  "next": {
+    "title": "Number Badge",
+    "permalink": "/number-badge"
+  }
+}

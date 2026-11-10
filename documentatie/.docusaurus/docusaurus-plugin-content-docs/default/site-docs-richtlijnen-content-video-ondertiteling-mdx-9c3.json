@@ -1,0 +1,41 @@
+{
+  "id": "richtlijnen/content/video/ondertiteling",
+  "title": "Ondertiteling",
+  "description": "Richtlijnen voor ondertiteling binnen NL Design System",
+  "source": "@site/docs/richtlijnen/content/video/ondertiteling.mdx",
+  "sourceDirName": "richtlijnen/content/video",
+  "slug": "/richtlijnen/content/video/ondertiteling",
+  "permalink": "/richtlijnen/content/video/ondertiteling",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/video/ondertiteling.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Ondertiteling",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Ondertiteling",
+    "pagination_label": "Ondertiteling",
+    "description": "Richtlijnen voor ondertiteling binnen NL Design System",
+    "slug": "/richtlijnen/content/video/ondertiteling",
+    "keywords": [
+      "video",
+      "youtube",
+      "vimeo",
+      "transcript",
+      "ondertiteling",
+      "subtitles",
+      "captions"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Gebarentaal",
+    "permalink": "/richtlijnen/content/video/gebarentaal"
+  },
+  "next": {
+    "title": "Transcript",
+    "permalink": "/richtlijnen/content/video/transcript"
+  }
+}

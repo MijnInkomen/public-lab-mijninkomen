@@ -1,0 +1,40 @@
+{
+  "id": "handboek/developer/conventies/versionering/changes",
+  "title": "Semantic Versioning",
+  "description": "Aanpak voor versiebeheer volgens SemVer: wanneer kies je voor een major, minor of patch release?",
+  "source": "@site/docs/handboek/developer/03-conventies/06-versionering/11-changes.md",
+  "sourceDirName": "handboek/developer/03-conventies/06-versionering",
+  "slug": "/handboek/developer/semver-conventie/",
+  "permalink": "/handboek/developer/semver-conventie/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/03-conventies/06-versionering/11-changes.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Semantic Versioning",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Semantic Versioning",
+    "pagination_label": "Semantic Versioning",
+    "description": "Aanpak voor versiebeheer volgens SemVer: wanneer kies je voor een major, minor of patch release?",
+    "slug": "/handboek/developer/semver-conventie/",
+    "keywords": [
+      "developer",
+      "aan de slag",
+      "versionering",
+      "semver",
+      "changesets"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Aanpak voor versionering",
+    "permalink": "/handboek/developer/conventies/versionering"
+  },
+  "next": {
+    "title": "Changesets",
+    "permalink": "/handboek/developer/changeset-conventie/"
+  }
+}

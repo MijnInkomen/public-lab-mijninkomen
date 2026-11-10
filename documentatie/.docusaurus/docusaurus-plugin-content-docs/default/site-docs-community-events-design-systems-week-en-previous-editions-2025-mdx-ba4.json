@@ -1,0 +1,42 @@
+{
+  "id": "community/events/design-systems-week/en/previous-editions/2025",
+  "title": "Videos van Design Systems Week 2025",
+  "description": "Recordings of talks that are in English for Design Systems Week 2025.",
+  "source": "@site/docs/community/events/design-systems-week/en/previous-editions/2025.mdx",
+  "sourceDirName": "community/events/design-systems-week/en/previous-editions",
+  "slug": "/events/design-systems-week-2025/en/program",
+  "permalink": "/events/design-systems-week-2025/en/program",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/design-systems-week/en/previous-editions/2025.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Videos van Design Systems Week 2025",
+    "title_sm": "2025",
+    "description": "Recordings of talks that are in English for Design Systems Week 2025.",
+    "lang": "en",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "2025",
+    "sidebar_position": 1,
+    "navigation_order": 1,
+    "pagination_label": "Videos 2025",
+    "slug": "/events/design-systems-week-2025/en/program",
+    "translations": {
+      "nl": "/events/design-systems-week-2025/programma/"
+    },
+    "image": "https://raw.githubusercontent.com/nl-design-system/documentatie/assets/dsw-24-en.png",
+    "image_alt": "NL Design System Design Systems Week 2024 27-30 October, online"
+  },
+  "sidebar": "community",
+  "previous": {
+    "title": "Timetable",
+    "permalink": "/events/design-systems-week-2026/en/timetable"
+  },
+  "next": {
+    "title": "Videos 2025",
+    "permalink": "/events/design-systems-week-2025/en/program"
+  }
+}

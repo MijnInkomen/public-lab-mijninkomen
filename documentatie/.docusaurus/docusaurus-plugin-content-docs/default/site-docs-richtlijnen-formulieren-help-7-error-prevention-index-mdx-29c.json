@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/help/error-prevention/index",
+  "title": "Maak het mogelijk een inzending te controleren, te wijzigen of ongedaan te maken",
+  "description": "Richtlijnen om controleren, wijzigen en ongedaan maken mogelijk te maken.",
+  "source": "@site/docs/richtlijnen/formulieren/help/7-error-prevention/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/help/7-error-prevention",
+  "slug": "/richtlijnen/formulieren/voorkom-fouten/controleren-en-aanpassen",
+  "permalink": "/richtlijnen/formulieren/voorkom-fouten/controleren-en-aanpassen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/help/7-error-prevention/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Maak het mogelijk een inzending te controleren, te wijzigen of ongedaan te maken",
+    "title_sm": "Controleren en aanpassen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Controleren en aanpassen",
+    "pagination_label": "Controleren en aanpassen",
+    "description": "Richtlijnen om controleren, wijzigen en ongedaan maken mogelijk te maken.",
+    "slug": "/richtlijnen/formulieren/voorkom-fouten/controleren-en-aanpassen",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Automatisch invullen",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/automatisch-invullen"
+  },
+  "next": {
+    "title": "Vermijd invoerpatronen",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/geen-invoerpatronen"
+  }
+}

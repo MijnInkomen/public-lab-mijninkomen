@@ -1,0 +1,43 @@
+{
+  "id": "wcag/4.1.01",
+  "title": "WCAG-succescriterium 4.1.1 Parsen",
+  "description": "Zorg dat er geen fouten in de HTML-code zijn.",
+  "source": "@site/docs/wcag/4.1.01.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/4.1.1",
+  "permalink": "/wcag/4.1.1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/4.1.01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 4.1.1 Parsen",
+    "title_sm": "4.1.1 Parsen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "4.1.1 Parsen",
+    "pagination_label": "WCAG-succescriterium 4.1.1 Parsen",
+    "description": "Zorg dat er geen fouten in de HTML-code zijn.",
+    "slug": "4.1.1",
+    "conformance_level": "Vervallen",
+    "keywords": [
+      "WCAG",
+      "A",
+      "robuust",
+      "compatibel",
+      "robust",
+      "compatible",
+      "parsing"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 3.3.9 Toegankelijke authenticatie (uitgebreid)",
+    "permalink": "/wcag/3.3.9"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 4.1.2 Naam, rol, waarde",
+    "permalink": "/wcag/4.1.2"
+  }
+}

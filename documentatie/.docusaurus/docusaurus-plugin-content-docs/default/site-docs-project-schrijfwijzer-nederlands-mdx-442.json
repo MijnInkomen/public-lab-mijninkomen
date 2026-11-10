@@ -1,0 +1,36 @@
+{
+  "id": "project/schrijfwijzer/nederlands",
+  "title": "Nederlands",
+  "description": "Richtlijnen voor Nederlandstalige communicatie vanuit het project NL Design System.",
+  "source": "@site/docs/project/schrijfwijzer/nederlands.mdx",
+  "sourceDirName": "project/schrijfwijzer",
+  "slug": "/project/schrijfwijzer/nederlands",
+  "permalink": "/project/schrijfwijzer/nederlands",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/schrijfwijzer/nederlands.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Nederlands",
+    "hide_title": true,
+    "sidebar_label": "Nederlands",
+    "sidebar_position": 5,
+    "navigation_order": 5,
+    "pagination_label": "Nederlands",
+    "description": "Richtlijnen voor Nederlandstalige communicatie vanuit het project NL Design System.",
+    "keywords": [
+      "kernteam"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Doelgroepen",
+    "permalink": "/project/schrijfwijzer/doelgroepen"
+  },
+  "next": {
+    "title": "Engels",
+    "permalink": "/project/schrijfwijzer/engels"
+  }
+}

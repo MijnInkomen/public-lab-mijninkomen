@@ -1,0 +1,60 @@
+{
+  "id": "componenten/code/index",
+  "title": "Code",
+  "description": "Computercode die onderdeel is van lopende tekst.",
+  "source": "@site/docs/componenten/code/index.mdx",
+  "sourceDirName": "componenten/code",
+  "slug": "/code",
+  "permalink": "/code",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/code/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Code",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Code",
+    "pagination_label": "Code",
+    "description": "Computercode die onderdeel is van lopende tekst.",
+    "issue_number": 326,
+    "slug": "/code",
+    "keywords": [
+      "actie",
+      "action",
+      "code",
+      "codeblock",
+      "code block",
+      "code markering",
+      "code fences",
+      "code snippet",
+      "code voorbeeld",
+      "coded language",
+      "codetaal",
+      "css",
+      "example",
+      "html",
+      "java",
+      "inline code",
+      "mono",
+      "monotype",
+      "monospace",
+      "plaintext",
+      "pre",
+      "samp",
+      "source code",
+      "src",
+      "voorbeeld"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Checkbox Group",
+    "permalink": "/checkbox-group"
+  },
+  "next": {
+    "title": "Code Block",
+    "permalink": "/code-block"
+  }
+}

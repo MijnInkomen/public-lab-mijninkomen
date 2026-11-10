@@ -1,0 +1,48 @@
+{
+  "id": "componenten/heading-2/index",
+  "title": "Heading 2",
+  "description": "Koptekst die volgt na de hoofdkop en in de koppenstructuur op het tweede niveau staat.",
+  "source": "@site/docs/componenten/heading-2/index.mdx",
+  "sourceDirName": "componenten/heading-2",
+  "slug": "/heading-2",
+  "permalink": "/heading-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/heading-2/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Heading 2",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Heading 2",
+    "pagination_label": "Heading 2",
+    "description": "Koptekst die volgt na de hoofdkop en in de koppenstructuur op het tweede niveau staat.",
+    "issue_number": 258,
+    "slug": "/heading-2",
+    "keywords": [
+      "caption",
+      "content",
+      "h2",
+      "heading",
+      "heading level",
+      "headline",
+      "kop",
+      "paginakop",
+      "sectie",
+      "section",
+      "structure",
+      "titel",
+      "title"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Heading 1",
+    "permalink": "/heading-1"
+  },
+  "next": {
+    "title": "Heading 3",
+    "permalink": "/heading-3"
+  }
+}

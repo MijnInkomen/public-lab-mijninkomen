@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/when-which/usability/index",
+  "title": "Kies voor het meest gebruiksvriendelijke formulierelement",
+  "description": "Richtlijnen om het meest gebruiksvriendelijke formulierelement te kiezen.",
+  "source": "@site/docs/richtlijnen/formulieren/when-which/2-usability/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/when-which/2-usability",
+  "slug": "/richtlijnen/formulieren/wanneer-welk-form-element/kies-gebruiksvriendelijkheid",
+  "permalink": "/richtlijnen/formulieren/wanneer-welk-form-element/kies-gebruiksvriendelijkheid",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/when-which/2-usability/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Kies voor het meest gebruiksvriendelijke formulierelement",
+    "title_sm": "Kies gebruiksvriendelijkheid",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Kies gebruiksvriendelijkheid",
+    "pagination_label": "Kies het meest gebruiksvriendelijke formulierelement",
+    "description": "Richtlijnen om het meest gebruiksvriendelijke formulierelement te kiezen.",
+    "slug": "/richtlijnen/formulieren/wanneer-welk-form-element/kies-gebruiksvriendelijkheid",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Iedereen kan velden invullen",
+    "permalink": "/richtlijnen/formulieren/wanneer-welk-form-element/iedereen-kan-invullen"
+  },
+  "next": {
+    "title": "Introductie WCAG-pagina's",
+    "permalink": "/wcag"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "componenten/form-field-label-suffix/index",
+  "title": "Form Field Label Suffix",
+  "description": "Toont een tekstlabel dat aangeeft dat de in te vullen informatie wel of niet verplicht is.",
+  "source": "@site/docs/componenten/form-field-label-suffix/index.mdx",
+  "sourceDirName": "componenten/form-field-label-suffix",
+  "slug": "/form-field-label-suffix",
+  "permalink": "/form-field-label-suffix",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/form-field-label-suffix/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Form Field Label Suffix",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Form Field Label Suffix",
+    "pagination_label": "Form Field Label Suffix",
+    "description": "Toont een tekstlabel dat aangeeft dat de in te vullen informatie wel of niet verplicht is.",
+    "issue_number": 417,
+    "slug": "/form-field-label-suffix",
+    "keywords": [
+      "suffix",
+      "form field label suffix",
+      "form label",
+      "form label suffix",
+      "optioneel",
+      "optional",
+      "niet verplicht",
+      "not required",
+      "verplicht",
+      "required",
+      "asterisk",
+      "sterretje"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Form Field Label",
+    "permalink": "/form-field-label"
+  },
+  "next": {
+    "title": "Form Field Status",
+    "permalink": "/form-field-status"
+  }
+}

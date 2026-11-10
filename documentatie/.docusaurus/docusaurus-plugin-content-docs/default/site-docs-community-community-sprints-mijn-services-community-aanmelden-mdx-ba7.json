@@ -1,0 +1,42 @@
+{
+  "id": "community/community-sprints/mijn-services-community/aanmelden",
+  "title": "Meld je aan voor de MijnServices Community",
+  "description": "Door je aan te melden krijg je toegang tot een agenda-bestand voor de MijnServices Community checkin en kunnen we je mailen over relevante bijeenkomsten of wijzigingen aan de checkin",
+  "source": "@site/docs/community/community-sprints/mijn-services-community/aanmelden.mdx",
+  "sourceDirName": "community/community-sprints/mijn-services-community",
+  "slug": "/community/community-sprints/mijn-services-community/aanmelden",
+  "permalink": "/community/community-sprints/mijn-services-community/aanmelden",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/community-sprints/mijn-services-community/aanmelden.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Meld je aan voor de MijnServices Community",
+    "title_sm": "Aanmelden",
+    "description": "Door je aan te melden krijg je toegang tot een agenda-bestand voor de MijnServices Community checkin en kunnen we je mailen over relevante bijeenkomsten of wijzigingen aan de checkin",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Aanmelden",
+    "pagination_label": "Aanmelden",
+    "slug": "/community/community-sprints/mijn-services-community/aanmelden",
+    "keywords": [
+      "nl design system",
+      "community sprint",
+      "mijn services community",
+      "mijnservices community",
+      "mijn services community afstemming",
+      "mijn services community check-in",
+      "overheidsbrede portalen community"
+    ]
+  },
+  "sidebar": "community",
+  "previous": {
+    "title": "Over MijnServices Community",
+    "permalink": "/community/community-sprints/mijn-services-community/"
+  },
+  "next": {
+    "title": "Over Rijkshuisstijl Community",
+    "permalink": "/community/community-sprints/rijkshuisstijl-community/"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "richtlijnen/content/tekstopmaak/headings",
+  "title": "Koppen",
+  "description": "Gebruik koppen voor een duidelijke structuur van de tekst op een pagina of scherm.",
+  "source": "@site/docs/richtlijnen/content/tekstopmaak/headings.mdx",
+  "sourceDirName": "richtlijnen/content/tekstopmaak",
+  "slug": "/richtlijnen/content/tekstopmaak/koppen",
+  "permalink": "/richtlijnen/content/tekstopmaak/koppen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/tekstopmaak/headings.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Koppen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Koppen",
+    "pagination_label": "Koppen",
+    "description": "Gebruik koppen voor een duidelijke structuur van de tekst op een pagina of scherm.",
+    "slug": "/richtlijnen/content/tekstopmaak/koppen",
+    "keywords": [
+      "semantiek",
+      "tekstopmaak",
+      "structuur",
+      "tekststructuur",
+      "koppen",
+      "koppenstructuur",
+      "kopjes",
+      "dikgedrukt",
+      "kopopmaak",
+      "bold",
+      "strong"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Tekst benadrukken",
+    "permalink": "/richtlijnen/content/tekstopmaak/tekst-benadrukken"
+  },
+  "next": {
+    "title": "De juiste taal instellen",
+    "permalink": "/richtlijnen/content/tekstopmaak/taal"
+  }
+}

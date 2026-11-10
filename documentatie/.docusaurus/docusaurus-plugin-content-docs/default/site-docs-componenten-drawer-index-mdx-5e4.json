@@ -1,0 +1,42 @@
+{
+  "id": "componenten/drawer/index",
+  "title": "Drawer",
+  "description": "Een paneel aan de zijkant van een scherm, die geopend kan worden voor gerelateerde informatie, formulieren of acties.",
+  "source": "@site/docs/componenten/drawer/index.mdx",
+  "sourceDirName": "componenten/drawer",
+  "slug": "/drawer",
+  "permalink": "/drawer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/drawer/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Drawer",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Drawer",
+    "pagination_label": "Drawer",
+    "description": "Een paneel aan de zijkant van een scherm, die geopend kan worden voor gerelateerde informatie, formulieren of acties.",
+    "issue_number": 256,
+    "slug": "/drawer",
+    "keywords": [
+      "drawer",
+      "flyout",
+      "paneel",
+      "schuifpaneel",
+      "side panel",
+      "side sheet",
+      "tray"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Dot Badge",
+    "permalink": "/dot-badge"
+  },
+  "next": {
+    "title": "Fieldset",
+    "permalink": "/fieldset"
+  }
+}

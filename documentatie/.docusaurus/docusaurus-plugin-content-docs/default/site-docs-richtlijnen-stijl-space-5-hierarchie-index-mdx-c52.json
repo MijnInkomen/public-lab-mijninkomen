@@ -1,0 +1,37 @@
+{
+  "id": "richtlijnen/stijl/space/hierarchie/index",
+  "title": "Gebruik ruimte om hiërarchie te creëren tussen elementen",
+  "description": "Om ruimte consistent toe te passen is het verstandig om te werken met een vaste set aan waardes die oplopen in grootte. Een zogenoemde spacing scale.",
+  "source": "@site/docs/richtlijnen/stijl/space/5-hierarchie/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/space/5-hierarchie",
+  "slug": "/richtlijnen/stijl/ruimte/hierarchie",
+  "permalink": "/richtlijnen/stijl/ruimte/hierarchie",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/space/5-hierarchie/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Gebruik ruimte om hiërarchie te creëren tussen elementen",
+    "title_sm": "Hiërarchie tussen elementen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Hiërarchie tussen elementen",
+    "pagination_label": "Gebruik ruimte om hiërarchie te creëren tussen elementen",
+    "description": "Om ruimte consistent toe te passen is het verstandig om te werken met een vaste set aan waardes die oplopen in grootte. Een zogenoemde spacing scale.",
+    "slug": "/richtlijnen/stijl/ruimte/hierarchie",
+    "keywords": [
+      "kleurcontrast",
+      "tekst"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Gebruik ruimte om relaties te creëren tussen elementen",
+    "permalink": "/richtlijnen/stijl/ruimte/relaties"
+  },
+  "next": {
+    "title": "Stem het gebruik van ruimte af op de functie en inhoud",
+    "permalink": "/richtlijnen/stijl/ruimte/ruim-compact"
+  }
+}

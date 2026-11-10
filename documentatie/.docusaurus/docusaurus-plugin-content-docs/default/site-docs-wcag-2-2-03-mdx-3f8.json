@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.2.03",
+  "title": "WCAG-succescriterium 2.2.3 Geen timing",
+  "description": "Geef geen tijdslimiet voor het uitvoeren van een taak, zoals het invullen van een formulier of het lezen van de tekst in een carrousel.",
+  "source": "@site/docs/wcag/2.2.03.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.2.3",
+  "permalink": "/wcag/2.2.3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.2.03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.2.3 Geen timing",
+    "title_sm": "2.2.3 Geen timing",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.2.3 Geen timing",
+    "pagination_label": "WCAG-succescriterium 2.2.3 Geen timing",
+    "description": "Geef geen tijdslimiet voor het uitvoeren van een taak, zoals het invullen van een formulier of het lezen van de tekst in een carrousel.",
+    "slug": "2.2.3",
+    "conformance_level": "Niveau AAA",
+    "keywords": [
+      "WCAG",
+      "AAA",
+      "bedienbaar",
+      "genoeg tijd",
+      "operable",
+      "enough time",
+      "no timing"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.2.2 Pauzeren, stoppen, verbergen",
+    "permalink": "/wcag/2.2.2"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.2.4 Onderbrekingen",
+    "permalink": "/wcag/2.2.4"
+  }
+}

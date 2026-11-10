@@ -1,0 +1,41 @@
+{
+  "id": "handboek/definition-of-done/index",
+  "title": "Definition of Done voor componenten",
+  "description": "Definition of Done voor componenten",
+  "source": "@site/docs/handboek/definition-of-done/index.mdx",
+  "sourceDirName": "handboek/definition-of-done",
+  "slug": "/handboek/estafettemodel/componenten/definition-of-done",
+  "permalink": "/handboek/estafettemodel/componenten/definition-of-done",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Definition of Done voor componenten",
+    "title_sm": "Definition of Done",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Overzicht",
+    "sidebar_position": 1,
+    "pagination_label": "Overzicht",
+    "description": "Definition of Done voor componenten",
+    "slug": "/handboek/estafettemodel/componenten/definition-of-done",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Componenten vinden",
+    "permalink": "/handboek/componenten-vinden"
+  },
+  "next": {
+    "title": "Overzicht",
+    "permalink": "/handboek/estafettemodel/componenten/definition-of-done"
+  }
+}

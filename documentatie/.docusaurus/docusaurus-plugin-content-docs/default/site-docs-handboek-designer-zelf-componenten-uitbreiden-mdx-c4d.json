@@ -1,0 +1,43 @@
+{
+  "id": "handboek/designer/zelf-componenten-uitbreiden",
+  "title": "Zelf componenten uitbreiden",
+  "description": "Informatie voor designers over hoe je zelf componenten kunt uitbreiden in Figma met design tokens.",
+  "source": "@site/docs/handboek/designer/zelf-componenten-uitbreiden.mdx",
+  "sourceDirName": "handboek/designer",
+  "slug": "/handboek/designer/zelf-componenten-uitbreiden",
+  "permalink": "/handboek/designer/zelf-componenten-uitbreiden",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/designer/zelf-componenten-uitbreiden.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Zelf componenten uitbreiden",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Zelf componenten uitbreiden",
+    "sidebar_position": 4,
+    "navigation_order": 4,
+    "pagination_label": "Zelf componenten uitbreiden",
+    "description": "Informatie voor designers over hoe je zelf componenten kunt uitbreiden in Figma met design tokens.",
+    "slug": "/handboek/designer/zelf-componenten-uitbreiden",
+    "keywords": [
+      "index",
+      "designer",
+      "meedoen",
+      "componenten",
+      "figma",
+      "design tokens"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Zelf een thema maken",
+    "permalink": "/handboek/designer/zelf-thema-maken"
+  },
+  "next": {
+    "title": "Zelf componenten maken",
+    "permalink": "/handboek/designer/zelf-componenten-maken"
+  }
+}

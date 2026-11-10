@@ -1,0 +1,25 @@
+{
+  "id": "footer/coc",
+  "title": "Code of Conduct - Nederlands",
+  "description": "Wij streven ernaar om iedereen een vriendelijke, veilige en gastvrije omgeving te bieden.",
+  "source": "@site/docs/footer/coc.md",
+  "sourceDirName": "footer",
+  "slug": "/coc",
+  "permalink": "/coc",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/footer/coc.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Code of Conduct - Nederlands",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "pagination_label": "Code of Conduct",
+    "slug": "/coc",
+    "translations": {
+      "en": "/coc-en/"
+    },
+    "unlisted": true
+  }
+}

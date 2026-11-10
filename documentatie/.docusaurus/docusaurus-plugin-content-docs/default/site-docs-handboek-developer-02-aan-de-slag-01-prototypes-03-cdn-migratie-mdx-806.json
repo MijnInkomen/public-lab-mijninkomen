@@ -1,0 +1,33 @@
+{
+  "id": "handboek/developer/aan-de-slag/prototypes/cdn-migratie",
+  "title": "Migreer van een CDN naar pnpm",
+  "description": "Wanneer een prototype dat met een CDN is gebouwd naar productie gaat is het goed naar pnpm te migreren. Hier lees je hoe dat kan.",
+  "source": "@site/docs/handboek/developer/02-aan-de-slag/01-prototypes/03-cdn-migratie.mdx",
+  "sourceDirName": "handboek/developer/02-aan-de-slag/01-prototypes",
+  "slug": "/handboek/developer/cdn-migratie/",
+  "permalink": "/handboek/developer/cdn-migratie/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/02-aan-de-slag/01-prototypes/03-cdn-migratie.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Migreer van een CDN naar pnpm",
+    "description": "Wanneer een prototype dat met een CDN is gebouwd naar productie gaat is het goed naar pnpm te migreren. Hier lees je hoe dat kan.",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Migreer van een CDN naar pnpm",
+    "pagination_label": "Migreer van een CDN naar pnpm",
+    "slug": "/handboek/developer/cdn-migratie/"
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "CDN gebruiken",
+    "permalink": "/handboek/developer/cdn/"
+  },
+  "next": {
+    "title": "Conventies",
+    "permalink": "/handboek/developer/conventies/"
+  }
+}

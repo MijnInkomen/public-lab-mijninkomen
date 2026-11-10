@@ -1,0 +1,41 @@
+{
+  "id": "richtlijnen/content/video/transcript",
+  "title": "Transcript",
+  "description": "Richtlijnen voor transcripten bij video's binnen NL Design System",
+  "source": "@site/docs/richtlijnen/content/video/transcript.mdx",
+  "sourceDirName": "richtlijnen/content/video",
+  "slug": "/richtlijnen/content/video/transcript",
+  "permalink": "/richtlijnen/content/video/transcript",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/video/transcript.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Transcript",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Transcript",
+    "pagination_label": "Transcript",
+    "description": "Richtlijnen voor transcripten bij video's binnen NL Design System",
+    "slug": "/richtlijnen/content/video/transcript",
+    "keywords": [
+      "video",
+      "youtube",
+      "vimeo",
+      "transcript",
+      "transcriptie",
+      "transcriberen",
+      "ondertiteling"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Ondertiteling",
+    "permalink": "/richtlijnen/content/video/ondertiteling"
+  },
+  "next": {
+    "title": "Kantoorbestanden",
+    "permalink": "/richtlijnen/content/kantoorbestanden"
+  }
+}

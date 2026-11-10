@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/keyboard-behaviour/tabindex/index",
+  "title": "Gebruik geen positieve tabindex",
+  "description": "Richtlijnen voor positieve tabindex in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/keyboard-behaviour/2-tabindex/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/keyboard-behaviour/2-tabindex",
+  "slug": "/richtlijnen/formulieren/toetsenbord/tabindex",
+  "permalink": "/richtlijnen/formulieren/toetsenbord/tabindex",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/keyboard-behaviour/2-tabindex/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Gebruik geen positieve tabindex",
+    "title_sm": "Geen positieve tabindex",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Geen positieve tabindex",
+    "pagination_label": "Geen positieve tabindex",
+    "description": "Richtlijnen voor positieve tabindex in een formulier.",
+    "slug": "/richtlijnen/formulieren/toetsenbord/tabindex",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Zorg dat een formulier werkt met een toetsenbord",
+    "permalink": "/richtlijnen/formulieren/toetsenbord/toetsenbordnavigatie"
+  },
+  "next": {
+    "title": "Uit te vragen informatie in een formulier",
+    "permalink": "/richtlijnen/formulieren/vragen/"
+  }
+}

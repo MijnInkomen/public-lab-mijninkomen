@@ -1,0 +1,45 @@
+{
+  "id": "componenten/separator/index",
+  "title": "Separator",
+  "description": "Markering van de plek waar de tekst op een nieuwe manier verdergaat, zoals een nieuwe scène of een ander onderwerp.",
+  "source": "@site/docs/componenten/separator/index.mdx",
+  "sourceDirName": "componenten/separator",
+  "slug": "/separator",
+  "permalink": "/separator",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/separator/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Separator",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Separator",
+    "pagination_label": "Separator",
+    "description": "Markering van de plek waar de tekst op een nieuwe manier verdergaat, zoals een nieuwe scène of een ander onderwerp.",
+    "issue_number": 119,
+    "slug": "/separator",
+    "keywords": [
+      "divider",
+      "horizontal rule",
+      "line break",
+      "page break",
+      "rule",
+      "section break",
+      "separator",
+      "splitter",
+      "vertical line",
+      "vertical rule"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Select Combobox",
+    "permalink": "/select-combobox"
+  },
+  "next": {
+    "title": "Side Navigation",
+    "permalink": "/side-navigation"
+  }
+}

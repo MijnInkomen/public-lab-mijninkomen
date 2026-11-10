@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/description/placement/index",
+  "title": "Plaats descriptions tussen label en formulierveld",
+  "description": "Richtlijnen voor plaatsing van een description bij een formulierveld.",
+  "source": "@site/docs/richtlijnen/formulieren/description/2-placement/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/description/2-placement",
+  "slug": "/richtlijnen/formulieren/descriptions/plaatsing",
+  "permalink": "/richtlijnen/formulieren/descriptions/plaatsing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/description/2-placement/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Plaats descriptions tussen label en formulierveld",
+    "title_sm": "Plaatsing description",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Plaatsing description",
+    "pagination_label": "Plaatsing description",
+    "description": "Richtlijnen voor plaatsing van een description bij een formulierveld.",
+    "slug": "/richtlijnen/formulieren/descriptions/plaatsing",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Inhoud description",
+    "permalink": "/richtlijnen/formulieren/descriptions/inhoud"
+  },
+  "next": {
+    "title": "Meerdere descriptions",
+    "permalink": "/richtlijnen/formulieren/descriptions/meerdere-koppelen"
+  }
+}

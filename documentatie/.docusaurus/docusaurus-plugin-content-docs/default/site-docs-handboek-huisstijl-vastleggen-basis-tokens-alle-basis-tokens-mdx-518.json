@@ -1,0 +1,41 @@
+{
+  "id": "handboek/huisstijl-vastleggen/basis-tokens/alle-basis-tokens",
+  "title": "Alle basis-tokens",
+  "description": "Een overzicht van alle beschikbare basis-tokens.",
+  "source": "@site/docs/handboek/huisstijl-vastleggen/basis-tokens/alle-basis-tokens.mdx",
+  "sourceDirName": "handboek/huisstijl-vastleggen/basis-tokens",
+  "slug": "/handboek/huisstijl/basis-tokens/alle-basis-tokens",
+  "permalink": "/handboek/huisstijl/basis-tokens/alle-basis-tokens",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/huisstijl-vastleggen/basis-tokens/alle-basis-tokens.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Alle basis-tokens",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Alle basis-tokens",
+    "sidebar_position": 1,
+    "navigation_order": 1,
+    "pagination_label": "Alle basis-tokens",
+    "description": "Een overzicht van alle beschikbare basis-tokens.",
+    "slug": "/handboek/huisstijl/basis-tokens/alle-basis-tokens",
+    "keywords": [
+      "design system",
+      "design tokens",
+      "basis tokens",
+      "thema's"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Basis-tokens",
+    "permalink": "/handboek/huisstijl/basis-tokens"
+  },
+  "next": {
+    "title": "Thema's",
+    "permalink": "/handboek/huisstijl/themas"
+  }
+}

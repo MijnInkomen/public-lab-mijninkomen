@@ -1,0 +1,29 @@
+{
+  "id": "componenten/youtube-video/index",
+  "title": "YouTube Video",
+  "description": "YouTube-video met de bedieningselementen die YouTube zelf biedt.",
+  "source": "@site/docs/componenten/youtube-video/index.mdx",
+  "sourceDirName": "componenten/youtube-video",
+  "slug": "/youtube-video",
+  "permalink": "/youtube-video",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/youtube-video/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "YouTube Video",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "YouTube Video",
+    "pagination_label": "YouTube Video",
+    "description": "YouTube-video met de bedieningselementen die YouTube zelf biedt.",
+    "issue_number": 353,
+    "slug": "/youtube-video"
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Video",
+    "permalink": "/video"
+  }
+}

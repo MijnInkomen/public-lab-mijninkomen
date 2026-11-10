@@ -1,0 +1,37 @@
+{
+  "id": "handboek/developer/conventies/design-token-conventie",
+  "title": "Design Token conventie",
+  "description": "Conventies voor het maken van Design Tokens",
+  "source": "@site/docs/handboek/developer/03-conventies/02-design-token-conventie.md",
+  "sourceDirName": "handboek/developer/03-conventies",
+  "slug": "/handboek/developer/design-token-conventie/",
+  "permalink": "/handboek/developer/design-token-conventie/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/03-conventies/02-design-token-conventie.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Design Token conventie",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Design Token conventie",
+    "pagination_label": "Design Token conventie",
+    "description": "Conventies voor het maken van Design Tokens",
+    "slug": "/handboek/developer/design-token-conventie/",
+    "keywords": [
+      "api",
+      "design token"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Conventies",
+    "permalink": "/handboek/developer/conventies/"
+  },
+  "next": {
+    "title": "CSS conventie",
+    "permalink": "/handboek/developer/css-conventie/"
+  }
+}

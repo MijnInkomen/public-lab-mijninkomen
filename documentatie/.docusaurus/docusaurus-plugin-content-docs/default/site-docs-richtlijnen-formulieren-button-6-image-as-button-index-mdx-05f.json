@@ -1,0 +1,42 @@
+{
+  "id": "richtlijnen/formulieren/button/image-as-button/index",
+  "title": "Afbeeldingen als buttons",
+  "description": "Richtlijnen voor afbeeldingen als buttons.",
+  "source": "@site/docs/richtlijnen/formulieren/button/6-image-as-button/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/button/6-image-as-button",
+  "slug": "/richtlijnen/formulieren/buttons/afbeelding-als-button",
+  "permalink": "/richtlijnen/formulieren/buttons/afbeelding-als-button",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/button/6-image-as-button/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Afbeeldingen als buttons",
+    "title_sm": "Afbeelding als button",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Afbeelding als button",
+    "sidebar_position": 7,
+    "navigation_order": 7,
+    "pagination_label": "Afbeelding als button",
+    "description": "Richtlijnen voor afbeeldingen als buttons.",
+    "slug": "/richtlijnen/formulieren/buttons/afbeelding-als-button",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Toegankelijke naam button",
+    "permalink": "/richtlijnen/formulieren/buttons/toegankelijke-naam"
+  },
+  "next": {
+    "title": "Disabled submitbuttons",
+    "permalink": "/richtlijnen/formulieren/buttons/disabled-submitbuttons"
+  }
+}

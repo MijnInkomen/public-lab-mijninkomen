@@ -1,0 +1,37 @@
+{
+  "id": "project/kwaliteitsaanpak/i18n",
+  "title": "Internationalisatie en localisatie",
+  "description": "Uitleg over de internationalisatie en localisatie in code in NL Design System",
+  "source": "@site/docs/project/kwaliteitsaanpak/i18n.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/i18n",
+  "permalink": "/project/kwaliteitsaanpak/i18n",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/i18n.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Internationalisatie en localisatie",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Internationalisatie en localisatie",
+    "sidebar_position": 11,
+    "pagination_label": "Internationalisatie en localisatie",
+    "description": "Uitleg over de internationalisatie en localisatie in code in NL Design System",
+    "keywords": [
+      "i18n",
+      "l10n"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Code reviews",
+    "permalink": "/kwaliteitsaanpak/code-review/"
+  },
+  "next": {
+    "title": "Testomgeving",
+    "permalink": "/project/kwaliteitsaanpak/testomgeving"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/initiatief-melden",
+  "source": "@site/src/pages/initiatief-melden.md",
+  "title": "Initiatief melden",
+  "description": "Deze pagina komt later.",
+  "frontMatter": {
+    "title": "Initiatief melden",
+    "hide_table_of_contents": true
+  },
+  "unlisted": false
+}

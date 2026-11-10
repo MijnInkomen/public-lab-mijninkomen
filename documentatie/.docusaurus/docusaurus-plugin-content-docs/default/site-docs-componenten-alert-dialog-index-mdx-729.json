@@ -1,0 +1,52 @@
+{
+  "id": "componenten/alert-dialog/index",
+  "title": "Alert Dialog",
+  "description": "Opent een venster waarin de gebruiker een actie moet uitvoeren om verder te gaan. De rest van de pagina is tijdelijk geblokkeerd.",
+  "source": "@site/docs/componenten/alert-dialog/index.mdx",
+  "sourceDirName": "componenten/alert-dialog",
+  "slug": "/alert-dialog",
+  "permalink": "/alert-dialog",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/alert-dialog/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Alert Dialog",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Alert Dialog",
+    "pagination_label": "Alert Dialog",
+    "description": "Opent een venster waarin de gebruiker een actie moet uitvoeren om verder te gaan. De rest van de pagina is tijdelijk geblokkeerd.",
+    "issue_number": 182,
+    "slug": "/alert-dialog",
+    "keywords": [
+      "actie",
+      "action",
+      "alert",
+      "bevestigen",
+      "blocking",
+      "blokkeren",
+      "choice",
+      "confirm",
+      "continue",
+      "dialog",
+      "dialoogvenster",
+      "doorgaan",
+      "keuze",
+      "modal",
+      "urgent",
+      "venster",
+      "waarschuwing"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Alert",
+    "permalink": "/alert"
+  },
+  "next": {
+    "title": "Avatar",
+    "permalink": "/avatar"
+  }
+}

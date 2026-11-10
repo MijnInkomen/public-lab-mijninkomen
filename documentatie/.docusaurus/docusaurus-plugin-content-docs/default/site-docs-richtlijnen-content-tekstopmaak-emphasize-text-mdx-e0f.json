@@ -1,0 +1,44 @@
+{
+  "id": "richtlijnen/content/tekstopmaak/emphasize-text",
+  "title": "Tekst benadrukken",
+  "description": "Leg nadruk op woorden of zinsdelen door ze dikgedrukt (bold) of schuingedrukt (italic) te maken.",
+  "source": "@site/docs/richtlijnen/content/tekstopmaak/emphasize-text.mdx",
+  "sourceDirName": "richtlijnen/content/tekstopmaak",
+  "slug": "/richtlijnen/content/tekstopmaak/tekst-benadrukken",
+  "permalink": "/richtlijnen/content/tekstopmaak/tekst-benadrukken",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/tekstopmaak/emphasize-text.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tekst benadrukken",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Tekst benadrukken",
+    "pagination_label": "Tekst benadrukken",
+    "description": "Leg nadruk op woorden of zinsdelen door ze dikgedrukt (bold) of schuingedrukt (italic) te maken.",
+    "slug": "/richtlijnen/content/tekstopmaak/tekst-benadrukken",
+    "keywords": [
+      "semantiek",
+      "tekstopmaak",
+      "structuur",
+      "tekststructuur",
+      "dikgedrukt",
+      "schuingedrukt",
+      "strong",
+      "em",
+      "bold",
+      "italic"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Kleurgebruik in tekst",
+    "permalink": "/richtlijnen/content/tekstopmaak/kleurgebruik-in-tekst"
+  },
+  "next": {
+    "title": "Koppen",
+    "permalink": "/richtlijnen/content/tekstopmaak/koppen"
+  }
+}

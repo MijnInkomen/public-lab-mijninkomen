@@ -1,0 +1,44 @@
+{
+  "id": "handboek/designer/werken-met-nl-design-system/design-tokens-versiebeheer",
+  "title": "Design tokens versiebeheer",
+  "description": "Informatie voor designers over semver en hoe we het toepassen op de packages met design tokens.",
+  "source": "@site/docs/handboek/designer/werken-met-nl-design-system/design-tokens-versiebeheer.mdx",
+  "sourceDirName": "handboek/designer/werken-met-nl-design-system",
+  "slug": "/handboek/designer/design-tokens-versiebeheer",
+  "permalink": "/handboek/designer/design-tokens-versiebeheer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/designer/werken-met-nl-design-system/design-tokens-versiebeheer.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Design tokens versiebeheer",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Design tokens versiebeheer",
+    "sidebar_position": 7,
+    "navigation_order": 7,
+    "pagination_label": "Design tokens versiebeheer",
+    "description": "Informatie voor designers over semver en hoe we het toepassen op de packages met design tokens.",
+    "slug": "/handboek/designer/design-tokens-versiebeheer",
+    "keywords": [
+      "design tokens",
+      "versiebeheer",
+      "changelog",
+      "semantic versioning",
+      "major",
+      "minor",
+      "patch"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Figma changelog",
+    "permalink": "/handboek/designer/figma-changelog"
+  },
+  "next": {
+    "title": "Figma migratie-stappenplan",
+    "permalink": "/handboek/designer/figma-migratie-stappenplan"
+  }
+}

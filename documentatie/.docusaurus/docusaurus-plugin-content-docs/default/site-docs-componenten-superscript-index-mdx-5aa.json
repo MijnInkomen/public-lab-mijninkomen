@@ -1,0 +1,51 @@
+{
+  "id": "componenten/superscript/index",
+  "title": "Superscript",
+  "description": "Toont tekst met een kleiner lettertype met een verhoogde letterlijn.",
+  "source": "@site/docs/componenten/superscript/index.mdx",
+  "sourceDirName": "componenten/superscript",
+  "slug": "/superscript",
+  "permalink": "/superscript",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/superscript/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Superscript",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Superscript",
+    "pagination_label": "Superscript",
+    "description": "Toont tekst met een kleiner lettertype met een verhoogde letterlijn.",
+    "issue_number": 337,
+    "slug": "/superscript",
+    "keywords": [
+      "exponent",
+      "footnote",
+      "hoge tekst",
+      "kleine hoge tekst",
+      "kubieke",
+      "kwadraat",
+      "math",
+      "power",
+      "subscript",
+      "sup",
+      "supscript",
+      "superscript",
+      "tot de macht",
+      "tweetje",
+      "vierkante",
+      "voetnoot"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Subscript",
+    "permalink": "/subscript"
+  },
+  "next": {
+    "title": "Switch",
+    "permalink": "/switch"
+  }
+}

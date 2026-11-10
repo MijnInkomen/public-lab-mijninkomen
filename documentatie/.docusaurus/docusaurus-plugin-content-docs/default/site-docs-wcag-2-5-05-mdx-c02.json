@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.5.05",
+  "title": "WCAG-succescriterium 2.5.5 Grootte van het aanwijsgebied (uitgebreid)",
+  "description": "Maak het aanwijsgebied van buttons, links en formuliervelden groot genoeg, zodat het makkelijker is om deze te selecteren.",
+  "source": "@site/docs/wcag/2.5.05.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.5.5",
+  "permalink": "/wcag/2.5.5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.5.05.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.5.5 Grootte van het aanwijsgebied (uitgebreid)",
+    "title_sm": "2.5.5 Grootte van het aanwijsgebied (uitgebreid)",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.5.5 Grootte van het aanwijsgebied (uitgebreid)",
+    "pagination_label": "WCAG-succescriterium 2.5.5 Grootte van het aanwijsgebied (uitgebreid)",
+    "description": "Maak het aanwijsgebied van buttons, links en formuliervelden groot genoeg, zodat het makkelijker is om deze te selecteren.",
+    "slug": "2.5.5",
+    "conformance_level": "Niveau AAA",
+    "keywords": [
+      "WCAG",
+      "AAA",
+      "bedienbaar",
+      "input modaliteiten",
+      "operable",
+      "input modalities",
+      "target size (enhanced)"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.5.4 Bewegingsactivering",
+    "permalink": "/wcag/2.5.4"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.5.6 Input gelijktijdige invoermechanismen",
+    "permalink": "/wcag/2.5.6"
+  }
+}

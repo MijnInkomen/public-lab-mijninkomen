@@ -1,0 +1,41 @@
+{
+  "id": "handboek/developer/infrastructuur/npm-publish",
+  "title": "Publiceren van npm packages",
+  "description": "Publiceren van npm packages",
+  "source": "@site/docs/handboek/developer/05-infrastructuur/08-npm-publish.mdx",
+  "sourceDirName": "handboek/developer/05-infrastructuur",
+  "slug": "/handboek/developer/npm-publish/",
+  "permalink": "/handboek/developer/npm-publish/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/05-infrastructuur/08-npm-publish.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Publiceren van npm packages",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Publiceren van npm packages",
+    "pagination_label": "Publiceren van npm packages",
+    "description": "Publiceren van npm packages",
+    "slug": "/handboek/developer/npm-publish/",
+    "keywords": [
+      "publiceren",
+      "publish",
+      "npm",
+      "package",
+      "openid connect",
+      "oidc"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Security audit voor npm",
+    "permalink": "/pnpm-audit"
+  },
+  "next": {
+    "title": "Vercel",
+    "permalink": "/vercel"
+  }
+}

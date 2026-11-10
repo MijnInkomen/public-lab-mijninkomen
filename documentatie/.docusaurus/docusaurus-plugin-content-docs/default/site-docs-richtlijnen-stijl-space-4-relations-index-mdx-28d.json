@@ -1,0 +1,36 @@
+{
+  "id": "richtlijnen/stijl/space/relations/index",
+  "title": "Gebruik ruimte om relaties te creëren tussen elementen",
+  "description": "Gebruik kleine afstanden om elementen samen te groeperen en grotere afstanden om ze te scheiden. Elementen die dicht bij elkaar staan lijken meer met elkaar verbonden te zijn dan dingen die verder uit elkaar staan.",
+  "source": "@site/docs/richtlijnen/stijl/space/4-relations/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/space/4-relations",
+  "slug": "/richtlijnen/stijl/ruimte/relaties",
+  "permalink": "/richtlijnen/stijl/ruimte/relaties",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/space/4-relations/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Gebruik ruimte om relaties te creëren tussen elementen",
+    "title_sm": "Relaties tussen elementen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Relaties tussen elementen",
+    "pagination_label": "Gebruik ruimte om relaties te creëren tussen elementen",
+    "description": "Gebruik kleine afstanden om elementen samen te groeperen en grotere afstanden om ze te scheiden. Elementen die dicht bij elkaar staan lijken meer met elkaar verbonden te zijn dan dingen die verder uit elkaar staan.",
+    "slug": "/richtlijnen/stijl/ruimte/relaties",
+    "keywords": [
+      "relaties"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Maak gebruik van de spacing concepten",
+    "permalink": "/richtlijnen/stijl/ruimte/spacing-concepten"
+  },
+  "next": {
+    "title": "Gebruik ruimte om hiërarchie te creëren tussen elementen",
+    "permalink": "/richtlijnen/stijl/ruimte/hierarchie"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "richtlijnen/formulieren/multistep/index",
+  "title": "Meerdere stappen in een formulier",
+  "description": "Bestaat een formulier uit veel vragen, dan kan het gebruiksvriendelijk en overzichtelijk zijn om het formulier in meerdere stappen op te delen, of om een vraag per stap te stellen.",
+  "source": "@site/docs/richtlijnen/formulieren/multistep/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/multistep",
+  "slug": "/richtlijnen/formulieren/meerdere-stappen/",
+  "permalink": "/richtlijnen/formulieren/meerdere-stappen/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/multistep/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Meerdere stappen in een formulier",
+    "title_sm": "Meerdere stappen",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Introductie meerdere stappen",
+    "sidebar_position": 8,
+    "navigation_order": 8,
+    "pagination_label": "Meerdere stappen",
+    "description": "Bestaat een formulier uit veel vragen, dan kan het gebruiksvriendelijk en overzichtelijk zijn om het formulier in meerdere stappen op te delen, of om een vraag per stap te stellen.",
+    "slug": "/richtlijnen/formulieren/meerdere-stappen/",
+    "keywords": [
+      "informatie",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Link in nieuwe tab",
+    "permalink": "/richtlijnen/formulieren/links/nieuwe-tab"
+  },
+  "next": {
+    "title": "Meerdere stappen",
+    "permalink": "/richtlijnen/formulieren/meerdere-stappen/"
+  }
+}

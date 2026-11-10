@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.4.05",
+  "title": "WCAG-succescriterium 2.4.5 Meerdere manieren",
+  "description": "Een webpagina is op meerdere manieren te vinden.",
+  "source": "@site/docs/wcag/2.4.05.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.4.5",
+  "permalink": "/wcag/2.4.5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.4.05.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.4.5 Meerdere manieren",
+    "title_sm": "2.4.5 Meerdere manieren",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.4.5 Meerdere manieren",
+    "pagination_label": "WCAG-succescriterium 2.4.5 Meerdere manieren",
+    "description": "Een webpagina is op meerdere manieren te vinden.",
+    "slug": "2.4.5",
+    "conformance_level": "Niveau AA",
+    "keywords": [
+      "WCAG",
+      "AA",
+      "bedienbaar",
+      "navigeerbaar",
+      "operable",
+      "navigable",
+      "multiple ways"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.4.4 Linkdoel (in context)",
+    "permalink": "/wcag/2.4.4"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.4.6 Koppen en labels",
+    "permalink": "/wcag/2.4.6"
+  }
+}

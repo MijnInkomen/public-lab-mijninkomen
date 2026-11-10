@@ -1,0 +1,36 @@
+{
+  "id": "project/kwaliteitsaanpak/index",
+  "title": "Kwaliteitsaanpak",
+  "description": "Kwaliteitsaanpak NL Design System",
+  "source": "@site/docs/project/kwaliteitsaanpak/index.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/",
+  "permalink": "/project/kwaliteitsaanpak/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Kwaliteitsaanpak",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Introductie",
+    "sidebar_position": 1,
+    "pagination_label": "Introductie",
+    "description": "Kwaliteitsaanpak NL Design System",
+    "keywords": [
+      "kwaliteitsaanpak"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Reviews",
+    "permalink": "/project/schrijfwijzer/reviews"
+  },
+  "next": {
+    "title": "Introductie",
+    "permalink": "/project/kwaliteitsaanpak/"
+  }
+}

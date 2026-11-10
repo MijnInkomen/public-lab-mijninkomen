@@ -1,0 +1,40 @@
+{
+  "id": "richtlijnen/stijl/colour/index",
+  "title": "Introductie richtlijnen voor kleuren",
+  "description": "Kleuren zijn een belangrijk onderdeel van een ontwerp. Ze zorgen voor een visuele toon en helpen bij het overbrengen van functie en betekenis. Kleur wordt echter niet door iedereen op dezelfde manier ervaren. Daarom hebben kleuren een ondersteunende en geen essentiële rol.",
+  "source": "@site/docs/richtlijnen/stijl/colour/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/colour",
+  "slug": "/richtlijnen/stijl/kleuren/",
+  "permalink": "/richtlijnen/stijl/kleuren/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/colour/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Introductie richtlijnen voor kleuren",
+    "title_sm": "Kleuren",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Introductie kleuren",
+    "sidebar_position": 2,
+    "navigation_order": 2,
+    "pagination_label": "Introductie richtlijnen voor kleuren",
+    "description": "Kleuren zijn een belangrijk onderdeel van een ontwerp. Ze zorgen voor een visuele toon en helpen bij het overbrengen van functie en betekenis. Kleur wordt echter niet door iedereen op dezelfde manier ervaren. Daarom hebben kleuren een ondersteunende en geen essentiële rol.",
+    "slug": "/richtlijnen/stijl/kleuren/",
+    "keywords": [
+      "kleur",
+      "kleuren"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Uitlijning",
+    "permalink": "/richtlijnen/stijl/typografie/uitlijning"
+  },
+  "next": {
+    "title": "Introductie richtlijnen voor kleuren",
+    "permalink": "/richtlijnen/stijl/kleuren/"
+  }
+}

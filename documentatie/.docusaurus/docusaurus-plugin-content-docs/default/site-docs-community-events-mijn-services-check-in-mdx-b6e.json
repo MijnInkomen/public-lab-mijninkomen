@@ -1,0 +1,42 @@
+{
+  "id": "community/events/mijn-services-check-in",
+  "title": "MijnServices Check-in",
+  "description": "Tijdens de MijnServices Check-in delen we inzichten, ideeën en voortgang rond de doorontwikkeling van NL Design System-componenten die binnen MijnOmgevingen worden gebruikt. Lees hier hoe je mee kunt doen en wanneer het plaatsvindt.",
+  "source": "@site/docs/community/events/mijn-services-check-in.mdx",
+  "sourceDirName": "community/events",
+  "slug": "/events/mijn-services-check-in",
+  "permalink": "/events/mijn-services-check-in",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/mijn-services-check-in.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "MijnServices Check-in",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "navigation_order": 4,
+    "sidebar_label": "MijnServices Check-in",
+    "pagination_label": "Tijdens de MijnServices Check-in delen we inzichten, ideeën en voortgang rond de doorontwikkeling van NL Design System-componenten die binnen MijnOmgevingen worden gebruikt.",
+    "description": "Tijdens de MijnServices Check-in delen we inzichten, ideeën en voortgang rond de doorontwikkeling van NL Design System-componenten die binnen MijnOmgevingen worden gebruikt. Lees hier hoe je mee kunt doen en wanneer het plaatsvindt.",
+    "slug": "/events/mijn-services-check-in",
+    "keywords": [
+      "nl design system",
+      "community sprints",
+      "mijn services community",
+      "mijnservices community",
+      "mijn services community afstemming",
+      "mijn services community check-in",
+      "overheidsbrede portalen community"
+    ]
+  },
+  "sidebar": "community",
+  "previous": {
+    "title": "Product Owner Open Hour",
+    "permalink": "/events/product-owner-open-hour"
+  },
+  "next": {
+    "title": "Tijdens de Rijkshuisstijl Community Open Hour wisselen verschillende organisaties informatie, inzichten en tips uit over de Rijkshuisstijl.",
+    "permalink": "/events/rijkshuisstijl-community-open-hour"
+  }
+}

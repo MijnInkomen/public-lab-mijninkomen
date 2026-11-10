@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/label/above-field/index",
+  "title": "Zet het label boven het formulierveld",
+  "description": "Richtlijnen voor label boven het formulierveld.",
+  "source": "@site/docs/richtlijnen/formulieren/label/3-above-field/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/label/3-above-field",
+  "slug": "/richtlijnen/formulieren/labels/plaatsing",
+  "permalink": "/richtlijnen/formulieren/labels/plaatsing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/label/3-above-field/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Zet het label boven het formulierveld",
+    "title_sm": "Plaatsing label",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Plaatsing label",
+    "pagination_label": "Plaatsing label",
+    "description": "Richtlijnen voor label boven het formulierveld.",
+    "slug": "/richtlijnen/formulieren/labels/plaatsing",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Zichtbare naam label",
+    "permalink": "/richtlijnen/formulieren/labels/zichtbare-naam"
+  },
+  "next": {
+    "title": "Label zichtbaar",
+    "permalink": "/richtlijnen/formulieren/labels/altijd-zichtbaar"
+  }
+}

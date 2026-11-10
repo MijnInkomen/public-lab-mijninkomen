@@ -1,0 +1,31 @@
+{
+  "id": "project/kwaliteitsaanpak/agile-sprint",
+  "title": "Agile sprint",
+  "description": "Aanpak voor het voorbereiden van agile sprints voor mensen die de NL Design System kwaliteitsaanpak gebruiken.",
+  "source": "@site/docs/project/kwaliteitsaanpak/agile-sprint.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/agile-sprint",
+  "permalink": "/project/kwaliteitsaanpak/agile-sprint",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/agile-sprint.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Agile sprint",
+    "sidebar_label": "Agile sprint",
+    "pagination_label": "Agile sprint",
+    "sidebar_position": 7,
+    "description": "Aanpak voor het voorbereiden van agile sprints voor mensen die de NL Design System kwaliteitsaanpak gebruiken."
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Definition of Ready",
+    "permalink": "/project/kwaliteitsaanpak/definition-of-ready"
+  },
+  "next": {
+    "title": "Broncodekwaliteit",
+    "permalink": "/project/kwaliteitsaanpak/broncodekwaliteit"
+  }
+}

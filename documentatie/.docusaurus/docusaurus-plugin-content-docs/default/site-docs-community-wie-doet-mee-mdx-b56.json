@@ -1,0 +1,34 @@
+{
+  "id": "community/wie-doet-mee",
+  "title": "De NL Design System Community in cijfers",
+  "description": "Actuele deelnamecijfers van de NL Design System Community, zoals algemene aanmeldingen en deelname op Slack, Figma en GitHub.",
+  "source": "@site/docs/community/wie-doet-mee.mdx",
+  "sourceDirName": "community",
+  "slug": "/community/wie-doet-mee",
+  "permalink": "/community/wie-doet-mee",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/wie-doet-mee.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "De NL Design System Community in cijfers",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Community in cijfers",
+    "pagination_label": "Community in cijfers",
+    "description": "Actuele deelnamecijfers van de NL Design System Community, zoals algemene aanmeldingen en deelname op Slack, Figma en GitHub.",
+    "keywords": [
+      "nl design system"
+    ]
+  },
+  "sidebar": "community",
+  "previous": {
+    "title": "Sluit je aan",
+    "permalink": "/community/sluit-je-aan"
+  },
+  "next": {
+    "title": "Community Sprints",
+    "permalink": "/community/community-sprints/"
+  }
+}

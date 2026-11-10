@@ -1,0 +1,36 @@
+{
+  "id": "project/kwaliteitsaanpak/veilige-werkomgeving",
+  "title": "Veilige werkomgeving",
+  "description": "Uitleg over een veilige werkomgeving voor NL Design System",
+  "source": "@site/docs/project/kwaliteitsaanpak/veilige-werkomgeving.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/veilige-werkomgeving",
+  "permalink": "/project/kwaliteitsaanpak/veilige-werkomgeving",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/veilige-werkomgeving.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Veilige werkomgeving",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Veilige werkomgeving",
+    "sidebar_position": 3,
+    "pagination_label": "Veilige werkomgeving",
+    "description": "Uitleg over een veilige werkomgeving voor NL Design System",
+    "keywords": [
+      "coc"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Introductie",
+    "permalink": "/project/kwaliteitsaanpak/"
+  },
+  "next": {
+    "title": "Veilig werken",
+    "permalink": "/project/kwaliteitsaanpak/veilig-werken"
+  }
+}

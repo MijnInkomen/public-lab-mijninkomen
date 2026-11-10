@@ -1,0 +1,47 @@
+{
+  "id": "componenten/blockquote/index",
+  "title": "Blockquote",
+  "description": "Toont een citaat dat afwijkt van de hoofdtekst.",
+  "source": "@site/docs/componenten/blockquote/index.mdx",
+  "sourceDirName": "componenten/blockquote",
+  "slug": "/blockquote",
+  "permalink": "/blockquote",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/blockquote/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Blockquote",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Blockquote",
+    "pagination_label": "Blockquote",
+    "description": "Toont een citaat dat afwijkt van de hoofdtekst.",
+    "issue_number": 73,
+    "slug": "/blockquote",
+    "keywords": [
+      "blockquote",
+      "citaat",
+      "cite",
+      "citeren",
+      "excerpt",
+      "extract",
+      "fragment",
+      "quotation",
+      "quote",
+      "snippet",
+      "tekstfragment",
+      "uitspraak"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Avatar",
+    "permalink": "/avatar"
+  },
+  "next": {
+    "title": "Breadcrumb Navigation",
+    "permalink": "/breadcrumb-navigation"
+  }
+}

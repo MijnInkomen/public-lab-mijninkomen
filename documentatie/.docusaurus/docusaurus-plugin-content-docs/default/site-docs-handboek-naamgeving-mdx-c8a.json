@@ -1,0 +1,30 @@
+{
+  "id": "handboek/naamgeving",
+  "title": "Naamgeving",
+  "description": "Naamgeving voor componenten, attributen en variaties",
+  "source": "@site/docs/handboek/naamgeving.mdx",
+  "sourceDirName": "handboek",
+  "slug": "/handboek/naamgeving",
+  "permalink": "/handboek/naamgeving",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/naamgeving.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Naamgeving",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Naamgeving",
+    "sidebar_position": 2,
+    "navigation_order": 2,
+    "pagination_label": "Naamgeving",
+    "description": "Naamgeving voor componenten, attributen en variaties",
+    "keywords": [
+      "design token",
+      "design tokens",
+      "naamgeving"
+    ]
+  }
+}

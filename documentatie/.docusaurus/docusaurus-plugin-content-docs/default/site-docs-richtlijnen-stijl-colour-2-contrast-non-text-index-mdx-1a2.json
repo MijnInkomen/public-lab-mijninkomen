@@ -1,0 +1,36 @@
+{
+  "id": "richtlijnen/stijl/colour/contrast-non-text/index",
+  "title": "Zorg voor voldoende kleurcontrast voor niet-tekstuele content",
+  "description": "Zorg voor voldoende kleurcontrast tussen de achtergrondkleur en de kleur van componenten die visueel betekenis hebben.",
+  "source": "@site/docs/richtlijnen/stijl/colour/2-contrast-non-text/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/colour/2-contrast-non-text",
+  "slug": "/richtlijnen/stijl/kleuren/contrast-niet-tekstuele-content",
+  "permalink": "/richtlijnen/stijl/kleuren/contrast-niet-tekstuele-content",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/colour/2-contrast-non-text/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Zorg voor voldoende kleurcontrast voor niet-tekstuele content",
+    "title_sm": "Kleurcontrast voor niet-tekstuele content",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Kleurcontrast voor niet-tekstuele content",
+    "pagination_label": "Voldoende kleurcontrast voor niet-tekstuele content",
+    "description": "Zorg voor voldoende kleurcontrast tussen de achtergrondkleur en de kleur van componenten die visueel betekenis hebben.",
+    "slug": "/richtlijnen/stijl/kleuren/contrast-niet-tekstuele-content",
+    "keywords": [
+      "iconen"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Zorg voor voldoende kleurcontrast voor tekst",
+    "permalink": "/richtlijnen/stijl/kleuren/contrast-tekst"
+  },
+  "next": {
+    "title": "Gebruik kleur met een doel",
+    "permalink": "/richtlijnen/stijl/kleuren/doel"
+  }
+}

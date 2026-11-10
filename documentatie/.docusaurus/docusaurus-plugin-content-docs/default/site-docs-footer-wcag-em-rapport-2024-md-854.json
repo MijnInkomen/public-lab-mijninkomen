@@ -1,0 +1,22 @@
+{
+  "id": "footer/wcag-em-rapport-2024",
+  "title": "Audit toegankelijkheid NLDesignSystem.nl versie 2.0",
+  "description": "Rapport van de WCAG EM Audit van nldesignsystem.nl in 2024",
+  "source": "@site/docs/footer/wcag-em-rapport-2024.md",
+  "sourceDirName": "footer",
+  "slug": "/toegankelijkheidsverklaring/rapport-2024",
+  "permalink": "/toegankelijkheidsverklaring/rapport-2024",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/footer/wcag-em-rapport-2024.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Audit toegankelijkheid NLDesignSystem.nl versie 2.0",
+    "description": "Rapport van de WCAG EM Audit van nldesignsystem.nl in 2024",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "pagination_label": "Toegankelijkheid",
+    "slug": "/toegankelijkheidsverklaring/rapport-2024"
+  }
+}

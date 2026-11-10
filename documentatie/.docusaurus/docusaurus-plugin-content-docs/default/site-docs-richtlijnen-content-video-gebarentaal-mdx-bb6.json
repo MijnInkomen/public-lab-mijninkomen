@@ -1,0 +1,45 @@
+{
+  "id": "richtlijnen/content/video/gebarentaal",
+  "title": "Gebarentaal",
+  "description": "Richtlijnen voor gebarentaal bij video's binnen NL Design System",
+  "source": "@site/docs/richtlijnen/content/video/gebarentaal.mdx",
+  "sourceDirName": "richtlijnen/content/video",
+  "slug": "/richtlijnen/content/video/gebarentaal",
+  "permalink": "/richtlijnen/content/video/gebarentaal",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/video/gebarentaal.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Gebarentaal",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Gebarentaal",
+    "pagination_label": "Gebarentaal",
+    "description": "Richtlijnen voor gebarentaal bij video's binnen NL Design System",
+    "slug": "/richtlijnen/content/video/gebarentaal",
+    "keywords": [
+      "video",
+      "YouTube",
+      "Vimeo",
+      "gebarentaal",
+      "sign language",
+      "gebaren tolk",
+      "Nederlandse gebarentaal",
+      "NGT",
+      "Nederlands met Gebaren",
+      "NmG",
+      "tolk"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Flitsen",
+    "permalink": "/richtlijnen/content/video/flitsen"
+  },
+  "next": {
+    "title": "Ondertiteling",
+    "permalink": "/richtlijnen/content/video/ondertiteling"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "handboek/developer/conventies/api-conventie",
+  "title": "API conventie",
+  "description": "Conventies voor het maken van API's",
+  "source": "@site/docs/handboek/developer/03-conventies/04-api-conventie.md",
+  "sourceDirName": "handboek/developer/03-conventies",
+  "slug": "/handboek/developer/api-conventie/",
+  "permalink": "/handboek/developer/api-conventie/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/03-conventies/04-api-conventie.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "API conventie",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "API conventie",
+    "pagination_label": "API conventie",
+    "description": "Conventies voor het maken van API's",
+    "slug": "/handboek/developer/api-conventie/",
+    "keywords": [
+      "api"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "CSS conventie",
+    "permalink": "/handboek/developer/css-conventie/"
+  },
+  "next": {
+    "title": "Namen van states",
+    "permalink": "/handboek/developer/state-conventie/"
+  }
+}

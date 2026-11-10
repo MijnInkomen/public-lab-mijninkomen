@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.1.01",
+  "title": "WCAG-succescriterium 2.1.1 Toetsenbord",
+  "description": "Elke actie is uit te voeren met een toetsenbord.",
+  "source": "@site/docs/wcag/2.1.01.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.1.1",
+  "permalink": "/wcag/2.1.1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.1.01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.1.1 Toetsenbord",
+    "title_sm": "2.1.1 Toetsenbord",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.1.1 Toetsenbord",
+    "pagination_label": "WCAG-succescriterium 2.1.1 Toetsenbord",
+    "description": "Elke actie is uit te voeren met een toetsenbord.",
+    "slug": "2.1.1",
+    "conformance_level": "Niveau A",
+    "keywords": [
+      "WCAG",
+      "A",
+      "bedienbaar",
+      "toetsenbordtoegankelijk",
+      "operable",
+      "keyboard accessible",
+      "keyboard"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 1.4.13 Content bij hover of focus",
+    "permalink": "/wcag/1.4.13"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.1.2 Geen toetsenbordval",
+    "permalink": "/wcag/2.1.2"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "voorbeelden/patronen-en-templates/formulieren",
+  "title": "Formulieren",
+  "description": "Verzameling van patronen en templates rondom formulieren en meerstappenformulieren.",
+  "source": "@site/docs/voorbeelden/patronen-en-templates/formulieren.mdx",
+  "sourceDirName": "voorbeelden/patronen-en-templates",
+  "slug": "/voorbeelden/patronen-en-templates/formulieren",
+  "permalink": "/voorbeelden/patronen-en-templates/formulieren",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/voorbeelden/patronen-en-templates/formulieren.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Formulieren",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Formulieren",
+    "sidebar_position": 2,
+    "navigation_order": 2,
+    "pagination_label": "Formulieren",
+    "description": "Verzameling van patronen en templates rondom formulieren en meerstappenformulieren.",
+    "slug": "/voorbeelden/patronen-en-templates/formulieren",
+    "keywords": [
+      "voorbeelden",
+      "patronen",
+      "templates",
+      "gebruikersonderzoek",
+      "formulieren",
+      "meerstappenformulieren"
+    ]
+  },
+  "sidebar": "voorbeelden",
+  "previous": {
+    "title": "Introductie",
+    "permalink": "/voorbeelden/patronen-en-templates"
+  },
+  "next": {
+    "title": "Mijn omgevingen",
+    "permalink": "/voorbeelden/patronen-en-templates/mijn-omgevingen"
+  }
+}

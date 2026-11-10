@@ -1,0 +1,36 @@
+{
+  "id": "ontwikkelingen/toekomst",
+  "title": "MijnInkomen's toekomst",
+  "description": "Toekomstige ontwikkelingen binnen MijnInkomen",
+  "source": "@site/docs/ontwikkelingen/toekomst.mdx",
+  "sourceDirName": "ontwikkelingen",
+  "slug": "/waar-werkt-het-naar-toe",
+  "permalink": "/waar-werkt-het-naar-toe",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/ontwikkelingen/toekomst.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "MijnInkomen's toekomst",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Waar werkt MijnInkomen naar",
+    "sidebar_position": 1,
+    "navigation_order": 1,
+    "pagination_label": "Waar werkt MijnInkomen naar",
+    "description": "Toekomstige ontwikkelingen binnen MijnInkomen",
+    "slug": "/waar-werkt-het-naar-toe",
+    "keywords": [
+      "MijnInkomen",
+      "ontwikkelingen",
+      "toekomst"
+    ]
+  },
+  "sidebar": "ontwikkelingen",
+  "previous": {
+    "title": "Wat kan MijnInkomen",
+    "permalink": "/wat-kan-het"
+  }
+}

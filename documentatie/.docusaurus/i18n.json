@@ -1,0 +1,20 @@
+{
+  "defaultLocale": "nl",
+  "locales": [
+    "nl"
+  ],
+  "path": "i18n",
+  "currentLocale": "nl",
+  "localeConfigs": {
+    "nl": {
+      "label": "Nederlands",
+      "direction": "ltr",
+      "htmlLang": "nl-NL",
+      "calendar": "gregory",
+      "path": "nl",
+      "translate": true,
+      "url": "https://nldesignsystem.nl",
+      "baseUrl": "/"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.4.08",
+  "title": "WCAG-succescriterium 2.4.8 Locatie",
+  "description": "Laat gebruikers weten waar ze zich precies bevinden binnen een website.",
+  "source": "@site/docs/wcag/2.4.08.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.4.8",
+  "permalink": "/wcag/2.4.8",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.4.08.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.4.8 Locatie",
+    "title_sm": "2.4.8 Locatie",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.4.8 Locatie",
+    "pagination_label": "2.4.8 Locatie",
+    "description": "Laat gebruikers weten waar ze zich precies bevinden binnen een website.",
+    "slug": "2.4.8",
+    "conformance_level": "Niveau AAA",
+    "keywords": [
+      "WCAG",
+      "AAA",
+      "bedienbaar",
+      "navigeerbaar",
+      "operable",
+      "navigable",
+      "location"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "2.4.7 Focus zichtbaar",
+    "permalink": "/wcag/2.4.7"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.4.9 Linkdoel (alleen link)",
+    "permalink": "/wcag/2.4.9"
+  }
+}

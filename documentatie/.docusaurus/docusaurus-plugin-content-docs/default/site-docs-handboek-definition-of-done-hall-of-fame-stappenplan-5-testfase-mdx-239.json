@@ -1,0 +1,42 @@
+{
+  "id": "handboek/definition-of-done/hall-of-fame-stappenplan/testfase",
+  "title": "5. Testfase",
+  "description": "Stappen voor de Testfase van de Definition of Done voor Hall of Fame",
+  "source": "@site/docs/handboek/definition-of-done/hall-of-fame-stappenplan/5-testfase.mdx",
+  "sourceDirName": "handboek/definition-of-done/hall-of-fame-stappenplan",
+  "slug": "/handboek/estafettemodel/componenten/hall-of-fame/testfase",
+  "permalink": "/handboek/estafettemodel/componenten/hall-of-fame/testfase",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/hall-of-fame-stappenplan/5-testfase.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "5. Testfase",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "5. Testfase",
+    "sidebar_position": 5,
+    "navigation_order": 5,
+    "pagination_label": "5. Testfase",
+    "description": "Stappen voor de Testfase van de Definition of Done voor Hall of Fame",
+    "slug": "/handboek/estafettemodel/componenten/hall-of-fame/testfase",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done",
+      "hall of fame"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "4. Ontwikkelfase",
+    "permalink": "/handboek/estafettemodel/componenten/hall-of-fame/ontwikkelfase"
+  },
+  "next": {
+    "title": "6. Publicatiefase",
+    "permalink": "/handboek/estafettemodel/componenten/hall-of-fame/publicatiefase"
+  }
+}

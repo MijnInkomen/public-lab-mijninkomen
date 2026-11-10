@@ -1,0 +1,36 @@
+{
+  "id": "project/klachten",
+  "title": "Klachten",
+  "description": "Klachten melden over het project NL Design System.",
+  "source": "@site/docs/project/klachten.mdx",
+  "sourceDirName": "project",
+  "slug": "/project/klachten",
+  "permalink": "/project/klachten",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/klachten.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Klachten",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "navigation_order": 6,
+    "sidebar_label": "Klachten",
+    "pagination_label": "Klachten",
+    "description": "Klachten melden over het project NL Design System.",
+    "keywords": [
+      "kernteam",
+      "klachten"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Op de hoogte blijven",
+    "permalink": "/project/blijf-op-de-hoogte"
+  },
+  "next": {
+    "title": "Schrijfwijzer",
+    "permalink": "/project/schrijfwijzer/"
+  }
+}

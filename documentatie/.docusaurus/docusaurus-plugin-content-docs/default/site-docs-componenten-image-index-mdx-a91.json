@@ -1,0 +1,46 @@
+{
+  "id": "componenten/image/index",
+  "title": "Image",
+  "description": "Toont een afbeelding",
+  "source": "@site/docs/componenten/image/index.mdx",
+  "sourceDirName": "componenten/image",
+  "slug": "/image",
+  "permalink": "/image",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/image/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Image",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Image",
+    "pagination_label": "Image",
+    "description": "Toont een afbeelding",
+    "issue_number": 201,
+    "slug": "/image",
+    "keywords": [
+      "afbeelding",
+      "beeld",
+      "bijschrift",
+      "description",
+      "foto",
+      "graphic",
+      "image",
+      "images",
+      "photo",
+      "picture",
+      "plaatje"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Icon",
+    "permalink": "/icon"
+  },
+  "next": {
+    "title": "Input Group",
+    "permalink": "/input-group"
+  }
+}

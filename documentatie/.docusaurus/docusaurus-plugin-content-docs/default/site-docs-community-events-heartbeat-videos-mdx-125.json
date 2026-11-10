@@ -1,0 +1,34 @@
+{
+  "id": "community/events/heartbeat/videos",
+  "title": "Video's van de Heartbeat",
+  "description": "Heartbeats vanaf 2022 terugkijken met updates van het kernteam en de community over NL Design System",
+  "source": "@site/docs/community/events/heartbeat/videos.mdx",
+  "sourceDirName": "community/events/heartbeat",
+  "slug": "/events/heartbeat/videos",
+  "permalink": "/events/heartbeat/videos",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/heartbeat/videos.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Video's van de Heartbeat",
+    "title_sm": "Video's",
+    "description": "Heartbeats vanaf 2022 terugkijken met updates van het kernteam en de community over NL Design System",
+    "navigation_order": 1,
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Video's",
+    "pagination_label": "Video's van de afgelopen Heartbeats",
+    "slug": "/events/heartbeat/videos"
+  },
+  "sidebar": "community",
+  "previous": {
+    "title": "Heartbeat",
+    "permalink": "/events/heartbeat"
+  },
+  "next": {
+    "title": "2 wekelijkse updates van het kernteam en community",
+    "permalink": "/events/heartbeat/aanmelden"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/help/autofill/index",
+  "title": "Vul bekende informatie in waar mogelijk",
+  "description": "Richtlijnen om invoervelden zoveel mogelijk automatisch in te vullen.",
+  "source": "@site/docs/richtlijnen/formulieren/help/6-autofill/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/help/6-autofill",
+  "slug": "/richtlijnen/formulieren/voorkom-fouten/automatisch-invullen",
+  "permalink": "/richtlijnen/formulieren/voorkom-fouten/automatisch-invullen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/help/6-autofill/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Vul bekende informatie in waar mogelijk",
+    "title_sm": "Automatisch invullen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Automatisch invullen",
+    "pagination_label": "Automatisch invullen",
+    "description": "Richtlijnen om invoervelden zoveel mogelijk automatisch in te vullen.",
+    "slug": "/richtlijnen/formulieren/voorkom-fouten/automatisch-invullen",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Autocomplete in een formulier",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/autocomplete"
+  },
+  "next": {
+    "title": "Controleren en aanpassen",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/controleren-en-aanpassen"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "richtlijnen/stijl/space/interactive/index",
+  "title": "Reserveer ruimte tussen interactieve elementen",
+  "description": "Om ruimte consistent toe te passen is het verstandig om te werken met een vaste set aan waardes die oplopen in grootte. Een zogenoemde spacing scale.",
+  "source": "@site/docs/richtlijnen/stijl/space/7-interactive/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/space/7-interactive",
+  "slug": "/richtlijnen/stijl/ruimte/interactieve-elementen",
+  "permalink": "/richtlijnen/stijl/ruimte/interactieve-elementen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/space/7-interactive/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Reserveer ruimte tussen interactieve elementen",
+    "title_sm": "Interactieve elementen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Interactieve elementen",
+    "pagination_label": "Reserveer ruimte tussen interactieve elementen",
+    "description": "Om ruimte consistent toe te passen is het verstandig om te werken met een vaste set aan waardes die oplopen in grootte. Een zogenoemde spacing scale.",
+    "slug": "/richtlijnen/stijl/ruimte/interactieve-elementen",
+    "keywords": [
+      "kleurcontrast",
+      "tekst"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Stem het gebruik van ruimte af op de functie en inhoud",
+    "permalink": "/richtlijnen/stijl/ruimte/ruim-compact"
+  },
+  "next": {
+    "title": "Introductie richtlijnen voor iconen",
+    "permalink": "/richtlijnen/stijl/iconen/"
+  }
+}

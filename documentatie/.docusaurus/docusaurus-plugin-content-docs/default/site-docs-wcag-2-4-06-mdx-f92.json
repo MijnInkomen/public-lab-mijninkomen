@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.4.06",
+  "title": "WCAG-succescriterium 2.4.6 Koppen en labels",
+  "description": "Koppen en labels beschrijven het onderwerp of het doel.",
+  "source": "@site/docs/wcag/2.4.06.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.4.6",
+  "permalink": "/wcag/2.4.6",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.4.06.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.4.6 Koppen en labels",
+    "title_sm": "2.4.6 Koppen en labels",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.4.6 Koppen en labels",
+    "pagination_label": "WCAG-succescriterium 2.4.6 Koppen en labels",
+    "description": "Koppen en labels beschrijven het onderwerp of het doel.",
+    "slug": "2.4.6",
+    "conformance_level": "Niveau AA",
+    "keywords": [
+      "WCAG",
+      "AA",
+      "bedienbaar",
+      "navigeerbaar",
+      "operable",
+      "navigable",
+      "headings and labels"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.4.5 Meerdere manieren",
+    "permalink": "/wcag/2.4.5"
+  },
+  "next": {
+    "title": "2.4.7 Focus zichtbaar",
+    "permalink": "/wcag/2.4.7"
+  }
+}

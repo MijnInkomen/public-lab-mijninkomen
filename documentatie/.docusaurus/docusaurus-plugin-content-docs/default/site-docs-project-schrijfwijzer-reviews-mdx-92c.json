@@ -1,0 +1,36 @@
+{
+  "id": "project/schrijfwijzer/reviews",
+  "title": "Reviews",
+  "description": "Reviews voor NL Design System communicatie.",
+  "source": "@site/docs/project/schrijfwijzer/reviews.mdx",
+  "sourceDirName": "project/schrijfwijzer",
+  "slug": "/project/schrijfwijzer/reviews",
+  "permalink": "/project/schrijfwijzer/reviews",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/schrijfwijzer/reviews.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Reviews",
+    "hide_title": true,
+    "sidebar_label": "Reviews",
+    "sidebar_position": 9,
+    "navigation_order": 9,
+    "pagination_label": "Reviews",
+    "description": "Reviews voor NL Design System communicatie.",
+    "keywords": [
+      "kernteam"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Code",
+    "permalink": "/project/schrijfwijzer/code"
+  },
+  "next": {
+    "title": "Introductie",
+    "permalink": "/project/kwaliteitsaanpak/"
+  }
+}

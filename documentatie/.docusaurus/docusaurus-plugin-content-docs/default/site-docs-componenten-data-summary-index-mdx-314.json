@@ -1,0 +1,58 @@
+{
+  "id": "componenten/data-summary/index",
+  "title": "Data Summary",
+  "description": "Lijst met eigenschappen en bijbehorende data over een onderwerp.",
+  "source": "@site/docs/componenten/data-summary/index.mdx",
+  "sourceDirName": "componenten/data-summary",
+  "slug": "/data-summary",
+  "permalink": "/data-summary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/data-summary/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Data Summary",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Data Summary",
+    "pagination_label": "Data Summary",
+    "description": "Lijst met eigenschappen en bijbehorende data over een onderwerp.",
+    "issue_number": 357,
+    "slug": "/data-summary",
+    "keywords": [
+      "check",
+      "controle",
+      "data",
+      "data overzicht",
+      "data list",
+      "datalijst",
+      "data samenvatting",
+      "data summary",
+      "definitie lijst",
+      "definition list",
+      "eigenschappen",
+      "eigenschappenlijst",
+      "key",
+      "lijst",
+      "list",
+      "list group",
+      "overzicht",
+      "summary",
+      "samenvatting",
+      "summary data",
+      "terugkoppeling",
+      "value",
+      "waarde"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Data Badge",
+    "permalink": "/data-badge"
+  },
+  "next": {
+    "title": "Date Input",
+    "permalink": "/date-input"
+  }
+}

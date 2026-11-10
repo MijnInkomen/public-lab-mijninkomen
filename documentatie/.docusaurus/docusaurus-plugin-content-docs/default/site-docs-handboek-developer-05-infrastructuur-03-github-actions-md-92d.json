@@ -1,0 +1,41 @@
+{
+  "id": "handboek/developer/infrastructuur/github-actions",
+  "title": "GitHub Actions",
+  "description": "Het werken met GitHub Actions binnen NL Design System",
+  "source": "@site/docs/handboek/developer/05-infrastructuur/03-github-actions.md",
+  "sourceDirName": "handboek/developer/05-infrastructuur",
+  "slug": "/handboek/developer/github-actions/",
+  "permalink": "/handboek/developer/github-actions/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/05-infrastructuur/03-github-actions.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "GitHub Actions",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "GitHub Actions",
+    "pagination_label": "GitHub Actions",
+    "description": "Het werken met GitHub Actions binnen NL Design System",
+    "slug": "/handboek/developer/github-actions/",
+    "keywords": [
+      "GitHub",
+      "GitHub Actions",
+      "CI",
+      "Continuous Integration",
+      "CD",
+      "Continuous Delivery"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "GitHub",
+    "permalink": "/github"
+  },
+  "next": {
+    "title": "GitHub teams en code owners",
+    "permalink": "/handboek/developer/github-teams-en-code-owners/"
+  }
+}

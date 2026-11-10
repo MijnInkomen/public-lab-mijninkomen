@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/placeholder/clarity/index",
+  "title": "Voorkom verwarring bij de gebruiker",
+  "description": "Richtlijnen om verwarring bij de gebruiker te voorkomen.",
+  "source": "@site/docs/richtlijnen/formulieren/placeholder/3-clarity/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/placeholder/3-clarity",
+  "slug": "/richtlijnen/formulieren/placeholders/verwarring-voorkomen",
+  "permalink": "/richtlijnen/formulieren/placeholders/verwarring-voorkomen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/placeholder/3-clarity/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Voorkom verwarring bij de gebruiker",
+    "title_sm": "Placeholder kan verwarren",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Placeholder kan verwarren",
+    "pagination_label": "Placeholder kan verwarren",
+    "description": "Richtlijnen om verwarring bij de gebruiker te voorkomen.",
+    "slug": "/richtlijnen/formulieren/placeholders/verwarring-voorkomen",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Placeholder bij zoekfunctie",
+    "permalink": "/richtlijnen/formulieren/placeholders/zoekfunctie"
+  },
+  "next": {
+    "title": "Placeholder kleurcontrast",
+    "permalink": "/richtlijnen/formulieren/placeholders/kleurcontrast"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/error/location/index",
+  "title": "Zet de foutmeldingen bij de betreffende formuliervelden",
+  "description": "Richtlijnen voor positie van foutmeldingen in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/error/4-location/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/error/4-location",
+  "slug": "/richtlijnen/formulieren/foutmeldingen/plaatsing",
+  "permalink": "/richtlijnen/formulieren/foutmeldingen/plaatsing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/error/4-location/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Zet de foutmeldingen bij de betreffende formuliervelden",
+    "title_sm": "Plaatsing foutmelding",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Plaatsing foutmelding",
+    "pagination_label": "Plaatsing foutmelding",
+    "description": "Richtlijnen voor positie van foutmeldingen in een formulier.",
+    "slug": "/richtlijnen/formulieren/foutmeldingen/plaatsing",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Duidelijke foutmeldingen",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/duidelijk"
+  },
+  "next": {
+    "title": "HTML-formuliervalidatie",
+    "permalink": "/richtlijnen/formulieren/foutmeldingen/html-formuliervalidatie"
+  }
+}

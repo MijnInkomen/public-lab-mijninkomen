@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/description/associated/index",
+  "title": "Koppel een description aan het formulierveld",
+  "description": "Richtlijnen voor koppelen van een description aan een formulierveld.",
+  "source": "@site/docs/richtlijnen/formulieren/description/1-associated/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/description/1-associated",
+  "slug": "/richtlijnen/formulieren/descriptions/koppelen",
+  "permalink": "/richtlijnen/formulieren/descriptions/koppelen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/description/1-associated/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Koppel een description aan het formulierveld",
+    "title_sm": "Koppel description",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Koppel description",
+    "pagination_label": "Koppel description",
+    "description": "Richtlijnen voor koppelen van een description aan een formulierveld.",
+    "slug": "/richtlijnen/formulieren/descriptions/koppelen",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Descriptions in een formulier",
+    "permalink": "/richtlijnen/formulieren/descriptions/"
+  },
+  "next": {
+    "title": "Inhoud description",
+    "permalink": "/richtlijnen/formulieren/descriptions/inhoud"
+  }
+}

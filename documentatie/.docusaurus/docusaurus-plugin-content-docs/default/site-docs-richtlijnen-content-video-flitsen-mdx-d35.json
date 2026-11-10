@@ -1,0 +1,41 @@
+{
+  "id": "richtlijnen/content/video/flitsen",
+  "title": "Flitsen in video",
+  "description": "Richtlijnen voor flitsen in video binnen NL Design System",
+  "source": "@site/docs/richtlijnen/content/video/flitsen.mdx",
+  "sourceDirName": "richtlijnen/content/video",
+  "slug": "/richtlijnen/content/video/flitsen",
+  "permalink": "/richtlijnen/content/video/flitsen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/video/flitsen.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Flitsen in video",
+    "title_sm": "Flitsen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Flitsen",
+    "pagination_label": "Flitsen",
+    "description": "Richtlijnen voor flitsen in video binnen NL Design System",
+    "slug": "/richtlijnen/content/video/flitsen",
+    "keywords": [
+      "video",
+      "YouTube",
+      "Vimeo",
+      "flitsen",
+      "epilepsie",
+      "epileptische aanval"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Video beschrijving",
+    "permalink": "/richtlijnen/content/video/beschrijving"
+  },
+  "next": {
+    "title": "Gebarentaal",
+    "permalink": "/richtlijnen/content/video/gebarentaal"
+  }
+}

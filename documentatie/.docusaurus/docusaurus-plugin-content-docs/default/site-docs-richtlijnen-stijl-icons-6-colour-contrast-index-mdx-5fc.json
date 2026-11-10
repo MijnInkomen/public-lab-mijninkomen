@@ -1,0 +1,36 @@
+{
+  "id": "richtlijnen/stijl/icons/colour-contrast/index",
+  "title": "Zorg ook bij iconen voor voldoende contrast",
+  "description": "Gebruik je een icoon zonder tekst? Maak het contrast tussen de voor- en achtergrondkleur 3:1 of groter. Tenzij het icoon puur decoratief is.",
+  "source": "@site/docs/richtlijnen/stijl/icons/6-colour-contrast/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/icons/6-colour-contrast",
+  "slug": "/richtlijnen/stijl/iconen/kleurcontrast-iconen",
+  "permalink": "/richtlijnen/stijl/iconen/kleurcontrast-iconen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/icons/6-colour-contrast/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Zorg ook bij iconen voor voldoende contrast",
+    "title_sm": "Zorg voor voldoende contrast",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Zorg voor voldoende contrast",
+    "pagination_label": "Zorg ook bij iconen voor voldoende contrast",
+    "description": "Gebruik je een icoon zonder tekst? Maak het contrast tussen de voor- en achtergrondkleur 3:1 of groter. Tenzij het icoon puur decoratief is.",
+    "slug": "/richtlijnen/stijl/iconen/kleurcontrast-iconen",
+    "keywords": [
+      "iconen"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Laat de lijndikte meeschalen",
+    "permalink": "/richtlijnen/stijl/iconen/lijndikte-iconen"
+  },
+  "next": {
+    "title": "Respecteer conventies",
+    "permalink": "/richtlijnen/stijl/iconen/respecteer-conventies"
+  }
+}

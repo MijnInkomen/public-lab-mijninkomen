@@ -1,0 +1,35 @@
+{
+  "id": "project/schrijfwijzer/code",
+  "title": "Code",
+  "description": "Richtlijnen voor code-voorbeelden in communicatie vanuit het project NL Design System.",
+  "source": "@site/docs/project/schrijfwijzer/code.mdx",
+  "sourceDirName": "project/schrijfwijzer",
+  "slug": "/project/schrijfwijzer/code",
+  "permalink": "/project/schrijfwijzer/code",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/schrijfwijzer/code.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Code",
+    "hide_title": true,
+    "sidebar_label": "Code",
+    "sidebar_position": 8,
+    "pagination_label": "Code",
+    "description": "Richtlijnen voor code-voorbeelden in communicatie vanuit het project NL Design System.",
+    "keywords": [
+      "kernteam"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Beslissingen voor schrijfwijze",
+    "permalink": "/project/schrijfwijzer/beslissingen"
+  },
+  "next": {
+    "title": "Reviews",
+    "permalink": "/project/schrijfwijzer/reviews"
+  }
+}

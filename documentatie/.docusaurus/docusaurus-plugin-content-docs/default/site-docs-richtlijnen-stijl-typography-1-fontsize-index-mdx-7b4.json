@@ -1,0 +1,36 @@
+{
+  "id": "richtlijnen/stijl/typography/fontsize/index",
+  "title": "Zorg ervoor dat letters groot genoeg zijn",
+  "description": "Gebruik een lettergrootte ofwel die groot genoeg is voor de broodtekst, zodat mensen comfortabel kunnen lezen. Gebruik als richtlijn minimaal een lettergrootte van 16px.",
+  "source": "@site/docs/richtlijnen/stijl/typography/1-fontsize/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/typography/1-fontsize",
+  "slug": "/richtlijnen/stijl/typografie/lettergrootte",
+  "permalink": "/richtlijnen/stijl/typografie/lettergrootte",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/typography/1-fontsize/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Zorg ervoor dat letters groot genoeg zijn",
+    "title_sm": "Letters groot genoeg",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Letters groot genoeg",
+    "pagination_label": "Zorg ervoor dat letters groot genoeg zijn",
+    "description": "Gebruik een lettergrootte ofwel die groot genoeg is voor de broodtekst, zodat mensen comfortabel kunnen lezen. Gebruik als richtlijn minimaal een lettergrootte van 16px.",
+    "slug": "/richtlijnen/stijl/typografie/lettergrootte",
+    "keywords": [
+      "lettergrootte"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Introductie richtlijnen voor typografie",
+    "permalink": "/richtlijnen/stijl/typografie/"
+  },
+  "next": {
+    "title": "Zorg voor een comfortabele regelafstand",
+    "permalink": "/richtlijnen/stijl/typografie/regelafstand"
+  }
+}

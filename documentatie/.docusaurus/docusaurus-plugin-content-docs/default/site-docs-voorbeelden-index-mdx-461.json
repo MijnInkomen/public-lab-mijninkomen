@@ -1,0 +1,38 @@
+{
+  "id": "voorbeelden/index",
+  "title": "Voorbeelden",
+  "description": "Voorbeelden van veelvoorkomende pagina's en klantreizen, gemaakt met richtlijnen en componenten uit NL Design System.",
+  "source": "@site/docs/voorbeelden/index.mdx",
+  "sourceDirName": "voorbeelden",
+  "slug": "/voorbeelden",
+  "permalink": "/voorbeelden",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/voorbeelden/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Voorbeelden",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Introductie",
+    "sidebar_position": 1,
+    "navigation_order": 1,
+    "pagination_label": "Index",
+    "description": "Voorbeelden van veelvoorkomende pagina's en klantreizen, gemaakt met richtlijnen en componenten uit NL Design System.",
+    "slug": "/voorbeelden",
+    "keywords": [
+      "index",
+      "voorbeelden",
+      "patronen",
+      "templates",
+      "gebruikersonderzoek"
+    ]
+  },
+  "sidebar": "voorbeelden",
+  "next": {
+    "title": "Index",
+    "permalink": "/voorbeelden"
+  }
+}

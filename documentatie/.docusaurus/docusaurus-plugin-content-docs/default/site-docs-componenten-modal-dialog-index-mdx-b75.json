@@ -1,0 +1,52 @@
+{
+  "id": "componenten/modal-dialog/index",
+  "title": "Modal Dialog",
+  "description": "Toont een venster over de pagina om de aandacht op een enkele taak of bericht te vestigen. Interactie met onderliggende pagina wordt geblokkeerd.",
+  "source": "@site/docs/componenten/modal-dialog/index.mdx",
+  "sourceDirName": "componenten/modal-dialog",
+  "slug": "/modal-dialog",
+  "permalink": "/modal-dialog",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/modal-dialog/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Modal Dialog",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Modal Dialog",
+    "pagination_label": "Modal Dialog",
+    "description": "Toont een venster over de pagina om de aandacht op een enkele taak of bericht te vestigen. Interactie met onderliggende pagina wordt geblokkeerd.",
+    "issue_number": 66,
+    "slug": "/modal-dialog",
+    "keywords": [
+      "dialog",
+      "dialoogvenster",
+      "floating window",
+      "modaal venster",
+      "modale dialoog",
+      "modale popup",
+      "modale venster",
+      "modal",
+      "modal dialog",
+      "modal popup",
+      "modal window",
+      "overlay",
+      "popup",
+      "popup dialog",
+      "popup window",
+      "venster",
+      "window"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Mark",
+    "permalink": "/mark"
+  },
+  "next": {
+    "title": "Navigation Bar",
+    "permalink": "/navigation-bar"
+  }
+}

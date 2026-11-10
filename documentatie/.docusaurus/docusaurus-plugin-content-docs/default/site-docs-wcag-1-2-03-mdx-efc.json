@@ -1,0 +1,49 @@
+{
+  "id": "wcag/1.2.03",
+  "title": "WCAG-succescriterium 1.2.3 Audiodescriptie of media-alternatief (vooraf opgenomen)",
+  "description": "Opgenomen audio en video heeft een transcript of audiodescriptie.",
+  "source": "@site/docs/wcag/1.2.03.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/1.2.3",
+  "permalink": "/wcag/1.2.3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/1.2.03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 1.2.3 Audiodescriptie of media-alternatief (vooraf opgenomen)",
+    "title_sm": "1.2.3 Audiodescriptie of media-alternatief (vooraf opgenomen)",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "1.2.3 Audiodescriptie of media-alternatief (vooraf opgenomen)",
+    "pagination_label": "WCAG-succescriterium 1.2.3 Audiodescriptie of media-alternatief (vooraf opgenomen)",
+    "description": "Opgenomen audio en video heeft een transcript of audiodescriptie.",
+    "slug": "1.2.3",
+    "conformance_level": "Niveau A",
+    "keywords": [
+      "WCAG",
+      "A",
+      "waarneembaar",
+      "op tijd gebaseerde media",
+      "perceivable",
+      "time-based media",
+      "audio description or media alternative (prerecorded)",
+      "audiodescriptie",
+      "media-alternatief",
+      "vooraf opgenomen",
+      "audio description",
+      "media alternative",
+      "prerecorded"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 1.2.2 Ondertitels voor doven en slechthorenden (vooraf opgenomen)",
+    "permalink": "/wcag/1.2.2"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 1.2.4 Ondertitels voor doven en slechthorenden (live)",
+    "permalink": "/wcag/1.2.4"
+  }
+}

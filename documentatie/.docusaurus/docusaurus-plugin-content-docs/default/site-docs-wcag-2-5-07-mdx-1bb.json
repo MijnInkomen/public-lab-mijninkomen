@@ -1,0 +1,44 @@
+{
+  "id": "wcag/2.5.07",
+  "title": "WCAG-succescriterium 2.5.7 Sleepbewegingen",
+  "description": "Acties waarbij men moet slepen, kunnen ook zonder slepen.",
+  "source": "@site/docs/wcag/2.5.07.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.5.7",
+  "permalink": "/wcag/2.5.7",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.5.07.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.5.7 Sleepbewegingen",
+    "title_sm": "2.5.7 Sleepbewegingen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.5.7 Sleepbewegingen",
+    "pagination_label": "WCAG-succescriterium 2.5.7 Sleepbewegingen",
+    "description": "Acties waarbij men moet slepen, kunnen ook zonder slepen.",
+    "slug": "2.5.7",
+    "conformance_level": "Niveau AA",
+    "keywords": [
+      "WCAG",
+      "AA",
+      "bedienbaar",
+      "input modaliteiten",
+      "slepen",
+      "operable",
+      "input modalities",
+      "dragging movements"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.5.6 Input gelijktijdige invoermechanismen",
+    "permalink": "/wcag/2.5.6"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.5.8 Grootte van het aanwijsgebied (minimum)",
+    "permalink": "/wcag/2.5.8"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "handboek/designer/werken-met-nl-design-system/figma-hygiene",
+  "title": "Figma hygiëne",
+  "description": "Informatie voor designers over Figma hygiëne.",
+  "source": "@site/docs/handboek/designer/werken-met-nl-design-system/figma-hygiene.mdx",
+  "sourceDirName": "handboek/designer/werken-met-nl-design-system",
+  "slug": "/handboek/designer/figma-hygiene",
+  "permalink": "/handboek/designer/figma-hygiene",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/designer/werken-met-nl-design-system/figma-hygiene.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Figma hygiëne",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Figma hygiëne",
+    "sidebar_position": 4,
+    "navigation_order": 4,
+    "pagination_label": "Figma hygiëne",
+    "description": "Informatie voor designers over Figma hygiëne.",
+    "slug": "/handboek/designer/figma-hygiene",
+    "keywords": [
+      "componenten",
+      "design system",
+      "figma",
+      "hygiene"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Figma stappenplan",
+    "permalink": "/handboek/designer/figma-stappenplan"
+  },
+  "next": {
+    "title": "Werken met de Figma changelog",
+    "permalink": "/handboek/designer/werken-met-figma-changelog"
+  }
+}

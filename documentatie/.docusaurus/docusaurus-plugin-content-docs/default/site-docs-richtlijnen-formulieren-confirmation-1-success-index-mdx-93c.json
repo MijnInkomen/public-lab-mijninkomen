@@ -1,0 +1,42 @@
+{
+  "id": "richtlijnen/formulieren/confirmation/success/index",
+  "title": "Vermeld dat het formulier succesvol is verzonden",
+  "description": "Richtlijnen voor vermelding na succesvol verzenden.",
+  "source": "@site/docs/richtlijnen/formulieren/confirmation/1-success/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/confirmation/1-success",
+  "slug": "/richtlijnen/formulieren/bevestigingspagina/succesmelding",
+  "permalink": "/richtlijnen/formulieren/bevestigingspagina/succesmelding",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/confirmation/1-success/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Vermeld dat het formulier succesvol is verzonden",
+    "title_sm": "Duidelijke succesmelding",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Duidelijke succesmelding",
+    "sidebar_position": 7,
+    "navigation_order": 7,
+    "pagination_label": "Duidelijke succesmelding",
+    "description": "Richtlijnen voor vermelding na succesvol verzenden.",
+    "slug": "/richtlijnen/formulieren/bevestigingspagina/succesmelding",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Contact opnemen",
+    "permalink": "/richtlijnen/formulieren/bevestigingspagina/contact-bij-vragen"
+  },
+  "next": {
+    "title": "Descriptions in een formulier",
+    "permalink": "/richtlijnen/formulieren/descriptions/"
+  }
+}

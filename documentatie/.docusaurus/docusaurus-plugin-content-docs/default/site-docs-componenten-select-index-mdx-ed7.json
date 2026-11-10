@@ -1,0 +1,53 @@
+{
+  "id": "componenten/select/index",
+  "title": "Select",
+  "description": "Biedt de mogelijkheid om één optie te selecteren uit een opgeklapte lijst.",
+  "source": "@site/docs/componenten/select/index.mdx",
+  "sourceDirName": "componenten/select",
+  "slug": "/select",
+  "permalink": "/select",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/select/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Select",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Select",
+    "pagination_label": "Select",
+    "description": "Biedt de mogelijkheid om één optie te selecteren uit een opgeklapte lijst.",
+    "issue_number": 34,
+    "slug": "/select",
+    "keywords": [
+      "dropdown",
+      "dropdown list",
+      "dropdown menu",
+      "optie",
+      "opties",
+      "option",
+      "option list",
+      "select",
+      "selecteren",
+      "selectie",
+      "select box",
+      "select dropdown",
+      "select field",
+      "select input",
+      "select wrapper",
+      "selection menu",
+      "selection box",
+      "tree select"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Root",
+    "permalink": "/root"
+  },
+  "next": {
+    "title": "Select Combobox",
+    "permalink": "/select-combobox"
+  }
+}

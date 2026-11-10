@@ -1,0 +1,42 @@
+{
+  "id": "handboek/definition-of-done/hall-of-fame-stappenplan/index",
+  "title": "Overzicht van de Hall of Fame Definition of Done voor componenten",
+  "description": "Overzicht van de Definition of Done voor Hall of Fame componenten",
+  "source": "@site/docs/handboek/definition-of-done/hall-of-fame-stappenplan/index.md",
+  "sourceDirName": "handboek/definition-of-done/hall-of-fame-stappenplan",
+  "slug": "/handboek/estafettemodel/componenten/hall-of-fame",
+  "permalink": "/handboek/estafettemodel/componenten/hall-of-fame",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/hall-of-fame-stappenplan/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Overzicht van de Hall of Fame Definition of Done voor componenten",
+    "title_sm": "Hall of Fame",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Overzicht",
+    "sidebar_position": 1,
+    "navigation_order": 4,
+    "pagination_label": "Overzicht",
+    "description": "Overzicht van de Definition of Done voor Hall of Fame componenten",
+    "slug": "/handboek/estafettemodel/componenten/hall-of-fame",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "5. Publicatiefase",
+    "permalink": "/handboek/estafettemodel/componenten/candidate/publicatiefase"
+  },
+  "next": {
+    "title": "Overzicht",
+    "permalink": "/handboek/estafettemodel/componenten/hall-of-fame"
+  }
+}

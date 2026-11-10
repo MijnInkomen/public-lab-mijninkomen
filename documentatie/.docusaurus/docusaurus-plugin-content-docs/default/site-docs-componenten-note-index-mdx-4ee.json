@@ -1,0 +1,48 @@
+{
+  "id": "componenten/note/index",
+  "title": "Note",
+  "description": "Visueel ondersteunend element dat de aandacht vestigt op aanvullende of belangrijke informatie.",
+  "source": "@site/docs/componenten/note/index.mdx",
+  "sourceDirName": "componenten/note",
+  "slug": "/note",
+  "permalink": "/note",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/note/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Note",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Note",
+    "pagination_label": "Note",
+    "description": "Visueel ondersteunend element dat de aandacht vestigt op aanvullende of belangrijke informatie.",
+    "issue_number": 409,
+    "slug": "/note",
+    "keywords": [
+      "admonition",
+      "aside",
+      "call out",
+      "callout",
+      "highlight box",
+      "highlight",
+      "highlighter",
+      "info",
+      "information",
+      "note",
+      "notice",
+      "spotlight",
+      "tip"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Navigation Bar",
+    "permalink": "/navigation-bar"
+  },
+  "next": {
+    "title": "Notification Banner",
+    "permalink": "/notification-banner"
+  }
+}

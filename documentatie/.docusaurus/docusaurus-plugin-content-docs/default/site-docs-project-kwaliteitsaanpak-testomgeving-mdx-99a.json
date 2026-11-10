@@ -1,0 +1,38 @@
+{
+  "id": "project/kwaliteitsaanpak/testomgeving",
+  "title": "Testomgeving",
+  "description": "Branch deployments van GitHub Pull Requests zijn de testomgevingen.",
+  "source": "@site/docs/project/kwaliteitsaanpak/testomgeving.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/testomgeving",
+  "permalink": "/project/kwaliteitsaanpak/testomgeving",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/testomgeving.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Testomgeving",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Testomgeving",
+    "sidebar_position": 11,
+    "pagination_label": "Testomgeving",
+    "description": "Branch deployments van GitHub Pull Requests zijn de testomgevingen.",
+    "keywords": [
+      "dtap",
+      "otap",
+      "test"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Internationalisatie en localisatie",
+    "permalink": "/project/kwaliteitsaanpak/i18n"
+  },
+  "next": {
+    "title": "Open Source",
+    "permalink": "/project/kwaliteitsaanpak/open-source"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "componenten/navigation-bar/index",
+  "title": "Navigation Bar",
+  "description": "Toont een hiërarchische horizontale navigatie aan de bovenkant van een pagina en biedt de mogelijkheid om tussen pagina’s te navigeren.",
+  "source": "@site/docs/componenten/navigation-bar/index.mdx",
+  "sourceDirName": "componenten/navigation-bar",
+  "slug": "/navigation-bar",
+  "permalink": "/navigation-bar",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/navigation-bar/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Navigation Bar",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Navigation Bar",
+    "pagination_label": "Navigation Bar",
+    "description": "Toont een hiërarchische horizontale navigatie aan de bovenkant van een pagina en biedt de mogelijkheid om tussen pagina’s te navigeren.",
+    "issue_number": 265,
+    "slug": "/navigation-bar",
+    "keywords": [
+      "bovenbalk",
+      "bovenste navigatie",
+      "header",
+      "header menu",
+      "hoofdmenu",
+      "horizontale navigatie",
+      "horizontal navigation",
+      "horizontal menu",
+      "main navigation",
+      "menu",
+      "menu balk",
+      "menu bar",
+      "menu navigatie",
+      "navigation bar",
+      "navigatie balk",
+      "navigatie menu",
+      "navigatiebalk",
+      "page header",
+      "pagina navigatie",
+      "page navigation",
+      "top bar",
+      "top menu",
+      "top navigation",
+      "top navigation bar"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Modal Dialog",
+    "permalink": "/modal-dialog"
+  },
+  "next": {
+    "title": "Note",
+    "permalink": "/note"
+  }
+}

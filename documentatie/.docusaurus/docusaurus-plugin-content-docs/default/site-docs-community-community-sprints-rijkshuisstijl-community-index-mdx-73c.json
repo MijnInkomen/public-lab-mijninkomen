@@ -1,0 +1,37 @@
+{
+  "id": "community/community-sprints/rijkshuisstijl-community/index",
+  "title": "Rijkshuisstijl Community",
+  "description": "Lees meer over de NL Design System Rijkshuisstijl Community Sprint.",
+  "source": "@site/docs/community/community-sprints/rijkshuisstijl-community/index.mdx",
+  "sourceDirName": "community/community-sprints/rijkshuisstijl-community",
+  "slug": "/community/community-sprints/rijkshuisstijl-community/",
+  "permalink": "/community/community-sprints/rijkshuisstijl-community/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/community-sprints/rijkshuisstijl-community/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Rijkshuisstijl Community",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Over Rijkshuisstijl Community",
+    "pagination_label": "Over Rijkshuisstijl Community",
+    "description": "Lees meer over de NL Design System Rijkshuisstijl Community Sprint.",
+    "slug": "/community/community-sprints/rijkshuisstijl-community/",
+    "keywords": [
+      "nl design system",
+      "community sprints",
+      "rijkshuisstijl community"
+    ]
+  },
+  "sidebar": "community",
+  "previous": {
+    "title": "Aanmelden",
+    "permalink": "/community/community-sprints/mijn-services-community/aanmelden"
+  },
+  "next": {
+    "title": "Over Rijkshuisstijl Community",
+    "permalink": "/community/community-sprints/rijkshuisstijl-community/"
+  }
+}

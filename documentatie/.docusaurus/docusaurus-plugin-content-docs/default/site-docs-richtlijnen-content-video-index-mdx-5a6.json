@@ -1,0 +1,47 @@
+{
+  "id": "richtlijnen/content/video/index",
+  "title": "Introductie richtlijnen voor video",
+  "description": "Introductie van de richtlijnen voor video van het NL Design System.",
+  "source": "@site/docs/richtlijnen/content/video/index.mdx",
+  "sourceDirName": "richtlijnen/content/video",
+  "slug": "/richtlijnen/content/video",
+  "permalink": "/richtlijnen/content/video",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/video/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Introductie richtlijnen voor video",
+    "title_sm": "Video",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Introductie video",
+    "sidebar_position": 2,
+    "pagination_label": "Video",
+    "description": "Introductie van de richtlijnen voor video van het NL Design System.",
+    "slug": "/richtlijnen/content/video",
+    "keywords": [
+      "video",
+      "audiodescriptie",
+      "youtube",
+      "vimeo",
+      "transcript",
+      "ondertiteling",
+      "subtitles",
+      "captions",
+      "gebarentaal",
+      "tolk"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Tabellen",
+    "permalink": "/richtlijnen/content/tekstopmaak/tabellen"
+  },
+  "next": {
+    "title": "Video",
+    "permalink": "/richtlijnen/content/video"
+  }
+}

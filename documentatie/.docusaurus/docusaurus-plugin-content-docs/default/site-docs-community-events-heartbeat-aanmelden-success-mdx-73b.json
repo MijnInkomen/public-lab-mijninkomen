@@ -1,0 +1,23 @@
+{
+  "id": "community/events/heartbeat/aanmelden-success",
+  "title": "Bedankt voor je aanmelding voor de Heartbeat",
+  "description": "Je bent nu aangemeld voor onze tweewekelijkse Heartbeat.",
+  "source": "@site/docs/community/events/heartbeat/aanmelden-success.mdx",
+  "sourceDirName": "community/events/heartbeat",
+  "slug": "/events/heartbeat/aanmelden/bedankt",
+  "permalink": "/events/heartbeat/aanmelden/bedankt",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/heartbeat/aanmelden-success.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Bedankt voor je aanmelding voor de Heartbeat",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Aanmelden",
+    "pagination_label": "2 wekelijkse updates van het kernteam en community",
+    "slug": "/events/heartbeat/aanmelden/bedankt",
+    "unlisted": true
+  }
+}

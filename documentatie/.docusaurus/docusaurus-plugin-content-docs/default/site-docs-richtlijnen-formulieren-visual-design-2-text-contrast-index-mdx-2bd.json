@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/visual-design/text-contrast/index",
+  "title": "Geef tekst voldoende kleurcontrast",
+  "description": "Richtlijnen om met contrast duidelijk aan te geven waar de tekst van een formulierveld is.",
+  "source": "@site/docs/richtlijnen/formulieren/visual-design/2-text-contrast/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/visual-design/2-text-contrast",
+  "slug": "/richtlijnen/formulieren/visueel-ontwerp/tekst-goed-zichtbaar",
+  "permalink": "/richtlijnen/formulieren/visueel-ontwerp/tekst-goed-zichtbaar",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/visual-design/2-text-contrast/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geef tekst voldoende kleurcontrast",
+    "title_sm": "Tekst goed zichtbaar",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Tekst goed zichtbaar",
+    "pagination_label": "Tekst goed zichtbaar",
+    "description": "Richtlijnen om met contrast duidelijk aan te geven waar de tekst van een formulierveld is.",
+    "slug": "/richtlijnen/formulieren/visueel-ontwerp/tekst-goed-zichtbaar",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Invoerveld goed zichtbaar",
+    "permalink": "/richtlijnen/formulieren/visueel-ontwerp/invoerveld-goed-zichtbaar"
+  },
+  "next": {
+    "title": "Placeholder goed zichtbaar",
+    "permalink": "/richtlijnen/formulieren/visueel-ontwerp/placeholder-goed-zichtbaar"
+  }
+}

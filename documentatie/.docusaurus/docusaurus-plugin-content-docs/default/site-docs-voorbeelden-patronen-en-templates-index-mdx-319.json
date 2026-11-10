@@ -1,0 +1,41 @@
+{
+  "id": "voorbeelden/patronen-en-templates/index",
+  "title": "Introductie patronen en templates",
+  "description": "Verzameling van patronen en templates.",
+  "source": "@site/docs/voorbeelden/patronen-en-templates/index.mdx",
+  "sourceDirName": "voorbeelden/patronen-en-templates",
+  "slug": "/voorbeelden/patronen-en-templates",
+  "permalink": "/voorbeelden/patronen-en-templates",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/voorbeelden/patronen-en-templates/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Introductie patronen en templates",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Introductie patronen en templates",
+    "sidebar_position": 0,
+    "navigation_order": 1,
+    "pagination_label": "Introductie",
+    "description": "Verzameling van patronen en templates.",
+    "slug": "/voorbeelden/patronen-en-templates",
+    "keywords": [
+      "voorbeelden",
+      "patronen",
+      "templates",
+      "gebruikersonderzoek"
+    ]
+  },
+  "sidebar": "voorbeelden",
+  "previous": {
+    "title": "Gebruikersonderzoek",
+    "permalink": "/voorbeelden/onderzoek"
+  },
+  "next": {
+    "title": "Introductie",
+    "permalink": "/voorbeelden/patronen-en-templates"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "handboek/developer/design-tokens/index",
+  "title": "Design tokens",
+  "description": "NL Design System Design tokens",
+  "source": "@site/docs/handboek/developer/04-design-tokens/index.mdx",
+  "sourceDirName": "handboek/developer/04-design-tokens",
+  "slug": "/handboek/developer/design-tokens/",
+  "permalink": "/handboek/developer/design-tokens/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/04-design-tokens/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Design tokens",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Design tokens",
+    "pagination_label": "Design tokens",
+    "description": "NL Design System Design tokens",
+    "slug": "/handboek/developer/design-tokens/"
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Deprecation",
+    "permalink": "/handboek/developer/deprecation-conventie/"
+  },
+  "next": {
+    "title": "Design tokens vastleggen",
+    "permalink": "/handboek/developer/thema-maken/"
+  }
+}

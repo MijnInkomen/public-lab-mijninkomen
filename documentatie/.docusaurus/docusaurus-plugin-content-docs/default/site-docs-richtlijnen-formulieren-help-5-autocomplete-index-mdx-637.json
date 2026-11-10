@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/help/autocomplete/index",
+  "title": "Autocomplete in een formulier",
+  "description": "Richtlijnen voor het gebruik van het autocomplete-attribuut.",
+  "source": "@site/docs/richtlijnen/formulieren/help/5-autocomplete/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/help/5-autocomplete",
+  "slug": "/richtlijnen/formulieren/voorkom-fouten/autocomplete",
+  "permalink": "/richtlijnen/formulieren/voorkom-fouten/autocomplete",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/help/5-autocomplete/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Autocomplete in een formulier",
+    "title_sm": "Autocomplete",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Autocomplete",
+    "pagination_label": "Autocomplete in een formulier",
+    "description": "Richtlijnen voor het gebruik van het autocomplete-attribuut.",
+    "slug": "/richtlijnen/formulieren/voorkom-fouten/autocomplete",
+    "keywords": [
+      "informatie",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Geef geldige waardes aan een invoerveld",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/geldige-waardes"
+  },
+  "next": {
+    "title": "Automatisch invullen",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/automatisch-invullen"
+  }
+}

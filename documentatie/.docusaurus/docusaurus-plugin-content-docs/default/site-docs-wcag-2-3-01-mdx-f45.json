@@ -1,0 +1,44 @@
+{
+  "id": "wcag/2.3.01",
+  "title": "WCAG-succescriterium 2.3.1 Drie flitsen of beneden drempelwaarde",
+  "description": "Maximaal drie flitsen in een seconde.",
+  "source": "@site/docs/wcag/2.3.01.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.3.1",
+  "permalink": "/wcag/2.3.1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.3.01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.3.1 Drie flitsen of beneden drempelwaarde",
+    "title_sm": "2.3.1 Drie flitsen of beneden drempelwaarde",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.3.1 Drie flitsen of beneden drempelwaarde",
+    "pagination_label": "WCAG-succescriterium 2.3.1 Drie flitsen of beneden drempelwaarde",
+    "description": "Maximaal drie flitsen in een seconde.",
+    "slug": "2.3.1",
+    "conformance_level": "Niveau A",
+    "keywords": [
+      "WCAG",
+      "A",
+      "bedienbaar",
+      "toevallen en fysieke reacties",
+      "operable",
+      "seizures and physical reactions",
+      "three flashes or below threshold",
+      "non-interferentie"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.2.6 Time-outs",
+    "permalink": "/wcag/2.2.6"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.3.2 Drie flitsen",
+    "permalink": "/wcag/2.3.2"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/help/avoid-input-mask/index",
+  "title": "Maak het makkelijk om flexibel een veld in te voeren",
+  "description": "Maak het een gebruiker zo gemakkelijk mogelijk om flexibel een veld in te voeren. Een vast invoerpatroon kan niet geschikt zijn voor het antwoord wat de gebruiker wil geven.",
+  "source": "@site/docs/richtlijnen/formulieren/help/8-avoid-input-mask/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/help/8-avoid-input-mask",
+  "slug": "/richtlijnen/formulieren/voorkom-fouten/geen-invoerpatronen",
+  "permalink": "/richtlijnen/formulieren/voorkom-fouten/geen-invoerpatronen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/help/8-avoid-input-mask/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Maak het makkelijk om flexibel een veld in te voeren",
+    "title_sm": "Vermijd invoerpatronen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Vermijd invoerpatronen",
+    "pagination_label": "Vermijd invoerpatronen",
+    "description": "Maak het een gebruiker zo gemakkelijk mogelijk om flexibel een veld in te voeren. Een vast invoerpatroon kan niet geschikt zijn voor het antwoord wat de gebruiker wil geven.",
+    "slug": "/richtlijnen/formulieren/voorkom-fouten/geen-invoerpatronen",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Controleren en aanpassen",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/controleren-en-aanpassen"
+  },
+  "next": {
+    "title": "Wanneer gebruik je welk formulierelement",
+    "permalink": "/richtlijnen/formulieren/wanneer-welk-form-element/"
+  }
+}

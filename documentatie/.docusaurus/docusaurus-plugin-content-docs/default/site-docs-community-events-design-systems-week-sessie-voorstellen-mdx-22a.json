@@ -1,0 +1,29 @@
+{
+  "id": "community/events/design-systems-week/sessie-voorstellen",
+  "title": "Sprekers gezocht voor Design Systems Week",
+  "description": "Werk jij aan een design system, gebruikersonderzoek of toegankelijkheid en wil je hier een sessie over geven? Laat het ons weten!",
+  "source": "@site/docs/community/events/design-systems-week/sessie-voorstellen.mdx",
+  "sourceDirName": "community/events/design-systems-week",
+  "slug": "/events/design-systems-week/sessie-voorstellen",
+  "permalink": "/events/design-systems-week/sessie-voorstellen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/design-systems-week/sessie-voorstellen.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Sprekers gezocht voor Design Systems Week",
+    "title_sm": "Sprekers gezocht",
+    "description": "Werk jij aan een design system, gebruikersonderzoek of toegankelijkheid en wil je hier een sessie over geven? Laat het ons weten!",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Sprekers gezocht",
+    "pagination_label": "Sprekers gezocht",
+    "slug": "/events/design-systems-week/sessie-voorstellen",
+    "translations": {
+      "en": "/events/design-systems-week/en/call-for-speakers/"
+    },
+    "displayed_sidebar": "community"
+  },
+  "sidebar": "community"
+}

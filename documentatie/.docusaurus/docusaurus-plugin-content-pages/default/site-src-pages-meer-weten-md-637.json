@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/meer-weten",
+  "source": "@site/src/pages/meer-weten.md",
+  "title": "Meer weten",
+  "description": "Deze pagina komt later.",
+  "frontMatter": {
+    "title": "Meer weten",
+    "hide_table_of_contents": true
+  },
+  "unlisted": false
+}

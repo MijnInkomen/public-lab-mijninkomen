@@ -1,0 +1,41 @@
+{
+  "id": "richtlijnen/formulieren/button/disabled/index",
+  "title": "Disabled submitbuttons",
+  "description": "Richtlijnen voor disabled submitbuttons.",
+  "source": "@site/docs/richtlijnen/formulieren/button/7-disabled/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/button/7-disabled",
+  "slug": "/richtlijnen/formulieren/buttons/disabled-submitbuttons",
+  "permalink": "/richtlijnen/formulieren/buttons/disabled-submitbuttons",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/button/7-disabled/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Disabled submitbuttons",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Disabled submitbuttons",
+    "sidebar_position": 7,
+    "navigation_order": 7,
+    "pagination_label": "Disabled submitbuttons",
+    "description": "Richtlijnen voor disabled submitbuttons.",
+    "slug": "/richtlijnen/formulieren/buttons/disabled-submitbuttons",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Afbeelding als button",
+    "permalink": "/richtlijnen/formulieren/buttons/afbeelding-als-button"
+  },
+  "next": {
+    "title": "Bevestigingspagina",
+    "permalink": "/richtlijnen/formulieren/bevestigingspagina/"
+  }
+}

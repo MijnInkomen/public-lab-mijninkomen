@@ -1,0 +1,25 @@
+{
+  "id": "community/events/community-bijeenkomst-2-success",
+  "title": "Bedankt voor je aanmelding voor de Communitybijeenkomst",
+  "description": "Je bent nu aangemeld voor de communitybijeenkomst.",
+  "source": "@site/docs/community/events/community-bijeenkomst-2-success.mdx",
+  "sourceDirName": "community/events",
+  "slug": "/community/communitybijeenkomst-18-10-2024/bedankt",
+  "permalink": "/community/communitybijeenkomst-18-10-2024/bedankt",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/community-bijeenkomst-2-success.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Bedankt voor je aanmelding voor de Communitybijeenkomst",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "description": "Je bent nu aangemeld voor de communitybijeenkomst.",
+    "slug": "/community/communitybijeenkomst-18-10-2024/bedankt",
+    "unlisted": true,
+    "keywords": [
+      "nl design system"
+    ]
+  }
+}

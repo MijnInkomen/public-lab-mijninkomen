@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/multistep/timing/index",
+  "title": "Geef duidelijk aan wanneer het formulier verzonden gaat worden",
+  "description": "Richtlijnen over duidelijk aangeven wanneer een formulier wordt verzonden.",
+  "source": "@site/docs/richtlijnen/formulieren/multistep/5-timing/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/multistep/5-timing",
+  "slug": "/richtlijnen/formulieren/meerdere-stappen/verzenden-aangeven",
+  "permalink": "/richtlijnen/formulieren/meerdere-stappen/verzenden-aangeven",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/multistep/5-timing/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geef duidelijk aan wanneer het formulier verzonden gaat worden",
+    "title_sm": "Duidelijk aangeven verzenden",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Duidelijk aangeven verzenden",
+    "pagination_label": "Duidelijk aangeven verzenden",
+    "description": "Richtlijnen over duidelijk aangeven wanneer een formulier wordt verzonden.",
+    "slug": "/richtlijnen/formulieren/meerdere-stappen/verzenden-aangeven",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Samenvatting in laatste stap",
+    "permalink": "/richtlijnen/formulieren/meerdere-stappen/samenvatting"
+  },
+  "next": {
+    "title": "Placeholders in een formulier",
+    "permalink": "/richtlijnen/formulieren/placeholders/"
+  }
+}

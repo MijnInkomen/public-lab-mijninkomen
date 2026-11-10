@@ -1,0 +1,38 @@
+{
+  "id": "richtlijnen/formulieren/fieldset/legend/index",
+  "title": "Legends",
+  "description": "Richtlijnen voor legends in een fieldset in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/fieldset/1-legend/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/fieldset/1-legend",
+  "slug": "/richtlijnen/formulieren/fieldsets/legends",
+  "permalink": "/richtlijnen/formulieren/fieldsets/legends",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/fieldset/1-legend/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Legends",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Legends in een fieldset",
+    "pagination_label": "Legends in een fieldset",
+    "description": "Richtlijnen voor legends in een fieldset in een formulier.",
+    "slug": "/richtlijnen/formulieren/fieldsets/legends",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Fieldsets",
+    "permalink": "/richtlijnen/formulieren/fieldsets/"
+  },
+  "next": {
+    "title": "Descriptions in een fieldset",
+    "permalink": "/richtlijnen/formulieren/fieldsets/descriptions"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/button/submit/index",
+  "title": "Verstuur een formulier niet automatisch na het wijzigen of invullen van een formulierveld",
+  "description": "Richtlijnen voor niet automatisch versturen na het wijzigen of invullen van een formulierveld.",
+  "source": "@site/docs/richtlijnen/formulieren/button/2-submit/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/button/2-submit",
+  "slug": "/richtlijnen/formulieren/buttons/niet-automatisch-versturen",
+  "permalink": "/richtlijnen/formulieren/buttons/niet-automatisch-versturen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/button/2-submit/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Verstuur een formulier niet automatisch na het wijzigen of invullen van een formulierveld",
+    "title_sm": "Verstuur niet automatisch",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Verstuur niet automatisch",
+    "pagination_label": "Verstuur niet automatisch",
+    "description": "Richtlijnen voor niet automatisch versturen na het wijzigen of invullen van een formulierveld.",
+    "slug": "/richtlijnen/formulieren/buttons/niet-automatisch-versturen",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Toetsenbordbediening van een button",
+    "permalink": "/richtlijnen/formulieren/buttons/toetsenbordbediening"
+  },
+  "next": {
+    "title": "Plaatsing button",
+    "permalink": "/richtlijnen/formulieren/buttons/plaatsing"
+  }
+}

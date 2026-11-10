@@ -1,0 +1,36 @@
+{
+  "id": "project/kwaliteitsaanpak/product-backlog",
+  "title": "Product Backlog",
+  "description": "Uitleg over de backlog van NL Design System.",
+  "source": "@site/docs/project/kwaliteitsaanpak/product-backlog.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/product-backlog",
+  "permalink": "/project/kwaliteitsaanpak/product-backlog",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/product-backlog.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Product Backlog",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Product Backlog",
+    "pagination_label": "Product Backlog",
+    "sidebar_position": 5,
+    "description": "Uitleg over de backlog van NL Design System.",
+    "keywords": [
+      "backlog"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Veilig werken",
+    "permalink": "/project/kwaliteitsaanpak/veilig-werken"
+  },
+  "next": {
+    "title": "Definition of Ready",
+    "permalink": "/project/kwaliteitsaanpak/definition-of-ready"
+  }
+}

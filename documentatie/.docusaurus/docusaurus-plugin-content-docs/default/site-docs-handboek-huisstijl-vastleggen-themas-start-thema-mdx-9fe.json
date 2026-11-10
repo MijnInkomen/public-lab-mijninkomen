@@ -1,0 +1,42 @@
+{
+  "id": "handboek/huisstijl-vastleggen/themas/start-thema",
+  "title": "Start-thema",
+  "description": "Informatie over het Start-thema.",
+  "source": "@site/docs/handboek/huisstijl-vastleggen/themas/start-thema.mdx",
+  "sourceDirName": "handboek/huisstijl-vastleggen/themas",
+  "slug": "/handboek/huisstijl/themas/start-thema",
+  "permalink": "/handboek/huisstijl/themas/start-thema",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/huisstijl-vastleggen/themas/start-thema.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Start-thema",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Start-thema",
+    "sidebar_position": 1,
+    "navigation_order": 1,
+    "pagination_label": "Start-thema",
+    "description": "Informatie over het Start-thema.",
+    "slug": "/handboek/huisstijl/themas/start-thema",
+    "keywords": [
+      "componenten",
+      "design system",
+      "design tokens",
+      "thema's",
+      "start-thema"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Thema's",
+    "permalink": "/handboek/huisstijl/themas"
+  },
+  "next": {
+    "title": "Voorbeeld-thema",
+    "permalink": "/handboek/huisstijl/themas/voorbeeld-thema"
+  }
+}

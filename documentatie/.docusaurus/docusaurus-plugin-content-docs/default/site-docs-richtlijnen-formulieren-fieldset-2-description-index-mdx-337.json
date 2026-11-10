@@ -1,0 +1,38 @@
+{
+  "id": "richtlijnen/formulieren/fieldset/description/index",
+  "title": "Descriptions in een fieldset",
+  "description": "Richtlijnen voor descriptions in een fieldset in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/fieldset/2-description/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/fieldset/2-description",
+  "slug": "/richtlijnen/formulieren/fieldsets/descriptions",
+  "permalink": "/richtlijnen/formulieren/fieldsets/descriptions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/fieldset/2-description/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Descriptions in een fieldset",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Descriptions in een fieldset",
+    "pagination_label": "Descriptions in een fieldset",
+    "description": "Richtlijnen voor descriptions in een fieldset in een formulier.",
+    "slug": "/richtlijnen/formulieren/fieldsets/descriptions",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Legends in een fieldset",
+    "permalink": "/richtlijnen/formulieren/fieldsets/legends"
+  },
+  "next": {
+    "title": "Labels in een formulier",
+    "permalink": "/richtlijnen/formulieren/labels/"
+  }
+}

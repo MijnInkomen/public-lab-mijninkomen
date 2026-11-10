@@ -1,0 +1,43 @@
+{
+  "id": "handboek/definition-of-done/community-stappenplan/voor-organisaties",
+  "title": "Community stappenplan voor organisaties",
+  "description": "Stappen van organisaties voor de Community fase van Definition of Done",
+  "source": "@site/docs/handboek/definition-of-done/community-stappenplan/voor-organisaties.mdx",
+  "sourceDirName": "handboek/definition-of-done/community-stappenplan",
+  "slug": "/handboek/estafettemodel/componenten/community/voor-organisaties",
+  "permalink": "/handboek/estafettemodel/componenten/community/voor-organisaties",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/community-stappenplan/voor-organisaties.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Community stappenplan voor organisaties",
+    "title_sm": "Organisaties",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Organisaties",
+    "sidebar_position": 1,
+    "navigation_order": 1,
+    "pagination_label": "Organisaties",
+    "description": "Stappen van organisaties voor de Community fase van Definition of Done",
+    "slug": "/handboek/estafettemodel/componenten/community/voor-organisaties",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done",
+      "help wanted"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Community",
+    "permalink": "/handboek/estafettemodel/componenten/community"
+  },
+  "next": {
+    "title": "Kernteam",
+    "permalink": "/handboek/estafettemodel/componenten/community/voor-kernteam"
+  }
+}

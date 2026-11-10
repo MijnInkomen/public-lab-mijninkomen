@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/help/show-required/index",
+  "title": "Vermeld duidelijk of een veld wel of niet verplicht is",
+  "description": "Richtlijnen om duidelijk aan te geven welke velden een gebruiker kan overslaan in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/help/1-show-required/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/help/1-show-required",
+  "slug": "/richtlijnen/formulieren/voorkom-fouten/verplichte-velden/",
+  "permalink": "/richtlijnen/formulieren/voorkom-fouten/verplichte-velden/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/help/1-show-required/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Vermeld duidelijk of een veld wel of niet verplicht is",
+    "title_sm": "Optioneel of verplicht",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Optioneel of verplicht",
+    "pagination_label": "Optioneel of verplicht",
+    "description": "Richtlijnen om duidelijk aan te geven welke velden een gebruiker kan overslaan in een formulier.",
+    "slug": "/richtlijnen/formulieren/voorkom-fouten/verplichte-velden/",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Voorkom fouten in een formulier",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/"
+  },
+  "next": {
+    "title": "Wachtwoord plakken",
+    "permalink": "/richtlijnen/formulieren/voorkom-fouten/wachtwoord-plakken/"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.2.05",
+  "title": "WCAG-succescriterium 2.2.5 Herauthentisering",
+  "description": "Zorg ervoor dat er als een geauthentiseerde sessie verloopt, de gebruiker de activiteit zonder gegevensverlies kan voortzetten na opnieuw authentiseren.",
+  "source": "@site/docs/wcag/2.2.05.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.2.5",
+  "permalink": "/wcag/2.2.5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.2.05.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.2.5 Herauthentisering",
+    "title_sm": "2.2.5 Herauthentisering",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.2.5 Herauthentisering",
+    "pagination_label": "WCAG-succescriterium 2.2.5 Herauthentisering",
+    "description": "Zorg ervoor dat er als een geauthentiseerde sessie verloopt, de gebruiker de activiteit zonder gegevensverlies kan voortzetten na opnieuw authentiseren.",
+    "slug": "2.2.5",
+    "conformance_level": "Niveau AAA",
+    "keywords": [
+      "WCAG",
+      "AAA",
+      "bedienbaar",
+      "genoeg tijd",
+      "operable",
+      "enough time",
+      "re-authenticating"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.2.4 Onderbrekingen",
+    "permalink": "/wcag/2.2.4"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.2.6 Time-outs",
+    "permalink": "/wcag/2.2.6"
+  }
+}

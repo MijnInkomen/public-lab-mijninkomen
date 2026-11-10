@@ -1,0 +1,55 @@
+{
+  "id": "componenten/link-list/index",
+  "title": "Link List",
+  "description": "Een lijst met gerelateerde links naar andere pagina’s of websites.",
+  "source": "@site/docs/componenten/link-list/index.mdx",
+  "sourceDirName": "componenten/link-list",
+  "slug": "/link-list",
+  "permalink": "/link-list",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/link-list/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Link List",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Link List",
+    "pagination_label": "Link List",
+    "description": "Een lijst met gerelateerde links naar andere pagina’s of websites.",
+    "issue_number": 264,
+    "slug": "/link-list",
+    "keywords": [
+      "anchor",
+      "externe link",
+      "external link",
+      "gerelateerde links",
+      "hyperlink",
+      "koppelingen lijst",
+      "lijst",
+      "link",
+      "link collection",
+      "link group",
+      "link lijst",
+      "linken",
+      "links",
+      "list",
+      "lijst met koppelingen",
+      "lijst met links",
+      "related links",
+      "related link list",
+      "url",
+      "url list"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Link",
+    "permalink": "/link"
+  },
+  "next": {
+    "title": "Login Link",
+    "permalink": "/login-link"
+  }
+}

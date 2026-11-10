@@ -1,0 +1,38 @@
+{
+  "id": "richtlijnen/content/index",
+  "title": "Introductie richtlijnen voor content",
+  "description": "Introductie van de richtlijnen voor content van het NL Design System.",
+  "source": "@site/docs/richtlijnen/content/index.mdx",
+  "sourceDirName": "richtlijnen/content",
+  "slug": "/richtlijnen/content",
+  "permalink": "/richtlijnen/content",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Introductie richtlijnen voor content",
+    "title_sm": "Content",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Introductie content",
+    "sidebar_position": 0,
+    "pagination_label": "Content",
+    "description": "Introductie van de richtlijnen voor content van het NL Design System.",
+    "slug": "/richtlijnen/content",
+    "keywords": [
+      "tekstopmaak"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Gebruik SVG voor iconen en geen font",
+    "permalink": "/richtlijnen/stijl/iconen/gebruik-svg"
+  },
+  "next": {
+    "title": "Content",
+    "permalink": "/richtlijnen/content"
+  }
+}

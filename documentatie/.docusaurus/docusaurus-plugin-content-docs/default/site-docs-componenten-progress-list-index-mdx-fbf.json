@@ -1,0 +1,55 @@
+{
+  "id": "componenten/progress-list/index",
+  "title": "Progress List",
+  "description": "Toont de voortgang van een reeks stappen en biedt indien nodig extra details over een stap.",
+  "source": "@site/docs/componenten/progress-list/index.mdx",
+  "sourceDirName": "componenten/progress-list",
+  "slug": "/progress-list",
+  "permalink": "/progress-list",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/progress-list/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Progress List",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Progress List",
+    "pagination_label": "Progress List",
+    "description": "Toont de voortgang van een reeks stappen en biedt indien nodig extra details over een stap.",
+    "issue_number": 150,
+    "slug": "/progress-list",
+    "keywords": [
+      "lijst",
+      "meter",
+      "path",
+      "proceslijst",
+      "progress",
+      "progress bar",
+      "progress indicator",
+      "progress list",
+      "progress navigation",
+      "progress tracker",
+      "status",
+      "statusoverzicht",
+      "stepper",
+      "stepper indicator",
+      "stepper vertical",
+      "steps",
+      "tijdlijn",
+      "timeline",
+      "voortgangslijst",
+      "voortgangsproces"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Progress Circle",
+    "permalink": "/progress-circle"
+  },
+  "next": {
+    "title": "Pull Quote",
+    "permalink": "/pull-quote"
+  }
+}

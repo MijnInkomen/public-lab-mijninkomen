@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.5.04",
+  "title": "WCAG-succescriterium 2.5.4 Bewegingsactivering",
+  "description": "Acties waarbij men een apparaat of zichzelf moeten bewegen, werken ook zonder die beweging. De mogelijkheid om te bewegen is ook uit te schakelen.",
+  "source": "@site/docs/wcag/2.5.04.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.5.4",
+  "permalink": "/wcag/2.5.4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.5.04.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.5.4 Bewegingsactivering",
+    "title_sm": "2.5.4 Bewegingsactivering",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.5.4 Bewegingsactivering",
+    "pagination_label": "WCAG-succescriterium 2.5.4 Bewegingsactivering",
+    "description": "Acties waarbij men een apparaat of zichzelf moeten bewegen, werken ook zonder die beweging. De mogelijkheid om te bewegen is ook uit te schakelen.",
+    "slug": "2.5.4",
+    "conformance_level": "Niveau A",
+    "keywords": [
+      "WCAG",
+      "A",
+      "bedienbaar",
+      "input modaliteiten",
+      "operable",
+      "input modalities",
+      "motion actuation"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.5.3 Label in Naam",
+    "permalink": "/wcag/2.5.3"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.5.5 Grootte van het aanwijsgebied (uitgebreid)",
+    "permalink": "/wcag/2.5.5"
+  }
+}

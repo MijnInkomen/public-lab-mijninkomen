@@ -1,0 +1,48 @@
+{
+  "id": "componenten/heading-5/index",
+  "title": "Heading 5",
+  "description": "Koptekst die in de koppenstructuur op het vijfde niveau staat.",
+  "source": "@site/docs/componenten/heading-5/index.mdx",
+  "sourceDirName": "componenten/heading-5",
+  "slug": "/heading-5",
+  "permalink": "/heading-5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/heading-5/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Heading 5",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Heading 5",
+    "pagination_label": "Heading 5",
+    "description": "Koptekst die in de koppenstructuur op het vijfde niveau staat.",
+    "issue_number": 261,
+    "slug": "/heading-5",
+    "keywords": [
+      "caption",
+      "content",
+      "h5",
+      "heading",
+      "heading level",
+      "headline",
+      "kop",
+      "paginakop",
+      "sectie",
+      "section",
+      "structure",
+      "titel",
+      "title"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Heading 4",
+    "permalink": "/heading-4"
+  },
+  "next": {
+    "title": "Heading 6",
+    "permalink": "/heading-6"
+  }
+}

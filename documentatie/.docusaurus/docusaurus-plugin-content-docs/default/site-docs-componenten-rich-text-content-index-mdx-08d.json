@@ -1,0 +1,51 @@
+{
+  "id": "componenten/rich-text-content/index",
+  "title": "Rich Text Content",
+  "description": "Tekst met uitgebreide opmaakopties zoals links, koppen, lijsten en tabellen.",
+  "source": "@site/docs/componenten/rich-text-content/index.mdx",
+  "sourceDirName": "componenten/rich-text-content",
+  "slug": "/rich-text-content",
+  "permalink": "/rich-text-content",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/rich-text-content/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Rich Text Content",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Rich Text Content",
+    "pagination_label": "Rich Text Content",
+    "description": "Tekst met uitgebreide opmaakopties zoals links, koppen, lijsten en tabellen.",
+    "issue_number": 127,
+    "slug": "/rich-text-content",
+    "keywords": [
+      "bold",
+      "editorial content",
+      "editor",
+      "formatted text",
+      "formatting",
+      "heading",
+      "list",
+      "ordered list",
+      "rich content",
+      "rich text",
+      "rich text editor",
+      "strong",
+      "table",
+      "text formatting",
+      "unordered list",
+      "wysiwyg"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Range",
+    "permalink": "/range"
+  },
+  "next": {
+    "title": "Root",
+    "permalink": "/root"
+  }
+}

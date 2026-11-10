@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.4.12",
+  "title": "WCAG-succescriterium 2.4.12 Focus niet bedekt (uitgebreid)",
+  "description": "Zorg ervoor dat een element dat de toetsenbordfocus heeft volledig zichtbaar is en niet bedekt is door andere inhoud.",
+  "source": "@site/docs/wcag/2.4.12.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.4.12",
+  "permalink": "/wcag/2.4.12",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.4.12.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.4.12 Focus niet bedekt (uitgebreid)",
+    "title_sm": "2.4.12 Focus niet bedekt (uitgebreid)",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.4.12 Focus niet bedekt (uitgebreid)",
+    "pagination_label": "WCAG-succescriterium 2.4.12 Focus niet bedekt (uitgebreid)",
+    "description": "Zorg ervoor dat een element dat de toetsenbordfocus heeft volledig zichtbaar is en niet bedekt is door andere inhoud.",
+    "slug": "2.4.12",
+    "conformance_level": "Niveau AAA",
+    "keywords": [
+      "WCAG",
+      "AAA",
+      "bedienbaar",
+      "navigeerbaar",
+      "operable",
+      "navigable",
+      "focus not obscured (enhanced)"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.4.11 Focus niet bedekt (minimum)",
+    "permalink": "/wcag/2.4.11"
+  },
+  "next": {
+    "title": "2.4.13 Focusweergave",
+    "permalink": "/wcag/2.4.13"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "richtlijnen/formulieren/status/enough-time/index",
+  "title": "Geef gebruikers voldoende tijd",
+  "description": "Richtlijnen over de tijdsduur van statusberichten.",
+  "source": "@site/docs/richtlijnen/formulieren/status/3-enough-time/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/status/3-enough-time",
+  "slug": "/richtlijnen/formulieren/status/enough-time",
+  "permalink": "/richtlijnen/formulieren/status/enough-time",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/status/3-enough-time/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geef gebruikers voldoende tijd",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Geef gebruikers voldoende tijd",
+    "pagination_label": "Geef gebruikers voldoende tijd",
+    "description": "Richtlijnen over de tijdsduur van statusberichten.",
+    "slug": "/richtlijnen/formulieren/status/enough-time",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Informeer ingezoomde gebruikers",
+    "permalink": "/richtlijnen/formulieren/status/zoom"
+  },
+  "next": {
+    "title": "Visueel ontwerp van formulieren",
+    "permalink": "/richtlijnen/formulieren/visueel-ontwerp/"
+  }
+}

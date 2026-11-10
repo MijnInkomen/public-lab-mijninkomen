@@ -1,0 +1,43 @@
+{
+  "id": "handboek/definition-of-done/community-stappenplan/index",
+  "title": "Community stappenplan",
+  "description": "Stappen voor de Community fase van Definition of Done",
+  "source": "@site/docs/handboek/definition-of-done/community-stappenplan/index.mdx",
+  "sourceDirName": "handboek/definition-of-done/community-stappenplan",
+  "slug": "/handboek/estafettemodel/componenten/community",
+  "permalink": "/handboek/estafettemodel/componenten/community",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/community-stappenplan/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Community stappenplan",
+    "title_sm": "Community",
+    "hide_title": true,
+    "hide_table_of_contents": true,
+    "sidebar_label": "Community",
+    "sidebar_position": 3,
+    "navigation_order": 2,
+    "pagination_label": "Community",
+    "description": "Stappen voor de Community fase van Definition of Done",
+    "slug": "/handboek/estafettemodel/componenten/community",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done",
+      "help wanted"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Help Wanted",
+    "permalink": "/handboek/estafettemodel/componenten/help-wanted"
+  },
+  "next": {
+    "title": "Organisaties",
+    "permalink": "/handboek/estafettemodel/componenten/community/voor-organisaties"
+  }
+}

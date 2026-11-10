@@ -1,0 +1,43 @@
+{
+  "id": "componenten/strong/index",
+  "title": "Strong",
+  "description": "Korte belangrijke tekst die vetgedrukt wordt weergegeven.",
+  "source": "@site/docs/componenten/strong/index.mdx",
+  "sourceDirName": "componenten/strong",
+  "slug": "/strong",
+  "permalink": "/strong",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/strong/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Strong",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Strong",
+    "pagination_label": "Strong",
+    "description": "Korte belangrijke tekst die vetgedrukt wordt weergegeven.",
+    "issue_number": 138,
+    "slug": "/strong",
+    "keywords": [
+      "bold",
+      "bold emphasis",
+      "bold text",
+      "dikgedrukt",
+      "emphasized text",
+      "important",
+      "strong",
+      "vetgedrukt"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Status Badge",
+    "permalink": "/status-badge"
+  },
+  "next": {
+    "title": "Subscript",
+    "permalink": "/subscript"
+  }
+}

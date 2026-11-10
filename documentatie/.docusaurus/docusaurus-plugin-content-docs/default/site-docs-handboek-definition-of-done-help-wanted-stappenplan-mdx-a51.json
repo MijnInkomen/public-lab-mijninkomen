@@ -1,0 +1,43 @@
+{
+  "id": "handboek/definition-of-done/help-wanted-stappenplan",
+  "title": "Help Wanted stappenplan",
+  "description": "Stappen voor de Help Wanted fase van Definition of Done",
+  "source": "@site/docs/handboek/definition-of-done/help-wanted-stappenplan.mdx",
+  "sourceDirName": "handboek/definition-of-done",
+  "slug": "/handboek/estafettemodel/componenten/help-wanted",
+  "permalink": "/handboek/estafettemodel/componenten/help-wanted",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/help-wanted-stappenplan.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Help Wanted stappenplan",
+    "title_sm": "Help Wanted",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Help Wanted",
+    "sidebar_position": 2,
+    "navigation_order": 1,
+    "pagination_label": "Help Wanted",
+    "description": "Stappen voor de Help Wanted fase van Definition of Done",
+    "slug": "/handboek/estafettemodel/componenten/help-wanted",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done",
+      "help wanted"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Overzicht",
+    "permalink": "/handboek/estafettemodel/componenten/definition-of-done"
+  },
+  "next": {
+    "title": "Community",
+    "permalink": "/handboek/estafettemodel/componenten/community"
+  }
+}

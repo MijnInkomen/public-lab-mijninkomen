@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/content/tekstopmaak/language",
+  "title": "De juiste taal instellen",
+  "description": "Geef aan welke taal wordt gebruikt in de pagina of als deze anders is voor een deel van de pagina.",
+  "source": "@site/docs/richtlijnen/content/tekstopmaak/language.mdx",
+  "sourceDirName": "richtlijnen/content/tekstopmaak",
+  "slug": "/richtlijnen/content/tekstopmaak/taal",
+  "permalink": "/richtlijnen/content/tekstopmaak/taal",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/tekstopmaak/language.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "De juiste taal instellen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "De juiste taal instellen",
+    "pagination_label": "De juiste taal instellen",
+    "description": "Geef aan welke taal wordt gebruikt in de pagina of als deze anders is voor een deel van de pagina.",
+    "slug": "/richtlijnen/content/tekstopmaak/taal",
+    "keywords": [
+      "semantiek",
+      "tekstopmaak",
+      "structuur",
+      "tekststructuur",
+      "taal"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Koppen",
+    "permalink": "/richtlijnen/content/tekstopmaak/koppen"
+  },
+  "next": {
+    "title": "Toegankelijke linkteksten",
+    "permalink": "/richtlijnen/content/tekstopmaak/linkteksten"
+  }
+}

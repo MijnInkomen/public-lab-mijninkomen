@@ -1,0 +1,43 @@
+{
+  "id": "wcag/2.3.02",
+  "title": "WCAG-succescriterium 2.3.2 Drie flitsen",
+  "description": "Zorg ervoor dat de website geen onderdelen bevat met meer dan drie flitsen binnen één seconde.",
+  "source": "@site/docs/wcag/2.3.02.mdx",
+  "sourceDirName": "wcag",
+  "slug": "/wcag/2.3.2",
+  "permalink": "/wcag/2.3.2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/wcag/2.3.02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "WCAG-succescriterium 2.3.2 Drie flitsen",
+    "title_sm": "2.3.2 Drie flitsen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2.3.2 Drie flitsen",
+    "pagination_label": "WCAG-succescriterium 2.3.2 Drie flitsen",
+    "description": "Zorg ervoor dat de website geen onderdelen bevat met meer dan drie flitsen binnen één seconde.",
+    "slug": "2.3.2",
+    "conformance_level": "Niveau AAA",
+    "keywords": [
+      "WCAG",
+      "AAA",
+      "bedienbaar",
+      "toevallen en fysieke reacties",
+      "operable",
+      "seizures and physical reactions",
+      "three flashes"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "WCAG-succescriterium 2.3.1 Drie flitsen of beneden drempelwaarde",
+    "permalink": "/wcag/2.3.1"
+  },
+  "next": {
+    "title": "WCAG-succescriterium 2.3.3 Animatie uit interacties",
+    "permalink": "/wcag/2.3.3"
+  }
+}

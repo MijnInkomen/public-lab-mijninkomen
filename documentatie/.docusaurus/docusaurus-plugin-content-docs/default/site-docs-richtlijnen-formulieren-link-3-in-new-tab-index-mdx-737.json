@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/link/in-new-tab/index",
+  "title": "Geef aan als een link in een nieuwe tab opent",
+  "description": "Richtlijnen voor aangeven als een link een nieuwe tab opent.",
+  "source": "@site/docs/richtlijnen/formulieren/link/3-in-new-tab/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/link/3-in-new-tab",
+  "slug": "/richtlijnen/formulieren/links/nieuwe-tab",
+  "permalink": "/richtlijnen/formulieren/links/nieuwe-tab",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/link/3-in-new-tab/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geef aan als een link in een nieuwe tab opent",
+    "title_sm": "Link in nieuwe tab",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Link in nieuwe tab",
+    "pagination_label": "Link in nieuwe tab",
+    "description": "Richtlijnen voor aangeven als een link een nieuwe tab opent.",
+    "slug": "/richtlijnen/formulieren/links/nieuwe-tab",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Geen link in label",
+    "permalink": "/richtlijnen/formulieren/links/niet-in-label"
+  },
+  "next": {
+    "title": "Meerdere stappen",
+    "permalink": "/richtlijnen/formulieren/meerdere-stappen/"
+  }
+}

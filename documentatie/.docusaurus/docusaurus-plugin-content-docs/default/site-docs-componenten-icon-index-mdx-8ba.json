@@ -1,0 +1,53 @@
+{
+  "id": "componenten/icon/index",
+  "title": "Icon",
+  "description": "Grafisch symbool dat visueel informatie geeft over een actie, onderwerp of status.",
+  "source": "@site/docs/componenten/icon/index.mdx",
+  "sourceDirName": "componenten/icon",
+  "slug": "/icon",
+  "permalink": "/icon",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/icon/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Icon",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Icon",
+    "pagination_label": "Icon",
+    "description": "Grafisch symbool dat visueel informatie geeft over een actie, onderwerp of status.",
+    "issue_number": 275,
+    "slug": "/icon",
+    "keywords": [
+      "afbeelding",
+      "button icon",
+      "caret",
+      "emoji",
+      "glyph",
+      "graphic",
+      "icon",
+      "icoon",
+      "illustratie",
+      "illustration",
+      "logo",
+      "picto",
+      "pictogram",
+      "plaatje",
+      "svg",
+      "svg icon",
+      "symbol",
+      "symbool"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Heading Group",
+    "permalink": "/heading-group"
+  },
+  "next": {
+    "title": "Image",
+    "permalink": "/image"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "handboek/developer/infrastructuur/pnpm",
+  "title": "Werken met pnpm",
+  "description": "Werken met pnpm",
+  "source": "@site/docs/handboek/developer/05-infrastructuur/06-pnpm.mdx",
+  "sourceDirName": "handboek/developer/05-infrastructuur",
+  "slug": "/handboek/developer/pnpm/",
+  "permalink": "/handboek/developer/pnpm/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/05-infrastructuur/06-pnpm.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Werken met pnpm",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Werken met pnpm",
+    "pagination_label": "Werken met pnpm",
+    "description": "Werken met pnpm",
+    "slug": "/handboek/developer/pnpm/",
+    "keywords": [
+      "developer",
+      "pnpm"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Werken met Node.js",
+    "permalink": "/handboek/developer/node/"
+  },
+  "next": {
+    "title": "Security audit voor npm",
+    "permalink": "/pnpm-audit"
+  }
+}

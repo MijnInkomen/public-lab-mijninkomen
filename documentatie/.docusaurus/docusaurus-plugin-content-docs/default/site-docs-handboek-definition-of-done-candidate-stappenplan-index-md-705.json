@@ -1,0 +1,42 @@
+{
+  "id": "handboek/definition-of-done/candidate-stappenplan/index",
+  "title": "Overzicht van de Candidate Definition of Done voor componenten",
+  "description": "Overzicht van de Definition of Done voor componenten",
+  "source": "@site/docs/handboek/definition-of-done/candidate-stappenplan/index.md",
+  "sourceDirName": "handboek/definition-of-done/candidate-stappenplan",
+  "slug": "/handboek/estafettemodel/componenten/candidate",
+  "permalink": "/handboek/estafettemodel/componenten/candidate",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/candidate-stappenplan/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Overzicht van de Candidate Definition of Done voor componenten",
+    "title_sm": "Candidate",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Overzicht",
+    "sidebar_position": 1,
+    "navigation_order": 3,
+    "pagination_label": "Overzicht",
+    "description": "Overzicht van de Definition of Done voor componenten",
+    "slug": "/handboek/estafettemodel/componenten/candidate",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Kernteam",
+    "permalink": "/handboek/estafettemodel/componenten/community/voor-kernteam"
+  },
+  "next": {
+    "title": "Overzicht",
+    "permalink": "/handboek/estafettemodel/componenten/candidate"
+  }
+}

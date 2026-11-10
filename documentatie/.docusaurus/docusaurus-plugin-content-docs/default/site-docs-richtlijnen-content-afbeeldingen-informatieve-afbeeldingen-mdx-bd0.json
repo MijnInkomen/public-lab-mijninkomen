@@ -1,0 +1,48 @@
+{
+  "id": "richtlijnen/content/afbeeldingen/informatieve-afbeeldingen",
+  "title": "Informatieve afbeeldingen",
+  "description": "Informatieve afbeeldingen in NL Design System.",
+  "source": "@site/docs/richtlijnen/content/afbeeldingen/informatieve-afbeeldingen.mdx",
+  "sourceDirName": "richtlijnen/content/afbeeldingen",
+  "slug": "/richtlijnen/content/afbeeldingen/informatieve-afbeeldingen",
+  "permalink": "/richtlijnen/content/afbeeldingen/informatieve-afbeeldingen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/afbeeldingen/informatieve-afbeeldingen.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Informatieve afbeeldingen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Informatieve afbeeldingen",
+    "pagination_label": "Informatieve afbeeldingen",
+    "description": "Informatieve afbeeldingen in NL Design System.",
+    "slug": "/richtlijnen/content/afbeeldingen/informatieve-afbeeldingen",
+    "keywords": [
+      "afbeeldingen",
+      "alternatieve tekst",
+      "alt tekst",
+      "beeldbeschrijving",
+      "alt attribuut",
+      "tekstalternatief",
+      "tekstalternatieven",
+      "tekst alternatief",
+      "tekstueel alternatief",
+      "tekst alternatieven",
+      "toegankelijke afbeeldingen",
+      "informatieve afbeelding",
+      "informatieve afbeeldingen",
+      "informatief"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Grafieken",
+    "permalink": "/richtlijnen/content/afbeeldingen/grafieken"
+  },
+  "next": {
+    "title": "Tekst in een afbeelding",
+    "permalink": "/richtlijnen/content/afbeeldingen/tekst-in-afbeelding"
+  }
+}

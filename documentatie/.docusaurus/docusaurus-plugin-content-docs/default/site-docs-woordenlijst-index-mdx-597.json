@@ -1,0 +1,37 @@
+{
+  "id": "woordenlijst/index",
+  "title": "Woordenlijst",
+  "description": "NL Design System Woordenlijst",
+  "source": "@site/docs/woordenlijst/index.mdx",
+  "sourceDirName": "woordenlijst",
+  "slug": "/woordenlijst",
+  "permalink": "/woordenlijst",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/woordenlijst/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Woordenlijst",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Woordenlijst",
+    "sidebar_position": 5,
+    "navigation_order": 5,
+    "pagination_label": "Woordenlijst",
+    "description": "NL Design System Woordenlijst",
+    "slug": "/woordenlijst",
+    "keywords": [
+      "termenlijst",
+      "glossary",
+      "glossarium",
+      "uitleg"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Baseline december 2024",
+    "permalink": "/baseline/2024-12"
+  }
+}

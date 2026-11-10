@@ -1,0 +1,46 @@
+{
+  "id": "componenten/task-navigation/index",
+  "title": "Task Navigation",
+  "description": "Overzicht van één of meerdere taken die aandacht nodig hebben, met een link om de taak uit te voeren.",
+  "source": "@site/docs/componenten/task-navigation/index.mdx",
+  "sourceDirName": "componenten/task-navigation",
+  "slug": "/task-navigation",
+  "permalink": "/task-navigation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/task-navigation/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Task Navigation",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Task Navigation",
+    "pagination_label": "Task Navigation",
+    "description": "Overzicht van één of meerdere taken die aandacht nodig hebben, met een link om de taak uit te voeren.",
+    "issue_number": 350,
+    "slug": "/task-navigation",
+    "keywords": [
+      "task navigation",
+      "taak navigatie",
+      "task",
+      "taak",
+      "action",
+      "actie",
+      "acties",
+      "action list",
+      "actielijst",
+      "single action",
+      "deadline"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Task List",
+    "permalink": "/task-list"
+  },
+  "next": {
+    "title": "Text Input",
+    "permalink": "/text-input"
+  }
+}

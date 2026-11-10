@@ -1,0 +1,38 @@
+{
+  "id": "handboek/developer/conventies/css-conventie",
+  "title": "CSS conventie",
+  "description": "Conventies voor het schrijven van CSS voor NL Design System",
+  "source": "@site/docs/handboek/developer/03-conventies/03-css-conventie.mdx",
+  "sourceDirName": "handboek/developer/03-conventies",
+  "slug": "/handboek/developer/css-conventie/",
+  "permalink": "/handboek/developer/css-conventie/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/developer/03-conventies/03-css-conventie.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "CSS conventie",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "CSS conventie",
+    "pagination_label": "CSS conventie",
+    "description": "Conventies voor het schrijven van CSS voor NL Design System",
+    "slug": "/handboek/developer/css-conventie/",
+    "keywords": [
+      "developer",
+      "CSS",
+      "componenten"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "Design Token conventie",
+    "permalink": "/handboek/developer/design-token-conventie/"
+  },
+  "next": {
+    "title": "API conventie",
+    "permalink": "/handboek/developer/api-conventie/"
+  }
+}

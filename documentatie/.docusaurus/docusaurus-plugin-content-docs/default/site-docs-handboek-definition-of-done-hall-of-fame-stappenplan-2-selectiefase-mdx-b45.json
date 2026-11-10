@@ -1,0 +1,42 @@
+{
+  "id": "handboek/definition-of-done/hall-of-fame-stappenplan/selectiefase",
+  "title": "2. Selectiefase",
+  "description": "Stappen voor de Selectiefase van de Definition of Done voor Hall of Fame",
+  "source": "@site/docs/handboek/definition-of-done/hall-of-fame-stappenplan/2-selectiefase.mdx",
+  "sourceDirName": "handboek/definition-of-done/hall-of-fame-stappenplan",
+  "slug": "/handboek/estafettemodel/componenten/hall-of-fame/selectiefase",
+  "permalink": "/handboek/estafettemodel/componenten/hall-of-fame/selectiefase",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/handboek/definition-of-done/hall-of-fame-stappenplan/2-selectiefase.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "2. Selectiefase",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "2. Selectiefase",
+    "sidebar_position": 2,
+    "navigation_order": 2,
+    "pagination_label": "2. Selectiefase",
+    "description": "Stappen voor de Selectiefase van de Definition of Done voor Hall of Fame",
+    "slug": "/handboek/estafettemodel/componenten/hall-of-fame/selectiefase",
+    "keywords": [
+      "componenten",
+      "design system",
+      "estafettemodel",
+      "definition of done",
+      "hall of fame"
+    ]
+  },
+  "sidebar": "handboek",
+  "previous": {
+    "title": "1. Feedbackfase",
+    "permalink": "/handboek/estafettemodel/componenten/hall-of-fame/feedbackfase"
+  },
+  "next": {
+    "title": "3. Voorbereidingsfase",
+    "permalink": "/handboek/estafettemodel/componenten/hall-of-fame/voorbereidingsfase"
+  }
+}

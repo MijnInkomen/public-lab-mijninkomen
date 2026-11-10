@@ -1,0 +1,38 @@
+{
+  "id": "componenten/root/index",
+  "title": "Root",
+  "description": "Onderlaag waarin basiskeuzes worden gemaakt voor alle componenten die in de website zitten.",
+  "source": "@site/docs/componenten/root/index.mdx",
+  "sourceDirName": "componenten/root",
+  "slug": "/root",
+  "permalink": "/root",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/root/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Root",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Root",
+    "pagination_label": "Root",
+    "description": "Onderlaag waarin basiskeuzes worden gemaakt voor alle componenten die in de website zitten.",
+    "issue_number": 406,
+    "slug": "/root",
+    "keywords": [
+      "html",
+      "body",
+      "root"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Rich Text Content",
+    "permalink": "/rich-text-content"
+  },
+  "next": {
+    "title": "Select",
+    "permalink": "/select"
+  }
+}

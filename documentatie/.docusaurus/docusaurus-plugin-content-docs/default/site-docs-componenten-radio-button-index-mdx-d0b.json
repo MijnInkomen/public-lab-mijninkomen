@@ -1,0 +1,47 @@
+{
+  "id": "componenten/radio-button/index",
+  "title": "Radio Button",
+  "description": "Invoerveld voor het kiezen van een enkele optie uit een groep van opties.",
+  "source": "@site/docs/componenten/radio-button/index.mdx",
+  "sourceDirName": "componenten/radio-button",
+  "slug": "/radio-button",
+  "permalink": "/radio-button",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/radio-button/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Radio Button",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Radio Button",
+    "pagination_label": "Radio Button",
+    "description": "Invoerveld voor het kiezen van een enkele optie uit een groep van opties.",
+    "issue_number": 65,
+    "slug": "/radio-button",
+    "keywords": [
+      "form",
+      "invoerveld",
+      "optie",
+      "opties",
+      "option",
+      "option button",
+      "radio",
+      "radio button",
+      "radioknop",
+      "keuze",
+      "keuzemogelijkheid",
+      "keuzerondje"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Pull Quote",
+    "permalink": "/pull-quote"
+  },
+  "next": {
+    "title": "Radio Group",
+    "permalink": "/radio-group"
+  }
+}

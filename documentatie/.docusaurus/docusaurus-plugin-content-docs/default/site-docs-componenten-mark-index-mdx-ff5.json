@@ -1,0 +1,57 @@
+{
+  "id": "componenten/mark/index",
+  "title": "Mark",
+  "description": "Markeert tekst, zodat je ernaar kan verwijzen vanuit een andere context of omdat de tekst relevant is voor de huidige activiteit.",
+  "source": "@site/docs/componenten/mark/index.mdx",
+  "sourceDirName": "componenten/mark",
+  "slug": "/mark",
+  "permalink": "/mark",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/mark/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Mark",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Mark",
+    "pagination_label": "Mark",
+    "description": "Markeert tekst, zodat je ernaar kan verwijzen vanuit een andere context of omdat de tekst relevant is voor de huidige activiteit.",
+    "issue_number": 333,
+    "slug": "/mark",
+    "keywords": [
+      "accent",
+      "ctrl-f",
+      "gele lijn",
+      "gemarkeerde tekst",
+      "highlight",
+      "highlighter",
+      "inline resultaat",
+      "mark",
+      "marked text",
+      "markeer",
+      "marker",
+      "markeren",
+      "markering",
+      "markertekst",
+      "match",
+      "opgelicht",
+      "resultaat",
+      "search term",
+      "spotlight",
+      "stabilo",
+      "term",
+      "voorbeeld"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Logo",
+    "permalink": "/logo"
+  },
+  "next": {
+    "title": "Modal Dialog",
+    "permalink": "/modal-dialog"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "richtlijnen/formulieren/status/index",
+  "title": "Status in een formulier",
+  "description": "Richtlijnen voor het omgaan met status in formulieren.",
+  "source": "@site/docs/richtlijnen/formulieren/status/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/status",
+  "slug": "/richtlijnen/formulieren/status/",
+  "permalink": "/richtlijnen/formulieren/status/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/status/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Status in een formulier",
+    "title_sm": "Status",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Introductie status",
+    "sidebar_position": 12,
+    "navigation_order": 12,
+    "pagination_label": "Status in formulieren",
+    "description": "Richtlijnen voor het omgaan met status in formulieren.",
+    "slug": "/richtlijnen/formulieren/status/",
+    "keywords": [
+      "informatie",
+      "status",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Geen vaste tekstlengte",
+    "permalink": "/richtlijnen/formulieren/vragen/geen-min-max-lengte"
+  },
+  "next": {
+    "title": "Status in formulieren",
+    "permalink": "/richtlijnen/formulieren/status/"
+  }
+}

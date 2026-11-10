@@ -1,0 +1,36 @@
+{
+  "id": "richtlijnen/stijl/typography/line-length/index",
+  "title": "Zorg voor een comfortabele regellengte",
+  "description": "Maak regels niet te lang of te kort. 45-75 karakters per regel is acceptabel. Kortere regels tekst zijn prima voor bijschriften en formulieren.",
+  "source": "@site/docs/richtlijnen/stijl/typography/3-line-length/index.mdx",
+  "sourceDirName": "richtlijnen/stijl/typography/3-line-length",
+  "slug": "/richtlijnen/stijl/typografie/regellengte",
+  "permalink": "/richtlijnen/stijl/typografie/regellengte",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/stijl/typography/3-line-length/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Zorg voor een comfortabele regellengte",
+    "title_sm": "Comfortabele regellengte",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Comfortabele regellengte",
+    "pagination_label": "Zorg voor een comfortabele regellengte",
+    "description": "Maak regels niet te lang of te kort. 45-75 karakters per regel is acceptabel. Kortere regels tekst zijn prima voor bijschriften en formulieren.",
+    "slug": "/richtlijnen/stijl/typografie/regellengte",
+    "keywords": [
+      "regellengte"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Zorg voor een comfortabele regelafstand",
+    "permalink": "/richtlijnen/stijl/typografie/regelafstand"
+  },
+  "next": {
+    "title": "Kies een goed lettertype",
+    "permalink": "/richtlijnen/stijl/typografie/lettertype"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "richtlijnen/content/afbeeldingen/tekst-in-afbeelding",
+  "title": "Tekst in een afbeelding",
+  "description": "Tekst in een afbeelding in NL Design System.",
+  "source": "@site/docs/richtlijnen/content/afbeeldingen/tekst-in-afbeelding.mdx",
+  "sourceDirName": "richtlijnen/content/afbeeldingen",
+  "slug": "/richtlijnen/content/afbeeldingen/tekst-in-afbeelding",
+  "permalink": "/richtlijnen/content/afbeeldingen/tekst-in-afbeelding",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/afbeeldingen/tekst-in-afbeelding.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tekst in een afbeelding",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Tekst in een afbeelding",
+    "pagination_label": "Tekst in een afbeelding",
+    "description": "Tekst in een afbeelding in NL Design System.",
+    "slug": "/richtlijnen/content/afbeeldingen/tekst-in-afbeelding",
+    "keywords": [
+      "copywriter",
+      "taalgebruik"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Informatieve afbeeldingen",
+    "permalink": "/richtlijnen/content/afbeeldingen/informatieve-afbeeldingen"
+  },
+  "next": {
+    "title": "Content",
+    "permalink": "/richtlijnen/content/tekstopmaak"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/questions/contact/index",
+  "title": "Biedt verschillende manieren om contact op te nemen",
+  "description": "Richtlijnen over checken of informatie ècht nodig is.",
+  "source": "@site/docs/richtlijnen/formulieren/questions/3-contact/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/questions/3-contact",
+  "slug": "/richtlijnen/formulieren/vragen/manieren-voor-contact",
+  "permalink": "/richtlijnen/formulieren/vragen/manieren-voor-contact",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/questions/3-contact/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Biedt verschillende manieren om contact op te nemen",
+    "title_sm": "Bied contactmogelijkheden",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Bied contactmogelijkheden",
+    "pagination_label": "Bied contactmogelijkheden",
+    "description": "Richtlijnen over checken of informatie ècht nodig is.",
+    "slug": "/richtlijnen/formulieren/vragen/manieren-voor-contact",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Waarom is informatie nodig",
+    "permalink": "/richtlijnen/formulieren/vragen/check-noodzaak"
+  },
+  "next": {
+    "title": "Stel een vraag één keer",
+    "permalink": "/richtlijnen/formulieren/vragen/voorkom-dubbel-werk"
+  }
+}

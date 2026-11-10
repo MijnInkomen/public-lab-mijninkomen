@@ -1,0 +1,56 @@
+{
+  "id": "componenten/form-navigation/index",
+  "title": "Form Navigation",
+  "description": "Overzicht van stappen in een formulier, met de mogelijkheid om direct naar beschikbare stappen te navigeren.",
+  "source": "@site/docs/componenten/form-navigation/index.mdx",
+  "sourceDirName": "componenten/form-navigation",
+  "slug": "/form-navigation",
+  "permalink": "/form-navigation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/form-navigation/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Form Navigation",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Form Navigation",
+    "pagination_label": "Form Navigation",
+    "description": "Overzicht van stappen in een formulier, met de mogelijkheid om direct naar beschikbare stappen te navigeren.",
+    "issue_number": 41,
+    "slug": "/form-navigation",
+    "keywords": [
+      "form navigation",
+      "formulier navigatie",
+      "formulier",
+      "formulierstap",
+      "formulier stappen",
+      "form steps",
+      "meter",
+      "progress",
+      "progress indicator",
+      "progress list",
+      "progress navigation",
+      "progress stepper",
+      "progress tracker",
+      "stap",
+      "stepform",
+      "stepper",
+      "stepper vertical",
+      "stepper indicator",
+      "steps",
+      "steps list",
+      "vertical stepper"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Form Field Status",
+    "permalink": "/form-field-status"
+  },
+  "next": {
+    "title": "Form Summary",
+    "permalink": "/form-summary"
+  }
+}

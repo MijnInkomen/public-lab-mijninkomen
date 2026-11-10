@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/multistep/location/index",
+  "title": "Plaats de informatie over waar de gebruiker is in de stappen boven het formulier",
+  "description": "Richtlijnen over positie van de formulier voortgang.",
+  "source": "@site/docs/richtlijnen/formulieren/multistep/2-location/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/multistep/2-location",
+  "slug": "/richtlijnen/formulieren/meerdere-stappen/plaatsing-voortgang",
+  "permalink": "/richtlijnen/formulieren/meerdere-stappen/plaatsing-voortgang",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/multistep/2-location/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Plaats de informatie over waar de gebruiker is in de stappen boven het formulier",
+    "title_sm": "Plaatsing voortgang stappen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Plaatsing voortgang stappen",
+    "pagination_label": "Plaatsing voortgang stappen",
+    "description": "Richtlijnen over positie van de formulier voortgang.",
+    "slug": "/richtlijnen/formulieren/meerdere-stappen/plaatsing-voortgang",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Voortgang stappen tonen",
+    "permalink": "/richtlijnen/formulieren/meerdere-stappen/voortgang-tonen"
+  },
+  "next": {
+    "title": "Consistente navigatie",
+    "permalink": "/richtlijnen/formulieren/meerdere-stappen/consistente-benaming"
+  }
+}

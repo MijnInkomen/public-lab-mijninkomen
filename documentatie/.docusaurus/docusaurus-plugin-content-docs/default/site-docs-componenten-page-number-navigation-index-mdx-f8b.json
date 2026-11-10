@@ -1,0 +1,53 @@
+{
+  "id": "componenten/page-number-navigation/index",
+  "title": "Page Number Navigation",
+  "description": "Navigatie naar andere pagina's wanneer een grote hoeveelheid informatie is verdeeld over genummerde pagina's.",
+  "source": "@site/docs/componenten/page-number-navigation/index.mdx",
+  "sourceDirName": "componenten/page-number-navigation",
+  "slug": "/page-number-navigation",
+  "permalink": "/page-number-navigation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/page-number-navigation/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Page Number Navigation",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Page Number Navigation",
+    "pagination_label": "Page Number Navigation",
+    "description": "Navigatie naar andere pagina's wanneer een grote hoeveelheid informatie is verdeeld over genummerde pagina's.",
+    "issue_number": 106,
+    "slug": "/page-number-navigation",
+    "keywords": [
+      "content pagination",
+      "navigation",
+      "navigation links",
+      "numbered pagination",
+      "number navigation",
+      "pages",
+      "page control",
+      "page selector",
+      "page indicator",
+      "page links",
+      "page number",
+      "page numbers",
+      "paginering",
+      "paginatie",
+      "pagination",
+      "page navigation",
+      "pagina",
+      "paging"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Page Layout",
+    "permalink": "/page-layout"
+  },
+  "next": {
+    "title": "Paragraph",
+    "permalink": "/paragraph"
+  }
+}

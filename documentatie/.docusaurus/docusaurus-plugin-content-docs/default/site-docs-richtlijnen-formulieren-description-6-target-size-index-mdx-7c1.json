@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/description/target-size/index",
+  "title": "Houd het aanklikbare gedeelte groot genoeg",
+  "description": "Richtlijnen voor formaat aanklikbaar gedeelte van beschrijvingen in een formulier.",
+  "source": "@site/docs/richtlijnen/formulieren/description/6-target-size/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/description/6-target-size",
+  "slug": "/richtlijnen/formulieren/descriptions/aanklikbaar-gedeelte",
+  "permalink": "/richtlijnen/formulieren/descriptions/aanklikbaar-gedeelte",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/description/6-target-size/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Houd het aanklikbare gedeelte groot genoeg",
+    "title_sm": "Grootte aanklikbaar gedeelte",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Grootte aanklikbaar gedeelte",
+    "pagination_label": "Grootte aanklikbaar gedeelte",
+    "description": "Richtlijnen voor formaat aanklikbaar gedeelte van beschrijvingen in een formulier.",
+    "slug": "/richtlijnen/formulieren/descriptions/aanklikbaar-gedeelte",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Description bij fieldsets",
+    "permalink": "/richtlijnen/formulieren/descriptions/plaatsing-bij-fieldset"
+  },
+  "next": {
+    "title": "Lengte description",
+    "permalink": "/richtlijnen/formulieren/descriptions/lengte"
+  }
+}

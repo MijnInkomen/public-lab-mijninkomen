@@ -1,0 +1,36 @@
+{
+  "id": "project/schrijfwijzer/beslissingen",
+  "title": "Beslissingen voor schrijfwijze",
+  "description": "Beslissingen voor de schrijfwijze binnen het project NL Design System.",
+  "source": "@site/docs/project/schrijfwijzer/beslissingen.mdx",
+  "sourceDirName": "project/schrijfwijzer",
+  "slug": "/project/schrijfwijzer/beslissingen",
+  "permalink": "/project/schrijfwijzer/beslissingen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/schrijfwijzer/beslissingen.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Beslissingen voor schrijfwijze",
+    "hide_title": true,
+    "sidebar_label": "Beslissingen voor schrijfwijze",
+    "sidebar_position": 8,
+    "navigation_order": 8,
+    "pagination_label": "Beslissingen voor schrijfwijze",
+    "description": "Beslissingen voor de schrijfwijze binnen het project NL Design System.",
+    "keywords": [
+      "kernteam"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Video",
+    "permalink": "/project/schrijfwijzer/video"
+  },
+  "next": {
+    "title": "Code",
+    "permalink": "/project/schrijfwijzer/code"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "community/events/community-bijeenkomst-2",
+  "title": "Communitybijeenkomst 18 oktober 2024",
+  "description": "Volgende week vrijdag 18 oktober is de 2e communitybijeenkomst van NL Design System, ben jij er ook?",
+  "source": "@site/docs/community/events/community-bijeenkomst-2.mdx",
+  "sourceDirName": "community/events",
+  "slug": "/events/communitybijeenkomst-18-10-2024",
+  "permalink": "/events/communitybijeenkomst-18-10-2024",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/community-bijeenkomst-2.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Communitybijeenkomst 18 oktober 2024",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "unlisted": true,
+    "slug": "/events/communitybijeenkomst-18-10-2024"
+  }
+}

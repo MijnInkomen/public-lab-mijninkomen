@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/placeholder/search/index",
+  "title": "Placeholders en de zoekfunctie",
+  "description": "Richtlijnen over placeholder gebruiken in de zoekfunctie.",
+  "source": "@site/docs/richtlijnen/formulieren/placeholder/2-search/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/placeholder/2-search",
+  "slug": "/richtlijnen/formulieren/placeholders/zoekfunctie",
+  "permalink": "/richtlijnen/formulieren/placeholders/zoekfunctie",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/placeholder/2-search/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Placeholders en de zoekfunctie",
+    "title_sm": "Placeholder bij zoekfunctie",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Placeholder bij zoekfunctie",
+    "pagination_label": "Placeholder bij zoekfunctie",
+    "description": "Richtlijnen over placeholder gebruiken in de zoekfunctie.",
+    "slug": "/richtlijnen/formulieren/placeholders/zoekfunctie",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Placeholder is geen label",
+    "permalink": "/richtlijnen/formulieren/placeholders/niet-als-label"
+  },
+  "next": {
+    "title": "Placeholder kan verwarren",
+    "permalink": "/richtlijnen/formulieren/placeholders/verwarring-voorkomen"
+  }
+}

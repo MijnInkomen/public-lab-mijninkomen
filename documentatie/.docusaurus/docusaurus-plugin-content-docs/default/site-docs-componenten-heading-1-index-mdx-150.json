@@ -1,0 +1,47 @@
+{
+  "id": "componenten/heading-1/index",
+  "title": "Heading 1",
+  "description": "Hoofdkop van een pagina.",
+  "source": "@site/docs/componenten/heading-1/index.mdx",
+  "sourceDirName": "componenten/heading-1",
+  "slug": "/heading-1",
+  "permalink": "/heading-1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/heading-1/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Heading 1",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Heading 1",
+    "pagination_label": "Heading 1",
+    "description": "Hoofdkop van een pagina.",
+    "issue_number": 257,
+    "slug": "/heading-1",
+    "keywords": [
+      "caption",
+      "content",
+      "h1",
+      "heading",
+      "heading level",
+      "headline",
+      "kop",
+      "sectie",
+      "section",
+      "structure",
+      "titel",
+      "title"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Heading",
+    "permalink": "/heading"
+  },
+  "next": {
+    "title": "Heading 2",
+    "permalink": "/heading-2"
+  }
+}

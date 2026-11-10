@@ -1,0 +1,27 @@
+{
+  "id": "community/events/introduction-european-design-systems-success",
+  "title": "Thanks for signing up for the Introduction into European Design Systems 2025!",
+  "description": "Signed up for Introduction into European Design Systems 2025.",
+  "source": "@site/docs/community/events/introduction-european-design-systems-success.mdx",
+  "sourceDirName": "community/events",
+  "slug": "/community/events/introduction-european-design-systems-2025/thanks",
+  "permalink": "/community/events/introduction-european-design-systems-2025/thanks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/community/events/introduction-european-design-systems-success.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Thanks for signing up for the Introduction into European Design Systems 2025!",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "lang": "en",
+    "description": "Signed up for Introduction into European Design Systems 2025.",
+    "slug": "/community/events/introduction-european-design-systems-2025/thanks",
+    "unlisted": true,
+    "keywords": [
+      "nl design system",
+      "User Needs First Conference"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "project/kwaliteitsaanpak/productieomgeving",
+  "title": "Productieomgeving",
+  "description": "Uitleg over de versiebeheer van code in NL Design System",
+  "source": "@site/docs/project/kwaliteitsaanpak/productieomgeving.mdx",
+  "sourceDirName": "project/kwaliteitsaanpak",
+  "slug": "/project/kwaliteitsaanpak/productieomgeving",
+  "permalink": "/project/kwaliteitsaanpak/productieomgeving",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/project/kwaliteitsaanpak/productieomgeving.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 31,
+  "frontMatter": {
+    "title": "Productieomgeving",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Productieomgeving",
+    "sidebar_position": 31,
+    "pagination_label": "Productieomgeving",
+    "description": "Uitleg over de versiebeheer van code in NL Design System",
+    "keywords": [
+      "prod",
+      "production",
+      "productie"
+    ]
+  },
+  "sidebar": "project",
+  "previous": {
+    "title": "Release notes",
+    "permalink": "/project/kwaliteitsaanpak/release-notes"
+  },
+  "next": {
+    "title": "Backup",
+    "permalink": "/project/kwaliteitsaanpak/backup"
+  }
+}

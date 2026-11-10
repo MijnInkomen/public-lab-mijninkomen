@@ -1,0 +1,45 @@
+{
+  "id": "componenten/page-footer/index",
+  "title": "Page Footer",
+  "description": "Consistente plek onderaan elke pagina, vaak met links, juridische informatie en opties om hulp te krijgen of contact op te nemen.",
+  "source": "@site/docs/componenten/page-footer/index.mdx",
+  "sourceDirName": "componenten/page-footer",
+  "slug": "/page-footer",
+  "permalink": "/page-footer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/page-footer/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Page Footer",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Page Footer",
+    "pagination_label": "Page Footer",
+    "description": "Consistente plek onderaan elke pagina, vaak met links, juridische informatie en opties om hulp te krijgen of contact op te nemen.",
+    "issue_number": 56,
+    "slug": "/page-footer",
+    "keywords": [
+      "bottom bar",
+      "bottom section",
+      "cookies",
+      "copyright",
+      "language",
+      "legal",
+      "footer",
+      "page bottom",
+      "page footer",
+      "related"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Page Body",
+    "permalink": "/page-body"
+  },
+  "next": {
+    "title": "Page Header",
+    "permalink": "/page-header"
+  }
+}

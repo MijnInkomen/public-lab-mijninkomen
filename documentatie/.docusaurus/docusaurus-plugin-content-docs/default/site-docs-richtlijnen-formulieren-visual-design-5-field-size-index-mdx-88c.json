@@ -1,0 +1,39 @@
+{
+  "id": "richtlijnen/formulieren/visual-design/field-size/index",
+  "title": "Maak aanklikbare formuliervelden groot genoeg",
+  "description": "Richtlijnen om aanklikbare formuliervelden makkelijk te kunnen selecteren.",
+  "source": "@site/docs/richtlijnen/formulieren/visual-design/5-field-size/index.mdx",
+  "sourceDirName": "richtlijnen/formulieren/visual-design/5-field-size",
+  "slug": "/richtlijnen/formulieren/visueel-ontwerp/invoerveld-goed-aanklikbaar",
+  "permalink": "/richtlijnen/formulieren/visueel-ontwerp/invoerveld-goed-aanklikbaar",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/formulieren/visual-design/5-field-size/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Maak aanklikbare formuliervelden groot genoeg",
+    "title_sm": "Invoerveld goed aanklikbaar",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Invoerveld goed aanklikbaar",
+    "pagination_label": "Invoerveld goed aanklikbaar",
+    "description": "Richtlijnen om aanklikbare formuliervelden makkelijk te kunnen selecteren.",
+    "slug": "/richtlijnen/formulieren/visueel-ontwerp/invoerveld-goed-aanklikbaar",
+    "keywords": [
+      "labels",
+      "formulier",
+      "design",
+      "code"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Focus goed zichtbaar",
+    "permalink": "/richtlijnen/formulieren/visueel-ontwerp/focus-goed-zichtbaar"
+  },
+  "next": {
+    "title": "Fouten niet kleurafhankelijk",
+    "permalink": "/richtlijnen/formulieren/visueel-ontwerp/fout-niet-alleen-met-kleur"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "componenten/language-navigation/index",
+  "title": "Language Navigation",
+  "description": "Eén of meerdere links om de website te openen in een andere taal.",
+  "source": "@site/docs/componenten/language-navigation/index.mdx",
+  "sourceDirName": "componenten/language-navigation",
+  "slug": "/language-navigation",
+  "permalink": "/language-navigation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/componenten/language-navigation/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Language Navigation",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Language Navigation",
+    "pagination_label": "Language Navigation",
+    "description": "Eén of meerdere links om de website te openen in een andere taal.",
+    "issue_number": 243,
+    "slug": "/language-navigation",
+    "keywords": [
+      "language",
+      "language choices",
+      "language menu",
+      "language navigation",
+      "language options",
+      "language selection",
+      "language switcher",
+      "language switcher menu",
+      "multilingual",
+      "switcher",
+      "taal",
+      "taalkeuze",
+      "taalmenu",
+      "taalnavigatie",
+      "taalopties",
+      "taalselectie",
+      "translate",
+      "translate navigation",
+      "translator",
+      "vertaling",
+      "vlag",
+      "vlaggen"
+    ]
+  },
+  "sidebar": "componenten",
+  "previous": {
+    "title": "Input Group",
+    "permalink": "/input-group"
+  },
+  "next": {
+    "title": "Link",
+    "permalink": "/link"
+  }
+}

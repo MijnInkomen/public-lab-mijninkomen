@@ -1,0 +1,47 @@
+{
+  "id": "richtlijnen/content/afbeeldingen/algemene-richtlijnen",
+  "title": "Algemene richtlijnen",
+  "description": "Algemene richtlijnen voor afbeeldingen in NL Design System.",
+  "source": "@site/docs/richtlijnen/content/afbeeldingen/algemene-richtlijnen.mdx",
+  "sourceDirName": "richtlijnen/content/afbeeldingen",
+  "slug": "/richtlijnen/content/afbeeldingen/algemene-richtlijnen",
+  "permalink": "/richtlijnen/content/afbeeldingen/algemene-richtlijnen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nl-design-system/documentatie/tree/main/docs/richtlijnen/content/afbeeldingen/algemene-richtlijnen.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Algemene richtlijnen",
+    "hide_title": true,
+    "hide_table_of_contents": false,
+    "sidebar_label": "Algemene richtlijnen",
+    "pagination_label": "Algemene richtlijnen",
+    "description": "Algemene richtlijnen voor afbeeldingen in NL Design System.",
+    "slug": "/richtlijnen/content/afbeeldingen/algemene-richtlijnen",
+    "keywords": [
+      "afbeeldingen",
+      "alternatieve tekst",
+      "alt tekst",
+      "beeldbeschrijving",
+      "alt attribuut",
+      "tekstalternatief",
+      "tekstalternatieven",
+      "tekst alternatief",
+      "tekstueel alternatief",
+      "tekst alternatieven",
+      "toegankelijke afbeeldingen",
+      "alt in cms",
+      "mediabibliotheek"
+    ]
+  },
+  "sidebar": "richtlijnen",
+  "previous": {
+    "title": "Content",
+    "permalink": "/richtlijnen/content/afbeeldingen"
+  },
+  "next": {
+    "title": "Waar moet een alternatieve tekst staan?",
+    "permalink": "/richtlijnen/content/afbeeldingen/alt-plaats"
+  }
+}
