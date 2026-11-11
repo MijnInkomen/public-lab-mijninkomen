@@ -28,7 +28,7 @@ const openInloggen = async (page: Page) => {
 
 const vulWachtwoordIn = async (page: Page, wachtwoord: string) => {
   await page.getByLabel('E-mailadres').fill(leesInstelling('TEST_LID_EMAIL'));
-  await page.getByLabel('Wachtwoord').fill(wachtwoord);
+  await page.getByLabel('Wachtwoord', { exact: true }).fill(wachtwoord);
   await page.getByRole('button', { name: 'Inloggen' }).click();
 };
 

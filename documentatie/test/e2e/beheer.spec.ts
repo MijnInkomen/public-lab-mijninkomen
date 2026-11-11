@@ -37,7 +37,7 @@ const leesBase32 = (tekst: string) => {
 
 const logIn = async (page: Page, email: string, wachtwoord: string, geheim: Buffer | string) => {
   await page.getByLabel('E-mailadres').fill(email);
-  await page.getByLabel('Wachtwoord').fill(wachtwoord);
+  await page.getByLabel('Wachtwoord', { exact: true }).fill(wachtwoord);
   await page.getByRole('button', { name: 'Inloggen' }).click();
   await page.getByLabel('Code uit de app').fill(maakCode(geheim));
   await page.getByRole('button', { name: 'Inloggen' }).click();
@@ -45,7 +45,7 @@ const logIn = async (page: Page, email: string, wachtwoord: string, geheim: Buff
 
 const dien = (request: APIRequestContext, persoon: { naam: string; email: string }) =>
   request.post(`${websiteURL}/api/toegang-aanvragen`, {
-    data: { ...persoon, organisatie: 'Gemeente Utrecht', functie: 'Adviseur', gesprek: '2026-10-12' },
+    data: { ...persoon, organisatie: 'Gemeente Utrecht', functie: 'Schuldhulpverlener', gesprek: '2026-10-12' },
   });
 
 const leesMail = async (request: APIRequestContext, email: string) => {
