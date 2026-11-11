@@ -26,3 +26,60 @@
   margin-block-end: 0.5rem;
   text-align: start;
 }
+
+.mijninkomen-beheer .mijninkomen-beheer__reden {
+  color: #4a5651;
+  font-size: 0.875rem;
+  margin-block: 0.25rem 0;
+  max-inline-size: 20rem;
+}
+
+.mijninkomen-dialoog {
+  --utrecht-button-group-margin-block-start: 1.5rem;
+  --utrecht-textarea-background-color: #fff;
+  --utrecht-textarea-border-color: #8a948f;
+  --utrecht-textarea-border-radius: 8px;
+  --utrecht-textarea-border-width: 1px;
+
+  background-color: #fff;
+  border: 0;
+  border-block-start: 6px solid var(--basis-color-accent-1-color-default);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 25%);
+  color: inherit;
+  inline-size: calc(100% - 2rem);
+  max-inline-size: 36rem;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+}
+
+.mijninkomen-dialoog::backdrop {
+  background-color: rgb(31 42 38 / 60%);
+}
+
+.mijninkomen-dialoog .utrecht-heading-2 {
+  color: var(--basis-heading-color);
+  font-size: 1.5rem;
+  margin-block: 0 0.75rem;
+}
+
+.mijninkomen-dialoog .utrecht-form-field {
+  margin-block: 1.25rem 0;
+}
+
+.mijninkomen-dialoog .utrecht-form-label {
+  color: var(--basis-heading-color);
+  font-weight: 700;
+}
+
+.mijninkomen-dialoog .utrecht-textarea {
+  inline-size: 100%;
+  max-inline-size: none;
+}
+
+@media (width <= 48rem) {
+  .mijninkomen-dialoog {
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+  }
+}
