@@ -7,7 +7,7 @@ const knop = (page: Page) => page.getByRole('button', { name: /Toegang aanvragen
 const vulIn = async (page: Page, email: string, gesprek: string) => {
   await page.getByLabel('Naam').fill('Sam de Vries');
   await page.getByLabel('Gemeente of organisatie').fill('Gemeente Utrecht');
-  await page.getByLabel('Functie').fill('Beleidsadviseur');
+  await page.getByLabel('Functie').selectOption('Beleidsadviseur sociaal domein');
   await page.getByLabel('E-mailadres van je werk').fill(email);
   await page.getByLabel('Wanneer had je het kennismakingsgesprek?').fill(gesprek);
 };
@@ -18,6 +18,7 @@ test('een leeg formulier toont per veld een foutmelding', async ({ page }) => {
 
   await expect(page.getByText('Het formulier is nog niet goed ingevuld')).toBeVisible();
   await expect(page.getByRole('link', { name: 'Vul je naam in.' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Kies je functie.' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Kies wanneer je het kennismakingsgesprek had.' })).toBeVisible();
   await expect(page.getByLabel('Naam')).toHaveAttribute('aria-invalid', 'true');
 });

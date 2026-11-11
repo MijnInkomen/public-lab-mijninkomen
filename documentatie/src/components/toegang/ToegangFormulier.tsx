@@ -5,6 +5,8 @@ import {
   FormFieldDescription,
   FormFieldErrorMessage,
   FormLabel,
+  Select,
+  SelectOption,
   Textbox,
 } from '@utrecht/component-library-react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
@@ -107,31 +109,51 @@ export const ToegangFormulier = () => {
       </div>
 
       <form onSubmit={handleSubmit(versturen)} noValidate>
-        {velden.map(({ naam, label, type, autoComplete, omschrijving, fout }) => {
+        {velden.map(({ naam, label, type, autoComplete, omschrijving, fout, opties, keuzeTekst }) => {
           const id = veldId(naam);
           const foutTekst = errors[naam]?.message;
           const beschrijving = [omschrijving && `${id}-omschrijving`, foutTekst && `${id}-fout`].filter(Boolean);
+          const veld = register(naam, {
+            validate: (waarde) => {
+              if (!waarde.trim()) return fout;
+              if (opties && !opties.includes(waarde)) return fout;
+              if (type === 'email' && !E_MAILADRES.test(waarde.trim())) return FOUT_EMAIL;
+              return true;
+            },
+          });
 
           return (
-            <FormField key={naam} type={type} invalid={Boolean(foutTekst)}>
+            <FormField key={naam} type={type === 'select' ? 'text' : type} invalid={Boolean(foutTekst)}>
               <FormLabel htmlFor={id}>{label}</FormLabel>
               {omschrijving && <FormFieldDescription id={`${id}-omschrijving`}>{omschrijving}</FormFieldDescription>}
               {foutTekst && <FormFieldErrorMessage id={`${id}-fout`}>{foutTekst}</FormFieldErrorMessage>}
-              <Textbox
-                id={id}
-                type={type}
-                autoComplete={autoComplete}
-                invalid={Boolean(foutTekst)}
-                max={type === 'date' && isBrowser ? vandaag() : undefined}
-                aria-describedby={beschrijving.join(' ') || undefined}
-                {...register(naam, {
-                  validate: (waarde) => {
-                    if (!waarde.trim()) return fout;
-                    if (type === 'email' && !E_MAILADRES.test(waarde.trim())) return FOUT_EMAIL;
-                    return true;
-                  },
-                })}
-              />
+              {type === 'select' ? (
+                <Select
+                  id={id}
+                  autoComplete={autoComplete}
+                  invalid={Boolean(foutTekst)}
+                  defaultValue=""
+                  aria-describedby={beschrijving.join(' ') || undefined}
+                  {...veld}
+                >
+                  <SelectOption value="">{keuzeTekst}</SelectOption>
+                  {opties?.map((optie) => (
+                    <SelectOption key={optie} value={optie}>
+                      {optie}
+                    </SelectOption>
+                  ))}
+                </Select>
+              ) : (
+                <Textbox
+                  id={id}
+                  type={type}
+                  autoComplete={autoComplete}
+                  invalid={Boolean(foutTekst)}
+                  max={type === 'date' && isBrowser ? vandaag() : undefined}
+                  aria-describedby={beschrijving.join(' ') || undefined}
+                  {...veld}
+                />
+              )}
             </FormField>
           );
         })}

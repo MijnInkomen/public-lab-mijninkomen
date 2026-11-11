@@ -11,7 +11,7 @@ const aanvraagInLijst: OpgeslagenAanvraag = {
   id: ID,
   naam: 'Sam de Vries',
   organisatie: 'Gemeente Utrecht',
-  functie: 'Beleidsadviseur',
+  functie: 'Beleidsadviseur sociaal domein',
   email: 'sam@gemeente.nl',
   gesprekDatum: '2026-01-12',
   status: 'in behandeling',
@@ -65,7 +65,7 @@ beforeEach(() => {
 const goedeAanvraag = {
   naam: 'Sam de Vries',
   organisatie: 'Gemeente Utrecht',
-  functie: 'Beleidsadviseur',
+  functie: 'Beleidsadviseur sociaal domein',
   email: 'sam@gemeente.nl',
   gesprek: '2026-01-12',
 };

@@ -5,6 +5,12 @@
   --utrecht-alert-warning-background-color: #fbf1d9;
   --utrecht-alert-warning-border-color: #e8b547;
   --utrecht-pre-heading-color: var(--basis-color-accent-1-color-default);
+  --utrecht-select-background-color: #fff;
+  --utrecht-select-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23216b50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  --utrecht-select-padding-inline-end: 2.5rem;
+  --utrecht-select-border-color: #8a948f;
+  --utrecht-select-border-radius: 8px;
+  --utrecht-select-border-width: 1px;
   --utrecht-textbox-background-color: #fff;
   --utrecht-textbox-border-color: #8a948f;
   --utrecht-textbox-border-radius: 8px;
@@ -54,9 +60,15 @@
   font-weight: 700;
 }
 
-.mijninkomen-formulierkaart .utrecht-textbox {
+.mijninkomen-formulierkaart .utrecht-textbox,
+.mijninkomen-formulierkaart .utrecht-select {
   inline-size: 100%;
   max-inline-size: none;
+}
+
+.mijninkomen-formulierkaart .utrecht-select {
+  background-position: right 0.75rem center;
+  cursor: pointer;
 }
 
 .mijninkomen-formulierkaart ul {

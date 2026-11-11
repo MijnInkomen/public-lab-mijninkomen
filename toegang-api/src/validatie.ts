@@ -10,6 +10,15 @@ export type Fouten = Partial<Record<'naam' | 'organisatie' | 'functie' | 'email'
 
 type Controle = { aanvraag: Aanvraag; fouten?: undefined } | { aanvraag?: undefined; fouten: Fouten };
 
+/** Functies waaruit een aanvrager kiest. Houd gelijk met de lijst in het formulier (documentatie/src/components/toegang/content.ts). */
+export const FUNCTIES = [
+  'Beleidsadviseur sociaal domein',
+  'Klantmanager werk en inkomen',
+  'Schuldhulpverlener',
+  'Teamleider sociaal domein',
+  'Adviseur digitale dienstverlening',
+];
+
 const MAX_LENGTE = 200;
 const E_MAILADRES = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -66,7 +75,7 @@ export const controleerAanvraag = (invoer: unknown, vandaag = vandaagInNederland
         'Vul je gemeente of organisatie in.',
         'De naam van je gemeente of organisatie is te lang.',
       ),
-      functie: controleerTekst(functie, 'Vul je functie in.', 'Je functie is te lang.'),
+      functie: FUNCTIES.includes(functie) ? undefined : 'Kies je functie.',
       email: controleerEmail(email),
       gesprek: controleerGesprek(gesprek, gesprekDatum, vandaag),
     }).filter(([, fout]) => fout),
