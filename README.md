@@ -2,7 +2,7 @@
 
 Dit is de MijnInkomen-website. Het project laat zien hoe de site eruit moet zien en hoe hij werkt: de structuur, componenten en huisstijl.
 
-Op dit moment bevat het niveau 1 (informatief): de homepage en de pagina's *Over MijnInkomen*, *Samenwerken* en *Contact*. Niveau 2 (ingelogde communityleden) komt later.
+Op dit moment bevat het niveau 1 (informatief): de homepage en de pagina's *Over MijnInkomen*, *Samenwerken* en *Contact*. Het inlogmechanisme voor niveau 2 (ingelogde communityleden) en niveau 3 (developers) is ook aanwezig, maar de content voor ze is nog niet volledig uitegewerkt
 
 Deze README legt stap voor stap uit hoe je het project op je laptop aan de praat krijgt, ook als je nog niks hebt geïnstalleerd.
 
@@ -10,12 +10,21 @@ Deze README legt stap voor stap uit hoe je het project op je laptop aan de praat
 
 ## Inhoud
 
-1. [Wat heb je nodig?](#1-wat-heb-je-nodig)
-2. [Het project ophalen](#2-het-project-ophalen)
-3. [Het project starten](#3-het-project-starten)
-4. [Wijzigingen delen met het team (Git)](#4-wijzigingen-delen-met-het-team-git)
-5. [Problemen oplossen](#5-problemen-oplossen)
-6. [Inloggen lokaal starten](#6-inloggen-lokaal-starten)
+- [MijnInkomen](#mijninkomen)
+  - [Inhoud](#inhoud)
+  - [1. Wat heb je nodig?](#1-wat-heb-je-nodig)
+    - [Stap 1: Git installeren](#stap-1-git-installeren)
+    - [Stap 2: Node.js installeren](#stap-2-nodejs-installeren)
+    - [Stap 4: Pnpm installeren](#stap-4-pnpm-installeren)
+    - [Stap 4: Code-editor installeren](#stap-4-code-editor-installeren)
+    - [Hoe open ik een terminal?](#hoe-open-ik-een-terminal)
+  - [2. Het project ophalen](#2-het-project-ophalen)
+  - [3. Het project starten](#3-het-project-starten)
+    - [Front-end starten](#front-end-starten)
+    - [Back-end starten](#back-end-starten)
+  - [4. Wijzigingen delen met het team (Git)](#4-wijzigingen-delen-met-het-team-git)
+  - [5. Problemen oplossen](#5-problemen-oplossen)
+  - [6. Back-end lokaal starten](#6-back-end-lokaal-starten)
 
 ---
 
@@ -24,9 +33,10 @@ Deze README legt stap voor stap uit hoe je het project op je laptop aan de praat
 Installeer onderstaande programma's **in deze volgorde**. Heb je iets al? Dan kun je dat overslaan.
 
 | Programma | Waarvoor | Verplicht? |
-|---|---|---|
+| --- | --- | --- |
 | **Git** | Het project ophalen en wijzigingen delen | Ja |
-| **Node.js (LTS-versie)** | Draait het project (inclusief `npm`) | Ja |
+| **Node.js (LTS-versie)** | Draait het project | Ja |
+| **Pnpm** | Beheert de packages (installaties) binnen het project| Ja |
 | **Code-editor** (bijv. VS Code) | Bestanden bekijken en aanpassen | Ja, aanbevolen |
 
 ### Stap 1: Git installeren
@@ -39,7 +49,7 @@ Installeer onderstaande programma's **in deze volgorde**. Heb je iets al? Dan ku
 
 **Mac**
 
-Open de Terminal en typ `git --version`. Is Git nog niet geïnstalleerd, dan biedt je Mac aan om het te installeren. Klik op *Installeren*.
+[Open de Terminal](#hoe-open-ik-een-terminal) en typ `git --version`. Is Git nog niet geïnstalleerd, dan biedt je Mac aan om het te installeren. Klik op *Installeren*.
 
 Controleer of het gelukt is:
 
@@ -63,7 +73,17 @@ npm --version
 
 Zie je bij beide een versienummer? Dan is het gelukt. `npm` wordt automatisch met Node.js meegeïnstalleerd, je hoeft niks extra's te installeren.
 
-### Stap 3: Code-editor installeren
+### Stap 4: Pnpm installeren
+
+Om pnpm te installeren kun je gebruik maken van de net geïnstalleerde npm:
+
+1. Open de terminal en type `npx get-pnpm`
+2. Sluit de terminal
+3. Open de terminal opnieuw en kijk of het geïnstalleerd is met `pnpm --version`
+
+Als dat niet lukt, of je wilt / kan geen npm gebruiken, kun je voor verdere instructies gaan naar [de officiële website](https://pnpm.io/installation).
+
+### Stap 4: Code-editor installeren
 
 Download [Visual Studio Code](https://code.visualstudio.com/) en installeer het. Je mag ook een andere editor gebruiken.
 
@@ -104,27 +124,39 @@ cd <naam-van-de-map>
 
 ## 3. Het project starten
 
-Voer deze stappen uit in de projectmap documentatie.
+Dit project bestaat als het ware uit twee delen; een front-end en een back-end. Het aanpassen, en dus starten, van deze twee delen moeten gebeuren op verschillende manieren. De front-end is de website zelf. De code voor de front-end staat in de documentatie folder. De back-end is de rest, denk aan hoe het inloggen behandelt wordt.
 
-**1. Onderdelen installeren** (alleen de eerste keer, en weer als er onderdelen zijn bijgekomen):
+### Front-end starten
 
-```bash
-npm install
-```
+Voor het aanpassen en/of starten van de front-end, is de beste methode direct via pnpm:
 
-**2. Het project starten:**
+1. Open de terminal in de **documentatie** folder:
 
-```bash
-npm run dev
-```
+    ```bash
+    cd ./documentatie
+    ```
 
-Er verschijnt een link in de terminal, meestal **http://localhost:5173**. Open die in je browser. Je ziet nu de MijnInkomen-website.
+2. Installeer de onderdelen (alleen de eerste keer, en weer als er onderdelen zijn bijgekomen):
 
-Zolang dit commando draait, worden je wijzigingen direct zichtbaar in de browser.
+    ```bash
+    pnpm install
+    ```
 
-**Stoppen:** druk in de terminal op `Ctrl + C`.
+3. Start de front-end in development mode:
 
-**Weer starten:** `npm run dev`. Opnieuw `npm install` draaien is alleen nodig als er onderdelen zijn gewijzigd.
+    ```bash
+    pnpm run dev
+    ```
+
+Nu kan je de development omgeving openen op het internet op het adres: <http://localhost:3000>. Met deze methode zorg je ervoor dat aanpassingen in de documentatie folder live mee gaan.
+
+Om dit te stoppen kun je in dezelfde terminal `Ctrl + c` tegelijk intikken.
+
+### Back-end starten
+
+Voor het starten en/of aanpassingen maken op de back-end kun je hier verder gaan: 
+
+[Back-end lokaal starten](#6-back-end-lokaal-starten)
 
 ---
 
@@ -134,7 +166,7 @@ Werk nooit rechtstreeks op de hoofdbranch. Maak voor elke wijziging een eigen br
 
 ```bash
 # 1. Haal eerst de laatste versie op
-git checkout main
+git checkout dev
 git pull
 
 # 2. Maak een nieuwe branch (geef hem een duidelijke naam)
@@ -150,14 +182,12 @@ git push -u origin mijn-wijziging
 
 Maak daarna in GitLab een **Merge Request** aan en vraag iemand uit het team om mee te kijken.
 
-> Controleer of de hoofdbranch in jullie GitLab `main` of `master` heet en pas de commando's zo nodig aan.
-
 ---
 
 ## 5. Problemen oplossen
 
 | Probleem | Oplossing |
-|---|---|
+| --- | --- |
 | `command not found: git / node / npm` (Mac) of `... is not recognized as the name of a cmdlet` (Windows) | Het programma is niet (goed) geïnstalleerd. Installeer het opnieuw en **start je terminal opnieuw op**. |
 | Windows: `npm.ps1 cannot be loaded because running scripts is disabled on this system` | PowerShell blokkeert scripts. Gebruik **Git Bash** of de **Opdrachtprompt (cmd)** in plaats van PowerShell. Of typ in PowerShell eenmalig: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` en bevestig met `J`. |
 | `npm install` geeft fouten | Controleer of je de LTS-versie van Node.js hebt (`node --version`). Verwijder daarna de map `node_modules` en draai `npm install` opnieuw. |
@@ -168,11 +198,13 @@ Vastgelopen? Verwijder `node_modules`, draai `npm install` opnieuw, en vraag and
 
 ---
 
-## 6. Inloggen lokaal starten
+## 6. Back-end lokaal starten
 
-Inloggen werkt alleen via Nginx op **http://localhost:3000**. Stop daarom eerst `pnpm start`: die gebruikt dezelfde poort. Wil je tegelijk snel iets aanpassen zonder inloggen, start die dan met `pnpm start --port 3001`. Je hebt hiervoor [Docker Desktop](https://www.docker.com/products/docker-desktop/) nodig.
+Voor het inloggen, dat werkt alleen via Nginx op <http://localhost:3000>. Stop daarom eerst de front-end development omgeving als die draait; die gebruikt dezelfde poort. Wil je tegelijk snel iets aanpassen zonder inloggen, start die dan met `pnpm start --port 3001`. Voor het starten van de back-end heb je [Docker Desktop](https://www.docker.com/products/docker-desktop/) nodig.
 
-**1. Eenmalig: maak je instellingen.** Doe dit in de hoofdmap van de repo. Vul daarna alle lege regels in `.env` in.
+**1. Eenmalig: maak je instellingen.**
+
+Doe dit in de hoofdmap van de repo. In production moeten de geheimen wel veilig zijn en dus vervangen worden.
 
 ```bash
 cp .env.example .env
@@ -183,7 +215,7 @@ cp .env.example .env
 ```bash
 cd documentatie
 pnpm install
-pnpm run build:docusaurus
+pnpm run build
 cd ..
 ```
 
@@ -194,7 +226,7 @@ docker compose up -d
 ```
 
 | Adres | Waarvoor |
-|---|---|
+| --- | --- |
 | http://localhost:3000 | De site met inloggen |
 | http://localhost:3000/auth/admin | Beheer van Keycloak (`KEYCLOAK_ADMIN_USERNAME` en `KEYCLOAK_ADMIN_PASSWORD` uit `.env`) |
 | http://localhost:8025 | Mailpit: hier komen de testmails binnen |
@@ -223,12 +255,4 @@ Heb je `toegang-api/` aangepast? Bouw die opnieuw met `docker compose up -d --bu
 
 **Stoppen:** `docker compose down`. Met `docker compose down -v` wis je ook alle accounts; bij de volgende start worden de testaccounts opnieuw aangemaakt.
 
-**Testen:** start de omgeving en draai in de map `documentatie`:
-
-```bash
-pnpm exec playwright test test/e2e/inloggen.spec.ts --project=chromium --reporter=list
-pnpm exec playwright test test/e2e/toegang-aanvragen.spec.ts --project=chromium --reporter=list
-pnpm exec playwright test test/e2e/beheer.spec.ts --project=chromium --reporter=list --workers=1
-```
-
-> Deze instellingen zijn alleen voor lokaal gebruik. Voor een echte server zijn onder meer HTTPS, `start` in plaats van `start-dev`, eigen domeinnamen, geen testaccounts en een afgeschermd adres voor het Keycloak-beheer nodig.
+> Deze instellingen zijn alleen voor lokaal gebruik. Voor een echte server zijn onder meer HTTPS, eigen domeinnamen, geen testaccounts en een afgeschermd adres voor het Keycloak-beheer nodig.

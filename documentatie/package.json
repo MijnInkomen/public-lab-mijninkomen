@@ -23,7 +23,8 @@
     "start": "pnpm run start:docusaurus",
     "start:docusaurus": "pnpm run dev",
     "dev": "pnpm run dev:docusaurus",
-    "dev:docusaurus": "docusaurus start"
+    "dev:docusaurus": "docusaurus start",
+    "build": "docusaurus build"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
