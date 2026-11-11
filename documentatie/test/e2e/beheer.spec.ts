@@ -91,7 +91,11 @@ test('een communitylid kan de pagina en de API niet gebruiken', async ({ page })
   expect(toelaten.status()).toBe(403);
 });
 
-test('een admin laat toe, weigert, en de nieuwe gebruiker kan inloggen', async ({ page, request, browser }) => {
+test('een admin accepteert, weigert met reden, en de nieuwe gebruiker kan inloggen', async ({
+  page,
+  request,
+  browser,
+}) => {
   test.setTimeout(120000);
 
   expect((await dien(request, toegelaten)).status()).toBe(201);
@@ -107,20 +111,51 @@ test('een admin laat toe, weigert, en de nieuwe gebruiker kan inloggen', async (
   await page.getByRole('link', { name: 'Beheer' }).click();
   await expect(page.getByRole('heading', { name: 'Toegangsaanvragen' })).toBeVisible();
 
+  const dialoog = page.getByRole('alertdialog');
+  const reden = 'Je hebt nog geen kennismakingsgesprek gehad.';
+
+  // Annuleren laat de aanvraag ongewijzigd.
   await page.getByRole('button', { name: `${geweigerd.naam} weigeren` }).click();
-  await expect(page.getByText(`${geweigerd.naam} is geweigerd.`)).toBeVisible();
   await expect(
-    page.getByRole('row', { name: new RegExp(geweigerd.naam) }).getByText('geweigerd', { exact: true }),
+    dialoog.getByRole('heading', { name: `Weet je zeker dat je de aanvraag van ${geweigerd.naam} wilt weigeren?` }),
+  ).toBeVisible();
+  await dialoog.getByRole('button', { name: 'Annuleren' }).click();
+  await expect(dialoog).toHaveCount(0);
+  await expect(
+    page.getByRole('row', { name: new RegExp(geweigerd.naam) }).getByText('in behandeling', { exact: true }),
   ).toBeVisible();
 
-  await page.getByRole('button', { name: `${toegelaten.naam} toelaten` }).click();
-  await expect(page.getByText(`${toegelaten.naam} is toegelaten en krijgt een e-mail.`)).toBeVisible();
+  // Weigeren zonder reden kan niet.
+  await page.getByRole('button', { name: `${geweigerd.naam} weigeren` }).click();
+  await dialoog.getByRole('button', { name: 'Ja, weigeren' }).click();
+  await expect(dialoog.getByText('Vul de reden van weigering in.')).toBeVisible();
+  await expect(dialoog.getByLabel('Reden van weigering')).toBeFocused();
+
+  await dialoog.getByLabel('Reden van weigering').fill(reden);
+  await dialoog.getByRole('button', { name: 'Ja, weigeren' }).click();
+  await expect(page.getByText(`${geweigerd.naam} is geweigerd en krijgt een e-mail met de reden.`)).toBeVisible();
+  const rijGeweigerd = page.getByRole('row', { name: new RegExp(geweigerd.naam) });
+  await expect(rijGeweigerd.getByText('geweigerd', { exact: true })).toBeVisible();
+  await expect(rijGeweigerd.getByText(`Reden: ${reden}`)).toBeVisible();
+
+  await page.getByRole('button', { name: `${toegelaten.naam} accepteren` }).click();
   await expect(
-    page.getByRole('row', { name: new RegExp(toegelaten.naam) }).getByText('toegelaten', { exact: true }),
+    dialoog.getByRole('heading', { name: `Weet je zeker dat je de aanvraag van ${toegelaten.naam} wilt accepteren?` }),
   ).toBeVisible();
+  await dialoog.getByRole('button', { name: 'Ja, accepteren' }).click();
+  await expect(
+    page.getByText(`${toegelaten.naam} is geaccepteerd en krijgt een e-mail om een account in te stellen.`),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('row', { name: new RegExp(toegelaten.naam) }).getByText('geaccepteerd', { exact: true }),
+  ).toBeVisible();
+
+  await expect.poll(() => leesMail(request, geweigerd.email)).toBeTruthy();
+  const weigering = await leesMail(request, geweigerd.email);
+  expect(weigering?.Subject).toBe('Je aanvraag voor MijnInkomen');
+  expect(weigering?.Text).toContain(reden);
 
   await expect.poll(() => leesMail(request, toegelaten.email)).toBeTruthy();
-  expect(await leesMail(request, geweigerd.email)).toBeUndefined();
 
   const mail = await leesMail(request, toegelaten.email);
   expect(mail?.Subject).toBe('Je toegang tot MijnInkomen');
