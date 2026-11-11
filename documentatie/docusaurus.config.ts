@@ -5,7 +5,6 @@ import type { Config } from '@docusaurus/types';
 import path from 'node:path';
 import footer from './footerConfig';
 import navbar from './navConfig';
-// import nldsPrismTheme from './nldsPrism';
 import { addTrailingSlashPlugin } from './rehype-trailing-slash';
 import remarkCustomHeaderId from 'remark-custom-header-id';
 
