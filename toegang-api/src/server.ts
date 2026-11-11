@@ -1,7 +1,8 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { AccountBestaatAl, type Keycloak } from './keycloak.ts';
+import type { Mail } from './mail.ts';
 import type { Opslag, Resultaat } from './opslag.ts';
-import { controleerAanvraag } from './validatie.ts';
+import { controleerAanvraag, controleerReden } from './validatie.ts';
 
 const MAX_GROOTTE = 16 * 1024;
 const LIJST = '/api/beheer/aanvragen';
@@ -42,7 +43,7 @@ const stuurFout = (antwoord: ServerResponse, fout: unknown) => {
   stuurJson(antwoord, 500, { fout: 'Er ging iets mis. Probeer het later opnieuw' });
 };
 
-export const maakServer = (opslag: Opslag, keycloak: Keycloak) => {
+export const maakServer = (opslag: Opslag, keycloak: Keycloak, mail: Mail) => {
   const verwerkAanvraag = async (verzoek: IncomingMessage, antwoord: ServerResponse) => {
     if (verzoek.method !== 'POST') {
       antwoord.setHeader('Allow', 'POST');
@@ -75,11 +76,25 @@ export const maakServer = (opslag: Opslag, keycloak: Keycloak) => {
     const [, id, actie] = pad.match(BEHANDELEN) ?? [];
     if (!id || verzoek.method !== 'POST') return stuurJson(antwoord, 404, { fout: 'Niet gevonden' });
 
+    let reden = '';
+    if (actie === 'weigeren') {
+      let invoer: unknown;
+      try {
+        invoer = await leesJson(verzoek);
+      } catch {
+        return stuurJson(antwoord, 400, { fout: 'Ongeldig verzoek' });
+      }
+      const controle = controleerReden(invoer);
+      if (controle.reden === undefined) return stuurJson(antwoord, 422, { fouten: { reden: controle.fout } });
+      reden = controle.reden;
+    }
+
     try {
+      // Lukt het account of de e-mail niet, dan blijft de aanvraag in behandeling.
       const resultaat =
         actie === 'toelaten'
           ? await opslag.behandelAanvraag(id, 'toegelaten', keycloak.maakCommunitylid)
-          : await opslag.behandelAanvraag(id, 'geweigerd');
+          : await opslag.behandelAanvraag(id, 'geweigerd', (aanvraag) => mail.stuurWeigering(aanvraag, reden), reden);
 
       if (resultaat === 'gelukt') return stuurJson(antwoord, 200, { status: 'gelukt' });
       const [status, fout] = MELDINGEN[resultaat];

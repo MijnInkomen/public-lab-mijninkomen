@@ -85,3 +85,16 @@ export const controleerAanvraag = (invoer: unknown, vandaag = vandaagInNederland
     ? { aanvraag: { naam, organisatie, functie, email, gesprekDatum } }
     : { fouten };
 };
+
+const MAX_LENGTE_REDEN = 1000;
+
+/** De reden van weigering is verplicht, want die staat in de e-mail aan de aanvrager. */
+export const controleerReden = (
+  invoer: unknown,
+): { reden: string; fout?: undefined } | { reden?: undefined; fout: string } => {
+  const velden = (typeof invoer === 'object' && invoer !== null ? invoer : {}) as Record<string, unknown>;
+  const reden = leesTekst(velden.reden);
+  if (!reden) return { fout: 'Vul de reden van weigering in.' };
+  if (reden.length > MAX_LENGTE_REDEN) return { fout: `De reden mag maximaal ${MAX_LENGTE_REDEN} tekens zijn.` };
+  return { reden };
+};

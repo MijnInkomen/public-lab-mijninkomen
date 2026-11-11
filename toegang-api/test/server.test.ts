@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { after, before, beforeEach, test } from 'node:test';
 import type { AddressInfo } from 'node:net';
 import { AccountBestaatAl, type Keycloak } from '../src/keycloak.ts';
+import type { Mail } from '../src/mail.ts';
 import type { OpgeslagenAanvraag, Opslag } from '../src/opslag.ts';
 import { maakServer } from '../src/server.ts';
 import type { Aanvraag } from '../src/validatie.ts';
@@ -15,11 +16,15 @@ const aanvraagInLijst: OpgeslagenAanvraag = {
   email: 'sam@gemeente.nl',
   gesprekDatum: '2026-01-12',
   status: 'in behandeling',
+  redenWeigering: null,
   aangemaaktOp: '2026-01-13T10:00:00Z',
 };
 
 const opgeslagen: Aanvraag[] = [];
 const accounts: string[] = [];
+const mails: { email: string; reden: string }[] = [];
+let opgeslagenReden: string | undefined;
+let mailStoring = false;
 let status: OpgeslagenAanvraag['status'] = 'in behandeling';
 let storing = false;
 let accountStoring: Error | undefined;
@@ -30,11 +35,12 @@ const opslag: Opslag = {
     opgeslagen.push(aanvraag);
   },
   haalAanvragenOp: async () => [{ ...aanvraagInLijst, status }],
-  behandelAanvraag: async (id, nieuweStatus, actie) => {
+  behandelAanvraag: async (id, nieuweStatus, actie, reden) => {
     if (id !== ID) return 'niet-gevonden';
     if (status !== 'in behandeling') return 'al-behandeld';
     await actie?.({ ...aanvraagInLijst, status });
     status = nieuweStatus;
+    opgeslagenReden = reden;
     return 'gelukt';
   },
 };
@@ -46,7 +52,14 @@ const keycloak: Keycloak = {
   },
 };
 
-const server = maakServer(opslag, keycloak);
+const mail: Mail = {
+  stuurWeigering: async ({ email }, reden) => {
+    if (mailStoring) throw new Error('Mailserver weg');
+    mails.push({ email, reden });
+  },
+};
+
+const server = maakServer(opslag, keycloak, mail);
 let adres: string;
 
 before(async () => {
@@ -59,6 +72,9 @@ after(() => server.close());
 beforeEach(() => {
   status = 'in behandeling';
   accounts.length = 0;
+  mails.length = 0;
+  opgeslagenReden = undefined;
+  mailStoring = false;
   accountStoring = undefined;
 });
 
@@ -110,11 +126,14 @@ test('bij een databasefout lekt het antwoord geen details', async () => {
   assert.deepEqual(await antwoord.json(), { fout: 'Er ging iets mis. Probeer het later opnieuw' });
 });
 
-const beheer = (pad: string, method = 'GET', groepen?: string) =>
+const beheer = (pad: string, method = 'GET', groepen?: string, body?: object) =>
   fetch(`${adres.replace('/api/toegang-aanvragen', '/api/beheer/aanvragen')}${pad}`, {
     method,
     headers: groepen === undefined ? {} : { 'X-Auth-Groups': groepen },
+    body: body && JSON.stringify(body),
   });
+
+const REDEN = { reden: 'Je hebt nog geen kennismakingsgesprek gehad.' };
 
 test('zonder de rol admin zijn de beheerroutes niet te gebruiken', async () => {
   assert.equal((await beheer('')).status, 403);
@@ -138,14 +157,34 @@ test('toelaten maakt een account en zet de status', async () => {
   assert.equal(status, 'toegelaten');
 });
 
-test('weigeren maakt geen account', async () => {
-  assert.equal((await beheer(`/${ID}/weigeren`, 'POST', 'admin')).status, 200);
+test('weigeren maakt geen account, slaat de reden op en mailt die naar de aanvrager', async () => {
+  assert.equal((await beheer(`/${ID}/weigeren`, 'POST', 'admin', REDEN)).status, 200);
   assert.deepEqual(accounts, []);
   assert.equal(status, 'geweigerd');
+  assert.equal(opgeslagenReden, REDEN.reden);
+  assert.deepEqual(mails, [{ email: 'sam@gemeente.nl', reden: REDEN.reden }]);
+});
+
+test('weigeren zonder reden kan niet en laat de aanvraag ongewijzigd', async () => {
+  for (const body of [undefined, {}, { reden: '   ' }, { reden: 'x'.repeat(1001) }]) {
+    const antwoord = await beheer(`/${ID}/weigeren`, 'POST', 'admin', body);
+    assert.equal(antwoord.status, body ? 422 : 400);
+  }
+  const antwoord = await beheer(`/${ID}/weigeren`, 'POST', 'admin', { reden: '' });
+  assert.equal((await antwoord.json()).fouten.reden, 'Vul de reden van weigering in.');
+  assert.equal(status, 'in behandeling');
+  assert.deepEqual(mails, []);
+});
+
+test('als de weigeringsmail niet lukt, blijft de aanvraag in behandeling', async () => {
+  mailStoring = true;
+
+  assert.equal((await beheer(`/${ID}/weigeren`, 'POST', 'admin', REDEN)).status, 500);
+  assert.equal(status, 'in behandeling');
 });
 
 test('een behandelde aanvraag kan niet nog een keer worden behandeld', async () => {
-  await beheer(`/${ID}/weigeren`, 'POST', 'admin');
+  await beheer(`/${ID}/weigeren`, 'POST', 'admin', REDEN);
 
   assert.equal((await beheer(`/${ID}/toelaten`, 'POST', 'admin')).status, 409);
   assert.deepEqual(accounts, []);

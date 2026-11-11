@@ -1,4 +1,5 @@
 import { maakKeycloak } from './keycloak.ts';
+import { maakMail } from './mail.ts';
 import { maakOpslag } from './opslag.ts';
 import { maakServer } from './server.ts';
 
@@ -15,6 +16,12 @@ const keycloak = maakKeycloak({
   siteUrl: leesInstelling('SITE_URL'),
 });
 
-maakServer(opslag, keycloak).listen(4000, () => {
+const mail = maakMail({
+  host: leesInstelling('SMTP_HOST'),
+  port: Number(leesInstelling('SMTP_PORT')),
+  van: leesInstelling('MAIL_VAN'),
+});
+
+maakServer(opslag, keycloak, mail).listen(4000, () => {
   console.log('Toegang-API luistert op poort 4000');
 });

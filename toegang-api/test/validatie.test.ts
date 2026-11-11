@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { controleerAanvraag, leesDatum } from '../src/validatie.ts';
+import { controleerAanvraag, controleerReden, leesDatum } from '../src/validatie.ts';
 
 const VANDAAG = '2026-10-31';
 
@@ -69,4 +69,11 @@ test('leesDatum weigert andere schrijfwijzen en datums die niet bestaan', () => 
 test('alleen een functie uit de lijst is goed', () => {
   assert.equal(controleerAanvraag({ ...goedeAanvraag, functie: 'Astronaut' }, VANDAAG).fouten?.functie, 'Kies je functie.');
   assert.equal(controleerAanvraag({ ...goedeAanvraag, functie: '' }, VANDAAG).fouten?.functie, 'Kies je functie.');
+});
+
+test('de reden van weigering is verplicht en niet te lang', () => {
+  assert.deepEqual(controleerReden({ reden: '  Geen gesprek gehad  ' }), { reden: 'Geen gesprek gehad' });
+  assert.equal(controleerReden({ reden: '' }).fout, 'Vul de reden van weigering in.');
+  assert.equal(controleerReden(null).fout, 'Vul de reden van weigering in.');
+  assert.match(controleerReden({ reden: 'x'.repeat(1001) }).fout ?? '', /maximaal 1000/);
 });

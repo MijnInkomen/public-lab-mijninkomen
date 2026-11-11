@@ -6,6 +6,7 @@ export type Status = 'in behandeling' | 'toegelaten' | 'geweigerd';
 export interface OpgeslagenAanvraag extends Aanvraag {
   id: string;
   status: Status;
+  redenWeigering: string | null;
   aangemaaktOp: string;
 }
 
@@ -19,6 +20,7 @@ export interface Opslag {
     id: string,
     status: Exclude<Status, 'in behandeling'>,
     actie?: (aanvraag: OpgeslagenAanvraag) => Promise<void>,
+    redenWeigering?: string,
   ) => Promise<Resultaat>;
 }
 
@@ -35,6 +37,8 @@ const MAAK_TABEL = `
     aangemaakt_op timestamptz NOT NULL DEFAULT now()
   );
 
+  ALTER TABLE toegangsaanvragen ADD COLUMN IF NOT EXISTS reden_weigering text;
+
   CREATE UNIQUE INDEX IF NOT EXISTS een_open_aanvraag_per_email
     ON toegangsaanvragen (email)
     WHERE status = 'in behandeling';
@@ -48,6 +52,7 @@ const SLA_OP = `
 
 const KOLOMMEN = `
   id, naam, organisatie, functie, email, status,
+  reden_weigering AS "redenWeigering",
   gesprek_datum::text AS "gesprekDatum",
   aangemaakt_op AS "aangemaaktOp"
 `;
@@ -67,7 +72,7 @@ export const maakOpslag = async (connectionString: string): Promise<Opslag> => {
       return rows;
     },
 
-    behandelAanvraag: async (id, status, actie) => {
+    behandelAanvraag: async (id, status, actie, redenWeigering) => {
       const client = await pool.connect();
       try {
         await client.query('BEGIN');
@@ -88,7 +93,11 @@ export const maakOpslag = async (connectionString: string): Promise<Opslag> => {
         }
 
         await actie?.(aanvraag);
-        await client.query('UPDATE toegangsaanvragen SET status = $2 WHERE id = $1', [id, status]);
+        await client.query('UPDATE toegangsaanvragen SET status = $2, reden_weigering = $3 WHERE id = $1', [
+          id,
+          status,
+          redenWeigering ?? null,
+        ]);
         await client.query('COMMIT');
         return 'gelukt';
       } catch (fout) {
