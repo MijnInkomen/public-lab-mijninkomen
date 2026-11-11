@@ -7,6 +7,7 @@ Het is bedoeld als voorbeeld voor de echte bouw: de structuur, componenten en hu
 - **Code**: gebouwd met hulp van AI (Claude), zie `AI-verantwoording.md`
 - **Onderbouwing van de ontwerpkeuzes**: zie `onderbouwing.md`
 - **Fasering (hoe het prototype stap voor stap is ontstaan)**: zie `fasering.md`
+- **UX-onderzoek (Nielsen, WCAG en NLDS)**: zie `onderzoek/ux-onderzoek-nielsen.md`
 - **Sitemap** (welke pagina's er zijn en waarom): zie `sitemap.md`
 - **Werking per onderdeel** (doel, bron van de informatie, gedrag): zie `componenten.md`
 
