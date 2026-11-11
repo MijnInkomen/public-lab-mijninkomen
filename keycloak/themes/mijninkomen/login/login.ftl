@@ -21,8 +21,16 @@
                     </div>
                     <div class="mi-veld">
                         <label class="mi-label" for="password">${msg("password")}</label>
-                        <input class="mi-invoer" id="password" name="password" type="password" autocomplete="current-password"
-                               <#if messagesPerField.existsError('username','password')>aria-invalid="true" aria-describedby="input-error"</#if> />
+                        <div class="${properties.kcInputGroup!}" dir="ltr">
+                            <input class="mi-invoer" id="password" name="password" type="password" autocomplete="current-password"
+                                   <#if messagesPerField.existsError('username','password')>aria-invalid="true" aria-describedby="input-error"</#if> />
+                            <button class="${properties.kcFormPasswordVisibilityButtonClass!}" type="button" aria-label="${msg('showPassword')}"
+                                    aria-controls="password" data-password-toggle
+                                    data-icon-show="${properties.kcFormPasswordVisibilityIconShow!}" data-icon-hide="${properties.kcFormPasswordVisibilityIconHide!}"
+                                    data-label-show="${msg('showPassword')}" data-label-hide="${msg('hidePassword')}">
+                                <i class="${properties.kcFormPasswordVisibilityIconShow!}" aria-hidden="true"></i>
+                            </button>
+                        </div>
                         <#if messagesPerField.existsError('username','password')>
                             <p class="mi-fout" id="input-error" aria-live="polite">${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}</p>
                         </#if>
@@ -43,5 +51,6 @@
                 <a class="mi-knop mi-knop--secundair" href="/toegang-aanvragen/">${msg("miToegangKnop")}</a>
             </aside>
         </div>
+        <script type="module" src="${url.resourcesPath}/js/passwordVisibility.js"></script>
     </#if>
 </@layout.registrationLayout>
