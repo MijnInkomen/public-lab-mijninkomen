@@ -94,6 +94,9 @@ services:
       KEYCLOAK_CLIENT_SECRET: ${TOEGANG_API_CLIENT_SECRET}
       KEYCLOAK_URL: http://keycloak:8080/auth
       SITE_URL: http://localhost:${SITE_PORT}
+      SMTP_HOST: mailpit
+      SMTP_PORT: "1025"
+      MAIL_VAN: MijnInkomen <noreply@mijninkomen.test>
     depends_on:
       keycloak:
         condition: service_started
