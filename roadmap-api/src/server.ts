@@ -1,5 +1,6 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import fsPromises from "node:fs/promises";
+import { updateData } from './github.ts';
 
 export function maakServer() {
   return createServer(async (verzoek, antwoord) => {
@@ -15,6 +16,7 @@ export function maakServer() {
           return stuurJson(antwoord, 200, json.publiek[type]);
         
         case "/update":
+          await updateData();
           console.log("Updated data");
           stuurStatus(antwoord, 200);
           return;

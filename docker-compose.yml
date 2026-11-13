@@ -117,6 +117,10 @@ services:
 
   roadmap-api:
     build: ./roadmap-api
+    environment:
+      GITHUB_AUTH_TOKEN: ${GITHUB_AUTH_TOKEN}
+      GITHUB_REPO_OWNER: ${GITHUB_REPO_OWNER}
+      GITHUB_REPO_NAME: ${GITHUB_REPO_NAME}
 
   mailpit:
     image: axllent/mailpit:v1.27
