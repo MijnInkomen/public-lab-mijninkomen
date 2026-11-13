@@ -6,7 +6,7 @@ export function maakServer() {
     const pad = new URL(verzoek.url ?? '/', 'http://localhost').pathname;
     try {
       if (pad.startsWith('/api/roadmap')) {
-        const jsonString = await fsPromises.readFile("example.json", { encoding: 'utf8' });
+        const jsonString = await fsPromises.readFile("./src/example.json", { encoding: 'utf8' });
         const json = JSON.parse(jsonString);
         return stuurJson(antwoord, 200, json);
       }
