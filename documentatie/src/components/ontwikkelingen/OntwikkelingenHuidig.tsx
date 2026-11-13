@@ -1,21 +1,8 @@
 import { Card } from '@components/card/card';
-import type { APIResponseType } from './apiTypes';
-import { useEffect, useState } from 'react';
+import { useFetch } from '../useFetch';
 
 export function OntwikkelingenHuidig() {
-    const [json, setJson] = useState<null | APIResponseType>(null);
-
-    useEffect(() => {
-        async function fetchOntwikkelingen() {
-            const data = await fetch("/api/roadmap");
-            const parsed = await data.json();
-            setJson(parsed);
-        }
-
-        fetchOntwikkelingen()
-            .catch(console.error);
-    });
-
+    const json = useFetch("/api/roadmap");
     if (!json) {
         return <b>Loading data...</b>;
     }
@@ -33,3 +20,26 @@ export function OntwikkelingenHuidig() {
     });
     return <>{cards}</>;
 }
+
+    // const [json, setJson] = useState<null | APIResponseType>(null);
+
+    // useEffect(() => {
+    //     async function fetchOntwikkelingen() {
+    //         const response = await fetch("/api/roadmap");
+    //         if (!response.ok) {
+    //             throw new Error(`Something went wrong: ${response.status}`);
+    //         }
+
+    //         const parsed = await response.json();
+    //         if (!ignore) {
+    //             setJson(parsed);
+    //         }
+    //     }
+        
+    //     let ignore = false;
+    //     fetchOntwikkelingen()
+    //         .catch(console.error);
+    //     return () => {
+    //         ignore = true;
+    //     }
+    // }, []);
