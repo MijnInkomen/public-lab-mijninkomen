@@ -1,27 +1,34 @@
 import { useEffect, useState } from "react";
 
-// TODO: EXPIREMENT TYPING, CHANGE LATER
-export type huidigeCard = {
+export type APIResponseType = {
+    "publiek": {
+        "huidig": cardInfo[],
+        "toekomstig": cardInfo[],
+    },
+    "roadmap": feature[],
+}
+
+export type cardInfo = {
     "heading": string,
     "description": string,
     "gebruikers": string[]
-};
-
-export type toekomstigeCard = huidigeCard | {
     "title": string,
     "status": string,
 }
 
-export type APIResponseType = {
-    "publiek": {
-        "huidig": huidigeCard[],
-        "toekomstig": toekomstigeCard[],
-    },
-    "roadmap": null[]
+export type epic = {
+    name: string,
+    features: feature[],
+}
+
+export type feature = {
+    name: string,
+    status: "In Behandeling" | "Trechter" | "PI Ready" | "Refinement",
 }
 
 export function useFetch(url: string) {
-    const [json, setJson] = useState<null | APIResponseType>(null);
+    const [data, setData] = useState<null | APIResponseType | false>(null);
+
     useEffect(() => {
         if (!url) {
             return () => {};
@@ -30,12 +37,13 @@ export function useFetch(url: string) {
         async function fetchOntwikkelingen() {
             const response = await fetch(url);
             if (!response.ok) {
+                setData(false);
                 throw new Error(`Something went wrong: ${response.status}`);
             }
 
             const parsed = await response.json();
             if (!ignore) {
-                setJson(parsed);
+                setData(parsed);
             }
         }
         
@@ -46,5 +54,5 @@ export function useFetch(url: string) {
             ignore = true;
         }
     }, [url]);
-    return json;
+    return data;
 }
