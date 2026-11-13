@@ -3,14 +3,31 @@ import fsPromises from "node:fs/promises";
 
 export function maakServer() {
   return createServer(async (verzoek, antwoord) => {
-    const pad = new URL(verzoek.url ?? '/', 'http://localhost').pathname;
+    const pad = new URL(verzoek.url ?? '/', 'http://localhost').pathname.slice(12);
     try {
-      if (pad.startsWith('/api/roadmap')) {
-        const jsonString = await fsPromises.readFile("./src/example.json", { encoding: 'utf8' });
-        const json = JSON.parse(jsonString);
-        return stuurJson(antwoord, 200, json);
+      switch (pad) {
+        case "/publiek/huidig":
+        case "/publiek/toekomstig":
+          const jsonString = await fsPromises.readFile("./src/example.json", { encoding: 'utf8' });
+          const json = JSON.parse(jsonString);
+
+          const type = pad.slice(9);
+          return stuurJson(antwoord, 200, json.publiek[type]);
+        
+        case "/update":
+          console.log("Updated data");
+          stuurStatus(antwoord, 200);
+          return;
+        
+        // TEMP ENDPOINT FOR CHECKING
+        case "/update-failed":
+          console.log("Failed update");
+          stuurStatus(antwoord, 500);
+          return;
+
+        default:
+          return stuurJson(antwoord, 404, { fout: 'Niet gevonde '});
       }
-      return stuurJson(antwoord, 404, { fout: 'Niet gevonde '});
     } catch (fout) {
       return stuurFout(antwoord, fout);
     }
@@ -27,3 +44,8 @@ function stuurJson (antwoord: ServerResponse, status: number, inhoud: object): v
   antwoord.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8' });
   antwoord.end(JSON.stringify(inhoud));
 };
+
+function stuurStatus(antwoord: ServerResponse, statusCode: number) {
+  antwoord.writeHead(statusCode)
+  antwoord.end()
+}

@@ -7,7 +7,7 @@ type PubliekeFeaturesProps = {
 };
 
 export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
-    const json = useFetch("/api/roadmap");
+    const json = useFetch(`/api/roadmap/${type}`);
     if (json === null) {
         return <b>Informatie laden...</b>;
     } else if (json === false) {
