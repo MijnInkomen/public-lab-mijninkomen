@@ -40,13 +40,14 @@ Diagram: [Webhook Diagram](#webhook-diagram)
 
 ## Implementatie
 
-De beste keuze voor ons gebruik zal een combinatie van beide zijn. Het systeem zal normaal gebruik maken van Webhooks, maar wanneer iemand met admin rechten handmatig een API call doet naar de server, wordt er gebruik gemaakt van een API call. Hierdoor kunnen de meeste updates automatisch gebeuren op een efficïente manier en blijft de data op de server recent. En dan als er een fout gebeurt in dit automatische systeem, kan de website nog steeds handmatig hernieuwd worden.
+De beste keuze voor ons gebruik zal een combinatie van beide zijn. Het systeem zal normaal gebruik maken van Webhooks, maar wanneer iemand met admin rechten handmatig een API call doet naar de server, wordt er gebruik gemaakt van een API call. Hierdoor kunnen de meeste updates automatisch gebeuren op een efficiënte manier en blijft de data op de server recent. En dan als er een fout gebeurt in dit automatische systeem, kan de website nog steeds handmatig hernieuwd worden.
 
 Diagrammen: [Implementatie Diagrammen](#implementatie-diagrammen)
 
 ## Diagrammen
 
 *auth*: In deze diagrammen wordt auth geskipt voor overzichtelijkheid. Auth zou altijd gebeuren voordat nginx een verzoek doet naar de node server.
+
 *endpoints*: De adressen benoemd in deze diagrammen, `api/github/publiek` bijvoorbeeld, zijn nog niet vast en voornamelijk bedoelt als voorbeeld.
 
 ### Webhook Diagram
@@ -145,7 +146,6 @@ sequenceDiagram
     actor browser as Browser
     participant proxy as NginX
     participant node as Node Server
-    participant github as GitHub API
     browser->>proxy: GET api/github/publiek
     activate browser
     activate proxy
