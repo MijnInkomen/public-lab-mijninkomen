@@ -16,6 +16,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@octokit/graphql": "^9.0.5"
+    "@octokit/core": "^7.0.8",
+    "@octokit/plugin-paginate-graphql": "^6.0.0"
   }
 }
