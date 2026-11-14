@@ -1,7 +1,6 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
-import fsPromises from "node:fs/promises";
 import { verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
-import { slaOp, type epicType, type featureType, type jsonOpslageType } from './opslag.ts';
+import { leesOpslag, slaOp, type epicType, type featureType, type jsonOpslageType } from './opslag.ts';
 
 export function maakServer() {
   return createServer(async (verzoek, antwoord) => {
@@ -10,9 +9,7 @@ export function maakServer() {
       switch (pad) {
         case "/publiek/huidig":
         case "/publiek/toekomstig":
-          const jsonString = await fsPromises.readFile("./src/example.json", { encoding: 'utf8' });
-          const json: jsonOpslageType = JSON.parse(jsonString);
-
+          const json = await leesOpslag();
           const type = pad.slice(9) as "huidig" | "toekomstig";
           return stuurJson(antwoord, 200, json.publiek[type]);
         
@@ -24,7 +21,8 @@ export function maakServer() {
           }
 
           const verwerkteEpics = verwerkGithubResponse(result);
-          slaOp(verwerkteEpics);
+          await slaOp(verwerkteEpics);
+          console.log("Succesfully updated");
           stuurStatus(antwoord, 200);
           return;
         
@@ -59,7 +57,8 @@ function stuurStatus(antwoord: ServerResponse, statusCode: number) {
   antwoord.end()
 }
 
-function verwerkGithubResponse(response: githubResponseType["repository"]): {epics: epicType[]} {
+type roadmapType = jsonOpslageType["community"];
+function verwerkGithubResponse(response: githubResponseType["repository"]): roadmapType {
   const epics: epicType[] = [];
   for (const epic of response.epics.nodes) {
     const epicInfo = vertaalGitHubIssue(epic);
@@ -71,7 +70,7 @@ function verwerkGithubResponse(response: githubResponseType["repository"]): {epi
     });
   }
   
-  return {epics};
+  return {roadmap: epics};
 }
 
 function vertaalGitHubIssue(issue: githubFeatureType): featureType {

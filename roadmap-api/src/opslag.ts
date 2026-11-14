@@ -1,3 +1,5 @@
+import fsPromises from "node:fs/promises";
+
 export type epicType = featureType & {
   features: featureType[],
 };
@@ -26,6 +28,14 @@ export type jsonOpslageType = {
   },
 };
 
-export function slaOp(data: any) {
+const OPSLAG_PAD = "./opslag/storage.json";
+export async function slaOp(data: jsonOpslageType["community"]) {
+  const jsonString = JSON.stringify(data);
+  await fsPromises.writeFile(OPSLAG_PAD, jsonString, { encoding: "utf-8" });
   console.log(data)
+}
+
+export async function leesOpslag() {
+  const jsonString = await fsPromises.readFile(OPSLAG_PAD, { encoding: 'utf8' });
+  return JSON.parse(jsonString) as jsonOpslageType;
 }
