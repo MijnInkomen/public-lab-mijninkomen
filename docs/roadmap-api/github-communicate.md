@@ -44,6 +44,10 @@ De beste keuze voor ons gebruik zal een combinatie van beide zijn. Het systeem z
 
 Diagrammen: [Implementatie Diagrammen](#implementatie-diagrammen)
 
+### API Call type: GraphQL
+
+Op eerste instantie verwachtte ik dat de simpelste methode via REST zou zijn. Dat was ook het eerste dat ik zag op GitHubs API documentatie. Maar na overwegen welke informatie we moeten ophalen per call, kwam ik tot de conclusie dat REST lastig ging zijn. Het probleem is dat er geen enkele endpoint is voor het ophalen van issues en hun subissues. Dus dan zouden we eerst een API call moeten maken voor alle issues in het project, en daarna per issue alle subissues ophalen, als het een epic is. Het is zeker mogelijk maar neemt veel meer calls dan zou horen te hoeven. GraphQL maakt het simpel doordat je met hun notatie alleen één call hoeft te doen. Daarna haalt de server de informatie op en geeft het je in de aangegeven format. Daarnaast geeft GraphQL ook precies de informatie waar je voor vroeg, dus kunnen de json packages heen en weer zo klein als mogelijk zijn.
+
 ## Diagrammen
 
 *auth*: In deze diagrammen wordt auth geskipt voor overzichtelijkheid. Auth zou altijd gebeuren voordat nginx een verzoek doet naar de node server.

@@ -16,7 +16,7 @@ export function maakServer() {
           return stuurJson(antwoord, 200, json.publiek[type]);
         
         case "/update":
-          await updateData();
+          const result = await updateData();
           console.log("Updated data");
           stuurStatus(antwoord, 200);
           return;
