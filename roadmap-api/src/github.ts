@@ -1,3 +1,5 @@
+import type { IncomingMessage } from "node:http";
+import { createHmac, timingSafeEqual } from "node:crypto";
 import { Octokit } from "@octokit/core";
 import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
 import SmeeClient from "smee-client";
@@ -96,15 +98,31 @@ export async function verzoekGitHubData() {
   return false;
 }
 
+export function valideerWebhookEvent(verzoek: IncomingMessage, body: Buffer) {
+  const sendSignature = verzoek.headersDistinct["x-hub-signature-256"]?.join("") || "";
+  if (!sendSignature.startsWith("sha256=")) {
+    return false;
+  }
+  const sendBuffer = Buffer.from(sendSignature.slice("sha256=".length), "hex");
+  if (sendBuffer.byteLength !== 32) {
+    return false;
+  }
+  
+  const hmac = createHmac("sha256", leesInstelling("GITHUB_WEBHOOK_SECRET"));
+  
+  const mySignature = hmac.update(body).digest("hex");
+  const myBuffer = Buffer.from(mySignature, "hex");
+
+  return timingSafeEqual(myBuffer, sendBuffer);
+}
+
 const smee = new SmeeClient({
-  source: "https://smee.io/RJKgrUWNldxgisYH",
+  source: "", // Smee client link
   target: "http://localhost:4000/api/roadmap/webhook",
   logger: console,
 });
 
 (async () => {
   const events = await smee.start();
-  await new Promise((resolve) => setTimeout(resolve, 1200000));
-  console.log(events);
-  await smee.stop();
+  console.log("Development webhook server geintialiseert");
 })();

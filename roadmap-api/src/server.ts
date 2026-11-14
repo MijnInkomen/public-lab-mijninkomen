@@ -1,6 +1,8 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
-import { verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
+import { valideerWebhookEvent, verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
 import { leesOpslag, slaOp, type epicType, type featureType, type jsonOpslageType } from './opslag.ts';
+
+const MAX_GROOTTE = 16 * 1024;
 
 export function maakServer() {
   return createServer(async (verzoek, antwoord) => {
@@ -24,6 +26,11 @@ export function maakServer() {
           return;
 
         case "/webhook":
+          const body = await leesBody(verzoek);
+          if (!valideerWebhookEvent(verzoek, body)) {
+            stuurStatus(antwoord, 400);
+            return;
+          }
           stuurStatus(antwoord, 200);
           return;
 
@@ -89,4 +96,19 @@ async function verwerkUpdateVerzoek(antwoord: ServerResponse) {
   console.log("Succesfully updated");
   stuurStatus(antwoord, 200);
   return;
+}
+
+async function leesBody(verzoek: IncomingMessage) {
+  const delen = [];
+  let grootte = 0;
+  for await (const deel of verzoek) {
+    grootte += deel.length;
+    if (grootte > MAX_GROOTTE){
+      throw new Error('Te groot');
+    }
+
+    delen.push(deel);
+  }
+
+  return Buffer.concat(delen);
 }
