@@ -1,6 +1,7 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import fsPromises from "node:fs/promises";
-import { updateData } from './github.ts';
+import { verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
+import { slaOp } from './opslag.ts';
 
 export function maakServer() {
   return createServer(async (verzoek, antwoord) => {
@@ -16,8 +17,14 @@ export function maakServer() {
           return stuurJson(antwoord, 200, json.publiek[type]);
         
         case "/update":
-          const result = await updateData();
-          console.log("Updated data");
+          const result = await verzoekGitHubData();
+          if (!result) {
+            stuurStatus(antwoord, 500);
+            return;
+          }
+
+          const verwerkteEpics = verwerkGithubResponse(result);
+          slaOp(verwerkteEpics);
           stuurStatus(antwoord, 200);
           return;
         
@@ -50,4 +57,37 @@ function stuurJson (antwoord: ServerResponse, status: number, inhoud: object): v
 function stuurStatus(antwoord: ServerResponse, statusCode: number) {
   antwoord.writeHead(statusCode)
   antwoord.end()
+}
+
+type epicType = featureType & {
+  features: featureType[]
+};
+type featureType = {
+  titel: string,
+  beschrijving: string,
+  labels: string[],
+  status: string,
+};
+function verwerkGithubResponse(response: githubResponseType["repository"]): {epics: epicType[]} {
+  const epics: epicType[] = [];
+  for (const epic of response.epics.nodes) {
+    const epicInfo = vertaalGitHubIssue(epic);
+    const features = epic.subIssues.nodes.map((feature) => vertaalGitHubIssue(feature));
+
+    epics.push({
+      ...epicInfo,
+      features
+    });
+  }
+  
+  return {epics};
+}
+
+function vertaalGitHubIssue(issue: githubFeatureType): featureType {
+  return {
+    titel: issue.title,
+    beschrijving: issue.body,
+    labels: issue.labels.nodes.map((label) => label.name),
+    status: issue.status?.name || "Geen status",
+  };
 }
