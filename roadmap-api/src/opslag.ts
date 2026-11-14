@@ -21,16 +21,18 @@ export type publiekeCardType = {
 export type jsonOpslageType = {
   publiek: {
     huidig: publiekeCardType[],
-    toekomstig: publiekeCardType,
+    toekomstig: publiekeCardType[],
   },
   community: {
     roadmap: epicType[],
   },
 };
 
+// TODO: VERANDER TIJDELIJKE OPSLAGMETHODE NAAR EEN DATABASE
 const OPSLAG_PAD = "./opslag/storage.json";
 export async function slaOp(data: jsonOpslageType["community"]) {
-  const jsonString = JSON.stringify(data);
+  const opsgelagenObject = {publiek: {huidig: [], toekomstig: []}, community: data};
+  const jsonString = JSON.stringify(opsgelagenObject);
   await fsPromises.writeFile(OPSLAG_PAD, jsonString, { encoding: "utf-8" });
   console.log(data)
 }

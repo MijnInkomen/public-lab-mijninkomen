@@ -40,13 +40,15 @@ Diagram: [Webhook Diagram](#webhook-diagram)
 
 ## Implementatie
 
-De beste keuze voor ons gebruik zal een combinatie van beide zijn. Het systeem zal normaal gebruik maken van Webhooks, maar wanneer iemand met admin rechten handmatig een API call doet naar de server, wordt er gebruik gemaakt van een API call. Hierdoor kunnen de meeste updates automatisch gebeuren op een efficiënte manier en blijft de data op de server recent. En dan als er een fout gebeurt in dit automatische systeem, kan de website nog steeds handmatig hernieuwd worden.
+De beste keuze voor ons gebruik, zal een combinatie van beide zijn. Het systeem zal normaal gebruik maken van Webhooks om veranderingen op de server te merken, om daarna via een API call de informatie op de server te hernieuwen. Daarnaast, wanneer iemand met admin rechten handmatig een API call doet, naar een specifieke endpoint op de server, wordt er gebruik gemaakt van een API call om de informatie op de server te hernieuwen. Hierdoor kunnen de meeste updates automatisch gebeuren op een efficiënte manier en blijft de data op de server recent. Dan als er een fout gebeurt in dit automatische proces, kan de website nog steeds handmatig hernieuwd worden.
+
+We kunnen de informatie die we nodig hebben niet direct uit de Webhook-event halen. Dit komt doordat we alle Features en Epics willen ophalen binnen het project, hiermee vermijden we dat GitHub en onze backend out of sync raken. Maar er is geen event die ons direct die informatie geeft, waardoor er gebruikt gemaakt moet worden van een individuele API call. Hierdoor dienen de Webhooks-event meer als timing voor wanneer we een API call moeten doen, dan als informatiebron op zichzelf.
 
 Diagrammen: [Implementatie Diagrammen](#implementatie-diagrammen)
 
 ### API Call type: GraphQL
 
-Op eerste instantie verwachtte ik dat de simpelste methode via REST zou zijn. Dat was ook het eerste dat ik zag op GitHubs API documentatie. Maar na overwegen welke informatie we moeten ophalen per call, kwam ik tot de conclusie dat REST lastig ging zijn. Het probleem is dat er geen enkele endpoint is voor het ophalen van issues en hun subissues. Dus dan zouden we eerst een API call moeten maken voor alle issues in het project, en daarna per issue alle subissues ophalen, als het een epic is. Het is zeker mogelijk maar neemt veel meer calls dan zou horen te hoeven. GraphQL maakt het simpel doordat je met hun notatie alleen één call hoeft te doen. Daarna haalt de server de informatie op en geeft het je in de aangegeven format. Daarnaast geeft GraphQL ook precies de informatie waar je voor vroeg, dus kunnen de json packages heen en weer zo klein als mogelijk zijn.
+Op eerste instantie verwachtte ik dat de simpelste methode via REST zou zijn. Dat was ook het eerste dat ik zag op GitHubs API documentatie. Maar na overwegen welke informatie we moeten ophalen per call, kwam ik tot de conclusie dat REST lastig ging zijn. Het probleem is dat er geen enkele endpoint is voor het ophalen van issues en hun subissues. Dus dan zouden we eerst een API call moeten maken voor alle issues in het project, en daarna per issue alle subissues ophalen, als het een epic is. Het is zeker mogelijk maar neemt veel meer calls dan zou horen te hoeven. [GraphQL](https://docs.github.com/en/graphql/overview/about-the-graphql-api#about-graphql) maakt het simpel doordat je met hun notatie alleen één call hoeft te doen. Daarna haalt de server de informatie op en geeft het je in de aangegeven format. Daarnaast geeft GraphQL ook precies de informatie waar je voor vroeg, dus kunnen de json packages heen en weer zo klein als mogelijk zijn.
 
 ## Diagrammen
 
@@ -122,16 +124,14 @@ sequenceDiagram
     participant proxy as NginX
     participant node as Node Server
     participant github as GitHub API
-    opt Feature/Epic update
+    alt Via Webhooks
         github-->>node: Feature en Epic JSON
-        activate node
-        node->>node: JSON opslaan
-        deactivate node
-    end
+    else Handmatig
     browser->>proxy: GET api/github/vernieuw
     activate proxy
     proxy->>node: GET api/github/vernieuw
     deactivate proxy
+    end
     activate node
     node->>github: Verzoek Epics en Features
     github-->>node: Feature en Epic JSON

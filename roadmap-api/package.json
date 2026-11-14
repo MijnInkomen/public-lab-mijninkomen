@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@octokit/core": "^7.0.8",
-    "@octokit/plugin-paginate-graphql": "^6.0.0"
+    "@octokit/plugin-paginate-graphql": "^6.0.0",
+    "smee-client": "^5.0.0"
   }
 }

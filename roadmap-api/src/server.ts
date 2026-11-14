@@ -14,22 +14,17 @@ export function maakServer() {
           return stuurJson(antwoord, 200, json.publiek[type]);
         
         case "/update":
-          const result = await verzoekGitHubData();
-          if (!result) {
-            stuurStatus(antwoord, 500);
-            return;
-          }
-
-          const verwerkteEpics = verwerkGithubResponse(result);
-          await slaOp(verwerkteEpics);
-          console.log("Succesfully updated");
-          stuurStatus(antwoord, 200);
+          await verwerkUpdateVerzoek(antwoord);
           return;
         
         // TEMP ENDPOINT FOR CHECKING
         case "/update-failed":
           console.log("Failed update");
           stuurStatus(antwoord, 500);
+          return;
+
+        case "/webhook":
+          stuurStatus(antwoord, 200);
           return;
 
         default:
@@ -80,4 +75,18 @@ function vertaalGitHubIssue(issue: githubFeatureType): featureType {
     labels: issue.labels.nodes.map((label) => label.name),
     status: issue.status?.name || "Geen status",
   };
+}
+
+async function verwerkUpdateVerzoek(antwoord: ServerResponse) {
+  const result = await verzoekGitHubData();
+  if (!result) {
+    stuurStatus(antwoord, 500);
+    return;
+  }
+
+  const verwerkteEpics = verwerkGithubResponse(result);
+  await slaOp(verwerkteEpics);
+  console.log("Succesfully updated");
+  stuurStatus(antwoord, 200);
+  return;
 }

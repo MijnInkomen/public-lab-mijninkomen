@@ -1,5 +1,6 @@
 import { Octokit } from "@octokit/core";
 import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
+import SmeeClient from "smee-client";
 
 function leesInstelling(naam: string) {
   const waarde = process.env[naam];
@@ -94,3 +95,16 @@ export async function verzoekGitHubData() {
   }
   return false;
 }
+
+const smee = new SmeeClient({
+  source: "https://smee.io/RJKgrUWNldxgisYH",
+  target: "http://localhost:4000/api/roadmap/webhook",
+  logger: console,
+});
+
+(async () => {
+  const events = await smee.start();
+  await new Promise((resolve) => setTimeout(resolve, 1200000));
+  console.log(events);
+  await smee.stop();
+})();
