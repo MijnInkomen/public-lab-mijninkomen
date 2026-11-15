@@ -6,9 +6,9 @@ export type APIResponseType = {
         "toekomstig": cardInfo[],
     },
     "community": {
-        "roadmap": feature[],
+        "roadmap": epic[],
     },
-}
+};
 
 export type cardInfo = {
     "heading": string,
@@ -16,17 +16,19 @@ export type cardInfo = {
     "gebruikers": string[]
     "title": string,
     "status": string,
-}
+};
 
-export type epic = {
-    name: string,
+export type epic = feature & {
     features: feature[],
-}
+};
 
 export type feature = {
-    name: string,
-    status: "In Behandeling" | "Trechter" | "PI Ready" | "Refinement",
-}
+    title: string,
+    description: string,
+    labels: string[],
+    status: string,
+    isOpen: boolean,
+};
 export function useFetch(url: string) {
     const [data, setData] = useState<null | false | string>(null);
 
