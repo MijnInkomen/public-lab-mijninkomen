@@ -4,6 +4,9 @@ import { Octokit } from "@octokit/core";
 import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
 import SmeeClient from "smee-client";
 
+const ALLOWED_EVENTS = new Set(["workflow_job", "issues"]);
+const ISSUE_EVENT_ACTIONS = ["opened", "closed", "status_changed"]
+
 function leesInstelling(naam: string) {
   const waarde = process.env[naam];
   if (!waarde) {
@@ -98,7 +101,7 @@ export async function verzoekGitHubData() {
   return false;
 }
 
-export function valideerWebhookEvent(verzoek: IncomingMessage, body: Buffer) {
+export function valideerWebhookSignature(verzoek: IncomingMessage, body: Buffer) {
   const sendSignature = verzoek.headersDistinct["x-hub-signature-256"]?.join("") || "";
   if (!sendSignature.startsWith("sha256=")) {
     return false;
@@ -116,13 +119,35 @@ export function valideerWebhookEvent(verzoek: IncomingMessage, body: Buffer) {
   return timingSafeEqual(myBuffer, sendBuffer);
 }
 
-const smee = new SmeeClient({
-  source: "", // Smee client link
-  target: "http://localhost:4000/api/roadmap/webhook",
-  logger: console,
-});
+export function valideerWebhookEvent(verzoek: IncomingMessage, body: Buffer) {
+  const eventType = verzoek.headersDistinct["x-github-event"]?.join("") || "";
+  if (!ALLOWED_EVENTS.has(eventType)) {
+    return false;
+  }
 
-(async () => {
-  const events = await smee.start();
-  console.log("Development webhook server geintialiseert");
-})();
+  const json = JSON.parse(body.toString());
+  const { action } = json;
+  if (eventType === "workflow_job") {
+    return action === "completed";
+  }
+
+  const { issue } = json;
+  if (!ISSUE_EVENT_ACTIONS.includes(action)) {
+    return false;
+  }
+
+  const issueType = issue?.type?.name;
+  return issueType === "Feature" || issueType === "Epic";
+}
+
+// ONLY FOR DEVELOPMENT
+// const smee = new SmeeClient({
+//   source: "", // Smee client link
+//   target: "http://localhost:4000/api/roadmap/webhook",
+//   logger: console,
+// });
+
+// (async () => {
+//   const events = await smee.start();
+//   console.log("Development webhook server geintialiseert");
+// })();

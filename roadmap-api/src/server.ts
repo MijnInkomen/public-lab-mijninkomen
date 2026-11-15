@@ -1,5 +1,5 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
-import { valideerWebhookEvent, verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
+import { valideerWebhookEvent,valideerWebhookSignature, verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
 import { leesOpslag, slaOp, type epicType, type featureType, type jsonOpslageType } from './opslag.ts';
 
 const MAX_GROOTTE = 16 * 1024;
@@ -27,11 +27,15 @@ export function maakServer() {
 
         case "/webhook":
           const body = await leesBody(verzoek);
-          if (!valideerWebhookEvent(verzoek, body)) {
+          if (!valideerWebhookSignature(verzoek, body)) {
             stuurStatus(antwoord, 400);
             return;
           }
-          stuurStatus(antwoord, 200);
+          if (!valideerWebhookEvent(verzoek, body)) {
+            stuurStatus(antwoord, 200);
+            return;
+          }
+          await verwerkUpdateVerzoek(antwoord);
           return;
 
         default:
