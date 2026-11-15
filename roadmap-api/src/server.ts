@@ -6,7 +6,8 @@ const MAX_GROOTTE = 16 * 1024;
 
 export function maakServer() {
   return createServer(async (verzoek, antwoord) => {
-    const pad = new URL(verzoek.url ?? '/', 'http://localhost').pathname.slice(12);
+    const url = new URL(verzoek.url ?? '/', 'http://localhost');
+    const pad = url.pathname.slice(12, url.pathname.at(-1) === "/" ? -1 : undefined);
     try {
       switch (pad) {
         case "/publiek/huidig":
@@ -63,20 +64,36 @@ function stuurStatus(antwoord: ServerResponse, statusCode: number) {
   antwoord.end()
 }
 
-type roadmapType = jsonOpslageType["community"];
-function verwerkGithubResponse(response: githubResponseType["repository"]): roadmapType {
-  const epics: epicType[] = [];
+function verwerkGithubResponse(response: githubResponseType["repository"]): jsonOpslageType {
+  const roadmap: epicType[] = [];
+  const publiek: jsonOpslageType["publiek"] = {
+    huidig: [],
+    toekomstig: [],
+  };
+
   for (const epic of response.epics.nodes) {
     const epicInfo = vertaalGitHubIssue(epic);
     const features = epic.subIssues.nodes.map((feature) => vertaalGitHubIssue(feature));
+    if (epicInfo.labels.includes("publiek")) {
+      publiek[epicInfo.isOpen ? "toekomstig" : "huidig"].push({
+        title: epicInfo.title,
+        heading: epicInfo.title,
+        description: epicInfo.description,
+        status: epicInfo.status,
+        gebruikers: ["Alle gemeenten"],
+      });
+    }
 
-    epics.push({
+    roadmap.push({
       ...epicInfo,
       features
     });
   }
-  
-  return {roadmap: epics};
+ 
+  return {
+    publiek,
+    community: {roadmap}
+  };
 }
 
 function vertaalGitHubIssue(issue: githubFeatureType): featureType {
@@ -85,6 +102,7 @@ function vertaalGitHubIssue(issue: githubFeatureType): featureType {
     description: issue.body,
     labels: issue.labels.nodes.map((label) => label.name),
     status: issue.status?.name || "Geen status",
+    isOpen: issue.state === "OPEN",
   };
 }
 

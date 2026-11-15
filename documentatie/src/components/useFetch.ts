@@ -5,7 +5,9 @@ export type APIResponseType = {
         "huidig": cardInfo[],
         "toekomstig": cardInfo[],
     },
-    "roadmap": feature[],
+    "community": {
+        "roadmap": feature[],
+    },
 }
 
 export type cardInfo = {
@@ -25,31 +27,29 @@ export type feature = {
     name: string,
     status: "In Behandeling" | "Trechter" | "PI Ready" | "Refinement",
 }
-
 export function useFetch(url: string) {
-    const [data, setData] = useState<null | APIResponseType | false>(null);
+    const [data, setData] = useState<null | false | string>(null);
 
     useEffect(() => {
         if (!url) {
             return () => {};
         }
 
-        async function fetchOntwikkelingen() {
+        async function fetchData() {
             const response = await fetch(url);
             if (!response.ok) {
                 setData(false);
                 throw new Error(`Something went wrong: ${response.status}`);
             }
 
-            const parsed = await response.json();
             if (!ignore) {
-                setData(parsed);
+                setData(await response.text());
             }
         }
         
         let ignore = false;
-        fetchOntwikkelingen()
-        .catch(console.error);
+        fetchData()
+            .catch(console.error);
         return () => {
             ignore = true;
         }

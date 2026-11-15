@@ -5,12 +5,12 @@ import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
 import SmeeClient from "smee-client";
 
 const ALLOWED_EVENTS = new Set(["workflow_job", "issues"]);
-const ISSUE_EVENT_ACTIONS = ["opened", "closed", "status_changed"]
+const ISSUE_EVENT_ACTIONS = ["opened", "closed", "status_changed"];
 
 function leesInstelling(naam: string) {
   const waarde = process.env[naam];
   if (!waarde) {
-    throw new Error(`${naam} ontbreekt`)!
+    throw new Error(`${naam} ontbreekt`);
   }
   return waarde;
 };
@@ -22,13 +22,14 @@ export type githubFeatureType = {
   title: string,
   body: string,
   labels: {
-    nodes: {name: string}[]
+    nodes: {name: string}[],
   },
-  status: null | {name: string}
+  status: null | {name: string},
+  state: "OPEN" | "CLOSED";
 }
 export type githubEpicType = githubFeatureType & {
   subIssues: {
-    nodes: githubFeatureType[]
+    nodes: githubFeatureType[],
   }
 }
 export type githubResponseType = {
@@ -54,7 +55,7 @@ export async function verzoekGitHubData() {
 
       // maximale aantal labels die per issue (feature of epic) worden opgehaald
       LABEL_MAX_COUNT: 10,
-    }
+    };
     const response: githubResponseType = await octokit.graphql.paginate(
       `
       query($cursor: String) {
@@ -87,6 +88,7 @@ export async function verzoekGitHubData() {
         status {
           name
         }
+        state
       }
       `
     ,);
@@ -141,13 +143,13 @@ export function valideerWebhookEvent(verzoek: IncomingMessage, body: Buffer) {
 }
 
 // ONLY FOR DEVELOPMENT
-// const smee = new SmeeClient({
-//   source: "", // Smee client link
-//   target: "http://localhost:4000/api/roadmap/webhook",
-//   logger: console,
-// });
+const smee = new SmeeClient({
+  source: "https://smee.io/BqUFFSGFHkfkewF", // Smee client link
+  target: "http://localhost:4000/api/roadmap/webhook",
+  logger: console,
+});
 
-// (async () => {
-//   const events = await smee.start();
-//   console.log("Development webhook server geintialiseert");
-// })();
+(async () => {
+  const events = await smee.start();
+  console.log("Development webhook server geintialiseert");
+})();

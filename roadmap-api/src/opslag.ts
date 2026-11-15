@@ -8,6 +8,7 @@ export type featureType = {
   description: string,
   labels: string[],
   status: string,
+  isOpen: boolean,
 };
 
 export type publiekeCardType = {
@@ -30,9 +31,8 @@ export type jsonOpslageType = {
 
 // TODO: VERANDER TIJDELIJKE OPSLAGMETHODE NAAR EEN DATABASE
 const OPSLAG_PAD = "./opslag/storage.json";
-export async function slaOp(data: jsonOpslageType["community"]) {
-  const opsgelagenObject = {publiek: {huidig: [], toekomstig: []}, community: data};
-  const jsonString = JSON.stringify(opsgelagenObject);
+export async function slaOp(data: jsonOpslageType) {
+  const jsonString = JSON.stringify(data);
   await fsPromises.writeFile(OPSLAG_PAD, jsonString, { encoding: "utf-8" });
   console.log(data)
 }

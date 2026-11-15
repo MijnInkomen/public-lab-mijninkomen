@@ -1,20 +1,26 @@
 import { Card } from '@components/card/card';
 import { Badge } from '../home/Badge';
-import { useFetch } from '../useFetch';
+import { type APIResponseType, useFetch } from '../useFetch';
 
 type PubliekeFeaturesProps = {
     type: "huidig" | "toekomstig"
 };
 
 export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
-    const json = useFetch(`/api/roadmap/${type}`);
-    if (json === null) {
+    const response = useFetch(`/api/roadmap/publiek/${type}`);
+    if (response === null) {
         return <b>Informatie laden...</b>;
-    } else if (json === false) {
-        return <>Iets ging er mis met het ophalen van de informatie, probeer opnieuw later</>
+    } else if (response === false) {
+        return <>Iets ging er mis met het ophalen van de informatie, probeer opnieuw later</>;
     }
 
-    const cards = json.publiek[type].map((cardInfo, index) => {
+    let json;
+    try {
+        json = JSON.parse(response) as APIResponseType["publiek"][typeof type];
+    } catch (e) {
+        console.error(e);
+    }
+    const cards = json?.map((cardInfo, index) => {
         return (<Card
             description={cardInfo.description}
             heading={cardInfo.heading}
@@ -24,7 +30,7 @@ export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
             title={cardInfo.title}
             linkLabel="Lees meer"
             key={index}
-        ></Card>)
+        ></Card>);
     });
     return <>{cards}</>;
 }
