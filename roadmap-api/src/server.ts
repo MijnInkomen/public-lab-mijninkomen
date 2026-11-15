@@ -2,7 +2,7 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import { valideerWebhookEvent,valideerWebhookSignature, verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
 import { leesOpslag, slaOp, type epicType, type featureType, type jsonOpslageType } from './opslag.ts';
 
-const MAX_GROOTTE = 16 * 1024;
+const MAX_GROOTTE = 25 * 1024 * 1024;
 
 export function maakServer() {
   return createServer(async (verzoek, antwoord) => {
@@ -18,12 +18,6 @@ export function maakServer() {
         
         case "/update":
           await verwerkUpdateVerzoek(antwoord);
-          return;
-        
-        // TEMP ENDPOINT FOR CHECKING
-        case "/update-failed":
-          console.log("Failed update");
-          stuurStatus(antwoord, 500);
           return;
 
         case "/webhook":
@@ -49,7 +43,6 @@ export function maakServer() {
 }
 
 function stuurFout (antwoord: ServerResponse, fout: unknown): void {
-  // Log geen aanvraag: daar staan persoonsgegevens in.
   console.error('Verzoek mislukt:', fout instanceof Error ? fout.message : 'onbekend');
   stuurJson(antwoord, 500, { fout: 'Er ging iets mis. Probeer het later opnieuw' });
 };
@@ -115,7 +108,6 @@ async function verwerkUpdateVerzoek(antwoord: ServerResponse) {
 
   const verwerkteEpics = verwerkGithubResponse(result);
   await slaOp(verwerkteEpics);
-  console.log("Succesfully updated");
   stuurStatus(antwoord, 200);
   return;
 }

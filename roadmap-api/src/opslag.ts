@@ -34,7 +34,6 @@ const OPSLAG_PAD = "./opslag/storage.json";
 export async function slaOp(data: jsonOpslageType) {
   const jsonString = JSON.stringify(data);
   await fsPromises.writeFile(OPSLAG_PAD, jsonString, { encoding: "utf-8" });
-  console.log(data)
 }
 
 export async function leesOpslag() {

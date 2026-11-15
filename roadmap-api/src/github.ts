@@ -1,22 +1,25 @@
 import type { IncomingMessage } from "node:http";
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { Octokit } from "@octokit/core";
-import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
+import { paginateGraphQL, type paginateGraphQLInterface } from "@octokit/plugin-paginate-graphql";
+import { leesInstelling } from "./utils.ts";
 import SmeeClient from "smee-client";
 
 const ALLOWED_EVENTS = new Set(["workflow_job", "issues"]);
 const ISSUE_EVENT_ACTIONS = ["opened", "closed", "status_changed"];
 
-function leesInstelling(naam: string) {
-  const waarde = process.env[naam];
-  if (!waarde) {
-    throw new Error(`${naam} ontbreekt`);
-  }
-  return waarde;
-};
+// maximale aantal features die per epic worden opgehaald
+const FEATURE_MAX_COUNT = 20
 
-const myOctokit = Octokit.plugin(paginateGraphQL);
-const octokit = new myOctokit({ auth: leesInstelling("GITHUB_AUTH_TOKEN")})
+// maximale aantal labels die per issue (feature of epic) worden opgehaald
+const LABEL_MAX_COUNT = 10
+
+type config = {
+  octokit?: Octokit & paginateGraphQLInterface,
+  owner?: string,
+  repo?: string,
+};
+const config: config = {};
 
 export type githubFeatureType = {
   title: string,
@@ -45,25 +48,23 @@ export type githubResponseType = {
 };
 
 export async function verzoekGitHubData() {
-  try {
-    const config = {
-      owner: leesInstelling("GITHUB_REPO_OWNER"),
-      repo: leesInstelling("GITHUB_REPO_NAME"),
-      
-      // maximale aantal features die per epic worden opgehaald
-      FEATURE_MAX_COUNT: 20,
+  if (!config.octokit) {
+    const myOctokit = Octokit.plugin(paginateGraphQL);
+    const octokit = new myOctokit({ auth: leesInstelling("GITHUB_AUTH_TOKEN")});
+    config.octokit = octokit;
 
-      // maximale aantal labels die per issue (feature of epic) worden opgehaald
-      LABEL_MAX_COUNT: 10,
-    };
-    const response: githubResponseType = await octokit.graphql.paginate(
+    config.repo = leesInstelling("GITHUB_REPO_NAME");
+    config.owner = leesInstelling("GITHUB_REPO_OWNER");
+  }
+  try {
+    const response: githubResponseType = await config.octokit.graphql.paginate(
       `
       query($cursor: String) {
         repository(owner:"${config.owner}", name:"${config.repo}") {
           epics: issues(first: 20, filterBy: {type: "Epic"}, after: $cursor) {
             nodes {
               ...issueInfo
-              subIssues(first: ${config.FEATURE_MAX_COUNT}) {
+              subIssues(first: ${FEATURE_MAX_COUNT}) {
                 nodes {
                   ...issueInfo
                 }
@@ -80,7 +81,7 @@ export async function verzoekGitHubData() {
       fragment issueInfo on Issue {
         title
         body
-        labels(first: ${config.LABEL_MAX_COUNT}) {
+        labels(first: ${LABEL_MAX_COUNT}) {
           nodes {
             name
           }
@@ -142,14 +143,14 @@ export function valideerWebhookEvent(verzoek: IncomingMessage, body: Buffer) {
   return issueType === "Feature" || issueType === "Epic";
 }
 
-// ONLY FOR DEVELOPMENT
-const smee = new SmeeClient({
-  source: "https://smee.io/BqUFFSGFHkfkewF", // Smee client link
-  target: "http://localhost:4000/api/roadmap/webhook",
-  logger: console,
-});
+// // ONLY FOR DEVELOPMENT
+// const smee = new SmeeClient({
+//   source: "https://smee.io/BqUFFSGFHkfkewF", // Smee client link
+//   target: "http://localhost:4000/api/roadmap/webhook",
+//   logger: console,
+// });
 
-(async () => {
-  const events = await smee.start();
-  console.log("Development webhook server geintialiseert");
-})();
+// (async () => {
+//   const events = await smee.start();
+//   console.log("Development webhook server geintialiseert");
+// })();
