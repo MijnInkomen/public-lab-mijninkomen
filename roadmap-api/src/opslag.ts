@@ -32,11 +32,20 @@ export type jsonOpslageType = {
 // TODO: VERANDER TIJDELIJKE OPSLAGMETHODE NAAR EEN DATABASE
 const OPSLAG_PAD = "./opslag/storage.json";
 export async function slaOp(data: jsonOpslageType) {
-  const jsonString = JSON.stringify(data);
-  await fsPromises.writeFile(OPSLAG_PAD, jsonString, { encoding: "utf-8" });
+  try {
+    const jsonString = JSON.stringify(data);
+    await fsPromises.writeFile(OPSLAG_PAD, jsonString, { encoding: "utf-8" });
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 export async function leesOpslag() {
-  const jsonString = await fsPromises.readFile(OPSLAG_PAD, { encoding: 'utf8' });
-  return JSON.parse(jsonString) as jsonOpslageType;
+  try {
+    const jsonString = await fsPromises.readFile(OPSLAG_PAD, { encoding: 'utf8' });
+    return JSON.parse(jsonString) as jsonOpslageType;
+  } catch (e) {
+    return null;
+  }
 }

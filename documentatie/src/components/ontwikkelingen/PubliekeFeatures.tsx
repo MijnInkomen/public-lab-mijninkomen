@@ -11,7 +11,9 @@ export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
     if (response === null) {
         return <b>Informatie laden...</b>;
     } else if (response === false) {
-        return <>Iets ging er mis met het ophalen van de informatie, probeer opnieuw later</>;
+        return <>Iets ging er mis met het ophalen van de informatie, probeer later opnieuw</>;
+    } else if (response.length === 0) {
+        return <>In de toekomst komen hier meer ontwikkelingen te staan, kom later terug</>
     }
 
     let json;

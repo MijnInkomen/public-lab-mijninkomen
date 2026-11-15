@@ -13,6 +13,9 @@ export function maakServer() {
         case "/publiek/huidig":
         case "/publiek/toekomstig":
           const json = await leesOpslag();
+          if (!json) {
+            return stuurJson(antwoord, 200, []);
+          }
           const type = pad.slice(9) as "huidig" | "toekomstig";
           return stuurJson(antwoord, 200, json.publiek[type]);
         
