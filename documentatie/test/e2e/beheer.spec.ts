@@ -68,6 +68,9 @@ test('zonder login is het beheer niet te gebruiken', async ({ page, request }) =
 });
 
 test('een communitylid kan de pagina en de API niet gebruiken', async ({ page }) => {
+  test.setTimeout(60000);
+  // Andere testbestanden loggen ook in met deze code: wacht op een nieuwe.
+  await wachtOpNieuweCode(page);
   await page.goto(`${websiteURL}/inloggen/`);
   await logIn(
     page,

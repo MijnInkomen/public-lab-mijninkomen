@@ -20,6 +20,9 @@ const maakCode = () => {
   return String((hash.readUInt32BE(start) & 0x7fffffff) % 1000000).padStart(6, '0');
 };
 
+// Een code werkt maar één keer per account, en andere testbestanden gebruiken dezelfde. Wacht daarom op een nieuwe.
+const wachtOpNieuweCode = (page: Page) => page.waitForTimeout(30000 - (Date.now() % 30000) + 500);
+
 const openInloggen = async (page: Page) => {
   await page.goto(websiteURL);
   await page.getByRole('link', { name: 'Inloggen' }).click();
@@ -58,9 +61,11 @@ test('een verkeerd wachtwoord geeft een duidelijke foutmelding', async ({ page }
 });
 
 test('na inloggen blijf je op de website en zie je de Roadmap tot je uitlogt', async ({ page }) => {
+  test.setTimeout(60000);
   await openInloggen(page);
   await vulWachtwoordIn(page, leesInstelling('TEST_LID_PASSWORD'));
 
+  await wachtOpNieuweCode(page);
   await page.getByLabel('Code uit de app').fill(maakCode());
   await page.getByRole('button', { name: 'Inloggen' }).click();
 
