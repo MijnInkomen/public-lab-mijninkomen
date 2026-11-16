@@ -126,6 +126,28 @@
   text-decoration-line: underline;
 }
 
+/* Het logo krimpt nooit: bij weinig ruimte worden de menulinks smaller, zodat ze niet over het logo vallen. */
+.ma-theme .navbar__brand {
+  flex-shrink: 0;
+}
+
+@media screen and (width <= 82rem) {
+  .ma-theme .navbar__link {
+    padding-inline: 0.375rem;
+  }
+
+  .ma-theme .navbar__items--right .mijninkomen-inloggen {
+    padding-inline: 1rem;
+  }
+}
+
+@media screen and (width <= 72rem) {
+  .ma-theme .navbar__link {
+    font-size: 0.9375rem;
+    padding-inline: 0.25rem;
+  }
+}
+
 .ma-theme .navbar__toggle {
   flex-shrink: 0;
   inline-size: auto;
