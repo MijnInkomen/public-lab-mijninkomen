@@ -17,7 +17,10 @@ export function maakServer(opslag: Opslag) {
           return stuurJson(antwoord, 200, epics);
         
         case "/update":
-          await verwerkUpdateVerzoek(antwoord, opslag);
+          await (async () => {
+            const result = await verwerkUpdateVerzoek(opslag);
+            stuurStatus(antwoord, result ? 200 : 500);
+          })();
           return;
 
         case "/webhook":
@@ -30,7 +33,8 @@ export function maakServer(opslag: Opslag) {
             stuurStatus(antwoord, 200);
             return;
           }
-          await verwerkUpdateVerzoek(antwoord, opslag);
+          const result = await verwerkUpdateVerzoek(opslag);
+          stuurStatus(antwoord, result ? 200 : 500);
           return;
 
         default:
@@ -86,17 +90,15 @@ function vertaalGitHubIssue(issue: githubFeatureType): featureType {
   };
 }
 
-async function verwerkUpdateVerzoek(antwoord: ServerResponse, opslag: Opslag) {
+export async function verwerkUpdateVerzoek(opslag: Opslag) {
   const result = await verzoekGitHubData();
   if (!result) {
-    stuurStatus(antwoord, 500);
-    return;
+    return false;
   }
 
   const verwerkteEpics = verwerkGithubResponse(result);
   await opslag.slaIssuesOp(verwerkteEpics);
-  stuurStatus(antwoord, 200);
-  return;
+  return true;
 }
 
 async function leesBody(verzoek: IncomingMessage) {

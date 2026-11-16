@@ -139,14 +139,14 @@ export function valideerWebhookEvent(verzoek: IncomingMessage, body: Buffer) {
   return issueType === "Feature" || issueType === "Epic";
 }
 
-// ONLY FOR DEVELOPMENT
-const smee = new SmeeClient({
-  source: "https://smee.io/mA4G3lH2l0QjvPQ", // Smee client link
-  target: "http://localhost:4000/api/roadmap/webhook",
-  logger: console,
-});
+// // ONLY FOR DEVELOPMENT FOR DYNAMIC ISSUES ON WEBSITE
+// const smee = new SmeeClient({
+//   source: "", // Smee client link
+//   target: "http://localhost:4000/api/roadmap/webhook",
+//   logger: console,
+// });
 
-(async () => {
-  const events = await smee.start();
-  console.log("Development webhook server geintialiseert");
-})();
+// (async () => {
+//   const events = await smee.start();
+//   console.log("Development webhook server geintialiseert");
+// })();
