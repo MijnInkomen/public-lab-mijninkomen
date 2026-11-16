@@ -29,6 +29,7 @@
   "dependencies": {
     "@docusaurus/core": "3.10.2",
     "@docusaurus/preset-classic": "3.10.2",
+    "@docusaurus/theme-classic": "3.10.2",
     "@docusaurus/theme-common": "3.10.2",
     "@docusaurus/theme-search-algolia": "3.10.2",
     "@fontsource/open-sans": "^5.3.0",
