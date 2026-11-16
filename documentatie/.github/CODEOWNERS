@@ -1,7 +1,0 @@
-# See: https://nldesignsystem.nl/codeowners
-
-* @nl-design-system/kernteam-committer
-/docs/wcag/ @nl-design-system/kernteam-a11y @nl-design-system/kernteam-admin
-
-# Protect this file itself (order matters, keep this line last):
-.github/CODEOWNERS @nl-design-system/kernteam-admin

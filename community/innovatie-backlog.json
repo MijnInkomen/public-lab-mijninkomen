@@ -1,0 +1,97 @@
+{
+  "voorbeelddata": true,
+  "toelichting": "Ingediende initiatieven komen eerst op deze innovatie-backlog. De stuurgroep beoordeelt ze op vaste criteria. Pas na een positief besluit gaat een initiatief naar de kern-backlog (de roadmap).",
+  "criteria": [
+    {
+      "id": "waarde",
+      "naam": "Waarde voor inwoners",
+      "uitleg": "Helpt het initiatief inwoners om hun inkomen beter te begrijpen of te regelen?"
+    },
+    {
+      "id": "herbruikbaar",
+      "naam": "Herbruikbaar voor meerdere gemeenten",
+      "uitleg": "Kunnen minstens twee deelnemende gemeenten het gebruiken?"
+    },
+    {
+      "id": "haalbaar",
+      "naam": "Haalbaarheid",
+      "uitleg": "Is het met de beschikbare mensen, tijd en techniek uit te voeren?"
+    },
+    {
+      "id": "past",
+      "naam": "Past bij de visie van MijnInkomen",
+      "uitleg": "Sluit het aan bij de doelen en de roadmap van de samenwerking?"
+    }
+  ],
+  "statussen": [
+    { "id": "ingediend", "naam": "Ingediend", "uitleg": "Het initiatief is binnen en wacht op beoordeling." },
+    { "id": "in-beoordeling", "naam": "In beoordeling", "uitleg": "De stuurgroep beoordeelt het initiatief op de criteria." },
+    { "id": "doorgestroomd", "naam": "Doorgestroomd naar kern-backlog", "uitleg": "Goedgekeurd. Het initiatief staat nu op de roadmap." },
+    { "id": "geparkeerd", "naam": "Geparkeerd", "uitleg": "Goed idee, maar nu niet. De stuurgroep kijkt er later opnieuw naar." },
+    { "id": "afgewezen", "naam": "Afgewezen", "uitleg": "Het initiatief gaat niet door. De motivatie staat bij het besluit." }
+  ],
+  "initiatieven": [
+    {
+      "id": "INI-001",
+      "titel": "Inkomensoverzicht in begrijpelijke taal",
+      "omschrijving": "Een overzicht van alle inkomsten en toeslagen van een inwoner, geschreven op B1-niveau.",
+      "gemeente": "Utrecht",
+      "ingediend": "2026-10-06",
+      "status": "doorgestroomd",
+      "beoordeling": { "waarde": "voldoet", "herbruikbaar": "voldoet", "haalbaar": "deels", "past": "voldoet" },
+      "besluit": {
+        "datum": "2026-10-20",
+        "tekst": "Doorgestroomd naar de kern-backlog.",
+        "motivatie": "Hoge waarde voor inwoners en bruikbaar voor alle vier de gemeenten. Haalbaarheid wordt in de eerste sprint verder uitgezocht."
+      }
+    },
+    {
+      "id": "INI-002",
+      "titel": "Melding bij wijziging van bijstandsbedrag",
+      "omschrijving": "Inwoners krijgen een bericht als hun bijstandsbedrag verandert, met uitleg waarom.",
+      "gemeente": "Den Haag",
+      "ingediend": "2026-10-13",
+      "status": "in-beoordeling",
+      "beoordeling": { "waarde": "voldoet", "herbruikbaar": "deels", "haalbaar": "nog-niet-beoordeeld", "past": "voldoet" },
+      "besluit": null
+    },
+    {
+      "id": "INI-003",
+      "titel": "Koppeling met eigen bankapp",
+      "omschrijving": "Inkomensgegevens direct tonen in de bankapp van de inwoner.",
+      "gemeente": "Amsterdam",
+      "ingediend": "2026-10-15",
+      "status": "geparkeerd",
+      "beoordeling": { "waarde": "voldoet", "herbruikbaar": "voldoet", "haalbaar": "voldoet-niet", "past": "deels" },
+      "besluit": {
+        "datum": "2026-11-03",
+        "tekst": "Geparkeerd tot 2027.",
+        "motivatie": "Waardevol, maar juridisch en technisch nu niet haalbaar. De stuurgroep kijkt er in het eerste kwartaal van 2027 opnieuw naar."
+      }
+    },
+    {
+      "id": "INI-004",
+      "titel": "Eigen huisstijl per gemeente in MijnInkomen",
+      "omschrijving": "Elke gemeente kan kleuren en logo van MijnInkomen aanpassen.",
+      "gemeente": "'s-Hertogenbosch",
+      "ingediend": "2026-10-27",
+      "status": "afgewezen",
+      "beoordeling": { "waarde": "voldoet-niet", "herbruikbaar": "deels", "haalbaar": "voldoet", "past": "voldoet-niet" },
+      "besluit": {
+        "datum": "2026-11-10",
+        "tekst": "Afgewezen.",
+        "motivatie": "Levert inwoners weinig op en past niet bij het doel van één herkenbare, gezamenlijke voorziening."
+      }
+    },
+    {
+      "id": "INI-005",
+      "titel": "Rekenhulp: heb ik recht op bijzondere bijstand?",
+      "omschrijving": "Een korte vragenlijst die inwoners laat zien of ze misschien recht hebben op bijzondere bijstand.",
+      "gemeente": "Utrecht",
+      "ingediend": "2026-11-12",
+      "status": "ingediend",
+      "beoordeling": { "waarde": "nog-niet-beoordeeld", "herbruikbaar": "nog-niet-beoordeeld", "haalbaar": "nog-niet-beoordeeld", "past": "nog-niet-beoordeeld" },
+      "besluit": null
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
 import type { Props } from '@theme/NavbarItem/DefaultNavbarItem';
 import { useIngelogd, useIsAdmin, useIsHoofdbeheerder } from '@site/src/components/useIngelogd';
 
+// Besloten pagina's (roadmap, innovatie-backlog) staan alleen in het menu als je bent ingelogd.
 const RoadmapNavbarItem = (props: Props) => (useIngelogd() ? <DefaultNavbarItem {...props} /> : null);
 
 const BeheerNavbarItem = (props: Props) => (useIsAdmin() ? <DefaultNavbarItem {...props} /> : null);
@@ -20,6 +21,7 @@ const InloggenNavbarItem = (props: Props) =>
 export default {
   ...ComponentTypes,
   'custom-roadmap': RoadmapNavbarItem,
+  'custom-innovatie-backlog': RoadmapNavbarItem,
   'custom-beheer': BeheerNavbarItem,
   'custom-leden': LedenNavbarItem,
   'custom-inloggen': InloggenNavbarItem,
