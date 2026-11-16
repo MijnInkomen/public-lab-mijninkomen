@@ -37,6 +37,12 @@ const navbar: Navbar = {
       position: 'left',
     },
     {
+      type: 'custom-innovatie-backlog',
+      to: '/innovatie-backlog/',
+      label: 'Innovatie-backlog',
+      position: 'left',
+    },
+    {
       to: '/contact/',
       label: 'Contact',
       position: 'left',
