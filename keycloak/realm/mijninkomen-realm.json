@@ -32,6 +32,10 @@
       {
         "name": "communitylid",
         "description": "Heeft toegang tot de communityomgeving"
+      },
+      {
+        "name": "hoofdbeheerder",
+        "description": "Main admin: beheert de rollen van communityleden. Deze rol kan niet via de site worden gewijzigd"
       }
     ]
   },
@@ -113,7 +117,8 @@
       "firstName": "Test",
       "lastName": "Admin",
       "realmRoles": [
-        "admin"
+        "admin",
+        "hoofdbeheerder"
       ],
       "requiredActions": [
         "CONFIGURE_TOTP"
@@ -170,7 +175,8 @@
       "firstName": "E2e",
       "lastName": "Admin",
       "realmRoles": [
-        "admin"
+        "admin",
+        "hoofdbeheerder"
       ],
       "credentials": [
         {

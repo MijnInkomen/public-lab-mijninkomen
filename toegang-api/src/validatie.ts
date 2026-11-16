@@ -98,3 +98,28 @@ export const controleerReden = (
   if (reden.length > MAX_LENGTE_REDEN) return { fout: `De reden mag maximaal ${MAX_LENGTE_REDEN} tekens zijn.` };
   return { reden };
 };
+
+const ROLLEN = ['lid', 'beheerder'] as const;
+
+export interface Wijziging {
+  rol?: (typeof ROLLEN)[number];
+  soort?: string;
+}
+
+/** Een wijziging van een lid: een nieuwe rol, een nieuw soort, of allebei. */
+export const controleerWijziging = (invoer: unknown): { wijziging: Wijziging; fout?: undefined } | { wijziging?: undefined; fout: string } => {
+  const velden = (typeof invoer === 'object' && invoer !== null ? invoer : {}) as Record<string, unknown>;
+  const wijziging: Wijziging = {};
+
+  if (velden.rol !== undefined) {
+    const rol = ROLLEN.find((kandidaat) => kandidaat === velden.rol);
+    if (!rol) return { fout: 'Kies de rol lid of beheerder.' };
+    wijziging.rol = rol;
+  }
+  if (velden.soort !== undefined) {
+    if (typeof velden.soort !== 'string' || !FUNCTIES.includes(velden.soort)) return { fout: 'Kies een soort communitylid uit de lijst.' };
+    wijziging.soort = velden.soort;
+  }
+  if (!wijziging.rol && !wijziging.soort) return { fout: 'Kies een rol of soort communitylid.' };
+  return { wijziging };
+};

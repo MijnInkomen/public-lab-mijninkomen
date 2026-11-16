@@ -22,6 +22,9 @@ export interface Opslag {
     actie?: (aanvraag: OpgeslagenAanvraag) => Promise<void>,
     redenWeigering?: string,
   ) => Promise<Resultaat>;
+  /** Soort communitylid per lid. Zonder eigen keuze is dat de functie uit de geaccepteerde aanvraag. */
+  haalSoortenOp: (leden: { id: string; email: string }[]) => Promise<Map<string, string | null>>;
+  zetSoort: (id: string, soort: string) => Promise<void>;
 }
 
 const MAAK_TABEL = `
@@ -39,6 +42,12 @@ const MAAK_TABEL = `
 
   ALTER TABLE toegangsaanvragen ADD COLUMN IF NOT EXISTS reden_weigering text;
 
+  CREATE TABLE IF NOT EXISTS leden_soort (
+    keycloak_id text PRIMARY KEY,
+    soort text NOT NULL,
+    gewijzigd_op timestamptz NOT NULL DEFAULT now()
+  );
+
   CREATE UNIQUE INDEX IF NOT EXISTS een_open_aanvraag_per_email
     ON toegangsaanvragen (email)
     WHERE status = 'in behandeling';
@@ -48,6 +57,22 @@ const SLA_OP = `
   INSERT INTO toegangsaanvragen (naam, organisatie, functie, email, gesprek_datum)
   VALUES ($1, $2, $3, $4, $5)
   ON CONFLICT (email) WHERE status = 'in behandeling' DO NOTHING
+`;
+
+const SOORTEN = `
+  SELECT lid.id, COALESCE(gekozen.soort, aanvraag.functie) AS soort
+  FROM unnest($1::text[], $2::text[]) AS lid (id, email)
+  LEFT JOIN leden_soort gekozen ON gekozen.keycloak_id = lid.id
+  LEFT JOIN LATERAL (
+    SELECT functie FROM toegangsaanvragen
+    WHERE email = lid.email AND status = 'toegelaten'
+    ORDER BY aangemaakt_op DESC LIMIT 1
+  ) aanvraag ON true
+`;
+
+const ZET_SOORT = `
+  INSERT INTO leden_soort (keycloak_id, soort) VALUES ($1, $2)
+  ON CONFLICT (keycloak_id) DO UPDATE SET soort = EXCLUDED.soort, gewijzigd_op = now()
 `;
 
 const KOLOMMEN = `
@@ -106,6 +131,18 @@ export const maakOpslag = async (connectionString: string): Promise<Opslag> => {
       } finally {
         client.release();
       }
+    },
+
+    haalSoortenOp: async (leden) => {
+      const { rows } = await pool.query<{ id: string; soort: string | null }>(SOORTEN, [
+        leden.map(({ id }) => id),
+        leden.map(({ email }) => email.toLowerCase()),
+      ]);
+      return new Map(rows.map(({ id, soort }) => [id, soort]));
+    },
+
+    zetSoort: async (id, soort) => {
+      await pool.query(ZET_SOORT, [id, soort]);
     },
   };
 };

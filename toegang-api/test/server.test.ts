@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { after, before, beforeEach, test } from 'node:test';
 import type { AddressInfo } from 'node:net';
-import { AccountBestaatAl, type Keycloak } from '../src/keycloak.ts';
+import { AccountBestaatAl, type Keycloak, type KeycloakLid } from '../src/keycloak.ts';
 import type { Mail } from '../src/mail.ts';
 import type { OpgeslagenAanvraag, Opslag } from '../src/opslag.ts';
 import { maakServer } from '../src/server.ts';
@@ -43,12 +43,38 @@ const opslag: Opslag = {
     opgeslagenReden = reden;
     return 'gelukt';
   },
+  haalSoortenOp: async (leden) => new Map(leden.map(({ id }) => [id, soorten.get(id) ?? null])),
+  zetSoort: async (id, soort) => {
+    soorten.set(id, soort);
+  },
 };
+
+const HOOFD_ID = 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
+const ADMIN_ID = 'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+const LID_ID = 'cccccccc-cccc-4ccc-8ccc-cccccccccccc';
+const beginLeden = (): KeycloakLid[] => [
+  { id: HOOFD_ID, naam: 'Hoofd Beheerder', email: 'hoofd@test.nl', rol: 'hoofdbeheerder' },
+  { id: ADMIN_ID, naam: 'Gewone Beheerder', email: 'admin@test.nl', rol: 'beheerder' },
+  { id: LID_ID, naam: 'Sam Lid', email: 'lid@test.nl', rol: 'lid' },
+];
+let leden = beginLeden();
+const soorten = new Map<string, string>();
+
+const KEYCLOAK_ROLLEN = { hoofdbeheerder: ['admin', 'hoofdbeheerder'], beheerder: ['admin'], lid: [] };
 
 const keycloak: Keycloak = {
   maakCommunitylid: async ({ email }) => {
     if (accountStoring) throw accountStoring;
     accounts.push(email);
+  },
+  haalLedenOp: async () => leden.map((lid) => ({ ...lid })),
+  haalLidOp: async (id) => leden.find((lid) => lid.id === id),
+  zetRol: async (id, rol) => {
+    leden = leden.map((lid) => (lid.id === id ? { ...lid, rol } : lid));
+  },
+  haalRollenOp: async (email) => {
+    const lid = leden.find((kandidaat) => kandidaat.email === email);
+    return lid ? ['communitylid', ...KEYCLOAK_ROLLEN[lid.rol]] : [];
   },
 };
 
@@ -76,6 +102,8 @@ beforeEach(() => {
   opgeslagenReden = undefined;
   mailStoring = false;
   accountStoring = undefined;
+  leden = beginLeden();
+  soorten.clear();
 });
 
 const goedeAanvraag = {
@@ -126,12 +154,22 @@ test('bij een databasefout lekt het antwoord geen details', async () => {
   assert.deepEqual(await antwoord.json(), { fout: 'Er ging iets mis. Probeer het later opnieuw' });
 });
 
-const beheer = (pad: string, method = 'GET', groepen?: string, body?: object) =>
-  fetch(`${adres.replace('/api/toegang-aanvragen', '/api/beheer/aanvragen')}${pad}`, {
+/** Zoals Nginx: de rollen uit de login en het e-mailadres. */
+const emailBij = (groepen: string) => {
+  const rollen = groepen.split(',');
+  if (rollen.includes('hoofdbeheerder')) return 'hoofd@test.nl';
+  return rollen.includes('admin') ? 'admin@test.nl' : 'lid@test.nl';
+};
+
+const roep = (basis: string, pad: string, method = 'GET', groepen?: string, body?: object) =>
+  fetch(`${adres.replace('/api/toegang-aanvragen', basis)}${pad}`, {
     method,
-    headers: groepen === undefined ? {} : { 'X-Auth-Groups': groepen },
+    headers: groepen === undefined ? {} : { 'X-Auth-Groups': groepen, 'X-Auth-Email': emailBij(groepen) },
     body: body && JSON.stringify(body),
   });
+
+const beheer = (pad: string, method = 'GET', groepen?: string, body?: object) =>
+  roep('/api/beheer/aanvragen', pad, method, groepen, body);
 
 const REDEN = { reden: 'Je hebt nog geen kennismakingsgesprek gehad.' };
 
@@ -209,4 +247,84 @@ test('een bestaand account geeft een duidelijke melding', async () => {
 
   assert.equal(antwoord.status, 409);
   assert.match((await antwoord.json()).fout, /bestaat al een account/);
+});
+
+test('een beheerder die net lid is gemaakt, kan direct niet meer bij de aanvragen', async () => {
+  leden = leden.map((lid) => (lid.id === ADMIN_ID ? { ...lid, rol: 'lid' } : lid));
+
+  // De login zegt nog admin, maar Keycloak niet meer.
+  assert.equal((await beheer('', 'GET', 'communitylid,admin')).status, 403);
+});
+
+test('een lid dat net beheerder is gemaakt, kan direct bij de aanvragen', async () => {
+  leden = leden.map((lid) => (lid.id === LID_ID ? { ...lid, rol: 'beheerder' } : lid));
+
+  // De login zegt nog communitylid, maar Keycloak al admin.
+  assert.equal((await beheer('', 'GET', 'communitylid')).status, 200);
+});
+
+const ledenApi = (pad: string, method = 'GET', groepen?: string, body?: object) =>
+  roep('/api/beheer/leden', pad, method, groepen, body);
+
+test('alleen de hoofdbeheerder ziet het ledenoverzicht', async () => {
+  assert.equal((await ledenApi('')).status, 403);
+  assert.equal((await ledenApi('', 'GET', 'communitylid')).status, 403);
+  assert.equal((await ledenApi('', 'GET', 'communitylid,admin')).status, 403);
+
+  const antwoord = await ledenApi('', 'GET', 'admin,hoofdbeheerder');
+  assert.equal(antwoord.status, 200);
+  const { leden: lijst } = await antwoord.json();
+  assert.deepEqual(
+    lijst.map(({ email, rol }: KeycloakLid) => [email, rol]),
+    [
+      ['hoofd@test.nl', 'hoofdbeheerder'],
+      ['admin@test.nl', 'beheerder'],
+      ['lid@test.nl', 'lid'],
+    ],
+  );
+});
+
+test('een soort dat niet in de lijst staat, telt als nog niet gekozen', async () => {
+  soorten.set(LID_ID, 'Adviseur');
+  const { leden: lijst } = await (await ledenApi('', 'GET', 'admin,hoofdbeheerder')).json();
+
+  assert.equal(lijst.find(({ id }: KeycloakLid) => id === LID_ID).soort, null);
+});
+
+test('de hoofdbeheerder maakt een lid beheerder en past het soort aan', async () => {
+  const groepen = 'admin,hoofdbeheerder';
+
+  assert.equal((await ledenApi(`/${LID_ID}`, 'POST', groepen, { rol: 'beheerder' })).status, 200);
+  assert.equal(leden.find(({ id }) => id === LID_ID)?.rol, 'beheerder');
+
+  assert.equal((await ledenApi(`/${LID_ID}`, 'POST', groepen, { soort: 'Schuldhulpverlener' })).status, 200);
+  assert.equal(soorten.get(LID_ID), 'Schuldhulpverlener');
+
+  assert.equal((await ledenApi(`/${LID_ID}`, 'POST', groepen, { rol: 'lid' })).status, 200);
+  assert.equal(leden.find(({ id }) => id === LID_ID)?.rol, 'lid');
+});
+
+test('een gewone beheerder kan geen rollen wijzigen', async () => {
+  assert.equal((await ledenApi(`/${LID_ID}`, 'POST', 'communitylid,admin', { rol: 'beheerder' })).status, 403);
+  assert.equal(leden.find(({ id }) => id === LID_ID)?.rol, 'lid');
+});
+
+test('de rol van de hoofdbeheerder kan niet veranderen, het soort wel', async () => {
+  const groepen = 'admin,hoofdbeheerder';
+  const antwoord = await ledenApi(`/${HOOFD_ID}`, 'POST', groepen, { rol: 'lid' });
+
+  assert.equal(antwoord.status, 409);
+  assert.match((await antwoord.json()).fout, /hoofdbeheerder kan niet veranderen/);
+  assert.equal(leden.find(({ id }) => id === HOOFD_ID)?.rol, 'hoofdbeheerder');
+  assert.equal((await ledenApi(`/${HOOFD_ID}`, 'POST', groepen, { soort: 'Teamleider sociaal domein' })).status, 200);
+});
+
+test('een onbekende rol, onbekend soort of onbekend lid wordt geweigerd', async () => {
+  const groepen = 'admin,hoofdbeheerder';
+
+  assert.equal((await ledenApi(`/${LID_ID}`, 'POST', groepen, { rol: 'hoofdbeheerder' })).status, 422);
+  assert.equal((await ledenApi(`/${LID_ID}`, 'POST', groepen, { soort: 'Astronaut' })).status, 422);
+  assert.equal((await ledenApi(`/${LID_ID}`, 'POST', groepen, {})).status, 422);
+  assert.equal((await ledenApi(`/${ID}`, 'POST', groepen, { rol: 'lid' })).status, 404);
+  assert.equal(leden.find(({ id }) => id === LID_ID)?.rol, 'lid');
 });
