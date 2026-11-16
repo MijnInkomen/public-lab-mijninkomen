@@ -11,11 +11,12 @@ export type APIResponseType = {
 };
 
 export type cardInfo = {
-    "heading": string,
-    "description": string,
-    "gebruikers": string[]
     "title": string,
+    "description": string,
+    "labels": string[]
+    "gebruikers": string[]
     "status": string,
+    isOpen: boolean,
 };
 
 export type epic = feature & {

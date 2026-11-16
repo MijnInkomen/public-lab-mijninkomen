@@ -11,6 +11,8 @@ Binnen dit project hebben we een server genoemd de Roadmap API. Het doel van dez
 
 Voor meer informatie over hoe de Roadmap API interacteert met GitHub voor het ophalen van de Features en Epics, kun je hier naar toe gaan: [Github Communicatie](./github-communicate.md)
 
+Voor meer informatie over de Postgres SQL database waarmee de Roadmap API interacteert, kun je hier naar toe gaan: [Database documentatie](./database.md)
+
 ## Table Of Contents
 
 - [Roadmap API](#roadmap-api)

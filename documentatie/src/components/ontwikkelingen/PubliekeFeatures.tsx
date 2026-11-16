@@ -25,7 +25,7 @@ export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
     const cards = json?.map((cardInfo, index) => {
         return (<Card
             description={cardInfo.description}
-            heading={cardInfo.heading}
+            heading={cardInfo.title}
             {...(type === "toekomstig" ? {subheading: <Badge>{cardInfo.status}</Badge>} : {})}
             href="#"
             metadata={`Gebruikt door: ${cardInfo.gebruikers.join(", ")}`}

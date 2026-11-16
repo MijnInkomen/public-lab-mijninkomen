@@ -27,7 +27,6 @@ export type githubFeatureType = {
   labels: {
     nodes: {name: string}[],
   },
-  status: null | {name: string},
   state: "OPEN" | "CLOSED";
 }
 export type githubEpicType = githubFeatureType & {
@@ -86,9 +85,6 @@ export async function verzoekGitHubData() {
             name
           }
         }
-        status {
-          name
-        }
         state
       }
       `
@@ -143,14 +139,14 @@ export function valideerWebhookEvent(verzoek: IncomingMessage, body: Buffer) {
   return issueType === "Feature" || issueType === "Epic";
 }
 
-// // ONLY FOR DEVELOPMENT
-// const smee = new SmeeClient({
-//   source: "https://smee.io/BqUFFSGFHkfkewF", // Smee client link
-//   target: "http://localhost:4000/api/roadmap/webhook",
-//   logger: console,
-// });
+// ONLY FOR DEVELOPMENT
+const smee = new SmeeClient({
+  source: "https://smee.io/mA4G3lH2l0QjvPQ", // Smee client link
+  target: "http://localhost:4000/api/roadmap/webhook",
+  logger: console,
+});
 
-// (async () => {
-//   const events = await smee.start();
-//   console.log("Development webhook server geintialiseert");
-// })();
+(async () => {
+  const events = await smee.start();
+  console.log("Development webhook server geintialiseert");
+})();

@@ -1,10 +1,10 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { valideerWebhookEvent,valideerWebhookSignature, verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
-import { leesOpslag, slaOp, type epicType, type featureType, type jsonOpslageType } from './opslag.ts';
+import { Opslag, type epicType, type featureType } from './opslag.ts';
 
 const MAX_GROOTTE = 25 * 1024 * 1024;
 
-export function maakServer() {
+export function maakServer(opslag: Opslag) {
   return createServer(async (verzoek, antwoord) => {
     const url = new URL(verzoek.url ?? '/', 'http://localhost');
     const pad = url.pathname.slice(12, url.pathname.at(-1) === "/" ? -1 : undefined);
@@ -12,15 +12,12 @@ export function maakServer() {
       switch (pad) {
         case "/publiek/huidig":
         case "/publiek/toekomstig":
-          const json = await leesOpslag();
-          if (!json) {
-            return stuurJson(antwoord, 200, []);
-          }
           const type = pad.slice(9) as "huidig" | "toekomstig";
-          return stuurJson(antwoord, 200, json.publiek[type]);
+          const epics = await opslag.haalIssuesOp(type);
+          return stuurJson(antwoord, 200, epics);
         
         case "/update":
-          await verwerkUpdateVerzoek(antwoord);
+          await verwerkUpdateVerzoek(antwoord, opslag);
           return;
 
         case "/webhook":
@@ -33,7 +30,7 @@ export function maakServer() {
             stuurStatus(antwoord, 200);
             return;
           }
-          await verwerkUpdateVerzoek(antwoord);
+          await verwerkUpdateVerzoek(antwoord, opslag);
           return;
 
         default:
@@ -60,36 +57,22 @@ function stuurStatus(antwoord: ServerResponse, statusCode: number) {
   antwoord.end()
 }
 
-function verwerkGithubResponse(response: githubResponseType["repository"]): jsonOpslageType {
-  const roadmap: epicType[] = [];
-  const publiek: jsonOpslageType["publiek"] = {
-    huidig: [],
-    toekomstig: [],
-  };
+function verwerkGithubResponse(response: githubResponseType["repository"]): epicType[] {
+  const epics: epicType[] = [];
 
   for (const epic of response.epics.nodes) {
     const epicInfo = vertaalGitHubIssue(epic);
+    console.log(epicInfo)
     const features = epic.subIssues.nodes.map((feature) => vertaalGitHubIssue(feature));
-    if (epicInfo.labels.includes("publiek")) {
-      publiek[epicInfo.isOpen ? "toekomstig" : "huidig"].push({
-        title: epicInfo.title,
-        heading: epicInfo.title,
-        description: epicInfo.description,
-        status: epicInfo.status,
-        gebruikers: ["Alle gemeenten"],
-      });
-    }
 
-    roadmap.push({
+    epics.push({
       ...epicInfo,
       features
     });
   }
  
-  return {
-    publiek,
-    community: {roadmap}
-  };
+  console.log(epics)
+  return epics;
 }
 
 function vertaalGitHubIssue(issue: githubFeatureType): featureType {
@@ -97,12 +80,13 @@ function vertaalGitHubIssue(issue: githubFeatureType): featureType {
     title: issue.title,
     description: issue.body,
     labels: issue.labels.nodes.map((label) => label.name),
-    status: issue.status?.name || "Geen status",
     isOpen: issue.state === "OPEN",
+    status: null,
+    gebruikers: [],
   };
 }
 
-async function verwerkUpdateVerzoek(antwoord: ServerResponse) {
+async function verwerkUpdateVerzoek(antwoord: ServerResponse, opslag: Opslag) {
   const result = await verzoekGitHubData();
   if (!result) {
     stuurStatus(antwoord, 500);
@@ -110,7 +94,7 @@ async function verwerkUpdateVerzoek(antwoord: ServerResponse) {
   }
 
   const verwerkteEpics = verwerkGithubResponse(result);
-  await slaOp(verwerkteEpics);
+  await opslag.slaIssuesOp(verwerkteEpics);
   stuurStatus(antwoord, 200);
   return;
 }
