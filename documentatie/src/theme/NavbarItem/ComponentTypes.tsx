@@ -2,11 +2,13 @@
 import ComponentTypes from '@theme-original/NavbarItem/ComponentTypes';
 import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
 import type { Props } from '@theme/NavbarItem/DefaultNavbarItem';
-import { useIngelogd, useIsAdmin } from '@site/src/components/useIngelogd';
+import { useIngelogd, useIsAdmin, useIsHoofdbeheerder } from '@site/src/components/useIngelogd';
 
 const RoadmapNavbarItem = (props: Props) => (useIngelogd() ? <DefaultNavbarItem {...props} /> : null);
 
 const BeheerNavbarItem = (props: Props) => (useIsAdmin() ? <DefaultNavbarItem {...props} /> : null);
+
+const LedenNavbarItem = (props: Props) => (useIsHoofdbeheerder() ? <DefaultNavbarItem {...props} /> : null);
 
 const InloggenNavbarItem = (props: Props) =>
   useIngelogd() ? (
@@ -19,5 +21,6 @@ export default {
   ...ComponentTypes,
   'custom-roadmap': RoadmapNavbarItem,
   'custom-beheer': BeheerNavbarItem,
+  'custom-leden': LedenNavbarItem,
   'custom-inloggen': InloggenNavbarItem,
 };

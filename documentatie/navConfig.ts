@@ -49,6 +49,13 @@ const navbar: Navbar = {
       position: 'right',
     },
     {
+      type: 'custom-leden',
+      to: 'pathname:///community/leden/',
+      target: '_self',
+      label: 'Leden',
+      position: 'right',
+    },
+    {
       type: 'custom-inloggen',
       target: '_self',
       position: 'right',
