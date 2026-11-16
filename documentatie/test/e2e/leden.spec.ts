@@ -48,14 +48,16 @@ test('alleen de hoofdbeheerder beheert rollen, en een wijziging werkt direct doo
   await logIn(hoofd, leesInstelling('TEST_E2E_ADMIN_EMAIL'));
 
   // Een communitylid ziet het rollenbeheer niet en kan de API niet gebruiken.
-  await expect(lid.getByRole('link', { name: 'Leden' })).toHaveCount(0);
+  await expect(lid.getByRole('button', { name: 'Beheer' })).toHaveCount(0);
+  await expect(lid.getByRole('link', { name: 'Leden en rollen' })).toHaveCount(0);
   await lid.goto(ledenpagina);
   await expect(lid.getByRole('heading', { name: 'Geen toegang' })).toBeVisible();
   expect(await status(lid, '/api/beheer/leden')).toBe(403);
   expect(await status(lid, '/api/beheer/aanvragen')).toBe(403);
 
   // De hoofdbeheerder ziet alle leden met hun rol.
-  await hoofd.getByRole('link', { name: 'Leden' }).click();
+  await hoofd.getByRole('button', { name: 'Beheer' }).click();
+  await hoofd.getByRole('link', { name: 'Leden en rollen' }).click();
   await expect(hoofd.getByRole('heading', { name: 'Leden en rollen' })).toBeVisible();
   const eigenRij = hoofd.getByRole('row', { name: new RegExp(HOOFDBEHEERDER) });
   await expect(eigenRij.getByText('Deze rol kan niet veranderen.')).toBeVisible();

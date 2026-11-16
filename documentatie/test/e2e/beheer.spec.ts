@@ -79,7 +79,7 @@ test('een communitylid kan de pagina en de API niet gebruiken', async ({ page })
     leesInstelling('TEST_LID_OTP_SECRET'),
   );
   await expect(page.getByRole('link', { name: 'Roadmap' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Beheer' })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Beheer' })).toHaveCount(0);
 
   await page.goto(beheerpagina);
   await expect(page.getByRole('heading', { name: 'Geen toegang' })).toBeVisible();
@@ -111,7 +111,8 @@ test('een admin accepteert, weigert met reden, en de nieuwe gebruiker kan inlogg
     leesInstelling('TEST_LID_PASSWORD'),
     leesInstelling('TEST_LID_OTP_SECRET'),
   );
-  await page.getByRole('link', { name: 'Beheer' }).click();
+  await page.getByRole('button', { name: 'Beheer' }).click();
+  await page.getByRole('link', { name: 'Aanvragen' }).click();
   await expect(page.getByRole('heading', { name: 'Toegangsaanvragen' })).toBeVisible();
 
   const dialoog = page.getByRole('alertdialog');
@@ -186,5 +187,5 @@ test('een admin accepteert, weigert met reden, en de nieuwe gebruiker kan inlogg
   await nieuw.goto(`${websiteURL}/inloggen/`);
   await logIn(nieuw, toegelaten.email, wachtwoord, geheim);
   await expect(nieuw.getByRole('link', { name: 'Roadmap' })).toBeVisible();
-  await expect(nieuw.getByRole('link', { name: 'Beheer' })).toHaveCount(0);
+  await expect(nieuw.getByRole('button', { name: 'Beheer' })).toHaveCount(0);
 });

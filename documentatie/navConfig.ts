@@ -48,18 +48,24 @@ const navbar: Navbar = {
       position: 'left',
     },
     {
-      type: 'custom-beheer',
-      to: 'pathname:///community/beheer/',
-      target: '_self',
+      // Alleen voor beheerders. Leden en rollen staat er alleen in voor de hoofdbeheerder.
+      type: 'custom-beheermenu',
       label: 'Beheer',
       position: 'right',
-    },
-    {
-      type: 'custom-leden',
-      to: 'pathname:///community/leden/',
-      target: '_self',
-      label: 'Leden',
-      position: 'right',
+      items: [
+        {
+          type: 'custom-beheer',
+          to: 'pathname:///community/beheer/',
+          target: '_self',
+          label: 'Aanvragen',
+        },
+        {
+          type: 'custom-leden',
+          to: 'pathname:///community/leden/',
+          target: '_self',
+          label: 'Leden en rollen',
+        },
+      ],
     },
     {
       type: 'custom-inloggen',
