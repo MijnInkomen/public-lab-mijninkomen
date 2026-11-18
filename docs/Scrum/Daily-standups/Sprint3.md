@@ -40,48 +40,6 @@
 
 ---
 
-# Daily Standup - Sprint 3 Week 11
-
-**Datum**: 09/11/2026  
-**Scrum Master**: Fares  
-**Deelnemers**:
-- Benito
-- Isabella
-- Amin
-- Tess
-- Fares
-
----
-
-## Besproken punten
-
-### Benito
-- **Wat heb je gedaan**: Leerdoelen afgerond.
-- **Wat ga je doen**: Nieuwe leerdoelen opstellen en de sprint planning maken.
-- **Impediments**: Geen.
-
-### Isabella
-- **Wat heb je gedaan**: -
-- **Wat ga je doen**: Mijn leerdoelen helemaal op orde maken en alvast 2 nieuwe leerdoelen opstellen. De sprint planning voor sprint 3 afmaken en indelen met het team.
-- **Impediments**: Geen.
-
-### Amin
-- **Wat heb je gedaan**: Niks gedaan i.v.m. werk.
-- **Wat ga je doen**: De resultaten van mijn leerdoelen van sprint 1 en 2 verwerken en beginnen met de leerdoelen voor sprint 3 en 4. Verder beginnen met de sprint planning.
-- **Impediments**: Geen.
-
-### Tess
-- **Wat heb je gedaan**: Feedback van Vincent verwerkt in niveau 2 van de website.
-- **Wat ga je doen**: De sprintdoelen van de vorige sprint afronden, nieuwe sprintdoelen bedenken, beginnen met de user stories en bepalen wat er op het sprintbord komt.
-- **Impediments**: Geen.
-
-### Fares
-- **Wat heb je gedaan**: Niks gedaan i.v.m. werk.
-- **Wat ga je doen**: Mijn oude leerdoelen verbeteren, nieuwe leerdoelen schrijven, mijn Portflow up-to-date maken en mijn reflecties schrijven.
-- **Impediments**: Geen.
-
----
-
 
 # Daily Standup - Sprint 3 Week 11
 
@@ -169,9 +127,6 @@
 ---
 
 
----
-
-
 # Daily Standup - Sprint 3 Week 11
 
 **Datum**: 12/11/2026  
@@ -236,14 +191,14 @@
 - **Impediments**: Geen.
 
 ### Isabella
-- **Wat heb je gedaan**: 
-- **Wat ga je doen**: 
-- **Impediments**: 
+- **Wat heb je gedaan**: Geen update gepost.
+- **Wat ga je doen**: Geen update gepost.
+- **Impediments**: -
 
 ### Amin
-- **Wat heb je gedaan**: 
-- **Wat ga je doen**: 
-- **Impediments**: 
+- **Wat heb je gedaan**: Geen update gepost.
+- **Wat ga je doen**: Geen update gepost.
+- **Impediments**: -
 
 ### Tess
 - **Wat heb je gedaan**: Coaching met Martin en Sasha. Documentatie doorgenomen en bekeken wat ik nodig heb om de test op te stellen.
@@ -279,23 +234,109 @@
 - **Impediments**: Ik weet niet precies welke informatie ik moet ophalen en opslaan. Voor nu gebruik ik een testformat, maar dat moet nog besproken worden.
 
 ### Isabella
-- **Wat heb je gedaan**: 
-- **Wat ga je doen**: 
-- **Impediments**: 
+- **Wat heb je gedaan**: Geen update gepost.
+- **Wat ga je doen**: Geen update gepost.
+- **Impediments**: -
 
 ### Amin
-- **Wat heb je gedaan**: 
-- **Wat ga je doen**: 
-- **Impediments**: 
+- **Wat heb je gedaan**: Gewerkt aan mijn user story, die bijna af is.
+- **Wat ga je doen**: Mijn user story afronden en een merge request maken.
+- **Impediments**: Geen.
 
 ### Tess
-- **Wat heb je gedaan**: 
-- **Wat ga je doen**: 
-- **Impediments**: 
+- **Wat heb je gedaan**: Niks gedaan aan het project.
+- **Wat ga je doen**: Bewijs voor de voortgangsevaluatie verzamelen en onderbouwen, verder werken aan de user story over het opstellen van de test.
+- **Impediments**: Geen.
 
 ### Fares
 - **Wat heb je gedaan**: Gewerkt aan mijn user story en mijn Portflow voorbereid voor de voortgangsevaluatie.
 - **Wat ga je doen**: Portflow afmaken voor de voortgangsevaluatie, verder werken aan mijn user story en als scrum master met het team de vraag van Benito over de GitLab-data bespreken.
+- **Impediments**: Geen.
+
+---
+
+
+# Daily Standup - Sprint 3 Week 12
+
+**Datum**: 17/11/2026  
+**Scrum Master**: Fares  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Een database toegevoegd aan de issue branch en mijn issue afgerond.
+- **Wat ga je doen**: Portflow voorbereiden voor de review en werken aan mijn individuele project.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: Geen update gepost.
+- **Wat ga je doen**: Geen update gepost.
+- **Impediments**: -
+
+### Amin
+- **Wat heb je gedaan**: Mijn user story afgerond en een merge request aangemaakt.
+- **Wat ga je doen**: Werken aan mijn Portflow.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: De user story over het concept testplan afgerond.
+- **Wat ga je doen**: Alles op orde maken voor de voortgangsevaluatie en kijken welke volgende story ik wil oppakken.
+- **Impediments**: Ik wil graag nog validatie van het team op een document dat ik in ons Teams-kanaal heb gezet.
+
+### Fares
+- **Wat heb je gedaan**: Mijn Portflow verder klaargemaakt voor de voortgangsevaluatie en met het team de GitLab-data van Benito besproken.
+- **Wat ga je doen**: Verder werken aan mijn user story en de laatste onderdelen van mijn Portflow aanvullen.
+- **Impediments**: Geen.
+
+---
+
+
+# Daily Standup - Sprint 3 Week 12
+
+**Datum**: 18/11/2026  
+**Scrum Master**: Fares  
+**Deelnemers**:
+- Benito
+- Isabella
+- Amin
+- Tess
+- Fares
+
+---
+
+## Besproken punten
+
+### Benito
+- **Wat heb je gedaan**: Alle reflecties over de workshops in Portflow toegevoegd.
+- **Wat ga je doen**: Verder werken aan de documentatie binnen het project en mijn individuele project.
+- **Impediments**: Geen.
+
+### Isabella
+- **Wat heb je gedaan**: -
+- **Wat ga je doen**: Werken aan het leerdoel over het prototype.
+- **Impediments**: Ik moet weer even in de flow komen.
+
+### Amin
+- **Wat heb je gedaan**: Gewerkt aan mijn Portflow.
+- **Wat ga je doen**: Verder met mijn Portflow en de voortgangsevaluatie toevoegen.
+- **Impediments**: Geen.
+
+### Tess
+- **Wat heb je gedaan**: Geen update gepost.
+- **Wat ga je doen**: Geen update gepost.
+- **Impediments**: -
+
+### Fares
+- **Wat heb je gedaan**: Verder gewerkt aan mijn user story en Portflow aangevuld.
+- **Wat ga je doen**: Portflow afronden voor de voortgangsevaluatie en als scrum master zorgen dat Tess feedback krijgt op haar document in het Teams-kanaal.
 - **Impediments**: Geen.
 
 ---
