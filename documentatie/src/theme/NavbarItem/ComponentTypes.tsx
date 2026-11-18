@@ -20,6 +20,7 @@ export default {
   ...ComponentTypes,
   'custom-roadmap': RoadmapNavbarItem,
   'custom-innovatie-backlog': RoadmapNavbarItem,
+  'custom-regelingen': RoadmapNavbarItem,
   'custom-beheer': BeheerNavbarItem,
   'custom-inloggen': InloggenNavbarItem,
 };

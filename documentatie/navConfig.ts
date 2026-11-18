@@ -43,6 +43,12 @@ const navbar: Navbar = {
       position: 'left',
     },
     {
+      type: 'custom-regelingen',
+      to: '/regelingen/',
+      label: 'Regelingen',
+      position: 'left',
+    },
+    {
       to: '/contact/',
       label: 'Contact',
       position: 'left',
