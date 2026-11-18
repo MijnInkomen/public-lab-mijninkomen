@@ -53,6 +53,8 @@ services:
       OAUTH2_PROXY_CLIENT_SECRET: ${OAUTH2_PROXY_CLIENT_SECRET}
       OAUTH2_PROXY_CODE_CHALLENGE_METHOD: S256
       OAUTH2_PROXY_COOKIE_SECRET: ${OAUTH2_PROXY_COOKIE_SECRET}
+      # Haalt elke minuut de rollen opnieuw op, zodat een rolwijziging snel doorwerkt in het menu en op de pagina's.
+      OAUTH2_PROXY_COOKIE_REFRESH: 1m
       OAUTH2_PROXY_COOKIE_SAMESITE: lax
       OAUTH2_PROXY_COOKIE_SECURE: "false"
       OAUTH2_PROXY_EMAIL_DOMAINS: "*"
@@ -94,6 +96,9 @@ services:
       KEYCLOAK_CLIENT_SECRET: ${TOEGANG_API_CLIENT_SECRET}
       KEYCLOAK_URL: http://keycloak:8080/auth
       SITE_URL: http://localhost:${SITE_PORT}
+      SMTP_HOST: mailpit
+      SMTP_PORT: "1025"
+      MAIL_VAN: MijnInkomen <noreply@mijninkomen.test>
     depends_on:
       keycloak:
         condition: service_started

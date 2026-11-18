@@ -1,13 +1,13 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { controleerAanvraag, leesDatum } from '../src/validatie.ts';
+import { controleerAanvraag, controleerReden, leesDatum } from '../src/validatie.ts';
 
 const VANDAAG = '2026-10-31';
 
 const goedeAanvraag = {
   naam: 'Sam de Vries',
   organisatie: 'Gemeente Utrecht',
-  functie: 'Beleidsadviseur',
+  functie: 'Beleidsadviseur sociaal domein',
   email: 'Sam@Gemeente.nl',
   gesprek: '2026-10-12',
 };
@@ -19,7 +19,7 @@ test('een goede aanvraag komt netjes terug', () => {
   assert.deepEqual(aanvraag, {
     naam: 'Sam de Vries',
     organisatie: 'Gemeente Utrecht',
-    functie: 'Beleidsadviseur',
+    functie: 'Beleidsadviseur sociaal domein',
     email: 'sam@gemeente.nl',
     gesprekDatum: '2026-10-12',
   });
@@ -44,9 +44,9 @@ test('een ongeldig e-mailadres wordt geweigerd', () => {
 });
 
 test('te lange tekst wordt geweigerd', () => {
-  const { fouten } = controleerAanvraag({ ...goedeAanvraag, functie: 'x'.repeat(201) }, VANDAAG);
+  const { fouten } = controleerAanvraag({ ...goedeAanvraag, organisatie: 'x'.repeat(201) }, VANDAAG);
 
-  assert.match(fouten?.functie ?? '', /te lang/);
+  assert.match(fouten?.organisatie ?? '', /te lang/);
 });
 
 test('een datum in de toekomst wordt geweigerd, vandaag mag wel', () => {
@@ -64,4 +64,16 @@ test('leesDatum weigert andere schrijfwijzen en datums die niet bestaan', () => 
   assert.equal(leesDatum('2026-13-01'), undefined);
   assert.equal(leesDatum('12-11-2026'), undefined);
   assert.equal(leesDatum('volgende week'), undefined);
+});
+
+test('alleen een functie uit de lijst is goed', () => {
+  assert.equal(controleerAanvraag({ ...goedeAanvraag, functie: 'Astronaut' }, VANDAAG).fouten?.functie, 'Kies je functie.');
+  assert.equal(controleerAanvraag({ ...goedeAanvraag, functie: '' }, VANDAAG).fouten?.functie, 'Kies je functie.');
+});
+
+test('de reden van weigering is verplicht en niet te lang', () => {
+  assert.deepEqual(controleerReden({ reden: '  Geen gesprek gehad  ' }), { reden: 'Geen gesprek gehad' });
+  assert.equal(controleerReden({ reden: '' }).fout, 'Vul de reden van weigering in.');
+  assert.equal(controleerReden(null).fout, 'Vul de reden van weigering in.');
+  assert.match(controleerReden({ reden: 'x'.repeat(1001) }).fout ?? '', /maximaal 1000/);
 });

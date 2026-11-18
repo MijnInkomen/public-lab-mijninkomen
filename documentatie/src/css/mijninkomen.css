@@ -116,14 +116,40 @@
   inline-size: auto;
 }
 
+/* De menubalk is nooit breder dan de pagina: de links zijn daarom wat compacter, zodat alles past. */
 .ma-theme .navbar__link {
-  padding-inline: 0.625rem;
+  font-size: 0.9375rem;
+  padding-inline: 0.3125rem;
   text-decoration-line: none;
   white-space: nowrap;
 }
 
 .ma-theme .navbar__link:hover {
   text-decoration-line: underline;
+}
+
+/* Het logo krimpt nooit, zodat de menulinks er niet overheen vallen. */
+.ma-theme .navbar__brand {
+  flex-shrink: 0;
+}
+
+.ma-theme .navbar__items--right .mijninkomen-inloggen {
+  padding-inline: 1rem;
+}
+
+@media screen and (width <= 70rem) {
+  .ma-theme .navbar__logo {
+    block-size: 2rem;
+  }
+
+  .ma-theme .navbar__link {
+    font-size: 0.875rem;
+    padding-inline: 0.1875rem;
+  }
+
+  .ma-theme .navbar__items--right .mijninkomen-inloggen {
+    padding-inline: 0.75rem;
+  }
 }
 
 .ma-theme .navbar__toggle {

@@ -30,3 +30,6 @@ export const useIngelogd = () => useGebruiker() !== null;
 
 /** Alleen voor de weergave. Nginx en de API controleren de rol zelf. */
 export const useIsAdmin = () => useGebruiker()?.groups?.includes('admin') ?? false;
+
+/** Alleen voor de weergave. Nginx en de API controleren de rol zelf. */
+export const useIsHoofdbeheerder = () => useGebruiker()?.groups?.includes('hoofdbeheerder') ?? false;
