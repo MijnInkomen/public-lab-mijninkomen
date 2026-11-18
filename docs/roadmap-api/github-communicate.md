@@ -56,6 +56,12 @@ Op eerste instantie verwachtte ik dat de simpelste methode via REST zou zijn. Da
 
 *endpoints*: De adressen benoemd in deze diagrammen, `api/github/publiek` bijvoorbeeld, zijn nog niet vast en voornamelijk bedoelt als voorbeeld.
 
+servers:
+
+- NginX: Ngingx is onze reverse proxy. Dat is een soort server die staat tussen gebruikers en andere servers. Hierdoor hoeft een gebruiker alleen verzoeken te sturen naar één server toe. Dan gebasseerd op de structuur van het verzoek verstuurd nginx het verzoek door naar andere servers
+- Node server: De node server dient als API server. Alle verzoeken over data die op github staat gaat naar deze server toe. Hier wordt alle lokale GitHub informatie ook opgehaald vanuit de database
+- PosgtgreSQL: Dat is onze database server. Simpel gezegd de server waar al onze GitHub informatie wordt opgeslagen
+
 ### Webhook Diagram
 
 ```mermaid
@@ -124,6 +130,7 @@ sequenceDiagram
     participant proxy as NginX
     participant node as Node Server
     participant github as GitHub API
+    participant db@{ "type": "database"} as PostgreSQL
     alt Via Webhooks
         github-->>node: Feature en Epic JSON
     else Handmatig
@@ -135,8 +142,10 @@ sequenceDiagram
     activate node
     node->>github: Verzoek Epics en Features
     github-->>node: Feature en Epic JSON
-    node->>node: JSON opslaan
+    node->>db: Features en Epics opslaan
+    activate db
     deactivate node
+    deactivate db
 
 ```
 
@@ -150,13 +159,17 @@ sequenceDiagram
     actor browser as Browser
     participant proxy as NginX
     participant node as Node Server
+    participant db@{ "type": "database"} as PostgreSQL
     browser->>proxy: GET api/github/publiek
     activate browser
     activate proxy
     proxy->>node: GET api/github/publiek
     activate node
     deactivate proxy
-    node->>node: JSON ophalen
+    node->>db: Epics en Features verzoeken
+    activate db
+    db-->>node: Epics en Features
+    deactivate db
     node-->>proxy: Feature en Epic JSON
     activate proxy
     deactivate node
