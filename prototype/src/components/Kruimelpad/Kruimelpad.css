@@ -1,0 +1,33 @@
+/* Kruimelpad: kleine regel boven de inhoud van de pagina */
+.mijninkomen-kruimelpad {
+  padding-block-start: var(--mijninkomen-space-m);
+  font-size: 1rem;
+
+  /* Alleen NLDS-tokens aanpassen: de links blijven groen en onderstreept */
+  --nl-link-color: var(--mijninkomen-link-color);
+  --nl-link-hover-color: var(--mijninkomen-link-hover-color);
+}
+
+.mijninkomen-kruimelpad ol {
+  display: flex;
+  flex-wrap: wrap; /* op een smal scherm loopt het kruimelpad door op de volgende regel */
+  gap: var(--mijninkomen-space-xs) 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-kruimelpad li {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.mijninkomen-kruimelpad__pijl {
+  margin-inline: var(--mijninkomen-space-s);
+  color: var(--mijninkomen-text-subtle-color);
+}
+
+/* De huidige pagina: gewone tekst, geen link */
+.mijninkomen-kruimelpad [aria-current='page'] {
+  color: var(--mijninkomen-document-color);
+}

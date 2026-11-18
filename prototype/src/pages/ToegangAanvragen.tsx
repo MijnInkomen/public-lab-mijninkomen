@@ -10,6 +10,7 @@ import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { Badge } from '../components/Badge/Badge';
+import { functieFout, functieOpties } from '../content/functies';
 import { Formulier, PrivacyRegel, type Veld } from '../components/Formulier/Formulier';
 import { toegang } from '../content/inloggen';
 
@@ -22,16 +23,8 @@ const velden: Veld[] = [
     soort: 'keuzelijst',
     kies: 'Kies je functie',
     // Keuzelijst (keuze Isabella). Staat je functie er niet bij? Kies "Niet van toepassing".
-    opties: [
-      { waarde: 'beleidsmedewerker', label: 'Beleidsmedewerker' },
-      { waarde: 'klantmanager', label: 'Klantmanager of consulent inkomen' },
-      { waarde: 'teamleider', label: 'Teamleider of manager' },
-      { waarde: 'projectleider', label: 'Projectleider of programmamanager' },
-      { waarde: 'informatie', label: 'Informatiemanager of ICT' },
-      { waarde: 'bestuur', label: 'Bestuurder (bijvoorbeeld wethouder of directeur)' },
-      { waarde: 'nvt', label: 'Niet van toepassing' },
-    ],
-    fout: 'Kies je functie. Staat je functie er niet bij? Kies dan "Niet van toepassing".',
+    opties: functieOpties,
+    fout: functieFout,
   },
   { naam: 'email', label: 'E-mailadres van je werk', soort: 'email', autoComplete: 'email', omschrijving: 'Bijvoorbeeld: naam@gemeente.nl', fout: 'Vul het e-mailadres van je werk in.' },
   { naam: 'gesprek', label: 'Wanneer had je het kennismakingsgesprek?', soort: 'tekst', omschrijving: 'Bijvoorbeeld: 12 november 2026', fout: 'Vul in wanneer je het kennismakingsgesprek had.' },

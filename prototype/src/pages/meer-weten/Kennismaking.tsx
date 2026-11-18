@@ -8,6 +8,7 @@ import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { Badge } from '../../components/Badge/Badge';
+import { functieFout, functieOpties } from '../../content/functies';
 import { Formulier, PrivacyRegel, type Veld } from '../../components/Formulier/Formulier';
 import { kennismaking } from '../../content/meer-weten';
 import { datumVoluit, geweestWebinars } from '../../content/webinars';
@@ -17,7 +18,8 @@ function velden(): Veld[] {
   return [
     { naam: 'naam', label: 'Naam', soort: 'tekst', autoComplete: 'name', fout: 'Vul je naam in.' },
     { naam: 'organisatie', label: 'Gemeente of organisatie', soort: 'tekst', autoComplete: 'organization', fout: 'Vul je gemeente of organisatie in.' },
-    { naam: 'functie', label: 'Functie', soort: 'tekst', autoComplete: 'organization-title', fout: 'Vul je functie in.' },
+    // Keuzelijst, net als bij Toegang aanvragen (consistentie, heuristiek 4 en 5 van Nielsen).
+    { naam: 'functie', label: 'Functie', soort: 'keuzelijst', kies: 'Kies je functie', opties: functieOpties, fout: functieFout },
     { naam: 'email', label: 'E-mailadres', soort: 'email', autoComplete: 'email', omschrijving: 'Bijvoorbeeld: naam@gemeente.nl', fout: 'Vul je e-mailadres in.' },
     {
       naam: 'webinar',

@@ -22,6 +22,7 @@ Feedback van de opdrachtgever: een ontwerp is pas over te dragen als ook beschre
 | Onderdeel | Code | Doel | Bron (voorstel) | Gedrag |
 |---|---|---|---|---|
 | Zijmenu | `components/Zijmenu` | Overzicht van de pagina's binnen Ontwikkelingen of Meer weten | Website | Op elke pagina van het onderdeel hetzelfde. De naam van het onderdeel staat niet in het menu, maar als kopje boven de paginatitel (vaste opbouw); schermlezers horen de naam via de `aria-label` van het menu. Huidige pagina: groene lijn links en vet. Op een detailpagina is het bovenliggende item gemarkeerd. Op een telefoon staat het menu boven de inhoud. |
+| Kruimelpad | `components/Kruimelpad` + `content/kruimelpad.ts` | Laat zien waar de pagina in de site zit, bijvoorbeeld Home › Meer weten › Webinar | Website | Op elke pagina van niveau 1, behalve de homepage. Elke stap is een link, behalve de huidige pagina (`aria-current="page"`). Staat boven `<main>`, zodat de skiplink eroverheen springt. Op een telefoon loopt het door op de volgende regel. Nieuwe pagina? Zet hem in `content/kruimelpad.ts`. |
 | Knop als link | `components/KnopLink` | Een link naar een andere pagina die eruitziet als een NLDS-knop | Website | Gaat naar een andere pagina (het is een `<a>`, geen `<button>`). |
 | Knop | NLDS Button | Een actie op dezelfde pagina: formulier versturen, formulier openklappen, e-mailadres kopiëren | Website | Werkt met muis, Enter en spatie. |
 

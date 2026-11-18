@@ -1,6 +1,6 @@
 /**
  * APP – de opbouw van elke pagina:
- * skiplink → kop (PageHeader) → inhoud (main) → voet (PageFooter)
+ * skiplink → kop (PageHeader) → kruimelpad → inhoud (main) → voet (PageFooter)
  *
  * Kop en voet blijven op elke pagina hetzelfde. Alleen het deel in <main>
  * wisselt, afhankelijk van het adres (zie navigatie.ts).
@@ -8,6 +8,7 @@
 import { SkipLink } from '@nl-design-system-candidate/skip-link-react/css';
 import { useEffect, useMemo, useRef, type ComponentType } from 'react';
 import { CommunityKop, CommunityVoet } from './components/CommunityKop/CommunityKop';
+import { Kruimelpad } from './components/Kruimelpad/Kruimelpad';
 import { PageFooter } from './components/PageFooter/PageFooter';
 import { PageHeader } from './components/PageHeader/PageHeader';
 import { projecten } from './content/ontwikkelingen';
@@ -107,6 +108,9 @@ export function App() {
       {/* NLDS Skip Link: onzichtbaar tot je op Tab drukt (WCAG 2.4.1) */}
       <SkipLink href="#inhoud">Direct naar de inhoud</SkipLink>
       {isCommunity ? <CommunityKop /> : <PageHeader huidigPad={pad} />}
+      {/* Kruimelpad: waar ben je in de site? Alleen niveau 1, niet op de homepage.
+          Het staat boven <main>, zodat de skiplink er direct overheen springt. */}
+      {!isCommunity && <Kruimelpad pad={pad} />}
       <main id="inhoud" tabIndex={-1} ref={mainRef}>
         <Inhoud />
       </main>

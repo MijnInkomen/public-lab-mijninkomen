@@ -144,6 +144,18 @@ Isabella controleert de uitkomst en beslist wat er blijft.
 
 **Wat Isabella deed:** gevraagd om de controle. *(nog aanvullen: wat je zelf hebt gecontroleerd)*
 
+## Functie als keuzelijst bij Kennismaking (E-02)
+
+**Gevraagd:** Isabella zag in haar UX-onderzoek dat je bij Kennismaking je functie zelf moest typen, terwijl je bij Toegang aanvragen uit een lijst kiest. Ze vroeg om hier ook een keuzelijst van te maken, zodat de formulieren consistent zijn (heuristiek 4) en er minder fouten ontstaan (heuristiek 5).
+
+**Wat Claude deed:** de wijziging uitgevoerd. De lijst met functies staat nu op één plek, zodat beide formulieren dezelfde lijst gebruiken.
+
+## Kruimelpad (E-01)
+
+**Gevraagd:** Isabella zag in haar UX-onderzoek dat het kruimelpad wel in de gecodeerde versie zat, maar niet in het prototype. Ze vroeg om het toe te voegen, zodat bezoekers zien waar ze zijn (heuristiek 1) en makkelijk een niveau terug kunnen (heuristiek 3, WCAG 2.4.8).
+
+**Wat Claude deed:** de wijziging uitgevoerd volgens de NLDS-richtlijnen voor Breadcrumb Navigation, met de NLDS Link, en getest op toegankelijkheid op een groot en een klein scherm.
+
 ---
 
 ## Bronvermelding
