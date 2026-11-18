@@ -6,6 +6,8 @@ Op dit moment bevat het niveau 1 (informatief): de homepage en de pagina's *Over
 
 Deze README legt stap voor stap uit hoe je het project op je laptop aan de praat krijgt, ook als je nog niks hebt geïnstalleerd.
 
+Voor extra documentatie over het project of hoe het samenwerken binnen het project verloop kun je naar onze documentatie daarover in [het werkproces bestand](./docs/werkproces.md).
+
 ---
 
 ## Inhoud
