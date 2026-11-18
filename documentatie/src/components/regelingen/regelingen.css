@@ -1,0 +1,35 @@
+.mijninkomen-regelingen__blok {
+  margin-block: 2rem;
+}
+
+.mijninkomen-regelingen .utrecht-table {
+  font-size: 1rem;
+  hyphens: none;
+  inline-size: 100%;
+}
+
+.mijninkomen-regelingen .utrecht-table__caption {
+  font-weight: 600;
+  margin-block-end: 0.5rem;
+  text-align: start;
+}
+
+.mijninkomen-regelingen__lijst {
+  margin-block: 1rem 0;
+  padding-inline-start: 1.5rem;
+}
+
+.mijninkomen-regelingen__lijst li {
+  margin-block: 0.5rem;
+}
+
+/* Plekken die gemeenten nog moeten invullen, net als de schuingedrukte regels in de bronbestanden. */
+.mijninkomen-regelingen__aan-te-vullen {
+  color: var(--basis-color-accent-1-color-subtle);
+}
+
+.mijninkomen-regelingen__terug {
+  border-block-start: 1px solid #d9dcd7;
+  margin-block-start: 2rem;
+  padding-block-start: 1.5rem;
+}
