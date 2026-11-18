@@ -31,34 +31,35 @@ const navbar: Navbar = {
       position: 'left',
     },
     {
-      type: 'custom-roadmap',
-      to: '/roadmap/',
-      label: 'Roadmap',
+      // Alle besloten pagina's staan bij elkaar, zodat de balk niet volloopt zodra er eentje bijkomt.
+      // Het item verschijnt pas na inloggen; Beheer eronder alleen voor admins.
+      type: 'custom-community',
+      label: 'Voor communityleden',
       position: 'left',
-    },
-    {
-      type: 'custom-innovatie-backlog',
-      to: '/innovatie-backlog/',
-      label: 'Innovatie-backlog',
-      position: 'left',
-    },
-    {
-      type: 'custom-regelingen',
-      to: '/regelingen/',
-      label: 'Regelingen',
-      position: 'left',
+      items: [
+        {
+          to: '/roadmap/',
+          label: 'Roadmap',
+        },
+        {
+          to: '/innovatie-backlog/',
+          label: 'Innovatie-backlog',
+        },
+        {
+          to: '/regelingen/',
+          label: 'Regelingen',
+        },
+        {
+          to: 'pathname:///community/beheer/',
+          target: '_self',
+          label: 'Beheer',
+        },
+      ],
     },
     {
       to: '/contact/',
       label: 'Contact',
       position: 'left',
-    },
-    {
-      type: 'custom-beheer',
-      to: 'pathname:///community/beheer/',
-      target: '_self',
-      label: 'Beheer',
-      position: 'right',
     },
     {
       type: 'custom-inloggen',
