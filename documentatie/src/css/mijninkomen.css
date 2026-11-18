@@ -116,6 +116,18 @@
   inline-size: auto;
 }
 
+/* Het logo mag niet meekrimpen, anders valt het over het eerste menu-item heen. */
+.ma-theme .navbar__brand {
+  flex-shrink: 0;
+}
+
+/* Is er ruimte, dan begint het menu wat verder naar rechts. Smaller dan 70rem houdt custom.css de marge klein. */
+@media screen and (width > 70rem) {
+  .ma-theme .navbar__brand {
+    margin-inline-end: 1rem;
+  }
+}
+
 .ma-theme .navbar__link {
   padding-inline: 0.625rem;
   text-decoration-line: none;
