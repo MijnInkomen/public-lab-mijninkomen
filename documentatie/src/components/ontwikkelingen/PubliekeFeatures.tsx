@@ -1,28 +1,73 @@
-import { Card } from '@components/card/card';
+import { Card } from "@rijkshuisstijl-community/card-react";
 import { Badge } from '../home/Badge';
-import { type APIResponseType, useFetch } from '../useFetch';
+import { useState, useCallback, useEffect } from "react";
+
+export type APIResponseType = {
+    "publiek": {
+        "huidig": cardInfo[],
+        "toekomstig": cardInfo[],
+    },
+    "community": {
+        "roadmap": epic[],
+    },
+};
+
+export type cardInfo = {
+    "title": string,
+    "description": string,
+    "labels": string[]
+    "gebruikers": string[]
+    "status": string,
+    isOpen: boolean,
+};
+
+export type epic = feature & {
+    features: feature[],
+};
+
+export type feature = {
+    title: string,
+    description: string,
+    labels: string[],
+    status: string,
+    isOpen: boolean,
+};
 
 type PubliekeFeaturesProps = {
     type: "huidig" | "toekomstig"
 };
 
 export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
-    const response = useFetch(`/api/roadmap/publiek/${type}`);
-    if (response === null) {
+    const [epics, setEpics] = useState<null | false | APIResponseType["publiek"][typeof type]>(null);
+    const haalOp = useCallback(async () => {
+        try {
+            const response = await fetch(`/api/roadmap/publiek/${type}`);
+            if (!response.ok) {
+                throw new Error(`Status ${response.status}`);
+            }
+
+            setEpics(await response.json());
+        } catch(e) {
+            console.error(e);
+            setEpics(false);
+        }
+    }, []);
+    useEffect(() => {
+        haalOp();
+    }, [haalOp]);
+    
+    if (epics === null) {
         return <b>Informatie laden...</b>;
-    } else if (response === false) {
+    }
+    
+    if (epics === false) {
         return <>Iets ging er mis met het ophalen van de informatie, probeer later opnieuw</>;
-    } else if (response.length === 0) {
-        return <>In de toekomst komen hier meer ontwikkelingen te staan, kom later terug</>
     }
 
-    let json;
-    try {
-        json = JSON.parse(response) as APIResponseType["publiek"][typeof type];
-    } catch (e) {
-        console.error(e);
+    if (epics.length === 0) {
+        return <>In de toekomst komen hier meer ontwikkelingen te staan, kom later terug</>
     }
-    const cards = json?.map((cardInfo, index) => {
+    const cards = epics?.map((cardInfo, index) => {
         return (<Card
             description={cardInfo.description}
             heading={cardInfo.title}

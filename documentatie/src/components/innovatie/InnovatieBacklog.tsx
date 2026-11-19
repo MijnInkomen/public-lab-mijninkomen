@@ -19,7 +19,12 @@ import { Link } from '../Link';
 import { OORDEEL_TEKST, type Initiatief, type InnovatieBacklog as Backlog } from './types';
 import './innovatie.css';
 
+// Statisch adres voor testing
 const ADRES = '/community/innovatie-backlog.json';
+
+// Dynamische adres connectie aan github API
+// const ADRES = "/api/roadmap/"
+
 const ALLE = 'alle';
 
 // De inhoud staat bewust niet in de build: alles in de build is openbaar. Nginx geeft dit bestand alleen na inloggen vrij.
