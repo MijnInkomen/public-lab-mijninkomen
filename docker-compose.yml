@@ -13,6 +13,7 @@ services:
       - keycloak
       - oauth2-proxy
       - toegang-api
+      - roadmap-api
 
   keycloak:
     image: quay.io/keycloak/keycloak:26.4
@@ -119,6 +120,32 @@ services:
       timeout: 3s
       retries: 10
 
+  roadmap-api:
+    build: ./roadmap-api
+    environment:
+      DATABASE_URL: postgres://roadmap:${ROADMAP_DB_PASSWORD}@roadmap-db/roadmap
+      GITHUB_AUTH_TOKEN: ${GITHUB_AUTH_TOKEN}
+      GITHUB_REPO_OWNER: ${GITHUB_REPO_OWNER}
+      GITHUB_REPO_NAME: ${GITHUB_REPO_NAME}
+      GITHUB_WEBHOOK_SECRET: ${GITHUB_WEBHOOK_SECRET}
+    depends_on:
+      roadmap-db:
+        condition: service_healthy
+  
+  roadmap-db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: roadmap
+      POSTGRES_USER: roadmap
+      POSTGRES_PASSWORD: ${ROADMAP_DB_PASSWORD}
+    volumes:
+      - roadmap-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U roadmap"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
   mailpit:
     image: axllent/mailpit:v1.27
     ports:
@@ -127,3 +154,4 @@ services:
 volumes:
   postgres-data:
   toegang-data:
+  roadmap-data:
