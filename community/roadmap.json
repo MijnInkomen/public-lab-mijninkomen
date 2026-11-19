@@ -1,3 +1,115 @@
 {
-  "tekst": "Hier komt de volledige roadmap voor communityleden."
+  "voorbeelddata": true,
+  "epics": [
+    {
+      "titel": "Inkomensoverzicht in begrijpelijke taal",
+      "omschrijving": "Een overzicht van alle inkomsten en toeslagen van een inwoner, geschreven op B1-niveau.",
+      "gemeenten": ["Utrecht"],
+      "status": "In Behandeling",
+      "features": [
+        {
+            "titel": "Test1",
+            "omschrijving": "Test omschrijving voor de eerste test",
+            "voltooid": false
+        },
+        {
+            "titel": "Test2",
+            "omschrijving": "Test omschrijving voor de tweede test",
+            "voltooid": true
+        },
+        {
+            "titel": "Test3",
+            "omschrijving": "Test omschrijving voor de derde test",
+            "voltooid": true
+        }
+      ]
+    },
+    {
+      "titel": "Melding bij wijziging van bijstandsbedrag",
+      "omschrijving": "Inwoners krijgen een bericht als hun bijstandsbedrag verandert, met uitleg waarom.",
+      "gemeenten": ["Den Haag"],
+      "status": "PI Ready",
+      "features": [
+        {
+            "titel": "Test1",
+            "omschrijving": "Test omschrijving voor de eerste test",
+            "voltooid": true
+        },
+        {
+            "titel": "Test2",
+            "omschrijving": "Test omschrijving voor de tweede test",
+            "voltooid": true
+        }
+      ]
+    },
+    {
+      "titel": "Koppeling met eigen bankapp",
+      "omschrijving": "Inkomensgegevens direct tonen in de bankapp van de inwoner.",
+      "gemeenten": ["Amsterdam"],
+      "status": "Trechter",
+      "features": [
+        {
+            "titel": "Test1",
+            "omschrijving": "Test omschrijving voor de eerste test",
+            "voltooid": false
+        }
+      ]
+    },
+    {
+      "titel": "Eigen huisstijl per gemeenten in MijnInkomen",
+      "omschrijving": "Elke gemeenten kan kleuren en logo van MijnInkomen aanpassen.",
+      "gemeenten": ["'s-Hertogenbosch"],
+      "status": "Refinement",
+      "features": [
+        {
+            "titel": "Test1",
+            "omschrijving": "Test omschrijving voor de eerste test",
+            "voltooid": false
+        },
+        {
+            "titel": "Test2",
+            "omschrijving": "Test omschrijving voor de tweede test",
+            "voltooid": true
+        },
+        {
+            "titel": "Test3",
+            "omschrijving": "Test omschrijving voor de derde test",
+            "voltooid": false
+        },
+        {
+            "titel": "Test4",
+            "omschrijving": "Test omschrijving voor de vierde test",
+            "voltooid": false
+        },
+        {
+            "titel": "Test5",
+            "omschrijving": "Test omschrijving voor de vijfde test",
+            "voltooid": true
+        }
+      ]
+    },
+    {
+      "titel": "Rekenhulp: heb ik recht op bijzondere bijstand?",
+      "omschrijving": "Een korte vragenlijst die inwoners laat zien of ze misschien recht hebben op bijzondere bijstand.",
+      "gemeenten": null,
+      "status": "Trechter",
+      "features": [
+        {
+            "titel": "Test1",
+            "omschrijving": "Test omschrijving voor de eerste test",
+            "voltooid": false
+        },
+        {
+            "titel": "Test2",
+            "omschrijving": "Test omschrijving voor de tweede test",
+            "voltooid": true
+        },
+        {
+            "titel": "Test3",
+            "omschrijving": "Test omschrijving voor de derde test",
+            "voltooid": true
+        }
+      ]
+    }
+  ]
 }
