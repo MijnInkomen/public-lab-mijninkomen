@@ -3,13 +3,8 @@ import { Badge } from '../home/Badge';
 import { useState, useCallback, useEffect } from "react";
 
 export type APIResponseType = {
-    "publiek": {
-        "huidig": cardInfo[],
-        "toekomstig": cardInfo[],
-    },
-    "community": {
-        "roadmap": epic[],
-    },
+    "huidig": cardInfo[],
+    "toekomstig": cardInfo[],
 };
 
 export type cardInfo = {
@@ -38,7 +33,7 @@ type PubliekeFeaturesProps = {
 };
 
 export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
-    const [epics, setEpics] = useState<null | false | APIResponseType["publiek"][typeof type]>(null);
+    const [epics, setEpics] = useState<null | false | APIResponseType[typeof type]>(null);
     const haalOp = useCallback(async () => {
         try {
             const response = await fetch(`/api/roadmap/publiek/${type}`);

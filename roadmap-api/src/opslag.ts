@@ -1,42 +1,54 @@
-import fsPromises from "node:fs/promises";
 import pg, { Pool } from "pg";
+import { type publiekeEndpointType, type roadmapEndpointType, type EPIC_STATUSSEN } from "./server.ts";
 
-export type epicType = featureType & {
+export type epicType = Omit<featureType, "description"> & {
+  description: string | null,
   features: featureType[],
+  gebruikers: null | string[]
 };
 export type featureType = {
   title: string,
   description: string,
   labels: string[],
-  gebruikers: string[],
   status: epicOpslagType["status"],
   isOpen: boolean,
 };
 
-type epicOpslagType = {
+export type epicOpslagType = {
   id: string,
   title: string,
-  description: string,
+  description: string | null,
   labels: string[],
-  status: 'In Behandeling' | 'Trechter' | 'Refinement' | 'PI Ready' | null,
+  gebruikers: string[] | null,
+  status: typeof EPIC_STATUSSEN[number] | null,
   open: boolean,
 };
-type featureOpslagType = epicOpslagType & {
+export type featureOpslagType = epicOpslagType & {
   epic_id: string,
 };
 
-export const QUERIES = {
-  "huidig": "SELECT * FROM epics WHERE 'publiek' IN labels AND open = FALSE",
-  "toekomstig": "SELECT * FROM epics WHERE 'publiek' IN labels AND open = TRUE",
+export type roadmapEpicType = {
+  title: string,
+  description: null | string,
+  labels: string[],
+  gebruikers: null | string[],
+  status: typeof EPIC_STATUSSEN[number] | null,
+  isOpen: boolean,
+  features: roadmapFeatureType[],
+};
+export type roadmapFeatureType = {
+  title: string,
+  description: string,
+  isOpen: boolean,
 }
-export type queryType = keyof typeof QUERIES;
 
 const MAAK_TABLE = `
   CREATE TABLE IF NOT EXISTS epics (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
     title text NOT NULL,
-    description text NOT NULL,
+    description text,
     labels text[] NOT NULL,
+    gebruikers text[],
     status text NOT NULL DEFAULT 'In Behandeling'
       CHECK (status IN ('In Behandeling', 'Trechter', 'Refinement', 'PI Ready')),
     open boolean DEFAULT TRUE
@@ -59,22 +71,29 @@ const MAAK_TABLE = `
     ON epics (id, open);
 `;
 
-export function slaEpicOp(title: string, description: string, labels: string[], open: boolean, status: null | string) {
+export function slaEpicOp(epic: epicType) {
+  const {title, description, labels, isOpen, status } = epic;
   return {
-    text: `INSERT INTO epics (title, description, labels, open${status ? ", status": ""}) VALUES ($1, $2, $3, $4${status ? ", $5" : ""}) RETURNING id`,
-    values: [title, description, labels, open].concat(status ? [status] : [])
+    text: `
+      INSERT INTO epics (title, description, labels, open${status ? ", status": ""})
+      VALUES ($1, $2, $3, $4${status ? ", $5" : ""})
+      RETURNING id;
+    `,
+    values: [title, description, labels, isOpen].concat(status ? [status] : [])
   }
 }
 
-export function slaFeatureOp(epicId: string, title: string, description: string, labels: string[], open: boolean, status: null | string) {
+export function slaFeatureOp(epicId: string, feature: featureType) {
+  const { title, description, labels, isOpen, status } = feature;
   return {
-    text: `INSERT INTO features (epic_id, title, description, labels, open${status ? ", status" : ""}) VALUES ($1, $2, $3, $4, $5${status ? ", $6" : ""})`,
-    values: [epicId, title, description, labels, open].concat(status ? [status] : [])
+    text: `
+      INSERT INTO features (epic_id, title, description, labels, open${status ? ", status" : ""})
+      VALUES ($1, $2, $3, $4, $5${status ? ", $6" : ""});
+    `,
+    values: [epicId, title, description, labels, isOpen].concat(status ? [status] : [])
   }
 }
-const STATUSSES = ["In Behandeling", "Trechter", "Refinement", "PI Ready"];
 
-const OPSLAG_PAD = "./opslag/storage.json";
 export class Opslag {
   pool: Pool
   intialized: boolean = false;
@@ -86,84 +105,83 @@ export class Opslag {
   async slaIssuesOp(epics: epicType[]) {
     const client = await this.pool.connect();
     try {
-      await client.query('BEGIN');
-      await client.query('TRUNCATE TABLE epics CASCADE');
-      await client.query('TRUNCATE TABLE features');
+      await client.query('BEGIN;');
+      await client.query('TRUNCATE TABLE epics CASCADE;');
+      await client.query('TRUNCATE TABLE features;');
       for (const epic of epics) {
-        let status = getStatus(epic.labels)
-        let result = await client.query(
-          slaEpicOp(epic.title, epic.description, epic.labels, epic.isOpen, status)
-        );
+        let result = await client.query(slaEpicOp(epic));
         const epicId = result.rows[0].id;
 
         for (const feature of epic.features) {
-          status = getStatus(feature.labels);
-          await client.query(
-            slaFeatureOp(epicId, feature.title, feature.description, feature.labels, feature.isOpen, status)
-          );
+          await client.query(slaFeatureOp(epicId, feature));
         }
       }
 
-      await client.query('COMMIT');
+      await client.query('COMMIT;');
     } catch (e) {
       console.log(e)
-      await client.query("ROLLBACK");
+      await client.query("ROLLBACK;");
     } finally {
       client.release();
     }
   }
 
-  // async haalIssuesOp(): Promise<epicType[]> {
-  async haalIssuesOp(queryType: queryType): Promise<epicType[]> {
+  async haalPubliekeEpicsOp(epicType: publiekeEndpointType): Promise<Omit<epicType, "features">[]> {
     const client = await this.pool.connect();
-    let result;
+    let result: Omit<epicType, "features">[] = [];
     try {
-
-      if (queryType === "huidig") {
-        const response = await client.query("SELECT * FROM epics WHERE 'publiek' = ANY (labels) AND open = FALSE");
-        result = response.rows as epicOpslagType[];
-      } else {
-        const response = await client.query("SELECT * FROM epics WHERE 'publiek' = ANY (labels) AND open = TRUE");
-        result = response.rows as epicOpslagType[];
-      }
-      console.log(result);
+      const response = await client.query<Omit<epicType, "features">>(`
+        SELECT title, description, labels, gebruikers, status, open as isOpen FROM epics
+        WHERE 'publiek' = ANY (labels)
+        AND open = ${epicType === "huidig" ? "FALSE" : "TRUE"};
+      `);
+      result = response.rows;
     } catch (e) {
       console.error(e);
     } finally {
       client.release();
     }
 
-    return vertaalEpics(result || []);
+    return result;
   }
-}
 
-export function vertaalEpics(epics: epicOpslagType[]): epicType[] {
-  return epics.map((epic) => {
-    const epicInfo = vertaalIssue(epic);
-    return {
-      ...epicInfo,
-      features: [],
+  async haalRoadmapOp(type: roadmapEndpointType): Promise<roadmapEpicType[]> {
+    type epicQueryType = roadmapEpicType & {id: string};
+
+    const client = await this.pool.connect();
+    let result: epicQueryType[] = [];
+    try {
+      const epics = (await client.query<epicQueryType>(`
+        SELECT id, title, description, labels, gebruikers, status, open as isOpen FROM epics
+        WHERE $1 = ANY (labels);
+      `, [type])).rows;
+      result = epics.map((epic) => {
+        return {
+          ...epic,
+          features: []
+        }
+      });
+
+      type featureQueryType = roadmapFeatureType & {epic_id: string};
+      const features = (await client.query<featureQueryType>(`
+        SELECT epic_id, title, description, open as isOpen FROM features
+        WHERE epid_id = ANY ($1)
+        ORDER BY epic_id;
+      `, epics.map((epic) => epic.id))).rows;
+
+      for (const feature of features) {
+        const parentEpic = result.find((epic) => epic.id === feature.epic_id);
+        if (!parentEpic) {
+          continue;
+        }
+        parentEpic.features.push(feature);
+      }
+    } catch (e) {
+      console.error(e);
+    } finally {
+      client.release();
     }
-  });
-}
 
-export function vertaalIssue(issue: epicOpslagType): featureType {
-  return {
-    title: issue.title,
-    description: issue.description,
-    labels: issue.labels,
-    // TODO: Zorg ervoor dat gebruikers in isues staan op een manier
-    gebruikers: ["Alle gemeenten"],
-    status: issue.status,
-    isOpen: issue.open, 
+    return result;
   }
-}
-
-export function getStatus(labels: string[]) {
-  for (const status of STATUSSES) {
-    if (labels.includes(status)) {
-      return status;
-    }
-  }
-  return null;
 }

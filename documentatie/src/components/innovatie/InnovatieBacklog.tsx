@@ -23,7 +23,7 @@ import './innovatie.css';
 const ADRES = '/community/innovatie-backlog.json';
 
 // Dynamische adres connectie aan github API
-// const ADRES = "/api/roadmap/"
+// const ADRES = "/api/roadmap/privaat/innovatie"
 
 const ALLE = 'alle';
 

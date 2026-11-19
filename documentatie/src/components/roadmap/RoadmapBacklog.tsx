@@ -32,7 +32,7 @@ function afrondingsPercentage(features: any) {
 const ADRES = "/community/roadmap.json";
 
 // Dynamische adres connectie aan github API
-// const ADRES = "/api/roadmap/"
+// const ADRES = "/api/roadmap/privaat/mijninkomen"
 
 export function RoadmapBacklog() {
   const [backlog, setBacklog] = useState<null | false | APIresponseType>(null);

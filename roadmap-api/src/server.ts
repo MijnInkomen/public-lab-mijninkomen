@@ -1,8 +1,13 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
-import { valideerWebhookEvent,valideerWebhookSignature, verzoekGitHubData, type githubFeatureType, type githubResponseType } from './github.ts';
+import { valideerWebhookEvent,valideerWebhookSignature, verzoekGitHubData, type githubEpicType, type githubFeatureType, type githubResponseType } from './github.ts';
 import { Opslag, type epicType, type featureType } from './opslag.ts';
+import toml from "toml";
 
 const MAX_GROOTTE = 25 * 1024 * 1024;
+export const EPIC_STATUSSEN = ["In Behandeling", "Trechter", "Refinement", "PI Ready"] as const;
+
+export type publiekeEndpointType = "huidig" | "toekomstig";
+export type roadmapEndpointType = "mijninkomen" | "innovatie";
 
 export function maakServer(opslag: Opslag) {
   return createServer(async (verzoek, antwoord) => {
@@ -11,19 +16,28 @@ export function maakServer(opslag: Opslag) {
     try {
       switch (pad) {
         case "/publiek/huidig":
-        case "/publiek/toekomstig":
-          const type = pad.slice(9) as "huidig" | "toekomstig";
-          const epics = await opslag.haalIssuesOp(type);
-          return stuurJson(antwoord, 200, epics);
-        
-        case "/update":
-          await (async () => {
-            const result = await verwerkUpdateVerzoek(opslag);
-            stuurStatus(antwoord, result ? 200 : 500);
-          })();
+        case "/publiek/toekomstig": {
+          const type = pad.slice(9) as publiekeEndpointType;
+          const epics = await opslag.haalPubliekeEpicsOp(type);
+          stuurJson(antwoord, 200, {[type]: epics});
           return;
+        }
+        
+        case "/privaat/roadmap":
+        case "/privaat/innovatie": {
+          const type = pad.slice(9) as roadmapEndpointType;
+          const epics = await opslag.haalRoadmapOp(type);
+          stuurJson(antwoord, 200, {[type]: epics});
+          return;
+        }
+        
+        case "/update": {
+          const result = await verwerkUpdateVerzoek(opslag);
+          stuurStatus(antwoord, result ? 200 : 500);
+          return;
+        }
 
-        case "/webhook":
+        case "/webhook": {
           const body = await leesBody(verzoek);
           if (!valideerWebhookSignature(verzoek, body)) {
             stuurStatus(antwoord, 400);
@@ -36,12 +50,15 @@ export function maakServer(opslag: Opslag) {
           const result = await verwerkUpdateVerzoek(opslag);
           stuurStatus(antwoord, result ? 200 : 500);
           return;
+        }
 
         default:
-          return stuurJson(antwoord, 404, { fout: 'Niet gevonde '});
+          stuurJson(antwoord, 404, { fout: 'Niet gevonde '});
+          return;
       }
     } catch (fout) {
-      return stuurFout(antwoord, fout);
+      stuurFout(antwoord, fout);
+      return;
     }
   });
 }
@@ -65,29 +82,49 @@ function verwerkGithubResponse(response: githubResponseType["repository"]): epic
   const epics: epicType[] = [];
 
   for (const epic of response.epics.nodes) {
-    const epicInfo = vertaalGitHubIssue(epic);
-    console.log(epicInfo)
-    const features = epic.subIssues.nodes.map((feature) => vertaalGitHubIssue(feature));
+    const vertaaldeEpic = vertaalGitHubEpic(epic);
+    vertaaldeEpic.features = epic.subIssues.nodes.map(
+      (feature) => vertaalGitHubFeature(feature)
+    );
 
-    epics.push({
-      ...epicInfo,
-      features
-    });
+    epics.push(vertaaldeEpic);
   }
- 
   console.log(epics)
   return epics;
 }
 
-function vertaalGitHubIssue(issue: githubFeatureType): featureType {
-  return {
+function vertaalGitHubFeature(issue: githubFeatureType): featureType {
+  const feature: featureType = {
     title: issue.title,
     description: issue.body,
     labels: issue.labels.nodes.map((label) => label.name),
     isOpen: issue.state === "OPEN",
     status: null,
-    gebruikers: [],
   };
+  feature.status = getStatus(feature.labels);
+
+  return feature
+}
+
+function vertaalGitHubEpic(issue: githubEpicType): epicType {
+  const epic: epicType = {
+    title: issue.title,
+    description: null,
+    labels: issue.labels.nodes.map((label) => label.name),
+    isOpen: issue.state === "OPEN",
+    status: null,
+    gebruikers: null,
+    features: [],
+  };
+  epic.status = getStatus(epic.labels);
+
+  try {
+    const { beschrijving, gebruikers } = toml.parse(issue.body);
+    epic.description = beschrijving;
+    epic.gebruikers = gebruikers;
+  } catch(e) {}
+
+  return epic;
 }
 
 export async function verwerkUpdateVerzoek(opslag: Opslag) {
@@ -114,4 +151,13 @@ async function leesBody(verzoek: IncomingMessage) {
   }
 
   return Buffer.concat(delen);
+}
+
+function getStatus(labels: string[]): null | typeof EPIC_STATUSSEN[number] {
+  for (const status of EPIC_STATUSSEN) {
+    if (labels.includes(status)) {
+      return status;
+    }
+  }
+  return null;
 }
