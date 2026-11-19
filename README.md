@@ -221,6 +221,18 @@ pnpm run build
 cd ..
 ```
 
+**2b. Opzetten van Github Backend connectie, alleen nodig als je werkt aan Dynamisch ladende delen van GitHub**
+
+1. Open een [smee service](https://smee.io) en start een nieuw kanaal.
+2. Ga in de roadmap-api folder en in de source open het [github.ts](./roadmap-api/src/github.ts) bestand.
+3. Ga naar de onderkant van het bestand en un-comment alle smee code, daarna voeg de url van de gestarte smee service erin
+4. Open GitHub en ga naar de repo waarin de issues staan
+5. Check of alle informatie binnen de .env overkomt met de Repo informatie
+6. Ga naar Settings -> Webhooks en creëer een nieuwe webhook met de url van smee
+7. Geef deze webhook toegang naar issue events
+
+Nu om te kijken of het werkt kun je een issue in de repo op closed zetten en reopenen. Als je dan een event in de browser ziet aankomen bij smee, is de webhook correct opgezet.
+
 **3. Start alles:**
 
 ```bash
