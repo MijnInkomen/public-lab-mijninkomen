@@ -149,6 +149,7 @@ function vertaalGitHubFeature(issue: githubFeatureType): featureType {
   return feature
 }
 
+class GithubTOMLBodyError extends Error {}
 function vertaalGitHubEpic(issue: githubEpicType): epicType {
   const epic: epicType = {
     title: issue.title,
@@ -173,7 +174,9 @@ function vertaalGitHubEpic(issue: githubEpicType): epicType {
     epic.description = beschrijving;
     epic.gebruikers = gebruikers;
   } catch(e) {
-    console.error(e);
+    if (e instanceof GithubTOMLBodyError) {
+      console.error(e);
+    }
   }
 
   return epic;

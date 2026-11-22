@@ -132,14 +132,14 @@ export function RoadmapBacklog() {
             <Heading level={3}>
               {title} <Badge soort="status">{status}</Badge>
             </Heading>
-            {description !== null ? 
+            {description === null || gebruikers === null? 
               <>
-                <Paragraph>{description}</Paragraph>
-                <Paragraph>Gemeenten: {gebruikers?.join(", ") || "Alle gemeenten"}</Paragraph>
+                <Paragraph>Deze Epic moet nog uitgewerkt worden door het team</Paragraph>
               </>
               :
               <>
-                <Paragraph>Deze Epic moet nog uitgewerkt worden door het team</Paragraph>
+                <Paragraph>{description}</Paragraph>
+                <Paragraph>Gemeenten: {gebruikers?.join(", ") || "Alle gemeenten"}</Paragraph>
               </>
             }
             <TableContainer className="mijninkomen-roadmap__features">
