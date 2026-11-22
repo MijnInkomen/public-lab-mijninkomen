@@ -9,11 +9,15 @@ export type APIResponseType = {
 
 export type cardInfo = {
     title: string,
-    description: string,
-    gebruikers: string[]
     status: string,
     isOpen: boolean,
-};
+} & ({
+    description: null,
+    gebruikers: null,
+} | {
+    description: string,
+    gebruikers: string[],
+});
 
 export type epic = feature & {
     features: feature[],
@@ -63,13 +67,24 @@ export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
         return <>In de toekomst komen hier meer ontwikkelingen te staan, kom later terug</>
     }
     const cards = items?.map((cardInfo, index) => {
+        if (cardInfo.description === null) {
+            return (<Card
+                title={cardInfo.title}
+                {...(type === "toekomstig" ? {subheading: <Badge soort="status">{cardInfo.status}</Badge>} : {})}
+                heading={cardInfo.title}
+                description="Deze Epic moet nog uitgewerkt worden door het team"
+                href="#"
+                key={index}
+            ></Card>);
+        }
+
         return (<Card
-            description={cardInfo.description}
-            heading={cardInfo.title}
-            {...(type === "toekomstig" ? {subheading: <Badge>{cardInfo.status}</Badge>} : {})}
-            href="#"
-            metadata={`Gebruikt door: ${cardInfo.gebruikers.join(", ")}`}
             title={cardInfo.title}
+            heading={cardInfo.title}
+            {...(type === "toekomstig" ? {subheading: <Badge soort="status">{cardInfo.status}</Badge>} : {})}
+            description={cardInfo.description}
+            metadata={`Gebruikt door: ${cardInfo.gebruikers.join(", ")}`}
+            href="#"
             linkLabel="Lees meer"
             key={index}
         ></Card>);

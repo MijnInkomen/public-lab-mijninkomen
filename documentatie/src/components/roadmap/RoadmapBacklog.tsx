@@ -5,12 +5,16 @@ import { STATUSSEN, type statusTypes } from "./RoadmapStatuslijst";
 
 
 type epicType = {
-  titel: string,
-  omschrijving: string,
-  gemeenten: null | string[],
+  title: string,
   status: statusTypes,
   features: featureType[],
-};
+} & ({
+  description: string,
+  gebruikers: string[],
+} | {
+  description: null,
+  gebruikers: null,
+});
 
 type featureType = {
   title: string,
@@ -111,10 +115,10 @@ export function RoadmapBacklog() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {gefilterde.map(({ titel, gemeenten, status, features }) => (
-              <TableRow key={titel}>
-                <TableCell>{titel}</TableCell>
-                <TableCell>{gemeenten?.join() || "-"}</TableCell>
+            {gefilterde.map(({ title, gebruikers, status, features }) => (
+              <TableRow key={title}>
+                <TableCell>{title}</TableCell>
+                <TableCell>{gebruikers?.join() || "-"}</TableCell>
                 <TableCell><Badge soort="status">{status}</Badge></TableCell>
                 <TableCell>
                   {afrondingsPercentage(features)}
@@ -123,13 +127,21 @@ export function RoadmapBacklog() {
             ))}
           </TableBody>
         </Table>
-        {gefilterde.map(({ titel, omschrijving, gemeenten, status, features }) => (
-          <article key={titel} className="mijninkomen-roadmap__epic">
+        {gefilterde.map(({ title, description, gebruikers, status, features }) => (
+          <article key={title} className="mijninkomen-roadmap__epic">
             <Heading level={3}>
-              {titel} <Badge soort="status">{status}</Badge>
+              {title} <Badge soort="status">{status}</Badge>
             </Heading>
-            <Paragraph>{omschrijving}</Paragraph>
-            <Paragraph>Gemeenten: {gemeenten?.join(", ") || "Alle gemeenten"}</Paragraph>
+            {description !== null ? 
+              <>
+                <Paragraph>{description}</Paragraph>
+                <Paragraph>Gemeenten: {gebruikers?.join(", ") || "Alle gemeenten"}</Paragraph>
+              </>
+              :
+              <>
+                <Paragraph>Deze Epic moet nog uitgewerkt worden door het team</Paragraph>
+              </>
+            }
             <TableContainer className="mijninkomen-roadmap__features">
               <Heading level={4}>Features:</Heading>
               <Table>

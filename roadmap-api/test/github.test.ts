@@ -1,4 +1,4 @@
-loadEnvFile("./test.env");
+loadEnvFile("./test/test.env");
 
 import assert from "node:assert";
 import test, { describe } from "node:test";
@@ -23,7 +23,6 @@ describe("Webhook signature validatie functie", () => {
 
   test("Slaagt een correcte signature", () => {
     verzoek = creëerMockSignatureVerzoek("sha256=c8733c93ec530cfb1ae6f539d89f33b03671149cb74efe5b58718370b3b2b95f");
-    console.log(valideerWebhookSignature(verzoek, body))
     assert(valideerWebhookSignature(verzoek, body));
     
   });

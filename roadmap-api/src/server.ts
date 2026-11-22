@@ -1,16 +1,20 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
+import toml from "toml";
 import { valideerWebhookEvent,valideerWebhookSignature, verzoekGitHubData, type githubEpicType, type githubFeatureType, type githubResponseType } from './github.ts';
 import { Opslag, type epicType, type featureType } from './opslag.ts';
 import { ROLLEN, type Keycloak } from './keycloak.ts';
-import toml from "toml";
+import { creëerDebouncer } from './utils.ts';
 
-const MAX_GROOTTE = 25 * 1024 * 1024;
+const MAX_GROOTTE_BODY = 25 * 1024 * 1024;
+const UPDATE_DEBOUNCE_GROOTTE = 5 * 60 * 1000;
 export const EPIC_STATUSSEN = ["In Behandeling", "Trechter", "Refinement", "PI Ready"] as const;
 
 export type publiekeEndpointType = "huidig" | "toekomstig";
-export type roadmapEndpointType = "mijninkomen" | "innovatie";
+export type roadmapEndpointType = "roadmap" | "innovatie";
 
 export function maakServer(opslag: Opslag, keycloak: Keycloak) {
+  const debouncedUpdate = creëerDebouncer(verwerkUpdateVerzoek, UPDATE_DEBOUNCE_GROOTTE);
+
   return createServer(async (verzoek, antwoord) => {
     const url = new URL(verzoek.url ?? '/', 'http://localhost');
     const pad = url.pathname.slice(12, url.pathname.at(-1) === "/" ? -1 : undefined);
@@ -40,7 +44,6 @@ export function maakServer(opslag: Opslag, keycloak: Keycloak) {
 
           const type = pad.slice(9) as roadmapEndpointType;
           const epics = await opslag.haalRoadmapOp(type);
-          console.log(epics)
           stuurJson(antwoord, 200, {[type]: epics});
           return;
         }
@@ -64,8 +67,8 @@ export function maakServer(opslag: Opslag, keycloak: Keycloak) {
             return;
           }
 
-          const result = await verwerkUpdateVerzoek(opslag);
-          stuurStatus(antwoord, result ? 200 : 500);
+          verwerkUpdateVerzoek(opslag);
+          stuurStatus(antwoord, 200);
           return;
         }
 
@@ -81,12 +84,14 @@ export function maakServer(opslag: Opslag, keycloak: Keycloak) {
             stuurStatus(antwoord, 400);
             return;
           }
+          
           if (!valideerWebhookEvent(verzoek, body)) {
             stuurStatus(antwoord, 200);
             return;
           }
-          const result = await verwerkUpdateVerzoek(opslag);
-          stuurStatus(antwoord, result ? 200 : 500);
+          
+          debouncedUpdate(opslag);
+          stuurStatus(antwoord, 200);
           return;
         }
 
@@ -157,10 +162,19 @@ function vertaalGitHubEpic(issue: githubEpicType): epicType {
   epic.status = getStatus(epic.labels);
 
   try {
+    // Github Epics moeten in hun body toml gebruiken
+    // Hierdoor kunnen beide de beschrijving en gebruikers opgehaald worden uit de bodies
+    // Als de body geen description en gebuikers heeft in toml, is deze oncompleet / ongeformuleerd
     const { beschrijving, gebruikers } = toml.parse(issue.body);
+    if (typeof beschrijving !== "string" || !Array.isArray(gebruikers)) {
+      throw new Error("Github: Toml bodies hebben niet de goede structuur");
+    }
+
     epic.description = beschrijving;
     epic.gebruikers = gebruikers;
-  } catch(e) {}
+  } catch(e) {
+    console.error(e);
+  }
 
   return epic;
 }
@@ -181,7 +195,7 @@ async function leesBody(verzoek: IncomingMessage) {
   let grootte = 0;
   for await (const deel of verzoek) {
     grootte += deel.length;
-    if (grootte > MAX_GROOTTE){
+    if (grootte > MAX_GROOTTE_BODY){
       throw new Error('Te groot');
     }
 

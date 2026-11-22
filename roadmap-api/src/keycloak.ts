@@ -70,7 +70,7 @@ export class Keycloak {
 
       const gebruiker = gevonden.find((kandidaat) => kandidaat.email?.toLowerCase() === email.toLowerCase());
       if (!gebruiker) {
-        return new Set<string>();
+        throw new Error("Keycloak: deze gebruiker bestaat geeneens");
       }
 
       const rollen: unknown = await (await beheer(`/users/${gebruiker.id}/role-mappings/realm/composite`)).json();

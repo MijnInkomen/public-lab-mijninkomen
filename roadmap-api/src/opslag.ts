@@ -1,6 +1,7 @@
 import pg, { Client, Pool } from "pg";
 import { type publiekeEndpointType, type roadmapEndpointType, type EPIC_STATUSSEN } from "./server.ts";
 
+// De feature en epic structuur die de server creërt vanuit de github structuur
 export type epicType = Omit<featureType, "description"> & {
   description: string | null,
   features: featureType[],
@@ -14,6 +15,7 @@ export type featureType = {
   isOpen: boolean,
 };
 
+// De structuur van de opgeslagen features/epics
 export type issueOpslag = {
   id: string,
   parent_id: string | null,
@@ -40,13 +42,18 @@ export type roadmapFeatureType = {
   isOpen: boolean,
 }
 
+// De structuur van de epics die naar de ontwikkeling pagina gaan
 export type publiekeEpicType = {
   title: string,
-  description: string,
-  gebruikers: string[],
   status: string,
   isOpen: boolean,
-}
+} & ({
+  description: null,
+  gebruikers: null,
+} | {
+  description: string,
+  gebruikers: string[],
+});
 
 const MAAK_TABLE = `
   CREATE TABLE IF NOT EXISTS issues (
