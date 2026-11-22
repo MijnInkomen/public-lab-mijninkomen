@@ -13,13 +13,13 @@ type epicType = {
 };
 
 type featureType = {
-  titel: string,
-  omschrijving: string,
-  voltooid: boolean
+  title: string,
+  description: string,
+  isOpen: boolean
 };
 
 type APIresponseType = {
-  epics: epicType[],
+  roadmap: epicType[],
 };
 
 function afrondingsPercentage(features: any) {
@@ -29,16 +29,17 @@ function afrondingsPercentage(features: any) {
 }
 
 // Statisch adres voor testing
-const ADRES = "/community/roadmap.json";
+// const ADRES = "/community/roadmap.json";
 
 // Dynamische adres connectie aan github API
-// const ADRES = "/api/roadmap/privaat/mijninkomen"
+const ADRES = "/api/roadmap/privaat/roadmap";
 
 export function RoadmapBacklog() {
   const [backlog, setBacklog] = useState<null | false | APIresponseType>(null);
+  const [filter, setFilter] = useState("ALLE");
   const haalOp = useCallback(async () => {
       try {
-          const response = await fetch(`/`);
+          const response = await fetch(ADRES);
           if (response.status === 401) {
             window.location.assign("/inloggen/");
             return;
@@ -71,14 +72,13 @@ export function RoadmapBacklog() {
     return <>Er ging iets mis met het laden, probeer later opnieuw</>;
   }
   
-  if (backlog.epics.length === 0) {
+  if (backlog.roadmap.length === 0) {
     return <>De roadmap is momenteel leeg, kijk later opnieuw voor nieuwe items</>;
   }
-
-  const [filter, setFilter] = useState("ALLE");
-  const gefilterde: typeof backlog["epics"] = filter === "ALLE" ? backlog.epics
-    : backlog.epics.filter(({ status }) => status === filter);
-
+  
+  const gefilterde: typeof backlog["roadmap"] = filter === "ALLE" ? backlog.roadmap
+  : backlog.roadmap.filter(({ status }) => status === filter);
+  
   return (
     <>
       <section aria-labelledby='roadmap-epics' className="container mijninkomen-sectie">
@@ -141,11 +141,11 @@ export function RoadmapBacklog() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {features.map(({titel, omschrijving, voltooid}) => (
+                  {features.map(({title, description, isOpen}) => (
                     <TableRow>
-                      <TableCell>{titel}</TableCell>
-                      <TableCell>{omschrijving}</TableCell>
-                      <TableCell>{voltooid ? "Ja" : "Nee"}</TableCell>
+                      <TableCell>{title}</TableCell>
+                      <TableCell>{description}</TableCell>
+                      <TableCell>{isOpen ? "Ja" : "Nee"}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

@@ -1,6 +1,7 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { valideerWebhookEvent,valideerWebhookSignature, verzoekGitHubData, type githubEpicType, type githubFeatureType, type githubResponseType } from './github.ts';
 import { Opslag, type epicType, type featureType } from './opslag.ts';
+import { ROLLEN, type Keycloak } from './keycloak.ts';
 import toml from "toml";
 
 const MAX_GROOTTE = 25 * 1024 * 1024;
@@ -9,7 +10,7 @@ export const EPIC_STATUSSEN = ["In Behandeling", "Trechter", "Refinement", "PI R
 export type publiekeEndpointType = "huidig" | "toekomstig";
 export type roadmapEndpointType = "mijninkomen" | "innovatie";
 
-export function maakServer(opslag: Opslag) {
+export function maakServer(opslag: Opslag, keycloak: Keycloak) {
   return createServer(async (verzoek, antwoord) => {
     const url = new URL(verzoek.url ?? '/', 'http://localhost');
     const pad = url.pathname.slice(12, url.pathname.at(-1) === "/" ? -1 : undefined);
@@ -17,6 +18,12 @@ export function maakServer(opslag: Opslag) {
       switch (pad) {
         case "/publiek/huidig":
         case "/publiek/toekomstig": {
+          if (verzoek.method !== "GET") {
+            antwoord.setHeader('Allow', 'GET');
+            stuurJson(antwoord, 405, { fout: 'Methode niet toegestaan' });
+            return;
+          }
+
           const type = pad.slice(9) as publiekeEndpointType;
           const epics = await opslag.haalPubliekeEpicsOp(type);
           stuurJson(antwoord, 200, {[type]: epics});
@@ -25,19 +32,50 @@ export function maakServer(opslag: Opslag) {
         
         case "/privaat/roadmap":
         case "/privaat/innovatie": {
+          if (verzoek.method !== "GET") {
+            antwoord.setHeader('Allow', 'GET');
+            stuurJson(antwoord, 405, { fout: 'Methode niet toegestaan' });
+            return;
+          }
+
           const type = pad.slice(9) as roadmapEndpointType;
           const epics = await opslag.haalRoadmapOp(type);
+          console.log(epics)
           stuurJson(antwoord, 200, {[type]: epics});
           return;
         }
         
         case "/update": {
+          if (verzoek.method !== "PATCH") {
+            antwoord.setHeader('Allow', 'PATCH');
+            stuurJson(antwoord, 405, { fout: 'Methode niet toegestaan' });
+            return;
+          }
+
+          const email = leesHeading(verzoek, "x-auth-email");
+          if (!email) {
+            stuurStatus(antwoord, 401);
+            return;
+          }
+
+          const rollen = await keycloak.haalRollenOp(email);
+          if (!(rollen.has(ROLLEN.ADMIN) || rollen.has(ROLLEN.HOOFDBEHEERDER))) {
+            stuurStatus(antwoord, 401);
+            return;
+          }
+
           const result = await verwerkUpdateVerzoek(opslag);
           stuurStatus(antwoord, result ? 200 : 500);
           return;
         }
 
         case "/webhook": {
+          if (verzoek.method !== "POST") {
+            antwoord.setHeader('Allow', 'POST');
+            stuurJson(antwoord, 405, { fout: 'Methode niet toegestaan' });
+            return;
+          }
+
           const body = await leesBody(verzoek);
           if (!valideerWebhookSignature(verzoek, body)) {
             stuurStatus(antwoord, 400);
@@ -151,6 +189,15 @@ async function leesBody(verzoek: IncomingMessage) {
   }
 
   return Buffer.concat(delen);
+}
+
+function leesHeading(verzoek: IncomingMessage, header: string) {
+  let waarde = verzoek.headers[header];
+  if (Array.isArray(waarde)) {
+    waarde = waarde.join("");
+  }
+
+  return waarde ? waarde.trim() : null;
 }
 
 function getStatus(labels: string[]): null | typeof EPIC_STATUSSEN[number] {

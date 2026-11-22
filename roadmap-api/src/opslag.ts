@@ -1,4 +1,4 @@
-import pg, { Pool } from "pg";
+import pg, { Client, Pool } from "pg";
 import { type publiekeEndpointType, type roadmapEndpointType, type EPIC_STATUSSEN } from "./server.ts";
 
 export type epicType = Omit<featureType, "description"> & {
@@ -7,24 +7,22 @@ export type epicType = Omit<featureType, "description"> & {
   gebruikers: null | string[]
 };
 export type featureType = {
+  status: issueOpslag["status"],
   title: string,
   description: string,
   labels: string[],
-  status: epicOpslagType["status"],
   isOpen: boolean,
 };
 
-export type epicOpslagType = {
+export type issueOpslag = {
   id: string,
+  parent_id: string | null,
+  issue_type: "feature" | "epic",
   title: string,
   description: string | null,
-  labels: string[],
   gebruikers: string[] | null,
   status: typeof EPIC_STATUSSEN[number] | null,
   open: boolean,
-};
-export type featureOpslagType = epicOpslagType & {
-  epic_id: string,
 };
 
 export type roadmapEpicType = {
@@ -42,56 +40,95 @@ export type roadmapFeatureType = {
   isOpen: boolean,
 }
 
+export type publiekeEpicType = {
+  title: string,
+  description: string,
+  gebruikers: string[],
+  status: string,
+  isOpen: boolean,
+}
+
 const MAAK_TABLE = `
-  CREATE TABLE IF NOT EXISTS epics (
+  CREATE TABLE IF NOT EXISTS issues (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    parent_id uuid,
+    issue_type text NOT NULL
+      CHECK (issue_type IN ('epic', 'feature')),
     title text NOT NULL,
     description text,
-    labels text[] NOT NULL,
     gebruikers text[],
-    status text NOT NULL DEFAULT 'In Behandeling'
+    open boolean DEFAULT FALSE,
+    status text NOT NULL DEFAULT 'In Behandeling',
       CHECK (status IN ('In Behandeling', 'Trechter', 'Refinement', 'PI Ready')),
-    open boolean DEFAULT TRUE
+    CONSTRAINT fk_features_epics FOREIGN KEY (parent_id)
+      REFERENCES issues(id)
   );
 
-  CREATE TABLE IF NOT EXISTS features (
-    id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-    epic_id uuid,
-    title text NOT NULL,
-    description text NOT NULL,
-    labels text[] NOT NULL,
-    status text NOT NULL DEFAULT 'In Behandeling'
-      CHECK (status IN ('In Behandeling', 'Trechter', 'Refinement', 'PI Ready')),
-    open boolean DEFAULT TRUE,
-    CONSTRAINT fk_features_epics FOREIGN KEY (epic_id)
-      REFERENCES epics(id)
+  CREATE TABLE IF NOT EXISTS labels (
+    name text PRIMARY KEY
+  );
+
+  CREATE TABLE IF NOT EXISTS issue_labels (
+    issue_id uuid NOT NULL,
+    label text NOT NULL,
+    CONSTRAINT fk_issue FOREIGN KEY (issue_id)
+      REFERENCES issues(id),
+    CONSTRAINT fk_label FOREIGN KEY (label)
+      REFERENCES labels(name),
+    PRIMARY KEY (issue_id, label)
   );
 
   CREATE INDEX IF NOT EXISTS is_afgemaakt
-    ON epics (id, open);
+    ON issues (id, open);
+  CREATE INDEX IF NOT EXISTS welke_labels
+    ON issue_labels (issue_id, label)
 `;
 
 export function slaEpicOp(epic: epicType) {
-  const {title, description, labels, isOpen, status } = epic;
+  const {title, description, isOpen, status, gebruikers } = epic;
   return {
     text: `
-      INSERT INTO epics (title, description, labels, open${status ? ", status": ""})
-      VALUES ($1, $2, $3, $4${status ? ", $5" : ""})
+      INSERT INTO issues (issue_type, title, description, gebruikers, open${status ? ", status": ""})
+      VALUES ('epic', $1, $2, $3, $4${status ? ", $5" : ""})
       RETURNING id;
     `,
-    values: [title, description, labels, isOpen].concat(status ? [status] : [])
+    values: [title, description, gebruikers, isOpen].concat(status ? [status] : [])
   }
 }
 
 export function slaFeatureOp(epicId: string, feature: featureType) {
-  const { title, description, labels, isOpen, status } = feature;
+  const { title, description, isOpen, status } = feature;
   return {
     text: `
-      INSERT INTO features (epic_id, title, description, labels, open${status ? ", status" : ""})
-      VALUES ($1, $2, $3, $4, $5${status ? ", $6" : ""});
+      INSERT INTO issues (issue_type, parent_id, title, description, open${status ? ", status" : ""})
+      VALUES ('feature', $1, $2, $3, $4${status ? ", $5" : ""})
+      RETURNING id;
     `,
-    values: [epicId, title, description, labels, isOpen].concat(status ? [status] : [])
+    values: [epicId, title, description, isOpen].concat(status ? [status] : [])
   }
+}
+
+export async function slaLabelsOp(client: Client, issueId: string, labels: string[]) {
+  if (labels.length === 0) {
+    return;
+  }
+
+  const labelIdxes = Array.from({length: labels.length}, (_, idx) => "$" + (idx + 1).toString());
+  const issueIdx = labels.length + 1;
+  const values = [...labels, issueId];
+  await client.query(`
+    INSERT INTO labels VALUES ${labelIdxes.map((idx) => `(${idx})`).join()}
+      ON CONFLICT DO NOTHING;
+    `,
+    labels
+  );
+
+  await client.query(`
+    INSERT INTO issue_labels
+    VALUES ${labelIdxes.map((idx) => `($${issueIdx}, ${idx})`).join()};
+    `,
+    values
+  );
 }
 
 export class Opslag {
@@ -106,14 +143,18 @@ export class Opslag {
     const client = await this.pool.connect();
     try {
       await client.query('BEGIN;');
-      await client.query('TRUNCATE TABLE epics CASCADE;');
-      await client.query('TRUNCATE TABLE features;');
+      await client.query(`TRUNCATE TABLE issues CASCADE;`);
+      await client.query('TRUNCATE TABLE labels CASCADE;');
+      await client.query('TRUNCATE TABLE issue_labels;');
       for (const epic of epics) {
         let result = await client.query(slaEpicOp(epic));
         const epicId = result.rows[0].id;
+        await slaLabelsOp(client, epicId, epic.labels);
 
         for (const feature of epic.features) {
-          await client.query(slaFeatureOp(epicId, feature));
+          result = await client.query(slaFeatureOp(epicId, feature));
+          const featureId = result.rows[0].id;
+          await slaLabelsOp(client, featureId, feature.labels);
         }
       }
 
@@ -126,14 +167,16 @@ export class Opslag {
     }
   }
 
-  async haalPubliekeEpicsOp(epicType: publiekeEndpointType): Promise<Omit<epicType, "features">[]> {
+  async haalPubliekeEpicsOp(epicType: publiekeEndpointType): Promise<publiekeEpicType[]> {
     const client = await this.pool.connect();
-    let result: Omit<epicType, "features">[] = [];
+    let result: publiekeEpicType[] = [];
     try {
-      const response = await client.query<Omit<epicType, "features">>(`
-        SELECT title, description, labels, gebruikers, status, open as isOpen FROM epics
-        WHERE 'publiek' = ANY (labels)
-        AND open = ${epicType === "huidig" ? "FALSE" : "TRUE"};
+      const response = await client.query<publiekeEpicType>(`
+        SELECT title, description, gebruikers, status, open as isOpen FROM issues
+        JOIN issue_labels ON issues.id = issue_labels.issue_id
+        JOIN labels ON issue_labels.label = labels.name
+        WHERE issue_type = 'epic' AND labels.name = 'publiek'
+          AND open = ${epicType === "huidig" ? "FALSE" : "TRUE"};
       `);
       result = response.rows;
     } catch (e) {
@@ -149,32 +192,60 @@ export class Opslag {
     type epicQueryType = roadmapEpicType & {id: string};
 
     const client = await this.pool.connect();
-    let result: epicQueryType[] = [];
+    let result = new Map<string, roadmapEpicType>();
     try {
       const epics = (await client.query<epicQueryType>(`
-        SELECT id, title, description, labels, gebruikers, status, open as isOpen FROM epics
-        WHERE $1 = ANY (labels);
+        SELECT id, title, description, gebruikers, status, open as isOpen FROM issues
+        JOIN issue_labels ON issues.id = issue_labels.issue_id
+        JOIN labels ON issue_labels.label = labels.name
+        WHERE issue_type = 'epic' AND labels.name = $1;
       `, [type])).rows;
-      result = epics.map((epic) => {
-        return {
-          ...epic,
-          features: []
-        }
+      epics.forEach((epic) => {
+        let epicData: Omit<epicQueryType, "id"> & {id?: string} = structuredClone(epic);
+        delete epicData.id;
+
+        result.set(epic.id, {
+          ...epicData,
+          labels: [],
+          features: [],
+        });
       });
 
-      type featureQueryType = roadmapFeatureType & {epic_id: string};
+      type featureQueryType = roadmapFeatureType & {parent_id: string};
       const features = (await client.query<featureQueryType>(`
-        SELECT epic_id, title, description, open as isOpen FROM features
-        WHERE epid_id = ANY ($1)
-        ORDER BY epic_id;
-      `, epics.map((epic) => epic.id))).rows;
+        SELECT parent_id, title, description, open as isOpen FROM issues
+        WHERE issue_type = 'feature' AND parent_id = ANY ($1)
+        ORDER BY parent_id;
+      `, [epics.map((epic) => epic.id)])).rows;
 
       for (const feature of features) {
-        const parentEpic = result.find((epic) => epic.id === feature.epic_id);
+        const parentEpic = result.get(feature.parent_id);
         if (!parentEpic) {
           continue;
         }
-        parentEpic.features.push(feature);
+        parentEpic.features.push({
+          title: feature.title,
+          description: feature.description,
+          isOpen: feature.isOpen
+        });
+      }
+
+      type labelQueryType = {issue_id: string, name: string};
+      const labels = (await client.query<labelQueryType>(`
+        SELECT name, issue_id FROM labels
+        JOIN issue_labels ON labels.name = issue_labels.label
+        JOIN issues ON issue_labels.issue_id = issues.id
+        WHERE issue_id = ANY ($1)
+        ORDER BY issue_id;
+      `, [epics.map((epic) => epic.id)])).rows;
+
+      for (const label of labels) {
+        const parentEpic = result.get(label.issue_id);
+        if (!parentEpic) {
+          continue;
+        }
+
+        parentEpic.labels.push(label.name);
       }
     } catch (e) {
       console.error(e);
@@ -182,6 +253,6 @@ export class Opslag {
       client.release();
     }
 
-    return result;
+    return [...result.values()];
   }
 }
