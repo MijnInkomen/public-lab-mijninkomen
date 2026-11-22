@@ -39,7 +39,12 @@ export function PubliekeFeatures({ type }: PubliekeFeaturesProps) {
     const [epics, setEpics] = useState<null | false | APIResponseType>(null);
     const haalOp = useCallback(async () => {
         try {
-            const response = await fetch(`/api/roadmap/publiek/${type}`);
+            // Statisch fetch voor testing
+            const response = await fetch("/community/publiek.json");
+
+            // Dynamische fetch connectie aan github API
+            // const response = await fetch(`/api/roadmap/publiek/${type}`);
+
             if (!response.ok) {
                 throw new Error(`Status ${response.status}`);
             }
