@@ -1,4 +1,4 @@
-import { Card } from '@components/card/card';
+import { Card } from '@rijkshuisstijl-community/card-react';
 import { Badge } from '../home/Badge';
 import { type APIResponseType, useFetch } from '../useFetch';
 
