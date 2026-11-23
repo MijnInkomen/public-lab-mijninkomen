@@ -32,6 +32,12 @@ const navbar: Navbar = {
     },
     {
       type: 'custom-roadmap',
+      to: '/vergaderingen/',
+      label: 'Vergaderingen',
+      position: 'left',
+    },
+    {
+      type: 'custom-roadmap',
       to: '/roadmap/',
       label: 'Roadmap',
       position: 'left',

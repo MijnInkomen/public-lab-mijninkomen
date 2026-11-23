@@ -1,0 +1,45 @@
+{
+  "overleggen": [
+    {
+      "id": "stuurgroepoverleg",
+      "naam": "Stuurgroepoverleg",
+      "wie": "Vertegenwoordigers van de gemeenten en het programmateam",
+      "hoeVaak": "Elke maand",
+      "volgendeKeer": "12 november 2026, 10.00–11.30 uur, Online",
+      "agenda": [
+        "Opening en vaststellen agenda",
+        "Besluiten en acties vorige keer",
+        "Voortgang roadmap",
+        "Nieuwe initiatieven ter beoordeling",
+        "Financiën",
+        "Rondvraag"
+      ]
+    },
+    {
+      "id": "product-owner-overleg",
+      "naam": "Product Owner-overleg",
+      "wie": "De Product Owners van de gemeenten",
+      "hoeVaak": "Elke twee weken",
+      "volgendeKeer": "17 november 2026, 14.00–15.00 uur, Online",
+      "agenda": [
+        "Wat is er opgeleverd?",
+        "Wat staat er in de volgende sprint?",
+        "Knelpunten per gemeente",
+        "Afspraken over de backlog"
+      ]
+    },
+    {
+      "id": "community-sessie",
+      "naam": "Community-sessie",
+      "wie": "Alle communityleden",
+      "hoeVaak": "Elk kwartaal",
+      "volgendeKeer": "25 november 2026, 15.00–16.30 uur, Utrecht en online",
+      "agenda": [
+        "Nieuws uit de samenwerking",
+        "Demo van nieuwe functies",
+        "Ervaringen delen per gemeente",
+        "Vragen en ideeën"
+      ]
+    }
+  ]
+}
