@@ -179,6 +179,17 @@
       }
     },
     {
+      "username": "service-account-roadmap-api",
+      "enabled": true,
+      "serviceAccountClientId": "roadmap-api",
+      "clientRoles": {
+        "realm-management": [
+          "view-users",
+          "view-realm"
+        ]
+      }
+    },
+    {
       "username": "${TEST_E2E_ADMIN_EMAIL}",
       "email": "${TEST_E2E_ADMIN_EMAIL}",
       "emailVerified": true,
