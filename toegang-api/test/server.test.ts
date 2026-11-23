@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { after, before, beforeEach, test } from 'node:test';
 import type { AddressInfo } from 'node:net';
-import { AccountBestaatAl, type Keycloak, type KeycloakLid } from '../src/keycloak.ts';
+import { AccountBestaatAl, EmailInGebruik, type Account, type Keycloak, type KeycloakLid } from '../src/keycloak.ts';
 import type { Mail } from '../src/mail.ts';
 import type { OpgeslagenAanvraag, Opslag } from '../src/opslag.ts';
 import { maakServer } from '../src/server.ts';
@@ -47,6 +47,13 @@ const opslag: Opslag = {
   zetSoort: async (id, soort) => {
     soorten.set(id, soort);
   },
+  haalProfielOp: async (id, email) => ({
+    functie: soorten.get(id) ?? (email === aanvraagEmail ? 'Schuldhulpverlener' : null),
+    organisatie: email === aanvraagEmail ? 'Gemeente Utrecht' : null,
+  }),
+  verhuisAanvraag: async (oud, nieuw) => {
+    if (oud === aanvraagEmail) aanvraagEmail = nieuw;
+  },
 };
 
 const HOOFD_ID = 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
@@ -59,6 +66,14 @@ const beginLeden = (): KeycloakLid[] => [
 ];
 let leden = beginLeden();
 const soorten = new Map<string, string>();
+
+const beginAccounts = (): Account[] => [
+  { id: LID_ID, naam: 'Sam Lid', email: 'lid@test.nl', lidSinds: 2024 },
+  { id: ADMIN_ID, naam: 'Gewone Beheerder', email: 'admin@test.nl', lidSinds: 2025 },
+];
+/** Het e-mailadres van de geaccepteerde aanvraag van het lid. */
+let aanvraagEmail = 'lid@test.nl';
+let accountsInKeycloak = beginAccounts();
 
 const KEYCLOAK_ROLLEN = { hoofdbeheerder: ['admin', 'hoofdbeheerder'], beheerder: ['admin'], lid: [] };
 
@@ -75,6 +90,13 @@ const keycloak: Keycloak = {
   haalRollenOp: async (email) => {
     const lid = leden.find((kandidaat) => kandidaat.email === email);
     return lid ? ['communitylid', ...KEYCLOAK_ROLLEN[lid.rol]] : [];
+  },
+  haalAccountOp: async (id) => accountsInKeycloak.find((account) => account.id === id),
+  wijzigAccount: async (id, wijziging) => {
+    if (wijziging.email && accountsInKeycloak.some((account) => account.id !== id && account.email === wijziging.email)) {
+      throw new EmailInGebruik();
+    }
+    accountsInKeycloak = accountsInKeycloak.map((account) => (account.id === id ? { ...account, ...wijziging } : account));
   },
 };
 
@@ -103,6 +125,8 @@ beforeEach(() => {
   mailStoring = false;
   accountStoring = undefined;
   leden = beginLeden();
+  accountsInKeycloak = beginAccounts();
+  aanvraagEmail = 'lid@test.nl';
   soorten.clear();
 });
 
@@ -327,4 +351,89 @@ test('een onbekende rol, onbekend soort of onbekend lid wordt geweigerd', async 
   assert.equal((await ledenApi(`/${LID_ID}`, 'POST', groepen, {})).status, 422);
   assert.equal((await ledenApi(`/${ID}`, 'POST', groepen, { rol: 'lid' })).status, 404);
   assert.equal(leden.find(({ id }) => id === LID_ID)?.rol, 'lid');
+});
+
+const accountApi = (method = 'GET', gebruikerId?: string, body?: object) =>
+  fetch(adres.replace('/api/toegang-aanvragen', '/api/account'), {
+    method,
+    headers: gebruikerId ? { 'X-Auth-User-Id': gebruikerId } : {},
+    body: body && JSON.stringify(body),
+  });
+
+test('zonder login zijn de eigen gegevens niet te zien of te wijzigen', async () => {
+  assert.equal((await accountApi()).status, 401);
+  assert.equal((await accountApi('POST', undefined, { naam: 'Iemand Anders' })).status, 401);
+  assert.equal(accountsInKeycloak[0].naam, 'Sam Lid');
+});
+
+test('een lid ziet de eigen gegevens, zonder id', async () => {
+  const antwoord = await accountApi('GET', LID_ID);
+
+  assert.equal(antwoord.status, 200);
+  assert.deepEqual(await antwoord.json(), {
+    naam: 'Sam Lid',
+    email: 'lid@test.nl',
+    functie: 'Schuldhulpverlener',
+    organisatie: 'Gemeente Utrecht',
+    lidSinds: 2024,
+  });
+});
+
+test('het soort uit het rollenbeheer telt als functie, een functie buiten de lijst niet', async () => {
+  soorten.set(LID_ID, 'Teamleider sociaal domein');
+  assert.equal((await (await accountApi('GET', LID_ID)).json()).functie, 'Teamleider sociaal domein');
+
+  soorten.set(LID_ID, 'Zelf getypt');
+  assert.equal((await (await accountApi('GET', LID_ID)).json()).functie, null);
+});
+
+test('een onbekend account geeft 404', async () => {
+  assert.equal((await accountApi('GET', 'dddddddd-dddd-4ddd-8ddd-dddddddddddd')).status, 404);
+  assert.equal((await accountApi('GET', '../users')).status, 404);
+});
+
+test('een lid wijzigt de eigen naam, en alleen die van zichzelf', async () => {
+  const antwoord = await accountApi('POST', LID_ID, { naam: '  Sam   de Vries ', id: ADMIN_ID });
+
+  assert.equal(antwoord.status, 200);
+  assert.equal((await antwoord.json()).naam, 'Sam de Vries');
+  assert.equal(accountsInKeycloak.find(({ id }) => id === LID_ID)?.naam, 'Sam de Vries');
+  assert.equal(accountsInKeycloak.find(({ id }) => id === ADMIN_ID)?.naam, 'Gewone Beheerder');
+});
+
+test('een lid wijzigt het eigen e-mailadres en houdt functie en gemeente', async () => {
+  const antwoord = await accountApi('POST', LID_ID, { email: 'Sam@Utrecht.nl' });
+
+  assert.equal(antwoord.status, 200);
+  assert.equal((await antwoord.json()).email, 'sam@utrecht.nl');
+  // Het account wordt op id gevonden, en de aanvraag is meeverhuisd naar het nieuwe adres.
+  const opnieuw = await (await accountApi('GET', LID_ID)).json();
+  assert.equal(opnieuw.email, 'sam@utrecht.nl');
+  assert.equal(opnieuw.organisatie, 'Gemeente Utrecht');
+});
+
+test('een lege naam of een ongeldig e-mailadres wordt niet opgeslagen', async () => {
+  const leeg = await accountApi('POST', LID_ID, { naam: '   ' });
+  assert.equal(leeg.status, 422);
+  assert.equal((await leeg.json()).fouten.naam, 'Vul je naam in.');
+
+  const ongeldig = await accountApi('POST', LID_ID, { email: 'geen-mail' });
+  assert.equal(ongeldig.status, 422);
+  assert.match((await ongeldig.json()).fouten.email, /geldig e-mailadres/);
+
+  assert.equal((await accountApi('POST', LID_ID, {})).status, 422);
+  assert.deepEqual(accountsInKeycloak, beginAccounts());
+});
+
+test('een e-mailadres van een ander account wordt geweigerd', async () => {
+  const antwoord = await accountApi('POST', LID_ID, { email: 'admin@test.nl' });
+
+  assert.equal(antwoord.status, 409);
+  assert.equal((await antwoord.json()).fouten.email, 'Dit e-mailadres hoort al bij een ander account.');
+  assert.equal(accountsInKeycloak.find(({ id }) => id === LID_ID)?.email, 'lid@test.nl');
+});
+
+test('alleen GET en POST zijn toegestaan op de eigen gegevens', async () => {
+  assert.equal((await accountApi('DELETE', LID_ID)).status, 405);
+  assert.equal((await accountApi('POST', LID_ID, undefined)).status, 400);
 });
