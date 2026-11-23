@@ -31,10 +31,14 @@ function huidig(href: string, pad: string) {
   return undefined;
 }
 
-export function PageHeader({ huidigPad }: { huidigPad: string }) {
+/**
+ * metZijmenu: op pagina's met een zijmenu (Ontwikkelingen, Meer weten) sluit de kop
+ * met een lijn aan op het zijmenu, net als op niveau 2.
+ */
+export function PageHeader({ huidigPad, metZijmenu = false }: { huidigPad: string; metZijmenu?: boolean }) {
   return (
-    <header className="mijninkomen-page-header">
-      <div className="mijninkomen-container mijninkomen-page-header__inner">
+    <header className={`mijninkomen-page-header${metZijmenu ? ' mijninkomen-page-header--app' : ''}`}>
+      <div className="mijninkomen-container mijninkomen-container--breed mijninkomen-page-header__inner">
         <a className="mijninkomen-page-header__logo" href="/">
           <Logo />
         </a>
@@ -65,7 +69,7 @@ export function PageHeader({ huidigPad }: { huidigPad: string }) {
       </div>
 
       {/* Decoratie, dus verborgen voor schermlezers */}
-      <div className="mijninkomen-container" aria-hidden="true">
+      <div className="mijninkomen-container mijninkomen-container--breed" aria-hidden="true">
         <div className="mijninkomen-stripe">
           <span className="mijninkomen-stripe__deel mijninkomen-stripe__deel--1" />
           <span className="mijninkomen-stripe__deel mijninkomen-stripe__deel--2" />

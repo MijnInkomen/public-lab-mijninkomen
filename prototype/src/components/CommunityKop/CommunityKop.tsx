@@ -3,14 +3,15 @@
  *
  * Anders dan op de openbare website (niveau 1):
  * - geen horizontaal hoofdmenu: niveau 2 heeft een verticaal zijmenu (keuze Isabella)
- * - rechts staat wie er is ingelogd, met de knop Uitloggen
+ * - rechts staat alleen de knop Uitloggen. Wie er is ingelogd, staat op de
+ *   pagina Account in het zijmenu (keuze Isabella: rustigere kop)
  * - een gele balk zegt dat alle gegevens voorbeelden zijn (prototype)
  * Het logo en het streepje zijn hetzelfde als op niveau 1, zodat je ziet dat het
  * dezelfde organisatie is. Kop en voet gaan over de hele breedte van het scherm,
  * net als het zijmenu (variant 'app').
  */
 import { Link } from '@nl-design-system-candidate/link-react/css';
-import { gebruiker, prototypeMelding } from '../../content/community';
+import { prototypeMelding } from '../../content/community';
 import { KnopLink } from '../KnopLink/KnopLink';
 import { Logo } from '../Logo/Logo';
 import '../PageHeader/PageHeader.css';
@@ -27,12 +28,6 @@ export function CommunityKop() {
         <p className="mijninkomen-community-kop__label">Communityomgeving</p>
 
         <div className="mijninkomen-community-kop__gebruiker">
-          <p>
-            <span className="mijninkomen-visually-hidden">Ingelogd als </span>
-            <strong>{gebruiker.naam}</strong>
-            <br />
-            {gebruiker.rol}, gemeente {gebruiker.gemeente}
-          </p>
           {/* Uitloggen gaat terug naar de openbare website */}
           <KnopLink href="/" purpose="secondary">
             Uitloggen

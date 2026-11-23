@@ -93,3 +93,9 @@
     margin-left: auto;
   }
 }
+
+/* Kop boven een zijmenu: lijn eronder, net als op niveau 2 */
+.mijninkomen-page-header--app {
+  padding-bottom: var(--mijninkomen-space-m);
+  border-bottom: 1px solid var(--mijninkomen-border-color);
+}

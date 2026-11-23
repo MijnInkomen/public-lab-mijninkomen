@@ -17,13 +17,6 @@
   align-items: center;
 }
 
-.mijninkomen-community-kop__gebruiker p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  text-align: right;
-}
-
 .mijninkomen-community-kop__melding {
   display: flex;
   gap: var(--mijninkomen-space-s);
@@ -60,15 +53,6 @@
     flex-basis: 100%;
     order: 3;
   }
-  .mijninkomen-community-kop__gebruiker p {
-    text-align: left;
-  }
-}
-
-/* Niveau 2: kop en voet over de hele breedte (zoals een werkprogramma) */
-.mijninkomen-container--breed {
-  max-width: none;
-  padding-inline: var(--mijninkomen-space-l);
 }
 
 /* De kop sluit met een lijn aan op het zijmenu; de voet sluit aan op de inhoud */

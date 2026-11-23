@@ -52,7 +52,7 @@ Home · Ontwikkelingen · Meer weten · Initiatief melden · Contact — met **I
 | **Webinar** | Wat je hoort in het webinar, wanneer, en aanmelden | – |
 | **Kennismakingsgesprek** | Wat het gesprek is, en een gesprek aanvragen (alleen na een webinar) | Initiatieven melden |
 | **Communitylid worden** | De volgorde: webinar → kennismakingsgesprek → toegang aanvragen → inloggen | – |
-| **Initiatief melden** | Een idee of project melden, ook zonder lidmaatschap. Uitleg over het verschil met een kennismakingsgesprek | – |
+| **Initiatief melden** | Een idee of project melden, ook zonder lidmaatschap | – |
 | **Contact** | Algemene vragen, pers, vragen over de samenwerking. Verwijst door naar Kennismaking en Initiatief melden | Aanmeldingen |
 | **Inloggen** | Alleen voor communityleden. Met tweestapsverificatie. Verwijst naar "Communitylid worden" en "Toegang aanvragen" | – |
 | **Toegang aanvragen** | Toegang tot de communityomgeving aanvragen, na een kennismakingsgesprek | – |
@@ -79,22 +79,33 @@ Er is ook **geen aparte pagina met nieuwsberichten (Updates)**. Die overlapte me
 Het besloten werkplatform voor communityleden, gebaseerd op het document "Website MijnInkomen – niveau 2".
 Je komt erin via **Inloggen**. In het prototype werkt de knop zonder dat je iets invult.
 
-- Eigen kop: logo, "Communityomgeving", wie er is ingelogd en **Uitloggen** (terug naar niveau 1).
-- **Verticaal zijmenu** met de vijf pagina's, op elke pagina hetzelfde.
-- Een gele balk zegt dat alle namen en gegevens voorbeelden zijn.
+- Eigen kop: logo, "Communityomgeving" en **Uitloggen** (terug naar niveau 1). Wie er is ingelogd, staat op de pagina **Account**.
+- **Verticaal zijmenu** met de vijf onderdelen, en los daaronder **Account**. Elk onderdeel (behalve Home) heeft eigen subpagina's, zoals het menu van de NL Design System-website. De subpagina's staan open bij het onderdeel waar je bent. Klik je op een onderdeel, dan kom je op de eerste subpagina.
+- Een gele balk zegt dat alle namen en gegevens voorbeelden zijn. De omgeving is rolgericht: Home laat per rol andere snelkoppelingen, overleggen en acties zien. In het prototype ben je altijd Sanne (Product Owner); de andere rollen staan als voorbeeld in `content/community.ts`.
 
 ```
-/community                     Home
-/community/vergaderingen       Vergaderingen (agenda's, besluitenlogboek, actielijst)
-/community/steden              Stand van zaken steden (rollen, regelingen, contactpersonen)
-/community/roadmap             Roadmap & backlog (tijdlijn per tertiaal, koppeling Jira/GitHub)
-/community/initiatieven        Initiatieven & innovaties (backlog, beoordeling, formulier)
+/community                                 Home
+/community/vergaderingen                   Vergaderondersteuning › Agenda's
+/community/vergaderingen/besluitenlogboek  Vergaderondersteuning › Besluitenlogboek
+/community/vergaderingen/actielijst        Vergaderondersteuning › Actielijst
+/community/steden                          Stand van zaken steden › Rollen en contactpersonen
+/community/steden/regelingen               Stand van zaken steden › Status per regeling
+/community/roadmap                         Roadmap & backlog › Tijdlijn (met uitleg van de fasen)
+/community/roadmap/koppeling               Roadmap & backlog › Koppeling met Jira en GitHub
+/community/initiatieven                    Initiatieven & innovaties › Ingediende initiatieven
+/community/initiatieven/beoordeling        Initiatieven & innovaties › Zo beoordelen we
+/community/initiatieven/indienen           Initiatieven & innovaties › Initiatief indienen
+/community/initiatieven/bijwerken          Initiatieven & innovaties › Initiatief bijwerken
+/community/account                         Account › Mijn gegevens (naam en e-mailadres zelf wijzigen)
+/community/account/aanvragen               Account › Wijziging aanvragen (bij beheer)
+/community/account/beveiliging             Account › Inloggen en beveiliging
 ```
 
 | Pagina | Doel | Wat staat er NIET |
 |---|---|---|
-| **Home** | Binnen 30 seconden zien wat er speelt: nieuws, de eerstvolgende 2 overleggen, mijn acties en de laatste besluiten | Uitleg over wat MijnInkomen is (staat op niveau 1) |
-| **Vergaderingen** | Vaste agenda per overleg, doorzoekbaar besluitenlogboek, actielijst met eigenaar, streefdatum en status | Webinars voor nieuwe gemeenten (niveau 1) |
-| **Stand van zaken steden** | Wie doet mee met welke rol, welke regelingen per gemeente, wie is de contactpersoon | Algemene informatie voor nieuwe gemeenten (niveau 1) |
-| **Roadmap & backlog** | Alle epics per tertiaal met hun fase, en wanneer Jira en GitHub zijn bijgewerkt | Nieuwe ideeën die nog niet zijn beoordeeld |
-| **Initiatieven & innovaties** | Nieuwe ideeën los van de roadmap: wat is ingediend, hoe het wordt beoordeeld, en zelf iets indienen | De vaste roadmap |
+| **Home** | Binnen 30 seconden zien wat er speelt, afgestemd op je rol: snelkoppelingen, nieuws, de eerstvolgende 2 overleggen waar je bij bent, mijn acties en de laatste besluiten | Uitleg over wat MijnInkomen is (staat op niveau 1) |
+| **Vergaderondersteuning** | Agenda met dag, week en maand, besluitenlogboek (zoeken en filteren op datum, status en gemeente), actielijst met eigenaar, streefdatum en status | Webinars voor nieuwe gemeenten (niveau 1) |
+| **Stand van zaken steden** | Per gemeente de rol en de contactpersoon, en de status van elke regeling (In gebruik, In ontwikkeling, In onderzoek, Niet in gebruik) | Algemene informatie voor nieuwe gemeenten (niveau 1) |
+| **Roadmap & backlog** | Alle epics en features per tertiaal met hun fase, en wanneer Jira en GitHub zijn bijgewerkt (geen user stories) | Nieuwe ideeën die nog niet zijn beoordeeld |
+| **Initiatieven & innovaties** | Nieuwe ideeën los van de roadmap: wat is ingediend, hoe het wordt beoordeeld, zelf iets indienen en je initiatief bijwerken | De vaste roadmap |
+| **Account** | Je eigen gegevens. Naam en e-mailadres wijzig je zelf; voor de rest doe je een aanvraag bij beheer | Gegevens van andere communityleden (die staan bij Stand van zaken steden) |

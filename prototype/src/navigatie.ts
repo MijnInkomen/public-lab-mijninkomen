@@ -22,7 +22,13 @@ export function navigeer(adres: string) {
   window.dispatchEvent(new Event(EVENT));
   // Zit er een # in het adres? Spring daarna naar dat stuk van de pagina
   setTimeout(() => {
-    if (window.location.hash) document.querySelector(window.location.hash)?.scrollIntoView();
+    if (!window.location.hash) return;
+    const doel = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    if (!doel) return;
+    doel.scrollIntoView();
+    // Focus naar het kopje, zodat toetsenbord- en schermlezergebruikers daar verder gaan
+    if (!doel.hasAttribute('tabindex')) doel.setAttribute('tabindex', '-1');
+    doel.focus({ preventScroll: true });
   }, 0);
 }
 

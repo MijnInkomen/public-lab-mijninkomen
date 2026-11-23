@@ -21,13 +21,6 @@ export const voorWie = {
   ],
 };
 
-export const verschil = {
-  titel: 'Initiatief melden of kennismaken?',
-  initiatief: { titel: 'Initiatief melden', tekst: 'Je hebt een idee of project en wilt dat delen met MijnInkomen.' },
-  kennismaking: { titel: 'Kennismakingsgesprek', tekst: 'Je wilt weten of jouw gemeente kan meedoen met MijnInkomen.' },
-  link: 'Naar Kennismakingsgesprek',
-};
-
 export const initiatiefFormulier = {
   titel: 'Meld je initiatief',
   knop: 'Initiatief versturen',

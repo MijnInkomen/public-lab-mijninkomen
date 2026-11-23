@@ -1,11 +1,14 @@
 /**
  * NIVEAU 2 › Roadmap & backlog
- * De epics per tertiaal (T1, T2, T3) met hun fase, en een overzicht van de
+ * Twee eigen pagina's (keuze Isabella: elk subkopje uit het zijmenu een eigen pagina):
+ * - Tijdlijn (/community/roadmap): uitleg van de fasen + epics per tertiaal.
+ *   De uitleg van de fasen blijft hier, want die heb je nodig om de tijdlijn te lezen.
+ * - Koppeling met Jira en GitHub (/community/roadmap/koppeling)
+ * De epics per tertiaal (T1, T2, T3) met hun fase en features, en een overzicht van de
  * koppeling met Jira en GitHub (één bron van waarheid).
  * Je kunt filteren op fase; de tijdlijn laat dan alleen die epics zien.
  */
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
-import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { useState } from 'react';
 import { Badge } from '../../components/Badge/Badge';
 import '../../components/Formulier/Formulier.css';
@@ -14,12 +17,12 @@ import { CommunityPagina, TabelVak } from './CommunityPagina';
 
 const syncIcoon = { Gelukt: '✓', Waarschuwing: '!', Mislukt: '✕' } as const;
 
-export function Roadmap() {
+export function RoadmapTijdlijn() {
   const [fase, setFase] = useState('');
   const aantal = tertialen.reduce((n, t) => n + t.epics.filter((e) => !fase || e.fase === fase).length, 0);
 
   return (
-    <CommunityPagina titel={roadmap.titel} tekst={roadmap.tekst}>
+    <CommunityPagina onderdeel={roadmap.titel} titel={roadmap.tijdlijnTitel} tekst={roadmap.tekst}>
       <section className="mijninkomen-c-sectie" aria-labelledby="c-fasen">
         <Heading level={2} id="c-fasen" appearance="level-3">{roadmap.fasenTitel}</Heading>
         <dl className="mijninkomen-c-fasen">
@@ -33,7 +36,7 @@ export function Roadmap() {
       </section>
 
       <section className="mijninkomen-c-sectie" aria-labelledby="c-tijdlijn">
-        <Heading level={2} id="c-tijdlijn" className="mijninkomen-visually-hidden">Tijdlijn</Heading>
+        <Heading level={2} id="c-tijdlijn" className="mijninkomen-visually-hidden">Epics per tertiaal</Heading>
         <div className="mijninkomen-filters">
           <div className="mijninkomen-formulier__veld">
             <label htmlFor="r-fase" className="mijninkomen-formulier__label">Laat zien</label>
@@ -65,6 +68,13 @@ export function Roadmap() {
                         <Badge soort="status">{e.fase}</Badge>
                         <strong>{e.naam}</strong>
                         <span className="mijninkomen-tabel__klein">{e.gemeenten}</span>
+                        {/* Features van deze epic (feedback Vincent: epics en features, geen user stories) */}
+                        <span className="mijninkomen-c-roadmap__features-kop">Features</span>
+                        <ul className="mijninkomen-c-roadmap__features">
+                          {e.features.map((f) => (
+                            <li key={f}>{f}</li>
+                          ))}
+                        </ul>
                       </li>
                     ))}
                   </ul>
@@ -76,39 +86,42 @@ export function Roadmap() {
           })}
         </div>
       </section>
+    </CommunityPagina>
+  );
+}
 
-      <section className="mijninkomen-c-sectie" aria-labelledby="c-sync">
-        <Heading level={2} id="c-sync">{roadmap.synclogTitel}</Heading>
-        <Paragraph>{roadmap.synclogTekst}</Paragraph>
-        <TabelVak label={roadmap.synclogTitel}>
-          <table className="mijninkomen-tabel">
-            <thead>
-              <tr>
-                <th scope="col">Bron</th>
-                <th scope="col">Wat is er gebeurd?</th>
-                <th scope="col">Wanneer</th>
-                <th scope="col">Status</th>
+/** Koppeling met Jira en GitHub: wanneer zijn de epics en features bijgewerkt? */
+export function RoadmapKoppeling() {
+  return (
+    <CommunityPagina onderdeel={roadmap.titel} titel={roadmap.synclogTitel} tekst={roadmap.synclogTekst}>
+      <TabelVak label={roadmap.synclogTitel}>
+        <table className="mijninkomen-tabel">
+          <thead>
+            <tr>
+              <th scope="col">Bron</th>
+              <th scope="col">Wat is er gebeurd?</th>
+              <th scope="col">Wanneer</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {synclog.map((s) => (
+              <tr key={s.bron + s.wanneer}>
+                <th scope="row">{s.bron}</th>
+                <td>{s.wat}</td>
+                <td className="mijninkomen-tabel__klein">{s.wanneer}</td>
+                <td>
+                  {/* Icoon + tekst: niet alleen kleur (WCAG 1.4.1) */}
+                  <span className={`mijninkomen-sync mijninkomen-sync--${s.status.toLowerCase()}`}>
+                    <span aria-hidden="true">{syncIcoon[s.status]} </span>
+                    {s.status}
+                  </span>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {synclog.map((s) => (
-                <tr key={s.bron + s.wanneer}>
-                  <th scope="row">{s.bron}</th>
-                  <td>{s.wat}</td>
-                  <td className="mijninkomen-tabel__klein">{s.wanneer}</td>
-                  <td>
-                    {/* Icoon + tekst: niet alleen kleur (WCAG 1.4.1) */}
-                    <span className={`mijninkomen-sync mijninkomen-sync--${s.status.toLowerCase()}`}>
-                      <span aria-hidden="true">{syncIcoon[s.status]} </span>
-                      {s.status}
-                    </span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </TabelVak>
-      </section>
+            ))}
+          </tbody>
+        </table>
+      </TabelVak>
     </CommunityPagina>
   );
 }

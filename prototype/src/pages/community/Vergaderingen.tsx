@@ -1,10 +1,12 @@
 /**
- * NIVEAU 2 › Vergaderingen (vergaderondersteuning)
- * Vaste agenda's per overleg, een doorzoekbaar besluitenlogboek en de actielijst.
+ * NIVEAU 2 › Vergaderondersteuning
+ * Drie eigen pagina's (keuze Isabella: elk subkopje uit het zijmenu een eigen pagina):
+ * - Agenda's (/community/vergaderingen): agenda met dag, week en maand (zie Agenda.tsx)
+ * - Besluitenlogboek (/community/vergaderingen/besluitenlogboek): doorzoekbaar
+ * - Actielijst (/community/vergaderingen/actielijst)
  * De filters werken direct; het aantal resultaten wordt voorgelezen (aria-live).
+ * Het besluitenlogboek kun je ook filteren op datum (document niveau 2).
  */
-import { Heading } from '@nl-design-system-candidate/heading-react/css';
-import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { useState } from 'react';
 import { Badge } from '../../components/Badge/Badge';
 import '../../components/Formulier/Formulier.css';
@@ -14,22 +16,28 @@ import {
   alleGemeenten,
   besluitStatussen,
   besluiten,
-  gebruiker,
-  overleggen,
+  isMijnActie,
   vergaderingen,
 } from '../../content/community';
+import { AgendaKalender } from './Agenda';
 import { CommunityPagina, Datum, TabelVak } from './CommunityPagina';
+import { useGebruiker } from './gebruiker';
 
 function BesluitenLogboek() {
   const [zoek, setZoek] = useState('');
   const [status, setStatus] = useState('');
   const [gemeente, setGemeente] = useState('');
+  const [vanaf, setVanaf] = useState('');
+  const [tot, setTot] = useState('');
 
   const resultaat = besluiten.filter(
     (b) =>
       (!zoek || b.besluit.toLowerCase().includes(zoek.toLowerCase())) &&
       (!status || b.status === status) &&
-      (!gemeente || b.gemeenten === 'Alle' || b.gemeenten.includes(gemeente as never)),
+      (!gemeente || b.gemeenten === 'Alle' || b.gemeenten.includes(gemeente as never)) &&
+      // Datums als 'JJJJ-MM-DD' kun je gewoon als tekst vergelijken
+      (!vanaf || b.datum >= vanaf) &&
+      (!tot || b.datum <= tot),
   );
 
   return (
@@ -56,6 +64,14 @@ function BesluitenLogboek() {
               <option key={g}>{g}</option>
             ))}
           </select>
+        </div>
+        <div className="mijninkomen-formulier__veld">
+          <label htmlFor="b-vanaf" className="mijninkomen-formulier__label">Vanaf datum</label>
+          <input id="b-vanaf" type="date" className="mijninkomen-formulier__invoer" value={vanaf} max={tot || undefined} onChange={(e) => setVanaf(e.target.value)} />
+        </div>
+        <div className="mijninkomen-formulier__veld">
+          <label htmlFor="b-tot" className="mijninkomen-formulier__label">Tot en met datum</label>
+          <input id="b-tot" type="date" className="mijninkomen-formulier__invoer" value={tot} min={vanaf || undefined} onChange={(e) => setTot(e.target.value)} />
         </div>
       </div>
       {/* aria-live: schermlezers horen hoeveel besluiten er zijn na het filteren */}
@@ -96,13 +112,14 @@ function BesluitenLogboek() {
 }
 
 function Actielijst() {
+  const gebruiker = useGebruiker();
   const [status, setStatus] = useState('');
   const [alleenMijn, setAlleenMijn] = useState(false);
 
   const resultaat = acties.filter(
     (a) =>
       (!status || a.status === status) &&
-      (!alleenMijn || a.eigenaar === gebruiker.naam || a.gemeente === gebruiker.gemeente),
+      (!alleenMijn || isMijnActie(gebruiker, a)),
   );
 
   return (
@@ -119,7 +136,11 @@ function Actielijst() {
         </div>
         <div className="mijninkomen-filters__vinkje">
           <input id="a-mijn" type="checkbox" checked={alleenMijn} onChange={(e) => setAlleenMijn(e.target.checked)} />
-          <label htmlFor="a-mijn">Alleen acties van mij of gemeente {gebruiker.gemeente}</label>
+          <label htmlFor="a-mijn">
+            {gebruiker.gemeente === 'Programmateam'
+              ? 'Alleen acties van mij en landelijke acties'
+              : `Alleen acties van mij of gemeente ${gebruiker.gemeente}`}
+          </label>
         </div>
       </div>
       <p className="mijninkomen-filters__aantal" aria-live="polite">
@@ -162,49 +183,29 @@ function Actielijst() {
   );
 }
 
-export function Vergaderingen() {
+/** Agenda's: een agenda met dag-, week- en maandweergave (keuze Isabella) */
+export function VergaderingenAgendas() {
   return (
-    <CommunityPagina titel={vergaderingen.titel} tekst={vergaderingen.tekst}>
-      {/* VASTE AGENDA'S */}
-      <section className="mijninkomen-c-sectie" aria-labelledby="c-agendas">
-        <Heading level={2} id="c-agendas">{vergaderingen.agendaTitel}</Heading>
-        <Paragraph>{vergaderingen.agendaTekst}</Paragraph>
-        <ul className="mijninkomen-c-agendas">
-          {overleggen.map((o) => (
-            <li key={o.id} id={o.id}>
-              <Heading level={3}>{o.naam}</Heading>
-              <dl>
-                <dt>Wie</dt>
-                <dd>{o.wie}</dd>
-                <dt>Hoe vaak</dt>
-                <dd>{o.hoeVaak}</dd>
-                <dt>Volgende keer</dt>
-                <dd>
-                  <Datum iso={o.volgende.datum} />, {o.volgende.tijd}, {o.volgende.waar}
-                </dd>
-              </dl>
-              <p className="mijninkomen-formulier__label">Vaste agenda</p>
-              <ol>
-                {o.agenda.map((punt) => (
-                  <li key={punt}>{punt}</li>
-                ))}
-              </ol>
-            </li>
-          ))}
-        </ul>
-      </section>
+    <CommunityPagina onderdeel={vergaderingen.titel} titel={vergaderingen.agendaTitel} tekst={vergaderingen.agendaTekst}>
+      <AgendaKalender />
+    </CommunityPagina>
+  );
+}
 
-      <section id="besluitenlogboek" className="mijninkomen-c-sectie" aria-labelledby="c-besluitenlog">
-        <Heading level={2} id="c-besluitenlog">{vergaderingen.besluitenTitel}</Heading>
-        <Paragraph>{vergaderingen.besluitenTekst}</Paragraph>
-        <BesluitenLogboek />
-      </section>
+/** Besluitenlogboek: alle besluiten, met zoeken en filteren */
+export function VergaderingenBesluiten() {
+  return (
+    <CommunityPagina onderdeel={vergaderingen.titel} titel={vergaderingen.besluitenTitel} tekst={vergaderingen.besluitenTekst}>
+      <BesluitenLogboek />
+    </CommunityPagina>
+  );
+}
 
-      <section id="actielijst" className="mijninkomen-c-sectie" aria-labelledby="c-actielijst">
-        <Heading level={2} id="c-actielijst">{vergaderingen.actiesTitel}</Heading>
-        <Paragraph>{vergaderingen.actiesTekst}</Paragraph>
-        <Actielijst />
-      </section>
+/** Actielijst: landelijke en lokale acties */
+export function VergaderingenActies() {
+  return (
+    <CommunityPagina onderdeel={vergaderingen.titel} titel={vergaderingen.actiesTitel} tekst={vergaderingen.actiesTekst}>
+      <Actielijst />
     </CommunityPagina>
   );
 }

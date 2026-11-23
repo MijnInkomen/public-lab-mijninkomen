@@ -7,15 +7,34 @@
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import type { ReactNode } from 'react';
+import { Badge } from '../../components/Badge/Badge';
 import { ZijmenuPagina } from '../../components/Zijmenu/Zijmenu';
 import { communityMenu } from '../../content/community';
 import './community.css';
 
-export function CommunityPagina({ titel, tekst, children }: { titel: string; tekst: string; children: ReactNode }) {
+type CommunityPaginaProps = {
+  titel: string;
+  tekst: string;
+  /** Het onderdeel waar deze (sub)pagina bij hoort, als klein kopje boven de titel */
+  onderdeel?: string;
+  /** Label "Voorbeeld" naast de titel */
+  voorbeeld?: boolean;
+  children: ReactNode;
+};
+
+export function CommunityPagina({ titel, tekst, onderdeel = communityMenu.titel, voorbeeld, children }: CommunityPaginaProps) {
   return (
     <ZijmenuPagina titel={communityMenu.titel} items={communityMenu.items} variant="app">
-      <p className="mijninkomen-bovenkop mijninkomen-bovenkop--groen">{communityMenu.titel}</p>
-      <Heading level={1}>{titel}</Heading>
+      <p className="mijninkomen-bovenkop mijninkomen-bovenkop--groen">{onderdeel}</p>
+      <Heading level={1}>
+        {titel}
+        {voorbeeld && (
+          <>
+            {' '}
+            <Badge soort="voorbeeld">Voorbeeld</Badge>
+          </>
+        )}
+      </Heading>
       <Paragraph purpose="lead">{tekst}</Paragraph>
       {children}
     </ZijmenuPagina>

@@ -7,8 +7,6 @@ Het is bedoeld als voorbeeld voor de echte bouw: de structuur, componenten en hu
 - **Code**: gebouwd met hulp van AI (Claude), zie `AI-verantwoording.md`
 - **Onderbouwing van de ontwerpkeuzes**: zie `onderbouwing.md`
 - **Fasering (hoe het prototype stap voor stap is ontstaan)**: zie `fasering.md`
-- **UX-onderzoek (Nielsen, WCAG en NLDS)**: zie `onderzoek/ux-onderzoek-nielsen.md`
-- **Heuristische evaluatie (gevonden problemen en wat ermee gebeurt)**: zie `onderzoek/heuristische-evaluatie.md`
 - **Sitemap** (welke pagina's er zijn en waarom): zie `sitemap.md`
 - **Werking per onderdeel** (doel, bron van de informatie, gedrag): zie `componenten.md`
 
@@ -67,7 +65,7 @@ prototype/
 │   │
 │   ├── pages/                 ← LAAG 3: pagina's, gebouwd uit componenten (adressen: zie sitemap.md)
 │   │   ├── Home.tsx
-│   │   ├── community/         ← NIVEAU 2: CommunityHome, Vergaderingen, Steden, Roadmap, Initiatieven
+│   │   ├── community/         ← NIVEAU 2: Home, Vergaderondersteuning (Agenda), Steden, Roadmap, Initiatieven, Account
 │   │   ├── ontwikkelingen/    ← AlKan, NuBezig, ProjectDetail (+ ProjectKaarten)
 │   │   ├── meer-weten/        ← Samenwerken, Webinar, Kennismaking, Communitylid
 │   │   ├── InitiatiefMelden.tsx

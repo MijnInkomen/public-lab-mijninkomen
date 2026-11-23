@@ -52,6 +52,40 @@
   font-weight: 700;
 }
 
+/* Subpagina's: ingesprongen, kleiner, met een dunne lijn ervoor
+   zodat je ziet dat ze bij het onderdeel horen */
+.mijninkomen-zijmenu ul.mijninkomen-zijmenu__sub {
+  gap: 0;
+  margin: var(--mijninkomen-space-xs) 0 var(--mijninkomen-space-s) var(--mijninkomen-space-m);
+  border-left: 1px solid var(--mijninkomen-border-color);
+}
+
+.mijninkomen-zijmenu__sub a {
+  padding: var(--mijninkomen-space-xs) var(--mijninkomen-space-s);
+  border-left: 0;
+  font-size: 0.95rem;
+}
+
+/* Het onderdeel zelf als je op een subpagina zit: alleen vet, geen vlak */
+.mijninkomen-zijmenu li:has(> .mijninkomen-zijmenu__sub) > .nl-link--current[aria-current='true'] {
+  background-color: transparent;
+  border-left-color: transparent;
+}
+
+/* De subpagina waar je bent: groene lijn + vet (niet alleen kleur, WCAG 1.4.1) */
+.mijninkomen-zijmenu__sub .nl-link--current {
+  margin-left: -1px;
+  background-color: var(--mijninkomen-color-wit);
+  border-left: 3px solid var(--mijninkomen-color-groen);
+}
+
+/* Een item dat los staat van de rest (bijv. Account): lijn erboven */
+.mijninkomen-zijmenu__apart {
+  margin-block-start: var(--mijninkomen-space-s);
+  padding-block-start: var(--mijninkomen-space-s);
+  border-top: 1px solid var(--mijninkomen-border-color);
+}
+
 /* Smal scherm: menu boven de inhoud, niet meer vast */
 @media (max-width: 48rem) {
   .mijninkomen-zijmenu-pagina {

@@ -8,10 +8,11 @@ import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Logo } from '../Logo/Logo';
 import './PageFooter.css';
 
-export function PageFooter() {
+/** metZijmenu: de voet sluit direct aan op het zijmenu, net als op niveau 2 */
+export function PageFooter({ metZijmenu = false }: { metZijmenu?: boolean }) {
   return (
-    <footer className="mijninkomen-page-footer">
-      <div className="mijninkomen-container mijninkomen-page-footer__inner">
+    <footer className={`mijninkomen-page-footer${metZijmenu ? ' mijninkomen-page-footer--app' : ''}`}>
+      <div className="mijninkomen-container mijninkomen-container--breed mijninkomen-page-footer__inner">
         <div>
           <div className="mijninkomen-page-footer__logo">
             <Logo />
@@ -42,7 +43,7 @@ export function PageFooter() {
           </ul>
         </nav>
       </div>
-      <div className="mijninkomen-container">
+      <div className="mijninkomen-container mijninkomen-container--breed">
         <p className="mijninkomen-page-footer__prototype">
           Dit is een prototype. De teksten zijn voorbeeldteksten.
         </p>

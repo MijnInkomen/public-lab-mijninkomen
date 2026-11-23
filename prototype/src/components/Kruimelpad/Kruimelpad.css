@@ -31,3 +31,8 @@
 .mijninkomen-kruimelpad [aria-current='page'] {
   color: var(--mijninkomen-document-color);
 }
+
+/* In de inhoud naast het zijmenu: geen eigen breedte, ruimte eronder */
+.mijninkomen-kruimelpad--in-pagina {
+  padding-block: 0 var(--mijninkomen-space-m);
+}

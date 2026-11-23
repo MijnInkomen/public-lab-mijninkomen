@@ -14,6 +14,11 @@
  *   boven de titel van de pagina (keuze Isabella: overal dezelfde opbouw).
  *   Schermlezers horen de naam via aria-label op de <nav>.
  *
+ * - Een menu-item kan subitems hebben: eigen pagina's binnen dat onderdeel, zoals
+ *   in het menu van de NL Design System-website (keuze Isabella). Ze staan alleen
+ *   open bij het onderdeel waar je bent, zodat het menu kort en rustig blijft.
+ *   Het onderdeel krijgt dan aria-current="true", de subpagina aria-current="page".
+ *
  * NLDS heeft (nog) geen officiële component voor een zijmenu; dit gebruikt de
  * officiële NLDS Link.
  */
@@ -22,7 +27,9 @@ import type { ReactNode } from 'react';
 import { useHuidigPad } from '../../navigatie';
 import './Zijmenu.css';
 
-export type ZijmenuItem = { label: string; href: string };
+export type ZijmenuSubitem = { label: string; href: string };
+/** apart: dit item staat los van de rest, met een lijn erboven (bijv. Account) */
+export type ZijmenuItem = { label: string; href: string; sub?: ZijmenuSubitem[]; apart?: boolean };
 
 type ZijmenuPaginaProps = {
   titel: string;
@@ -45,12 +52,32 @@ export function ZijmenuPagina({ titel, items, actiefItem, variant = 'pagina', ch
     <nav className="mijninkomen-zijmenu" aria-label={titel}>
         <ul>
           {items.map((item) => {
-            const huidig = item.href === pad ? 'page' : item.href === actiefItem ? 'true' : undefined;
+            // Zit je op een subpagina van dit item? Dan is het item 'true' en de subpagina 'page'
+            const opSubpagina = item.sub?.some((sub) => sub.href === pad) ?? false;
+            const huidig = opSubpagina
+              ? 'true'
+              : item.href === pad
+                ? 'page'
+                : item.href === actiefItem
+                  ? 'true'
+                  : undefined;
             return (
-              <li key={item.href}>
+              <li key={item.href} className={item.apart ? 'mijninkomen-zijmenu__apart' : undefined}>
                 <Link href={item.href} current={huidig}>
                   {item.label}
                 </Link>
+                {/* Subpagina's: alleen open bij het onderdeel waar je bent */}
+                {huidig && item.sub && item.sub.length > 0 && (
+                  <ul className="mijninkomen-zijmenu__sub">
+                    {item.sub.map((sub) => (
+                      <li key={sub.href}>
+                        <Link href={sub.href} current={sub.href === pad ? 'page' : undefined}>
+                          {sub.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             );
           })}

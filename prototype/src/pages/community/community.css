@@ -10,6 +10,8 @@
 
 /* Tabellen: rustig, met lijntjes tussen de rijen */
 .mijninkomen-tabel-vak {
+  /* position: relative houdt ook verborgen schermlezertekst binnen het vak */
+  position: relative;
   overflow-x: auto;
   margin-top: var(--mijninkomen-space-m);
   border: 1px solid var(--mijninkomen-border-color);
@@ -260,6 +262,29 @@
   color: var(--mijninkomen-heading-color);
 }
 
+/* Features onder een epic: een gewone, rustige lijst (geen kaartjes) */
+.mijninkomen-c-roadmap__features-kop {
+  display: block;
+  margin-block-start: var(--mijninkomen-space-s);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.mijninkomen-c-roadmap ul.mijninkomen-c-roadmap__features {
+  display: block;
+  margin: var(--mijninkomen-space-xs) 0 0;
+  padding-inline-start: 1.25rem;
+  list-style: disc;
+}
+
+.mijninkomen-c-roadmap ul.mijninkomen-c-roadmap__features li {
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  font-size: 0.9rem;
+}
+
 .mijninkomen-c-roadmap li span.mijninkomen-tabel__klein {
   color: var(--mijninkomen-text-subtle-color);
   font-size: 0.9rem;
@@ -278,33 +303,6 @@
 }
 
 .mijninkomen-c-fasen dd {
-  margin: var(--mijninkomen-space-xs) 0 0;
-}
-
-/* Contactpersonen */
-.mijninkomen-c-contacten {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: var(--mijninkomen-space-m);
-  margin: var(--mijninkomen-space-m) 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.mijninkomen-c-contacten li {
-  padding: var(--mijninkomen-space-m);
-  border: 1px solid var(--mijninkomen-border-color);
-  border-radius: var(--mijninkomen-border-radius);
-  font-size: 1rem;
-  overflow-wrap: anywhere;
-}
-
-.mijninkomen-c-contacten strong {
-  display: block;
-  color: var(--mijninkomen-heading-color);
-}
-
-.mijninkomen-c-contacten p {
   margin: var(--mijninkomen-space-xs) 0 0;
 }
 
@@ -329,19 +327,26 @@
   min-width: 8rem;
 }
 
-.mijninkomen-regeling--live {
+.mijninkomen-regeling--in-gebruik {
   background-color: var(--mijninkomen-color-groen-licht);
   color: var(--mijninkomen-color-groen-donker);
   font-weight: 700;
 }
 
-.mijninkomen-regeling--in-test,
-.mijninkomen-regeling--gepland {
+.mijninkomen-regeling--in-ontwikkeling,
+.mijninkomen-regeling--in-onderzoek {
   font-weight: 600;
 }
 
-.mijninkomen-regeling--nog-niet {
+.mijninkomen-regeling--niet-in-gebruik {
   color: var(--mijninkomen-text-subtle-color);
+}
+
+/* In de uitleg boven de tabel: de status als klein label */
+dt > .mijninkomen-regeling {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border-radius: var(--mijninkomen-border-radius);
 }
 
 /* Status van de koppeling: icoon + tekst + kleur */
@@ -360,4 +365,307 @@
 
 .mijninkomen-sync--mislukt {
   color: var(--mijninkomen-form-error-color);
+}
+
+/* Twee formulierkaarten onder elkaar (Initiatieven): ruimte ertussen */
+.mijninkomen-formulierkaart + .mijninkomen-formulierkaart {
+  margin-block-start: var(--mijninkomen-space-xl);
+}
+
+/* Spring je via het zijmenu naar een kopje? Dan blijft er wat ruimte boven het kopje */
+.mijninkomen-zijmenu-app__inhoud [id^='c-'] {
+  scroll-margin-top: var(--mijninkomen-space-m);
+}
+
+
+/* ── Agenda (Vergaderingen › Agenda's): dag, week en maand ── */
+.mijninkomen-agenda__balk {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-m) var(--mijninkomen-space-l);
+  align-items: flex-end;
+  margin-block: var(--mijninkomen-space-l) var(--mijninkomen-space-m);
+}
+
+.mijninkomen-agenda__knoppen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-xs);
+}
+
+.mijninkomen-agenda__filter {
+  min-width: 14rem;
+  margin: 0;
+}
+
+.mijninkomen-agenda__periode {
+  margin-block: var(--mijninkomen-space-m) 0;
+}
+
+/* Maand: tabel met 7 kolommen */
+.mijninkomen-agenda__maand {
+  width: 100%;
+  min-width: 42rem; /* op een telefoon scrollt de tabel opzij */
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.mijninkomen-agenda__maand th {
+  padding: var(--mijninkomen-space-s);
+  color: var(--mijninkomen-heading-color);
+  font-size: 0.9rem;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.mijninkomen-agenda__maand abbr {
+  text-decoration: none;
+}
+
+.mijninkomen-agenda__maand td {
+  height: 6.5rem;
+  padding: var(--mijninkomen-space-xs);
+  border: 1px solid var(--mijninkomen-border-color);
+  vertical-align: top;
+}
+
+.mijninkomen-agenda__dag--anders {
+  background-color: var(--mijninkomen-color-grijs-vlak);
+}
+
+.mijninkomen-agenda__dag--anders .mijninkomen-agenda__dagnummer {
+  color: var(--mijninkomen-text-subtle-color);
+}
+
+/* Vandaag: groene rand + groen rondje om het dagnummer (niet alleen kleur: ook de vorm) */
+td.mijninkomen-agenda__dag--vandaag {
+  box-shadow: inset 0 0 0 2px var(--mijninkomen-color-groen);
+}
+
+.mijninkomen-agenda__dag--vandaag .mijninkomen-agenda__dagnummer {
+  background-color: var(--mijninkomen-color-groen);
+  color: var(--mijninkomen-color-wit);
+}
+
+.mijninkomen-agenda__dagnummer {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  margin-bottom: var(--mijninkomen-space-xs);
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: var(--mijninkomen-document-color);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mijninkomen-agenda__dagnummer:hover {
+  text-decoration: underline;
+}
+
+/* Een overleg in de agenda: een knop met tijd en naam */
+.mijninkomen-agenda__item {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--mijninkomen-space-xs);
+  padding: 0.25rem 0.5rem;
+  background-color: var(--mijninkomen-color-groen-licht);
+  border: 0;
+  border-left: 4px solid var(--mijninkomen-color-groen);
+  border-radius: 0 var(--mijninkomen-border-radius) var(--mijninkomen-border-radius) 0;
+  color: var(--mijninkomen-color-groen-donker);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mijninkomen-agenda__item:hover {
+  text-decoration: underline;
+}
+
+.mijninkomen-agenda__tijd {
+  font-weight: 400;
+}
+
+.mijninkomen-agenda__dagnummer:focus-visible,
+.mijninkomen-agenda__item:focus-visible {
+  outline: 3px solid var(--mijninkomen-color-groen-donker);
+  outline-offset: 2px;
+}
+
+/* Week: 7 kolommen op een groot scherm, onder elkaar op een telefoon */
+.mijninkomen-agenda__week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--mijninkomen-space-xs);
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-agenda__week > li {
+  min-height: 8rem;
+  padding: var(--mijninkomen-space-s);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-agenda__week > li.mijninkomen-agenda__dag--vandaag {
+  border: 2px solid var(--mijninkomen-color-groen);
+}
+
+.mijninkomen-agenda__week h3 {
+  margin: 0 0 var(--mijninkomen-space-s);
+}
+
+.mijninkomen-agenda__vandaag-label {
+  font-weight: 400;
+}
+
+.mijninkomen-agenda__leeg {
+  margin: 0;
+  color: var(--mijninkomen-text-subtle-color);
+  font-size: 0.9rem;
+}
+
+/* Dag en details: alle gegevens van een overleg */
+.mijninkomen-agenda__dag {
+  display: grid;
+  gap: var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-m) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-agenda__dag > li,
+.mijninkomen-agenda__details {
+  max-width: 44rem;
+  padding: var(--mijninkomen-space-l);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-left: 4px solid var(--mijninkomen-color-groen);
+  border-radius: var(--mijninkomen-border-radius);
+}
+
+.mijninkomen-agenda__details {
+  margin-top: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-agenda__gegevens {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--mijninkomen-space-xs) var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-s) 0;
+}
+
+.mijninkomen-agenda__gegevens dt {
+  font-weight: 700;
+}
+
+.mijninkomen-agenda__gegevens dd {
+  margin: 0;
+}
+
+.mijninkomen-agenda__punten {
+  margin: var(--mijninkomen-space-xs) 0 var(--mijninkomen-space-m);
+  padding-left: var(--mijninkomen-space-l);
+}
+
+.mijninkomen-agenda > .mijninkomen-c-sectie {
+  margin-top: var(--mijninkomen-space-xl);
+}
+
+.mijninkomen-c-agendas details {
+  margin-top: var(--mijninkomen-space-s);
+}
+
+.mijninkomen-c-agendas summary {
+  color: var(--mijninkomen-link-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 60rem) {
+  .mijninkomen-agenda__week {
+    grid-template-columns: 1fr;
+  }
+  .mijninkomen-agenda__week > li {
+    min-height: 0;
+  }
+}
+
+/* ── Account › Mijn gegevens: naam en e-mailadres direct op de plek wijzigen ── */
+.mijninkomen-account {
+  max-width: 40rem;
+}
+
+.mijninkomen-account__rij {
+  padding-block: var(--mijninkomen-space-s);
+  border-bottom: 1px solid var(--mijninkomen-border-color);
+}
+
+.mijninkomen-account__rij dd {
+  margin: 0;
+}
+
+.mijninkomen-account__waarde {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mijninkomen-space-s);
+  overflow-wrap: anywhere;
+}
+
+/* De knop Wijzigen: compacter dan een gewone knop */
+.mijninkomen-account__waarde .nl-button {
+  --nl-button-padding-inline-start: var(--mijninkomen-space-s);
+  --nl-button-padding-inline-end: var(--mijninkomen-space-s);
+}
+
+.mijninkomen-account__bewerken {
+  margin-top: var(--mijninkomen-space-xs);
+}
+
+.mijninkomen-account__knoppen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mijninkomen-space-s);
+  margin-top: var(--mijninkomen-space-s);
+}
+
+.mijninkomen-account__melding {
+  margin: 0;
+  color: var(--mijninkomen-color-groen-donker);
+  font-size: 0.95rem;
+}
+
+.mijninkomen-account__melding:not(:empty) {
+  margin-top: var(--mijninkomen-space-xs);
+}
+
+/* Home › Snel naar: per rol drie snelkoppelingen als tegels */
+.mijninkomen-c-snel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--mijninkomen-space-m);
+  margin: var(--mijninkomen-space-s) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mijninkomen-c-snel a {
+  display: block;
+  padding: var(--mijninkomen-space-m);
+  border: 1px solid var(--mijninkomen-border-color);
+  border-left: 4px solid var(--mijninkomen-color-groen);
+  border-radius: var(--mijninkomen-border-radius);
+  font-weight: 600;
 }

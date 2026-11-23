@@ -13,11 +13,17 @@ import { PageFooter } from './components/PageFooter/PageFooter';
 import { PageHeader } from './components/PageHeader/PageHeader';
 import { projecten } from './content/ontwikkelingen';
 import { useHuidigPad } from './navigatie';
+import { AccountAanvragen, AccountBeveiliging, AccountGegevens } from './pages/community/Account';
 import { CommunityHome } from './pages/community/CommunityHome';
-import { Initiatieven } from './pages/community/Initiatieven';
-import { Roadmap } from './pages/community/Roadmap';
-import { Steden } from './pages/community/Steden';
-import { Vergaderingen } from './pages/community/Vergaderingen';
+import {
+  InitiatievenBeoordeling,
+  InitiatievenBijwerken,
+  InitiatievenIndienen,
+  InitiatievenOverzicht,
+} from './pages/community/Initiatieven';
+import { RoadmapKoppeling, RoadmapTijdlijn } from './pages/community/Roadmap';
+import { StedenRegelingen, StedenRollen } from './pages/community/Steden';
+import { VergaderingenActies, VergaderingenAgendas, VergaderingenBesluiten } from './pages/community/Vergaderingen';
 import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
 import { InitiatiefMelden } from './pages/InitiatiefMelden';
@@ -56,10 +62,21 @@ const paginas: Record<string, Pagina> = {
   '/privacy': { titel: 'Privacyverklaring – MijnInkomen', inhoud: Privacy },
   // NIVEAU 2: de communityomgeving (na inloggen). Eigen kop, voet en zijmenu.
   '/community': { titel: 'Home – Communityomgeving – MijnInkomen', inhoud: CommunityHome },
-  '/community/vergaderingen': { titel: 'Vergaderingen – Communityomgeving – MijnInkomen', inhoud: Vergaderingen },
-  '/community/steden': { titel: 'Stand van zaken steden – Communityomgeving – MijnInkomen', inhoud: Steden },
-  '/community/roadmap': { titel: 'Roadmap & backlog – Communityomgeving – MijnInkomen', inhoud: Roadmap },
-  '/community/initiatieven': { titel: 'Initiatieven & innovaties – Communityomgeving – MijnInkomen', inhoud: Initiatieven },
+  // Elk onderdeel heeft eigen subpagina's (keuze Isabella)
+  '/community/vergaderingen': { titel: "Agenda's – Vergaderondersteuning – Communityomgeving – MijnInkomen", inhoud: VergaderingenAgendas },
+  '/community/vergaderingen/besluitenlogboek': { titel: 'Besluitenlogboek – Vergaderondersteuning – Communityomgeving – MijnInkomen', inhoud: VergaderingenBesluiten },
+  '/community/vergaderingen/actielijst': { titel: 'Actielijst – Vergaderondersteuning – Communityomgeving – MijnInkomen', inhoud: VergaderingenActies },
+  '/community/steden': { titel: 'Rollen en contactpersonen – Stand van zaken steden – Communityomgeving – MijnInkomen', inhoud: StedenRollen },
+  '/community/steden/regelingen': { titel: 'Status per regeling – Stand van zaken steden – Communityomgeving – MijnInkomen', inhoud: StedenRegelingen },
+  '/community/roadmap': { titel: 'Tijdlijn – Roadmap & backlog – Communityomgeving – MijnInkomen', inhoud: RoadmapTijdlijn },
+  '/community/roadmap/koppeling': { titel: 'Koppeling met Jira en GitHub – Roadmap & backlog – Communityomgeving – MijnInkomen', inhoud: RoadmapKoppeling },
+  '/community/initiatieven': { titel: 'Ingediende initiatieven – Initiatieven & innovaties – Communityomgeving – MijnInkomen', inhoud: InitiatievenOverzicht },
+  '/community/initiatieven/beoordeling': { titel: 'Zo beoordelen we – Initiatieven & innovaties – Communityomgeving – MijnInkomen', inhoud: InitiatievenBeoordeling },
+  '/community/initiatieven/indienen': { titel: 'Initiatief indienen – Initiatieven & innovaties – Communityomgeving – MijnInkomen', inhoud: InitiatievenIndienen },
+  '/community/initiatieven/bijwerken': { titel: 'Initiatief bijwerken – Initiatieven & innovaties – Communityomgeving – MijnInkomen', inhoud: InitiatievenBijwerken },
+  '/community/account': { titel: 'Mijn gegevens – Account – Communityomgeving – MijnInkomen', inhoud: AccountGegevens },
+  '/community/account/aanvragen': { titel: 'Wijziging aanvragen – Account – Communityomgeving – MijnInkomen', inhoud: AccountAanvragen },
+  '/community/account/beveiliging': { titel: 'Inloggen en beveiliging – Account – Communityomgeving – MijnInkomen', inhoud: AccountBeveiliging },
 };
 
 /** Zoek de pagina bij een adres. Projectpagina's hebben een adres met een "slug". */
@@ -80,6 +97,8 @@ export function App() {
   const Inhoud = pagina.inhoud;
   // Niveau 2 (de communityomgeving) heeft een eigen kop en voet
   const isCommunity = pad === '/community' || pad.startsWith('/community/');
+  // Pagina's met een zijmenu tonen het kruimelpad zelf, naast het zijmenu
+  const metZijmenu = pad.startsWith('/ontwikkelingen') || pad.startsWith('/meer-weten');
   const mainRef = useRef<HTMLElement>(null);
   const eersteKeer = useRef(true);
 
@@ -107,14 +126,14 @@ export function App() {
     <div id="top">
       {/* NLDS Skip Link: onzichtbaar tot je op Tab drukt (WCAG 2.4.1) */}
       <SkipLink href="#inhoud">Direct naar de inhoud</SkipLink>
-      {isCommunity ? <CommunityKop /> : <PageHeader huidigPad={pad} />}
+      {isCommunity ? <CommunityKop /> : <PageHeader huidigPad={pad} metZijmenu={metZijmenu} />}
       {/* Kruimelpad: waar ben je in de site? Alleen niveau 1, niet op de homepage.
           Het staat boven <main>, zodat de skiplink er direct overheen springt. */}
-      {!isCommunity && <Kruimelpad pad={pad} />}
+      {!isCommunity && !metZijmenu && <Kruimelpad pad={pad} />}
       <main id="inhoud" tabIndex={-1} ref={mainRef}>
         <Inhoud />
       </main>
-      {isCommunity ? <CommunityVoet /> : <PageFooter />}
+      {isCommunity ? <CommunityVoet /> : <PageFooter metZijmenu={metZijmenu} />}
     </div>
   );
 }

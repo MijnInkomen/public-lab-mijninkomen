@@ -22,12 +22,19 @@ import { Link } from '@nl-design-system-candidate/link-react/css';
 import { kruimelsVoor } from '../../content/kruimelpad';
 import './Kruimelpad.css';
 
-export function Kruimelpad({ pad }: { pad: string }) {
+/**
+ * inPagina: het kruimelpad staat in de inhoud naast het zijmenu (Ontwikkelingen,
+ * Meer weten), in plaats van over de volle breedte boven de pagina.
+ */
+export function Kruimelpad({ pad, inPagina = false }: { pad: string; inPagina?: boolean }) {
   const kruimels = kruimelsVoor(pad);
   if (kruimels.length < 2) return null;
 
   return (
-    <nav className="mijninkomen-container mijninkomen-kruimelpad" aria-label="Kruimelpad">
+    <nav
+      className={`mijninkomen-kruimelpad${inPagina ? ' mijninkomen-kruimelpad--in-pagina' : ' mijninkomen-container'}`}
+      aria-label="Kruimelpad"
+    >
       <ol>
         {kruimels.map((kruimel, i) => {
           const laatste = i === kruimels.length - 1;

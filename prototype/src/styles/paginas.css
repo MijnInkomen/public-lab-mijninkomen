@@ -8,6 +8,12 @@
   padding-block: var(--mijninkomen-space-l);
 }
 
+/* Direct na de intro: geen extra ruimte bovenaan, anders wordt het gat te groot
+   (keuze Isabella). Geldt voor Initiatief melden en Contact. */
+.mijninkomen-pagina-intro + .mijninkomen-section {
+  padding-top: 0;
+}
+
 .mijninkomen-pagina-intro__inner {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -244,11 +250,6 @@
 /* Inhoud van een pagina zonder zijmenu, niet te breed */
 .mijninkomen-smalle-inhoud {
   max-width: 48rem;
-}
-
-/* Initiatief melden: de kaart van "deze pagina" is groen omlijnd */
-.mijninkomen-init-hier {
-  border: 2px solid var(--mijninkomen-color-groen);
 }
 
 /* Logo's van de gemeenten (homepage en "Hoe werken we samen?") */

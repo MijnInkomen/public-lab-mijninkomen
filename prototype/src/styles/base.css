@@ -33,6 +33,13 @@ body {
   padding-inline: var(--mijninkomen-space-m);
 }
 
+/* Kop en voet over de hele breedte, op niveau 1 én 2 (keuze Isabella: het zijmenu
+   staat overal tegen de linkerkant, dus de kop begint ook links) */
+.mijninkomen-container--breed {
+  max-width: none;
+  padding-inline: var(--mijninkomen-space-l);
+}
+
 /* Klein kopje in hoofdletters boven een titel */
 .mijninkomen-bovenkop {
   margin: 0 0 var(--mijninkomen-space-s);
