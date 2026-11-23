@@ -1,0 +1,115 @@
+.mijninkomen-actielijst {
+  --utrecht-select-background-color: #fff;
+  --utrecht-select-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23216b50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  --utrecht-select-padding-inline-end: 2.5rem;
+  --utrecht-select-border-color: #8a948f;
+  --utrecht-select-border-radius: 8px;
+  --utrecht-select-border-width: 1px;
+}
+
+.mijninkomen-actielijst .utrecht-alert {
+  margin-block: 1rem 1.5rem;
+}
+
+.mijninkomen-actielijst__filters {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-block-start: 1.5rem;
+}
+
+.mijninkomen-actielijst__filters .utrecht-form-field {
+  margin-block: 0;
+}
+
+.mijninkomen-actielijst__status {
+  min-inline-size: 16rem;
+}
+
+.mijninkomen-actielijst__mijn {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  min-block-size: 44px;
+}
+
+.mijninkomen-actielijst__aantal {
+  color: #4a5651;
+  margin-block: 1rem;
+}
+
+.mijninkomen-actielijst__tabel {
+  border: 1px solid #d9dcd7;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.mijninkomen-actielijst .utrecht-table {
+  border-collapse: collapse;
+  /* De NLDS-tabel is een blok; als echte tabel lopen de kolommen altijd over de hele breedte. */
+  display: table;
+  font-size: 1rem;
+  hyphens: none;
+  inline-size: 100%;
+  min-inline-size: 48rem;
+  /* Vaste kolombreedtes: de kolommen verspringen niet als je een filter kiest. */
+  table-layout: fixed;
+}
+
+.mijninkomen-actielijst .utrecht-table__header-cell:nth-child(1) {
+  inline-size: 31%;
+}
+
+.mijninkomen-actielijst .utrecht-table__header-cell:nth-child(2) {
+  inline-size: 21%;
+}
+
+.mijninkomen-actielijst .utrecht-table__header-cell:nth-child(3) {
+  inline-size: 13%;
+}
+
+.mijninkomen-actielijst .utrecht-table__header-cell:nth-child(4) {
+  inline-size: 18%;
+}
+
+.mijninkomen-actielijst .utrecht-table__header-cell:nth-child(5) {
+  inline-size: 17%;
+}
+
+/* Zoals in het prototype: alleen lijnen tussen de rijen, geen verticale lijnen en geen strepen. */
+.mijninkomen-actielijst .utrecht-table__row {
+  background-color: transparent;
+}
+
+.mijninkomen-actielijst .utrecht-table__body .utrecht-table__row:not(:last-child) {
+  border-block-end: 1px solid #e3e7e4;
+}
+
+.mijninkomen-actielijst .utrecht-table__header {
+  background-color: #eef4f1;
+  border-block-end: 1px solid #d9dcd7;
+}
+
+.mijninkomen-actielijst .utrecht-table__header-cell {
+  color: var(--basis-color-accent-1-color-document);
+  font-weight: 700;
+}
+
+.mijninkomen-actielijst .utrecht-table__cell,
+.mijninkomen-actielijst .utrecht-table__header-cell {
+  background-color: transparent;
+  border: 0;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  vertical-align: top;
+}
+
+.mijninkomen-actielijst__gemeente {
+  color: #4a5651;
+  display: block;
+}
+
+.mijninkomen-actielijst__datum {
+  white-space: nowrap;
+}
