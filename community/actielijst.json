@@ -1,0 +1,68 @@
+{
+  "acties": [
+    {
+      "id": "feedback-basisproces-bijzondere-bijstand",
+      "actie": "Feedback geven op het basisproces bijzondere bijstand",
+      "eigenaar": { "naam": "Sanne de Vries", "email": "s.devries@utrecht.nl", "gemeente": "Gemeente Utrecht" },
+      "niveau": "lokaal",
+      "streefdatum": "2026-11-10",
+      "status": "open"
+    },
+    {
+      "id": "export-jira-epics-csv",
+      "actie": "Export van de Jira-epics omzetten naar CSV voor GitHub",
+      "eigenaar": { "naam": "Programmateam", "email": "programmateam@mijninkomen.nl", "gemeente": "Alle gemeenten" },
+      "niveau": "landelijk",
+      "streefdatum": "2026-11-14",
+      "status": "in-behandeling"
+    },
+    {
+      "id": "testscenarios-alo-amsterdam",
+      "actie": "Testscenario's ALO voor Amsterdam afronden",
+      "eigenaar": { "naam": "Fatima El Amrani", "email": "f.elamrani@amsterdam.nl", "gemeente": "Gemeente Amsterdam" },
+      "niveau": "lokaal",
+      "streefdatum": "2026-11-21",
+      "status": "open"
+    },
+    {
+      "id": "koppeling-stadspas-testen",
+      "actie": "Koppeling met de leverancier van de Stadspas testen",
+      "eigenaar": { "naam": "Sanne de Vries", "email": "s.devries@utrecht.nl", "gemeente": "Gemeente Utrecht" },
+      "niveau": "lokaal",
+      "streefdatum": "2026-11-28",
+      "status": "in-behandeling"
+    },
+    {
+      "id": "koppeling-jira-github-controleren",
+      "actie": "Koppeling Jira–GitHub controleren na de mislukte synchronisatie",
+      "eigenaar": { "naam": "Daan Smit", "email": "d.smit@mijninkomen.nl", "gemeente": "Alle gemeenten" },
+      "niveau": "landelijk",
+      "streefdatum": "2026-11-27",
+      "status": "in-behandeling"
+    },
+    {
+      "id": "dpia-bbz-bijwerken",
+      "actie": "Privacytoets (DPIA) voor Bbz bijwerken",
+      "eigenaar": { "naam": "Pieter Bakker", "email": "p.bakker@denhaag.nl", "gemeente": "Gemeente Den Haag" },
+      "niveau": "lokaal",
+      "streefdatum": "2026-12-05",
+      "status": "open"
+    },
+    {
+      "id": "kennismaking-enschede",
+      "actie": "Kennismakingsgesprek met Enschede plannen",
+      "eigenaar": { "naam": "Programmateam", "email": "programmateam@mijninkomen.nl", "gemeente": "Gemeente Enschede" },
+      "niveau": "landelijk",
+      "streefdatum": "2026-11-07",
+      "status": "afgerond"
+    },
+    {
+      "id": "begroting-2027-delen",
+      "actie": "Begroting 2027 delen met alle gemeenten",
+      "eigenaar": { "naam": "Programmateam", "email": "programmateam@mijninkomen.nl", "gemeente": "Alle gemeenten" },
+      "niveau": "landelijk",
+      "streefdatum": "2026-10-30",
+      "status": "afgerond"
+    }
+  ]
+}
