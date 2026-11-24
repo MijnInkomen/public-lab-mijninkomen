@@ -8,62 +8,42 @@ const navbar: Navbar = {
     src: '/img/logo-mijninkomen.png',
   },
   items: [
+    // Ingelogd verdwijnen de openbare menu-items: dan staat alles in het zijmenu van de communityomgeving.
     {
+      type: 'custom-communitylabel',
+      to: '/vergaderingen/',
+      label: 'Communityomgeving',
+      position: 'left',
+      className: 'mijninkomen-communitylabel',
+    },
+    {
+      type: 'custom-publiek',
       to: '/',
       label: 'Home',
       position: 'left',
       activeBaseRegex: '^/$',
     },
     {
-      type: 'doc',
-      docId: 'ontwikkelingen/huidig',
+      type: 'custom-publiek',
+      to: '/wat-kan-het/',
       label: 'Ontwikkelingen',
       position: 'left',
+      activeBaseRegex: '^/(wat-kan-het|waar-werkt-het-naar-toe)/',
     },
     {
+      type: 'custom-publiek',
       to: '/meer-weten/',
       label: 'Meer weten',
       position: 'left',
     },
     {
+      type: 'custom-publiek',
       to: '/initiatief-melden/',
       label: 'Initiatief melden',
       position: 'left',
     },
     {
-      // Alle besloten pagina's staan bij elkaar, zodat de balk niet volloopt zodra er eentje bijkomt.
-      // Het item verschijnt pas na inloggen.
-      type: 'custom-community',
-      label: 'Voor communityleden',
-      position: 'left',
-      items: [
-        {
-          to: '/vergaderingen/',
-          label: 'Vergaderingen',
-        },
-        {
-          to: '/roadmap/',
-          label: 'Roadmap',
-        },
-        {
-          to: '/innovatie-backlog/',
-          label: 'Innovatie-backlog',
-        },
-        {
-          to: '/regelingen/',
-          label: 'Regelingen',
-        },
-        {
-          to: '/gemeenten/',
-          label: 'Gemeenten',
-        },
-        {
-          to: '/agenda/',
-          label: 'Agenda',
-        },
-      ],
-    },
-    {
+      type: 'custom-publiek',
       to: '/contact/',
       label: 'Contact',
       position: 'left',
