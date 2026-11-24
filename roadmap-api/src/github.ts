@@ -60,7 +60,7 @@ export async function verzoekGitHubData() {
       `
       query($cursor: String) {
         repository(owner:"${config.owner}", name:"${config.repo}") {
-          epics: issues(first: 20, filterBy: {type: "Epic"}, after: $cursor) {
+          epics: issues(first: 20, labels: ["Epic"], after: $cursor) {
             nodes {
               ...issueInfo
               subIssues(first: ${FEATURE_MAX_COUNT}) {

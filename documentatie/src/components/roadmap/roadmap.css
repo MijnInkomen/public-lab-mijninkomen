@@ -1,0 +1,10 @@
+.mijninkomen-roadmap__epic {
+  border-block-start: 1px solid #d9dcd7;
+  margin-block-start: 2rem;
+  padding-block-start: 1.5rem;
+  scroll-margin-block-start: 6rem;
+}
+
+.mijninkomen-roadmap__features {
+  margin-block-start: 2rem;
+}
