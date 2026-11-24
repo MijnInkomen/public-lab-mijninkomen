@@ -45,6 +45,51 @@ const RegelingenCel = ({ regelingen }: { regelingen: ActieveRegeling[] }) =>
     </TableCell>
   );
 
+/** Per gemeente de rollen, de actieve regelingen en de persoon om mee af te stemmen. */
+const GemeenteBlok = ({
+  gemeente,
+  rollen,
+  regelingen,
+}: {
+  gemeente: Gemeente;
+  rollen: Rol[];
+  regelingen: ActieveRegeling[];
+}) => {
+  const eigenRollen = rollen.filter(({ id }) => gemeente.rollen.includes(id));
+  const { wie, rol, aanTeVullen } = gemeente.contactpersoon;
+
+  return (
+    <article id={gemeente.id} className="mijninkomen-gemeenten__gemeente">
+      <Heading level={3}>{gemeente.naam}</Heading>
+      <Paragraph className="mijninkomen-gemeenten__meta">
+        {eigenRollen.length > 0
+          ? `Bestuurlijke rol: ${eigenRollen.map(({ naam }) => naam.toLowerCase()).join(' en ')}`
+          : 'Bestuurlijke rol: nog niet vastgesteld'}
+      </Paragraph>
+
+      <Heading level={4}>Actieve regelingen</Heading>
+      {regelingen.length === 0 ? (
+        <Paragraph className="mijninkomen-gemeenten__aan-te-vullen">
+          <em>Er is hier nog geen regeling actief.</em>
+        </Paragraph>
+      ) : (
+        <ul className="mijninkomen-gemeenten__lijst">
+          {regelingen.map(({ id, naam, status }) => (
+            <li key={id}>
+              <Link href={`/regelingen/${id}/`}>{naam}</Link> <Badge soort="status">{status}</Badge>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <Heading level={4}>Afstemmen met</Heading>
+      <Paragraph className={aanTeVullen ? 'mijninkomen-gemeenten__aan-te-vullen' : undefined}>
+        {aanTeVullen ? <em>{wie}</em> : <strong>{wie}</strong>} — {rol}
+      </Paragraph>
+    </article>
+  );
+};
+
 export const GemeenteMatrix = () => {
   const gegevens = useGemeenten();
 
@@ -101,7 +146,9 @@ export const GemeenteMatrix = () => {
             <TableBody>
               {gemeenten.gemeenten.map((gemeente) => (
                 <TableRow key={gemeente.id}>
-                  <TableHeaderCell scope="row">{gemeente.naam}</TableHeaderCell>
+                  <TableHeaderCell scope="row">
+                    <a href={`#${gemeente.id}`}>{gemeente.naam}</a>
+                  </TableHeaderCell>
                   {gemeenten.rollen.map((rol) => (
                     <RolCel
                       key={rol.id}
@@ -126,6 +173,37 @@ export const GemeenteMatrix = () => {
             </TableBody>
           </Table>
         </TableContainer>
+      </section>
+
+      <section aria-labelledby="gemeenten-per-stad" className="mijninkomen-gemeenten__blok">
+        <Heading level={2} id="gemeenten-per-stad">
+          Per gemeente
+        </Heading>
+        {gemeenten.gemeenten.map((gemeente) => (
+          <GemeenteBlok
+            key={gemeente.id}
+            gemeente={gemeente}
+            rollen={gemeenten.rollen}
+            regelingen={regelingenVan(gemeente)}
+          />
+        ))}
+        <Paragraph>{gemeenten.contactTekst}</Paragraph>
+      </section>
+
+      <Alert type="warning">
+        <Heading level={2}>{gemeenten.oproep.titel}</Heading>
+        <Paragraph>{gemeenten.oproep.tekst}</Paragraph>
+      </Alert>
+
+      <section aria-labelledby="gemeenten-bronnen" className="mijninkomen-gemeenten__blok">
+        <Heading level={2} id="gemeenten-bronnen">
+          Bronnen
+        </Heading>
+        <ul className="mijninkomen-gemeenten__lijst">
+          {gemeenten.bronnen.map((bron) => (
+            <li key={bron}>{bron}</li>
+          ))}
+        </ul>
       </section>
     </>
   );

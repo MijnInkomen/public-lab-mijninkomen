@@ -61,3 +61,23 @@
 .mijninkomen-gemeenten__aan-te-vullen {
   color: var(--basis-color-accent-1-color-subtle);
 }
+
+.mijninkomen-gemeenten__lijst {
+  margin-block: 0.5rem 1rem;
+  padding-inline-start: 1.5rem;
+}
+
+.mijninkomen-gemeenten__lijst li {
+  margin-block: 0.5rem;
+}
+
+.mijninkomen-gemeenten__gemeente {
+  border-block-start: 1px solid #d9dcd7;
+  margin-block-start: 2rem;
+  padding-block-start: 1.5rem;
+  scroll-margin-block-start: 6rem;
+}
+
+.mijninkomen-gemeenten__meta {
+  color: var(--basis-color-accent-1-color-subtle);
+}
