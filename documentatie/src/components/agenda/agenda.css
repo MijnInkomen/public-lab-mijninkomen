@@ -1,0 +1,66 @@
+.mijninkomen-agenda__blok {
+  margin-block: 2rem;
+}
+
+.mijninkomen-agenda__item {
+  border-block-start: 1px solid #d9dcd7;
+  margin-block-start: 1.5rem;
+  padding-block-start: 1.5rem;
+}
+
+.mijninkomen-agenda__wanneer {
+  color: var(--basis-color-accent-1-color-subtle);
+}
+
+/* Elk item toont dezelfde regels onder elkaar, zodat je ze kunt vergelijken. */
+.mijninkomen-agenda__gegevens {
+  display: grid;
+  gap: 0.5rem 1.5rem;
+  margin-block: 1rem 0;
+}
+
+.mijninkomen-agenda__gegevens > div {
+  display: grid;
+  gap: 0.25rem 1rem;
+  grid-template-columns: minmax(6rem, 10rem) 1fr;
+}
+
+.mijninkomen-agenda__gegevens dt {
+  font-weight: 600;
+}
+
+.mijninkomen-agenda__gegevens dd {
+  margin-inline-start: 0;
+}
+
+.mijninkomen-agenda__soorten {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  margin-block: 1rem 0;
+}
+
+.mijninkomen-agenda__soorten > div {
+  border: 1px solid #d9dcd7;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.mijninkomen-agenda__soorten dt {
+  font-weight: 600;
+  margin-block-end: 0.25rem;
+}
+
+.mijninkomen-agenda__soorten dd {
+  margin-inline-start: 0;
+}
+
+.mijninkomen-agenda__leeg {
+  color: var(--basis-color-accent-1-color-subtle);
+}
+
+@media (width <= 32rem) {
+  .mijninkomen-agenda__gegevens > div {
+    grid-template-columns: 1fr;
+  }
+}

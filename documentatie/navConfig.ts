@@ -54,6 +54,10 @@ const navbar: Navbar = {
           label: 'Gemeenten',
         },
         {
+          to: '/agenda/',
+          label: 'Agenda',
+        },
+        {
           to: 'pathname:///community/beheer/',
           target: '_self',
           label: 'Beheer',
