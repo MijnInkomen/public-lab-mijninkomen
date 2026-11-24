@@ -1,3 +1,115 @@
 {
-  "tekst": "Hier komt de volledige roadmap voor communityleden."
+  "voorbeelddata": true,
+  "roadmap": [
+    {
+      "title": "Inkomensoverzicht in begrijpelijke taal",
+      "description": "Een overzicht van alle inkomsten en toeslagen van een inwoner, geschreven op B1-niveau.",
+      "gebruikers": ["Utrecht"],
+      "status": "In Behandeling",
+      "features": [
+        {
+            "title": "Test1",
+            "description": "Test description voor de eerste test",
+            "isOpen": false
+        },
+        {
+            "title": "Test2",
+            "description": "Test description voor de tweede test",
+            "isOpen": true
+        },
+        {
+            "title": "Test3",
+            "description": "Test description voor de derde test",
+            "isOpen": true
+        }
+      ]
+    },
+    {
+      "title": "Melding bij wijziging van bijstandsbedrag",
+      "description": "Inwoners krijgen een bericht als hun bijstandsbedrag verandert, met uitleg waarom.",
+      "gebruikers": ["Den Haag"],
+      "status": "PI Ready",
+      "features": [
+        {
+            "title": "Test1",
+            "description": "Test description voor de eerste test",
+            "isOpen": true
+        },
+        {
+            "title": "Test2",
+            "description": "Test description voor de tweede test",
+            "isOpen": true
+        }
+      ]
+    },
+    {
+      "title": "Koppeling met eigen bankapp",
+      "description": "Inkomensgegevens direct tonen in de bankapp van de inwoner.",
+      "gebruikers": ["Amsterdam"],
+      "status": "Trechter",
+      "features": [
+        {
+            "title": "Test1",
+            "description": "Test description voor de eerste test",
+            "isOpen": false
+        }
+      ]
+    },
+    {
+      "title": "Eigen huisstijl per gebruikers in MijnInkomen",
+      "description": "Elke gebruikers kan kleuren en logo van MijnInkomen aanpassen.",
+      "gebruikers": ["'s-Hertogenbosch"],
+      "status": "Refinement",
+      "features": [
+        {
+            "title": "Test1",
+            "description": "Test description voor de eerste test",
+            "isOpen": false
+        },
+        {
+            "title": "Test2",
+            "description": "Test description voor de tweede test",
+            "isOpen": true
+        },
+        {
+            "title": "Test3",
+            "description": "Test description voor de derde test",
+            "isOpen": false
+        },
+        {
+            "title": "Test4",
+            "description": "Test description voor de vierde test",
+            "isOpen": false
+        },
+        {
+            "title": "Test5",
+            "description": "Test description voor de vijfde test",
+            "isOpen": true
+        }
+      ]
+    },
+    {
+      "title": "Rekenhulp: heb ik recht op bijzondere bijstand?",
+      "description": null,
+      "gebruikers": null,
+      "status": "Trechter",
+      "features": [
+        {
+            "title": "Test1",
+            "description": "Test description voor de eerste test",
+            "isOpen": false
+        },
+        {
+            "title": "Test2",
+            "description": "Test description voor de tweede test",
+            "isOpen": true
+        },
+        {
+            "title": "Test3",
+            "description": "Test description voor de derde test",
+            "isOpen": true
+        }
+      ]
+    }
+  ]
 }
