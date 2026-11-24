@@ -1,0 +1,125 @@
+.mijninkomen-besluiten {
+  --utrecht-select-background-color: #fff;
+  --utrecht-select-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23216b50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  --utrecht-select-border-color: #8a948f;
+  --utrecht-select-border-radius: 8px;
+  --utrecht-select-border-width: 1px;
+  --utrecht-select-padding-inline-end: 2.5rem;
+  --utrecht-textbox-background-color: #fff;
+  --utrecht-textbox-border-color: #8a948f;
+  --utrecht-textbox-border-radius: 8px;
+  --utrecht-textbox-border-width: 1px;
+}
+
+.mijninkomen-besluiten .utrecht-alert {
+  margin-block: 1rem 1.5rem;
+}
+
+/* Vijf filters naast elkaar op desktop, onder elkaar op mobiel. */
+.mijninkomen-besluiten__filters {
+  align-items: start;
+  display: grid;
+  gap: 1rem 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
+  margin-block-start: 1.5rem;
+}
+
+.mijninkomen-besluiten__filters .utrecht-form-field {
+  margin-block: 0;
+}
+
+.mijninkomen-besluiten__filters .utrecht-form-label {
+  color: var(--basis-color-accent-1-color-document);
+  font-weight: 700;
+}
+
+.mijninkomen-besluiten__filters .utrecht-select,
+.mijninkomen-besluiten__filters .utrecht-textbox {
+  inline-size: 100%;
+  max-inline-size: none;
+  min-block-size: 44px;
+}
+
+.mijninkomen-besluiten__aantal {
+  color: #4a5651;
+  margin-block: 1rem;
+}
+
+.mijninkomen-besluiten__tabel {
+  border: 1px solid #d9dcd7;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.mijninkomen-besluiten .utrecht-table {
+  border-collapse: collapse;
+  /* De NLDS-tabel is een blok; als echte tabel lopen de kolommen altijd over de hele breedte. */
+  display: table;
+  font-size: 1rem;
+  hyphens: none;
+  inline-size: 100%;
+  /* Op mobiel scrolt de tabel horizontaal; zo breed blijven datums op één regel. */
+  min-inline-size: 60rem;
+  /* Vaste kolombreedtes: de kolommen verspringen niet als je zoekt of filtert. */
+  table-layout: fixed;
+}
+
+.mijninkomen-besluiten .utrecht-table__header-cell:nth-child(1) {
+  inline-size: 18%;
+}
+
+.mijninkomen-besluiten .utrecht-table__header-cell:nth-child(2) {
+  inline-size: 32%;
+}
+
+.mijninkomen-besluiten .utrecht-table__header-cell:nth-child(3) {
+  inline-size: 18%;
+}
+
+.mijninkomen-besluiten .utrecht-table__header-cell:nth-child(4) {
+  inline-size: 15%;
+}
+
+.mijninkomen-besluiten .utrecht-table__header-cell:nth-child(5) {
+  inline-size: 17%;
+}
+
+/* Zoals in het prototype: alleen lijnen tussen de rijen, geen verticale lijnen en geen strepen. */
+.mijninkomen-besluiten .utrecht-table__header {
+  background-color: #eef4f1;
+  border-block-end: 1px solid #d9dcd7;
+}
+
+.mijninkomen-besluiten .utrecht-table__row {
+  background-color: transparent;
+}
+
+.mijninkomen-besluiten .utrecht-table__body .utrecht-table__row:not(:last-child) {
+  border-block-end: 1px solid #e3e7e4;
+}
+
+.mijninkomen-besluiten .utrecht-table__cell,
+.mijninkomen-besluiten .utrecht-table__header-cell {
+  background-color: transparent;
+  border: 0;
+  /* Woorden als "Stuurgroepoverleg" niet midden in het woord afbreken. */
+  overflow-wrap: normal;
+  padding-block: 0.75rem;
+  padding-inline: 0.75rem;
+  vertical-align: top;
+  word-break: normal;
+}
+
+.mijninkomen-besluiten .utrecht-table__header-cell {
+  color: var(--basis-color-accent-1-color-document);
+  font-weight: 700;
+}
+
+.mijninkomen-besluiten__datum,
+.mijninkomen-besluiten__overleg {
+  color: #4a5651;
+}
+
+.mijninkomen-besluiten__datum {
+  white-space: nowrap;
+}

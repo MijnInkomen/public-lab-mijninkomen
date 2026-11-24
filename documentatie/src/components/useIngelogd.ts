@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 interface Gebruiker {
+  email?: string;
   groups?: string[];
 }
 
@@ -33,3 +34,6 @@ export const useIsAdmin = () => useGebruiker()?.groups?.includes('admin') ?? fal
 
 /** Alleen voor de weergave. Nginx en de API controleren de rol zelf. */
 export const useIsHoofdbeheerder = () => useGebruiker()?.groups?.includes('hoofdbeheerder') ?? false;
+
+/** Het e-mailadres waarmee je bent ingelogd, of undefined als je niet bent ingelogd. */
+export const useEmail = () => useGebruiker()?.email?.toLowerCase();

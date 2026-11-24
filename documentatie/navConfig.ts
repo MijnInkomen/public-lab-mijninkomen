@@ -38,6 +38,10 @@ const navbar: Navbar = {
       position: 'left',
       items: [
         {
+          to: '/vergaderingen/',
+          label: 'Vergaderingen',
+        },
+        {
           to: '/roadmap/',
           label: 'Roadmap',
         },

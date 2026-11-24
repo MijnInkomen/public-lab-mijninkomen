@@ -271,3 +271,16 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* De link Account staat in sidebarConfig bovenaan, maar hoort onderaan het zijmenu (zoals in het prototype). */
+.theme-doc-sidebar-menu:has(> .sidebar__account) {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-doc-sidebar-menu > .sidebar__account {
+  border-block-start: 1px solid var(--basis-color-default-border-subtle, #d9dcd7);
+  margin-block-start: 1rem;
+  order: 1;
+  padding-block-start: 1rem;
+}

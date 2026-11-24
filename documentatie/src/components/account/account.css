@@ -1,0 +1,72 @@
+.mijninkomen-account {
+  --utrecht-button-group-margin-block-end: 0;
+  --utrecht-button-group-margin-block-start: 1rem;
+  --utrecht-textbox-background-color: #fff;
+  --utrecht-textbox-border-color: #8a948f;
+  --utrecht-textbox-border-radius: 8px;
+  --utrecht-textbox-border-width: 1px;
+}
+
+.mijninkomen-account .utrecht-alert {
+  margin-block: 1rem 1.5rem;
+  max-inline-size: 44rem;
+}
+
+.mijninkomen-gegevens {
+  margin-block: 2rem 0;
+  max-inline-size: 44rem;
+}
+
+.mijninkomen-gegevens__rij {
+  border-block-end: 1px solid #d9dcd7;
+  padding-block: 1rem;
+}
+
+.mijninkomen-gegevens__label {
+  color: var(--basis-color-accent-1-color-document);
+  font-weight: 700;
+  margin-block-end: 0.25rem;
+}
+
+.mijninkomen-gegevens__waarde {
+  margin-inline-start: 0;
+}
+
+.mijninkomen-gegevens__regel {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: space-between;
+}
+
+.mijninkomen-gegevens__tekst {
+  overflow-wrap: anywhere;
+}
+
+.mijninkomen-account .mijninkomen-gegevens__wijzig {
+  align-items: center;
+  color: var(--basis-color-accent-1-color-default);
+  display: inline-flex;
+  font-weight: 600;
+  gap: 0.375rem;
+  min-block-size: 44px;
+}
+
+.mijninkomen-account .mijninkomen-gegevens__wijzig:hover {
+  color: var(--basis-color-accent-1-color-hover);
+  text-decoration-line: underline;
+}
+
+.mijninkomen-gegevens__formulier {
+  margin-block-start: 0.5rem;
+  max-inline-size: 28rem;
+}
+
+.mijninkomen-gegevens__formulier .utrecht-textbox {
+  inline-size: 100%;
+}
+
+.mijninkomen-gegevens__hulp {
+  margin-block-start: 1.5rem;
+}

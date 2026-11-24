@@ -1,14 +1,16 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
-import { AccountBestaatAl, type Keycloak } from './keycloak.ts';
+import { AccountBestaatAl, EmailInGebruik, type Account, type Keycloak } from './keycloak.ts';
 import type { Mail } from './mail.ts';
 import type { Opslag, Resultaat } from './opslag.ts';
-import { controleerAanvraag, controleerReden, controleerWijziging, FUNCTIES } from './validatie.ts';
+import { controleerAanvraag, controleerAccountWijziging, controleerReden, controleerWijziging, FUNCTIES } from './validatie.ts';
 
 const MAX_GROOTTE = 16 * 1024;
 const LIJST = '/api/beheer/aanvragen';
 const BEHANDELEN = /^\/api\/beheer\/aanvragen\/([0-9a-f-]{36})\/(toelaten|weigeren)$/;
 const LEDEN = '/api/beheer/leden';
 const LID = /^\/api\/beheer\/leden\/([0-9a-f-]{36})$/;
+const ACCOUNT = '/api/account';
+const KEYCLOAK_ID = /^[0-9a-f-]{36}$/;
 
 const MELDINGEN: Record<Exclude<Resultaat, 'gelukt'>, [number, string]> = {
   'niet-gevonden': [404, 'Deze aanvraag bestaat niet'],
@@ -93,6 +95,56 @@ export const maakServer = (opslag: Opslag, keycloak: Keycloak, mail: Mail) => {
     return stuurJson(antwoord, 200, { status: 'gelukt' });
   };
 
+  /** Mijn gegevens: een lid ziet en wijzigt alleen het eigen account. */
+  const verwerkAccount = async (verzoek: IncomingMessage, antwoord: ServerResponse) => {
+    // Het Keycloak-id van de ingelogde gebruiker. Nginx zet het na de login-controle; het verandert nooit.
+    const id = leesKop(verzoek, 'x-auth-user-id');
+    if (!id) return stuurJson(antwoord, 401, { fout: 'Niet ingelogd' });
+    if (!KEYCLOAK_ID.test(id)) return stuurJson(antwoord, 404, { fout: 'Dit account bestaat niet' });
+
+    const account = await keycloak.haalAccountOp(id);
+    if (!account) return stuurJson(antwoord, 404, { fout: 'Dit account bestaat niet' });
+
+    const stuurGegevens = async ({ naam, email, lidSinds }: Account) => {
+      const { functie, organisatie } = await opslag.haalProfielOp(id, email);
+      return stuurJson(antwoord, 200, {
+        naam,
+        email,
+        functie: functie && FUNCTIES.includes(functie) ? functie : null,
+        organisatie,
+        lidSinds,
+      });
+    };
+
+    if (verzoek.method === 'GET') return stuurGegevens(account);
+    if (verzoek.method !== 'POST') {
+      antwoord.setHeader('Allow', 'GET, POST');
+      return stuurJson(antwoord, 405, { fout: 'Methode niet toegestaan' });
+    }
+
+    let invoer: unknown;
+    try {
+      invoer = await leesJson(verzoek);
+    } catch {
+      return stuurJson(antwoord, 400, { fout: 'Ongeldig verzoek' });
+    }
+    const { wijziging, fouten } = controleerAccountWijziging(invoer);
+    if (!wijziging) return stuurJson(antwoord, 422, { fouten });
+
+    try {
+      await keycloak.wijzigAccount(id, wijziging);
+    } catch (fout) {
+      if (fout instanceof EmailInGebruik) {
+        return stuurJson(antwoord, 409, { fouten: { email: 'Dit e-mailadres hoort al bij een ander account.' } });
+      }
+      throw fout;
+    }
+    if ('email' in wijziging && wijziging.email !== account.email) {
+      await opslag.verhuisAanvraag(account.email, wijziging.email);
+    }
+    return stuurGegevens({ ...account, ...wijziging });
+  };
+
   const verwerkAanvraag = async (verzoek: IncomingMessage, antwoord: ServerResponse) => {
     if (verzoek.method !== 'POST') {
       antwoord.setHeader('Allow', 'POST');
@@ -162,6 +214,7 @@ export const maakServer = (opslag: Opslag, keycloak: Keycloak, mail: Mail) => {
 
     try {
       if (pad === '/api/toegang-aanvragen') return await verwerkAanvraag(verzoek, antwoord);
+      if (pad === ACCOUNT) return await verwerkAccount(verzoek, antwoord);
       if (pad.startsWith('/api/beheer/')) return await verwerkBeheer(verzoek, antwoord, pad);
       return stuurJson(antwoord, 404, { fout: 'Niet gevonden' });
     } catch (fout) {

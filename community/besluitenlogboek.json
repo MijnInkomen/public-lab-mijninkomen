@@ -1,0 +1,68 @@
+{
+  "besluiten": [
+    {
+      "id": "toetreding-enschede-lelystad",
+      "datum": "2026-10-15",
+      "besluit": "Enschede en Lelystad mogen toetreden tot MijnInkomen.",
+      "overleg": "Stuurgroepoverleg",
+      "gemeenten": ["Enschede", "Lelystad"],
+      "status": "besloten"
+    },
+    {
+      "id": "basisproces-bijzondere-bijstand-standaard",
+      "datum": "2026-10-15",
+      "besluit": "Het basisproces bijzondere bijstand wordt de standaard voor alle gemeenten.",
+      "overleg": "Stuurgroepoverleg",
+      "gemeenten": [],
+      "status": "in-uitvoering"
+    },
+    {
+      "id": "epics-in-github",
+      "datum": "2026-10-08",
+      "besluit": "Epics en user stories worden voortaan bijgehouden in GitHub, niet meer in Jira.",
+      "overleg": "Product Owner-overleg",
+      "gemeenten": [],
+      "status": "in-uitvoering"
+    },
+    {
+      "id": "bijdrage-2027",
+      "datum": "2026-09-24",
+      "besluit": "De bijdrage per gemeente voor 2027 is vastgesteld.",
+      "overleg": "Stuurgroepoverleg",
+      "gemeenten": [],
+      "status": "besloten"
+    },
+    {
+      "id": "alo-live-utrecht",
+      "datum": "2026-09-17",
+      "besluit": "ALO gaat op 1 oktober live in Utrecht.",
+      "overleg": "Product Owner-overleg",
+      "gemeenten": ["Utrecht"],
+      "status": "uitgevoerd"
+    },
+    {
+      "id": "proef-een-aanvraagformulier",
+      "datum": "2026-09-03",
+      "besluit": "De proef met één aanvraagformulier voor meerdere regelingen schuift op naar 2027.",
+      "overleg": "Community-sessie",
+      "gemeenten": ["Den Haag", "Utrecht"],
+      "status": "uitgesteld"
+    },
+    {
+      "id": "dpia-bbz-den-haag",
+      "datum": "2026-08-27",
+      "besluit": "Den Haag laat de privacytoets (DPIA) voor Bbz opnieuw uitvoeren.",
+      "overleg": "Product Owner-overleg",
+      "gemeenten": ["Den Haag"],
+      "status": "uitgevoerd"
+    },
+    {
+      "id": "aansluiting-amsterdam",
+      "datum": "2026-08-13",
+      "besluit": "Amsterdam start met een testperiode voor de aansluiting op MijnInkomen.",
+      "overleg": "Stuurgroepoverleg",
+      "gemeenten": ["Amsterdam"],
+      "status": "in-uitvoering"
+    }
+  ]
+}

@@ -2,6 +2,9 @@ import type { Aanvraag } from './validatie.ts';
 
 export class AccountBestaatAl extends Error {}
 
+/** Het e-mailadres hoort al bij een ander account. */
+export class EmailInGebruik extends Error {}
+
 /** Rol op de site. Beheerder is de Keycloak-rol admin, hoofdbeheerder is de main admin. */
 export type Rol = 'lid' | 'beheerder' | 'hoofdbeheerder';
 
@@ -12,6 +15,19 @@ export interface KeycloakLid {
   rol: Rol;
 }
 
+/** De gegevens van een ingelogd lid, voor de pagina Mijn gegevens. */
+export interface Account {
+  id: string;
+  naam: string;
+  email: string;
+  lidSinds: number | null;
+}
+
+export interface AccountWijziging {
+  naam?: string;
+  email?: string;
+}
+
 export interface Keycloak {
   maakCommunitylid: (aanvraag: Aanvraag) => Promise<void>;
   haalLedenOp: () => Promise<KeycloakLid[]>;
@@ -20,6 +36,10 @@ export interface Keycloak {
   zetRol: (id: string, rol: Exclude<Rol, 'hoofdbeheerder'>) => Promise<void>;
   /** De rollen zoals ze nu in Keycloak staan, zodat een wijziging direct doorwerkt. */
   haalRollenOp: (email: string) => Promise<string[]>;
+  /** Zoekt op het Keycloak-id: dat verandert niet als het e-mailadres verandert. */
+  haalAccountOp: (id: string) => Promise<Account | undefined>;
+  /** Wijzigt naam of e-mailadres. Gooit EmailInGebruik als het e-mailadres al bij een ander account hoort. */
+  wijzigAccount: (id: string, wijziging: AccountWijziging) => Promise<void>;
 }
 
 interface Instellingen {
@@ -42,6 +62,7 @@ interface Gebruiker {
   username: string;
   firstName?: string;
   lastName?: string;
+  createdTimestamp?: number;
 }
 
 const splitsNaam = (naam: string) => {
@@ -202,6 +223,31 @@ export const maakKeycloak = ({ url, clientSecret, siteUrl }: Instellingen): Keyc
       const gevonden = await leesJson<Gebruiker[]>(beheer, `/users?${params}`, 'gebruiker zoeken');
       const gebruiker = gevonden.find((kandidaat) => kandidaat.email?.toLowerCase() === email.toLowerCase());
       return gebruiker ? [...(await rollenVan(beheer, gebruiker.id))] : [];
+    },
+
+    haalAccountOp: async (id) => {
+      const beheer = await maakBeheer();
+      const antwoord = await beheer(`/users/${id}`);
+      if (antwoord.status === 404) return undefined;
+      const gebruiker = (await (await controleer(antwoord, 'account ophalen')).json()) as Gebruiker;
+      return {
+        id: gebruiker.id,
+        naam: naamVan(gebruiker),
+        email: gebruiker.email ?? gebruiker.username,
+        lidSinds: gebruiker.createdTimestamp ? new Date(gebruiker.createdTimestamp).getFullYear() : null,
+      };
+    },
+
+    wijzigAccount: async (id, { naam, email }) => {
+      const beheer = await maakBeheer();
+      const [voornaam = '', ...rest] = (naam ?? '').split(/\s+/);
+      const velden = {
+        ...(naam && { firstName: voornaam, lastName: rest.join(' ') }),
+        ...(email && { email, emailVerified: true }),
+      };
+      const antwoord = await beheer(`/users/${id}`, { method: 'PUT', body: JSON.stringify(velden) });
+      if (antwoord.status === 409) throw new EmailInGebruik();
+      await controleer(antwoord, 'account wijzigen');
     },
   };
 };

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { controleerAanvraag, controleerReden, leesDatum } from '../src/validatie.ts';
+import { controleerAanvraag, controleerAccountWijziging, controleerReden, leesDatum } from '../src/validatie.ts';
 
 const VANDAAG = '2026-10-31';
 
@@ -76,4 +76,13 @@ test('de reden van weigering is verplicht en niet te lang', () => {
   assert.equal(controleerReden({ reden: '' }).fout, 'Vul de reden van weigering in.');
   assert.equal(controleerReden(null).fout, 'Vul de reden van weigering in.');
   assert.match(controleerReden({ reden: 'x'.repeat(1001) }).fout ?? '', /maximaal 1000/);
+});
+
+test('een lid wijzigt de naam of het e-mailadres, netjes opgeschoond', () => {
+  assert.deepEqual(controleerAccountWijziging({ naam: '  Sam   de Vries ' }), { wijziging: { naam: 'Sam de Vries' } });
+  assert.deepEqual(controleerAccountWijziging({ email: ' Sam@Utrecht.NL ' }), { wijziging: { email: 'sam@utrecht.nl' } });
+  assert.deepEqual(controleerAccountWijziging({ naam: '' }), { fouten: { naam: 'Vul je naam in.' } });
+  assert.equal(controleerAccountWijziging({ naam: 'x'.repeat(201) }).fouten?.naam, 'Je naam is te lang.');
+  assert.match(controleerAccountWijziging({ email: 'geen-mail' }).fouten?.email ?? '', /geldig e-mailadres/);
+  assert.ok(controleerAccountWijziging(null).fouten);
 });
