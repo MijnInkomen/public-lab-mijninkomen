@@ -106,6 +106,17 @@
       "standardFlowEnabled": false,
       "directAccessGrantsEnabled": false,
       "serviceAccountsEnabled": true
+    },
+    {
+      "clientId": "roadmap-api",
+      "name": "Roadmap API",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "${ROADMAP_API_CLIENT_SECRET}",
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": true
     }
   ],
   "users": [
@@ -162,6 +173,17 @@
       "clientRoles": {
         "realm-management": [
           "manage-users",
+          "view-users",
+          "view-realm"
+        ]
+      }
+    },
+    {
+      "username": "service-account-roadmap-api",
+      "enabled": true,
+      "serviceAccountClientId": "roadmap-api",
+      "clientRoles": {
+        "realm-management": [
           "view-users",
           "view-realm"
         ]
