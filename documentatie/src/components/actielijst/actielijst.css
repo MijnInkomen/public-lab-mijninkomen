@@ -52,17 +52,18 @@
   font-size: 1rem;
   hyphens: none;
   inline-size: 100%;
-  min-inline-size: 48rem;
+  /* Op mobiel scrolt de tabel horizontaal; zo breed blijven datums op één regel. */
+  min-inline-size: 60rem;
   /* Vaste kolombreedtes: de kolommen verspringen niet als je een filter kiest. */
   table-layout: fixed;
 }
 
 .mijninkomen-actielijst .utrecht-table__header-cell:nth-child(1) {
-  inline-size: 31%;
+  inline-size: 30%;
 }
 
 .mijninkomen-actielijst .utrecht-table__header-cell:nth-child(2) {
-  inline-size: 21%;
+  inline-size: 20%;
 }
 
 .mijninkomen-actielijst .utrecht-table__header-cell:nth-child(3) {
@@ -74,7 +75,7 @@
 }
 
 .mijninkomen-actielijst .utrecht-table__header-cell:nth-child(5) {
-  inline-size: 17%;
+  inline-size: 19%;
 }
 
 /* Zoals in het prototype: alleen lijnen tussen de rijen, geen verticale lijnen en geen strepen. */
@@ -100,9 +101,12 @@
 .mijninkomen-actielijst .utrecht-table__header-cell {
   background-color: transparent;
   border: 0;
+  /* Woorden niet midden in het woord afbreken. */
+  overflow-wrap: normal;
   padding-block: 0.75rem;
-  padding-inline: 1rem;
+  padding-inline: 0.75rem;
   vertical-align: top;
+  word-break: normal;
 }
 
 .mijninkomen-actielijst__gemeente {

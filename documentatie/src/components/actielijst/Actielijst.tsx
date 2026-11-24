@@ -38,7 +38,7 @@ export const sorteer = (acties: Actie[]) =>
       Number(a.status === 'afgerond') - Number(b.status === 'afgerond') || a.streefdatum.localeCompare(b.streefdatum),
   );
 
-export const Actielijst = () => {
+const Inhoud = () => {
   const email = useEmail();
   const [lijst, setLijst] = useState<Lijst>();
   const [fout, setFout] = useState(false);
@@ -143,3 +143,10 @@ export const Actielijst = () => {
     </>
   );
 };
+
+/** De styling hangt aan deze klasse, zodat het component ook op een docs-pagina werkt. */
+export const Actielijst = () => (
+  <div className="mijninkomen-actielijst">
+    <Inhoud />
+  </div>
+);
