@@ -1,4 +1,4 @@
-import { Card } from "@rijkshuisstijl-community/card-react";
+import { Card } from '@rijkshuisstijl-community/card-react';
 import { Badge } from '../home/Badge';
 import { useState, useCallback, useEffect } from "react";
 

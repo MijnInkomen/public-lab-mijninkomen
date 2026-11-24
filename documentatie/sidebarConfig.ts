@@ -20,6 +20,21 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+  vergaderingen: [
+    {
+      type: 'category',
+      label: 'Vergaderingen',
+      description: 'De vaste overleggen, besluiten en openstaande acties van MijnInkomen.',
+      collapsible: false,
+      className: 'sidebar__main-category',
+      items: [
+        {
+          type: 'doc',
+          id: 'vergaderingen/agendas',
+        },
+      ],
+    },
+  ],
 };
 
 export default sidebars;
