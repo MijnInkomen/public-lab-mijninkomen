@@ -1,28 +1,13 @@
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
-import { Heading } from '@utrecht/component-library-react';
+import { Heading, PreHeading } from '@utrecht/component-library-react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
-import { useEffect, useState } from 'react';
+import { RoadmapBacklog } from '../components/roadmap/RoadmapBacklog';
 import '../components/home/home.css';
-
-interface Roadmap {
-  tekst: string;
-}
-
-// De inhoud staat bewust niet in de build: alles in de build is openbaar. Nginx geeft dit bestand alleen na inloggen vrij.
-const haalRoadmapOp = async (): Promise<Roadmap> => {
-  const antwoord = await fetch('/community/roadmap.json');
-  if (!antwoord.ok) throw new Error('Niet ingelogd');
-  return antwoord.json();
-};
+import "../components/roadmap/roadmap.css";
+import { RoadmapStatuslijst } from '../components/roadmap/RoadmapStatuslijst';
 
 export default function RoadmapPagina() {
-  const [roadmap, setRoadmap] = useState<Roadmap>();
-
-  useEffect(() => {
-    haalRoadmapOp().then(setRoadmap, () => window.location.assign('/inloggen/'));
-  }, []);
-
   return (
     <>
       <Head>
@@ -32,8 +17,13 @@ export default function RoadmapPagina() {
       <Layout>
         <main className="mijninkomen-home">
           <div className="container mijninkomen-sectie">
+            <PreHeading>Voor communityleden</PreHeading>
             <Heading level={1}>Roadmap</Heading>
-            {roadmap && <Paragraph>{roadmap.tekst}</Paragraph>}
+            <Paragraph appearance='lead'>
+              Bekijk aan welke epics momenteel wordt gewerkt en hoe de voortgang ervoor staat
+            </Paragraph>
+            <RoadmapStatuslijst />
+            <RoadmapBacklog />
           </div>
         </main>
       </Layout>
