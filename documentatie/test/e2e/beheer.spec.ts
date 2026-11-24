@@ -78,7 +78,7 @@ test('een communitylid kan de pagina en de API niet gebruiken', async ({ page })
     leesInstelling('TEST_LID_PASSWORD'),
     leesInstelling('TEST_LID_OTP_SECRET'),
   );
-  await expect(page.getByRole('link', { name: 'Roadmap' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Uitloggen' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Beheer' })).toHaveCount(0);
 
   await page.goto(beheerpagina);
@@ -186,6 +186,6 @@ test('een admin accepteert, weigert met reden, en de nieuwe gebruiker kan inlogg
   await wachtOpNieuweCode(nieuw);
   await nieuw.goto(`${websiteURL}/inloggen/`);
   await logIn(nieuw, toegelaten.email, wachtwoord, geheim);
-  await expect(nieuw.getByRole('link', { name: 'Roadmap' })).toBeVisible();
+  await expect(nieuw.getByRole('link', { name: 'Uitloggen' })).toBeVisible();
   await expect(nieuw.getByRole('button', { name: 'Beheer' })).toHaveCount(0);
 });

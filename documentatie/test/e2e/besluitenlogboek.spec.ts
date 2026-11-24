@@ -31,7 +31,7 @@ const logIn = async (page: Page) => {
   await page.getByRole('button', { name: 'Inloggen' }).click();
   await page.getByLabel('Code uit de app').fill(maakCode());
   await page.getByRole('button', { name: 'Inloggen' }).click();
-  await expect(page.getByRole('link', { name: 'Roadmap' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Uitloggen' })).toBeVisible();
 };
 
 const aantal = (page: Page) => page.getByRole('status').filter({ hasText: /^\d+ besluit(en)?$/ });
