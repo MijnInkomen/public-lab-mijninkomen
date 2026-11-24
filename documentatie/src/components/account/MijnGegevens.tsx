@@ -117,7 +117,7 @@ const WijzigFormulier = ({ veld, waarde, onOpgeslagen, onAnnuleer }: FormulierPr
 };
 
 /** Mijn gegevens: een lid ziet de eigen gegevens en wijzigt zelf naam en e-mailadres. */
-export const MijnGegevens = () => {
+const Inhoud = () => {
   const [gegevens, setGegevens] = useState<Gegevens>();
   const [bewerkt, setBewerkt] = useState<Veld>();
   const [melding, setMelding] = useState<Melding>();
@@ -214,3 +214,10 @@ export const MijnGegevens = () => {
     </>
   );
 };
+
+/** De styling hangt aan deze klasse, zodat het component ook op een docs-pagina werkt. */
+export const MijnGegevens = () => (
+  <div className="mijninkomen-account">
+    <Inhoud />
+  </div>
+);
