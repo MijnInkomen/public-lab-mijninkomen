@@ -20,7 +20,7 @@
   align-items: start;
   display: grid;
   gap: 1rem 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
   margin-block-start: 1.5rem;
 }
 
@@ -69,19 +69,19 @@
 }
 
 .mijninkomen-besluiten .utrecht-table__header-cell:nth-child(2) {
-  inline-size: 37%;
+  inline-size: 32%;
 }
 
 .mijninkomen-besluiten .utrecht-table__header-cell:nth-child(3) {
-  inline-size: 16%;
+  inline-size: 18%;
 }
 
 .mijninkomen-besluiten .utrecht-table__header-cell:nth-child(4) {
-  inline-size: 14%;
+  inline-size: 15%;
 }
 
 .mijninkomen-besluiten .utrecht-table__header-cell:nth-child(5) {
-  inline-size: 15%;
+  inline-size: 17%;
 }
 
 /* Zoals in het prototype: alleen lijnen tussen de rijen, geen verticale lijnen en geen strepen. */
@@ -102,9 +102,12 @@
 .mijninkomen-besluiten .utrecht-table__header-cell {
   background-color: transparent;
   border: 0;
+  /* Woorden als "Stuurgroepoverleg" niet midden in het woord afbreken. */
+  overflow-wrap: normal;
   padding-block: 0.75rem;
-  padding-inline: 1rem;
+  padding-inline: 0.75rem;
   vertical-align: top;
+  word-break: normal;
 }
 
 .mijninkomen-besluiten .utrecht-table__header-cell {

@@ -68,7 +68,7 @@ export const filterBesluiten = (besluiten: Besluit[], { zoek, status, gemeente, 
     });
 };
 
-export const Besluitenlogboek = () => {
+const Inhoud = () => {
   const [logboek, setLogboek] = useState<Logboek>();
   const [fout, setFout] = useState(false);
   const [filters, setFilters] = useState<Filters>({ zoek: '', status: ALLE, gemeente: ALLE, vanaf: '', tot: '' });
@@ -191,3 +191,10 @@ export const Besluitenlogboek = () => {
     </>
   );
 };
+
+/** De styling hangt aan deze klasse, zodat het component ook op een docs-pagina werkt. */
+export const Besluitenlogboek = () => (
+  <div className="mijninkomen-besluiten">
+    <Inhoud />
+  </div>
+);
