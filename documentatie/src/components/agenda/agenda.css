@@ -64,3 +64,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+.mijninkomen-agenda__resultaat {
+  border-block-start: 1px solid #d9dcd7;
+  margin-block: 1.5rem;
+  padding-block-start: 1.5rem;
+}
+
+/* Het blok om te kopiëren mag breed zijn, maar nooit de pagina oprekken. */
+.mijninkomen-agenda__json {
+  background-color: #f4f4f1;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin-block: 1rem;
+  max-inline-size: 100%;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.mijninkomen-agenda__gekopieerd {
+  display: inline-block;
+  margin-inline-start: 0.75rem;
+}

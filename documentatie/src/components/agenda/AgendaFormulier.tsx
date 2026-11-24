@@ -10,6 +10,7 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { AgendaResultaat } from './AgendaResultaat';
 import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import {
@@ -146,9 +147,12 @@ export const AgendaFormulier = () => {
       </div>
 
       {gemaakt ? (
-        <Button appearance="secondary-action-button" onClick={opnieuw}>
-          {formulier.opnieuw}
-        </Button>
+        <>
+          <AgendaResultaat invoer={gemaakt} soorten={agenda.soorten} />
+          <Button appearance="secondary-action-button" onClick={opnieuw}>
+            {formulier.opnieuw}
+          </Button>
+        </>
       ) : (
         <form onSubmit={handleSubmit(setGemaakt)} noValidate>
           {velden.map((veld) => (

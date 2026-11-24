@@ -1,48 +1,11 @@
 import { Alert, Heading } from '@utrecht/component-library-react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
-import { Badge } from '../home/Badge';
 import { Link } from '../Link';
-import { datumVoluit, opDatum, soortNaam, vandaag } from './format';
+import { AgendaItemWeergave } from './AgendaItemWeergave';
+import { opDatum, vandaag } from './format';
 import type { AgendaItem, Soort } from './types';
 import { useAgenda } from './useAgenda';
 import './agenda.css';
-
-/** Elk item toont dezelfde regels in dezelfde volgorde, want dat is het format. */
-const Item = ({ item, soorten }: { item: AgendaItem; soorten: Soort[] }) => (
-  <article className="mijninkomen-agenda__item">
-    <Heading level={3}>{item.titel}</Heading>
-    <Paragraph className="mijninkomen-agenda__wanneer">
-      <Badge soort="status">{soortNaam(soorten, item.soort)}</Badge>{' '}
-      <time dateTime={`${item.datum}T${item.begintijd}`}>{datumVoluit(item.datum)}</time>, {item.begintijd}–
-      {item.eindtijd}
-    </Paragraph>
-    <Paragraph>{item.omschrijving}</Paragraph>
-    <dl className="mijninkomen-agenda__gegevens">
-      <div>
-        <dt>Waar</dt>
-        <dd>{item.locatie}</dd>
-      </div>
-      <div>
-        <dt>Voor wie</dt>
-        <dd>{item.voorWie}</dd>
-      </div>
-      <div>
-        <dt>Organisator</dt>
-        <dd>
-          {item.organisator.wie} (<Link href={`mailto:${item.organisator.email}`}>{item.organisator.email}</Link>)
-        </dd>
-      </div>
-      {item.aanmelden && (
-        <div>
-          <dt>Aanmelden</dt>
-          <dd>
-            <Link href={item.aanmelden}>Meld je aan</Link>
-          </dd>
-        </div>
-      )}
-    </dl>
-  </article>
-);
 
 const Lijst = ({ items, soorten, leeg }: { items: AgendaItem[]; soorten: Soort[]; leeg: string }) =>
   items.length === 0 ? (
@@ -50,7 +13,7 @@ const Lijst = ({ items, soorten, leeg }: { items: AgendaItem[]; soorten: Soort[]
   ) : (
     <>
       {items.map((item) => (
-        <Item key={item.id} item={item} soorten={soorten} />
+        <AgendaItemWeergave key={item.id} item={item} soorten={soorten} />
       ))}
     </>
   );
