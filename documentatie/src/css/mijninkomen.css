@@ -116,12 +116,37 @@
   inline-size: auto;
 }
 
-/* De menubalk is nooit breder dan de pagina: de links zijn daarom wat compacter, zodat alles past. */
+/* Het logo mag niet meekrimpen, anders valt het over het eerste menu-item heen. */
+.ma-theme .navbar__brand {
+  flex-shrink: 0;
+}
+
+/* Is er ruimte, dan begint het menu wat verder naar rechts. Smaller dan 70rem houdt custom.css de marge klein. */
+@media screen and (width > 70rem) {
+  .ma-theme .navbar__brand {
+    margin-inline-end: 1rem;
+  }
+}
+
+/* De balk is nooit breder dan 72rem en er komen menu-items bij, dus de links zijn compact.
+   Zonder vaste maat erven ze de grote bodytekst en lopen logo, menu en knop over elkaar heen. */
 .ma-theme .navbar__link {
   font-size: 0.9375rem;
   padding-inline: 0.3125rem;
   text-decoration-line: none;
   white-space: nowrap;
+}
+
+/* Tussen het mobiele menu (onder 996px) en 72rem is het krapper: daar mag ook het logo wat kleiner. */
+@media screen and (width <= 72rem) {
+  .ma-theme .navbar__logo {
+    block-size: 2.25rem;
+  }
+
+  .ma-theme .navbar__link {
+    font-size: 0.9375rem;
+    padding-inline: 0.375rem;
+  }
 }
 
 .ma-theme .navbar__link:hover {

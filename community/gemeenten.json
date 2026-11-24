@@ -1,0 +1,72 @@
+{
+  "voorbeelddata": true,
+  "toelichting": "Hier zie je per gemeente welke bestuurlijke rol die heeft binnen MijnInkomen, welke regelingen er actief zijn en wie je kunt aanspreken. De actieve regelingen komen uit de regelingenpagina's, zodat er één bron is.",
+  "oproep": {
+    "titel": "Staat jouw gemeente er nog niet goed in?",
+    "tekst": "De bestuurlijke rol en de contactpersoon vullen gemeenten zelf aan. Geef je rol en jullie product owner door, dan zetten we die in de matrix."
+  },
+  "rollen": [
+    {
+      "id": "bouwt",
+      "naam": "Bouwt",
+      "uitleg": "De gemeente ontwikkelt mee aan MijnInkomen en levert daar mensen voor."
+    },
+    {
+      "id": "financiert",
+      "naam": "Financiert",
+      "uitleg": "De gemeente draagt bij aan de kosten van de doorontwikkeling."
+    },
+    {
+      "id": "toetreedt",
+      "naam": "Toetreedt",
+      "uitleg": "De gemeente sluit aan op MijnInkomen en neemt de bestaande voorzieningen over."
+    }
+  ],
+  "gemeenten": [
+    {
+      "id": "den-haag",
+      "naam": "Den Haag",
+      "rollen": ["bouwt", "financiert"],
+      "contactpersoon": {
+        "wie": "Aan te vullen door de gemeente",
+        "rol": "Product owner",
+        "aanTeVullen": true
+      }
+    },
+    {
+      "id": "utrecht",
+      "naam": "Utrecht",
+      "rollen": ["bouwt", "financiert"],
+      "contactpersoon": {
+        "wie": "Aan te vullen door de gemeente",
+        "rol": "Product owner",
+        "aanTeVullen": true
+      }
+    },
+    {
+      "id": "amsterdam",
+      "naam": "Amsterdam",
+      "rollen": ["toetreedt"],
+      "contactpersoon": {
+        "wie": "Aan te vullen door de gemeente",
+        "rol": "Product owner",
+        "aanTeVullen": true
+      }
+    },
+    {
+      "id": "s-hertogenbosch",
+      "naam": "'s-Hertogenbosch",
+      "rollen": ["toetreedt"],
+      "contactpersoon": {
+        "wie": "Carl van der Pol",
+        "rol": "Projectmanager pilot ALO"
+      }
+    }
+  ],
+  "contactTekst": "Weet je niet wie je moet hebben? Mail het programmateam via programmateam@mijninkomen-voorbeeld.nl, dan brengen we je in contact met de juiste persoon.",
+  "bronnen": [
+    "Roadmap MijnInkomen 2026-2028 v0.1",
+    "Scopeanalyse & stakeholderinzichten v0.1",
+    "Aansluitingen zoals beschreven op de pagina Ontwikkelingen"
+  ]
+}

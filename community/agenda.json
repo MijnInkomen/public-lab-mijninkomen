@@ -1,0 +1,76 @@
+{
+  "voorbeelddata": true,
+  "toelichting": "Alle bijeenkomsten van de community staan hier in hetzelfde format: wat het is, wanneer het is, voor wie en bij wie je moet zijn. Wil je zelf een bijeenkomst aanmelden? Gebruik het formulier, dan houdt de agenda één vorm.",
+  "soorten": [
+    {
+      "id": "webinar",
+      "naam": "Webinar",
+      "uitleg": "Online uitzending over een onderwerp, met ruimte voor vragen."
+    },
+    {
+      "id": "werksessie",
+      "naam": "Werksessie",
+      "uitleg": "Samen aan iets werken, bijvoorbeeld aan een formulier of een koppelvlak."
+    },
+    {
+      "id": "kennissessie",
+      "naam": "Kennissessie",
+      "uitleg": "Een gemeente deelt ervaringen en geleerde lessen."
+    },
+    {
+      "id": "overleg",
+      "naam": "Overleg",
+      "uitleg": "Vast overleg van de community of de stuurgroep."
+    }
+  ],
+  "items": [
+    {
+      "id": "webinar-aansluiten-op-mijninkomen",
+      "titel": "Webinar: aansluiten op MijnInkomen",
+      "soort": "webinar",
+      "datum": "2026-12-10",
+      "begintijd": "10:00",
+      "eindtijd": "11:00",
+      "locatie": "Online",
+      "voorWie": "Gemeenten die overwegen aan te sluiten",
+      "omschrijving": "Wat komt er kijken bij aansluiten, wat regelt het programmateam en wat doe je zelf? Met ruimte voor vragen.",
+      "organisator": {
+        "wie": "Programmateam MijnInkomen",
+        "email": "programmateam@mijninkomen-voorbeeld.nl"
+      },
+      "aanmelden": null
+    },
+    {
+      "id": "werksessie-aanvraagformulier-lo",
+      "titel": "Werksessie verbeterd aanvraagformulier LO",
+      "soort": "werksessie",
+      "datum": "2027-01-21",
+      "begintijd": "13:30",
+      "eindtijd": "16:00",
+      "locatie": "Den Haag, Spui 70",
+      "voorWie": "Product owners en ontwerpers van deelnemende gemeenten",
+      "omschrijving": "We werken het verbeterde aanvraagformulier voor levensonderhoud uit en trekken de verschillen tussen Den Haag en Utrecht gelijk.",
+      "organisator": {
+        "wie": "Programmateam MijnInkomen",
+        "email": "programmateam@mijninkomen-voorbeeld.nl"
+      },
+      "aanmelden": null
+    },
+    {
+      "id": "kennissessie-pilot-alo-den-bosch",
+      "titel": "Kennissessie: geleerde lessen pilot ALO",
+      "soort": "kennissessie",
+      "datum": "2026-11-05",
+      "begintijd": "15:00",
+      "eindtijd": "16:30",
+      "locatie": "Online",
+      "voorWie": "Alle communityleden",
+      "omschrijving": "'s-Hertogenbosch vertelt wat de pilot met ALO heeft opgeleverd en waar ze tegenaan liepen.",
+      "organisator": {
+        "wie": "Carl van der Pol",
+        "email": "programmateam@mijninkomen-voorbeeld.nl"
+      },
+      "aanmelden": null
+    }
+  ]
+}

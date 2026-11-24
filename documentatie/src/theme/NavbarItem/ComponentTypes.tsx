@@ -6,8 +6,9 @@ import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
 import type { Props as DropdownProps } from '@theme/NavbarItem/DropdownNavbarItem';
 import { useIngelogd, useIsAdmin, useIsHoofdbeheerder } from '@site/src/components/useIngelogd';
 
-// Besloten pagina's (vergaderingen, roadmap, innovatie-backlog) staan alleen in het menu als je bent ingelogd.
-const RoadmapNavbarItem = (props: Props) => (useIngelogd() ? <DefaultNavbarItem {...props} /> : null);
+// Besloten pagina's (vergaderingen, roadmap, innovatie-backlog, regelingen, gemeenten, agenda) staan
+// samen in één menu-item, dat alleen verschijnt als je bent ingelogd. Beheer heeft een eigen menu hiernaast.
+const CommunityNavbarItem = (props: DropdownProps) => (useIngelogd() ? <DropdownNavbarItem {...props} /> : null);
 
 const BeheerNavbarItem = (props: Props) => (useIsAdmin() ? <DefaultNavbarItem {...props} /> : null);
 
@@ -25,8 +26,7 @@ const InloggenNavbarItem = (props: Props) =>
 
 export default {
   ...ComponentTypes,
-  'custom-roadmap': RoadmapNavbarItem,
-  'custom-innovatie-backlog': RoadmapNavbarItem,
+  'custom-community': CommunityNavbarItem,
   'custom-beheer': BeheerNavbarItem,
   'custom-beheermenu': BeheermenuNavbarItem,
   'custom-leden': LedenNavbarItem,

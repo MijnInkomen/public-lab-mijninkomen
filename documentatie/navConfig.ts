@@ -31,22 +31,37 @@ const navbar: Navbar = {
       position: 'left',
     },
     {
-      type: 'custom-roadmap',
-      to: '/vergaderingen/',
-      label: 'Vergaderingen',
+      // Alle besloten pagina's staan bij elkaar, zodat de balk niet volloopt zodra er eentje bijkomt.
+      // Het item verschijnt pas na inloggen.
+      type: 'custom-community',
+      label: 'Voor communityleden',
       position: 'left',
-    },
-    {
-      type: 'custom-roadmap',
-      to: '/roadmap/',
-      label: 'Roadmap',
-      position: 'left',
-    },
-    {
-      type: 'custom-innovatie-backlog',
-      to: '/innovatie-backlog/',
-      label: 'Innovatie-backlog',
-      position: 'left',
+      items: [
+        {
+          to: '/vergaderingen/',
+          label: 'Vergaderingen',
+        },
+        {
+          to: '/roadmap/',
+          label: 'Roadmap',
+        },
+        {
+          to: '/innovatie-backlog/',
+          label: 'Innovatie-backlog',
+        },
+        {
+          to: '/regelingen/',
+          label: 'Regelingen',
+        },
+        {
+          to: '/gemeenten/',
+          label: 'Gemeenten',
+        },
+        {
+          to: '/agenda/',
+          label: 'Agenda',
+        },
+      ],
     },
     {
       to: '/contact/',

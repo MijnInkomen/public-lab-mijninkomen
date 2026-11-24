@@ -1,0 +1,138 @@
+{
+  "toelichting": "Hier vind je per regeling wat er binnen MijnInkomen gebeurt: welke gemeenten de regeling gebruiken, waar aan gewerkt wordt en wie je kunt vragen.",
+  "oproep": {
+    "titel": "Werk je met een van deze regelingen?",
+    "tekst": "Deel je ervaringen en geleerde lessen, zodat andere gemeenten daarvan kunnen leren. Op elke pagina staat een plek voor lokale implementatie en geleerde lessen."
+  },
+  "regelingen": [
+    {
+      "id": "alo",
+      "naam": "ALO",
+      "gemeentenSamenvatting": "Den Haag, Utrecht; pilot in 's-Hertogenbosch",
+      "intro": null,
+      "opmerking": {
+        "titel": "Te bevestigen",
+        "tekst": "De betekenis van de afkorting ALO is nog niet bevestigd. In de roadmap wordt ALO gekoppeld aan de aanvraag levensonderhoud (LO); in de scopeanalyse staat \"Alleenstaande Ouder Kop\"."
+      },
+      "gemeenten": [
+        { "gemeente": "Den Haag", "status": "In gebruik" },
+        { "gemeente": "Utrecht", "status": "In gebruik" },
+        { "gemeente": "'s-Hertogenbosch", "status": "Pilot" }
+      ],
+      "werk": [
+        { "onderwerp": "Aansluiting HaalCentraal (bewoning)", "status": "Realisatie", "planning": "T1" },
+        { "onderwerp": "ALO-formulier gelijktrekken met de aanpassingen van Utrecht", "status": "Ontwerp", "planning": "T2 (prio 1)" },
+        { "onderwerp": "Verbeterd aanvraagformulier LO", "status": "Analyse", "planning": "T2 (prio 1)" },
+        { "onderwerp": "Volledig koppelvlak behandelen Socrates", "status": "Ontwerp", "planning": "T2" },
+        { "onderwerp": "Formulier uitbreiden met routering naar werk, inclusief partner", "status": "Analyse", "planning": "T2" },
+        { "onderwerp": "Vooringevulde aanvraag met DKD", "status": "Roadmap", "planning": "T3" },
+        { "onderwerp": "Controle op naam en IBAN in het aanvraagformulier", "status": "Roadmap", "planning": "T3" },
+        { "onderwerp": "GBI-koppelvlak aanvragen toepassen op het ALO-formulier", "status": "Roadmap", "planning": "2027" }
+      ],
+      "lokaleImplementatie": {
+        "tekst": "Aan te vullen door gemeenten: hoe heeft jullie gemeente ALO ingericht?",
+        "aanTeVullen": true
+      },
+      "geleerdeLessen": [
+        {
+          "tekst": "Utrecht heeft bij de livegang afwijkingen aangebracht op het Haagse formulier. Die worden eerst gelijkgetrokken voordat er verdere verbeteringen komen."
+        },
+        { "tekst": "Aan te vullen door gemeenten.", "aanTeVullen": true }
+      ],
+      "contactPersonen": [
+        { "wie": "Carl van der Pol", "rol": "Projectmanager pilot ALO, 's-Hertogenbosch" },
+        { "wie": "Aan te vullen", "rol": "", "aanTeVullen": true }
+      ],
+      "contactTekst": null,
+      "bronnen": [
+        "Roadmap MijnInkomen 2026–2028 v0.1, dia 10",
+        "Roadmap MijnInkomen (Excel)",
+        "Agenda kick-off",
+        "Scopeanalyse & stakeholderinzichten v0.1"
+      ]
+    },
+    {
+      "id": "bijzondere-bijstand",
+      "naam": "Bijzondere bijstand",
+      "gemeentenSamenvatting": "Den Haag",
+      "intro": { "tekst": "Een vergoeding voor onverwachte, noodzakelijke kosten." },
+      "opmerking": null,
+      "gemeenten": [{ "gemeente": "Den Haag", "status": "In gebruik" }],
+      "werk": [
+        { "onderwerp": "Basis afhandelproces (MVP) met bestaande bouwblokken", "status": "Ontwerp", "planning": "T2 (prio 1)" },
+        { "onderwerp": "Geharmoniseerd aanvraagformulier overige kosten (formulier Utrecht als basis)", "status": "Analyse", "planning": "T2 (prio 1)" },
+        { "onderwerp": "Geharmoniseerd aanvraagformulier bewindvoering voor professionals", "status": "Analyse", "planning": "T2" },
+        { "onderwerp": "Geharmoniseerd wijzigingsformulier", "status": "Analyse", "planning": "T2" },
+        { "onderwerp": "Batchoutput in GZAC voor verwerking in Socrates", "status": "Analyse", "planning": "T2" },
+        { "onderwerp": "Draagkrachtberekening (eigen bijdrage)", "status": "Roadmap", "planning": "T2" },
+        { "onderwerp": "BB Pro", "status": "Roadmap", "planning": "T3" },
+        { "onderwerp": "Afhandelproces inclusief aanvullende vaststelservices", "status": "Roadmap", "planning": "T3" },
+        { "onderwerp": "Aanvraagformulier geschikt maken voor IIT en TCZG", "status": "Roadmap", "planning": "T3" }
+      ],
+      "lokaleImplementatie": {
+        "tekst": "Aan te vullen door gemeenten: hoe heeft jullie gemeente bijzondere bijstand ingericht?",
+        "aanTeVullen": true
+      },
+      "geleerdeLessen": [
+        { "tekst": "Het MVP-afhandelproces gebruikt bestaande bouwblokken, zonder nieuwe functionaliteit." },
+        { "tekst": "Het formulier van Utrecht wordt als basis gebruikt voor het geharmoniseerde aanvraagformulier." },
+        { "tekst": "Aan te vullen door gemeenten.", "aanTeVullen": true }
+      ],
+      "contactPersonen": [],
+      "contactTekst": { "tekst": "Aan te vullen.", "aanTeVullen": true },
+      "bronnen": [
+        "Agenda kick-off",
+        "Roadmap MijnInkomen 2026–2028 v0.1, dia 10",
+        "Roadmap MijnInkomen (Excel)"
+      ]
+    },
+    {
+      "id": "bbz",
+      "naam": "Bbz",
+      "gemeentenSamenvatting": "Den Haag",
+      "intro": { "tekst": "Korte uitleg van de regeling: aan te vullen.", "aanTeVullen": true },
+      "opmerking": null,
+      "gemeenten": [{ "gemeente": "Den Haag", "status": "In gebruik" }],
+      "werk": [
+        { "onderwerp": "Impactanalyse Bbz voor MijnInkomen", "status": "Voorwerk", "planning": "Kwartaal 2" },
+        { "onderwerp": "Basis afhandelproces (MVP) voor de aanvraag, als versimpeling van het huidige proces", "status": "Ontwerp", "planning": "T2" }
+      ],
+      "lokaleImplementatie": {
+        "tekst": "Aan te vullen door gemeenten: hoe heeft jullie gemeente de Bbz ingericht?",
+        "aanTeVullen": true
+      },
+      "geleerdeLessen": [
+        { "tekst": "Een volledig geharmoniseerd afhandelproces is afgeraden: de inspanning weegt niet op tegen het aantal aanvragen." },
+        { "tekst": "Aan te vullen door gemeenten.", "aanTeVullen": true }
+      ],
+      "contactPersonen": [],
+      "contactTekst": { "tekst": "Aan te vullen.", "aanTeVullen": true },
+      "bronnen": [
+        "Roadmap MijnInkomen 2026–2028 v0.1, dia 10",
+        "Roadmap MijnInkomen (Excel), tabbladen roadmap en impactanalyses"
+      ]
+    },
+    {
+      "id": "stadspas",
+      "naam": "Stadspas",
+      "gemeentenSamenvatting": "Den Haag",
+      "intro": { "tekst": "Korte uitleg van de regeling: aan te vullen.", "aanTeVullen": true },
+      "opmerking": null,
+      "gemeenten": [{ "gemeente": "Den Haag", "status": "In gebruik" }],
+      "werk": [
+        { "onderwerp": "Impactanalyse Stadspas voor MijnInkomen", "status": "Voorwerk", "planning": "Kwartaal 2" }
+      ],
+      "lokaleImplementatie": {
+        "tekst": "Aan te vullen door gemeenten: hoe heeft jullie gemeente de Stadspas ingericht?",
+        "aanTeVullen": true
+      },
+      "geleerdeLessen": [{ "tekst": "Aan te vullen door gemeenten.", "aanTeVullen": true }],
+      "contactPersonen": [],
+      "contactTekst": { "tekst": "Aan te vullen.", "aanTeVullen": true },
+      "bronnen": [
+        "Roadmap MijnInkomen 2026–2028 v0.1, dia 10",
+        "Roadmap MijnInkomen (Excel), tabblad impactanalyses"
+      ]
+    }
+  ]
+}
