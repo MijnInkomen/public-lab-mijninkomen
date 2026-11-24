@@ -35,10 +35,13 @@ const vulWachtwoordIn = async (page: Page, wachtwoord: string) => {
   await page.getByRole('button', { name: 'Inloggen' }).click();
 };
 
+const menubalk = (page: Page) => page.getByRole('navigation', { name: 'Main' });
+
 test('zonder login is er geen Roadmap en is de inhoud afgeschermd', async ({ page, request }) => {
   await page.goto(websiteURL);
   await expect(page.getByRole('link', { name: 'Inloggen' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Roadmap' })).toHaveCount(0);
+  await expect(menubalk(page).getByRole('link', { name: 'Communityomgeving' })).toHaveCount(0);
 
   expect((await request.get(`${websiteURL}/community/roadmap.json`)).status()).toBe(401);
 
@@ -60,7 +63,7 @@ test('een verkeerd wachtwoord geeft een duidelijke foutmelding', async ({ page }
   await expect(page.getByText('Het e-mailadres of wachtwoord klopt niet.')).toBeVisible();
 });
 
-test('na inloggen blijf je op de website en zie je de Roadmap tot je uitlogt', async ({ page }) => {
+test('na inloggen navigeer je via het zijmenu van de communityomgeving tot je uitlogt', async ({ page }) => {
   test.setTimeout(60000);
   await openInloggen(page);
   await vulWachtwoordIn(page, leesInstelling('TEST_LID_PASSWORD'));
@@ -71,13 +74,29 @@ test('na inloggen blijf je op de website en zie je de Roadmap tot je uitlogt', a
 
   await expect(page).toHaveURL(`${websiteURL}/`);
   await expect(page.getByRole('heading', { name: 'Wat is MijnInkomen?' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Uitloggen' })).toBeVisible();
 
-  await page.getByRole('link', { name: 'Roadmap' }).click();
-  await expect(page.getByText('Hier komt de volledige roadmap')).toBeVisible();
+  // Ingelogd staan in de balk alleen het logo, Communityomgeving en Uitloggen.
+  const balk = menubalk(page);
+  await expect(balk.getByRole('link', { name: 'Uitloggen' })).toBeVisible();
+  for (const openbaar of ['Ontwikkelingen', 'Meer weten', 'Initiatief melden', 'Contact']) {
+    await expect(balk.getByRole('link', { name: openbaar })).toHaveCount(0);
+  }
 
-  await page.getByRole('link', { name: 'Uitloggen' }).click();
+  // Het zijmenu bevat alle besloten pagina's en blijft staan, ook bij Account.
+  await balk.getByRole('link', { name: 'Communityomgeving' }).click();
+  await expect(page.getByRole('heading', { name: "Agenda's", level: 1 })).toBeVisible();
+  const zijmenu = page.locator('.theme-doc-sidebar-menu');
+  for (const item of ['Home', 'Vergaderondersteuning', 'Stand van zaken steden', 'Roadmap & backlog', 'Initiatieven', 'Account']) {
+    await expect(zijmenu.getByRole('link', { name: item, exact: true })).toBeVisible();
+  }
+  await zijmenu.getByRole('link', { name: 'Roadmap & backlog' }).click();
+  await expect(page.getByRole('heading', { name: 'Roadmap', level: 1 })).toBeVisible();
+  await zijmenu.getByRole('link', { name: 'Account', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'Mijn gegevens', level: 1 })).toBeVisible();
+  await expect(zijmenu.getByRole('link', { name: 'Vergaderondersteuning' })).toBeVisible();
+
+  await balk.getByRole('link', { name: 'Uitloggen' }).click();
   await expect(page.getByRole('heading', { name: 'Wat is MijnInkomen?' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Inloggen' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Roadmap' })).toHaveCount(0);
+  await expect(menubalk(page).getByRole('link', { name: 'Contact' })).toBeVisible();
 });

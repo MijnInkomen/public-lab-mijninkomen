@@ -30,7 +30,7 @@ const logIn = async (page: Page, email: string) => {
   await page.getByRole('button', { name: 'Inloggen' }).click();
   await page.getByLabel('Code uit de app').fill(maakCode());
   await page.getByRole('button', { name: 'Inloggen' }).click();
-  await expect(page.getByRole('link', { name: 'Roadmap' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Uitloggen' })).toBeVisible();
 };
 
 const status = async (page: Page, pad: string) => (await page.request.get(`${websiteURL}${pad}`)).status();
