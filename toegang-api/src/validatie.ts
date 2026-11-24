@@ -123,3 +123,24 @@ export const controleerWijziging = (invoer: unknown): { wijziging: Wijziging; fo
   if (!wijziging.rol && !wijziging.soort) return { fout: 'Kies een rol of soort communitylid.' };
   return { wijziging };
 };
+
+export type AccountFouten = Partial<Record<'naam' | 'email', string>>;
+
+/** Een lid wijzigt zelf de naam of het e-mailadres, één tegelijk. */
+export const controleerAccountWijziging = (
+  invoer: unknown,
+): { wijziging: { naam: string } | { email: string }; fouten?: undefined } | { wijziging?: undefined; fouten: AccountFouten } => {
+  const velden = (typeof invoer === 'object' && invoer !== null ? invoer : {}) as Record<string, unknown>;
+
+  if (velden.naam !== undefined) {
+    const naam = leesTekst(velden.naam).replace(/\s+/g, ' ');
+    const fout = controleerTekst(naam, 'Vul je naam in.', 'Je naam is te lang.');
+    return fout ? { fouten: { naam: fout } } : { wijziging: { naam } };
+  }
+  if (velden.email !== undefined) {
+    const email = leesTekst(velden.email).toLowerCase();
+    const fout = controleerEmail(email);
+    return fout ? { fouten: { email: fout } } : { wijziging: { email } };
+  }
+  return { fouten: { naam: 'Wijzig je naam of je e-mailadres.' } };
+};

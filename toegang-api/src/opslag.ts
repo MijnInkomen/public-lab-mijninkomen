@@ -25,6 +25,15 @@ export interface Opslag {
   /** Soort communitylid per lid. Zonder eigen keuze is dat de functie uit de geaccepteerde aanvraag. */
   haalSoortenOp: (leden: { id: string; email: string }[]) => Promise<Map<string, string | null>>;
   zetSoort: (id: string, soort: string) => Promise<void>;
+  /** Functie en organisatie van een lid, uit het gekozen soort en de geaccepteerde aanvraag. */
+  haalProfielOp: (id: string, email: string) => Promise<Profiel>;
+  /** Na een nieuw e-mailadres hoort de geaccepteerde aanvraag nog steeds bij het lid. */
+  verhuisAanvraag: (oudEmail: string, nieuwEmail: string) => Promise<void>;
+}
+
+export interface Profiel {
+  functie: string | null;
+  organisatie: string | null;
 }
 
 const MAAK_TABEL = `
@@ -73,6 +82,17 @@ const SOORTEN = `
 const ZET_SOORT = `
   INSERT INTO leden_soort (keycloak_id, soort) VALUES ($1, $2)
   ON CONFLICT (keycloak_id) DO UPDATE SET soort = EXCLUDED.soort, gewijzigd_op = now()
+`;
+
+const PROFIEL = `
+  SELECT COALESCE(gekozen.soort, aanvraag.functie) AS functie, aanvraag.organisatie
+  FROM (SELECT $1::text AS id, $2::text AS email) AS lid
+  LEFT JOIN leden_soort gekozen ON gekozen.keycloak_id = lid.id
+  LEFT JOIN LATERAL (
+    SELECT functie, organisatie FROM toegangsaanvragen
+    WHERE email = lid.email AND status = 'toegelaten'
+    ORDER BY aangemaakt_op DESC LIMIT 1
+  ) aanvraag ON true
 `;
 
 const KOLOMMEN = `
@@ -143,6 +163,18 @@ export const maakOpslag = async (connectionString: string): Promise<Opslag> => {
 
     zetSoort: async (id, soort) => {
       await pool.query(ZET_SOORT, [id, soort]);
+    },
+
+    haalProfielOp: async (id, email) => {
+      const { rows } = await pool.query<Profiel>(PROFIEL, [id, email.toLowerCase()]);
+      return rows[0] ?? { functie: null, organisatie: null };
+    },
+
+    verhuisAanvraag: async (oudEmail, nieuwEmail) => {
+      await pool.query(`UPDATE toegangsaanvragen SET email = $2 WHERE email = $1 AND status = 'toegelaten'`, [
+        oudEmail.toLowerCase(),
+        nieuwEmail.toLowerCase(),
+      ]);
     },
   };
 };
