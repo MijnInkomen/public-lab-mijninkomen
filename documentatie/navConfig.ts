@@ -32,7 +32,7 @@ const navbar: Navbar = {
     },
     {
       // Alle besloten pagina's staan bij elkaar, zodat de balk niet volloopt zodra er eentje bijkomt.
-      // Het item verschijnt pas na inloggen; Beheer eronder alleen voor admins.
+      // Het item verschijnt pas na inloggen.
       type: 'custom-community',
       label: 'Voor communityleden',
       position: 'left',
@@ -57,17 +57,32 @@ const navbar: Navbar = {
           to: '/agenda/',
           label: 'Agenda',
         },
-        {
-          to: 'pathname:///community/beheer/',
-          target: '_self',
-          label: 'Beheer',
-        },
       ],
     },
     {
       to: '/contact/',
       label: 'Contact',
       position: 'left',
+    },
+    {
+      // Alleen voor beheerders. Leden en rollen staat er alleen in voor de hoofdbeheerder.
+      type: 'custom-beheermenu',
+      label: 'Beheer',
+      position: 'right',
+      items: [
+        {
+          type: 'custom-beheer',
+          to: 'pathname:///community/beheer/',
+          target: '_self',
+          label: 'Aanvragen',
+        },
+        {
+          type: 'custom-leden',
+          to: 'pathname:///community/leden/',
+          target: '_self',
+          label: 'Leden en rollen',
+        },
+      ],
     },
     {
       type: 'custom-inloggen',

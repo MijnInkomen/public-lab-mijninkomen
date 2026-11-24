@@ -1,0 +1,94 @@
+{
+    "publiek": {
+        "huidig": [
+            {
+                "heading": "Stadspas",
+                "title": "Stadspas",
+                "description": "Korting op sport, cultuur en activiteiten voor inwoners met een laag inkomen.",
+                "gebruikers": [
+                    "Den Haag",
+                    "Utrecht"
+                ],
+                "status": ""
+            },
+            {
+                "description": "Geld om van te leven als je te weinig inkomen hebt en geen andere uitkering kunt krijgen.",
+                "heading": "Algemene bijstand (ALO)",
+                "title": "Algemene bijstand (ALO)",
+                "gebruikers": [
+                    "Den Haag",
+                    "Utrecht"
+                ],
+                "status": ""
+            },
+            {
+                "description": "Hulp voor ondernemers die tijdelijk te weinig inkomen hebben.",
+                "heading": "Bbz (bijstand voor zelfstandigen)",
+                "title": "Bbz (bijstand voor zelfstandigen)",
+                "gebruikers": [
+                    "Den Haag"
+                ],
+                "status": ""
+            },
+            {
+                "description": "Een uitkering voor mensen die op latere leeftijd werkloos zijn geworden en geen WW meer krijgen.",
+                "heading": "IOAW",
+                "title": "IOAW",
+                "gebruikers": [
+                    "Den Haag"
+                ],
+                "status": ""
+            },
+            {
+                "description": "Een vergoeding voor noodzakelijke kosten die je zelf niet kunt betalen.",
+                "heading": "Bijzondere bijstand",
+                "title": "Bijzondere bijstand",
+                "gebruikers": [
+                    "Den Haag",
+                    "Utrecht"
+                ],
+                "status": ""
+            }
+        ],
+        "toekomstig": [
+            {
+                "description": "Eén vaste manier om bijzondere bijstand aan te vragen en af te handelen, voor alle gemeenten.",
+                "heading": "Basisproces bijzondere bijstand",
+                "status": "In ontwikkeling",
+                "gebruikers": [
+                    "Den Haag",
+                    "Utrecht"
+                ],
+                "title": "Stadspas"
+            },
+            {
+                "description": "Amsterdam gaat MijnInkomen gebruiken. We testen samen of alles goed werkt.",
+                "heading": "Aansluiting van Amsterdam",
+                "status": "In test",
+                "gebruikers": [
+                    "Amsterdam"
+                ],
+                "title": "Algemene bijstand"
+            },
+            {
+                "description": "'s-Hertogenbosch bereidt de overstap naar MijnInkomen voor.",
+                "heading": "Aansluiting van 's-Hertogenbosch",
+                "status": "In voorbereiding",
+                "gebruikers": [
+                    "'s-Hertogenbosch"
+                ],
+                "title": "Bbz"
+            },
+            {
+                "description": "Inwoners zien beter waar hun aanvraag is en wat de volgende stap is.",
+                "heading": "IOAW",
+                "status": "In ontwikkeling",
+                "gebruikers": [
+                    "Alle gemeenten"
+                ],
+                "title": "IOAW"
+            }
+        ]
+    },
+    "roadmap": []
+}

@@ -10,6 +10,15 @@ export type Fouten = Partial<Record<'naam' | 'organisatie' | 'functie' | 'email'
 
 type Controle = { aanvraag: Aanvraag; fouten?: undefined } | { aanvraag?: undefined; fouten: Fouten };
 
+/** Functies waaruit een aanvrager kiest. Houd gelijk met de lijst in het formulier (documentatie/src/components/toegang/content.ts). */
+export const FUNCTIES = [
+  'Beleidsadviseur sociaal domein',
+  'Klantmanager werk en inkomen',
+  'Schuldhulpverlener',
+  'Teamleider sociaal domein',
+  'Adviseur digitale dienstverlening',
+];
+
 const MAX_LENGTE = 200;
 const E_MAILADRES = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -66,7 +75,7 @@ export const controleerAanvraag = (invoer: unknown, vandaag = vandaagInNederland
         'Vul je gemeente of organisatie in.',
         'De naam van je gemeente of organisatie is te lang.',
       ),
-      functie: controleerTekst(functie, 'Vul je functie in.', 'Je functie is te lang.'),
+      functie: FUNCTIES.includes(functie) ? undefined : 'Kies je functie.',
       email: controleerEmail(email),
       gesprek: controleerGesprek(gesprek, gesprekDatum, vandaag),
     }).filter(([, fout]) => fout),
@@ -75,4 +84,42 @@ export const controleerAanvraag = (invoer: unknown, vandaag = vandaagInNederland
   return gesprekDatum && Object.keys(fouten).length === 0
     ? { aanvraag: { naam, organisatie, functie, email, gesprekDatum } }
     : { fouten };
+};
+
+const MAX_LENGTE_REDEN = 1000;
+
+/** De reden van weigering is verplicht, want die staat in de e-mail aan de aanvrager. */
+export const controleerReden = (
+  invoer: unknown,
+): { reden: string; fout?: undefined } | { reden?: undefined; fout: string } => {
+  const velden = (typeof invoer === 'object' && invoer !== null ? invoer : {}) as Record<string, unknown>;
+  const reden = leesTekst(velden.reden);
+  if (!reden) return { fout: 'Vul de reden van weigering in.' };
+  if (reden.length > MAX_LENGTE_REDEN) return { fout: `De reden mag maximaal ${MAX_LENGTE_REDEN} tekens zijn.` };
+  return { reden };
+};
+
+const ROLLEN = ['lid', 'beheerder'] as const;
+
+export interface Wijziging {
+  rol?: (typeof ROLLEN)[number];
+  soort?: string;
+}
+
+/** Een wijziging van een lid: een nieuwe rol, een nieuw soort, of allebei. */
+export const controleerWijziging = (invoer: unknown): { wijziging: Wijziging; fout?: undefined } | { wijziging?: undefined; fout: string } => {
+  const velden = (typeof invoer === 'object' && invoer !== null ? invoer : {}) as Record<string, unknown>;
+  const wijziging: Wijziging = {};
+
+  if (velden.rol !== undefined) {
+    const rol = ROLLEN.find((kandidaat) => kandidaat === velden.rol);
+    if (!rol) return { fout: 'Kies de rol lid of beheerder.' };
+    wijziging.rol = rol;
+  }
+  if (velden.soort !== undefined) {
+    if (typeof velden.soort !== 'string' || !FUNCTIES.includes(velden.soort)) return { fout: 'Kies een soort communitylid uit de lijst.' };
+    wijziging.soort = velden.soort;
+  }
+  if (!wijziging.rol && !wijziging.soort) return { fout: 'Kies een rol of soort communitylid.' };
+  return { wijziging };
 };

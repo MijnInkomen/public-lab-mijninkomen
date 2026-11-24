@@ -18,13 +18,24 @@ export const formulier = {
   storing: 'Je aanvraag kon niet worden verstuurd. Probeer het later opnieuw.',
 };
 
+/** Functies waaruit een aanvrager kiest. Houd gelijk met FUNCTIES in toegang-api/src/validatie.ts. */
+export const functies = [
+  'Beleidsadviseur sociaal domein',
+  'Klantmanager werk en inkomen',
+  'Schuldhulpverlener',
+  'Teamleider sociaal domein',
+  'Adviseur digitale dienstverlening',
+];
+
 export type VeldNaam = 'naam' | 'organisatie' | 'functie' | 'email' | 'gesprek';
 
 export const velden: {
   naam: VeldNaam;
   label: string;
-  type: 'text' | 'email' | 'date';
+  type: 'text' | 'email' | 'date' | 'select';
   autoComplete?: string;
+  opties?: string[];
+  keuzeTekst?: string;
   omschrijving?: string;
   fout: string;
 }[] = [
@@ -39,9 +50,11 @@ export const velden: {
   {
     naam: 'functie',
     label: 'Functie',
-    type: 'text',
+    type: 'select',
     autoComplete: 'organization-title',
-    fout: 'Vul je functie in.',
+    opties: functies,
+    keuzeTekst: 'Kies je functie',
+    fout: 'Kies je functie.',
   },
   {
     naam: 'email',

@@ -14,6 +14,7 @@ import {
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import { useCallback, useEffect, useState } from 'react';
 import { Badge } from '../home/Badge';
+import { type Actie, BeoordeelDialoog } from './BeoordeelDialoog';
 import './beheer.css';
 
 interface Aanvraag {
@@ -24,9 +25,14 @@ interface Aanvraag {
   email: string;
   gesprekDatum: string;
   status: 'in behandeling' | 'toegelaten' | 'geweigerd';
+  redenWeigering: string | null;
 }
 
-type Actie = 'toelaten' | 'weigeren';
+const STATUS_TEKST: Record<Aanvraag['status'], string> = {
+  'in behandeling': 'in behandeling',
+  toegelaten: 'geaccepteerd',
+  geweigerd: 'geweigerd',
+};
 
 const ADRES = '/api/beheer/aanvragen';
 const STORING = 'Er ging iets mis. Probeer het later opnieuw.';
@@ -38,6 +44,8 @@ export const AanvragenTabel = () => {
   const [aanvragen, setAanvragen] = useState<Aanvraag[]>();
   const [bezig, setBezig] = useState<string>();
   const [melding, setMelding] = useState<{ type: 'ok' | 'error'; tekst: string }>();
+  const [keuze, setKeuze] = useState<{ aanvraag: Aanvraag; actie: Actie }>();
+  const [redenFout, setRedenFout] = useState<string>();
 
   const haalOp = useCallback(async () => {
     const antwoord = await fetch(ADRES);
@@ -51,21 +59,40 @@ export const AanvragenTabel = () => {
     haalOp().catch(() => setMelding({ type: 'error', tekst: STORING }));
   }, [haalOp]);
 
-  const behandel = async ({ id, naam }: Aanvraag, actie: Actie) => {
+  const kies = (aanvraag: Aanvraag, actie: Actie) => {
+    setRedenFout(undefined);
+    setKeuze({ aanvraag, actie });
+  };
+
+  const behandel = async ({ id, naam }: Aanvraag, actie: Actie, reden?: string) => {
     setBezig(id);
     setMelding(undefined);
     try {
-      const antwoord = await fetch(`${ADRES}/${id}/${actie}`, { method: 'POST' });
+      const antwoord = await fetch(`${ADRES}/${id}/${actie}`, {
+        method: 'POST',
+        ...(reden === undefined
+          ? {}
+          : { headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reden }) }),
+      });
+      if (antwoord.status === 422) {
+        const { fouten }: { fouten?: { reden?: string } } = await antwoord.json();
+        return setRedenFout(fouten?.reden ?? STORING);
+      }
+      setKeuze(undefined);
       if (antwoord.ok) {
-        const tekst = actie === 'toelaten' ? `${naam} is toegelaten en krijgt een e-mail.` : `${naam} is geweigerd.`;
+        const tekst =
+          actie === 'toelaten'
+            ? `${naam} is geaccepteerd en krijgt een e-mail om een account in te stellen.`
+            : `${naam} is geweigerd en krijgt een e-mail met de reden.`;
         setMelding({ type: 'ok', tekst });
       } else {
         const { fout }: { fout?: string } = await antwoord.json();
         setMelding({ type: 'error', tekst: fout ? `${fout}.` : STORING });
       }
-      await haalOp();
+      return await haalOp();
     } catch {
-      setMelding({ type: 'error', tekst: STORING });
+      setKeuze(undefined);
+      return setMelding({ type: 'error', tekst: STORING });
     } finally {
       setBezig(undefined);
     }
@@ -103,24 +130,27 @@ export const AanvragenTabel = () => {
                   <TableCell className="mijninkomen-beheer__email">{aanvraag.email}</TableCell>
                   <TableCell>{datum(aanvraag.gesprekDatum)}</TableCell>
                   <TableCell>
-                    <Badge soort="status">{aanvraag.status}</Badge>
+                    <Badge soort="status">{STATUS_TEKST[aanvraag.status]}</Badge>
+                    {aanvraag.redenWeigering && (
+                      <p className="mijninkomen-beheer__reden">Reden: {aanvraag.redenWeigering}</p>
+                    )}
                   </TableCell>
                   <TableCell>
                     {aanvraag.status === 'in behandeling' && (
                       <ButtonGroup>
                         <Button
                           appearance="primary-action-button"
-                          aria-label={`${aanvraag.naam} toelaten`}
+                          aria-label={`${aanvraag.naam} accepteren`}
                           disabled={bezig === aanvraag.id}
-                          onClick={() => behandel(aanvraag, 'toelaten')}
+                          onClick={() => kies(aanvraag, 'toelaten')}
                         >
-                          Toelaten
+                          Accepteren
                         </Button>
                         <Button
                           appearance="secondary-action-button"
                           aria-label={`${aanvraag.naam} weigeren`}
                           disabled={bezig === aanvraag.id}
-                          onClick={() => behandel(aanvraag, 'weigeren')}
+                          onClick={() => kies(aanvraag, 'weigeren')}
                         >
                           Weigeren
                         </Button>
@@ -132,6 +162,17 @@ export const AanvragenTabel = () => {
             </TableBody>
           </Table>
         </TableContainer>
+      )}
+      {keuze && (
+        <BeoordeelDialoog
+          key={`${keuze.aanvraag.id}-${keuze.actie}`}
+          naam={keuze.aanvraag.naam}
+          actie={keuze.actie}
+          bezig={bezig === keuze.aanvraag.id}
+          redenFout={redenFout}
+          onBevestig={(reden) => behandel(keuze.aanvraag, keuze.actie, reden)}
+          onAnnuleer={() => setKeuze(undefined)}
+        />
       )}
     </>
   );

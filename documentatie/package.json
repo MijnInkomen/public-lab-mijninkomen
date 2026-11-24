@@ -24,7 +24,8 @@
     "start:docusaurus": "pnpm run dev",
     "dev": "pnpm run dev:docusaurus",
     "dev:docusaurus": "docusaurus start",
-    "build": "docusaurus build"
+    "build": "docusaurus build",
+    "test:e2e": "playwright test --project=chromium --reporter=list"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
@@ -91,6 +92,7 @@
     "@nl-design-system-community/ma-design-tokens": "5.5.0",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "3.4.0",
     "@nl-design-system/component-progress": "1.1.7",
+    "@playwright/test": "1.60.0",
     "@types/node": "24.10.9",
     "@types/react": "18.3.27",
     "@types/unist": "3.0.3",
